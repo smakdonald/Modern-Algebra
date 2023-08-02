@@ -11,17 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">The following are ring isomorphism invariants:</div>
-<ol class="decimal">
-<li><div class="para">all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R,+)\cong(S,+)\)</span>).</div></li>
-<li><div class="para">being unital, being commutative, division ring, field, integral domain</div></li>
-<li><div class="para">the number of zerodivisors.</div></li>
-<li><div class="para">if <span class="process-math">\(R\)</span> is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R^\times,\cdot)\cong(S^\times,\cdot)\)</span>).</div></li>
-<li><div class="para">the isomorphism type of the center (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\(Z(R)\cong Z(S)\)</span>).</div></li>
-</ol>
+<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}: R[x] \to S
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-ring-hom.html#p-1049" class="internal">in-context</a></span>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\end{equation*}
+</div>
+<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
+</div>
+<span class="incontext"><a href="sec-sub-poly.html#p-1049" class="internal">in-context</a></span>
 </body>
 </html>

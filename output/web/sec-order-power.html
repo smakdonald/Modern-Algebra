@@ -817,113 +817,113 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Power</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-3">
-<div class="para" id="p-105">“Having power is not nearly as important as what you choose to do with it.”</div> <cite class="attribution">―Roald Dahl</cite>
+<div class="para" id="p-110">“Having power is not nearly as important as what you choose to do with it.”</div> <cite class="attribution">―Roald Dahl</cite>
 </blockquote>
-<div class="para" id="p-106">Though it might seem natural to write the product <span class="process-math">\(x\cdot x\)</span> using the notation <span class="process-math">\(x^2\text{,}\)</span> we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do <em class="emphasis">I</em>? In this section, we attempt to answer as many of these questions as is philosophically feasible.</div>
+<div class="para" id="p-111">Though it might seem natural to write the product <span class="process-math">\(x\cdot x\)</span> using the notation <span class="process-math">\(x^2\text{,}\)</span> we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do <em class="emphasis">I</em>? In this section, we attempt to answer as many of these questions as is philosophically feasible.</div>
 <article class="definition definition-like" id="def-power"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(n\th\)</span> power.</span>
-</h4> <div class="para logical" id="p-107">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(n\th\)</span> power.</span>
+</h4> <div class="para logical" id="p-112">
 <div class="para">Let <span class="process-math">\(x\)</span> be an element of a multiplicative group <span class="process-math">\(G\text{.}\)</span> For <span class="process-math">\(n\in\Z\text{,}\)</span> the <span class="process-math">\(n\th\)</span> <dfn class="terminology">power</dfn> <span class="process-math">\(x^n\)</span> of <span class="process-math">\(x\)</span> is defined recursively as follows:</div>
 <ul class="disc">
-<li id="li-51"><div class="para" id="p-108">
-<span class="process-math">\(x^0=e\text{,}\)</span> <span class="process-math">\(x^1=x\text{,}\)</span> and <span class="process-math">\(x\inv=x\inv\text{;}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 8 </sup></a>
+<li id="li-53"><div class="para" id="p-113">
+<span class="process-math">\(x^0=e\text{,}\)</span> <span class="process-math">\(x^1=x\text{,}\)</span> and <span class="process-math">\(x\inv=x\inv\text{;}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 10 </sup></a>
 </div></li>
-<li id="li-52"><div class="para" id="p-109">
+<li id="li-54"><div class="para" id="p-114">
 <span class="process-math">\(x^{n+1}=x^nx\)</span> when <span class="process-math">\(n&lt;0\text{;}\)</span> and</div></li>
-<li id="li-53"><div class="para" id="p-110">
+<li id="li-55"><div class="para" id="p-115">
 <span class="process-math">\(x^n=(x^{-n})\inv\)</span> when <span class="process-math">\(n&gt;0\text{.}\)</span>
 </div></li>
 </ul>
-</div> <div class="para" id="p-111">If <span class="process-math">\(G\)</span> was an additive group, then we would write <span class="process-math">\(nx\)</span> intead of <span class="process-math">\(x^n\text{.}\)</span> This would be called a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(x\)</span> instead of a power.</div></article><article class="theorem theorem-like" id="thm-exponent-laws"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Laws of Exponents.</span>
+</div> <div class="para" id="p-116">If <span class="process-math">\(G\)</span> was an additive group, then we would write <span class="process-math">\(nx\)</span> intead of <span class="process-math">\(x^n\text{.}\)</span> This would be called a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(x\)</span> instead of a power.</div></article><article class="theorem theorem-like" id="thm-exponent-laws"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Laws of Exponents.</span>
 </h4>
-<div class="para logical" id="p-112">
+<div class="para logical" id="p-117">
 <div class="para">Let <span class="process-math">\(m,n\in\Z\)</span> and <span class="process-math">\(x\)</span> be an element of a group <span class="process-math">\(G\text{.}\)</span> Then</div>
 <ol class="decimal">
-<li id="li-54"><div class="para" id="p-113">
+<li id="li-56"><div class="para" id="p-118">
 <span class="process-math">\(x^mx^n=x^{m+n}=x^nx^m\)</span> and</div></li>
-<li id="li-55"><div class="para" id="p-114"><span class="process-math">\((x^m)^n=x^{mn}=(x^n)^m\text{.}\)</span></div></li>
+<li id="li-57"><div class="para" id="p-119"><span class="process-math">\((x^m)^n=x^{mn}=(x^n)^m\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para logical" id="p-115"><ol class="decimal">
-<li id="li-56"><div class="para" id="p-116">Let <span class="process-math">\(m &gt; 0\)</span> and <span class="process-math">\(n &gt; 0\text{;}\)</span> then by induction on <span class="process-math">\(n\)</span> and the definition <span class="process-math">\(x^mx^n =x^{m + n}\text{.}\)</span> Multiplying on both sides by <span class="process-math">\(x^{-m}\)</span> we deduce that <span class="process-math">\(x^n =x^{-m}x^{m+n}\)</span> and <span class="process-math">\(x^m = x^{m + n} x^{-n}\text{.}\)</span> Finally inversion of the equation <span class="process-math">\(x^mx^n =x^{m + n}\)</span> yields <span class="process-math">\(x^{-n}x^{-m} = x^{-m + (-n)}\text{.}\)</span> Hence the law is established in all cases.</div></li>
-<li id="li-57"><div class="para" id="p-117">If <span class="process-math">\(n &gt; 0\text{,}\)</span> it follows from (1) that <span class="process-math">\((x^m)^n =x^{mn}\text{.}\)</span> Now assume that <span class="process-math">\(n &lt; 0\text{;}\)</span> then <span class="process-math">\((x^m)^n =((x^m)^{-n})\inv =(x^{-mn})\inv =x^{mn}\)</span> since <span class="process-math">\(x^{-mn}x^{mn}=e\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><div class="para logical" id="p-120"><ol class="decimal">
+<li id="li-58"><div class="para" id="p-121">Let <span class="process-math">\(m &gt; 0\)</span> and <span class="process-math">\(n &gt; 0\text{;}\)</span> then by induction on <span class="process-math">\(n\)</span> and the definition <span class="process-math">\(x^mx^n =x^{m + n}\text{.}\)</span> Multiplying on both sides by <span class="process-math">\(x^{-m}\)</span> we deduce that <span class="process-math">\(x^n =x^{-m}x^{m+n}\)</span> and <span class="process-math">\(x^m = x^{m + n} x^{-n}\text{.}\)</span> Finally inversion of the equation <span class="process-math">\(x^mx^n =x^{m + n}\)</span> yields <span class="process-math">\(x^{-n}x^{-m} = x^{-m + (-n)}\text{.}\)</span> Hence the law is established in all cases.</div></li>
+<li id="li-59"><div class="para" id="p-122">If <span class="process-math">\(n &gt; 0\text{,}\)</span> it follows from (1) that <span class="process-math">\((x^m)^n =x^{mn}\text{.}\)</span> Now assume that <span class="process-math">\(n &lt; 0\text{;}\)</span> then <span class="process-math">\((x^m)^n =((x^m)^{-n})\inv =(x^{-mn})\inv =x^{mn}\)</span> since <span class="process-math">\(x^{-mn}x^{mn}=e\text{.}\)</span>
 </div></li>
 </ol></div></article></div>
 <article class="exercise exercise-like" id="exe-abelian-exponents"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-abelian-exponents"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Exponents.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-abelian-exponents"><article class="exercise exercise-like"><div class="para" id="p-118">Let <span class="process-math">\(x,y\in G\text{.}\)</span> The equation <span class="process-math">\((xy)^n=x^ny^n\)</span> holds for all <span class="process-math">\(n\in\Z\)</span> if and only if <span class="process-math">\(G\)</span> is abelian.</div></article></div></section><section class="subsection" id="subsec-order"><h3 class="heading hide-type">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Exponents.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-abelian-exponents"><article class="exercise exercise-like"><div class="para" id="p-123">Let <span class="process-math">\(x,y\in G\text{.}\)</span> The equation <span class="process-math">\((xy)^n=x^ny^n\)</span> holds for all <span class="process-math">\(n\in\Z\)</span> if and only if <span class="process-math">\(G\)</span> is abelian.</div></article></div></section><section class="subsection" id="subsec-order"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Order</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-4">
-<div class="para" id="p-119">“Good order is the foundation of all things.”</div> <cite class="attribution">―Edmund Burke</cite>
+<div class="para" id="p-124">“Good order is the foundation of all things.”</div> <cite class="attribution">―Edmund Burke</cite>
 </blockquote>
 <article class="definition definition-like" id="def-order"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Order.</span>
-</h4> <div class="para logical" id="p-120"><ol class="decimal">
-<li id="li-58"><div class="para" id="p-121">In a group <span class="process-math">\(G\text{,}\)</span> the <em class="emphasis">order of an element</em> <span class="process-math">\(x\)</span> is the least positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(x^n = e\text{.}\)</span> If no such <span class="process-math">\(n\)</span> exists, we say <span class="process-math">\(x\)</span> has infinite order. We write <span class="process-math">\(|x|\)</span> for the order of <span class="process-math">\(x\text{.}\)</span> </div></li>
-<li id="li-59"><div class="para" id="p-122">The <em class="emphasis">order of a group</em> <span class="process-math">\(G\)</span> is the <a href="" class="xref" data-knowl="./knowl/def-cardinality.html" title="Definition A.38: Cardinality">Cardinality</a> of the set <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(|G|\text{.}\)</span> </div></li>
-</ol></div></article><aside class="aside aside-like" id="aside-7"><div class="para" id="p-123">Some authors use the notation <span class="process-math">\(\#G\)</span> or <span class="process-math">\(o(G)\)</span> to refer to the order of a group. We won't name names, but they know who they are.</div></aside><article class="example example-like" id="ex-order"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Order.</span>
-</h4> <div class="para logical" id="p-124"><ol class="decimal">
-<li id="li-60"><div class="para" id="p-125">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Order.</span>
+</h4> <div class="para logical" id="p-125"><ol class="decimal">
+<li id="li-60"><div class="para" id="p-126">In a group <span class="process-math">\(G\text{,}\)</span> the <em class="emphasis">order of an element</em> <span class="process-math">\(x\)</span> is the least positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(x^n = e\text{.}\)</span> If no such <span class="process-math">\(n\)</span> exists, we say <span class="process-math">\(x\)</span> has infinite order. We write <span class="process-math">\(|x|\)</span> for the order of <span class="process-math">\(x\text{.}\)</span> </div></li>
+<li id="li-61"><div class="para" id="p-127">The <em class="emphasis">order of a group</em> <span class="process-math">\(G\)</span> is the <a href="" class="xref" data-knowl="./knowl/def-cardinality.html" title="Definition A.38: Cardinality">Cardinality</a> of the set <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(|G|\text{.}\)</span> </div></li>
+</ol></div></article><aside class="aside aside-like" id="aside-7"><div class="para" id="p-128">Some authors use the notation <span class="process-math">\(\#G\)</span> or <span class="process-math">\(o(G)\)</span> to refer to the order of a group. We won't name names, but they know who they are.</div></aside><article class="example example-like" id="ex-order"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Order.</span>
+</h4> <div class="para logical" id="p-129"><ol class="decimal">
+<li id="li-62"><div class="para" id="p-130">
 <span class="process-math">\(|e|=1\)</span> in every group <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-61"><div class="para" id="p-126">
+<li id="li-63"><div class="para" id="p-131">
 <span class="process-math">\(|1|=n\)</span> in <span class="process-math">\(\Z/n\)</span>
 </div></li>
-<li id="li-62"><div class="para" id="p-127">In the additive groups <span class="process-math">\(\Z\text{,}\)</span> <span class="process-math">\(\Q\text{,}\)</span> <span class="process-math">\(\R\text{,}\)</span> and <span class="process-math">\(\C\)</span> every nonzero (i.e., nonidentity) element has infinite order. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 9 </sup></a>
+<li id="li-64"><div class="para" id="p-132">In the additive groups <span class="process-math">\(\Z\text{,}\)</span> <span class="process-math">\(\Q\text{,}\)</span> <span class="process-math">\(\R\text{,}\)</span> and <span class="process-math">\(\C\)</span> every nonzero (i.e., nonidentity) element has infinite order. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 11 </sup></a>
 </div></li>
-<li id="li-63"><div class="para" id="p-128">In the additve group <span class="process-math">\(\Z/6\text{,}\)</span> the element <span class="process-math">\(2\)</span> has order <span class="process-math">\(3\text{,}\)</span> as <span class="process-math">\(2+2=4\)</span> and <span class="process-math">\(2+2+2=0\text{.}\)</span>
+<li id="li-65"><div class="para" id="p-133">In the additve group <span class="process-math">\(\Z/6\text{,}\)</span> the element <span class="process-math">\(2\)</span> has order <span class="process-math">\(3\text{,}\)</span> as <span class="process-math">\(2+2=4\)</span> and <span class="process-math">\(2+2+2=0\text{.}\)</span>
 </div></li>
-</ol></div></article><div class="para" id="p-129">We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom "Destroyer of Worlds" Marley. Best of luck. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 10 </sup></a>
+</ol></div></article><div class="para" id="p-134">We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom "Destroyer of Worlds" Marley. Best of luck. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 12 </sup></a>
 </div>
 <article class="exercise exercise-like" id="exe-order-4-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-order-4-abelian"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Marley's Conjecture.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-4-abelian"><article class="exercise exercise-like"><div class="para" id="p-130">Every group of order <span class="process-math">\(4\)</span> is abelian.</div>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Marley's Conjecture.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-4-abelian"><article class="exercise exercise-like"><div class="para" id="p-135">Every group of order <span class="process-math">\(4\)</span> is abelian.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="para" id="p-131">Let <span class="process-math">\(G\)</span> be a group with <span class="process-math">\(4\)</span> elements, and suppose there are elements <span class="process-math">\(a,b\in G\)</span> such that <span class="process-math">\(ab\neq ba\)</span> for some elements <span class="process-math">\(a, b\in G\text{.}\)</span> Since <span class="process-math">\(ab \neq ba\text{,}\)</span> we must have <span class="process-math">\(a \neq b\text{,}\)</span> <span class="process-math">\(a \neq e\text{,}\)</span> and <span class="process-math">\(b\neq e\text{.}\)</span> Since <span class="process-math">\(G\)</span> has only <span class="process-math">\(4\)</span> elements and <span class="process-math">\(ab \neq ba\text{,}\)</span> either <span class="process-math">\(ab \in \{e, a, b\}\)</span> or <span class="process-math">\(ba \in\{e, a, b\}\text{.}\)</span> Without loss, say the former occurs. But <span class="process-math">\(ab = e\)</span> implies <span class="process-math">\(b=a\inv\)</span> and we know <span class="process-math">\(a\inv\)</span> commutes with <span class="process-math">\(a\text{,}\)</span> and hence this is not possible. If <span class="process-math">\(ab = a\text{,}\)</span> then <span class="process-math">\(b = e\)</span> and if <span class="process-math">\(ab = b\)</span> then <span class="process-math">\(a = 1\text{,}\)</span> both of which are impossible. Since <span class="process-math">\(a, b\)</span> were arbitrary, <span class="process-math">\(G\)</span> must be abelian.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="para" id="p-136">Let <span class="process-math">\(G\)</span> be a group with <span class="process-math">\(4\)</span> elements, and suppose there are elements <span class="process-math">\(a,b\in G\)</span> such that <span class="process-math">\(ab\neq ba\)</span> for some elements <span class="process-math">\(a, b\in G\text{.}\)</span> Since <span class="process-math">\(ab \neq ba\text{,}\)</span> we must have <span class="process-math">\(a \neq b\text{,}\)</span> <span class="process-math">\(a \neq e\text{,}\)</span> and <span class="process-math">\(b\neq e\text{.}\)</span> Since <span class="process-math">\(G\)</span> has only <span class="process-math">\(4\)</span> elements and <span class="process-math">\(ab \neq ba\text{,}\)</span> either <span class="process-math">\(ab \in \{e, a, b\}\)</span> or <span class="process-math">\(ba \in\{e, a, b\}\text{.}\)</span> Without loss, say the former occurs. But <span class="process-math">\(ab = e\)</span> implies <span class="process-math">\(b=a\inv\)</span> and we know <span class="process-math">\(a\inv\)</span> commutes with <span class="process-math">\(a\text{,}\)</span> and hence this is not possible. If <span class="process-math">\(ab = a\text{,}\)</span> then <span class="process-math">\(b = e\)</span> and if <span class="process-math">\(ab = b\)</span> then <span class="process-math">\(a = 1\text{,}\)</span> both of which are impossible. Since <span class="process-math">\(a, b\)</span> were arbitrary, <span class="process-math">\(G\)</span> must be abelian.</div></div></div>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-order-properties"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Order.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Order.</span>
 </h4>
-<div class="para logical" id="p-132"><ol class="decimal">
-<li id="li-64"><div class="para" id="p-133">An element <span class="process-math">\(g\)</span> of a group <span class="process-math">\(G\)</span> has order <span class="process-math">\(1\)</span> if and only if <span class="process-math">\(g=e\text{.}\)</span>
+<div class="para logical" id="p-137"><ol class="decimal">
+<li id="li-66"><div class="para" id="p-138">An element <span class="process-math">\(g\)</span> of a group <span class="process-math">\(G\)</span> has order <span class="process-math">\(1\)</span> if and only if <span class="process-math">\(g=e\text{.}\)</span>
 </div></li>
-<li id="li-65"><div class="para" id="p-134"><span class="process-math">\(\displaystyle |g|=|g\inv|\)</span></div></li>
-<li id="li-66"><div class="para" id="p-135">If <span class="process-math">\(g^p=e\)</span> for <span class="process-math">\(g\neq e\)</span> and <a href="" class="xref" data-knowl="./knowl/def-prime-number.html" title="Definition A.33: Prime Integer">Prime Integer</a> <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(|g|=p\text{.}\)</span>
+<li id="li-67"><div class="para" id="p-139"><span class="process-math">\(\displaystyle |g|=|g\inv|\)</span></div></li>
+<li id="li-68"><div class="para" id="p-140">If <span class="process-math">\(g^p=e\)</span> for <span class="process-math">\(g\neq e\)</span> and <a href="" class="xref" data-knowl="./knowl/def-prime-number.html" title="Definition A.33: Prime Integer">Prime Integer</a> <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(|g|=p\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para logical" id="p-136"><ol class="decimal"><li id="li-67"><div class="para" id="p-137">Let <span class="process-math">\(G\)</span> be a group and consider an element <span class="process-math">\(a\)</span> in <span class="process-math">\(G\)</span> with order <span class="process-math">\(1\text{.}\)</span> By definition, the order of an element is the smallest positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a^n = e\text{,}\)</span> where <span class="process-math">\(e\)</span> is the identity element of <span class="process-math">\(G\text{.}\)</span> Since the order of <span class="process-math">\(a\)</span> is <span class="process-math">\(1\text{,}\)</span> we have <span class="process-math">\(a^1 = a = e\text{.}\)</span> This implies that <span class="process-math">\(a\)</span> is equal to the identity element <span class="process-math">\(e\text{.}\)</span>
+</ol></div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para logical" id="p-141"><ol class="decimal"><li id="li-69"><div class="para" id="p-142">Let <span class="process-math">\(G\)</span> be a group and consider an element <span class="process-math">\(a\)</span> in <span class="process-math">\(G\)</span> with order <span class="process-math">\(1\text{.}\)</span> By definition, the order of an element is the smallest positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a^n = e\text{,}\)</span> where <span class="process-math">\(e\)</span> is the identity element of <span class="process-math">\(G\text{.}\)</span> Since the order of <span class="process-math">\(a\)</span> is <span class="process-math">\(1\text{,}\)</span> we have <span class="process-math">\(a^1 = a = e\text{.}\)</span> This implies that <span class="process-math">\(a\)</span> is equal to the identity element <span class="process-math">\(e\text{.}\)</span>
 </div></li></ol></div></article></div>
 <article class="exercise exercise-like" id="exe-every-element-order-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-every-element-order-2"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(b\)</span> there or <span class="process-math">\(b^2=e\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-every-element-order-2"><article class="exercise exercise-like"><div class="para" id="p-138">If <span class="process-math">\(G\)</span> is a group such every non-identity element has order <span class="process-math">\(2\text{,}\)</span> then <span class="process-math">\(G\)</span> is abelian.</div></article></div>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(b\)</span> there or <span class="process-math">\(b^2=e\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-every-element-order-2"><article class="exercise exercise-like"><div class="para" id="p-143">If <span class="process-math">\(G\)</span> is a group such every non-identity element has order <span class="process-math">\(2\text{,}\)</span> then <span class="process-math">\(G\)</span> is abelian.</div></article></div>
 <article class="theorem theorem-like" id="thm-element-order"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Element Order.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Element Order.</span>
 </h4>
-<div class="para logical" id="p-139">
+<div class="para logical" id="p-144">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x \in G\)</span> any element.</div>
 <ol class="decimal">
-<li id="li-68"><div class="para" id="p-140">If <span class="process-math">\(|x| = n\text{,}\)</span> then <span class="process-math">\(e, x, \dots, x^{n-1}\)</span> are all distinct elements of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-70"><div class="para" id="p-145">If <span class="process-math">\(|x| = n\text{,}\)</span> then <span class="process-math">\(e, x, \dots, x^{n-1}\)</span> are all distinct elements of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-69"><div class="para" id="p-141">If <span class="process-math">\(|x| = \infty\text{,}\)</span> then <span class="process-math">\(x^i \ne x^j\)</span> for all integers (positive or negative) <span class="process-math">\(i,j\)</span> with <span class="process-math">\(i \ne j\text{.}\)</span>
+<li id="li-71"><div class="para" id="p-146">If <span class="process-math">\(|x| = \infty\text{,}\)</span> then <span class="process-math">\(x^i \ne x^j\)</span> for all integers (positive or negative) <span class="process-math">\(i,j\)</span> with <span class="process-math">\(i \ne j\text{.}\)</span>
 </div></li>
-<li id="li-70"><div class="para" id="p-142"><span class="process-math">\(|x| \leq |G|\text{.}\)</span></div></li>
-<li id="li-71"><div class="para" id="p-143">If <span class="process-math">\(x^m = e\)</span> then <span class="process-math">\(|x| \mid m\text{.}\)</span>
+<li id="li-72"><div class="para" id="p-147"><span class="process-math">\(|x| \leq |G|\text{.}\)</span></div></li>
+<li id="li-73"><div class="para" id="p-148">If <span class="process-math">\(x^m = e\)</span> then <span class="process-math">\(|x| \mid m\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para logical" id="p-144"><ol class="decimal">
-<li id="li-72"><div class="para" id="p-145">Coming soon!</div></li>
-<li id="li-73"><div class="para" id="p-146">Coming soon!</div></li>
-<li id="li-74"><div class="para" id="p-147">Coming soon!</div></li>
-<li id="li-75"><div class="para" id="p-148">Let <span class="process-math">\(n = |x|\text{.}\)</span> We have <span class="process-math">\(m = nq + r\)</span> for some <span class="process-math">\(0 \leq r &lt; n\)</span> by the “division algorithm”. We have <span class="process-math">\(x^r = (x^n)^qx^r = x^m = e\)</span> and so, by the definition of “order”, it must be that <span class="process-math">\(r = 0\)</span>
+</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para logical" id="p-149"><ol class="decimal">
+<li id="li-74"><div class="para" id="p-150">Coming soon!</div></li>
+<li id="li-75"><div class="para" id="p-151">Coming soon!</div></li>
+<li id="li-76"><div class="para" id="p-152">Coming soon!</div></li>
+<li id="li-77"><div class="para" id="p-153">Let <span class="process-math">\(n = |x|\text{.}\)</span> We have <span class="process-math">\(m = nq + r\)</span> for some <span class="process-math">\(0 \leq r &lt; n\)</span> by the “division algorithm”. We have <span class="process-math">\(x^r = (x^n)^qx^r = x^m = e\)</span> and so, by the definition of “order”, it must be that <span class="process-math">\(r = 0\)</span>
 </div></li>
 </ol></div></article></div>
 <article class="exercise exercise-like" id="exe-order-and-gcd"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-order-and-gcd"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span><span class="space"> </span><span class="title">Order Hors d'oeuvre.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-and-gcd"><article class="exercise exercise-like"><div class="para logical" id="p-149">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span><span class="space"> </span><span class="title">Order Hors d'oeuvre.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-and-gcd"><article class="exercise exercise-like"><div class="para logical" id="p-154">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group.</div>
 <ol class="decimal">
-<li id="li-76"><div class="para logical" id="p-150">
+<li id="li-78"><div class="para logical" id="p-155">
 <div class="para">Let <span class="process-math">\(g \in G\)</span> be an element of finite order. Show that <span class="process-math">\(g^m\)</span> has finite order for any integer <span class="process-math">\(m \geq 0\text{,}\)</span> and in fact</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -931,11 +931,16 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></li>
-<li id="li-77"><div class="para" id="p-151">Prove that for all <span class="process-math">\(g, h\)</span> in <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(|gh| = |hg|\)</span> holds.</div></li>
+<li id="li-79"><div class="para" id="p-156">Prove that for all <span class="process-math">\(g, h\)</span> in <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(|gh| = |hg|\)</span> holds.</div></li>
 </ol>
-</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">Convenient notation, isn't it? Almost like we planned it.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">Groups with this property are known as <em class="emphasis">torsion-free</em>, a concept explored in more advanced contexts.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</div></div>
+</div></article></div>
+<div class="para" id="p-157">The central theorem of group order, (perhaps the central theorem of group theory), <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.7: Lagrange's Theorem">Lagrange's Theorem</a>, requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.</div></section><article class="outcomes goal-like" id="outcomes-2"><h3 class="heading"><span class="type">Summary</span></h3>
+<ul class="disc">
+<li id="li-80"><div class="para" id="p-158">The <a href="" class="xref" data-knowl="./knowl/thm-exponent-laws.html" title="Theorem 1.20: Laws of Exponents">Theorem 1.20</a> hold in groups.</div></li>
+<li id="li-81"><div class="para" id="p-159">The <a href="" class="xref" data-knowl="./knowl/def-order.html" title="Definition 1.22: Order">Order</a> of an element <span class="process-math">\(x\)</span> is the smallest positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(x^n=e\text{.}\)</span> The order of a group is its cardinality.</div></li>
+</ul></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">Convenient notation, isn't it? Almost like we planned it.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Groups with this property are known as <em class="emphasis">torsion-free</em>, a concept explored in more advanced contexts.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-group-basics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-common-groups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -324,6 +324,7 @@
     <rename element="exploration">Discussion</rename>
     <rename element="activity">Problem</rename>
     <rename element="heuristic">Vague Semidefinition</rename>
+    <rename element="outcomes">Summary</rename>
 
   </docinfo>
   
@@ -596,13 +597,6 @@
                       </p>
                     </li>
 
-                    <li xml:id="commutative-axiom">
-                      <p>
-                        An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
-                        <idx><h>commutative property</h></idx>
-                      </p>
-                    </li>
-
                     <li xml:id="identity-property">
                       <p>
                         An operation satisfies the <em>identity property</em> if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
@@ -620,6 +614,19 @@
                       </p>
                     </li>
                   </ol>
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              Additionally, a binary operation can be <em>commutative</em>
+            </p>
+
+            <definition xml:id="commutative-axiom"><title>Commutative Property</title>
+              <statement>
+                <p>
+                  An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
+                  <idx><h>commutative property</h></idx>
                 </p>
               </statement>
             </definition>
@@ -890,6 +897,13 @@
               </statement>
             </example>
 
+            <remark>
+              <p>
+                <m>\Z/n^\times</m> will be integral to our constructions of semidirect products in <xref ref="sec-spds"/> and our classifications of certain groups up to isomorphism (whatever that means).
+                Though not strictly required for this text, knowing the structure of <m>\Z/n^\times</m> for various <m>n</m> can prove helpful in many qualifying exam problems.
+              </p>
+            </remark>
+
             <aside>
               <p>
                 Some texts use the notation <q><m>^*</m></q> to denote groups of units.
@@ -1071,6 +1085,32 @@
             </p>
 
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  A <xref text="title" ref="def-group"/> is a set equipped with a <xref text="title" ref="def-binop"/> that satisfies the properties given in <xref ref="def-binary-properties"/>.
+                  An abelian group is a group that also satisfies the <xref text="title" ref="commutative-axiom"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The identity and inverse elements described in <xref ref="def-binary-properties"/> are unique.
+                  <fn>See: <xref ref="thm-properties-of-groups"/></fn>
+                  For inverses, we have <m>(x^{-1})^{-1} = x</m> and <m>(xy)\inv=y\inv x\inv</m>.
+                  <fn>See: <xref ref="thm-group-inverses"/></fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(\Z,+), (\Q,+), (\R,+),(\C,+)</m> and <m>(\Z/n,+)</m> are all additive abelian groups, and <xref text="title" ref="ex-group-of-units"/> form multiplicative abelian groups.
+                </p>
+              </li>
+            </ul>
+          </outcomes>  
     
         </section>
 
@@ -1421,7 +1461,29 @@
               </statement>
             </exercise>
 
+            <p>
+              The central theorem of group order, (perhaps the central theorem of group theory), <xref text="title" ref="thm-lagrange"/>, requires more machinery than we currently posess. 
+              We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.
+            </p>
+
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  The <xref ref="thm-exponent-laws"/> hold in groups.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                 The <xref text="title" ref="def-order"/> of an element <m>x</m> is the smallest positive integer <m>n</m> such that <m>x^n=e</m>.
+                 The order of a group is its cardinality.
+                </p>
+              </li>
+            </ul>
+          </outcomes>  
 
         </section>
       
@@ -1615,7 +1677,7 @@
               Let's introduce another very important example: symmetric groups.
             </p>
       
-            <definition xml:id="def-permutation"><title>Permutation</title>
+            <definition xml:id="def-permutation"><title>Permutations</title>
               <statement>
                 <p>
                   A <em>permutation</em><idx><h>permutation</h></idx> of a set <m>S</m> is a bijective function <m>\sigma:S\to S</m>. 
@@ -2005,6 +2067,48 @@
             </p>
       
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  The <xref text="title" ref="def-d2n"/>, is the group of reflections and rotations of a regular polygon. 
+                  Every element in <m>D_{2n}</m> can be written as a product of <em>rotations</em> and <em>reflections</em>.
+                  <fn>See: <xref ref="ex-d2n-elements"/> and <xref ref="thm-d2n-order"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                 The <xref ref="def-symmetric-group"/> <m>S_n</m> is set of all <xref text="title" ref="def-permutation"/> of a set with <m>n</m> elements.
+                 The order of <m>S_n</m> is <m>n!</m>.
+                 <fn>See: <xref ref="exe-sn-order"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Permutations are either even or odd; the <xref text="title" ref="def-alternating-group"/> is the set of even permutations.
+                  The order of <m>A_n</m> is <m>\frac{n!}{2}</m>.
+                  <fn>See: <xref ref="exe-an-order"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <xref text="title" ref="def-cycle"/> are special permutations. 
+                  Every cycle can be written as a product of transpositions.
+                  <fn>See: <xref ref="thm-cycledecomp"/>, though we don't have the tools to prove this explicitly just yet.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="def-quaternions"/> exist.
+                </p>
+              </li>
+            </ul>
+          </outcomes>  
           
         </section>
 
