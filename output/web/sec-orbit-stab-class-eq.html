@@ -499,8 +499,8 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Group Homomorphisms</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gphoms.html#subsec-homom" class="internal"><span class="title">Homomorphism? I Barely Know 'em!</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-isomorphisms" class="internal"><span class="title">Isomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-automorphisms" class="internal"><span class="title">Automorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gphoms.html#subsec-isomorphisms" class="internal"><span class="title">Isomorphism? I Know 'em!</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gphoms.html#subsec-automorphisms" class="internal"><span class="title">Automorphism? I'm <em class="emphasis">Am</em> 'em!</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -817,67 +817,67 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">LOIS and Orbit-Stabilizer</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-24">
-<div class="para" id="p-688">“Being born in a stable does not make one a horse.”</div> <cite class="attribution">―Arthur Wellesley</cite>
+<div class="para" id="p-694">“Being born in a stable does not make one a horse.”</div> <cite class="attribution">―Arthur Wellesley</cite>
 </blockquote>
-<div class="para" id="p-689">The information encoded in a group action has two basic parts: one part tells us where points go and the other part tells us how points stay put. The following terminology refers to these ideas.</div>
+<div class="para" id="p-695">The information encoded in a group action has two basic parts: one part tells us where points go and the other part tells us how points stay put. The following terminology refers to these ideas.</div>
 <article class="definition definition-like" id="def-orbit"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.22</span><span class="period">.</span><span class="space"> </span><span class="title">Orbit.</span>
-</h4> <div class="para logical" id="p-690">
+</h4> <div class="para logical" id="p-696">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the orbit of <span class="process-math">\(s\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-691">A fun fact about orbits is that they've secretly been at the heart of everything we've been doing so far.</div>
+</div></article><div class="para" id="p-697">A fun fact about orbits is that they've secretly been at the heart of everything we've been doing so far.</div>
 <article class="corollary theorem-like" id="cor-familiar-orbits"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.23</span><span class="period">.</span><span class="space"> </span><span class="title">Familiar Orbits.</span>
 </h4>
-<div class="para logical" id="p-692">
+<div class="para logical" id="p-698">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group.</div>
 <ol class="decimal">
-<li id="li-246"><div class="para" id="p-693">Let <span class="process-math">\(G\)</span> act upon itself by <a href="" class="xref" data-knowl="./knowl/ex-left-mult.html" title="Item 2: Left Multiplication">Left Multiplication</a>. Under this action, <span class="process-math">\(\Orb_G(g)=gH\text{.}\)</span>
+<li id="li-250"><div class="para" id="p-699">Let <span class="process-math">\(G\)</span> act upon itself by <a href="" class="xref" data-knowl="./knowl/ex-left-mult.html" title="Item 2: Left Multiplication">Left Multiplication</a>. Under this action, <span class="process-math">\(\Orb_G(g)=gH\text{.}\)</span>
 </div></li>
-<li id="li-247"><div class="para" id="p-694">Let <span class="process-math">\(G\)</span> act upon itself by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. Under this action, <span class="process-math">\(\Orb_G(g)=C_G(g)\text{.}\)</span>
+<li id="li-251"><div class="para" id="p-700">Let <span class="process-math">\(G\)</span> act upon itself by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. Under this action, <span class="process-math">\(\Orb_G(g)=C_G(g)\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="lemma theorem-like" id="lem-orbits-partition"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span><span class="space"> </span><span class="title">Orbits Partition the Group.</span>
 </h4>
-<div class="para logical" id="p-695">
+<div class="para logical" id="p-701">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{.}\)</span> Then</div>
 <ol class="decimal">
-<li id="li-248"><div class="para" id="p-696">
+<li id="li-252"><div class="para" id="p-702">
 <span class="process-math">\(\sim_G\)</span> is an equivalence relation;</div></li>
-<li id="li-249"><div class="para" id="p-697">for any <span class="process-math">\(s,s'\in S\text{,}\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\text{;}\)</span> and</div></li>
-<li id="li-250"><div class="para" id="p-698"><span class="process-math">\(S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\text{.}\)</span></div></li>
+<li id="li-253"><div class="para" id="p-703">for any <span class="process-math">\(s,s'\in S\text{,}\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\text{;}\)</span> and</div></li>
+<li id="li-254"><div class="para" id="p-704"><span class="process-math">\(S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\text{.}\)</span></div></li>
 </ol>
 </div></article><article class="definition definition-like" id="def-stab"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.25</span><span class="period">.</span><span class="space"> </span><span class="title">Stabilizer.</span>
-</h4> <div class="para logical" id="p-699">
+</h4> <div class="para logical" id="p-705">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the stabilizer is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
 \end{equation*}
 </div>
-</div></article><aside class="aside aside-like" id="aside-12"><div class="para" id="p-700">Sometimes (including on old qualifying exams) the notation <span class="process-math">\(G_s\)</span> is used to denote the stabilizer. Given that this notation gives no context as to what the set <span class="process-math">\(G_s\)</span> is or what it does, we will stick to <span class="process-math">\(\Stab_G(s)\text{.}\)</span>
+</div></article><aside class="aside aside-like" id="aside-12"><div class="para" id="p-706">Sometimes (including on old qualifying exams) the notation <span class="process-math">\(G_s\)</span> is used to denote the stabilizer. Given that this notation gives no context as to what the set <span class="process-math">\(G_s\)</span> is or what it does, we will stick to <span class="process-math">\(\Stab_G(s)\text{.}\)</span>
 </div></aside><article class="exercise exercise-like" id="exe-stabilizer-is-subgroup"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-stabilizer-is-subgroup"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.26</span><span class="period">.</span><span class="space"> </span><span class="title">Stabilizers are Subgroups.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-stabilizer-is-subgroup"><article class="exercise exercise-like"><div class="para" id="p-701">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-stabilizer-is-subgroup"><article class="exercise exercise-like"><div class="para" id="p-707">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-702">One of the most important facts about the action of a group on a finite set is the following:</div>
+<div class="para" id="p-708">One of the most important facts about the action of a group on a finite set is the following:</div>
 <article class="theorem theorem-like" id="thm-LOIS"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span><span class="space"> </span><span class="title">The Length of the Orbit is the Index of the Stabilizer (LOIS).</span>
 </h4>
-<div class="para logical" id="p-703">
+<div class="para logical" id="p-709">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><div class="para logical" id="p-704">
+</div></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><div class="para logical" id="p-710">
 <div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -897,47 +897,47 @@ x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operato
 \end{equation*}
 </div>
 </div></article></div>
-<div class="para" id="p-705">Length isn't a word we have used to describe size or cardinality before, but I suppose that SOIS and COIS just don't quite roll of the tongue quite the same.</div>
+<div class="para" id="p-711">Length isn't a word we have used to describe size or cardinality before, but I suppose that SOIS and COIS just don't quite roll of the tongue quite the same.</div>
 <article class="corollary theorem-like" id="cor-orbit-stabilizer"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span><span class="space"> </span><span class="title">Orbit-Stabilizer Theorem.</span>
 </h4>
-<div class="para logical" id="p-706">
+<div class="para logical" id="p-712">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)|.
 \end{equation*}
 </div>
-</div></article><aside class="aside aside-like" id="aside-13"><div class="para" id="p-707">One of my biggest pet peeves in math is when things with "Theorem" or "Lemma" in the title aren't given the corresponding classification. Why is <a href="" class="xref" data-knowl="./knowl/lem-zorn.html" title="Lemma 8.39: Zorn's Lemma">Zorn's Lemma</a> always a theorem? Why must the Orbit-Stabilizer <em class="emphasis">Theorem</em> be a corollary? Why do the good die young?</div></aside><article class="warning remark-like" id="warning-3"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="aside-13"><div class="para" id="p-713">One of my biggest pet peeves in math is when things with "Theorem" or "Lemma" in the title aren't given the corresponding classification. Why is <a href="" class="xref" data-knowl="./knowl/lem-zorn.html" title="Lemma 8.39: Zorn's Lemma">Zorn's Lemma</a> always a theorem? Why must the Orbit-Stabilizer <em class="emphasis">Theorem</em> be a corollary? Why do the good die young?</div></aside><article class="warning remark-like" id="warning-3"><h4 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-708">Take note that <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> only applies when <span class="process-math">\(G\)</span> is a <em class="emphasis">finite</em> group.</div></article><article class="exercise exercise-like" id="exe-transitive-orbit"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-transitive-orbit"><h4 class="heading">
+<div class="para" id="p-714">Take note that <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> only applies when <span class="process-math">\(G\)</span> is a <em class="emphasis">finite</em> group.</div></article><article class="exercise exercise-like" id="exe-transitive-orbit"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-transitive-orbit"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span><span class="space"> </span><span class="title">Transitive iff One Orbit.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-transitive-orbit"><article class="exercise exercise-like"><div class="para" id="p-709">An action is transitive if and only if there is exactly one orbit under the action.</div>
-<div class="para" id="p-710">Similarly, an action is transitive if every stabilizer is trivial.</div></article></div>
-<div class="para" id="p-711">Lets look at some group actions of a more geometric flavor. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-29" id="fn-29"><sup> 2 </sup></a>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-transitive-orbit"><article class="exercise exercise-like"><div class="para" id="p-715">An action is transitive if and only if there is exactly one orbit under the action.</div>
+<div class="para" id="p-716">Similarly, an action is transitive if every stabilizer is trivial.</div></article></div>
+<div class="para" id="p-717">Lets look at some group actions of a more geometric flavor. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-31" id="fn-31"><sup> 1 </sup></a>
 </div>
 <article class="example example-like" id="ex-cube"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetries of the Cube.</span>
-</h4> <div class="para" id="p-712">Let <span class="process-math">\(G\)</span> be the group of rotational symmetries of the cube and let <span class="process-math">\(G\)</span> act on the collection of <span class="process-math">\(6\)</span> faces of the cube in the evident way. This action is transitive and so the one and only orbit has length <span class="process-math">\(6\text{.}\)</span> It follows that for any face <span class="process-math">\(f\)</span> of the cube, <span class="process-math">\(G_f\)</span> has index <span class="process-math">\(6\)</span> and, since we already know that <span class="process-math">\(|G|= 24\text{,}\)</span> it follows from <a href="" class="xref" data-knowl="./knowl/thm-LOIS.html" title="Theorem 4.27: The Length of the Orbit is the Index of the Stabilizer (LOIS)">Theorem 4.27</a> that <span class="process-math">\(|G|_f = 4\text{.}\)</span> That is, there are four symmetries that map <span class="process-math">\(f\)</span> to itself. Indeed, they are the <span class="process-math">\(4\)</span> rotations by <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(90\text{,}\)</span> <span class="process-math">\(180\)</span> or <span class="process-math">\(270\)</span> degrees about the line of symmetry passing through the mid-point of <span class="process-math">\(f\)</span> and the mid-point of the opposite face.</div></article><div class="para" id="p-713">That was fun and all, but I just feel like there weren't enough faces...</div>
+</h4> <div class="para" id="p-718">Let <span class="process-math">\(G\)</span> be the group of rotational symmetries of the cube and let <span class="process-math">\(G\)</span> act on the collection of <span class="process-math">\(6\)</span> faces of the cube in the evident way. This action is transitive and so the one and only orbit has length <span class="process-math">\(6\text{.}\)</span> It follows that for any face <span class="process-math">\(f\)</span> of the cube, <span class="process-math">\(G_f\)</span> has index <span class="process-math">\(6\)</span> and, since we already know that <span class="process-math">\(|G|= 24\text{,}\)</span> it follows from <a href="" class="xref" data-knowl="./knowl/thm-LOIS.html" title="Theorem 4.27: The Length of the Orbit is the Index of the Stabilizer (LOIS)">Theorem 4.27</a> that <span class="process-math">\(|G|_f = 4\text{.}\)</span> That is, there are four symmetries that map <span class="process-math">\(f\)</span> to itself. Indeed, they are the <span class="process-math">\(4\)</span> rotations by <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(90\text{,}\)</span> <span class="process-math">\(180\)</span> or <span class="process-math">\(270\)</span> degrees about the line of symmetry passing through the mid-point of <span class="process-math">\(f\)</span> and the mid-point of the opposite face.</div></article><div class="para" id="p-719">That was fun and all, but I just feel like there weren't enough faces...</div>
 <article class="example example-like" id="ex-dodec"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.32</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetries of the Dodecahedron.</span>
-</h4> <div class="para" id="p-714">Let <span class="process-math">\(G\)</span> be the group of rotatoinal symmetries of the dodecahedron (<span class="process-math">\(12\)</span> pentagonal faces). The evident action of <span class="process-math">\(G\)</span> on the twleve faces is transitive. For each face <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(G_f\)</span> clearly has <span class="process-math">\(5\)</span> elements: the five rotations about the line joining the midpoint of <span class="process-math">\(f\)</span> to the midpoint of the face on the opposite side. Since <span class="process-math">\(12 = [G: G_f]\)</span> and <span class="process-math">\(|G|_f = 5\text{,}\)</span> we conclude <span class="process-math">\(|G| = 60\text{.}\)</span>
-</div></article><div class="para" id="p-715">As a final note, we are now able to connect the concepts of transitive and faithful actions in a more meaningful way.</div>
+</h4> <div class="para" id="p-720">Let <span class="process-math">\(G\)</span> be the group of rotatoinal symmetries of the dodecahedron (<span class="process-math">\(12\)</span> pentagonal faces). The evident action of <span class="process-math">\(G\)</span> on the twleve faces is transitive. For each face <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(G_f\)</span> clearly has <span class="process-math">\(5\)</span> elements: the five rotations about the line joining the midpoint of <span class="process-math">\(f\)</span> to the midpoint of the face on the opposite side. Since <span class="process-math">\(12 = [G: G_f]\)</span> and <span class="process-math">\(|G|_f = 5\text{,}\)</span> we conclude <span class="process-math">\(|G| = 60\text{.}\)</span>
+</div></article><div class="para" id="p-721">As a final note, we are now able to connect the concepts of transitive and faithful actions in a more meaningful way.</div>
 <article class="theorem theorem-like" id="thm-transfaith"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span><span class="space"> </span><span class="title">Transitive and Faithful.</span>
 </h4>
-<div class="para" id="p-716">Suppose that <span class="process-math">\(G\)</span> is an abelian group acting transitively and faithfully on a set <span class="process-math">\(X\text{.}\)</span> Then <span class="process-math">\(|G|=|X|\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><div class="para" id="p-717">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a>, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
+<div class="para" id="p-722">Suppose that <span class="process-math">\(G\)</span> is an abelian group acting transitively and faithfully on a set <span class="process-math">\(X\text{.}\)</span> Then <span class="process-math">\(|G|=|X|\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><div class="para" id="p-723">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a>, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
 </div></article></div></section><section class="subsection" id="subsec-class-eq"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Class Equation</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-25">
-<div class="para" id="p-718">“Let the others have the charisma. I've got the class.”</div> <cite class="attribution">―George H. W. Bush</cite>
+<div class="para" id="p-724">“Let the others have the charisma. I've got the class.”</div> <cite class="attribution">―George H. W. Bush</cite>
 </blockquote>
 <article class="definition definition-like" id="def-centralizer"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.34</span><span class="period">.</span><span class="space"> </span><span class="title">Centralizer.</span>
-</h4> <div class="para logical" id="p-719">
+</h4> <div class="para logical" id="p-725">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(g \in G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -946,9 +946,9 @@ Z_G(g):= \{g \in G \mid gx = xg\}
 \end{equation*}
 </div>
 <div class="para">is called the <em class="emphasis">centralizer</em> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> </div>
-</div></article><aside class="aside aside-like" id="aside-14"><div class="para" id="p-720">Many texts use the notation <span class="process-math">\(C_G(g)\)</span> for the centralzier and <span class="process-math">\([g]_c\)</span> for conjugacy classes. However, given that the center of a group is denoted with <span class="process-math">\(Z(G)\text{,}\)</span> we argue that <span class="process-math">\(Z_G(g)\)</span> makes more intuitive sense for the centralizer, freeing up <span class="process-math">\(C_G(g)\)</span> for conjugacy classes.</div></aside><article class="exercise exercise-like" id="exe-stabilizer-intersection-is-center"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-stabilizer-intersection-is-center"><h4 class="heading">
+</div></article><aside class="aside aside-like" id="aside-14"><div class="para" id="p-726">Many texts use the notation <span class="process-math">\(C_G(g)\)</span> for the centralzier and <span class="process-math">\([g]_c\)</span> for conjugacy classes. However, given that the center of a group is denoted with <span class="process-math">\(Z(G)\text{,}\)</span> we argue that <span class="process-math">\(Z_G(g)\)</span> makes more intuitive sense for the centralizer, freeing up <span class="process-math">\(C_G(g)\)</span> for conjugacy classes.</div></aside><article class="exercise exercise-like" id="exe-stabilizer-intersection-is-center"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-stabilizer-intersection-is-center"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.35</span><span class="period">.</span><span class="space"> </span><span class="title">Center is Intersection of Stabilizers.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-stabilizer-intersection-is-center"><article class="exercise exercise-like"><div class="para logical" id="p-721">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-stabilizer-intersection-is-center"><article class="exercise exercise-like"><div class="para logical" id="p-727">
 <div class="para">Prove that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -958,7 +958,7 @@ Z(G)=\bigcap_{g\in G}Z_G(g)
 </div></article></div>
 <article class="definition definition-like" id="def-normalizer"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.36</span><span class="period">.</span><span class="space"> </span><span class="title">Normalizer.</span>
-</h4> <div class="para logical" id="p-722">
+</h4> <div class="para logical" id="p-728">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(S \subseteq G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -967,49 +967,49 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 \end{equation*}
 </div>
 <div class="para">is called the <em class="emphasis">normalizer</em> of <span class="process-math">\(S\)</span> in <span class="process-math">\(G\text{.}\)</span> </div>
-</div></article><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">Notation Check.</span></h4> <div class="para" id="p-723">There have been a lot of new sets introduced recently, all of whom seem to be flying around with reckless abandon. Here's a quick refresher:</div> <div class="para logical" id="p-724">
+</div></article><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">Notation Check.</span></h4> <div class="para" id="p-729">There have been a lot of new sets introduced recently, all of whom seem to be flying around with reckless abandon. Here's a quick refresher:</div> <div class="para logical" id="p-730">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{,}\)</span> and let <span class="process-math">\(g\in G, s\in S\text{.}\)</span>
 </div>
 <ul class="disc">
-<li id="li-251"><div class="para" id="p-725">
+<li id="li-255"><div class="para" id="p-731">
 <span class="process-math">\(C_G(g)\text{:}\)</span> The <a href="" class="xref" data-knowl="./knowl/def-conjugacy-class.html" title="Definition 4.11: Conjugacy Class">Conjugacy Class</a> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-252"><div class="para" id="p-726">
+<li id="li-256"><div class="para" id="p-732">
 <span class="process-math">\(\Orb_G(g)\)</span> The <a href="" class="xref" data-knowl="./knowl/def-orbit.html" title="Definition 4.22: Orbit">Orbit</a> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-253"><div class="para" id="p-727">
+<li id="li-257"><div class="para" id="p-733">
 <span class="process-math">\(\Stab_G(g)\)</span> The <a href="" class="xref" data-knowl="./knowl/def-stab.html" title="Definition 4.25: Stabilizer">Stabilizer</a> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-254"><div class="para" id="p-728">
+<li id="li-258"><div class="para" id="p-734">
 <span class="process-math">\(Z_G(g)\)</span> The <a href="" class="xref" data-knowl="./knowl/def-centralizer.html" title="Definition 4.34: Centralizer">Centralizer</a> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-255"><div class="para" id="p-729">
+<li id="li-259"><div class="para" id="p-735">
 <span class="process-math">\(N_G(g)\)</span> The <a href="" class="xref" data-knowl="./knowl/def-normalizer.html" title="Definition 4.36: Normalizer">Normalizer</a> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ul>
 </div></section><article class="lemma theorem-like" id="lem-conjugation-and-lois"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.37</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Actions and LOIS.</span>
 </h4>
-<div class="para" id="p-730">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para logical" id="p-731"><ol class="decimal">
-<li id="li-256"><div class="para" id="p-732">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=Z_G(G)\)</span> and <span class="process-math">\(|C_G(g)| = [G : Z_G(g)]\text{.}\)</span>
+<div class="para" id="p-736">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para logical" id="p-737"><ol class="decimal">
+<li id="li-260"><div class="para" id="p-738">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=Z_G(G)\)</span> and <span class="process-math">\(|C_G(g)| = [G : Z_G(g)]\text{.}\)</span>
 </div></li>
-<li id="li-257"><div class="para" id="p-733">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
+<li id="li-261"><div class="para" id="p-739">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>. For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-conjugacy-divides-order"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.38</span><span class="period">.</span><span class="space"> </span><span class="title">Size of Conjugacy Class Divides <span class="process-math">\(|G|\)</span>.</span>
 </h4>
-<div class="para" id="p-734">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-740">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-class-eq"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.39</span><span class="period">.</span><span class="space"> </span><span class="title">Class Equation.</span>
 </h4>
-<div class="para logical" id="p-735">
+<div class="para logical" id="p-741">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than <span class="process-math">\(1\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |G| = |Z(G)| + \sum_i^r [G : Z_G(g_i)].
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><div class="para logical" id="p-736">
+</div></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><div class="para logical" id="p-742">
 <div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-conjugation-and-lois.html ./knowl/thm-class-eq.html">
 \begin{equation*}
@@ -1018,8 +1018,8 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 </div>
 <div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by <a href="" class="xref" data-knowl="./knowl/lem-conjugation-and-lois.html" title="Lemma 4.37: Conjugation Actions and LOIS">Lemma 4.37</a>, we have <span class="process-math">\([G: Z_G(g_i)] =C_G(g_i)\text{.}\)</span> The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.39: Class Equation">Class Equation</a> follows from substituting this into the equation above.</div>
 </div></article></div>
-<div class="para" id="p-737">The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.39: Class Equation">Class Equation</a> provides a way of decomposing a group into its conjugacy classes, which are fundamental building blocks of the group and are essential in more advanced topics, such as representation and character theory.</div>
-<div class="para" id="p-738">It also gives us information about the size and structure of the center of a group. (Read: when a proof involves the center of a group from here on out, the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.39: Class Equation">Class Equation</a> is probably a good place to start)</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-29"><div class="fn">What do you think geometry tastes like? Which field of mathematics would taste the best?</div></div>
+<div class="para" id="p-743">The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.39: Class Equation">Class Equation</a> provides a way of decomposing a group into its conjugacy classes, which are fundamental building blocks of the group and are essential in more advanced topics, such as representation and character theory.</div>
+<div class="para" id="p-744">It also gives us information about the size and structure of the center of a group. (Read: when a proof involves the center of a group from here on out, the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.39: Class Equation">Class Equation</a> is probably a good place to start)</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-31"><div class="fn">What do you think geometry tastes like? Which field of mathematics would taste the best?</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-left-mult-conjugation.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-sylow.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

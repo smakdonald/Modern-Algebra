@@ -11,10 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<span class="process-math">\(f(x + y) = f(x) + f(y)\)</span> for all <span class="process-math">\(x,y \in R\text{,}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Given a ring map <span class="process-math">\(\phi: R \to S\)</span> between commutative rings, we may apply <a href="" class="xref" data-knowl="./knowl/thm-ump-for-polynomial-rings.html" title="Theorem 7.44: UMP for Polynomial Rings">Theorem 7.44</a> to the composition <span class="process-math">\(R \xra{\phi} S \hookrightarrow S[x]\)</span> using the element <span class="process-math">\(s = x\)</span> of <span class="process-math">\(S[x]\)</span> to get an induced ring map</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-for-polynomial-rings.html">
+\begin{equation*}
+\tilde{\phi}: R[x] \to S[x]
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-ring-hom.html#p-1058" class="internal">in-context</a></span>
+<div class="para">that sends <span class="process-math">\(\sum_i r_i x^i\)</span> to <span class="process-math">\(\sum_i \phi(r_i) x^i\text{.}\)</span> That is, the map <span class="process-math">\(\tilde{\phi}\)</span> applies <span class="process-math">\(\phi\)</span> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.</div>
+</div>
+<span class="incontext"><a href="sec-sub-poly.html#p-1058" class="internal">in-context</a></span>
 </body>
 </html>

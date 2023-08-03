@@ -1472,7 +1472,7 @@
             <ul>
               <li>
                 <p>
-                  The <xref ref="thm-exponent-laws"/> hold in groups.
+                  The <xref text="title" ref="thm-exponent-laws"/> hold in groups.
                 </p>
               </li>
 
@@ -2072,7 +2072,7 @@
             <ul>
               <li>
                 <p>
-                  The <xref text="title" ref="def-d2n"/>, is the group of reflections and rotations of a regular polygon. 
+                  The <xref text="title" ref="def-d2n"/> is the group of reflections and rotations of a regular polygon. 
                   Every element in <m>D_{2n}</m> can be written as a product of <em>rotations</em> and <em>reflections</em>.
                   <fn>See: <xref ref="ex-d2n-elements"/> and <xref ref="thm-d2n-order"/>.</fn>
                 </p>
@@ -2304,7 +2304,7 @@
 
           </subsection>
 
-          <subsection xml:id="subsec-isomorphisms"><title>Isomorphisms</title>
+          <subsection xml:id="subsec-isomorphisms"><title>Isomorphism? I Know 'em!</title>
 
             <blockquote>
               <p>
@@ -2537,7 +2537,7 @@
             
           </subsection>
 
-          <subsection xml:id="subsec-automorphisms"><title>Automorphisms</title>
+          <subsection xml:id="subsec-automorphisms"><title>Automorphism? I'm <em>Am</em> 'em!</title>
 
             <blockquote>
               <p>
@@ -2552,7 +2552,6 @@
                 <p>
                   Let <m>G</m> be a group. 
                   An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em><idx><h>automorphism</h></idx> of <m>G</m>. 
-                  The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term><idx><h>automorphism group</h></idx> of <m>G</m> and denoted <m>\Aut(G)</m>.
                 </p>
               </statement>
             </definition>
@@ -2563,6 +2562,18 @@
                 This may prove (pun intended) useful in the following proposition.
               </p>
             </example>
+
+            <definition xml:id="def-gp-aut"><title>Automorphism Group</title>
+              <statement>
+                <p>
+                  The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term><idx><h>automorphism group</h></idx> of <m>G</m> and denoted <m>\Aut(G)</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              Let's verify that this group is indeed what it claims to be.
+            </p>
 
             <proposition xml:id="prop-aut-is-group"><title>The Automorphism Group</title>
               <statement>
@@ -2627,7 +2638,7 @@
               Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.
             </p>
 
-            <proposition xml:id="prop-conjugation-automorphism"><title>The Conjugation Automorphism</title>
+            <proposition xml:id="prop-conjugation-automorphism"><title>Conjugation Automorphism</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>x\in G</m>. 
@@ -2657,6 +2668,39 @@
             </remark>
 
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                 A <xref text="title" ref="def-ghom"/> is a function between groups that preserves certain algebraic structures, such as the operation, identites, and inverses.
+                 <fn>For the first, see: <xref ref="def-ghom"/>. For the second and third, see: <xref ref="thm-grphomom-preservations"/></fn>
+                 The set of elements mapped to the identity by a homomorphism is known as its <xref text="title" ref="def-group-kernel"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A <xref text="title" ref="def-gpiso"/> is a bijective homomorphism, and a <xref text="title" ref="def-gp-automorphism"/> is an isomorphism from a group to itself.
+                  The structures preserved by an isomorphism are known as <xref text="title" ref="thm-iso-inv"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                 The set of automorphisms of a group forms a group itself: the <xref text="title" ref= "def-gp-aut"/> of the group.
+                 <fn>See: <xref ref="prop-aut-is-group"/></fn>
+                 Specifically, the <xref text="title" ref="prop-conjugation-automorphism"/> will prove very important later.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Compositions of homomorphisms, isomorphisms, and automophisms are again homomorphisms, isomorphisms, and automophisms, respectively.
+                </p>
+              </li>
+            </ul>
+          </outcomes>  
     
         </section>
       
