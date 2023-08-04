@@ -13,13 +13,19 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">(2) In the interest of time, I'll only prove the assertion about indices in the special case when <span class="process-math">\(H\)</span> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> since for <span class="process-math">\(N \leq H \leq G\)</span> with <span class="process-math">\(H \unlhd G\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ">
+<div class="para">The kernel of the canonical map <span class="process-math">\({\pi}: G \twoheadrightarrow G/N\)</span> contains <span class="process-math">\(M\)</span> and so by <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.41: UMP for Quotients">Theorem 3.41</a> we get an induced homomorhism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
 \begin{equation*}
-[G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
+\phi: G/M \to G/N
 \end{equation*}
 </div>
-<div class="para">The general case is a consequence of an exercise from HW 5. <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
+<div class="para">with <span class="process-math">\(\phi(gM) = {\pi}(g) = gN\text{.}\)</span> Moreover, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
+\begin{equation*}
+\operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+\end{equation*}
+</div>
+<div class="para">Finally apply the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.43: First Isomorphism Theorem">First Isomorphism Theorem</a> to <span class="process-math">\(\phi\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-products-iso-thms.html#p-637" class="internal">in-context</a></span>

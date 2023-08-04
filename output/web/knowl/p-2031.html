@@ -13,69 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Suppose <span class="process-math">\(F \subseteq L\)</span> is a (finite) Galois field extension. Then the functions</div>
+<div class="para">To construct another element of <span class="process-math">\(\Aut(L/\Q)\text{,}\)</span> we use that that <span class="process-math">\(L\)</span> is the splitting field of the polynomial <span class="process-math">\(x^4 - 2\)</span> over <span class="process-math">\(\Q(i)\)</span> and that, as we just showed, <span class="process-math">\(x^4 - 2\)</span> is irreducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span> We may thus apply Porism  (also stated in the Corollary) to get that there is an element <span class="process-math">\(\tau \in \Aut(L/\Q(i))\)</span> such that <span class="process-math">\(\tau(z_1) = z_2\text{.}\)</span> We may regard <span class="process-math">\(\tau\)</span> as an element of <span class="process-math">\(\Aut(L/\Q)\)</span> since, by definition, <span class="process-math">\(\Aut(L/\Q(i))\)</span> is a subgroup of <span class="process-math">\(\Aut(L/\Q)\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Psi:\left\{\text{intermediate fields $E$, with $F\subseteq E \subseteq L$}\right\} \to\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\}
+\tau(z_2) = \tau(i z_1) = \tau(i) \tau(z_1) = i z_2 = z_3
 \end{equation*}
 </div>
-<div class="para">given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi(E)=\Gal(L/E)
-\end{equation*}
+<div class="para">since <span class="process-math">\(\tau(i) = i\)</span> by construction. A key point here is that if we had merely specified <span class="process-math">\(\tau\)</span> to be an element of <span class="process-math">\(\Aut(L/\Q)\)</span> sending <span class="process-math">\(z_1\)</span> to <span class="process-math">\(z_2\text{,}\)</span> then we would have no idea what <span class="process-math">\(\tau\)</span> does to <span class="process-math">\(z_2\)</span> — it was key to define <span class="process-math">\(\tau \in \Aut(L/\Q(i))\)</span> as we did. We then also get <span class="process-math">\(\tau(z_3) = z_4\)</span> and <span class="process-math">\(\tau(z_4) = z_1\text{.}\)</span> So <span class="process-math">\(\tau\)</span> corresponds to the permutation <span class="process-math">\((1 \,2 \, 3 \,4)\text{.}\)</span>
 </div>
-<div class="para">is a bijection whose inverse</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi^{-1}:
-\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\} \to
-\left\{\text{intermediate fields $E$, with $F \subseteq E \subseteq L$}\right\}
-\end{equation*}
 </div>
-<div class="para">is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi^{-1}(H)=L^H.
-\end{equation*}
-</div>
-<div class="para">Moreover, this bijective correspondence enjoys the following properties:</div>
-<ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> each reverse the order of inclusions.</div></li>
-<li><div class="para logical">
-<div class="para">
-<span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> convert degrees of extensions to indices of subgroups:</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\([\Gal(L/F) : H] = [L^H:F]\)</span> or, equivalently,</div></li>
-<li><div class="para"><span class="process-math">\([\Gal(L/F) : \Gal(L/E)] = [E:F]\text{.}\)</span></div></li>
-</ul>
-</div></li>
-<li><div class="para logical">
-<div class="para">Normal subgroups correspond to intermediate fields that are Galois over <span class="process-math">\(F\text{:}\)</span>
-</div>
-<ul class="disc">
-<li><div class="para">If <span class="process-math">\(N \nsg G\)</span> then <span class="process-math">\(L^N/F\)</span> is Galois.</div></li>
-<li><div class="para">If <span class="process-math">\(E/F\)</span> is Galois, then <span class="process-math">\(\Gal(L/E) \nsg \Gal(L/F)\text{.}\)</span>
-</div></li>
-</ul>
-</div></li>
-<li><div class="para">If <span class="process-math">\(E = L^N\)</span> for a normal subgroup <span class="process-math">\(N \nsg \Gal(L/F)\text{,}\)</span> then <span class="process-math">\(\Gal(E/F) \cong \Gal(L/F)/N\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">If <span class="process-math">\(H_1, H_2\)</span> are subgroups of <span class="process-math">\(G\)</span> with corresponding fixed subfields <span class="process-math">\(E_1=L^{H_1}\)</span> and <span class="process-math">\(E_2=L^{H_2}\text{,}\)</span> then</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\(E_1\cap E_2=L^{&lt;H_1,H_2&gt;}\)</span> and <span class="process-math">\(\Gal(L/E_1\cap E_2)=\langle H_1,H_2\rangle\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(E_1 E_2=L^{H_1\cap H_2}\)</span> and <span class="process-math">\(\Gal(L/E_1E_2)=H_1\cap H_2\text{.}\)</span>
-</div></li>
-</ul>
-</div></li>
-</ol>
-</div>
-<span class="incontext"><a href="sec-ftgt.html#p-2031" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-galext.html#p-2031" class="internal">in-context</a></span>
 </body>
 </html>

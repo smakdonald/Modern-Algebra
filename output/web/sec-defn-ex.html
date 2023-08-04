@@ -515,7 +515,10 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">Stuck in the Middle</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Subgroups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Subgroups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gp-generators.html#subsec-gp-gensub" class="internal"><span class="title">Generational Wealth</span></a></div></li></ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural">
@@ -532,7 +535,10 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange's Theorem</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
@@ -817,70 +823,70 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">From Rings to Fields</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-36">
-<div class="para" id="p-921">“I made a lot of mistakes out of the ring, but I never made any in it.”</div> <cite class="attribution">―Jack Johnson</cite>
+<div class="para" id="p-947">“I made a lot of mistakes out of the ring, but I never made any in it.”</div> <cite class="attribution">―Jack Johnson</cite>
 </blockquote>
 <article class="definition definition-like" id="def-ring"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Ring.</span>
-</h4> <div class="para" id="p-922">A <em class="emphasis">ring</em> is a set <span class="process-math">\(R\)</span> equipped with two binary operations, <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> satisfying:</div> <div class="para logical" id="p-923"><ul class="disc">
-<li id="li-298"><div class="para" id="p-924">
+</h4> <div class="para" id="p-948">A <em class="emphasis">ring</em> is a set <span class="process-math">\(R\)</span> equipped with two binary operations, <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> satisfying:</div> <div class="para logical" id="p-949"><ul class="disc">
+<li id="li-323"><div class="para" id="p-950">
 <span class="process-math">\((R,+)\)</span> is an abelian group with identity element denoted <span class="process-math">\(0\text{,}\)</span>
 </div></li>
-<li id="li-299">
-<span class="heading"><span class="title">Associative Multiplication.</span></span><div class="para" id="p-925">
+<li id="li-324">
+<span class="heading"><span class="title">Associative Multiplication.</span></span><div class="para" id="p-951">
 <span class="process-math">\(\cdot\)</span> is associative (making <span class="process-math">\((R,\cdot)\)</span> a <a href="" class="xref" data-knowl="./knowl/def-monoid.html" title="Definition 1.4: Monoid">Monoid</a>)</div>
 </li>
-<li id="li-300">
-<span class="heading"><span class="title">Distributive Law.</span></span><div class="para" id="p-926">
+<li id="li-325">
+<span class="heading"><span class="title">Distributive Law.</span></span><div class="para" id="p-952">
 <span class="process-math">\(a \cdot (b + c) = a \cdot b + a \cdot c\)</span> and <span class="process-math">\((a + b) \cdot c = a \cdot c + b \cdot c\)</span> hold for all <span class="process-math">\(a,b,c \in R\text{.}\)</span>
 </div>
 </li>
-</ul></div> <div class="para" id="p-927">
-<span class="process-math">\(R\)</span> is a <em class="emphasis">unital ring</em> (or a <em class="emphasis">ring with identity</em>) if, in addition to (1), (2), (3)</div> <div class="para logical" id="p-928"><ol class="decimal"><li id="li-301"><div class="para" id="p-929">there is a multiplicative identity element written as <span class="process-math">\(1\)</span> such that <span class="process-math">\(1 \cdot a = a = a \cdot 1\)</span> for all <span class="process-math">\(a \in R\text{.}\)</span>
-</div></li></ol></div> <div class="para" id="p-930">
-<span class="process-math">\(R\)</span> is <em class="emphasis">commutative</em> if in addition to (1)–(3)</div> <div class="para logical" id="p-931"><ol class="decimal"><li id="li-302"><div class="para" id="p-932">
+</ul></div> <div class="para" id="p-953">
+<span class="process-math">\(R\)</span> is a <em class="emphasis">unital ring</em> (or a <em class="emphasis">ring with identity</em>) if, in addition to (1), (2), (3)</div> <div class="para logical" id="p-954"><ol class="decimal"><li id="li-326"><div class="para" id="p-955">there is a multiplicative identity element written as <span class="process-math">\(1\)</span> such that <span class="process-math">\(1 \cdot a = a = a \cdot 1\)</span> for all <span class="process-math">\(a \in R\text{.}\)</span>
+</div></li></ol></div> <div class="para" id="p-956">
+<span class="process-math">\(R\)</span> is <em class="emphasis">commutative</em> if in addition to (1)–(3)</div> <div class="para logical" id="p-957"><ol class="decimal"><li id="li-327"><div class="para" id="p-958">
 <span class="process-math">\(a \cdot b = b \cdot a\)</span> holds for all <span class="process-math">\(a,b \in R\text{.}\)</span>
-</div></li></ol></div> <div class="para" id="p-933">
-<span class="process-math">\(R\)</span> is a <em class="emphasis">division ring</em> if <span class="process-math">\(1\neq 0\text{,}\)</span> (1)–(4) and (6) hold</div> <div class="para logical" id="p-934"><ol class="decimal"><li id="li-303"><div class="para" id="p-935">
+</div></li></ol></div> <div class="para" id="p-959">
+<span class="process-math">\(R\)</span> is a <em class="emphasis">division ring</em> if <span class="process-math">\(1\neq 0\text{,}\)</span> (1)–(4) and (6) hold</div> <div class="para logical" id="p-960"><ol class="decimal"><li id="li-328"><div class="para" id="p-961">
 <span class="process-math">\((R \sm \{0\})\)</span> is a group under <span class="process-math">\(\cdot\)</span> (i.e. every <span class="process-math">\(r\in (R - \{0\})\)</span> has a multiplicative inverse)</div></li></ol></div> <div class="para" id="def-field">
-<span class="process-math">\(R\)</span> is a <em class="emphasis">field</em> if <span class="process-math">\(1\neq 0\)</span> and (1)–(6) hold (i.e. a field is a commutative division ring).</div></article><aside class="aside aside-like" id="aside-15"><div class="para" id="p-937">Around these parts most of us generally include <span class="process-math">\(1\)</span> in our definition of a ring, referring to a ring without an identity as a <em class="emphasis">rng</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-33" id="fn-33"><sup> 1 </sup></a>. However, we'll stick with the more classical definition for now.</div></aside><article class="exploration project-like" id="exploration-5"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-5"><h4 class="heading">
+<span class="process-math">\(R\)</span> is a <em class="emphasis">field</em> if <span class="process-math">\(1\neq 0\)</span> and (1)–(6) hold (i.e. a field is a commutative division ring).</div></article><aside class="aside aside-like" id="aside-15"><div class="para" id="p-963">Around these parts most of us generally include <span class="process-math">\(1\)</span> in our definition of a ring, referring to a ring without an identity as a <em class="emphasis">rng</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-49" id="fn-49"><sup> 1 </sup></a>. However, we'll stick with the more classical definition for now.</div></aside><article class="exploration project-like" id="exploration-5"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-5"><h4 class="heading">
 <span class="type">Discussion</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-5"><article class="exploration project-like"><div class="para" id="p-938">One could argue that commutative rings should really be called <em class="emphasis">abelian rings</em> to remain consistent with abelian groups. Discuss.</div></article></div>
-<div class="para" id="p-939">Here are some basic consequences of the axioms.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-5"><article class="exploration project-like"><div class="para" id="p-964">One could argue that commutative rings should really be called <em class="emphasis">abelian rings</em> to remain consistent with abelian groups. Discuss.</div></article></div>
+<div class="para" id="p-965">Here are some basic consequences of the axioms.</div>
 <article class="proposition theorem-like" id="prop-ring-arithmetic"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Ring Arithmetic.</span>
 </h4>
-<div class="para" id="p-940">For any ring <span class="process-math">\(R\)</span> and all <span class="process-math">\(a,b \in R\)</span> we have:</div> <div class="para logical" id="p-941"><ol class="decimal">
-<li id="li-304"><div class="para" id="p-942"><span class="process-math">\(a \cdot 0 = 0 = 0 \cdot a\text{,}\)</span></div></li>
-<li id="li-305"><div class="para" id="p-943"><span class="process-math">\((-a)b = -(ab) = a(-b)\text{,}\)</span></div></li>
-<li id="li-306"><div class="para" id="p-944"><span class="process-math">\((-a)(-b) = ab\text{.}\)</span></div></li>
-</ol></div> <div class="para" id="p-945">For a unital ring <span class="process-math">\(R\)</span> and all <span class="process-math">\(a\in R\)</span> we have:</div> <div class="para logical" id="p-946"><ol class="decimal">
-<li id="li-307"><div class="para" id="p-947">
+<div class="para" id="p-966">For any ring <span class="process-math">\(R\)</span> and all <span class="process-math">\(a,b \in R\)</span> we have:</div> <div class="para logical" id="p-967"><ol class="decimal">
+<li id="li-329"><div class="para" id="p-968"><span class="process-math">\(a \cdot 0 = 0 = 0 \cdot a\text{,}\)</span></div></li>
+<li id="li-330"><div class="para" id="p-969"><span class="process-math">\((-a)b = -(ab) = a(-b)\text{,}\)</span></div></li>
+<li id="li-331"><div class="para" id="p-970"><span class="process-math">\((-a)(-b) = ab\text{.}\)</span></div></li>
+</ol></div> <div class="para" id="p-971">For a unital ring <span class="process-math">\(R\)</span> and all <span class="process-math">\(a\in R\)</span> we have:</div> <div class="para logical" id="p-972"><ol class="decimal">
+<li id="li-332"><div class="para" id="p-973">
 <span class="process-math">\(1\)</span> is unique, and</div></li>
-<li id="li-308"><div class="para" id="p-948"><span class="process-math">\((-1)a = -a\text{.}\)</span></div></li>
-</ol></div></article><article class="hiddenproof" id="proof-50"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><div class="para logical" id="p-949">
+<li id="li-333"><div class="para" id="p-974"><span class="process-math">\((-1)a = -a\text{.}\)</span></div></li>
+</ol></div></article><article class="hiddenproof" id="proof-50"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><div class="para logical" id="p-975">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring with identity.</div>
 <ol class="decimal">
-<li id="li-309"><div class="para" id="p-950">Let <span class="process-math">\(a\in R\text{.}\)</span> Observe that <span class="process-math">\(0a=(0+0)a=0a+0a\)</span> by the distributive law. Subtracting <span class="process-math">\(0a\)</span> from both sides we have <span class="process-math">\(0=0a\text{.}\)</span> A similar argument shows that <span class="process-math">\(0=a0\text{.}\)</span>
+<li id="li-334"><div class="para" id="p-976">Let <span class="process-math">\(a\in R\text{.}\)</span> Observe that <span class="process-math">\(0a=(0+0)a=0a+0a\)</span> by the distributive law. Subtracting <span class="process-math">\(0a\)</span> from both sides we have <span class="process-math">\(0=0a\text{.}\)</span> A similar argument shows that <span class="process-math">\(0=a0\text{.}\)</span>
 </div></li>
-<li id="li-310"><div class="para" id="p-951">Let <span class="process-math">\(a\in R\text{.}\)</span> Note that <span class="process-math">\(-a+a=0\text{.}\)</span> Consider <span class="process-math">\((-1)a+a\text{.}\)</span> Using the distributive law we see that <span class="process-math">\((-1)a+a=a(-1+1)=a(0)=0\text{.}\)</span> Thus <span class="process-math">\(-a\)</span> and <span class="process-math">\((-1)a\)</span> are both additive inverses of <span class="process-math">\(a,\)</span> making them unique.</div></li>
+<li id="li-335"><div class="para" id="p-977">Let <span class="process-math">\(a\in R\text{.}\)</span> Note that <span class="process-math">\(-a+a=0\text{.}\)</span> Consider <span class="process-math">\((-1)a+a\text{.}\)</span> Using the distributive law we see that <span class="process-math">\((-1)a+a=a(-1+1)=a(0)=0\text{.}\)</span> Thus <span class="process-math">\(-a\)</span> and <span class="process-math">\((-1)a\)</span> are both additive inverses of <span class="process-math">\(a,\)</span> making them unique.</div></li>
 </ol>
 </div></article></div>
-<div class="para" id="p-952">Phew. Let's take a breather and see some examples.</div>
+<div class="para" id="p-978">Phew. Let's take a breather and see some examples.</div>
 <article class="example example-like" id="ex-ring-examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Relevant Rings.</span>
-</h4> <div class="para logical" id="p-953"><ol class="decimal">
-<li id="li-311"><div class="para" id="p-954">
-<span class="process-math">\(R=\{0\}\)</span> is called the <em class="emphasis">trivial ring</em>, or <em class="emphasis">zero ring</em>. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-34" id="fn-34"><sup> 2 </sup></a>
+</h4> <div class="para logical" id="p-979"><ol class="decimal">
+<li id="li-336"><div class="para" id="p-980">
+<span class="process-math">\(R=\{0\}\)</span> is called the <em class="emphasis">trivial ring</em>, or <em class="emphasis">zero ring</em>. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-50" id="fn-50"><sup> 2 </sup></a>
 </div></li>
-<li id="li-312"><div class="para" id="p-955">
+<li id="li-337"><div class="para" id="p-981">
 <span class="process-math">\(\mathbb{Z}\)</span> is a commutative ring.</div></li>
-<li id="li-313"><div class="para" id="p-956">
+<li id="li-338"><div class="para" id="p-982">
 <span class="process-math">\(\mathbb{Z}/n\)</span> is a commutative ring under addition and multiplication modulo <span class="process-math">\(n\text{.}\)</span>
 </div></li>
-<li id="li-314"><div class="para" id="p-957">The familiar sets <span class="process-math">\(\mathbb{Q}, {\mathbb{R}}, \mathbb{C}\)</span> are fields.</div></li>
-<li id="def-gaussian-integers"><div class="para" id="p-958">The set <span class="process-math">\(\Z[i] = \{a + bi \mid a,b \in \Z\}\)</span> is a commutative ring known as the <em class="emphasis">Gaussian integers</em>.</div></li>
-<li id="li-316"><div class="para" id="p-959">If <span class="process-math">\(R\)</span> is any ring (not necessarily commutative), so is <span class="process-math">\(\operatorname{M}_{n}(R)\)</span> for any natural number <span class="process-math">\(n\text{,}\)</span> using the usual rules for addition and multiplication of square matrices.</div></li>
-<li id="li-317"><div class="para logical" id="p-960">
+<li id="li-339"><div class="para" id="p-983">The familiar sets <span class="process-math">\(\mathbb{Q}, {\mathbb{R}}, \mathbb{C}\)</span> are fields.</div></li>
+<li id="def-gaussian-integers"><div class="para" id="p-984">The set <span class="process-math">\(\Z[i] = \{a + bi \mid a,b \in \Z\}\)</span> is a commutative ring known as the <em class="emphasis">Gaussian integers</em>.</div></li>
+<li id="li-341"><div class="para" id="p-985">If <span class="process-math">\(R\)</span> is any ring (not necessarily commutative), so is <span class="process-math">\(\operatorname{M}_{n}(R)\)</span> for any natural number <span class="process-math">\(n\text{,}\)</span> using the usual rules for addition and multiplication of square matrices.</div></li>
+<li id="li-342"><div class="para logical" id="p-986">
 <div class="para">The cartesian product <span class="process-math">\(R\times R'\)</span> of two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(R'\)</span> has a natural ring structure with addition and multiplication defined componentwise:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -895,35 +901,35 @@ window.MathJax = {
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-1-is-0"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-1-is-0"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(1=0\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-1-is-0"><article class="exercise exercise-like"><div class="para" id="p-961">Let <span class="process-math">\(R\)</span> be a ring. Prove that <span class="process-math">\(R=\{0\}\)</span> if and only if <span class="process-math">\(1=0\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-1-is-0"><article class="exercise exercise-like"><div class="para" id="p-987">Let <span class="process-math">\(R\)</span> be a ring. Prove that <span class="process-math">\(R=\{0\}\)</span> if and only if <span class="process-math">\(1=0\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para" id="p-962">Notice that in the trivial ring <span class="process-math">\(0=1\text{.}\)</span> Conversely, if <span class="process-math">\(1 = 0\)</span> in a ring, then <span class="process-math">\(R = \{0\}\text{,}\)</span> since in this case for all <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(a \cdot 0 = 0\)</span> and hence <span class="process-math">\(a = a \cdot 1 = a \cdot 0 = 0\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para" id="p-988">Notice that in the trivial ring <span class="process-math">\(0=1\text{.}\)</span> Conversely, if <span class="process-math">\(1 = 0\)</span> in a ring, then <span class="process-math">\(R = \{0\}\text{,}\)</span> since in this case for all <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(a \cdot 0 = 0\)</span> and hence <span class="process-math">\(a = a \cdot 1 = a \cdot 0 = 0\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-54"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-54"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Direct Product Preservations.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-54"><article class="exercise exercise-like"><div class="para" id="p-963">Let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be rings. The Cartesian product <span class="process-math">\(R\times S\)</span> is commutative if and only if <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are commutative. Similarly, <span class="process-math">\(R\times S\)</span> has identity if and only if both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> do as well.</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-54"><article class="exercise exercise-like"><div class="para" id="p-989">Let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be rings. The Cartesian product <span class="process-math">\(R\times S\)</span> is commutative if and only if <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are commutative. Similarly, <span class="process-math">\(R\times S\)</span> has identity if and only if both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> do as well.</div></article></div>
 <article class="exercise exercise-like" id="exercise-55"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-55"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span><span class="space"> </span><span class="title">Less Relevant Rings.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-55"><article class="exercise exercise-like"><div class="para logical" id="p-964"><ol class="decimal">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-55"><article class="exercise exercise-like"><div class="para logical" id="p-990"><ol class="decimal">
 <li id="list-opposite-ring">
-<span class="heading"><span class="title">Opposite Day.</span></span><div class="para" id="p-965">Given a ring <span class="process-math">\(R\text{,}\)</span> let <span class="process-math">\(R^{op}\)</span> denote the “opposite ring''. This is the same underlying set as <span class="process-math">\(R\)</span> equipped with the same rule for <span class="process-math">\(+\)</span> as <span class="process-math">\(R\text{,}\)</span> but with multiplication rule (which I will write here as <span class="process-math">\(\cdot_{op}\)</span>) redefined to be <span class="process-math">\(a \cdot_{op} b := b a\)</span> (where <span class="process-math">\(ba\)</span> refers to the original multiplication rule for <span class="process-math">\(R\)</span>). Then <span class="process-math">\(R^{op}\)</span> is also a ring</div>
+<span class="heading"><span class="title">Opposite Day.</span></span><div class="para" id="p-991">Given a ring <span class="process-math">\(R\text{,}\)</span> let <span class="process-math">\(R^{op}\)</span> denote the “opposite ring''. This is the same underlying set as <span class="process-math">\(R\)</span> equipped with the same rule for <span class="process-math">\(+\)</span> as <span class="process-math">\(R\text{,}\)</span> but with multiplication rule (which I will write here as <span class="process-math">\(\cdot_{op}\)</span>) redefined to be <span class="process-math">\(a \cdot_{op} b := b a\)</span> (where <span class="process-math">\(ba\)</span> refers to the original multiplication rule for <span class="process-math">\(R\)</span>). Then <span class="process-math">\(R^{op}\)</span> is also a ring</div>
 </li>
-<li id="li-319">
-<span class="heading"><span class="title">Function Ring.</span></span><div class="para" id="p-966">If <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(R\)</span> is a ring, let <span class="process-math">\(\operatorname{Fun}(X, R)\)</span> be the collection of set theoretic functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(R\text{,}\)</span> and define <span class="process-math">\((f + g)(x) = f(x) + g(x)\)</span> and <span class="process-math">\((f \cdot g)(x) := f(x) \cdot g(x)\text{.}\)</span> Then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> is a ring. If <span class="process-math">\(X\)</span> is a finite set and <span class="process-math">\(|X|=n\text{,}\)</span> then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> may be identified with <span class="process-math">\(R^n=\underbrace{R \times \cdots \times R}_n\text{,}\)</span> the direct product of <span class="process-math">\(n\)</span> copies of <span class="process-math">\(R\text{.}\)</span>
+<li id="li-344">
+<span class="heading"><span class="title">Function Ring.</span></span><div class="para" id="p-992">If <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(R\)</span> is a ring, let <span class="process-math">\(\operatorname{Fun}(X, R)\)</span> be the collection of set theoretic functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(R\text{,}\)</span> and define <span class="process-math">\((f + g)(x) = f(x) + g(x)\)</span> and <span class="process-math">\((f \cdot g)(x) := f(x) \cdot g(x)\text{.}\)</span> Then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> is a ring. If <span class="process-math">\(X\)</span> is a finite set and <span class="process-math">\(|X|=n\text{,}\)</span> then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> may be identified with <span class="process-math">\(R^n=\underbrace{R \times \cdots \times R}_n\text{,}\)</span> the direct product of <span class="process-math">\(n\)</span> copies of <span class="process-math">\(R\text{.}\)</span>
 </div>
 </li>
-<li id="li-320">
-<span class="heading"><span class="title">Endomorphism Ring.</span></span><div class="para" id="p-967">If <span class="process-math">\(A = (A, +)\)</span> is any abelian group, set <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> to be the collection of endomorphisms of <span class="process-math">\(A\)</span> — that is, the set of group homomorphisms <span class="process-math">\(f: A \to A\)</span> from <span class="process-math">\(A\)</span> to itself.</div>
-<div class="para" id="p-968">Then <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> is a ring with addition <span class="process-math">\((f + g)(a) := f(a) + g(a)\)</span> and multiplication <span class="process-math">\(f \cdot g := f \circ g\text{.}\)</span> This is almost always a non-commutative ring.</div>
+<li id="li-345">
+<span class="heading"><span class="title">Endomorphism Ring.</span></span><div class="para" id="p-993">If <span class="process-math">\(A = (A, +)\)</span> is any abelian group, set <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> to be the collection of endomorphisms of <span class="process-math">\(A\)</span> — that is, the set of group homomorphisms <span class="process-math">\(f: A \to A\)</span> from <span class="process-math">\(A\)</span> to itself.</div>
+<div class="para" id="p-994">Then <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> is a ring with addition <span class="process-math">\((f + g)(a) := f(a) + g(a)\)</span> and multiplication <span class="process-math">\(f \cdot g := f \circ g\text{.}\)</span> This is almost always a non-commutative ring.</div>
 </li>
 </ol></div></article></div>
-<div class="para" id="p-969">Here is a nice generalization that will prove usful quite a few times down the road.</div>
+<div class="para" id="p-995">Here is a nice generalization that will prove usful quite a few times down the road.</div>
 <article class="theorem theorem-like" id="thm-binomial-thm-rings"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Theorem for Commutative Rings.</span>
 </h4>
-<div class="para logical" id="p-970">
+<div class="para logical" id="p-996">
 <div class="para">For any commutative ring <span class="process-math">\(R\)</span> and any elements <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in <span class="process-math">\(R\text{,}\)</span> we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -936,41 +942,41 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Absolute Units</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-37">
-<div class="para" id="p-971">“There is more power in unity than division.”</div> <cite class="attribution">―Emmanuel Cleaver</cite>
+<div class="para" id="p-997">“There is more power in unity than division.”</div> <cite class="attribution">―Emmanuel Cleaver</cite>
 </blockquote>
 <article class="definition definition-like" id="def-unit"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span><span class="space"> </span><span class="title">Unit.</span>
-</h4> <div class="para" id="p-972">An element <span class="process-math">\(u\)</span> of a unital ring <span class="process-math">\(R\)</span> with <span class="process-math">\(1\neq 0\)</span> is called a <em class="emphasis">unit</em> there exists <span class="process-math">\(v\in R\)</span> such that <span class="process-math">\(uv=1\)</span> and <span class="process-math">\(vu=1\text{.}\)</span> If such a <span class="process-math">\(v\)</span> exists, it is unique, it is called the inverse of <span class="process-math">\(u\)</span> and denoted by <span class="process-math">\(u^{-1}\text{.}\)</span>
+</h4> <div class="para" id="p-998">An element <span class="process-math">\(u\)</span> of a unital ring <span class="process-math">\(R\)</span> with <span class="process-math">\(1\neq 0\)</span> is called a <em class="emphasis">unit</em> there exists <span class="process-math">\(v\in R\)</span> such that <span class="process-math">\(uv=1\)</span> and <span class="process-math">\(vu=1\text{.}\)</span> If such a <span class="process-math">\(v\)</span> exists, it is unique, it is called the inverse of <span class="process-math">\(u\)</span> and denoted by <span class="process-math">\(u^{-1}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-group-of-units"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span><span class="space"> </span><span class="title">Group of Units.</span>
-</h4> <div class="para" id="p-973">The set of units of a non-trivial unital ring <span class="process-math">\(R\)</span> is denoted <span class="process-math">\(R^\times\text{.}\)</span> This forms a group <span class="process-math">\((R^\times,\cdot)\)</span> with respect to multiplication.</div></article><div class="para" id="p-974">Finally, we have a formal definition for groups of units.</div>
+</h4> <div class="para" id="p-999">The set of units of a non-trivial unital ring <span class="process-math">\(R\)</span> is denoted <span class="process-math">\(R^\times\text{.}\)</span> This forms a group <span class="process-math">\((R^\times,\cdot)\)</span> with respect to multiplication.</div></article><div class="para" id="p-1000">Finally, we have a formal definition for groups of units.</div>
 <article class="exercise exercise-like" id="exe-group-of-units-is-a-group"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-group-of-units-is-a-group"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span><span class="space"> </span><span class="title">Sweet, Sweet Rigor.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-group-of-units-is-a-group"><article class="exercise exercise-like"><div class="para" id="p-975">The group of units is indeed a group <span class="process-math">\((R^\times,\cdot)\)</span> with respect to multiplication.</div></article></div>
-<div class="para" id="p-976">Well, that was validating. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-35" id="fn-35"><sup> 3 </sup></a> Months in the making. But enough vindication: we move forward. It's all we've ever known.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-group-of-units-is-a-group"><article class="exercise exercise-like"><div class="para" id="p-1001">The group of units is indeed a group <span class="process-math">\((R^\times,\cdot)\)</span> with respect to multiplication.</div></article></div>
+<div class="para" id="p-1002">Well, that was validating. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-51" id="fn-51"><sup> 3 </sup></a> Months in the making. But enough vindication: we move forward. It's all we've ever known.</div>
 <article class="theorem theorem-like" id="thm-units-in-fields"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span><span class="space"> </span><span class="title">Units in Fields.</span>
 </h4>
-<div class="para" id="p-977">Let <span class="process-math">\(F\)</span> be a field. Prove that every non-zero element of <span class="process-math">\(F\)</span> is a unit. In symbols, show <span class="process-math">\(F^\times=F\setminus\{0\}\text{.}\)</span>
+<div class="para" id="p-1003">Let <span class="process-math">\(F\)</span> be a field. Prove that every non-zero element of <span class="process-math">\(F\)</span> is a unit. In symbols, show <span class="process-math">\(F^\times=F\setminus\{0\}\text{.}\)</span>
 </div></article><article class="remark remark-like" id="remark-31"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-978">
-<a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> is often the standard way of proving that something is a field.</div></article><div class="para" id="p-979">If you'll remember all the way back to <a href="" class="xref" data-knowl="./knowl/ex-group-of-units.html" title="Example 1.12: Groups of Units">Example 1.12</a>, you'll see that we verified <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> for <span class="process-math">\(\Q,\R,\)</span> and <span class="process-math">\(\C\text{.}\)</span> This also explains why <span class="process-math">\(\Z^\times\)</span> and <span class="process-math">\(\Z/n^\times\)</span> had a different structure: they weren't fields.</div>
+<div class="para" id="p-1004">
+<a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> is often the standard way of proving that something is a field.</div></article><div class="para" id="p-1005">If you'll remember all the way back to <a href="" class="xref" data-knowl="./knowl/ex-group-of-units.html" title="Example 1.12: Groups of Units">Example 1.12</a>, you'll see that we verified <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> for <span class="process-math">\(\Q,\R,\)</span> and <span class="process-math">\(\C\text{.}\)</span> This also explains why <span class="process-math">\(\Z^\times\)</span> and <span class="process-math">\(\Z/n^\times\)</span> had a different structure: they weren't fields.</div>
 <article class="example example-like" id="zp-field"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z/p\)</span> is a Field!</span>
-</h4> <div class="para" id="p-980">In <a href="" class="xref" data-knowl="./knowl/exe-group-of-units-in-zp.html" title="Exercise 1.14: \Z/p^\times">Exercise 1.14</a> we showed that <span class="process-math">\(\Z/p^\times=\Z/p\sm\{0\}\text{.}\)</span> Thus <span class="process-math">\(\Z/p\)</span> is a field for all primes <span class="process-math">\(p\text{.}\)</span>
+</h4> <div class="para" id="p-1006">In <a href="" class="xref" data-knowl="./knowl/exe-group-of-units-in-zp.html" title="Exercise 1.14: \Z/p^\times">Exercise 1.14</a> we showed that <span class="process-math">\(\Z/p^\times=\Z/p\sm\{0\}\text{.}\)</span> Thus <span class="process-math">\(\Z/p\)</span> is a field for all primes <span class="process-math">\(p\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exe-matrices-and-units"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-matrices-and-units"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span><span class="space"> </span><span class="title">Matrices and Units.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-matrices-and-units"><article class="exercise exercise-like"><div class="para" id="p-981">For any field <span class="process-math">\(F\)</span> we have <span class="process-math">\(\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-matrices-and-units"><article class="exercise exercise-like"><div class="para" id="p-1007">For any field <span class="process-math">\(F\)</span> we have <span class="process-math">\(\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)\text{.}\)</span>
 </div></article></div>
 <article class="remark remark-like" id="remark-32"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.15</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-982">Units in matrix rings are called <em class="emphasis">invertible matrices</em>, but they aren't very useful and we'll probably never see them again. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-36" id="fn-36"><sup> 4 </sup></a>
+<div class="para" id="p-1008">Units in matrix rings are called <em class="emphasis">invertible matrices</em>, but they aren't very useful and we'll probably never see them again. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-52" id="fn-52"><sup> 4 </sup></a>
 </div></article><article class="exercise exercise-like" id="exe-gaussian-units"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-gaussian-units"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian Units.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gaussian-units"><article class="exercise exercise-like"><div class="para logical" id="p-983">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gaussian-units"><article class="exercise exercise-like"><div class="para logical" id="p-1009">
 <div class="para">Let <span class="process-math">\(\Z[i] = \{a + bi \mid a,b \in \Z\}\)</span> be the ring of Gaussian integers. Define a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -978,15 +984,15 @@ N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-321"><div class="para" id="p-984">Prove that <span class="process-math">\(N(\a\b)=N(\a)N(\b)\)</span> for any <span class="process-math">\(\a,\b\in \Z[i]\text{.}\)</span>
+<li id="li-346"><div class="para" id="p-1010">Prove that <span class="process-math">\(N(\a\b)=N(\a)N(\b)\)</span> for any <span class="process-math">\(\a,\b\in \Z[i]\text{.}\)</span>
 </div></li>
-<li id="li-322"><div class="para" id="p-985">Use the function <span class="process-math">\(N\)</span> to determine the units of <span class="process-math">\(\Z[i]\text{.}\)</span>
+<li id="li-347"><div class="para" id="p-1011">Use the function <span class="process-math">\(N\)</span> to determine the units of <span class="process-math">\(\Z[i]\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para logical" id="p-986"><ol class="decimal">
-<li id="li-323"><div class="para logical" id="p-987">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para logical" id="p-1012"><ol class="decimal">
+<li id="li-348"><div class="para logical" id="p-1013">
 <div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[i]\)</span> and behold</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1004,7 +1010,7 @@ N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).
 </div>
 <div class="para">So there's that done.</div>
 </div></li>
-<li id="li-324"><div class="para logical" id="p-988">
+<li id="li-349"><div class="para logical" id="p-1014">
 <div class="para">Suppose <span class="process-math">\(\alpha\beta=1\text{.}\)</span> Then by Part (1) we know</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1019,80 +1025,80 @@ N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
 <article class="remark remark-like" id="remark-33"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-989">The function <span class="process-math">\(N\)</span> in <a href="" class="xref" data-knowl="./knowl/exe-gaussian-units.html" title="Exercise 7.16: Gaussian Units">Exercise 7.16</a> is some incredibly spicy foreshadowing of something called a <em class="emphasis">norm</em> function, which we'll see more of in <a href="sec-eds.html" class="internal" title="Section 9.1: Euclidian Domains">Section 9.1</a>.</div></article></section><section class="subsection" id="subsec-zerodivisors"><h3 class="heading hide-type">
+<div class="para" id="p-1015">The function <span class="process-math">\(N\)</span> in <a href="" class="xref" data-knowl="./knowl/exe-gaussian-units.html" title="Exercise 7.16: Gaussian Units">Exercise 7.16</a> is some incredibly spicy foreshadowing of something called a <em class="emphasis">norm</em> function, which we'll see more of in <a href="sec-eds.html" class="internal" title="Section 9.1: Euclidian Domains">Section 9.1</a>.</div></article></section><section class="subsection" id="subsec-zerodivisors"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">A Zero Divided Cannot Stand</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-38">
-<div class="para" id="p-990">“The only way on Earth to multiply happiness is to divide it.”</div>
+<div class="para" id="p-1016">“The only way on Earth to multiply happiness is to divide it.”</div>
 <cite class="attribution">―Paul Scherrer</cite>
 </blockquote>
-<div class="para" id="p-991">We might not be able to divide by zero, but sometimes we can get the next best thing.</div>
+<div class="para" id="p-1017">We might not be able to divide by zero, but sometimes we can get the next best thing.</div>
 <article class="definition definition-like" id="def-zerodivisor"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span><span class="space"> </span><span class="title">Zerodivisor.</span>
-</h4> <div class="para" id="p-992">A <em class="emphasis">zerodivisor</em> in a ring <span class="process-math">\(R\)</span> is an element <span class="process-math">\(x\ne 0\)</span> such that <span class="process-math">\(xy = 0\)</span> or <span class="process-math">\(yx=0\)</span> for some <span class="process-math">\(y \ne 0\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-37" id="fn-37"><sup> 5 </sup></a>
-</div></article><div class="para" id="p-993">However, as it turns out, most of the time we are trying to avoid the next best thing.</div>
+</h4> <div class="para" id="p-1018">A <em class="emphasis">zerodivisor</em> in a ring <span class="process-math">\(R\)</span> is an element <span class="process-math">\(x\ne 0\)</span> such that <span class="process-math">\(xy = 0\)</span> or <span class="process-math">\(yx=0\)</span> for some <span class="process-math">\(y \ne 0\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-53" id="fn-53"><sup> 5 </sup></a>
+</div></article><div class="para" id="p-1019">However, as it turns out, most of the time we are trying to avoid the next best thing.</div>
 <article class="definition definition-like" id="def-integral-domain"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.19</span><span class="period">.</span><span class="space"> </span><span class="title">Integral Domain.</span>
-</h4> <div class="para" id="p-994">A unital ring <span class="process-math">\(R\)</span> is an <em class="emphasis">integral domain</em> (often shortened to <em class="emphasis">domain</em>) if <span class="process-math">\(1 \ne 0\text{,}\)</span> <span class="process-math">\(R\)</span> is commutative, and <span class="process-math">\(R\)</span> has no zerodivisors.</div></article><article class="remark remark-like" id="remark-34"><h4 class="heading">
+</h4> <div class="para" id="p-1020">A unital ring <span class="process-math">\(R\)</span> is an <em class="emphasis">integral domain</em> (often shortened to <em class="emphasis">domain</em>) if <span class="process-math">\(1 \ne 0\text{,}\)</span> <span class="process-math">\(R\)</span> is commutative, and <span class="process-math">\(R\)</span> has no zerodivisors.</div></article><article class="remark remark-like" id="remark-34"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-995">Note that by <a href="" class="xref" data-knowl="./knowl/exe-1-is-0.html" title="Exercise 7.4: 1=0">Exercise 7.4</a> saying that <span class="process-math">\(1\neq0\)</span> is equivalent to saying that <span class="process-math">\(R\)</span> is nontrivial.</div></article><article class="example example-like" id="ex-z-integral-domain"><h4 class="heading">
+<div class="para" id="p-1021">Note that by <a href="" class="xref" data-knowl="./knowl/exe-1-is-0.html" title="Exercise 7.4: 1=0">Exercise 7.4</a> saying that <span class="process-math">\(1\neq0\)</span> is equivalent to saying that <span class="process-math">\(R\)</span> is nontrivial.</div></article><article class="example example-like" id="ex-z-integral-domain"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z\)</span> is an Integral Domain.</span>
-</h4> <div class="para" id="p-996">The ring of integers <span class="process-math">\(\Z\)</span> is an integral domain. Find two nonzero integers that multiply to <span class="process-math">\(0\text{.}\)</span> I dare you. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-38" id="fn-38"><sup> 6 </sup></a>
-</div></article><div class="para" id="p-997">Unlike in groups, which have a notion of <a href="" class="xref" data-knowl="./knowl/list-cancellation.html" title="Item 3: Cancellation">Cancellation</a>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</div>
+</h4> <div class="para" id="p-1022">The ring of integers <span class="process-math">\(\Z\)</span> is an integral domain. Find two nonzero integers that multiply to <span class="process-math">\(0\text{.}\)</span> I dare you. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-54" id="fn-54"><sup> 6 </sup></a>
+</div></article><div class="para" id="p-1023">Unlike in groups, which have a notion of <a href="" class="xref" data-knowl="./knowl/list-cancellation.html" title="Item 3: Cancellation">Cancellation</a>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</div>
 <article class="lemma theorem-like" id="lem-cancellation-in-integral-domains"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span><span class="space"> </span><span class="title">Cancellation in Domains.</span>
 </h4>
-<div class="para" id="p-998">Let <span class="process-math">\(R\)</span> be a commutative ring with identity. Then <span class="process-math">\(R\)</span> is an integral domain if and only if for all <span class="process-math">\(x,y,z\in R\)</span> such that <span class="process-math">\(xy=xz\text{,}\)</span> we have <span class="process-math">\(y=z\text{.}\)</span> This property is called <em class="alert">cancellation</em>.</div></article><aside class="aside aside-like" id="aside-16"><div class="para" id="p-999">This is sometimes taken to be the definition of an integral domain, but we're not like the ~other~ algebra books.</div></aside><div class="para" id="p-1000">Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</div>
+<div class="para" id="p-1024">Let <span class="process-math">\(R\)</span> be a commutative ring with identity. Then <span class="process-math">\(R\)</span> is an integral domain if and only if for all <span class="process-math">\(x,y,z\in R\)</span> such that <span class="process-math">\(xy=xz\text{,}\)</span> we have <span class="process-math">\(y=z\text{.}\)</span> This property is called <em class="alert">cancellation</em>.</div></article><aside class="aside aside-like" id="aside-16"><div class="para" id="p-1025">This is sometimes taken to be the definition of an integral domain, but we're not like the ~other~ algebra books.</div></aside><div class="para" id="p-1026">Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</div>
 <article class="lemma theorem-like" id="lem-zerodivisor-not-unit"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span><span class="space"> </span><span class="title">Zerodivisors and Units.</span>
 </h4>
-<div class="para" id="p-1001">If <span class="process-math">\(a\)</span> is a zerodivisor in a ring <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(a\)</span> is not a unit.</div></article><article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><div class="para" id="p-1002">Suppose that <span class="process-math">\(a\)</span> is both a zerodivisor and a unit. Then there exists <span class="process-math">\(b\neq 0\)</span> such that <span class="process-math">\(ab=0\)</span> or <span class="process-math">\(ba=0\text{.}\)</span> Multiplying either of these equations by <span class="process-math">\(a^{-1}\)</span> gives <span class="process-math">\(b=0\text{,}\)</span> a contradiction.</div></article></div>
-<div class="para" id="p-1003">All right. <em class="emphasis">Now</em> it's one fell swoop.</div>
+<div class="para" id="p-1027">If <span class="process-math">\(a\)</span> is a zerodivisor in a ring <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(a\)</span> is not a unit.</div></article><article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><div class="para" id="p-1028">Suppose that <span class="process-math">\(a\)</span> is both a zerodivisor and a unit. Then there exists <span class="process-math">\(b\neq 0\)</span> such that <span class="process-math">\(ab=0\)</span> or <span class="process-math">\(ba=0\text{.}\)</span> Multiplying either of these equations by <span class="process-math">\(a^{-1}\)</span> gives <span class="process-math">\(b=0\text{,}\)</span> a contradiction.</div></article></div>
+<div class="para" id="p-1029">All right. <em class="emphasis">Now</em> it's one fell swoop.</div>
 <article class="theorem theorem-like" id="integral-domains-and-fields"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.24</span><span class="period">.</span><span class="space"> </span><span class="title">Domains and Fields.</span>
 </h4>
-<div class="para logical" id="p-1004"><ol class="decimal">
-<li id="li-325"><div class="para" id="p-1005">Every field is an integral domain.</div></li>
-<li id="li-326"><div class="para" id="p-1006">A finite integral domain <span class="process-math">\(R\)</span> must be a field.</div></li>
-</ol></div></article><article class="hiddenproof" id="proof-52"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-52"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-52"><article class="hiddenproof"><div class="para logical" id="p-1007"><ol class="decimal">
-<li id="li-327"><div class="para" id="p-1008">Let <span class="process-math">\(F\)</span> be a field. By <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> we know that every nonzero element of <span class="process-math">\(F\)</span> is a unit. Thus <span class="process-math">\(F\)</span> has no zerodivisors by <a href="" class="xref" data-knowl="./knowl/lem-zerodivisor-not-unit.html" title="Lemma 7.23: Zerodivisors and Units">Lemma 7.23</a>.</div></li>
-<li id="li-328"><div class="para" id="p-1009">Let <span class="process-math">\(x\in R\text{,}\)</span> and consider the set <span class="process-math">\(\{x^n|n\in\N\}\text{.}\)</span> As <span class="process-math">\(R\)</span> is finite there must exist <span class="process-math">\(n&lt;m\in\N\)</span> such that <span class="process-math">\(x^n=x^m\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain <a href="" class="xref" data-knowl="./knowl/lem-cancellation-in-integral-domains.html" title="Lemma 7.22: Cancellation in Domains">Lemma 7.22</a> allows us to cancel an <span class="process-math">\(x^n\)</span> from both sides, yielding <span class="process-math">\(e=x^{m-n}\text{,}\)</span> and thus <span class="process-math">\(x\cdot x^{m-n-1}=e\text{,}\)</span> making <span class="process-math">\(x\)</span> a unit of <span class="process-math">\(R\text{.}\)</span> Thus <span class="process-math">\(R\)</span> is a field by <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a>.</div></li>
+<div class="para logical" id="p-1030"><ol class="decimal">
+<li id="li-350"><div class="para" id="p-1031">Every field is an integral domain.</div></li>
+<li id="li-351"><div class="para" id="p-1032">A finite integral domain <span class="process-math">\(R\)</span> must be a field.</div></li>
+</ol></div></article><article class="hiddenproof" id="proof-52"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-52"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-52"><article class="hiddenproof"><div class="para logical" id="p-1033"><ol class="decimal">
+<li id="li-352"><div class="para" id="p-1034">Let <span class="process-math">\(F\)</span> be a field. By <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a> we know that every nonzero element of <span class="process-math">\(F\)</span> is a unit. Thus <span class="process-math">\(F\)</span> has no zerodivisors by <a href="" class="xref" data-knowl="./knowl/lem-zerodivisor-not-unit.html" title="Lemma 7.23: Zerodivisors and Units">Lemma 7.23</a>.</div></li>
+<li id="li-353"><div class="para" id="p-1035">Let <span class="process-math">\(x\in R\text{,}\)</span> and consider the set <span class="process-math">\(\{x^n|n\in\N\}\text{.}\)</span> As <span class="process-math">\(R\)</span> is finite there must exist <span class="process-math">\(n&lt;m\in\N\)</span> such that <span class="process-math">\(x^n=x^m\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain <a href="" class="xref" data-knowl="./knowl/lem-cancellation-in-integral-domains.html" title="Lemma 7.22: Cancellation in Domains">Lemma 7.22</a> allows us to cancel an <span class="process-math">\(x^n\)</span> from both sides, yielding <span class="process-math">\(e=x^{m-n}\text{,}\)</span> and thus <span class="process-math">\(x\cdot x^{m-n-1}=e\text{,}\)</span> making <span class="process-math">\(x\)</span> a unit of <span class="process-math">\(R\text{.}\)</span> Thus <span class="process-math">\(R\)</span> is a field by <a href="" class="xref" data-knowl="./knowl/thm-units-in-fields.html" title="Theorem 7.11: Units in Fields">Theorem 7.11</a>.</div></li>
 </ol></div></article></div>
 <article class="exercise exercise-like" id="exe-neither-zerodivisor-nor-unit"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-neither-zerodivisor-nor-unit"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.25</span><span class="period">.</span><span class="space"> </span><span class="title">Finite Zerdivisors and Units.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-neither-zerodivisor-nor-unit"><article class="exercise exercise-like"><div class="para logical" id="p-1010"><ol class="decimal">
-<li id="li-329"><div class="para" id="p-1011">Prove that if <span class="process-math">\(R\)</span> is finite then every element is either a unit or a zerodivisor.</div></li>
-<li id="li-330"><div class="para" id="p-1012">Give an example of a ring <span class="process-math">\(R\)</span> and an element <span class="process-math">\(a\in R\)</span> which is neither a unit nor a zerodivisor.</div></li>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-neither-zerodivisor-nor-unit"><article class="exercise exercise-like"><div class="para logical" id="p-1036"><ol class="decimal">
+<li id="li-354"><div class="para" id="p-1037">Prove that if <span class="process-math">\(R\)</span> is finite then every element is either a unit or a zerodivisor.</div></li>
+<li id="li-355"><div class="para" id="p-1038">Give an example of a ring <span class="process-math">\(R\)</span> and an element <span class="process-math">\(a\in R\)</span> which is neither a unit nor a zerodivisor.</div></li>
 </ol></div></article></div>
 <article class="definition definition-like" id="def-nilpotent"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.26</span><span class="period">.</span><span class="space"> </span><span class="title">Nilpotent.</span>
-</h4> <div class="para" id="p-1013">An element <span class="process-math">\(a\)</span> of a ring <span class="process-math">\(R\)</span> is called <em class="emphasis">nilpotent</em> if <span class="process-math">\(a^n = 0\)</span> for some integer <span class="process-math">\(n \geq 1\text{.}\)</span>
+</h4> <div class="para" id="p-1039">An element <span class="process-math">\(a\)</span> of a ring <span class="process-math">\(R\)</span> is called <em class="emphasis">nilpotent</em> if <span class="process-math">\(a^n = 0\)</span> for some integer <span class="process-math">\(n \geq 1\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-nilpotents-and-units"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.27</span><span class="period">.</span><span class="space"> </span><span class="title">Nilpotents and Units.</span>
 </h4>
-<div class="para" id="p-1014">If <span class="process-math">\(a\)</span> is a nilpotent element in a unital ring <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(1-a\)</span> is a unit.</div></article><article class="definition definition-like" id="def-idempotent"><h4 class="heading">
+<div class="para" id="p-1040">If <span class="process-math">\(a\)</span> is a nilpotent element in a unital ring <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(1-a\)</span> is a unit.</div></article><article class="definition definition-like" id="def-idempotent"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.28</span><span class="period">.</span><span class="space"> </span><span class="title">Idempotent.</span>
-</h4> <div class="para" id="p-1015">Let <span class="process-math">\(R\)</span> be a ring with identity. An element <span class="process-math">\(e\in R\)</span> is called <em class="emphasis">idempotent</em> if <span class="process-math">\(e^2=e\text{.}\)</span>
+</h4> <div class="para" id="p-1041">Let <span class="process-math">\(R\)</span> be a ring with identity. An element <span class="process-math">\(e\in R\)</span> is called <em class="emphasis">idempotent</em> if <span class="process-math">\(e^2=e\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-60"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-60"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7.29</span><span class="period">.</span><span class="space"> </span><span class="title">Potent Idempotents.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-60"><article class="exercise exercise-like"><div class="para logical" id="p-1016">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-60"><article class="exercise exercise-like"><div class="para logical" id="p-1042">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring with identity.</div>
 <ol class="decimal">
-<li id="li-331"><div class="para" id="p-1017">Give an example of a ring which has an idempotent other than <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{.}\)</span>
+<li id="li-356"><div class="para" id="p-1043">Give an example of a ring which has an idempotent other than <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="li-332"><div class="para" id="p-1018">Prove that if <span class="process-math">\(e\)</span> is idempotent, so is <span class="process-math">\(1-e\text{.}\)</span>
+<li id="li-357"><div class="para" id="p-1044">Prove that if <span class="process-math">\(e\)</span> is idempotent, so is <span class="process-math">\(1-e\text{.}\)</span>
 </div></li>
-<li id="li-333"><div class="para" id="p-1019">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that <span class="process-math">\(Re\)</span> is a commutative ring (with identity <span class="process-math">\(e\)</span>).</div></li>
-<li id="li-334"><div class="para" id="p-1020">Prove that the only idempotents in an integral domain are <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{.}\)</span>
+<li id="li-358"><div class="para" id="p-1045">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that <span class="process-math">\(Re\)</span> is a commutative ring (with identity <span class="process-math">\(e\)</span>).</div></li>
+<li id="li-359"><div class="para" id="p-1046">Prove that the only idempotents in an integral domain are <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{.}\)</span>
 </div></li>
 </ol>
-</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-33"><div class="fn">Get it?</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-34"><div class="fn">Personally, I am in favor of calling this the <em class="emphasis">bor-ring</em>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-35"><div class="fn">Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <span class="process-math">\(\GL_n(F)\)</span> is indeed a group. Soon...</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-36"><div class="fn">That was a joke. I'm very funny.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-37"><div class="fn">We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-38"><div class="fn">This is, in our humble opinion, how all conjectures should be proven moving forward.</div></div>
+</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-49"><div class="fn">Get it?</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-50"><div class="fn">Personally, I am in favor of calling this the <em class="emphasis">bor-ring</em>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-51"><div class="fn">Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <span class="process-math">\(\GL_n(F)\)</span> is indeed a group. Soon...</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-52"><div class="fn">That was a joke. I'm very funny.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-53"><div class="fn">We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-54"><div class="fn">This is, in our humble opinion, how all conjectures should be proven moving forward.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-rings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-sub-poly.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

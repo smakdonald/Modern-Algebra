@@ -13,14 +13,16 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">
-<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(H \leq G\)</span> and <span class="process-math">\(N \unlhd G\text{.}\)</span> Then there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
-&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
-\end{aligned}
+\frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
+\end{equation*}
+</div>
+<div class="para">given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h \cdot (N \cap H) \mapsto hN.
 \end{equation*}
 </div>
 </div>

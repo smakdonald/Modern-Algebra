@@ -871,7 +871,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Subgroups",
-  "body": "Subgroups  Subgroups    I have this fear of falling in front of large groups...that's why I tend not to wear heels.  Taylor Swift  Taylor Swift   Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . Subgroup  in group theory, and usually denote subgroups.  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  Proper subgroup     Subgroup Tests     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .    Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of .  Subgroups of  The only subgroups of are the sets .   Whilst perusing , you may have noticed the following: If you didn't, don't worry. I won't tell anyeone ;)   Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .      Here are some slightly more involved properties.  Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!       No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.   Special Linear Group   The special linear group with complex entries is defined  the special linear group  special linear group       The special linear group is a subgroup of the general linear group .    Torsion Subgroups      Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup of . torision subgroup     Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.       Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of , defined as , is a subgroup of .   Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.       Cayley's Theorem   Every group is isomorphic to a subgroup of .     This is a nearly useless theorem.    Stuck in the Middle    Stay in the center, and you will be ready to move in any direction.   Alan Watts  Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group  center of a group     Center is a Subgroup            is abelian    If , then        Only Element of Order  Let be a group and . If is the only element of order in , then .   Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.     "
+  "body": "Subgroups  Subgroups    I have this fear of falling in front of large groups...that's why I tend not to wear heels.  Taylor Swift  Taylor Swift   Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . Subgroup  in group theory, and usually denote subgroups.  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  Proper subgroup     Subgroup Tests     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .    Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of .  Subgroups of  The only subgroups of are the sets .   Whilst perusing , you may have noticed the following: If you didn't, don't worry. I won't tell anyeone ;)   Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .      Here are some slightly more involved properties.  Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!       No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.   Special Linear Group   The special linear group with complex entries is defined  the special linear group  special linear group       The special linear group is a subgroup of the general linear group .    Torsion Subgroups      Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup of . torision subgroup     Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.       Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of , defined as , is a subgroup of .   Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.       Cayley's Theorem   Every group is isomorphic to a subgroup of .     This is a nearly useless theorem.    Stuck in the Middle    Stay in the center, and you will be ready to move in any direction.   Alan Watts  Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group  center of a group     Center is a Subgroup            is abelian    If , then        Only Element of Order  Let be a group and . If is the only element of order in , then .   Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.        A is a subset of a group that is also a group under the same operation. The fastest way to show something is a subgroup is with one of the .    The is the subgroup of elements of a group that commute with every other element. See: .     The and image of a group homomorphism are subgroups. See:      "
 },
 {
   "id": "def-subgroup",
@@ -1036,13 +1036,22 @@ var ptx_lunr_docs = [
   "body": "Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.   "
 },
 {
+  "id": "outcomes-5",
+  "level": "2",
+  "url": "sec-subgroups.html#outcomes-5",
+  "type": "Summary",
+  "number": "2.1",
+  "title": "",
+  "body": "   A is a subset of a group that is also a group under the same operation. The fastest way to show something is a subgroup is with one of the .    The is the subgroup of elements of a group that commute with every other element. See: .     The and image of a group homomorphism are subgroups. See:     "
+},
+{
   "id": "sec-gp-generators",
   "level": "1",
   "url": "sec-gp-generators.html",
   "type": "Section",
   "number": "2.2",
   "title": "Generated Subgroups",
-  "body": "Generated Subgroups    How often misused words generate misleading thoughts.   Herbert Spencer   Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  . the subgroup generated by   The elements of are known as generators , generator     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.     for every .    Generating      Algebraic Structures  Elements of generated by and . Quiver    Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,      Note that in we showed is generated by transpositions. However, there's more than one way to generate an egg.   Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup commutator subgroup of . the commutator subgroup     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.  Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.   Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.     This is techincally an specific instance of the Universal Mapping Property for a Presentation, which is not covered here.   Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .   "
+  "body": "Generated Subgroups  Generational Wealth    How often misused words generate misleading thoughts.   Herbert Spencer   Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  . the subgroup generated by   The elements of are known as generators , generator     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.     for every .    Generating      Algebraic Structures  Elements of generated by and . Quiver    Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,      Note that in we showed is generated by transpositions. However, there's more than one way to generate an egg.   Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup commutator subgroup of . the commutator subgroup     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.  Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.   Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.     This is techincally an specific instance of the Universal Mapping Property for a Presentation, which is not covered here.   Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .       For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .     "
 },
 {
   "id": "def-gensubgroup",
@@ -1059,7 +1068,7 @@ var ptx_lunr_docs = [
   "url": "sec-gp-generators.html#lem-gensubgp",
   "type": "Lemma",
   "number": "2.19",
-  "title": "Elements of <span class=\"process-math\">\\(\\igen X\\)<\/span>.",
+  "title": "Elements of <span class=\"process-math\">\\(\\igen S\\)<\/span>.",
   "body": "Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .   "
 },
 {
@@ -1207,13 +1216,22 @@ var ptx_lunr_docs = [
   "body": "Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .  "
 },
 {
+  "id": "outcomes-6",
+  "level": "2",
+  "url": "sec-gp-generators.html#outcomes-6",
+  "type": "Summary",
+  "number": "2.2",
+  "title": "",
+  "body": "   For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .    "
+},
+{
   "id": "sec-cyclic",
   "level": "1",
   "url": "sec-cyclic.html",
   "type": "Section",
   "number": "2.3",
   "title": "Cyclic Groups",
-  "body": "Cyclic Groups  Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche   We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group  cyclic     Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that     Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.       Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.      Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups    There is no way to be in cyclic existence without creating the causes of suffering.   Jetsunma Ahkon Lhamo   UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . universal mapping property for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .     This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .   Classification Theorem for Cyclic Groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .     Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group . the cyclic group of order  the cyclic group with countably infinite elements  classification of cyclic groups     "
+  "body": "Cyclic Groups  Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche   We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group  cyclic     Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that     Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.       Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.      Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups    There is no way to be in cyclic existence without creating the causes of suffering.   Jetsunma Ahkon Lhamo   UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . universal mapping property for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .     This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .   Classification Theorem for Cyclic Groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .     Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group . the cyclic group of order  the cyclic group with countably infinite elements  classification of cyclic groups        A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .      "
 },
 {
   "id": "def-cyclic-group",
@@ -1369,13 +1387,22 @@ var ptx_lunr_docs = [
   "body": " Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group . the cyclic group of order  the cyclic group with countably infinite elements  classification of cyclic groups   "
 },
 {
+  "id": "outcomes-7",
+  "level": "2",
+  "url": "sec-cyclic.html#outcomes-7",
+  "type": "Summary",
+  "number": "2.3",
+  "title": "",
+  "body": "   A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .     "
+},
+{
   "id": "sec-cosets",
   "level": "1",
   "url": "sec-cosets.html",
   "type": "Section",
   "number": "3.1",
   "title": "Cosets and Lagrange's Theorem",
-  "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Coset   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . Clearly is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in . Index of in  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , .   If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).    "
+  "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . Clearly is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in . Index of in  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , .   If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).       For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.     "
 },
 {
   "id": "def-coset",
@@ -1383,8 +1410,8 @@ var ptx_lunr_docs = [
   "url": "sec-cosets.html#def-coset",
   "type": "Definition",
   "number": "3.1",
-  "title": "Coset.",
-  "body": "Coset   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset    "
+  "title": "Cosets.",
+  "body": "Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset    "
 },
 {
   "id": "exe-abelian-cosets",
@@ -1522,13 +1549,22 @@ var ptx_lunr_docs = [
   "body": "Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , .  "
 },
 {
+  "id": "outcomes-8",
+  "level": "2",
+  "url": "sec-cosets.html#outcomes-8",
+  "type": "Summary",
+  "number": "3.1",
+  "title": "",
+  "body": "   For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.    "
+},
+{
   "id": "sec-normal-subgroups",
   "level": "1",
   "url": "sec-normal-subgroups.html",
   "type": "Section",
   "number": "3.2",
   "title": "Normal Subgroups",
-  "body": "Normal Subgroups    If you are always trying to be normal, you will never know how amazing you can be.   Maya Angelou   Sometimes it is convenient to ignore a certain subobject of a given object and to focus on the remaining properties. Formally, this is done by taking quotients. In contrast to the theory of vector spaces, where the quotient of any vector space by any subspace again naturally forms a vector space, we have to be a little bit more careful in the world of groups. Only special subgroups lead to quotient groups :  Normal Subgroup   A subgroup of a group is normal in , written , if for all . normal subgroup  Normal subgroup     Anything but Normal   Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.    Here are some options the author has recently become partial to:    Semiabelian : Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris.     Ideal subgroup : Look, its shorter! Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.       Equivalent Normal Definitions   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.       Normal Subgroups     The trivial subgroups , of a group are normal subgroups of .    Any subgroup of an abelian group is a normal subgroup.    For any group , .     for all .     .     .     .    The commutator subgroup from is normal in .    The set is normal in .      Normality is not Transitive  Show that being a normal subgroup is not a transitive relation. In other words, find groups such that and , but .    is a good place to start routing around in.   Consider From we have . The group has order , making it ableian from . Thus every subgroup of is normal in by .  Now consider the subgroup . But is not normal in , since for example    Normal Preimages   If is a group homomorphism and then the preimage of , , is a normal subgroup of .    Images not Normal in General  Show that if is a group homomorphism and then need not be a normal subgroup of .   Here is a theorem that will prove exceedingly useful all the way down in .  Unique Order Subgroup is Normal   Let be the only subgroup of order . Then is normal.    We also have some criteria for when a generated subgroup is normal.  Normality and Generated Subgroups  Let be a group and a subset of . Suppose . Prove if and only if for every and .   Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can generate a normal subgroup explicitely.  Generated Normal Subgroup  Let be a group and let be a set. The normal subgroup generated by , denoted , is the intersection of all the normal subgroups of that contain .   Show that is a normal subgroup of .    Show that the elements of can be described as       We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.  Subgroup of Index is Normal   Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.    Coming soon to an OER near you!     This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.   Converse to Lagrange's Theorem is False  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .     Relatively Prime Index and Order   Let be a finite group, and subgroups such that and are relatively prime and . Then .    "
+  "body": "Normal Subgroups  The New Normal    If you are always trying to be normal, you will never know how amazing you can be.   Maya Angelou   Sometimes it is convenient to ignore a certain subobject of a given object and to focus on the remaining properties. Formally, this is done by taking quotients . In contrast to the theory of vector spaces, where the quotient of any vector space by any subspace again naturally forms a vector space, we have to be a little bit more careful in the world of groups. Only special subgroups lead to quotient groups :  Normal Subgroup   A subgroup of a group is normal in , written , if for all . normal subgroup  Normal subgroup     Anything but Normal   Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.    Here are some options the author has recently become partial to:    Semiabelian : Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris.     Ideal subgroup : Look, its shorter! Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.       However, there are many ways to characterize normal subgroups.  Equivalent Normal Characterizations   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.       Arguably, the most important and \/ or intuitive characterization of normal subgroups comes from their relation to homomorphisms. Indeed, though we currenly lack the tools to prove it, tells us that a subgroup is normal if and only if it is the kernel of some homomorphism. Thus, in addition to its necessity in the definition of quotients, a normal subgroup is a simple and unique way to characterize any homomorphism.  Normal Subgroups     The trivial subgroups , of a group are normal subgroups of .    Any subgroup of an abelian group is a normal subgroup.    For any group , .     for all .     .     .     .    The commutator subgroup from is normal in .    The set is normal in .      Normality is not Transitive  Show that being a normal subgroup is not a transitive relation. In other words, find groups such that and , but .    is a good place to start routing around in.   Consider From we have . The group has order , making it ableian from . Thus every subgroup of is normal in by .  Now consider the subgroup . But is not normal in , since for example    Normal Preimages   If is a group homomorphism and then the preimage of , , is a normal subgroup of .    Images not Normal in General  Show that if is a group homomorphism and then need not be a normal subgroup of .   Here is a theorem that will prove exceedingly useful all the way down in .  Unique Order Subgroup is Normal   Let be the only subgroup of order . Then is normal.    We also have some criteria for when a generated subgroup is normal.  Normality and Generated Subgroups  Let be a group and a subset of . Suppose . Prove if and only if for every and .   Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can generate a normal subgroup explicitely.  Generated Normal Subgroup  Let be a group and let be a set. The normal subgroup generated by , denoted , is the intersection of all the normal subgroups of that contain .   Show that is a normal subgroup of .    Show that the elements of can be described as       We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.  Subgroup of Index is Normal   Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.    Coming soon to an OER near you!     This is a specific case of , a much more powerful theorem that we will prove later on, but we can tackle this smaller piece with the tools we have now.   Converse to Lagrange's Theorem is False  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .         A subgroup is a if for all , though there are several .    Abelian subgroups are always normal; in particular, the center of a group is always normal.    If a is the only subgroup of order , then . See: .     The .     "
 },
 {
   "id": "def-normal-subgroup",
@@ -1554,8 +1590,8 @@ var ptx_lunr_docs = [
   "url": "sec-normal-subgroups.html#thm-equivdef-normal",
   "type": "Theorem",
   "number": "3.18",
-  "title": "Equivalent Normal Definitions.",
-  "body": "Equivalent Normal Definitions   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.      "
+  "title": "Equivalent Normal Characterizations.",
+  "body": "Equivalent Normal Characterizations   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.      "
 },
 {
   "id": "ex-normal-examples",
@@ -1636,7 +1672,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "3.27",
   "title": "",
-  "body": " This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.  "
+  "body": " This is a specific case of , a much more powerful theorem that we will prove later on, but we can tackle this smaller piece with the tools we have now.  "
 },
 {
   "id": "exe-lagrange-converse-false",
@@ -1648,13 +1684,13 @@ var ptx_lunr_docs = [
   "body": "Converse to Lagrange's Theorem is False  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .    "
 },
 {
-  "id": "prop-rel-prime-index-and-order",
+  "id": "outcomes-9",
   "level": "2",
-  "url": "sec-normal-subgroups.html#prop-rel-prime-index-and-order",
-  "type": "Proposition",
-  "number": "3.29",
-  "title": "Relatively Prime Index and Order.",
-  "body": "Relatively Prime Index and Order   Let be a finite group, and subgroups such that and are relatively prime and . Then .   "
+  "url": "sec-normal-subgroups.html#outcomes-9",
+  "type": "Summary",
+  "number": "3.2",
+  "title": "",
+  "body": "   A subgroup is a if for all , though there are several .    Abelian subgroups are always normal; in particular, the center of a group is always normal.    If a is the only subgroup of order , then . See: .     The .    "
 },
 {
   "id": "sec-quotient-groups",
@@ -1663,14 +1699,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Quotient Groups",
-  "body": "Quotient Groups  Quotient Groups    Great things are done by a series of small things brought together.   Vincent Van Gogh   We return now to the equivalence relation induced by the set of left (or right) cosets on a group .  Let us ask a question: When does aquire the structure of a group under the operation We need to be worried about whether this operation is independent of choice. That is, if and then must ? In other words, if and , must ?  As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... Get it?   Quotients and Normal Subgroups  1889   Let . The set of (left cosets) forms a group if and only if .    Quotient Group   For any normal subgroup of a group , the quotient group , , is the set of left cosets of in with multiplication given by . quotient group     Old Friends  Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .    Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.   Modular Integer? Barely Know 'Er!  Argue amongst yourselves what the 'best' notation for the integers should be:  , , , , , or whatever other horrors you can conjure.   Dihedral Quotient   is a normal subgroup of . The quotient has just two elements, and .   Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.   Special Linear Quotients      Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . Clearly this means .   Recalling , we have yet another useful corollary:  Order of Quotient Groups   If is finite we have .    Quotient Map   For any group and normal subgroup of the quotient map  is defined by . quotient map     Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .    Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    Coming soon to an OER near you!    Cyclic Center Quotients   Let be a group with center . If is cyclic, then is abelian.     "
+  "body": "Quotient Groups  Quotient Groups    Great things are done by a series of small things brought together.   Vincent Van Gogh   We return now to the equivalence relation induced by the set of left (or right) cosets on a group .  Let us ask a question: When does aquire the structure of a group under the operation We need to be worried about whether this operation is independent of choice. That is, if and then must ? In other words, if and , must ?  As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... Get it?   Quotients and Normal Subgroups  1889   Let . The set of (left cosets) forms a group if and only if .    Quotient Group   For any normal subgroup of a group , the quotient group , , is the set of left cosets of in with multiplication given by . quotient group     Old Friends  Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .    Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.   Modular Integer? Barely Know 'Er!  Argue amongst yourselves what the 'best' notation for the integers should be:  , , , , , or whatever other horrors you can conjure.   Dihedral Quotient   is a normal subgroup of . The quotient has just two elements, and .   Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.   Special Linear Quotients      Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . Clearly this means .   Recalling , we have yet another useful corollary:  Order of Quotient Groups   If is finite we have .    Quotient Map   For any group and normal subgroup of the quotient map  is defined by . quotient map     Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .    Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    Coming soon to an OER near you!    Cyclic Center Quotients   Let be a group with center . If is cyclic, then is abelian.        Given , the  is the set of left cosets of in with multiplication given by . This is a well defined group if and only if is normal. See: .     A subgroup is normal if and only if it is the kernel of a homomorphism. See: .     If is finite we have , and the is a surjective homomorphism. See: and .     If is cyclic, then is abelian. See: .      "
 },
 {
   "id": "thm-quotient-iff-normal",
   "level": "2",
   "url": "sec-quotient-groups.html#thm-quotient-iff-normal",
   "type": "Theorem",
-  "number": "3.30",
+  "number": "3.29",
   "title": "Quotients and Normal Subgroups.",
   "body": "Quotients and Normal Subgroups  1889   Let . The set of (left cosets) forms a group if and only if .   "
 },
@@ -1679,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#def-quotient-group",
   "type": "Definition",
-  "number": "3.31",
+  "number": "3.30",
   "title": "Quotient Group.",
   "body": "Quotient Group   For any normal subgroup of a group , the quotient group , , is the set of left cosets of in with multiplication given by . quotient group    "
 },
@@ -1688,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#ex-old-friends",
   "type": "Example",
-  "number": "3.32",
+  "number": "3.31",
   "title": "Old Friends.",
   "body": "Old Friends  Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .  "
 },
@@ -1697,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#remark-18",
   "type": "Remark",
-  "number": "3.33",
+  "number": "3.32",
   "title": "",
   "body": " Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.  "
 },
@@ -1715,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#ex-dihedral-quotient",
   "type": "Example",
-  "number": "3.34",
+  "number": "3.33",
   "title": "Dihedral Quotient.",
   "body": "Dihedral Quotient   is a normal subgroup of . The quotient has just two elements, and .  "
 },
@@ -1724,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#exe-commutator-quotient-abelian",
   "type": "Exercise",
-  "number": "3.35",
+  "number": "3.34",
   "title": "Quotient of Commutator Subgroup.",
   "body": "Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.  "
 },
@@ -1733,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#exe-gl-sl-iso",
   "type": "Exercise",
-  "number": "3.36",
+  "number": "3.35",
   "title": "Special Linear Quotients.",
   "body": "Special Linear Quotients      Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . Clearly this means .  "
 },
@@ -1742,7 +1778,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#cor-order-of-quotient",
   "type": "Corollary",
-  "number": "3.37",
+  "number": "3.36",
   "title": "Order of Quotient Groups.",
   "body": "Order of Quotient Groups   If is finite we have .   "
 },
@@ -1751,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#def-quotient-map",
   "type": "Definition",
-  "number": "3.38",
+  "number": "3.37",
   "title": "Quotient Map.",
   "body": "Quotient Map   For any group and normal subgroup of the quotient map  is defined by . quotient map    "
 },
@@ -1760,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#prop-quotient-surj-hom",
   "type": "Proposition",
-  "number": "3.39",
+  "number": "3.38",
   "title": "Quotient Map is Surjective Homomorphism.",
   "body": "Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .   "
 },
@@ -1769,7 +1805,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#thm-norm-iff-ker",
   "type": "Theorem",
-  "number": "3.40",
+  "number": "3.39",
   "title": "Normal Subgroup iff Kernel.",
   "body": "Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    Coming soon to an OER near you!   "
 },
@@ -1778,9 +1814,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#thm-gz-cyclic",
   "type": "Theorem",
-  "number": "3.41",
+  "number": "3.40",
   "title": "Cyclic Center Quotients.",
   "body": "Cyclic Center Quotients   Let be a group with center . If is cyclic, then is abelian.   "
+},
+{
+  "id": "outcomes-10",
+  "level": "2",
+  "url": "sec-quotient-groups.html#outcomes-10",
+  "type": "Summary",
+  "number": "3.3",
+  "title": "",
+  "body": "   Given , the  is the set of left cosets of in with multiplication given by . This is a well defined group if and only if is normal. See: .     A subgroup is normal if and only if it is the kernel of a homomorphism. See: .     If is finite we have , and the is a surjective homomorphism. See: and .     If is cyclic, then is abelian. See: .     "
 },
 {
   "id": "sec-products-iso-thms",
@@ -1789,14 +1834,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Products and the Isomorphism Theorems",
-  "body": "Products and the Isomorphism Theorems  The First Isomorphism Theorem    If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.   Mark Twain   We come to the so-called Isomorphism Theorems.  UMP for Quotients   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then     there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,           If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: if , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .       Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization.   First Isomorphism Theorem Jordan, 1870   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .    Double Divide   If is a homomorphism from a finite group to a group , then divides and .     For any group we have .    Products    Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx   Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .   Group Product ( )   Let and be subgroups of a group and define the set  the product of the groups and      Product vs. Direct Product  The product and direct product Whatever that is are not always the same. We will explore this later in    Product Subgroup Criteria   Let be a group with subgroups . Recall the notation     if and only if .    If either one of or is a normal subgroup of , then and .       Product Order   For two finite subgroups , .    Products and Normality   Let be a group, and . Then    ,     , and     .        The identity does not mean that every pair of elements from and must commute.   but not Abelian   In , let and . Then but and do not commute. The fact that can also be justified by observing that .    The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.  Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .    The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.  Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .    The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:     (normal) subgroups correspond to normal subgroups i.e.,      iff and iff      iff and iff        indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)      and      and           We have previously shown that the quotient map is a surjective group homomorphism. We show:      is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by      Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.     "
+  "body": "Products and the Isomorphism Theorems  The First Isomorphism Theorem    If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.   Mark Twain   We come to the so-called Isomorphism Theorems.  UMP for Quotients   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then     there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,           If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: if , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .       Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization.   First Isomorphism Theorem   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .    Double Divide   If is a homomorphism from a finite group to a group , then divides and .     For any group we have .    Products    Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx   Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .   Group Product ( )   Let and be subgroups of a group and define the set  the product of the groups and      Product vs. Direct Product  The product and direct product Whatever that is are not always the same. We will explore this later in    Product Order   For two finite subgroups , .    Products and Normality   Let be a group, and . Then    ,     , and     .       When   If either one of or is a normal subgroup of , then .     The identity does not mean that every pair of elements from and must commute.   but not Abelian   In , let and . Then but and do not commute. The fact that can also be justified by observing that .    The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.  Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .    The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.  Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .    The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:     (normal) subgroups correspond to normal subgroups i.e.,      iff and iff      iff and iff        indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)      and      and           We have previously shown that the quotient map is a surjective group homomorphism. We show:      is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by      Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.        The tells us for any homomorphism .    For , we define the to be the set  .     if either or are normal. If , then and . See: .     We also have the , , and .     "
 },
 {
   "id": "thm-ump-quotient",
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-ump-quotient",
   "type": "Theorem",
-  "number": "3.42",
+  "number": "3.41",
   "title": "UMP for Quotients.",
   "body": "UMP for Quotients   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then     there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,           If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: if , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .      "
 },
@@ -1805,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#ex-abelianization",
   "type": "Example",
-  "number": "3.43",
+  "number": "3.42",
   "title": "Abelianization.",
   "body": "Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization.  "
 },
@@ -1814,16 +1859,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-fit-group",
   "type": "Theorem",
-  "number": "3.44",
+  "number": "3.43",
   "title": "First Isomorphism Theorem.",
-  "body": "First Isomorphism Theorem Jordan, 1870   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .   "
+  "body": "First Isomorphism Theorem   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .   "
 },
 {
   "id": "cor-homom-finite-groups",
   "level": "2",
   "url": "sec-products-iso-thms.html#cor-homom-finite-groups",
   "type": "Corollary",
-  "number": "3.45",
+  "number": "3.44",
   "title": "Double Divide.",
   "body": "Double Divide   If is a homomorphism from a finite group to a group , then divides and .   "
 },
@@ -1832,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#exe-quotients-inner-automorphisms",
   "type": "Exercise",
-  "number": "3.46",
+  "number": "3.45",
   "title": "<span class=\"process-math\">\\(G\/Z(G)\\cong\\Inn(G)\\)<\/span>.",
   "body": " For any group we have .  "
 },
@@ -1841,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#exe-trivially-intersecting-normal-subgroups",
   "type": "Exercise",
-  "number": "3.47",
+  "number": "3.46",
   "title": "Trivially Intersecting Normal Subgroups.",
   "body": "Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .  "
 },
@@ -1850,7 +1895,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#def-HK",
   "type": "Definition",
-  "number": "3.48",
+  "number": "3.47",
   "title": "Group Product (<span class=\"process-math\">\\(HK\\)<\/span>).",
   "body": "Group Product ( )   Let and be subgroups of a group and define the set  the product of the groups and     "
 },
@@ -1859,25 +1904,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#warning-1",
   "type": "Warning",
-  "number": "3.49",
+  "number": "3.48",
   "title": "Product vs. Direct Product.",
   "body": "Product vs. Direct Product  The product and direct product Whatever that is are not always the same. We will explore this later in   "
-},
-{
-  "id": "hk-normal",
-  "level": "2",
-  "url": "sec-products-iso-thms.html#hk-normal",
-  "type": "Theorem",
-  "number": "3.50",
-  "title": "Product Subgroup Criteria.",
-  "body": "Product Subgroup Criteria   Let be a group with subgroups . Recall the notation     if and only if .    If either one of or is a normal subgroup of , then and .      "
 },
 {
   "id": "thm-hk-order",
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-hk-order",
   "type": "Theorem",
-  "number": "3.51",
+  "number": "3.49",
   "title": "Product Order.",
   "body": "Product Order   For two finite subgroups , .   "
 },
@@ -1886,16 +1922,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-hn-normal",
   "type": "Theorem",
-  "number": "3.52",
+  "number": "3.50",
   "title": "Products and Normality.",
   "body": "Products and Normality   Let be a group, and . Then    ,     , and     .      "
+},
+{
+  "id": "cor-hk-normal",
+  "level": "2",
+  "url": "sec-products-iso-thms.html#cor-hk-normal",
+  "type": "Corollary",
+  "number": "3.51",
+  "title": "When <span class=\"process-math\">\\(HK=KH\\)<\/span>.",
+  "body": "When   If either one of or is a normal subgroup of , then .   "
 },
 {
   "id": "warning-2",
   "level": "2",
   "url": "sec-products-iso-thms.html#warning-2",
   "type": "Warning",
-  "number": "3.53",
+  "number": "3.52",
   "title": "",
   "body": " The identity does not mean that every pair of elements from and must commute.  "
 },
@@ -1904,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#ex-hk-non-commuting-elements",
   "type": "Example",
-  "number": "3.54",
+  "number": "3.53",
   "title": "<span class=\"process-math\">\\(HK=KH\\)<\/span> but not Abelian.",
   "body": "but not Abelian   In , let and . Then but and do not commute. The fact that can also be justified by observing that .   "
 },
@@ -1913,7 +1958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-sit-group",
   "type": "Theorem",
-  "number": "3.55",
+  "number": "3.54",
   "title": "Second Isomorphism Theorem.",
   "body": "Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .   "
 },
@@ -1922,18 +1967,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-tit-group",
   "type": "Theorem",
-  "number": "3.56",
+  "number": "3.55",
   "title": "Third Isomorphism Theorem.",
   "body": "Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .   "
 },
 {
-  "id": "thm-lattice-iso-group",
+  "id": "thm-lit-group",
   "level": "2",
-  "url": "sec-products-iso-thms.html#thm-lattice-iso-group",
+  "url": "sec-products-iso-thms.html#thm-lit-group",
   "type": "Theorem",
-  "number": "3.57",
+  "number": "3.56",
   "title": "The Lattice Isomorphism Theorem.",
   "body": "The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:     (normal) subgroups correspond to normal subgroups i.e.,      iff and iff      iff and iff        indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)      and      and           We have previously shown that the quotient map is a surjective group homomorphism. We show:      is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by      Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.   "
+},
+{
+  "id": "outcomes-11",
+  "level": "2",
+  "url": "sec-products-iso-thms.html#outcomes-11",
+  "type": "Summary",
+  "number": "3.4",
+  "title": "",
+  "body": "   The tells us for any homomorphism .    For , we define the to be the set  .     if either or are normal. If , then and . See: .     We also have the , , and .    "
 },
 {
   "id": "graction",
@@ -4753,9 +4807,9 @@ var ptx_lunr_docs = [
   "body": " Show that for every nonzero integers and there is a -module isomorphism .  "
 },
 {
-  "id": "proposition-36",
+  "id": "proposition-35",
   "level": "2",
-  "url": "sec-modhom.html#proposition-36",
+  "url": "sec-modhom.html#proposition-35",
   "type": "Proposition",
   "number": "11.36",
   "title": "",
@@ -7453,9 +7507,9 @@ var ptx_lunr_docs = [
   "body": "IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-136",
+  "id": "theorem-135",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-136",
+  "url": "sec-sets-functions.html#theorem-135",
   "type": "Theorem",
   "number": "A.23",
   "title": "Containments of Images, Preimages.",
