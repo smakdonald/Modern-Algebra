@@ -10,29 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">
-<span class="process-math">\((1) \Rightarrow (2):\)</span> if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset <span class="process-math">\(gH\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> then <span class="process-math">\(x=gh'\)</span> and <span class="process-math">\(y=gh''\)</span> for some <span class="process-math">\(h',h''\in H\text{,}\)</span> so <span class="process-math">\(g=y(h'')^{-1}\)</span> and therefore <span class="process-math">\(x=y(h'')^{-1}h'=yh\)</span> where <span class="process-math">\(h=(h'')^{-1}h'\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((2) \iff (3):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y = xh^{-1}\)</span> and <span class="process-math">\(h^{-1} \in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((2) \iff (4):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y^{-1} x=h\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((4) \iff (5):\)</span> <span class="process-math">\(y^{-1} x\in H \iff (y^{-1} x)^{-1}\in H \iff x^{-1}y\in H\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">
-<span class="process-math">\((2) \Rightarrow (6):\)</span> Suppose <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span> then by <span class="process-math">\(2. \Rightarrow 3.\)</span> we also have <span class="process-math">\(y = xh''\)</span> for some <span class="process-math">\(h'' \in H\text{.}\)</span> Then we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-xH=\{xh'\mid h'\in H\}=\{yhh'\mid h'\in H\}\subset yH \text{ and}
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
-\end{equation*}
-</div>
-<div class="para">thus <span class="process-math">\(xH=yH\text{.}\)</span>
-</div>
-</div> <div class="para">
-<span class="process-math">\((6) \Rightarrow (1):\)</span> Since <span class="process-math">\(e_G=e_H\in H\text{,}\)</span> we have <span class="process-math">\(x=xe_G\in xH\)</span> and <span class="process-math">\(y=ye_G\in yH\text{.}\)</span> If <span class="process-math">\(xH=yH\)</span> then, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Suppose <span class="process-math">\(G = \langle x \rangle\)</span> with <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(|x| = \infty\)</span> and set <span class="process-math">\(H=C_n\)</span> in the first case and <span class="process-math">\(H=C_\infty\)</span> in the second case. Then by <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 2.50: UMP for Cyclic Groups">Proposition 2.50</a>, there are homomorphisms <span class="process-math">\(f: G \to H\)</span> and <span class="process-math">\(g: G \to H\)</span> such that <span class="process-math">\(f(x) = a\)</span> and <span class="process-math">\(g(a) =x\text{.}\)</span> So <span class="process-math">\(g \circ f\)</span> is an endomorphism of <span class="process-math">\(G\)</span> mapping <span class="process-math">\(x\)</span> to <span class="process-math">\(x\text{.}\)</span> But the identity map also has this property, and so the uniqueness clause gives <span class="process-math">\(g \circ f = \text{id}_G\text{.}\)</span> Similarly, <span class="process-math">\(f \circ g = \text{id}_H\text{.}\)</span>
+</div></article></body>
 </html>

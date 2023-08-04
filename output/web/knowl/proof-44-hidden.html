@@ -10,111 +10,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
-<li>
-<div class="para logical">
-<div class="para">The proof is straightforward but a bit messy. For associativity, note that</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Assume <span class="process-math">\(G\)</span> is simple of order <span class="process-math">\(60\text{.}\)</span> Let us first observe that it suffices to construct a non-trivial action of <span class="process-math">\(G\)</span> on a set with <span class="process-math">\(5\)</span> elements. For given such an action we obtain a non-trivial homomorphism <span class="process-math">\(g: G \to S_5\text{.}\)</span> Since it's non-trivial and <span class="process-math">\(G\)</span> is simple, we must have <span class="process-math">\(\operatorname{ker}(g) = \{e\}\text{,}\)</span> so that <span class="process-math">\(g\)</span> is injective. Thus <span class="process-math">\(G \cong \operatorname{im}(g)\text{,}\)</span> and <span class="process-math">\(|\operatorname{im}(g)| = 60\text{.}\)</span> But we already know that <span class="process-math">\(A_5\)</span> is the only subgroup of <span class="process-math">\(S_5\)</span> of order <span class="process-math">\(60\text{,}\)</span> and thus <span class="process-math">\(G \cong \operatorname{im}(g)=A_5\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <span class="process-math">\(p\)</span>-subgroups. By Sylow Theory and the fact that <span class="process-math">\(G\)</span> is simple (so that no Sylow <span class="process-math">\(p\)</span>-subgroup for <span class="process-math">\(p=2,3,5\)</span> can be unique) we get</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-(y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right) &amp;=(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)\\
-&amp;=(y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
-&amp;=(y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
-&amp;=(y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
-\end{aligned}
+|\operatorname{Syl}_2(G)| \in \{3,5,15\}, |\operatorname{Syl}_3(G)| \in \{4,10\},|\operatorname{Syl}_5(G)| = 6.
 \end{equation*}
 </div>
-<div class="para">On the other hand</div>
+</div> <div class="para">The next important observation is:</div> <blockquote class="blockquote"><div class="para">There is no non-trivial action of <span class="process-math">\(G\)</span> on a set <span class="process-math">\(S\)</span> of size at most <span class="process-math">\(4\text{.}\)</span>
+</div></blockquote> <div class="para">For if there was such a non-trivial action, we would get a homomorphism <span class="process-math">\(\rho: G \to S_n\)</span> for <span class="process-math">\(2 \leq n \leq 4\)</span> (if <span class="process-math">\(n=1\text{,}\)</span> the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.</div> <div class="para logical">
+<div class="para">In particular, <span class="process-math">\(|\operatorname{Syl}_2(G)| \ne 3\)</span> and <span class="process-math">\(|\operatorname{Syl}_4(G)| \ne 4\text{,}\)</span> so that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-\left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) &amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) \\
-&amp; = (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
-\end{aligned}
+|\operatorname{Syl}_2(G)| \in \{5,15\},|\operatorname{Syl}_3(G)| = 10,|\operatorname{Syl}_5(G)| = 6.
 \end{equation*}
 </div>
-<div class="para">This gives associativity.</div>
-</div>
-<div class="para">The fact that <span class="process-math">\((e,e)\)</span> is a two-sided identity follows from the fact that <span class="process-math">\(\rho(e)(y) = \text{id}_H(y)=y\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Finally</div>
+</div> <div class="para">If <span class="process-math">\(|\operatorname{Syl}_2(G)| = 5\)</span> then we are done, since this action is transitive and thus certainly non-trivial.</div> <div class="para logical">
+<div class="para">Suppose <span class="process-math">\(|\operatorname{Syl}_2(G)| = 15\)</span> and let <span class="process-math">\(P_1, \dots, P_{15}\)</span> be all the Sylow <span class="process-math">\(2\)</span>-subgroups. Since <span class="process-math">\(|\operatorname{Syl}_3(G)| = 10\)</span> and <span class="process-math">\(|\operatorname{Syl}_5(G)| = 6\text{,}\)</span> <span class="process-math">\(G\)</span> has <span class="process-math">\(10 \cdot 2 + 6 \cdot 4 = 44\)</span> elements of order <span class="process-math">\(3\)</span> or <span class="process-math">\(5\text{.}\)</span> If <span class="process-math">\(P_i \cap P_j = \{e\}\)</span> for all <span class="process-math">\(i \ne j\text{,}\)</span> we would have <span class="process-math">\(15 \cdot 3\)</span> elements of order <span class="process-math">\(2\)</span> or <span class="process-math">\(4\text{,}\)</span> which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say <span class="process-math">\(H = P_1 \cap P_2\)</span> has two elements. We consider <span class="process-math">\(K = N_G(H)\text{.}\)</span> As in the preivious example, <span class="process-math">\(K \supseteq P_1 \cup P_2\)</span> and hence <span class="process-math">\(|K| \geq 6\text{,}\)</span> <span class="process-math">\(4 \mid |K|\text{,}\)</span> and <span class="process-math">\(|K| \mid 60\text{.}\)</span> The possibilities are</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-(y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
-= (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
-\\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
-\end{aligned}
+|K| = 12, 20, 60.
 \end{equation*}
 </div>
-<div class="para">and similarly</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
-\end{equation*}
+<div class="para">If <span class="process-math">\(|K| = 60\)</span> then <span class="process-math">\(H \unlhd G\text{,}\)</span> which is impossible. If <span class="process-math">\(|K| = 20\text{,}\)</span> then we obtain an transitive action of <span class="process-math">\(G\)</span> on the three element set of left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\text{,}\)</span> which as shown above is not possible. We are left with <span class="process-math">\(|K| = 12\text{.}\)</span> Thus <span class="process-math">\(G\)</span> acts transitively (and hence non-trivially) on the five element set of left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div>
-</div>
-</li>
-<li>
-<div class="para logical">
-<div class="para">Define a funtion</div>
-<div class="displaymath process-math">
-\begin{equation*}
-i: H \to H \rtimes_\rho K
-\end{equation*}
-</div>
-<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
-<div class="displaymath process-math">
-\begin{equation*}
-i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
-\end{equation*}
-</div>
-<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
-\end{equation*}
-</div>
-<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
-\end{equation*}
-</div>
-</div>
-<div class="para logical">
-<div class="para">The function</div>
-<div class="displaymath process-math">
-\begin{equation*}
-j: K \to H \rtimes_\rho K
-\end{equation*}
-</div>
-<div class="para">defined by <span class="process-math">\(j(x) = (e,x)\)</span> is also an injective homomorphism and thus its image</div>
-<div class="displaymath process-math">
-\begin{equation*}
-K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
-\end{equation*}
-</div>
-<div class="para">is isomorphic to <span class="process-math">\(K\text{.}\)</span> <span class="process-math">\(K'\)</span> is typically <em class="emphasis">not</em> normal, however. Finally, it is easy to see that <span class="process-math">\(H'K'= H \rtimes_\rho K\)</span> and <span class="process-math">\(H' \cap K' = \{e\}\text{.}\)</span> Putting this all together we have</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(H' \unlhd H \rtimes_\rho K\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(K' \leq H \rtimes_\rho K\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(H' K' = H \rtimes_\rho K\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(H'\cap K' = \{e\}\text{.}\)</span></div></li>
-</ul>
-</div>
-</li>
-<li><div class="para logical">
-<div class="para">Consider the projection onto the second factor <span class="process-math">\(\pi_2:H \rtimes_\rho K \to  K\)</span> given by <span class="process-math">\(\pi_2(y,x)=x\text{.}\)</span> This is a goup homomorphism since the second component of <span class="process-math">\((y_1,x_1)(y_2,x_2)\)</span> is <span class="process-math">\(x_1x_2\)</span> and is surjective by definition. Now</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
-\begin{equation*}
-\operatorname{Ker}(\pi_2)=\{(y,e_K)\mid y\in H\}=H'\cong H.
-\end{equation*}
-</div>
-<div class="para">By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.43: First Isomorphism Theorem">First Isomorphism Theorem</a> we conclude that <span class="process-math">\((H \rtimes_\rho K )/ H' \cong K\text{.}\)</span>
-</div>
-</div></li>
-</ol></div></article></body>
+</div></article></body>
 </html>

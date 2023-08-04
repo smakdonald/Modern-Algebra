@@ -12,8 +12,112 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(6\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/thm-cayley.html" title="Theorem 2.12: Cayley's Theorem">Cayley's Theorem</a> gives that there exist elements <span class="process-math">\(x,y\in G\)</span> with <span class="process-math">\(|x|=2\)</span> and <span class="process-math">\(|y|=3\text{.}\)</span> Let <span class="process-math">\(K=\langle x \rangle\)</span> and <span class="process-math">\(H=\langle y\rangle\text{.}\)</span> Since <span class="process-math">\([G:H]=2\text{,}\)</span> <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\)</span> and since <span class="process-math">\(H\cap K\)</span> is a common subgroup of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.7: Lagrange's Theorem">Lagrange's Theorem</a> gives that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1\text{.}\)</span> Thus <span class="process-math">\(H\cap K=\{e\}\)</span> and since <span class="process-math">\(|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|\)</span> we deduce that <span class="process-math">\(HK=G\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/thm-sdp-recognition.html" title="Theorem 6.16: Recognition Theorem for Internal Semidirect Products">Theorem 6.16</a> now gives that <span class="process-math">\(G\)</span> is the internal semidirect product of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\text{.}\)</span> More to the point, <span class="process-math">\(G\cong H\rtimes_\rho K\text{,}\)</span> where <span class="process-math">\(\rho:K\to \operatorname{Aut}(H)\)</span> gives the action of <span class="process-math">\(K\)</span> on <span class="process-math">\(H\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>.</div> <div class="para">We now analyze the possibilities for <span class="process-math">\(\rho\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-aut-cn.html" title="Theorem 2.47: \Aut(C_n)">Theorem 2.47</a>, <span class="process-math">\(\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)\text{.}\)</span> There are two possibilities for the image of <span class="process-math">\(\rho\text{:}\)</span> either <span class="process-math">\(\operatorname{Im}(\rho)=\{\text{id}_H\}\)</span> or <span class="process-math">\(\operatorname{Im}(\rho)=\operatorname{Aut}(H)\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(\operatorname{Im}(\rho)=\{\text{id}_H\}\text{,}\)</span> then <span class="process-math">\(\rho(x)=c_x=\text{id}_H\)</span> (which implies <span class="process-math">\(xy=yx\)</span>) and <span class="process-math">\(H\rtimes_\rho K=H\times K\text{.}\)</span> Therefore, in this case <span class="process-math">\(G\cong H\times K\cong C_3\times C_2\cong C_6\text{,}\)</span> where the last isomorphism uses the <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 6.25: Sunzi's Remainder Theorem">Sunzi's Remainder Theorem</a>.</div> <div class="para">If <span class="process-math">\(\operatorname{Im}(\rho)=\operatorname{Aut}(H)\text{,}\)</span> then <span class="process-math">\(\rho(x)\)</span> is the map <span class="process-math">\(y^i\mapsto y^{-1}\)</span> and by an earlier example for this <span class="process-math">\(\rho\)</span> we have <span class="process-math">\(H\rtimes_\rho K\cong D_6\text{,}\)</span> so <span class="process-math">\(G\cong D_6\text{.}\)</span>
-</div> <div class="para">Finally, <span class="process-math">\(C_6\not \cong D_6\)</span> because the former is abelian and the latter is not.</div></article><span class="incontext"><a href="sec-spds.html#proof-46" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">The proof is straightforward but a bit messy. For associativity, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+(y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right) &amp;=(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)\\
+&amp;=(y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
+&amp;=(y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
+&amp;=(y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">On the other hand</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) &amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) \\
+&amp; = (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This gives associativity.</div>
+</div>
+<div class="para">The fact that <span class="process-math">\((e,e)\)</span> is a two-sided identity follows from the fact that <span class="process-math">\(\rho(e)(y) = \text{id}_H(y)=y\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Finally</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+(y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
+= (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
+\\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">and similarly</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Define a funtion</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i: H \to H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
+\end{equation*}
+</div>
+<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
+\end{equation*}
+</div>
+<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">The function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+j: K \to H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">defined by <span class="process-math">\(j(x) = (e,x)\)</span> is also an injective homomorphism and thus its image</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">is isomorphic to <span class="process-math">\(K\text{.}\)</span> <span class="process-math">\(K'\)</span> is typically <em class="emphasis">not</em> normal, however. Finally, it is easy to see that <span class="process-math">\(H'K'= H \rtimes_\rho K\)</span> and <span class="process-math">\(H' \cap K' = \{e\}\text{.}\)</span> Putting this all together we have</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(H' \unlhd H \rtimes_\rho K\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(K' \leq H \rtimes_\rho K\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(H' K' = H \rtimes_\rho K\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(H'\cap K' = \{e\}\text{.}\)</span></div></li>
+</ul>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">Consider the projection onto the second factor <span class="process-math">\(\pi_2:H \rtimes_\rho K \to  K\)</span> given by <span class="process-math">\(\pi_2(y,x)=x\text{.}\)</span> This is a goup homomorphism since the second component of <span class="process-math">\((y_1,x_1)(y_2,x_2)\)</span> is <span class="process-math">\(x_1x_2\)</span> and is surjective by definition. Now</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
+\begin{equation*}
+\operatorname{Ker}(\pi_2)=\{(y,e_K)\mid y\in H\}=H'\cong H.
+\end{equation*}
+</div>
+<div class="para">By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.43: First Isomorphism Theorem">First Isomorphism Theorem</a> we conclude that <span class="process-math">\((H \rtimes_\rho K )/ H' \cong K\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></article><span class="incontext"><a href="sec-spds.html#proof-46" class="internal">in-context</a></span>
 </body>
 </html>

@@ -3298,6 +3298,32 @@
               </p>
             </remark>
 
+            <p>
+              We look now at generating <m>S_n</m>; the following lemma will be helpful.
+            </p>
+
+            <lemma xml:id="lem-generating-sn">
+              <statement>
+                <p>
+                  For <m>\sigma\in S_n</m> and distinct intgers <m>i_1, \dots, i_p</m> we have 
+                  <me>
+                    \sigma(i_1 \, i_2 \, \cdots i_p) \sigma^{-1} = (\sigma(i_1) \, \cdots \, \sigma(i_p)).
+                  </me> 
+                  (Note that the right-hand cycle is a cycle since <m>\sigma</m> is one-to-one.)
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  To prove this, evaluate both sides at <m>\sigma(i_t)</m> for any <m>t</m> and observe that one gets <m>\sigma(i_{t+1})</m> (with the supscript taken modulo <m>p</m>) both times. 
+                  This proves they agree on the set <m>\sigma(\{i_1, \dots, i_p\})</m>. 
+                  If <m>j</m> is not in this set, then <m>(i_1 \, i_2 \, \cdots i_p)</m> fixes <m>\sigma^{-1}(j)</m> so the left-hand side fixes <m>j</m>. 
+                  So does the right, since <m>\sigma^{-1}(j) \notin \{\sigma(i_1), \dots, \sigma(i_p)\}</m>. 
+                  Thus the two functions coincide on elements.
+                </p>
+              </proof>
+            </lemma>
+
             <theorem xml:id="thm-generating-sn"><title>Generating <m>S_n</m></title>
               <statement>
                 <p>
@@ -5322,13 +5348,13 @@
                   <ul>
                     <li>
                       <p>
-                        <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups). <xref ref="thm-properties-of-group-homoms"/>
+                        <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups by <xref ref="thm-properties-of-group-homoms"/>). 
                       </p>
                     </li>
           
                     <li>
                       <p>
-                        <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (since preimages of subgroups through group homomorphisms are subgroups) <xref ref="thm-properties-of-group-homoms"/> and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
+                        <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (by  <xref ref="thm-properties-of-group-homoms"/> again) and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
                         <me>
                           N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
                         </me>
@@ -5359,23 +5385,32 @@
           
                 <p>
                   I will only prove some parts of statements (1), (2), (3) in the theorem.
-                </p>
-          
-                <p>
-                  (1) If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of <xref ref="thm-tit-group"/> or by the exercise below, since <m>\pi</m> is surjective. 
-                  The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <xref provisional="cite"/>
-                </p>
-          
-                <p>
-                  (2) In the interest of time, I'll only prove the assertion about indices in the special case when <m>H</m> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem <xref provisional="cite"/> since for <m>N \leq H \leq G</m> with <m>H \unlhd G</m> we have 
-                  <me>
-                    [G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
-                  </me> 
-                  The general case is a consequence of an exercise from HW 5. <xref provisional="cite"/>
-                </p>
-          
-                <p>
-                  (3) The proof of (3) is omitted.
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of <xref ref="thm-tit-group"/> or by the exercise below, since <m>\pi</m> is surjective. 
+                        The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups.
+                        <fn>See: <xref ref="prop-normal-subgroups-and-homomorphisms"/>.</fn> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        In the interest of time, I'll only prove the assertion about indices in the special case when <m>H</m> is normal. 
+                        In that case this fact is also an immediate consequence of the <xref text="title" ref="thm-tit-group"/> since for <m>N \leq H \leq G</m> with <m>H \unlhd G</m> we have 
+                        <me>
+                          [G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
+                        </me> 
+                        The general case is a consequence of an exercise from HW 5. <xref provisional="cite"/>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The proof of (3) is omitted.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </proof>
             </theorem>
@@ -5420,379 +5455,369 @@
       <chapter xml:id="ch-group-actions"><title>Group Actions</title>
   
         <section xml:id="graction"><title>Group Actions</title>
+
+          <subsection xml:id="subsec-actions"><title>Time to Act</title>
     
-          <blockquote>
-            <p>
-              <q>
-                Actions speak louder than words.
-              </q>
-            </p>
-            <attribution>Anthony of Padua</attribution>
-          </blockquote>
-
-          <p>
-            We come to one of the central concepts in group theory, that of an action of a group on a set.
-          </p>
-    
-          <definition xml:id="def-graction"><title>Group Action</title>
-            <statement>
-              <p>
-                For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function 
-                <me>
-                  G \times S \to S,
-                </me> 
-                typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
-              </p>
-          
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>g \cdot (g' \cdot s) = (g g') \cdot s</m> for all <m>g,g' \in G</m> and <m>s\in S</m>.
-                    </p>
-                  </li>
-        
-                  <li>
-                    <p>
-                      <m>e_G \cdot s = s</m> for all <m>s \in S</m>.
-                    </p>
-                  </li>
-                </ol>
-                <idx><h>group action</h></idx>
-              </p>
-            </statement>
-          </definition>
-    
-          <aside>
-            <p>
-              To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
-            </p>
-          </aside>
-    
-          <example xml:id="ex-group-actions"><title>Group Actions on Arbitrary Sets</title>
-            <p>
-              <ol>
-                <li><title>Trivial Action</title>
-                  <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>.
-                    <idx><h>trivial action</h></idx>
-                  </p>
-                </li>
-
-                <li xml:id="ex-left-mult"> <title>Left Multiplication</title>
-                  <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>.
-                    <fn>And similarly for right multiplication, yet we do not speak of that here.</fn>
-                    <idx><h>left multiplication</h></idx>
-                    <idx><h>left regular action</h></idx>
-                  </p>
-                </li>
-
-                <li xml:id="ex-conj"><title>Conjugation</title>
-                  <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gxg\inv</m> defines an action, the <em>conjugation action</em>.
-                    <idx><h>conjugation action</h></idx>
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
-
-          <example xml:id="ex-perm-act"><title>Permutation Action</title>
-            <statement>
-              <p>
-                The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
-              </p>
-            </statement>
-          </example>
-
-          <remark>
-            <p>
-              Though the set <m>S</m> need not be a group, it certainly can be. 
-              Indeed, a group <m>G</m> can act on itself, as we will see in <xref ref="sec-left-mult-conjugation"/>.
-            </p>
-          </remark>
-
-          <p>
-            One can also think of group actions as homomorphisms.
-          </p>
-        
-          <theorem xml:id="thm-permrep"><title>The Permutation Representation</title>
-            <statement>
-              <p>
-                Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
-              </p>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
-                      <notation><usage><m>\rho</m></usage><description>we will attempt to reserve <m>\rho</m> for the permutation representation homomorphism of a group action.</description></notation>
-                    </p>
-                  </li>
-        
-                  <li>
-                    <p>
-                      Conversely, if <m>\rho: G \to \operatorname{Perm}(S)</m> is a group homomorphism, the rule <m>g \cdot s := \rho(g)(s)</m> defines an action of <m>G</m> on <m>S</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                We have 
-                <me>
-                  \begin{aligned}
-                  (\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
-                  &amp;=g\cdot (g^{-1} \cdot s) &amp; (\text{ def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
-                  &amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
-                  &amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
-                  &amp;= s &amp;\text{ (second property of a group action)}
-                  \end{aligned}
-                </me> 
-                thus <m>\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S</m> and a similar argument shows that <m>\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S</m>
-              </p>
-                  
-              <p>
-                Finally, we wish to show <m>\rho(gg')=\rho(g) \circ \rho(g')</m>, equivalently <m>\sigma_{gg'}=\sigma_g\circ\sigma_{g'}</m>. Since 
-                <me>
-                  \sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),
-                </me> 
-                holds for all <m>s</m>, this proves <m>\rho</m> is a homomorphism.
-              </p>
-                  
-              <p>
-                Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
-              </p>
-            </proof>
-          </theorem>
-    
-          <p>
-            An immediate perk of this result is that we already know a lot of things about homomorphisms, and we can thus extend that knowledge into the realm of group actions at our leisure. 
-            Let's see some examples.
-          </p>
-
-          <example xml:id="ex-permrep-examples"><title>Common Permutation Representations</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    For the trivial action, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=gs</m>
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    For the conjugation action, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \psi_g</m>, where <m>\psi_g(s)=gsg\inv</m>
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
-
-          <definition xml:id="def-faithful-action"><title>Faithful Action</title>
-            <statement>
-              <p>
-                An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. 
-                Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
-                <idx><h>faithful action</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-           <exploration><title>Losing Faith</title>
-            <p>
-              Should an action which is not faithful be called <em>unfaithful</em>? 
-              <em>Adulterous</em>? 
-              Discuss. 
-            </p>
-          </exploration>
-
-          <example xml:id="def-trivial-action-not-faithful"><title>Trivial Adultery</title>
-            <p>
-              The trivial action is not faithful.
-            </p>
-          </example>
-    
-          <definition xml:id="def-transitive-action"><title>Transitive Action</title>
-            <statement>
-              <p>
-                An action is <em>transitive</em> if for all <m>x,y \in S</m> there is a <m>g \in G</m> such that <m>x=g\cdot y</m>.
-                <idx><h>transitive action</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              In many cases, transitivity and faithfulness are related concepts. 
-              As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. 
-              In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.
-            </p>
-          </remark>
-    
-        </section>
-    
-        <section xml:id="sec-left-mult-conjugation"><title>Self Actions</title>
-
-          <subsection xml:id="subsec-conjugation-action"><title>Conjugation</title>
-
             <blockquote>
               <p>
                 <q>
-                  You may never know what results come of your action, but if you do nothing there will be no results.
+                  Actions speak louder than words.
                 </q>
               </p>
-              <attribution>Ghandi</attribution>
+              <attribution>Anthony of Padua</attribution>
             </blockquote>
-    
-            <definition xml:id="def-conjugacy-class"><title>Conjugacy Class</title>
+
+            <p>
+              We come to one of the central concepts in group theory, that of an action of a group on a set.
+            </p>
+      
+            <definition xml:id="def-graction"><title>Group Action</title>
               <statement>
                 <p>
-                  The <em>conjugacy class</em> of an element <m>x \in G</m> is <m>C_G(x) = \{gxg^{-1} \mid g \in G\}</m>.
-                  <notation><usage><m>C_G(x)</m></usage><description>the conjugacy class of the element <m>x\in G=\{gxg^{-1} \mid g \in G\}</m></description></notation>
-                  <idx><h>conjugacy class</h></idx>          
+                  For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function 
+                  <me>
+                    G \times S \to S,
+                  </me> 
+                  typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
+                </p>
+            
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>g \cdot (g' \cdot s) = (g g') \cdot s</m> for all <m>g,g' \in G</m> and <m>s\in S</m>.
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        <m>e_G \cdot s = s</m> for all <m>s \in S</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  <idx><h>group action</h></idx>
                 </p>
               </statement>
             </definition>
       
-            <definition xml:id="def-conjugate"><title>Conjugate</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m>.
-                  <idx><h>conjugate</h></idx>         
-                </p>
-      
-                <p>
-                  Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-                </p>
-              </statement>
-            </definition>
-              
-            <example xml:id="ex-conjugation-action"><title>Conjugation Action</title>
+            <aside>
               <p>
-                Let <m>G</m> be any group and fix an element <m>g \in G</m>.
-                Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
-                <me>
-                  g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
-                </me> 
-                This is also known as <em>self-conjugation</em>
-                <idx><h>self-conjugation</h></idx>
+                To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
+              </p>
+            </aside>
+      
+            <example xml:id="ex-group-actions"><title>Group Actions on Arbitrary Sets</title>
+              <p>
+                <ol>
+                  <li><title>Trivial Action</title>
+                    <p>
+                      For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>.
+                      <idx><h>trivial action</h></idx>
+                    </p>
+                  </li>
+
+                  <li xml:id="ex-left-mult"><title>Left Multiplication</title>
+                    <p>
+                      For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>.
+                      <fn>And similarly for right multiplication, yet we do not speak of that here.</fn>
+                      <idx><h>left multiplication</h></idx>
+                      <idx><h>left regular action</h></idx>
+                    </p>
+                  </li>
+
+                  <li xml:id="ex-conj"><title>Conjugation</title>
+                    <p>
+                      For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gxg\inv</m> defines an action, the <em>conjugation action</em>.
+                      <idx><h>conjugation action</h></idx>
+                    </p>
+                  </li>
+                </ol>
               </p>
             </example>
 
-            <p>
-              We saw the conjugation action in <xref ref="ex-group-actions"/>, but in this specific case the group <m>G</m> is acting on itself.
-            </p>
-      
-            <theorem xml:id="thm-conjugation-action"><title>Properties of the Conjugation Action</title>
+            <example xml:id="ex-perm-act"><title>Permutation Action</title>
               <statement>
+                <p>
+                  The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
+                </p>
+              </statement>
+            </example>
+
+            <remark>
+              <p>
+                Though the set <m>S</m> need not be a group, it certainly can be. 
+                Indeed, a group <m>G</m> can act on itself, as we will see in <xref ref="sec-left-mult-conjugation"/>.
+              </p>
+            </remark>
+
+            <p>
+              One can also think of group actions as homomorphisms.
+            </p>
+          
+            <theorem xml:id="thm-permrep"><title>Permutation Representation</title>
+              <statement>
+                <p>
+                  Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
+                </p>
                 <p>
                   <ol>
                     <li>
                       <p>
-                        Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
+                        If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
+                        <notation><usage><m>\rho</m></usage><description>we will attempt to reserve <m>\rho</m> for the permutation representation homomorphism of a group action.</description></notation>
                       </p>
                     </li>
-        
+          
                     <li>
                       <p>
-                        The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
-                        Moreover, the action is faithful if and only if <m>Z(G)=\{e\}</m>.
+                        Conversely, if <m>\rho: G \to \operatorname{Perm}(S)</m> is a group homomorphism, the rule <m>g \cdot s := \rho(g)(s)</m> defines an action of <m>G</m> on <m>S</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
-
+      
               <proof>
                 <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Coming soon!
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by <xref text="title" ref="ex-conj"/>, then 
-                        <me>
-                          g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
-                        </me>
-                        <me>
-                          \iff gx=xg, \forall x\in G \iff g\in Z(G).
-                        </me>
-                      </p>
-                    </li>
-                  </ol>
+                  We have 
+                  <me>
+                    \begin{aligned}
+                    (\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
+                    &amp;=g\cdot (g^{-1} \cdot s) &amp; (\text{ def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
+                    &amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
+                    &amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
+                    &amp;= s &amp;\text{ (second property of a group action)}
+                    \end{aligned}
+                  </me> 
+                  thus <m>\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S</m> and a similar argument shows that <m>\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S</m>
+                </p>
+                    
+                <p>
+                  Finally, we wish to show <m>\rho(gg')=\rho(g) \circ \rho(g')</m>, equivalently <m>\sigma_{gg'}=\sigma_g\circ\sigma_{g'}</m>. Since 
+                  <me>
+                    \sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),
+                  </me> 
+                  holds for all <m>s</m>, this proves <m>\rho</m> is a homomorphism.
+                </p>
+                    
+                <p>
+                  Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
                 </p>
               </proof>
             </theorem>
+      
+            <p>
+              An immediate perk of this result is that we already know a lot of things about homomorphisms, and we can thus extend that knowledge into the realm of group actions at our leisure.
+            </p>
 
-            <corollary xml:id="cor-normal-union-of-conjugacy-classes"><title>Normal Subgroups are Unions of Conjugacy Classes</title>
+            <p>
+              Let's see some examples.
+            </p>
+
+            <example xml:id="ex-permrep-examples"><title>Common Permutation Representations</title>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      For the trivial action, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=gs</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For the conjugation action, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \psi_g</m>, where <m>\psi_g(s)=gsg\inv</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+            <definition xml:id="def-faithful-action"><title>Faithful</title>
               <statement>
                 <p>
-                  Let <m>N\nsg G</m>. Then <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                  An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. 
+                  Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
+                  <idx><h>faithful action</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <exercise xml:id="exe-faithful-action"><title>The Faithful Action</title>
+              <statement>
+                <p>
+                  Verify that the two definitions of a faithful action are indeed equivalent.
+                  That is, show that the permutation representation of a group action is injective if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <exploration><title>Losing Faith</title>
+              <p>
+                Should an action which is not faithful be called <em>unfaithful</em>? 
+                <em>Adulterous</em>? 
+                Discuss. 
+              </p>
+            </exploration>
+
+            <example xml:id="def-trivial-action-not-faithful"><title>Trivial Adultery</title>
+              <p>
+                The trivial action is not faithful.
+              </p>
+            </example>
+      
+            <definition xml:id="def-transitive-action"><title>Transitive</title>
+              <statement>
+                <p>
+                  An action is <em>transitive</em> if for all <m>x,y \in S</m> there is a <m>g \in G</m> such that <m>x=g\cdot y</m>.
+                  <idx><h>transitive action</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                In many cases, transitivity and faithfulness are related concepts. 
+                As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. 
+                In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.
+              </p>
+            </remark>
+
+          </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                 One of the central topics of group theory is the <xref text="title" ref="def-graction"/>.
+                 The two main group actions we will examine are that of <xref text="title" ref="ex-left-mult"/> and <xref text="title" ref="ex-conj"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Through the <xref text="title" ref="thm-permrep"/> group actions can be viewed as homomorphisms.
+                  This will be used extensively. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Group actions can be both <xref text="title" ref="def-faithful-action"/> and <xref text="title" ref="def-transitive-action"/>.
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
+
+        </section>
+    
+        <section xml:id="sec-left-mult-conjugation"><title>Self Actions and Conjugacy</title>
+
+          <subsection xml:id="subsec-self-action"><title>Self Actions</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Selfless action is a source of strength.
+                </q>
+              </p>
+              <attribution>Mahatma Ghandi</attribution>
+            </blockquote>
+
+            <example xml:id="ex-self-actions"><title>Groups Acting on Themselves</title>
+              <statement>
+                <p>
+                  <ul>
+                    <li xml:id="ex-leftmult"><title>Left Regular Action</title>
+                      <p>
+                        Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on itself by the rule 
+                        <me>
+                          g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
+                        </me>
+                        This is also known as the <em>left regular action</em>
+                      </p>
+                    </li>
+
+                    <li xml:id="ex-conjugation-action"><title>Self Conjugation Action</title>
+                      <p>
+                        Let <m>G</m> be any group and fix an element <m>g \in G</m>.
+                        Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
+                        <me>
+                          g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
+                        </me> 
+                        This is also known as <em>self-conjugation</em>
+                        <idx><h>self-conjugation</h></idx>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </example>
+
+            <aside>
+              <p>
+                Though called the left regular action, we usually say <q>Let <m>G</m> act on itself my left multiplication</q>, as that is more easily understood.
+              </p>
+            </aside>
+
+            <lemma xml:id="lem-conj-ker"><title>Kernel of the Conjugation Action</title>
+              <statement>
+                <p>
+                  The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>.
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. 
-                  Since <m>N\nsg G</m> this is well defined. 
-                  The two properties in the definition of the action hold for the action of <m>G</m> by <xref text="title" ref="ex-conj"/> on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. 
-                  Therefore this is indeed an action. 
-                  The orbits of elements <m>n\in N</m> under this action are <m>C_G(n)</m>. 
-                  Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
+                  If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by <xref text="title" ref="ex-conj"/>, then 
+                  <me>
+                    g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
+                  </me>
+                  <me>
+                    \iff gx=xg, \forall x\in G \iff g\in Z(G).
+                  </me>
                 </p>
               </proof>
-            </corollary>
-      
-          </subsection>
-    
-          <subsection xml:id="subsec-left-multiplication"><title>Left Regular Action</title>
+            </lemma>
 
-            <blockquote>
-              <p>
-                <q>
-                  To the left, to the left. Everything you own in a box to the left.
-                </q>
-              </p>
-              <attribution>Beyoncé, Single Ladies</attribution>
-            </blockquote>
-    
-            <example xml:id="ex-leftmult"><title>Left Regular Action</title>
-              <p>
-                Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
-                <me>
-                  g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
-                </me>
-              </p>
-            </example>
-    
-            <remark>
-              <p>
-                This action is often referred to as the left regular action.
-              </p>
-            </remark>
-    
-            <proposition xml:id="prop-left-mult-faithful"><title>Left Multiplication is Faithful</title>
+            <theorem xml:id="thm-faithful-self-actions"><title>Faithful Self Actions</title>
               <statement>
                 <p>
-                  The left regular action is faithful.
+                  <ol>
+                    <li>
+                      <p>
+                        The left regular action is faithful.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The self conjugation action is faithful if and only if <m>Z(G)=\{e\}</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
-            </proposition>
-    
+            </theorem>
+
+            <p>
+              A group may also act on its cosets.
+            </p>
+          
+            <example xml:id="ex-coset-mult"><title>Actions on Cosets</title>
+              <statement>
+                <p>
+                  For a subgroup <m>H \leq G</m>, consider the set of left cosets <m>G/H = \{gH : g \in G\}</m>.
+                  Then <m>G</m> acts on <m>G/H</m> my left multiplication. 
+                </p>
+              </statement>
+            </example>
+
             <lemma xml:id="lem-largest-normal-subgroup"><title>Largest Normal Subgroup</title>
               <statement>
                 <p>
@@ -5809,22 +5834,13 @@
                     </li>
     
                     <li>
-                      the subgroup described in (1) is the largest (with respect to containment) normal subgroup of <m>G</m> contained in <m>H</m>.
+                      the subgroup described in (2) is the largest (with respect to containment) normal subgroup of <m>G</m> contained in <m>H</m>.
                     </li>
                   </ol>
                 </p>
               </statement>
             </lemma>
-    
-            <proposition xml:id="prop-normal-subgroups-and-index">
-              <statement>
-                <p>
-                  Let <m>G</m> be a group, and let <m>H</m> be a subgroup of <m>G</m> of finite index <m>[G:H] = n</m>. 
-                  Then there exists a normal subgroup <m>N\nsg G</m> such that <m>N \leq H</m> and <m>[G:N] \leq n!</m>.
-                </p>
-              </statement>
-            </proposition>
-          
+
             <theorem xml:id="thm-smallest-prime-normal"><title>Smallest Prime Index is Normal</title>
               <statement>
                 <p>
@@ -5854,15 +5870,181 @@
                   But <m>p</m> is the smallest prime dividing the order of <m>G</m>, and thus <m>h=1</m>, making <m>H=K</m> and <m>H\nsg G</m>.
                 </p>
               </proof>
-            </theorem>    
-    
+            </theorem>
+      
           </subsection>
+
+          <subsection xml:id="subsec-conjugacy"><title>Conjugacy</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Words may inspire but only action creates change.
+                </q>
+              </p>
+              <attribution>Simon Sinek</attribution>
+            </blockquote>
+
+            <definition xml:id="def-conjugate"><title>Conjugate</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group. 
+                  Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m>.
+                  Two subsets <m>S,S' \subseteq G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+                  <idx><h>conjugate</h></idx>         
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-conjugacy-class"><title>Conjugacy Class</title>
+              <statement>
+                <p>
+                  The <em>conjugacy class</em> of an element <m>x \in G</m> is <m>C_G(x) = \{gxg^{-1} \mid g \in G\}</m>.
+                  <notation><usage><m>C_G(x)</m></usage><description>the conjugacy class of the element <m>x\in G=\{gxg^{-1} \mid g \in G\}</m></description></notation>
+                  <idx><h>conjugacy class</h></idx>          
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-conj-part"><title>Conjugacy Class Partition</title>
+              <statement>
+                <p>
+                  The conjugacy classes of a group partition the group.
+                </p>
+              </statement>
+            </proposition>
+
+            <p>
+              We will not prove this result here, as it is really a specific case of <xref ref="thm-orbits-partition"/>, which we examine in the next section.
+            </p>
+
+            <example>
+              <statement>
+                <p>
+                  The conjugacy classes for <m>S_4</m> are
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\{e\}</m>,
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        all two cycles of which there are <m>{4 \choose 2} = 6</m>,
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        all three cycles of which there are <m>4 \cdot 2 = 8</m>,
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        all four cycles of which there are <m>3! = 6</m>, and
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        all product of two disjoint two cycles of which there are <m>3</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </example>
+
+            <p>
+              Here is a convenient way of checking the conjugacy of two permutations.
+            </p>
+
+            <proposition xml:id="prop-perm-conj"><title>Conjugate Permutations</title>
+              <statement>
+                <p>
+                  Two elements of <m>S_n</m> are conjugate if and only if they have the same cycle type.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If two elements of <m>S_n</m> are conjugate, say <m>\beta = \sigma\alpha \sigma^{-1}</m>, then they have the same cycle type, since we may write <m>\alpha</m> as a product of disjoint cycles <m>\alpha = \alpha_1 \cdots \alpha_m</m> and then apply <xref ref="lem-generating-sn"/>. 
+                  Indeed, <m>\sigma\alpha \sigma^{-1} = (\sigma\alpha_1 \sigma^{-1})  \cdots (\sigma\alpha_m \sigma^{-1})</m> and the <xref ref="lem-generating-sn"/> shows that the right-side is a product of disjoint cycles.
+                </p>
+              </proof>
+            </proposition>
+
+            <theorem xml:id="thm-normal-union-of-conjugacy-classes"><title>Normal Subgroups are Unions of Conjugacy Classes</title>
+              <statement>
+                <p>
+                  Let <m>N\nsg G</m>. 
+                  Then <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. 
+                  Since <m>N\nsg G</m> this is well defined. 
+                  The two properties in the definition of the action hold for the action of <m>G</m> by <xref text="title" ref="ex-conj"/> on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. 
+                  Therefore this is indeed an action. 
+                  The orbits of elements <m>n\in N</m> under this action are <m>C_G(n)</m>. 
+                  Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
+                </p>
+              </proof>
+            </theorem>
+            
+          </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  Groups may act on <em>themselves</em> by left multiplication and conjugation.
+                  <fn>See: <xref ref="ex-self-actions"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="ex-leftmult"/> is faithful, whereas the <xref text="title" ref="ex-conjugation-action"/> is faithful if and only if the center of the group is trivial.
+                  This is because the <xref ref="lem-conj-ker"/> is the center of the group.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  For <m>H\leq G</m>, <m>F</m> may also act on the set <m>G/H</m>.
+                  <fn>See: <xref ref="ex-coset-mult"/>.</fn>
+                  This action is transitive, and the kernel of the action is the largest normal subgroup of <m>G</m> contained in <m>H</m>.
+                  <fn>See: <xref ref="lem-largest-normal-subgroup"/></fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A subgroup with an index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>, is normal in <m>G</m>.
+                  <fn>See: <xref ref="thm-smallest-prime-normal"/></fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A <xref text="title" ref="def-conjugacy-class"/> of an element <m>x</m> is the set of all elements <xref text="title" ref="def-conjugate"/> to <m>x</m>. 
+                  Normal subgroups are disjoint unions of conjugacy classes of <m>G</m>.
+                  <fn>See: <xref ref="thm-normal-union-of-conjugacy-classes"/>.</fn>
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
     
         </section>
     
-        <section xml:id="sec-orbit-stab-class-eq"><title>Orbit-Stabilizer and the Class Equation</title>
+        <section xml:id="sec-orbit-stab-class-eq"><title>Orbits and Stabilizers</title>
 
-          <subsection xml:id="subsec-lois-orbit-stabilizer"><title>LOIS and Orbit-Stabilizer</title>
+          <subsection xml:id="subsec-lois-orbit-stabilizer"><title>In a Stable Orbit</title>
       
             <blockquote>
               <p>
@@ -5881,7 +6063,8 @@
             <definition xml:id="def-orbit"><title>Orbit</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the orbit of <m>s</m> is 
+                  Let <m>G</m> be a group acting on a set <m>X</m>. 
+                  For an element <m>s\in X</m> the orbit of <m>s</m> is 
                   <me>
                     \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
                   </me>
@@ -5895,28 +6078,46 @@
               A fun fact about orbits is that they've secretly been at the heart of everything we've been doing so far.
             </p>
 
-            <corollary xml:id="cor-familiar-orbits"><title>Familiar Orbits</title>
+            <example xml:id="ex-familiar-orbits"><title>Familiar Orbits</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group.
                   <ol>
                     <li>
                       <p>
-                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-left-mult"/>. Under this action, <m>\Orb_G(g)=gH</m>.
+                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-left-mult"/>. 
+                        Under this action, <m>\Orb_G(g)=gH</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-conj"/>. Under this action, <m>\Orb_G(g)=C_G(g)</m>. 
+                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-conj"/>. 
+                        Under this action, <m>\Orb_G(g)=C_G(g)</m>. 
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
-            </corollary>
+            </example>
+
+            <p>
+              All the way back in <xref ref="thm-coset-equivalence-relation"/> we proved that the set of cosets induced an equivalence relation on the group.
+              As we saw in <xref ref="ex-familiar-orbits"/>, left cosets turn out to be a special kind of orbit. 
+              Luckily for us, the equivalence relation generalizes.
+            </p>
+
+            <definition xml:id="def-orbit-equiv">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group acting on a set <m>S</m>. 
+                  The <em>equivalence relation</em> on <m>S</m> induced by the action of <m>G</m>, written <m>\sim_G</m>, is defined by <m>s\sim_G s'</m> if and only if there is a <m>g \in G</m> such that <m>s'=g\cdot s</m>. 
+                  The equivalence classes of <m>\sim_G</m> are the orbits.
+                </p>
+              </statement>
+            </definition>
             
-            <lemma xml:id="lem-orbits-partition"><title>Orbits Partition the Group</title>
+            <theorem xml:id="thm-orbits-partition"><title>Orbits Partition the Group</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group acting on a set <m>S</m>. 
@@ -5942,7 +6143,11 @@
                   </ol>
                 </p>
               </statement>
-            </lemma>
+            </theorem>
+
+            <p>
+              We'll have a lot more to say about orbits, but first they'll need a friend.
+            </p>
       
             <definition xml:id="def-stab"><title>Stabilizer</title>
               <statement>
@@ -6012,41 +6217,32 @@
               Length isn't a word we have used to describe size or cardinality before, but I suppose that SOIS and COIS just don't quite roll of the tongue quite the same.
             </p>
       
-            <corollary xml:id="cor-orbit-stabilizer"><title>Orbit-Stabilizer Theorem</title>
+            <theorem xml:id="thm-orbit-stabilizer"><title>Orbit-Stabilizer Theorem</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
+                  Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. 
+                  For any <m>s \in S</m> we have 
                   <me>
                     |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)|.
                   </me>
                 </p>
               </statement>
-            </corollary>
-
-            <aside>
-              <p>
-                One of my biggest pet peeves in math is when things with "Theorem" or "Lemma" in the title aren't given the corresponding classification. 
-                Why is <xref text="title" ref="lem-zorn"/> always a theorem? 
-                Why must the Orbit-Stabilizer <em>Theorem</em> be a corollary? 
-                Why do the good die young?
-              </p>
-            </aside>
+            </theorem>
       
             <warning>
               <p>
-                Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.
+                Take note that <xref text="title" ref="thm-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.
               </p>
             </warning>
 
-            <exercise xml:id="exe-transitive-orbit"><title>Transitive iff One Orbit</title>
-              <p>
-                An action is transitive if and only if there is exactly one orbit under the action.
-              </p>
-
-              <p>
-                Similarly, an action is transitive if every stabilizer is trivial.
-              </p>
-            </exercise>
+            <corollary xml:id="cor-transitive-orbit"><title>Transitive iff One Orbit</title>
+              <statement>
+                <p>
+                  An action is transitive if and only if there is exactly one orbit under the action.
+                  Similarly, an action is transitive if and only if every stabilizer is trivial.
+                </p>
+              </statement>
+            </corollary>
 
             <p>
               Lets look at some group actions of a more geometric flavor. 
@@ -6097,7 +6293,7 @@
                   On the other hand, the action is faithful, which means the kernel of the action is the identity. 
                   It follows that <m>G_u = \{e\}</m> for every <m>u \in X</m>. 
                   Finally, as the action is transitive, <m>X = \Orb(u)</m> for some (any) <m>u \in X</m>. 
-                  By <xref text="title" ref="cor-orbit-stabilizer"/>, <m>|X|= |\Orb(u)|= [G : G_u] = |G|</m>.
+                  By <xref text="title" ref="thm-orbit-stabilizer"/>, <m>|X|= |\Orb(u)|= [G : G_u] = |G|</m>.
                 </p>
               </proof>
             </theorem>
@@ -6118,7 +6314,8 @@
             <definition xml:id="def-centralizer"><title>Centralizer</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group. For any <m>g \in G</m>, 
+                  Let <m>G</m> be a group. 
+                  For any <m>g \in G</m>, 
                   <me>
                     Z_G(g):= \{g \in G \mid gx = xg\}
                   </me> 
@@ -6136,11 +6333,13 @@
               </p>
             </aside>
 
-             <exercise xml:id="exe-stabilizer-intersection-is-center"><title>Center is Intersection of Stabilizers</title>
+             <exercise xml:id="exe-centrilizer-intersection-is-center"><title>Center is Intersection of Centrilizers</title>
               <statement>
                 <p>
                   Prove that 
-                  <me>Z(G)=\bigcap_{g\in G}Z_G(g)</me>
+                  <me>
+                    Z(G)=\bigcap_{g\in G}Z_G(g)
+                  </me>
                 </p>
               </statement>
             </exercise>
@@ -6148,7 +6347,8 @@
             <definition xml:id="def-normalizer"><title>Normalizer</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group. For any <m>S \subseteq G</m>, 
+                  Let <m>G</m> be a group. 
+                  For any <m>S \subseteq G</m>, 
                   <me>
                     N_G(S):= \{g \in G \mid gSg^{-1}=S\}
                   </me> 
@@ -6158,6 +6358,12 @@
                 </p>
               </statement>
             </definition>
+
+            <remark>
+              <p>
+                Notice that when <m>S</m> consists of just one element, <m>x</m>, we have <m>N_G(S)=C_G(x)</m>.
+              </p>
+            </remark>
 
             <paragraphs> <title>Notation Check</title>
               <p>
@@ -6211,13 +6417,15 @@
                   <ol>
                     <li>
                       <p>
-                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/>. For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=Z_G(G)</m> and <m>|C_G(g)| = [G : Z_G(g)]</m>.
+                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/>. 
+                        For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=Z_G(G)</m> and <m>|C_G(g)| = [G : Z_G(g)]</m>.
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/>. For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
+                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/>. 
+                        For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                       </p>
                     </li>
                   </ol>
@@ -6267,9 +6475,62 @@
             </p>
       
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  In a group action, the <xref text="title" ref="def-orbit"/> of an element <m>g</m> is the set of points that the element is mapped to under the action, and the <xref text="title" ref="def-stab"/> is set of all points that fix <m>g</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Orbits induce an equivalence relation and partition on <m>G</m>.
+                  <fn>See: <xref ref="def-orbit-equiv"/> and <xref ref="thm-orbits-partition"/></fn>
+                  They correspond to cosets under the <xref text="title" ref="ex-leftmult"/> and conjugacy classes under the <xref text="title" ref="ex-conjugation-action"/>.
+                  <fn>See: <xref ref="ex-familiar-orbits"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <xref ref="thm-LOIS"/>, (LOIS), tells us <m>|\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]</m> and the <xref text="title" ref="thm-orbit-stabilizer"/> yields <m>|G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)|</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  An action is transitive if and only if there is exactly one orbit under the action.
+                  Similarly, an action is transitive if and only if every stabilizer is trivial.
+                  <fn>See: <xref ref="cor-transitive-orbit"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="def-centralizer"/> of an <em>element</em> is the set of all elements that commute with it.
+                  The <xref text="title" ref="def-normalizer"/> of a <em>set</em> is the set of elements that fix the set under conjugation.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  When <m>G</m> acts on itself by conjugation, we have <m>\Orb(g)=C_G(g)</m> and <m>\operatorname{Stab}_G(g)=Z_G(G)</m>.
+                  <fn>See: <xref ref="lem-conjugation-and-lois"/></fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="thm-class-eq"/> yields <m>|G| = |Z(G)| + \sum_i^r [G : Z_G(g_i)]</m>, where <m>g_1,\ldots g_r \in G</m> are the list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m>. 
+                </p>
+              </li>
+            </ul>
+          </outcomes>
           
         </section>
-    
+
       </chapter>
 
       <chapter xml:id="ch-sylow"><title>Simple and Prime Order Groups</title>
@@ -6312,12 +6573,6 @@
                 </p>
               </proof>
             </theorem>
-      
-            <remark>
-              <p>
-                <xref ref="thm-center-pgroup"/> is dissimilar to <xref text="title" ref="thm-cayley"/> in that this theorem is useful.
-              </p>
-            </remark>
 
             <theorem xml:id="thm-order-p-cyclic"><title>Order <m>p</m> and <m>p^2</m></title>
               <statement>
@@ -17798,7 +18053,7 @@
               </p>
 
               <p>
-                As <m>N\nsg G</m>, by <xref ref="cor-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
+                As <m>N\nsg G</m>, by <xref ref="thm-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
                 Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. 
                 This yields 
                 <me>

@@ -13,20 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Given a matrix <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{,}\)</span> then <span class="process-math">\(F^n_A\)</span> is the <span class="process-math">\(F[x]\)</span>-module whose underlying abelian group is <span class="process-math">\(F^n\)</span> (column vectors) with the usual rule for addition and with the rule for <span class="process-math">\(F[x]\)</span> scaling given by</div>
+<div class="para">Let <span class="process-math">\(k\)</span> be a field and <span class="process-math">\(k[x]\)</span> be the ring of polynomials with coefficients in <span class="process-math">\(k\)</span> in one variable <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(M\)</span> a finitely generated <span class="process-math">\(k[x]\)</span>-module then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(\sum_i c_i x^i) \cdot v := \sum c_i A^i v
+M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))
 \end{equation*}
 </div>
-<div class="para">for any column vector <span class="process-math">\(v\text{.}\)</span> For short, we write this rule as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x) \cdot v = f(A) v
-\end{equation*}
+<div class="para">for some <span class="process-math">\(r \geq 0\text{,}\)</span> <span class="process-math">\(s \geq 0\)</span> and non-constant monic polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> such that <span class="process-math">\(f_1 \mid f_2 \mid \cdots \mid f_s.\)</span> Moreover, <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(s\)</span> and <span class="process-math">\(f_1, \dots, f_s\)</span> are unique.</div>
 </div>
-<div class="para">for any polynomial <span class="process-math">\(f(x) \in k[x]\text{,}\)</span> where <span class="process-math">\(f(A)\)</span> is the matrix obtained by evaluating <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x = A\)</span> in the evident sense.</div>
-</div>
-<span class="incontext"><a href="sec-rcf.html#p-1721" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-modclass.html#p-1721" class="internal">in-context</a></span>
 </body>
 </html>

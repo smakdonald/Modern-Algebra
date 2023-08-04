@@ -12,15 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Consider the group <span class="process-math">\(G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4\text{.}\)</span> This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3 \oplus \Z/4,
-\end{equation*}
+<div class="para">Suppose <span class="process-math">\(R\)</span> is a Euclidean domain and <span class="process-math">\(A = (x_1, \dots, x_n)\)</span> is a <span class="process-math">\(1 \times n\)</span> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <span class="process-math">\((g_1, 0, x_3, \dots, x_n)\)</span> where <span class="process-math">\(g_1 = \gcd(x_1, x_2)\text{.}\)</span> Repeat this for columns <span class="process-math">\(1\)</span> and <span class="process-math">\(3\)</span> to arrive at <span class="process-math">\((g_2, 0, 0, x_4, \dots, x_n)\)</span> where <span class="process-math">\(g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)\text{.}\)</span> Continuing in this fashion we arrive at <span class="process-math">\((g, 0, \dots, 0)\)</span> where <span class="process-math">\(g = \gcd(x_1, \dots, x_n)\text{.}\)</span>
 </div>
-<div class="para">and this gives the EDF. The elementary divisors of <span class="process-math">\(G\)</span> are <span class="process-math">\(9,2,5,9,2,3,3,4\)</span> (ordering does not matter).</div>
-</div>
-<span class="incontext"><a href="sec-modclass.html#p-1708" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-snf.html#p-1708" class="internal">in-context</a></span>
 </body>
 </html>
