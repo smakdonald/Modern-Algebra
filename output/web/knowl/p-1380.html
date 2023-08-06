@@ -11,9 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> recall the opposite ring, <span class="process-math">\(R^{op}\text{,}\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/list-opposite-ring.html" title="Item 7.6.1: Opposite Day">Item 7.6.1</a>. Given a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> prove that <span class="process-math">\(M\)</span> is a right <span class="process-math">\(R^{op}\)</span>-module via the same rule for addition but with the rule for scaling on the right defined to be <span class="process-math">\(m r := rm\)</span> for any <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(m \in M\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-defmod.html#p-1380" class="internal">in-context</a></span>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div>
+<span class="incontext"><a href="sec-irrpoly.html#p-1380" class="internal">in-context</a></span>
 </body>
 </html>

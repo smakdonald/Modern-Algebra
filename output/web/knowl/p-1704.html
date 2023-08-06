@@ -11,20 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Case III: <span class="process-math">\(a\)</span> divides every entry of the first row and first column. In this case, suitable row and column operations transform <span class="process-math">\(A\)</span> to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-D = 
-\begin{bmatrix}
-a &amp; 0 \\
-0 &amp; E \\
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="para">By Lemma  we have <span class="process-math">\(\gcd(D) = \gcd(A)\text{,}\)</span> and thus there is some element <span class="process-math">\(e\)</span> of <span class="process-math">\(E\)</span> such that <span class="process-math">\(a \nmid e\)</span> (since we are assuming <span class="process-math">\(a\)</span> is not the gcd of <span class="process-math">\(A\)</span>). A suitable row operation puts <span class="process-math">\(e\)</span> into row one without affecting <span class="process-math">\(a\text{,}\)</span> and we are back to the previously solved Case I.</div>
-</div>
-<span class="incontext"><a href="sec-snf.html#p-1704" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para">Assume <span class="process-math">\(R\)</span> has the acc for ideals and let <span class="process-math">\(J\)</span> be any ideal. Pick any element <span class="process-math">\(a_1\in I\)</span> and set <span class="process-math">\(I_1 = Ra_1\text{.}\)</span> If <span class="process-math">\(J = I_1\)</span> we are done. If not, pick <span class="process-math">\(a_2 \in I \setminus I_1\)</span> and set <span class="process-math">\(I_2 = Ra_1 + Ra_2\text{.}\)</span> If <span class="process-math">\(J = I_2\)</span> we are done and if not pick <span class="process-math">\(a_3 \in I\setminus I_2\)</span> and let <span class="process-math">\(I_3 = Ra_1 + Ra_2 + Ra_3\text{.}\)</span> In this way we form a strictly ascending chain <span class="process-math">\(I_1 \subset I_2 \subset I_3 \subset\text{,}\)</span> and this process cannot be continued forever since <span class="process-math">\(R\)</span> has the acc. When it terminates, we have <span class="process-math">\(J = Ra_1 + Ra_2 + \cdots + Ra_N\)</span> for some <span class="process-math">\(a_1, \dots, a_N\)</span> and thus <span class="process-math">\(J\)</span> is finitely generated.</div>
+<span class="incontext"><a href="sec-modpres.html#p-1704" class="internal">in-context</a></span>
 </body>
 </html>

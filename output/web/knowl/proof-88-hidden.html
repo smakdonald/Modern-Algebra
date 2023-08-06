@@ -10,6 +10,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(h:M\to N\)</span> and <span class="process-math">\(h':N\to M\)</span> be the <span class="process-math">\(R\)</span>-module homomorphisms induced by the bijection <span class="process-math">\(j:A\to B\)</span> and its inverse <span class="process-math">\(j^{-1}:B\to A\text{,}\)</span> respectively, using <a href="" class="xref" data-knowl="./knowl/thm-ump-for-free-modules.html" title="Theorem 11.68: UMP for Free R-Modules">UMP for Free <span class="process-math">\(R\)</span>-Modules</a>. We'll show that <span class="process-math">\(h\)</span> and <span class="process-math">\(h'\)</span> are mutual inverses. For this note that <span class="process-math">\(h'\circ h:N\to N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism and <span class="process-math">\((h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b\)</span> for every <span class="process-math">\(b\in B\text{.}\)</span> Since the identity map <span class="process-math">\(\id_N\)</span> is also an <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(id_N(b)=b\)</span> for every <span class="process-math">\(b\in B\text{,}\)</span> by the uniqueness clause in the <a href="" class="xref" data-knowl="./knowl/thm-ump-for-free-modules.html" title="Theorem 11.68: UMP for Free R-Modules">UMP for Free <span class="process-math">\(R\)</span>-Modules</a>, we have <span class="process-math">\(h'\circ h=\id_n\text{.}\)</span> Similarly <span class="process-math">\(h\circ h'=\id_M\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Given a function <span class="process-math">\(j: B \to N\text{,}\)</span> define <span class="process-math">\(f: M\to N\)</span> as follows: Given <span class="process-math">\(m \in M\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/lem-elements-uniquely-expressible-in-free-modules.html" title="Lemma 11.66: Elements Uniquely Expressible in Free Modules">Lemma 11.66</a> <span class="process-math">\(m\)</span> can be written uniquely as a finite sum <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span> We set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-elements-uniquely-expressible-in-free-modules.html">
+\begin{equation*}
+f(m) = \sum_{b \in B} r_b j(b).
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(f\)</span> is a well-defined function by the uniqueness of the equation <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We need to prove <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given <span class="process-math">\(x \in R\)</span> and <span class="process-math">\(m \in M\text{,}\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> for some <span class="process-math">\(r_b \in R\text{,}\)</span> and hence <span class="process-math">\(xm = \sum_b (xr_b) b\text{.}\)</span> By definition of <span class="process-math">\(f\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+\end{equation*}
+</div>
+</div> <div class="para">Finally, for any <span class="process-math">\(y \in B\)</span> we have <span class="process-math">\(y = \sum_{b \in B} r_b b\)</span> where <span class="process-math">\(r_b = 1\)</span> if <span class="process-math">\(b = y\)</span> and <span class="process-math">\(r_b = 0\)</span> if <span class="process-math">\(b \ne y\text{.}\)</span> So <span class="process-math">\(f(y) = j(y)\)</span> by construction. This proves existence.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(m) = \sum_b g(r_b (b))= \sum_b r_b g(b) =\sum_b r_b j(b) = f(m).
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

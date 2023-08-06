@@ -12,31 +12,13 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(x,y \in R\)</span> and <span class="process-math">\(m,n \in M\text{.}\)</span> One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
-\end{equation*}
-</div>
-<div class="para">since <span class="process-math">\(\phi\)</span> preserves addition,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
-\end{equation*}
-</div>
-<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplication, and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-1 \cdot m = \phi(1) m = 1_S m = m
-\end{equation*}
-</div>
-<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplicative identities. This gives three of the axioms. The final also holds:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
-\end{equation*}
-</div>
-</div></article><span class="incontext"><a href="sec-defmod.html#proof-81" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">For the first, <span class="process-math">\(0m = (0+0)m = 0m + 0m\)</span> and hence <span class="process-math">\(0m = 0\text{.}\)</span>
+</div></li>
+<li><div class="para">For the second, <span class="process-math">\(0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm\)</span> and hence <span class="process-math">\(0_Rm = 0_M\)</span> since <span class="process-math">\(M\)</span> is an abelian group.</div></li>
+<li><div class="para">For the third, <span class="process-math">\(m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M\)</span> (using the second) and hence <span class="process-math">\((-1)m\)</span> is the additive inverse of <span class="process-math">\(m\text{.}\)</span>
+</div></li>
+<li><div class="para">Finally, <span class="process-math">\((-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)\)</span> (using the fact that <span class="process-math">\((-1)r = -r\)</span> holds in any ring and the previous result).</div></li>
+</ol></div></article><span class="incontext"><a href="sec-defmod.html#proof-81" class="internal">in-context</a></span>
 </body>
 </html>

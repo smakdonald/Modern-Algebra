@@ -13,19 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We have</div>
+<div class="para">Given a matrix <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{,}\)</span> then <span class="process-math">\(F^n_A\)</span> is the <span class="process-math">\(F[x]\)</span>-module whose underlying abelian group is <span class="process-math">\(F^n\)</span> (column vectors) with the usual rule for addition and with the rule for <span class="process-math">\(F[x]\)</span> scaling given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi((xI_n - A) \cdot \sum_i v_i x^i) = \phi(\sum_i v_i x^{i+1} - \sum_i (Av_i) x^i) = \sum_i A^{i+1}(v_i) - \sum_i A^i(Av_i) = 0
+(\sum_i c_i x^i) \cdot v := \sum c_i A^i v
 \end{equation*}
 </div>
-<div class="para">and hence <span class="process-math">\(\ker(\phi) \supseteq \im(xI_n - A)\text{.}\)</span> By the <span class="process-math">\(0\)</span>-th isomorphism theorem, there is an induced <span class="process-math">\(F[x]\)</span>-module homomorphism</div>
+<div class="para">for any column vector <span class="process-math">\(v\text{.}\)</span> For short, we write this rule as</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\ov{\phi}: \frac{F^n[x]}{\im(xI_n - A)}  \onto F^n_A
+f(x) \cdot v = f(A) v
 \end{equation*}
 </div>
-<div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
+<div class="para">for any polynomial <span class="process-math">\(f(x) \in k[x]\text{,}\)</span> where <span class="process-math">\(f(A)\)</span> is the matrix obtained by evaluating <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x = A\)</span> in the evident sense.</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-1774" class="internal">in-context</a></span>
 </body>

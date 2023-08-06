@@ -6533,11 +6533,18 @@
 
       </chapter>
 
-      <chapter xml:id="ch-sylow"><title>Simple and Prime Order Groups</title>
+      <chapter xml:id="ch-sylow"><title>Sylow Theory</title>
     
-        <section xml:id="sec-p-groups"><title><m>p</m>-groups and Sylow's Theorem</title>
+        <section xml:id="sec-p-groups"><title>Sylow's Theorem</title>
 
-          <subsection xml:id="subsec-p-groups"><title><m>p</m>-groups</title>
+          <introduction>
+            <p>
+              We come to a very powerful technique for analyzing finite groups of relatively small order. 
+              One aspect of Sylow theory is that it allows us to deduce, in certain special cases, the existence of a unique subgroup of a given order, and thus it allows one to construct a normal subgroup.
+            </p>
+          </introduction>
+
+          <subsection xml:id="subsec-p-groups"><title>Groups of Prime Order</title>
           
             <blockquote>
               <p>
@@ -6593,7 +6600,28 @@
                   </ol> 
                 </p>
               </statement>
-            </theorem>     
+            </theorem>
+
+            <theorem xml:id="thm-cauchy"><title>Cauchy's Theorem</title>
+              <statement>
+                <p>
+                  If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. 
+                  (In fact, at least <m>p-1</m> elements of order <m>p</m>.)
+                </p>
+              </statement>
+            </theorem>
+    
+            <p>
+              <xref text="title" ref="thm-cauchy"/> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
+            </p>
+      
+            <p>
+              For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <xref text="title" ref="thm-sylow"/>, which provides information about the structure of finite groups. 
+            </p>
+      
+            <p>
+              <xref text="title" ref="thm-cauchy"/> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.
+            </p>
 
           </subsection> 
 
@@ -6648,27 +6676,6 @@
                 There are many others.
               </p>
             </example>
-      
-            <theorem xml:id="thm-cauchy"><title>Cauchy's Theorem</title>
-              <statement>
-                <p>
-                  If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. 
-                  (In fact, at least <m>p-1</m> elements of order <m>p</m>.)
-                </p>
-              </statement>
-            </theorem>
-    
-            <p>
-              <xref text="title" ref="thm-cauchy"/> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
-            </p>
-      
-            <p>
-              For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <xref text="title" ref="thm-sylow"/>, which provides information about the structure of finite groups. 
-            </p>
-      
-            <p>
-              <xref text="title" ref="thm-cauchy"/> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.
-            </p>
 
           </subsection>
 
@@ -6682,8 +6689,26 @@
               </p>
               <attribution>Scotty McCreery</attribution>
             </blockquote>
+
+            <proposition xml:id="prop-syl-act">
+              <statement>
+                <p>
+                  If <m>G</m> is a finite group and <m>p</m> is a prime with <m>p \mid G</m>, then <m>G</m> acts on the set of its Sylow <m>p</m>-subgroups via conjugation.
+                </p>
+              </statement>
+            </proposition>
+
+            <remark>
+              <p>
+                As of now, for all we know, this might be the action on the empty set, but we’ll see in a bit that the set of Sylow <m>p</m>-subgroups is in fact not empty.
+              </p>
+            </remark>
+
+            <p>
+              Sylow Theory is all about understanding this action very well.
+            </p>
       
-            <lemma xml:id="lem-Syl-lem"><title>Sylow's Lemma</title>
+            <lemma xml:id="lem-syl-lem"><title>Sylow's Lemma</title>
               <statement>
                 <p>
                   Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. 
@@ -6706,7 +6731,6 @@
             </lemma>
       
             <theorem xml:id="thm-sylow"><title>Sylow's Theorem</title>
-              
               <statement>
                 <p>
                   Assume <m>G</m> is a group of order <m>p^e m</m> where <m>p</m> is prime, <m>e \geq 0</m>, and <m>\operatorname{gcd}(p,m) = 1</m>.
@@ -6741,13 +6765,116 @@
                         </me> 
                         and hence 
                         <me>
-                          | \operatorname{Syl}_p(G)| \mid m.
+                          |\operatorname{Syl}_p(G)| \mid m.
                         </me>
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Recall that we write <m>|G| = p^em</m> where <m>p \nmid m</m>. 
+                        We need to prove <m>G</m> contains a subgroup of order <m>p^e</m>, and we proceed by induction on <m>|G|</m>.
+                      </p>
+
+                      <p>
+                        If <m>|G| = 1</m> or, more generally, if <m>p \nmid |G|</m>, then <m>\{e\}</m> is a Sylow <m>p</m>-subgroup. 
+                        We may thus assume <m>p \mid |G|</m>. 
+                        We proceed by considering two cases, depending on whether or not <m>p</m> divides <m>|Z(G)|</m>.
+                      </p>
+              
+                      <p>
+                        If <m>p \mid |Z(G)|</m>, then by <xref text="title" ref="thm-cauchy"/>, there is an element <m>z \in Z(G)</m> of order <m>p</m>. 
+                        Set <m>N = \langle z \rangle</m>. Since <m>z \in Z(G)</m>, we have <m>N \unlhd G</m>. 
+                        Since <m>|G/N| = p^{e-1}m</m>, by induction <m>G/N</m> has a subgroup of order <m>p^{e-1}</m> (i.e. of index <m>m</m>). 
+                        By <xref text="title" ref="thm-lit-group"/>, this subgroup corresponds to a subgroup of <m>G</m> of index <m>m</m>, hence of order <m>p^e</m>.
+                      </p>
+              
+                      <p>
+                        For the second case, assume <m>p \nmid |Z(G)|</m> and consider the <xref text="title" ref="thm-class-eq"/> for <m>G</m>: 
+                        <me>
+                          |G| = |Z(G)| + \sum_{i=1}^k [G: C_G(g_i)]
+                        </me> 
+                        where <m>g_1, \dots, g_k</m> are a complete and non-redundant list of non-central conjugacy class representatives. 
+                        Since <m>p \nmid |Z(G)|</m> and <m>p \mid |G|</m>, we must have <m>p \nmid [G:C_G(g_i)]</m> for at least one <m>i</m>. 
+                        For this <m>i</m>, we have <m>|C_G(g_i)|= p^e j</m> where <m>p \nmid j</m>. 
+                        Since <m>g_i</m> is not central, <m>|C_G(g_i)| &lt; |G|</m> and hence, by induction, <m>C_G(g_i)</m> contains a subgroup of order <m>p^e</m>. 
+                        But this subgroup is also a subgroup of <m>G</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>P</m> be a Sylow <m>p</m>-subgroup and let <m>Q</m> be any <m>p</m>-subgroup. 
+                        Let <m>\mathcal S_P</m> denote the collection of all conjugates of <m>P</m>: 
+                        <me>
+                          \mathcal S_P = \{ gPg^{-1} \mid g \in G\}.
+                        </me> 
+                        Part (3) tells us the <m>\mathcal S_P</m> consists of all Sylow <m>p</m>-subgroups of <m>G</m>, but we don’t yet know this. 
+                        Nonetheless, <m>G</m> acts (transitively) on <m>\mathcal S_P</m> by conjugation, and thus <m>Q</m> also acts on <m>\mathcal S_P</m> (not necessarily transitively). 
+                        The key to proving parts (2) and (3) of the Sylow Theorem is to analyse the action of <m>Q</m> on <m>\mathcal S_P</m> to establish <xref ref="E1030" /> and <xref ref="E1030b" /> below.
+                      </p>
+
+                      <p>
+                        Let <m>O_1, \dots, O_s</m> be the orbits of the action of <m>Q</m> on <m>\mathcal S_P</m>, and for each <m>i</m> pick a representative <m>P_i \in O_i</m>. 
+                        We have <m>\operatorname{stab}_Q(P_i) = \{q \in Q \mid qP_iq^{-1} = P_i\} = Q \cap N_G(P_i) = Q \cap P_i</m>, where the last equation uses the Lemma. 
+                        By LOIS, we thus have <m>|O_i| = [Q: Q \cap P_i]</m> and hence 
+                        <md>
+                          <mrow xml:id="E1030">
+                            |\mathcal S_P |= \sum_{i=1}^s [Q: Q \cap P_i]
+                          </mrow>
+                        </md>
+                      </p>
+
+                      <p>
+                        This equation holds for any <m>p</m>-subgroup <m>Q</m> of <m>G</m>. 
+                        In particular, we can take <m>Q = P_1</m>. 
+                        In this case the first term is <m>1</m> and, since <m>Q \cap P_i = P_1 \cap P_i &lt; P_1 = Q</m> for all <m>i \ne 1</m>, the remaining terms are divisible by <m>p</m>. 
+                        This gives 
+                        <md>
+                          <mrow xml:id="E1030b">  
+                            |\mathcal S_P| \equiv 1 \pmod{p}.
+                          </mrow>
+                        </md> 
+                        (This does not yet prove part (3) since we don’t yet know that <m>\mathcal S_P</m> consists of all Sylow <m>p</m>-subgroups.)
+                      </p>
+
+                      <p>
+                        We can now prove part (2): 
+                        By way of contradiction, suppose <m>Q</m> is a <m>p</m>-subgroup of <m>G</m> such that <m>Q</m> is not contained in any of the subgroups belonging to <m>\mathcal S_P</m>. 
+                        Then <m>Q \cap P_i &lt; Q</m> for all <m>i</m> and thus every term on the right-hand side of <xref ref="E1030" /> is divisble by <m>p</m>, contrary to <xref ref="E1030b" />. 
+                        The second assertion in (2) follows by taking <m>Q</m> to be a Sylow <m>p</m>-subgroup.
+                      </p>
+
+                      <p>
+                        This proves, in particular, that <m>\mathcal S_P</m> in fact does consist of all Sylow <m>p</m>-subgroups. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Part (3) thus follows from <xref ref="E1030b"/>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For any <m>P \in \operatorname{Syl}_p(G)</m>, the stabilizer of <m>P</m> for the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by conjugation is <m>N_G(P)</m>. 
+                        Since we now know the action is transitive,
+                        <me>
+                          |\operatorname{Syl}_p(G)| = [G: N_G(P)].
+                        </me> 
+                        Moreover, since <m>P \leq N_G(P)</m> and <m>|P| = p^e</m>, it follows that <m>[G: N_G(P)]\mid m</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
             </theorem>
       
             <p>
@@ -6797,7 +6924,8 @@
                 <p>
                   As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. 
                   Hence, we just need to show that <m>S_4</m> contains a subgroup isomorphic to <m>D_8</m>. Let <m>X</m> be the set of left cosets of the subgroup <m>\{e,s\}</m> of <m>D_8</m>. 
-                  Note that <m>|X| = 4</m>. Let <m>G</m> act on <m>X</m> by left multiplication. 
+                  Note that <m>|X| = 4</m>. 
+                  Let <m>G</m> act on <m>X</m> by left multiplication. 
                   This action induces a homomorphism <m>\varphi : G \to P(X)</m> where <m>P(X)\cong S_4</m> is the permutation group on <m>X</m>. 
                   As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <m>\{e,s\}</m>, which is <m>\{e\}</m>. 
                   Thus, <m>\varphi</m> is injective and the image of <m>\varphi</m> is a subgroup of <m>S_4</m> isomorphic to <m>D_8</m>.
@@ -6808,264 +6936,318 @@
             
           </subsection>
 
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  Groups of prime order are cyclic, and the center of any group of prime power order is nontrivial.
+                  <fn>See: <xref ref="thm-order-p-cyclic"/> and <xref ref="thm-center-pgroup"/></fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <xref text="title" ref="thm-cauchy"/> tells us that if <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A <xref text="title" ref="def-sylow-subgroup"/> of <m>G</m> is a subgroup whose order is the highest conceivable power of <m>p</m> possible.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <xref text="title" ref="thm-sylow"/> tells us <m>|\operatorname{Syl}_p(G)| \equiv 1 \mod{p}</m> and <m>|\operatorname{Syl}_p(G)| \mid m</m>.
+                  Furthermore, <m>G</m> acts transitively on the set of Sylow <m>p</m>-subgroups by conjugation, making them all conjugate to one another.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A Sylow <m>p</m>-subgroup of a finite group <m>G</m> is normal if and only if it is the only Sylow <m>p</m>-subgroup of <m>G</m>.
+                  <fn>See: <xref ref="cor-unique-sylow-normal"/></fn>
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
+
         </section>
     
         <section xml:id="sec-simple-groups"><title>Simple Groups</title>
-    
-          <blockquote>
-            <p>
-              <q>
-                Everything should be made as simple as possible, but not simpler.
-              </q>
-            </p>
-            <attribution>Albert Einstein</attribution>
-          </blockquote>
-    
-          <definition xml:id="def-simple-group"><title>Simple Group</title>
-            <statement>
-              <p>
-                A group is called <em>simple</em> if it has only two normal subgroups: itself and the trivial subgroup.
-                <idx><h>simple group</h></idx>
-              </p>
-            </statement>
-          </definition>
 
-          <example><title><m>\mathbb{Z}/p</m> Simple</title>
-            <p>
-              <m>\mathbb{Z}/p</m> for a prime <m>p</m> is simple since any non-trivial element generates the whole group.
-            </p>
-          </example>
-
-          <exercise xml:id="exe-index-2-and-simple-groups"><title>Simple Groups and Index <m>2</m></title>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. 
-                Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
-              </p>
-            </statement>
-            
-            <hint>
-              <p>
-                Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
-              </p>
-            </hint>
-          </exercise>
-
-          <example xml:id="ex-no-order-12-simple"><title>No Simple Groups of Order <m>12</m></title>
-            <statement>
-              <p>
-                Let us prove that no group or order <m>12</m> is simple. 
-                Let <m>G</m> be any group of order <m>12</m>. 
-                We will prove that <m>G</m> must have either a normal subgroup of order <m>3</m> or a normal subgroups of oder <m>4</m>.
-              </p>
-
-              <p>
-                <xref text="title" ref="thm-sylow"/> gives that <m>n_2=|\operatorname{Syl}_2(G)|</m> is either <m>1</m> or <m>3</m> and <m>n_3= |\operatorname{Syl}_3(G)|</m> is either <m>1</m> or <m>4</m>. 
-                If either of these numbers is <m>1</m>, we have a unique subgroup of order <m>4</m> or of order <m>3</m>, and such a subgroup must be normal. 
-                Suppose these numbers are <m>3</m> and <m>4</m>, respectively. 
-                We deduce a contradition by <q>counting elements</q>.
-              </p>
-
-              <p>
-                In detail, say <m>P_1, \dots, P_4</m> are the <m>4</m> Sylow <m>3</m>-subgroups. 
-                By <xref text="title" ref="thm-lagrange"/> <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>. 
-                Thus the <em>set</em> <m>T := \bigcup_{i=1}^4 P_i</m> has <m>9</m> elements, one of which is <m>e</m> and the other <m>8</m> of which must have order <m>3</m>. 
-                That is, there are <m>8</m> elements of order <m>3</m> in <m>G</m>. 
-                But now consider the three Sylow <m>2</m>-subgroups <m>Q_1, Q_2, Q_3</m>. 
-                Each has order <m>4</m> and <m>Q_i \cap T = \{e\}</m> for all <m>i</m>. 
-                It follows that <m>Q_i = \{e\} \cup (G \setminus T)</m> for all <m>i</m>, and thus <m>Q_1 = Q_2 = Q_3</m>, a contradiction.
-              </p>
-            </statement>
-          </example>
-    
-          <remark>
-            <p>
-              In the previous example, it would not be so easy to count elements of order <m>2</m> and <m>4</m>. 
-              We do know that every element in <m>S := \cup_i Q_i</m> has order <m>1</m>, <m>2</m> or <m>4</m> (any only one has order <m>1</m>), but the size of this set is harder to calculate. 
-              For notice that <m>Q_i \cap Q_j</m> might have order <m>2</m>. 
-              The most one can say for sure is that <m>S</m> has at least <m>4 + 4 - 2 = 6</m> elements.
-            </p>
-          </remark>
-
-          <example xml:id="ex-no-order-80-simple"><title>No Simple Groups of Order 80</title>
-            <statement>
-              <p>
-                No group of order <m>80=5 \cdot 16</m> is simple.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                By way of contradiciton suppose <m>G</m> is simple and <m>|G| = 20</m>. 
-                <xref text="title" ref="thm-sylow"/> gives <m>|\operatorname{Syl}_2(G)| = 5</m> and <m>|\operatorname{Syl}_5(G)| = 16</m> (since they cannot be <m>1</m> by the assumption that <m>G</m> is simple). 
-                The <q>counting elements trick</q> would work, but let's proceed in a different way: Consider the action of <m>G</m> on <m>\operatorname{Syl}_2(G)</m> by conjugation and let <me>\rho: G \to S_5</me> be the associated homomorphism (obtained by choosing a numbering <m>1, \dots, 5</m> of the members of <m>\operatorname{Syl}_2(G)</m>). 
-                The map <m>\rho</m> is non-trivial since the action is transitive (part (2) of <xref text="title" ref="thm-sylow"/>). 
-                But <m>80</m> does not divide <m>120</m> and so <m>\rho</m> cannot be injective. 
-                It follows that <m>\operatorname{ker}(\rho)</m> is a non-trivial, proper normal subgroup of <m>G</m>, a contradiction.
-              </p>
-            </solution>
-          </example>
-
-          <example xml:id="ex-no-order-90-simple"><title>No Simple Groups of Order 90</title>
-            <statement>
-              <p>
-                No group of order <m>90</m> is simple.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                By way of contradiction suppose <m>G</m> is a simple group of order <m>90</m>. 
-                Since <m>90 = 2 \cdot 3^2 \cdot 5</m>, we conclude from <xref text="title" ref="thm-sylow"/> that 
-                <me>
-                  |\operatorname{Syl}_2(G)| = 1  \text{ or }  3  \text{ or }  5  \text{ or }  15
-                </me> 
-                <me>
-                  |\operatorname{Syl}_3(G)| = 1  \text{ or }  10
-                </me> 
-                <me>
-                  |\operatorname{Syl}_5(G)| = 1  \text{ or }  6.
-                </me> 
-                If any of these is <m>1</m>, then the corresonding Sylow <m>p</m>-subgroup is unique and hence normal, a contradiction.
-              </p>
-
-              <p>
-                Although it is not actually needed here, let's show <m>|\operatorname{Syl}_2(G)|</m> cannot be <m>3</m> or <m>5</m>. 
-                For example, if it were <m>5</m>, then the action of <m>G</m> on <m>\operatorname{Syl}_2(G)</m> (by conjugation) gives a homomorphism <m>\rho: G \to S_5</m>.
-                Since the action is transitive, this homomorphism cannot be the trivial map. 
-                Since <m>90</m> does not divide <m>120</m>, this map cannot be injective. 
-                Thus the kernel of <m>\rho</m> is a non-trivial, proper normal subgroup, a contradiction. 
-                In a similar way one shows <m>|\operatorname{Syl}_2(G)| \ne 3</m>.
-              </p>
-
-              <p>	
-                We have shown that the only possibility is 
-                <me>
-                  |\operatorname{Syl}_2(G)| = 15, |\operatorname{Syl}_3(G)| = 10, { \text{ and } } |\operatorname{Syl}_5(G)| = 6.
-                </me> 
-                One is now tempted to count elements: we have <m>15</m> elements of order <m>2</m> and <m>6 \cdot 4 = 24</m> elements of order <m>5</m>. 
-                But elements of order <m>3</m> are not so easy to count since the various Sylow <m>3</m>-subgroups have nine elements each and might interect in subsets of order <m>3</m>. 
-                The only obvious things is that there are at least <m>9 + 9 -3 = 15</m> of them. 
-                This does not give enough elements to reach a contradiction.
-              </p>
-                
-              <p>
-                The action of <m>G</m> on <m>\operatorname{Syl}_g(5)</m> leads to a homomorphism <m>G \to S_6</m>, but since <m>90</m> does divide <m>6!</m>, there is no contradiction lurking here either.
-              </p>
-        
-              <p>
-                So, we must resort to something really sneaky: let <m>P_1, \dots, P_{10}</m> be all of the Sylow <m>3</m>-subgroups. 
-                Observe that <em>if</em> <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>, then we would have <m>10 \cdot 8 = 80</m> elements of order <m>3</m> or <m>9</m>. 
-                This would give at least <m>80+ 15 + 24</m> elements, which is not possible. 
-                So, it must be the case that at least two intersect non-trivially. 
-                Without loss, let's say <m>H = P_1 \cap P_2</m> is such that <m>|H|= 3</m>. 
-                We ponder <m>N_G(H)</m>. Since <m>P_1</m> is abelian and <m>H \leq P_1</m>, <m>P_1 \leq N_G(H)</m>, so that <m>9 \mid |N_G(H)|</m>. 
-                Likewise, <m>P_2 \leq N_G(H)</m> too, and since <m>|(P_1 \cup P_2)| = 9 + 9 - 2 = 15</m>, we get <m>15 \leq N_G(H)</m>. 
-                And of course <m>|N_G(H)| \mid 90</m>.
-                We get only three possibilities: 
-                <me>
-                  |N_G(H)| = 18, 45 \text{ or } 90.
-                </me> 
-                Let us show that each is impossible:
-              </p>
-        
-              <p>
-                If <m>|N_G(H)| = 18</m>, then we have constructed a subgroup of <m>G</m> of index <m>5</m>. 
-                The action of <m>G</m> on the left cosets gives a homomorphism <m>G \to S_5</m> that cannot be the trivial map since the action is transitive. 
-                But it cannot be injective either, and this leads to a non-trivial nomal subgroup. 
-                The exact same reasoning shows <m>|N_G(H)|</m> cannot be <m>45</m> (or we could use that it has index <m>2</m>). 
-                Finally, if <m>|N_G(H)| = 90</m>, then <m>H \unlhd G</m>, which is also impossible.
-              </p>
-            </solution>
-
-          </example>
-
-          <theorem xml:id="thm-a5-simple"><title><m>A_5</m> is Simple</title>
-            <statement>
-              <p>
-                <m>A_5</m> is simple.
-              </p>
-            </statement>
-          </theorem>
-
-          <theorem xml:id="thm-simple-60"><title><m>A_5</m> the Unique Simple Group of Order <m>60</m></title>
-            <statement>
-              <p>
-                If <m>G</m> is a simple group of order <m>60</m>, then <m>G \cong A_5</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Assume <m>G</m> is simple of order <m>60</m>. 
-                Let us first observe that it suffices to construct a non-trivial action of <m>G</m> on a set with <m>5</m> elements. 
-                For given such an action we obtain a non-trivial homomorphism <m>g: G \to S_5</m>. 
-                Since it's non-trivial and <m>G</m> is simple, we must have <m>\operatorname{ker}(g) = \{e\}</m>, so that <m>g</m> is injective. 
-                Thus <m>G \cong \operatorname{im}(g)</m>, and <m>|\operatorname{im}(g)| = 60</m>. 
-                But we already know that <m>A_5</m> is the only subgroup of <m>S_5</m> of order <m>60</m>, and thus <m>G \cong \operatorname{im}(g)=A_5</m>.
-              </p>
-
-              <p>
-                So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <m>p</m>-subgroups. 
-                By Sylow Theory and the fact that <m>G</m> is simple (so that no Sylow <m>p</m>-subgroup for <m>p=2,3,5</m> can be unique) we get 
-                <me>
-                  |\operatorname{Syl}_2(G)| \in \{3,5,15\}, |\operatorname{Syl}_3(G)| \in \{4,10\},|\operatorname{Syl}_5(G)| = 6.
-                </me>
-              </p>
-        
-              <p>
-                The next important observation is:
-              </p>
-        
-              <blockquote>
-                <p>
-                  There is no non-trivial action of <m>G</m> on a set <m>S</m> of size at most <m>4</m>.
-                </p>
-              </blockquote>
-        
-              <p>
-                For if there was such a non-trivial action, we would get a homomorphism <m>\rho: G \to S_n</m> for <m>2 \leq n \leq 4</m> (if <m>n=1</m>, the only action is the trivial one). 
-                Such a homomorphism cannot be injective by order considerations. 
-                So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.
-              </p>
-        
-              <p>
-                In particular, <m>|\operatorname{Syl}_2(G)| \ne 3</m> and <m>|\operatorname{Syl}_4(G)| \ne 4</m>, so that 
-                <me>
-                  |\operatorname{Syl}_2(G)| \in \{5,15\},|\operatorname{Syl}_3(G)| = 10,|\operatorname{Syl}_5(G)| = 6.
-                </me>
-              </p>
-        
-              <p>
-                If <m>|\operatorname{Syl}_2(G)| = 5</m> then we are done, since this action is transitive and thus certainly non-trivial.
-              </p>
-        
-              <p>
-                Suppose <m>|\operatorname{Syl}_2(G)| = 15</m> and let <m>P_1, \dots, P_{15}</m> be all the Sylow <m>2</m>-subgroups. 
-                Since <m>|\operatorname{Syl}_3(G)| = 10</m> and <m>|\operatorname{Syl}_5(G)| = 6</m>, <m>G</m> has <m>10 \cdot 2 + 6 \cdot 4 = 44</m> elements of order <m>3</m> or <m>5</m>. 
-                If <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>, we would have <m>15 \cdot 3</m> elements of order <m>2</m> or <m>4</m>, which is far too many elements in total. 
-                At least two of these must therefore intersect non-trivially and without loss say <m>H = P_1 \cap P_2</m> has two elements.
-                We consider <m>K = N_G(H)</m>. 
-                As in the preivious example, <m>K \supseteq P_1 \cup P_2</m> and hence <m>|K| \geq 6</m>, <m>4 \mid |K|</m>, and <m>|K| \mid 60</m>. 
-                The possibilities are 
-                <me>
-                  |K| = 12, 20, 60.
-                </me> 
-                If <m>|K| = 60</m> then <m>H \unlhd G</m>, which is impossible. 
-                If <m>|K| = 20</m>, then we obtain an transitive action of <m>G</m> on the three element set of left cosets of <m>K</m> in <m>G</m>, which as shown above is not possible. 
-                We are left with <m>|K| = 12</m>. Thus <m>G</m> acts transitively (and hence non-trivially) on the five element set of left cosets of <m>K</m> in <m>G</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              The proof shows that <m>G \cong A_5</m> if either <m>|\operatorname{Syl}_2(G)| = 5</m> or <m>|\operatorname{Syl}_2(G)| =15</m>, but in hindsight only one of these can actually be possible. 
-              It's actually the former: <m>A_5</m> has no elements of order <m>4</m> (since four cycles are odd permuations) and the only elements of order <m>2</m> are products of two disjoint transpotions, and there are <m>15</m> such elements. 
-              It's not hard to see that the five <m>4</m>-element subgroups of <m>A_5</m> given by the Klein <m>4</m>-group <m>V := \{e, (1 \, 2)(3 \, 4), (1 \, 3)(2 \, 4), (1 \, 4)(2 \, 3)\}</m> and its obvious conjugates (i.e., those obtained by leaving out one of <m>1,2,3,4</m> instead of <m>5</m>) are the only Sylow <m>2</m>-subgoups of <m>G</m>.
-            </p>
-          </remark>
+          <subsection xml:id="subsec-"><title>Keeping it Simple</title>
           
+            <blockquote>
+              <p>
+                <q>
+                  Everything should be made as simple as possible, but not simpler.
+                </q>
+              </p>
+              <attribution>Albert Einstein</attribution>
+            </blockquote>
+      
+            <definition xml:id="def-simple-group"><title>Simple Group</title>
+              <statement>
+                <p>
+                  A group is called <em>simple</em> if it has only two normal subgroups: itself and the trivial subgroup.
+                  <idx><h>simple group</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <example><title><m>\mathbb{Z}/p</m> Simple</title>
+              <p>
+                <m>\mathbb{Z}/p</m> for a prime <m>p</m> is simple since any non-trivial element generates the whole group.
+              </p>
+            </example>
+
+            <example xml:id="ex-no-order-12-simple"><title>No Simple Groups of Order <m>12</m> (Counting Elements)</title>
+              <statement>
+                <p>
+                  Let us prove that no group or order <m>12</m> is simple. 
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Let <m>G</m> be any group of order <m>12</m>. 
+                  We will prove that <m>G</m> must have either a normal subgroup of order <m>3</m> or a normal subgroups of oder <m>4</m>.
+                </p>
+
+                <p>
+                  <xref text="title" ref="thm-sylow"/> gives that <m>n_2=|\operatorname{Syl}_2(G)|</m> is either <m>1</m> or <m>3</m> and <m>n_3= |\operatorname{Syl}_3(G)|</m> is either <m>1</m> or <m>4</m>. 
+                  If either of these numbers is <m>1</m>, we have a unique subgroup of order <m>4</m> or of order <m>3</m>, and such a subgroup must be normal. 
+                  Suppose these numbers are <m>3</m> and <m>4</m>, respectively. 
+                  We deduce a contradition by <q>counting elements</q>.
+                </p>
+
+                <p>
+                  In detail, say <m>P_1, \dots, P_4</m> are the <m>4</m> Sylow <m>3</m>-subgroups. 
+                  By <xref text="title" ref="thm-lagrange"/> <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>. 
+                  Thus the <em>set</em> <m>T := \bigcup_{i=1}^4 P_i</m> has <m>9</m> elements, one of which is <m>e</m> and the other <m>8</m> of which must have order <m>3</m>. 
+                  That is, there are <m>8</m> elements of order <m>3</m> in <m>G</m>. 
+                  But now consider the three Sylow <m>2</m>-subgroups <m>Q_1, Q_2, Q_3</m>. 
+                  Each has order <m>4</m> and <m>Q_i \cap T = \{e\}</m> for all <m>i</m>. 
+                  It follows that <m>Q_i = \{e\} \cup (G \setminus T)</m> for all <m>i</m>, and thus <m>Q_1 = Q_2 = Q_3</m>, a contradiction.
+                </p>
+              </solution>
+            </example>
+      
+            <remark>
+              <p>
+                In the previous example, it would not be so easy to count elements of order <m>2</m> and <m>4</m>. 
+                We do know that every element in <m>S := \cup_i Q_i</m> has order <m>1</m>, <m>2</m> or <m>4</m> (any only one has order <m>1</m>), but the size of this set is harder to calculate. 
+                For notice that <m>Q_i \cap Q_j</m> might have order <m>2</m>. 
+                The most one can say for sure is that <m>S</m> has at least <m>4 + 4 - 2 = 6</m> elements.
+              </p>
+            </remark>
+
+            <example xml:id="ex-no-order-80-simple"><title>No Simple Groups of Order <m>80</m> (Group Actions)</title>
+              <statement>
+                <p>
+                  No group of order <m>80=5 \cdot 16</m> is simple.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  By way of contradiciton suppose <m>G</m> is simple and <m>|G| = 20</m>. 
+                  <xref text="title" ref="thm-sylow"/> gives <m>|\operatorname{Syl}_2(G)| = 5</m> and <m>|\operatorname{Syl}_5(G)| = 16</m> (since they cannot be <m>1</m> by the assumption that <m>G</m> is simple). 
+                  The <q>counting elements trick</q> would work, but let's proceed in a different way: Consider the action of <m>G</m> on <m>\operatorname{Syl}_2(G)</m> by conjugation and let <me>\rho: G \to S_5</me> be the associated homomorphism (obtained by choosing a numbering <m>1, \dots, 5</m> of the members of <m>\operatorname{Syl}_2(G)</m>). 
+                  The map <m>\rho</m> is non-trivial since the action is transitive (part (2) of <xref text="title" ref="thm-sylow"/>). 
+                  But <m>80</m> does not divide <m>120</m> and so <m>\rho</m> cannot be injective. 
+                  It follows that <m>\operatorname{ker}(\rho)</m> is a non-trivial, proper normal subgroup of <m>G</m>, a contradiction.
+                </p>
+              </solution>
+            </example>
+
+            <example xml:id="ex-no-order-90-simple"><title>No Simple Groups of Order <m>90</m> (Normalizers)</title>
+              <statement>
+                <p>
+                  No group of order <m>90</m> is simple.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  By way of contradiction suppose <m>G</m> is a simple group of order <m>90</m>. 
+                  Since <m>90 = 2 \cdot 3^2 \cdot 5</m>, we conclude from <xref text="title" ref="thm-sylow"/> that 
+                  <me>
+                    |\operatorname{Syl}_2(G)| = 1  \text{ or }  3  \text{ or }  5  \text{ or }  15
+                  </me> 
+                  <me>
+                    |\operatorname{Syl}_3(G)| = 1  \text{ or }  10
+                  </me> 
+                  <me>
+                    |\operatorname{Syl}_5(G)| = 1  \text{ or }  6.
+                  </me> 
+                  If any of these is <m>1</m>, then the corresonding Sylow <m>p</m>-subgroup is unique and hence normal, a contradiction.
+                </p>
+
+                <p>
+                  Although it is not actually needed here, let's show <m>|\operatorname{Syl}_2(G)|</m> cannot be <m>3</m> or <m>5</m>. 
+                  For example, if it were <m>5</m>, then the action of <m>G</m> on <m>\operatorname{Syl}_2(G)</m> (by conjugation) gives a homomorphism <m>\rho: G \to S_5</m>.
+                  Since the action is transitive, this homomorphism cannot be the trivial map. 
+                  Since <m>90</m> does not divide <m>120</m>, this map cannot be injective. 
+                  Thus the kernel of <m>\rho</m> is a non-trivial, proper normal subgroup, a contradiction. 
+                  In a similar way one shows <m>|\operatorname{Syl}_2(G)| \ne 3</m>.
+                </p>
+
+                <p>	
+                  We have shown that the only possibility is 
+                  <me>
+                    |\operatorname{Syl}_2(G)| = 15, |\operatorname{Syl}_3(G)| = 10, { \text{ and } } |\operatorname{Syl}_5(G)| = 6.
+                  </me> 
+                  One is now tempted to count elements: we have <m>15</m> elements of order <m>2</m> and <m>6 \cdot 4 = 24</m> elements of order <m>5</m>. 
+                  But elements of order <m>3</m> are not so easy to count since the various Sylow <m>3</m>-subgroups have nine elements each and might interect in subsets of order <m>3</m>. 
+                  The only obvious things is that there are at least <m>9 + 9 -3 = 15</m> of them. 
+                  This does not give enough elements to reach a contradiction.
+                </p>
+                  
+                <p>
+                  The action of <m>G</m> on <m>\operatorname{Syl}_g(5)</m> leads to a homomorphism <m>G \to S_6</m>, but since <m>90</m> does divide <m>6!</m>, there is no contradiction lurking here either.
+                </p>
+          
+                <p>
+                  So, we must resort to something really sneaky: let <m>P_1, \dots, P_{10}</m> be all of the Sylow <m>3</m>-subgroups. 
+                  Observe that <em>if</em> <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>, then we would have <m>10 \cdot 8 = 80</m> elements of order <m>3</m> or <m>9</m>. 
+                  This would give at least <m>80+ 15 + 24</m> elements, which is not possible. 
+                  So, it must be the case that at least two intersect non-trivially. 
+                  Without loss, let's say <m>H = P_1 \cap P_2</m> is such that <m>|H|= 3</m>. 
+                  We ponder <m>N_G(H)</m>. Since <m>P_1</m> is abelian and <m>H \leq P_1</m>, <m>P_1 \leq N_G(H)</m>, so that <m>9 \mid |N_G(H)|</m>. 
+                  Likewise, <m>P_2 \leq N_G(H)</m> too, and since <m>|(P_1 \cup P_2)| = 9 + 9 - 2 = 15</m>, we get <m>15 \leq N_G(H)</m>. 
+                  And of course <m>|N_G(H)| \mid 90</m>.
+                  We get only three possibilities: 
+                  <me>
+                    |N_G(H)| = 18, 45 \text{ or } 90.
+                  </me> 
+                  Let us show that each is impossible:
+                </p>
+          
+                <p>
+                  If <m>|N_G(H)| = 18</m>, then we have constructed a subgroup of <m>G</m> of index <m>5</m>. 
+                  The action of <m>G</m> on the left cosets gives a homomorphism <m>G \to S_5</m> that cannot be the trivial map since the action is transitive. 
+                  But it cannot be injective either, and this leads to a non-trivial nomal subgroup. 
+                  The exact same reasoning shows <m>|N_G(H)|</m> cannot be <m>45</m> (or we could use that it has index <m>2</m>). 
+                  Finally, if <m>|N_G(H)| = 90</m>, then <m>H \unlhd G</m>, which is also impossible.
+                </p>
+              </solution>
+
+            </example>
+
+            <theorem xml:id="thm-a5-simple"><title><m>A_5</m> is Simple</title>
+              <statement>
+                <p>
+                  <m>A_5</m> is simple.
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-simple-60"><title><m>A_5</m> the Unique Simple Group of Order <m>60</m></title>
+              <statement>
+                <p>
+                  If <m>G</m> is a simple group of order <m>60</m>, then <m>G \cong A_5</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Assume <m>G</m> is simple of order <m>60</m>. 
+                  Let us first observe that it suffices to construct a non-trivial action of <m>G</m> on a set with <m>5</m> elements. 
+                  For given such an action we obtain a non-trivial homomorphism <m>g: G \to S_5</m>. 
+                  Since it's non-trivial and <m>G</m> is simple, we must have <m>\operatorname{ker}(g) = \{e\}</m>, so that <m>g</m> is injective. 
+                  Thus <m>G \cong \operatorname{im}(g)</m>, and <m>|\operatorname{im}(g)| = 60</m>. 
+                  But we already know that <m>A_5</m> is the only subgroup of <m>S_5</m> of order <m>60</m>, and thus <m>G \cong \operatorname{im}(g)=A_5</m>.
+                </p>
+
+                <p>
+                  So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <m>p</m>-subgroups. 
+                  By Sylow Theory and the fact that <m>G</m> is simple (so that no Sylow <m>p</m>-subgroup for <m>p=2,3,5</m> can be unique) we get 
+                  <me>
+                    |\operatorname{Syl}_2(G)| \in \{3,5,15\}, |\operatorname{Syl}_3(G)| \in \{4,10\},|\operatorname{Syl}_5(G)| = 6.
+                  </me>
+                </p>
+          
+                <p>
+                  The next important observation is:
+                </p>
+          
+                <blockquote>
+                  <p>
+                    There is no non-trivial action of <m>G</m> on a set <m>S</m> of size at most <m>4</m>.
+                  </p>
+                </blockquote>
+          
+                <p>
+                  For if there was such a non-trivial action, we would get a homomorphism <m>\rho: G \to S_n</m> for <m>2 \leq n \leq 4</m> (if <m>n=1</m>, the only action is the trivial one). 
+                  Such a homomorphism cannot be injective by order considerations. 
+                  So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.
+                </p>
+          
+                <p>
+                  In particular, <m>|\operatorname{Syl}_2(G)| \ne 3</m> and <m>|\operatorname{Syl}_4(G)| \ne 4</m>, so that 
+                  <me>
+                    |\operatorname{Syl}_2(G)| \in \{5,15\},|\operatorname{Syl}_3(G)| = 10,|\operatorname{Syl}_5(G)| = 6.
+                  </me>
+                </p>
+          
+                <p>
+                  If <m>|\operatorname{Syl}_2(G)| = 5</m> then we are done, since this action is transitive and thus certainly non-trivial.
+                </p>
+          
+                <p>
+                  Suppose <m>|\operatorname{Syl}_2(G)| = 15</m> and let <m>P_1, \dots, P_{15}</m> be all the Sylow <m>2</m>-subgroups. 
+                  Since <m>|\operatorname{Syl}_3(G)| = 10</m> and <m>|\operatorname{Syl}_5(G)| = 6</m>, <m>G</m> has <m>10 \cdot 2 + 6 \cdot 4 = 44</m> elements of order <m>3</m> or <m>5</m>. 
+                  If <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>, we would have <m>15 \cdot 3</m> elements of order <m>2</m> or <m>4</m>, which is far too many elements in total. 
+                  At least two of these must therefore intersect non-trivially and without loss say <m>H = P_1 \cap P_2</m> has two elements.
+                  We consider <m>K = N_G(H)</m>. 
+                  As in the preivious example, <m>K \supseteq P_1 \cup P_2</m> and hence <m>|K| \geq 6</m>, <m>4 \mid |K|</m>, and <m>|K| \mid 60</m>. 
+                  The possibilities are 
+                  <me>
+                    |K| = 12, 20, 60.
+                  </me> 
+                  If <m>|K| = 60</m> then <m>H \unlhd G</m>, which is impossible. 
+                  If <m>|K| = 20</m>, then we obtain an transitive action of <m>G</m> on the three element set of left cosets of <m>K</m> in <m>G</m>, which as shown above is not possible. 
+                  We are left with <m>|K| = 12</m>. Thus <m>G</m> acts transitively (and hence non-trivially) on the five element set of left cosets of <m>K</m> in <m>G</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
+              <p>
+                The proof shows that <m>G \cong A_5</m> if either <m>|\operatorname{Syl}_2(G)| = 5</m> or <m>|\operatorname{Syl}_2(G)| =15</m>, but in hindsight only one of these can actually be possible. 
+                It's actually the former: <m>A_5</m> has no elements of order <m>4</m> (since four cycles are odd permuations) and the only elements of order <m>2</m> are products of two disjoint transpotions, and there are <m>15</m> such elements. 
+                It's not hard to see that the five <m>4</m>-element subgroups of <m>A_5</m> given by the Klein <m>4</m>-group <m>V := \{e, (1 \, 2)(3 \, 4), (1 \, 3)(2 \, 4), (1 \, 4)(2 \, 3)\}</m> and its obvious conjugates (i.e., those obtained by leaving out one of <m>1,2,3,4</m> instead of <m>5</m>) are the only Sylow <m>2</m>-subgoups of <m>G</m>.
+              </p>
+            </remark>
+
+          </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  A <xref text="title" ref="def-simple-group"/> is a group with only two normal subgroups: itself and the trivial subgroup.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  We have three main strategies to prove that a group is simple: by counting elements, acting on a set of Sylow <m>p</m>-subgroups, or by resorting to diving into the minutae with normalizers.
+                  <fn>For examples of each, see <xref ref="ex-no-order-12-simple"/>,  <xref ref="ex-no-order-80-simple"/>, and  <xref ref="ex-no-order-90-simple"/>, respectively.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>A_5</m> is simple.
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
+
         </section>
     
       </chapter>

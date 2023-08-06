@@ -13,41 +13,20 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">For this proof it is useful to identity <span class="process-math">\(F[x]^n\)</span> with <span class="process-math">\(F^n[x]\)</span> where the latter refers to all expressions of the form <span class="process-math">\(\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m\)</span> with <span class="process-math">\(v_i \in F^n\text{.}\)</span> For instance, (when <span class="process-math">\(n = 2\)</span>) we identify <span class="process-math">\(\vectwo{x^2 -3x + 1}{x^7 +x + 5}\)</span> with <span class="process-math">\(\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7\text{.}\)</span> Using this identification we define</div>
+<div class="para">We know by the Fundamental Theorem of modules over <span class="process-math">\(F[x]\)</span> (i.e., Corollary ) that there is a <span class="process-math">\(F[x]\)</span>-module isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi:  F[x]^n = F^n[x] \to F^n_A
+V_{g} \cong F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)
 \end{equation*}
 </div>
-<div class="para">by <span class="process-math">\(\phi(\sum_i v_i x^i) = \sum_i A^i v_i\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> is a <span class="process-math">\(F[x]\)</span>-module homomorphism — I leave it to you to verify this. <span class="process-math">\(\phi\)</span> is onto since, e.g., for any <span class="process-math">\(v \in F^n\)</span> we have <span class="process-math">\(\phi(vx^0) = v\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">We have</div>
+<div class="para">for some unique list of monic, non-constant polynomials <span class="process-math">\(f_1, \cdots, f_s\)</span> with <span class="process-math">\(f_i \mid f_{i+1}\)</span> for all <span class="process-math">\(i\text{.}\)</span> Recall that the operator <span class="process-math">\(g\)</span> on <span class="process-math">\(V\)</span> is given as <span class="process-math">\(\lx\)</span> (multiplication by <span class="process-math">\(x\)</span>) on <span class="process-math">\(V_g\text{.}\)</span> Since this is a <span class="process-math">\(F[x]\)</span>-module isomorphism, <span class="process-math">\(g\)</span> corresponds to multiplication by <span class="process-math">\(x\)</span> on each summand <span class="process-math">\(F[x]/(f_i)\text{.}\)</span> As we have seen before, for each <span class="process-math">\(i\text{,}\)</span> the matrix representing <span class="process-math">\(\lx\)</span> on <span class="process-math">\(F[x]/f_i\)</span> relative to the basis <span class="process-math">\(B_i := \{1, x, x^2, \dots, x^{\deg(f_i)-1}\}\)</span> of <span class="process-math">\(F[x]/f_i\)</span> is the companion matrix <span class="process-math">\(C(f_i)\)</span> of <span class="process-math">\(f_i\text{.}\)</span> Let <span class="process-math">\(B\)</span> be the <span class="process-math">\(F\)</span>-basis of <span class="process-math">\(F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)\)</span> given by tuples</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi((xI_n - A) \cdot \sum_i v_i x^i) = \phi(\sum_i v_i x^{i+1} - \sum_i (Av_i) x^i) = \sum_i A^{i+1}(v_i) - \sum_i A^i(Av_i) = 0
+B = \{(b_1, 0, \dots, 0) \mid b_1 \in B_1\} \cup \{(0, b_2, 0, \dots, 0) \mid b_2 \in B_{2\} \cup}\cdots \cup \{(0, 0, \dots, 0, b_s) \mid b_s \in B_s\}
 \end{equation*}
 </div>
-<div class="para">and hence <span class="process-math">\(\ker(\phi) \supseteq \im(xI_n - A)\text{.}\)</span> By the <span class="process-math">\(0\)</span>-th isomorphism theorem, there is an induced <span class="process-math">\(F[x]\)</span>-module homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{\phi}: \frac{F^n[x]}{\im(xI_n - A)}  \onto F^n_A
-\end{equation*}
+<div class="para">(in that order). Then the matrix of <span class="process-math">\(\lx\)</span> on <span class="process-math">\(F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_k)\)</span> for <span class="process-math">\(B\)</span> is <span class="process-math">\(C(f_1) \oplus \cdots \oplus C(f_s)\text{.}\)</span>
 </div>
-<div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
-</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(\overline{\phi}\)</span> is <span class="process-math">\(F[x]\)</span>-linear it is certainly <span class="process-math">\(F\)</span>-linear. Since <span class="process-math">\(\dim_F(F^n_A) = n\text{,}\)</span> to prove <span class="process-math">\(\overline{\phi}\)</span> is one-to-one, it suffices to prove <span class="process-math">\(\dim_F \frac{F^n[x]}{\im(xI_n - A)} \leq n\)</span> (by Rank-Nullity). I claim the images of the standard basis <span class="process-math">\(e_1, \dots, e_n\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> span it as an <span class="process-math">\(F\)</span>-vector space. To see this, note that <span class="process-math">\(x^je_i\text{,}\)</span> for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(j \geq 0\)</span> span <span class="process-math">\(F^n[x]\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence they span the quotient. It thus suffices to show <span class="process-math">\(\overline{x^j e_i}\)</span> lies in the span of <span class="process-math">\(\overline{e_1}, \dots, \overline{e_n}\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{.}\)</span> We have <span class="process-math">\(x^{j-1} \cdot (A - x) e_i \in \im(xI_n - A)\)</span> and thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{x^j e_i} = \overline{x^{j-1} Ae_i}
-\end{equation*}
-</div>
-<div class="para">and by repeating this argument we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{x^j e_i} =\overline{x^{j-1} Ae_i} = \overline{x^{j-2} A^2e_i} = \cdots =\overline{A^je_i} \in \Span_F(e_1, \dots, e_n).
-\end{equation*}
-</div>
-</div></article><span class="incontext"><a href="sec-rcf.html#proof-114" class="internal">in-context</a></span>
+</div> <div class="para">This gives existence. Uniqueness is a consequence of the uniqueness of the list <span class="process-math">\(f_1, \dots, f_s\text{,}\)</span> but I will omit the details.</div></article><span class="incontext"><a href="sec-rcf.html#proof-114" class="internal">in-context</a></span>
 </body>
 </html>
