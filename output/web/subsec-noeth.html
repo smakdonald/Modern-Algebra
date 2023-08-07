@@ -668,7 +668,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-domains.html" class="internal"><span class="codenumber">9</span> <span class="title">Commutative Domains</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Euclidian Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Euclidean Domains</span></a></div></li>
 <li><div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Principal Ideal Domains</span></a></div></li>
 <li><div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Unique Factorization Domains</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Noetherian Rings</span></a></div></li>
@@ -845,17 +845,7 @@ I_N = I_{N+1} = \cdots.
 </div>
 </div></article><article class="definition definition-like" id="def-noetherian-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.32</span><span class="period">.</span><span class="space"> </span><span class="title">Noetherian Ring.</span>
-</h3> <div class="para logical" id="p-1324">
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Then <span class="process-math">\(R\)</span> is called a <em class="emphasis">noetherian ring</em> if <span class="process-math">\(R\)</span> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <span class="process-math">\(R\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
-\end{equation*}
-</div>
-<div class="para">there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(I_n = I_{n+1} = I_{n+2} = \cdots=I_{n+k}\)</span> for all <span class="process-math">\(k\geq 0\text{.}\)</span>
-</div>
-</div></article><aside class="aside aside-like" id="aside-20"><div class="para" id="p-1325">Unlike many modern sources, we choose not to capitalize “noetherian”. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian"</div></aside><article class="theorem theorem-like" id="lem-pids-are-noetherian"><h3 class="heading">
+</h3> <div class="para" id="p-1324">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Then <span class="process-math">\(R\)</span> is called a <em class="emphasis">noetherian ring</em> if <span class="process-math">\(R\)</span> satisfies the ascending chain condition on ideals. </div></article><aside class="aside aside-like" id="aside-20"><div class="para" id="p-1325">Unlike many modern sources, we choose not to capitalize “noetherian”. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian"</div></aside><article class="theorem theorem-like" id="lem-pids-are-noetherian"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.33</span><span class="period">.</span><span class="space"> </span><span class="title">PIDs are Noetherian.</span>
 </h3>
 <div class="para" id="p-1326">If <span class="process-math">\(R\)</span> is a PID then <span class="process-math">\(R\)</span> is noetherian.</div></article><article class="hiddenproof" id="proof-71"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-71"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><div class="para logical" id="p-1327">
@@ -865,7 +855,7 @@ I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
 (a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots
 \end{equation*}
 </div>
-<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in <code class="code-inline tex2jax_ignore">[provisional cross-reference: something]</code>. Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
+<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>. Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
 </div></article></div>
 <article class="corollary theorem-like" id="cor-fields-are-noetherian"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.34</span><span class="period">.</span><span class="space"> </span><span class="title">Fields are Noetherian.</span>

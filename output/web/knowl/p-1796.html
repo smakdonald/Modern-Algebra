@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Every matrix <span class="process-math">\(A\)</span> is similar to a unique matrix in RCF.</div>
+<div class="para logical">
+<div class="para">Each such matrix is similar to a unique one of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(f_1) \oplus \cdots \oplus C(f_k)
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(f_1, \dots, f_k\)</span> monic polynomials of positive degree such that <span class="process-math">\(f_1 \mid \cdots \mid f_k\text{.}\)</span> Moreover, since <span class="process-math">\(C(f)\)</span> is a <span class="process-math">\(d \times d\)</span> matrix where <span class="process-math">\(d = \deg(f)\text{,}\)</span> we must have <span class="process-math">\(\deg(f_1) + \cdots + \deg(f_k) = 4\text{.}\)</span> So the goal becomes to count all such tuples <span class="process-math">\((f_1, \dots, f_k)\)</span> of polynomials. We proceed by cases on <span class="process-math">\(k\text{.}\)</span> Note that <span class="process-math">\(k \geq 5\)</span> is not possible. - Case <span class="process-math">\(k = 1\text{.}\)</span> Then <span class="process-math">\(\deg(f_1) = 4\)</span> and the number of such polynomials is <span class="process-math">\(p^4\)</span> (since <span class="process-math">\(f_1 = x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0\)</span> and <span class="process-math">\(F\)</span> has <span class="process-math">\(p\)</span> elements). - Case <span class="process-math">\(k = 2\text{:}\)</span> Note that <span class="process-math">\(\deg(f_1) \geq 3\)</span> is not possible. If <span class="process-math">\(\deg(f_1) = 2\)</span> then <span class="process-math">\(f_1 = f_2\text{,}\)</span> and there are <span class="process-math">\(p^2\)</span> possibilities. If <span class="process-math">\(\deg(f_1) = 1\text{,}\)</span> then <span class="process-math">\(\deg(f_2) = 3\)</span> and <span class="process-math">\(f_2 = f_1 \cdot g\)</span> with <span class="process-math">\(g\)</span> monic and <span class="process-math">\(\deg(g) = 2\text{.}\)</span> There are <span class="process-math">\(p\)</span> possibilities for <span class="process-math">\(f_1\)</span> and <span class="process-math">\(p^2\)</span> for <span class="process-math">\(g\text{,}\)</span> for a total of <span class="process-math">\(p^3\)</span> in this subcase. The total for this case is thus <span class="process-math">\(p^2 + p^3\text{.}\)</span> - Case <span class="process-math">\(k= 3\text{:}\)</span> The only possibilities are <span class="process-math">\(\deg(f_1) = 1\text{,}\)</span> <span class="process-math">\(\deg(f_2) = 1\)</span> and <span class="process-math">\(\deg(f_3) = 2\)</span> so that <span class="process-math">\(f_2 = f_1\)</span> and <span class="process-math">\(f_3 = f_1 \cdot g\)</span> with <span class="process-math">\(\deg(g) =1\text{.}\)</span> We get <span class="process-math">\(p^3\)</span> possibilities. - Case <span class="process-math">\(k = 4\text{.}\)</span> We must have <span class="process-math">\(f_1 = f_2 = f_3 = f_4\)</span> with each of degree <span class="process-math">\(1\text{,}\)</span> for a total of <span class="process-math">\(p\)</span> possibilities. The total is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p^4 + p^2+ p^3 + p^3 + p.
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-rcf.html#p-1796" class="internal">in-context</a></span>
 </body>
 </html>

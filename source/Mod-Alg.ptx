@@ -579,8 +579,8 @@
                   <me>
                     -*-:S\times S\to S,\text{ given by } (x,y)\mapsto x * y.
                   </me>
-                  <notation><usage><m>*</m></usage><description>a binary operation</description></notation> 
                   <idx><h>binary operation</h></idx>
+                  <idx><h><m>*</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -644,6 +644,7 @@
               <p>
                 Some mathematicians choose to define a <em>semigroup</em> as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
                 We have yet to grasp why.
+                <idx><h>semigroup</h></idx>
               </p>
             </aside>
 
@@ -677,8 +678,8 @@
                       <p>
                         A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
                         <fn>For specifics, see: <xref ref="def-binary-properties"/>.</fn>
-                        <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
                         <idx><h>group</h></idx>
+                        <idx><h><m>(G,*)</m></h></idx>
                       </p>
                     </li>
 
@@ -714,14 +715,16 @@
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
                         For each <m>x\in G</m>, the element satisfying <xref ref="inverse-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
+                        <idx><h>inverse element</h></idx>
                       </p>
                     </li>
       
-                    <li xml:id="list-cancellation"><title>Cancellation</title><idx><h>cancellation</h></idx>
+                    <li xml:id="list-cancellation"><title>Cancellation</title>
                       <p>
                         Suppose <m>x,y,z\in G</m>.
                         If <m>xy = xz</m> then <m>y=z</m>. 
-                        Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
+                        Similarly, if <m>yx = zx</m> we have <m>y = z</m>
+                        <idx><h>cancellation (groups)</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -796,8 +799,9 @@
                   <ol>
                     <li xml:id="trivial-group">
                       <p>
-                        The <term>trivial group</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m>.
-                        <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
+                        The <term>trivial group</term> is the group with a single element <m>\{e\}</m>.
+                        <idx><h>trivial group</h></idx>
+                        <idx><h><m>\{e\}</m></h></idx>
                       </p>
                     </li>
       
@@ -815,8 +819,9 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication known as the <term>general linear group</term><idx><h>general linear group</h></idx>.
-                        <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
+                        Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication known as the <term>general linear group</term>.
+                        <idx><h>general linear group</h></idx>
+                        <idx><h><m>\GL</m></h></idx>
                       </p>
                     </li>
       
@@ -829,7 +834,6 @@
                   </ol>
                 </p>
               </statement>
-
             </example>
 
             <aside><title>Identity Theft</title>
@@ -871,6 +875,8 @@
             </p>
 
             <example xml:id="ex-group-of-units"><title>Groups of Units</title>
+              <idx><h>group of units</h></idx>
+              <idx><h><m>G^\times</m></h></idx>
               <statement>
                 <p> 
                   Each of the following subsets form an abelian group under multiplication.
@@ -928,6 +934,8 @@
                         Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.
                         Then <m>G^{op}</m> is a group.
                         <fn>Opposite groups are used in category theory to describe something called <q>duality</q> between algebraic structures.</fn> 
+                        <idx><h>opposite group</h></idx>
+                        <idx><h><m>G^{op}</m></h></idx>
                       </p>
                     </li>
 
@@ -935,6 +943,8 @@
                       <p>
                         Let <m>\E</m> denote the set of even integers and <m>\O</m> denote the set of odd integers. 
                         Then <m>(\E,+)</m> is a group, whereas <m>(\O,+)</m> is not.
+                        <idx><h><m>\E</m></h></idx>
+                        <idx><h><m>\O</m></h></idx>
                       </p>
                     </li>
                   </ul>
@@ -1060,6 +1070,7 @@
             </exercise>
 
             <exercise xml:id="exe-general-associativity"><title>Generalized Associative Law</title>
+              <idx><h>generalized associative law</h></idx>
               <statement>
                 <p>
                   If an element of a monoid is contructed from a sequence of elements <m>x_1,\dots,x_n</m> in this order by repeatedly inserting parenthesis and applying the operation, the element must equal 
@@ -1140,6 +1151,7 @@
                 <p>
                   Let <m>x</m> be an element of a multiplicative group <m>G</m>. 
                   For <m>n\in\Z</m>, the <m>n\th</m> <term>power</term> <m>x^n</m> of <m>x</m> is defined recursively as follows:
+                  <idx><h><m>n\th</m> power</h></idx>
                   <ul>
                     <li>
                       <p>
@@ -1165,6 +1177,7 @@
                 <p>
                   If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
                   This would be called a <term>multiple</term> of <m>x</m> instead of a power.
+                  <idx><h>multiple</h></idx>
                 </p>
               </statement>
             </definition>
@@ -1241,17 +1254,19 @@
                   <ol>
                     <li>
                       <p>
-                        In a group <m>G</m>, the <em>order of an element</em><idx><h>order of a group element</h></idx> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. 
+                        In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. 
                         If no such <m>n</m> exists, we say <m>x</m> has infinite order. 
                         We write <m>|x|</m> for the order of <m>x</m>.
-                        <notation><usage><m>|x|</m></usage><description>Order of an element<m>x</m></description></notation> 
+                        <idx><h>order of a group element</h></idx>
+                        <idx><h><m>|x|</m></h></idx>
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        The <em>order of a group</em><idx><h>order of a group</h></idx> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
-                        <notation><usage><m>|G|</m></usage><description>Order of a group <m>G</m></description></notation> 
+                        The <em>order of a group</em> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
+                        <idx><h>order of a group</h></idx>
+                        <idx><h><m>|G|</m></h></idx>
                       </p>
                     </li>
                   </ol>
@@ -2740,6 +2755,7 @@
             </definition>
       
             <theorem xml:id="thm-subgroup-test"><title>Subgroup Tests</title>
+              <idx><h>subgroup test</h></idx>
               <statement>
                 <p>
                   <ol>
@@ -2979,8 +2995,8 @@
                   <me>
                     \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}.
                   </me>
-                  <notation><usage><m>\SL</m></usage><description>the special linear group</description></notation>
-                  <idx><h>special linear group</h></idx>          
+                  <idx><h>special linear group</h></idx>
+                  <idx><h><m>\SL</m></h></idx>    
                 </p>
               </statement>
             </definition>
@@ -3047,7 +3063,8 @@
               </statement>
             </theorem>
 
-            <theorem xml:id="thm-cayley"><title>Cayley's Theorem</title><creator><m>1854</m></creator>
+            <theorem xml:id="thm-cayley"><title>Cayley's Theorem</title>
+              <idx><h>cayley's theorem</h></idx>
               <statement>
                 <p>
                   Every group is isomorphic to a subgroup of <m>S_n</m>.
@@ -3345,7 +3362,8 @@
             <example xml:id="ex-commutator-subgroup"><title>Commutator Subgroup</title>
               <p>
                 Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. 
-                This is known as the <term>commutator subgroup</term><idx><h>commutator subgroup</h></idx> of <m>G</m>.
+                This is known as the <term>commutator subgroup</term>
+                <idx><h>commutator subgroup</h></idx> of <m>G</m>.
                 <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
               </p>
             </example>
@@ -3507,7 +3525,6 @@
                 <p>
                   If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>.
                   <idx><h>cyclic group</h></idx>
-                  <idx><h>cyclic</h></idx>
                 </p>
               </statement>
             </definition>
@@ -3825,7 +3842,7 @@
                   </me> 
                   such that <m>\varphi(x) = y</m>. 
                   In both cases this unique group homomorphism is given by <m>\varphi(x^i)=y^i</m> for any <m>i</m>.
-                  <idx><h>universal mapping property for a cyclic group</h></idx>
+                  <idx><h>UMP for a cyclic group</h></idx>
                 </p>
               </statement>
 
@@ -3894,6 +3911,7 @@
             </remark>
       
             <theorem xml:id="thm-cyclic-classification"><title>Classification Theorem for Cyclic Groups</title>
+              <idx><h>classification of cyclic groups</h></idx>
               <statement>
                 <p>
                   Every infinite cyclic group is isomorphic to <m>\Z</m>. 
@@ -3917,9 +3935,8 @@
               <p>
                 Moving forward, it is customary to denote <em>the</em> cyclic group of order <m>n</m> with the notation <m>C_n</m>. 
                 We similarly denote <em>the</em> infinite cyclic group <m>C_\infty</m>.
-                <notation><usage><m>C_n</m></usage><description>the cyclic group of order <m>n</m></description></notation>
-                <notation><usage><m>C_\infty</m></usage><description>the cyclic group with countably infinite elements</description></notation>
-                <idx><h>classification of cyclic groups</h></idx>
+                <idx><h><m>C_n</m></h></idx>
+                <idx><h><m>C_\infty</m></h></idx>
               </p>
             </convention>
 
@@ -10423,42 +10440,80 @@
 
       <chapter xml:id="ch-domains"><title>Commutative Domains</title>
     
-        <section xml:id="sec-eds"><title>Euclidian Domains</title>
+        <section xml:id="sec-eds"><title>Euclidean Domains</title>
 
-          <blockquote><p><q>Find your domain and serve it to the world.</q></p><attribution>Myles Munroe</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>
+                Find your domain and serve it to the world.
+              </q>
+            </p>
+            <attribution>Myles Munroe</attribution>
+          </blockquote>
     
           <definition xml:id="def-ed"><title>Euclidean Domain</title>
             <statement>
               <p>
-                A <em>Euclidean domain (ED)</em> is a domain <m>R</m> together with a <em>norm</em> function <m>N: R \to \Z_{\geq 0}</m> such that <m>N(0) = 0</m> and the following property holds: for any two elements <m>a, b \in R</m> with <m>b \ne 0</m>, there are elements <m>q</m> and <m>r</m> of <m>R</m> such that 
+                A <em>Euclidean domain (ED)</em> is a domain <m>R</m> together with a <em>norm</em> function <m>N: R \to \Z_{\geq 0}</m> such that <m>N(0) = 0</m> and the following property holds: 
+                for any two elements <m>a, b \in R</m> with <m>b \ne 0</m>, there are elements <m>q</m> and <m>r</m> of <m>R</m> such that 
                 <me>
                   a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
                 </me>
+                <idx><h>Euclidean domain</h></idx>
+                <idx><h>norm function</h></idx>
               </p>
             </statement>
           </definition>
 
-          <p>In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.</p>
+          <p>
+            In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. 
+            This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.
+          </p>
 
-          <p>Lets take a look at some examples to deepen our understanding.</p>
+          <p>
+            Lets take a look at some examples to deepen our understanding.
+          </p>
 
           <example xml:id="ex-trivial-norm"><title>Trivial Norm</title>
             <p>
-              A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. This is not the case in other examples. Also observe that as we've defined remainders they are <em>not</em> unique. For example, in dividing <m>13</m> by <m>5</m>, both 
-              <me>13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)</me> 
-              are considered valid. This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
+              A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. 
+              Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. 
+              Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. 
+              This is not the case in other examples. 
+              Also observe that as we've defined remainders they are <em>not</em> unique. 
+              For example, in dividing <m>13</m> by <m>5</m>, both 
+              <me>
+                13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)
+              </me> 
+              are considered valid. 
+              This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. 
+              One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
             </p>
           </example>
 
           <example xml:id="ex-degree-and-norm"><title>Polynomial Rings over Fields are Euclidean Domains</title>
             <p>
-              The next classical example is <m>F[x]</m> with <m>F</m> a field and where we define the norm to be polynomial degree: <m>N(f(x)) = \deg(f(x))</m> if <m>f\neq 0</m> and <m>N(0)=0</m>. This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in <xref ref="thm-polynomial-division-algorithm"/>.
+              The next classical example is <m>F[x]</m> with <m>F</m> a field and where we define the norm to be polynomial degree: <m>N(f(x)) = \deg(f(x))</m> if <m>f\neq 0</m> and <m>N(0)=0</m>. 
+              This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in <xref ref="thm-polynomial-division-algorithm"/>.
             </p>
           </example>
           
-          <example xml:id="ex-gaussian-integers-are-an-ed"> <title>Guassian Integers are a Euclidian Domain</title>
+          <example xml:id="ex-gaussian-integers-are-an-ed"> <title>Guassian Integers are a Euclidean Domain</title>
             <p>
-              The ring <m>R = \Z[i]</m> of Gaussian integers is a Euclidean domain with <m>N</m> being the usual complex (Euclidean) square norm <m>N(a+bi)=a^2+b^2</m>. Let <m>\alpha</m>, <m>\beta</m> <m>\in \Z[i]</m> and let <m>\frac{\alpha}{\beta}=p+qi \in \Q(i)</m> (here we use that the fraction field of <m>\Z[i]</m> is <m>\Q(i)</m>). Now pick <m>s,t\in\Z</m> so that <m>|p-s|\leq 1/2</m> and <m>|q-t|\leq 1/2</m>. We have <me>\a=\beta(s+ti)+\beta(p+qi)-\beta(s+ti).</me> Set <m>q=s+ti</m> and set <m>r=\beta(p+qi)-\beta(s+ti)=\beta(s+ti-(p+qi))</m> and notice that <m>q\in \Z[i]</m> because <m>s,t\in\Z</m> and <m>r\in \Z[i]</m> by closure. If <m>r=0</m> we're good, and if <m>r\neq 0</m> then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for <m>s,t</m>, we have <me>N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;N(\beta).</me> Thus the norm function <m>N</m> makes <m>\Z[i]</m> into a Euclidean domain.
+              The ring <m>R = \Z[i]</m> of Gaussian integers is a Euclidean domain with <m>N</m> being the usual complex (Euclidean) square norm <m>N(a+bi)=a^2+b^2</m>. 
+              Let <m>\alpha</m>, <m>\beta</m> <m>\in \Z[i]</m> and let <m>\frac{\alpha}{\beta}=p+qi \in \Q(i)</m> 
+              (here we use that the fraction field of <m>\Z[i]</m> is <m>\Q(i)</m>). 
+              Now pick <m>s,t\in\Z</m> so that <m>|p-s|\leq 1/2</m> and <m>|q-t|\leq 1/2</m>. 
+              We have 
+              <me>
+                \a=\beta(s+ti)+\beta(p+qi)-\beta(s+ti).
+              </me> 
+              Set <m>q=s+ti</m> and set <m>r=\beta(p+qi)-\beta(s+ti)=\beta(s+ti-(p+qi))</m> and notice that <m>q\in \Z[i]</m> because <m>s,t\in\Z</m> and <m>r\in \Z[i]</m> by closure. 
+              If <m>r=0</m> we're good, and if <m>r\neq 0</m> then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for <m>s,t</m>, we have 
+              <me>
+                N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;N(\beta).
+              </me> 
+              Thus the norm function <m>N</m> makes <m>\Z[i]</m> into a Euclidean domain.
             </p>
           </example> 
     
@@ -10479,30 +10534,44 @@
                     </p>
                   </li>
                 </ol>
+                <idx><h>gcd (Euclidean domain)</h></idx>
               </p>
             </statement>
           </definition>
     
-          <remark><p>Note that <m>b\mid a</m> is equivalent to <m>b\in\igen a</m>.</p></remark>
+          <remark>
+            <p>
+              Note that <m>b\mid a</m> is equivalent to <m>b\in\igen a</m>.
+            </p>
+          </remark>
           
         </section>
     
         <section xml:id="sec-pids"><title>Principal Ideal Domains</title>
 
-          <blockquote><p><q>One chance is all you need.</q></p><attribution>Jesse Owens</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>
+                One chance is all you need.
+              </q>
+            </p>
+            <attribution>Jesse Owens</attribution>
+          </blockquote>
 
           <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
               <statement>
                 <p>
-                  Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
+                  Let <m>I</m> be an ideal of a ring <m>R</m>. 
+                  The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
+                  <idx><h>principal ideal</h></idx>
                 </p>
               </statement>
           </definition>
 
           <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
-            
             <p>
-              Let <m>\igen m,\igen n</m> be ideals in <m>\Z</m>. Then
+              Let <m>\igen m,\igen n</m> be ideals in <m>\Z</m>. 
+              Then
               <ul>
                 <li>
                   <m>\igen m+\igen n=\igen{\gcd(m,n)}</m>
@@ -10513,7 +10582,8 @@
                 </li>
   
                 <li>
-                  <m>\igen m\igen n=\igen {mn}</m> Conclude that <m>\igen m\igen n=\igen m\cap\igen n</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
+                  <m>\igen m\igen n=\igen {mn}</m> 
+                  Conclude that <m>\igen m\igen n=\igen m\cap\igen n</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
                 </li>
               </ul>
             </p>
@@ -10523,15 +10593,17 @@
             <p>
               <ul>
                 <li>
-                  every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
+                  Every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m>
+                  <fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
                 </li>
   
                 <li>
-                  for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
+                  For any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
                 </li>
   
                 <li>
-                  for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+                  For any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. 
+                  This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
                 </li>
               </ul>
             </p>
@@ -10540,7 +10612,9 @@
           <definition xml:id="def-pid"><title>PID</title>
             <statement>
               <p>
-                A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = \igen a</m> for some <m>a \in R.</m>
+                A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = \igen a</m> for some <m>a \in R</m>.
+                <idx><h>PID</h></idx>
+                <idx><h>principal ideal domain</h></idx>
               </p>
             </statement>
           </definition>
@@ -10560,20 +10634,34 @@
     
             <proof>
               <p>
-                Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. Pick an ideal <m>I</m>. If <m>I</m> is the zero ideal, <m>I = \igen0</m>. Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) I claim <m>I = \igen b</m>. It is clear that <m>\igen b \subseteq I</m>. Pick <m>a \in I</m>. Then 
+                Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. 
+                Pick an ideal <m>I</m>. 
+                If <m>I</m> is the zero ideal, <m>I = \igen0</m>. 
+                Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. 
+                (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) 
+                I claim <m>I = \igen b</m>. 
+                It is clear that <m>\igen b \subseteq I</m>. 
+                Pick <m>a \in I</m>. 
+                Then 
                 <me>
                   a = bq + r
                 </me> 
-                and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. So it must be that <m>r = 0</m>, and hence <m>a\in \igen b</m>.
+                and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. 
+                But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. 
+                So it must be that <m>r = 0</m>, and hence <m>a\in \igen b</m>.
               </p>
             </proof>
           </theorem>
 
-          <p>The converse is not true in general.</p>
+          <p>
+            The converse is not true in general.
+          </p>
     
           <example xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
             <p>
-              The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.
+              The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. 
+              It is the simplest example of such a ring, but the proofs of these claims are not easy. 
+              I will not cover a proof of this fact.
             </p>
           </example>
     
@@ -10588,7 +10676,9 @@
           <definition xml:id="def-associate"><title>Associate</title>
             <statement>
               <p>
-                Let <m>R</m> be a domain. Two elements <m>r,s \in R</m> are <em>associates</em> if there is a unit <m>u</m> of R such that <m>s = ur</m>.
+                Let <m>R</m> be a domain. 
+                Two elements <m>r,s \in R</m> are <em>associates</em> if there is a unit <m>u</m> of <m>R</m> such that <m>s = ur</m>.
+                <idx><h>associate</h></idx>
               </p>
             </statement>
           </definition>
@@ -10602,7 +10692,10 @@
     
             <proof>
               <p>
-                If <m>\igen x = \igen y</m> then <m>x \in \igen y</m> and so <m>x = yu</m> for some <m>u</m>. Similarly <m>y = xs</m> and hence <m>y = yus</m>. Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
+                If <m>\igen x = \igen y</m> then <m>x \in \igen y</m> and so <m>x = yu</m> for some <m>u</m>. 
+                Similarly <m>y = xs</m> and hence <m>y = yus</m>. 
+                Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. 
+                If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
               </p>
     
               <p>
@@ -10618,7 +10711,7 @@
                 <ol>
                   <li>
                     <p>
-                      <m>\igen{a,b}=\igen g</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m> 
+                      <m>\igen{a,b}=\igen g</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m>.
                     </p>
                   </li>
     
@@ -10633,17 +10726,26 @@
     
             <proof>
               <p>
-                The existence of <m>g</m> is granted by definition in a PID. Now <m>a,b\in \igen g</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in \igen{g'}</m>, so <m>\igen g=\igen{a,b}\subseteq \igen{g'}</m> by minimality. This gives <m>g\in\igen{g'}</m>, hence <m>g'\mid g</m>.
+                The existence of <m>g</m> is granted by definition in a PID. 
+                Now <m>a,b\in \igen g</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. 
+                If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in \igen{g'}</m>, so <m>\igen g=\igen{a,b}\subseteq \igen{g'}</m> by minimality. 
+                This gives <m>g\in\igen{g'}</m>, hence <m>g'\mid g</m>.
               </p>
             </proof>
           </proposition>
     
-          <remark><p>If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.</p></remark>
+          <remark>
+            <p>
+              If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.
+            </p>
+          </remark>
     
           <definition xml:id="def-prime-element"><title>Prime</title>
             <statement>
               <p>
-                Suppose <m>R</m> is a domain. An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
+                Suppose <m>R</m> is a domain. 
+                An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
+                <idx><h>prime element</h></idx>
               </p>
             </statement>
           </definition>
@@ -10651,7 +10753,9 @@
           <definition xml:id="def-irreducible"><title>Irreducible</title>
             <statement>
               <p>
-                Suppose <m>R</m> is a domain. An element <m>r \in R</m> is <em>irreducible</em> if <m>r\neq 0</m>, <m>r</m> is not a unit, and whenever <m>r = xy</m> with <m>x,y \in R</m> then either <m>x</m> or <m>y</m> is a unit.
+                Suppose <m>R</m> is a domain. 
+                An element <m>r \in R</m> is <em>irreducible</em> if <m>r\neq 0</m>, <m>r</m> is not a unit, and whenever <m>r = xy</m> with <m>x,y \in R</m> then either <m>x</m> or <m>y</m> is a unit.
+                <idx><h>irreducible element</h></idx>
               </p>
             </statement>
           </definition>
@@ -10672,7 +10776,9 @@
                 </li>
     
                 <li>
-                  the polynomial <m>x^2+x+[1]\in (\Z/2)[x]</m> is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: <m>x^2+x+[1]=(x+[a])(x+[b])</m>. Then <m>-[b]</m> is a root for <m>x^2+x+[1]</m>. But neither <m>[0]</m> nor <m>[1]</m> are roots for this polynomial, a contradiction.
+                  the polynomial <m>x^2+x+[1]\in (\Z/2)[x]</m> is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: <m>x^2+x+[1]=(x+[a])(x+[b])</m>. 
+                  Then <m>-[b]</m> is a root for <m>x^2+x+[1]</m>. 
+                  But neither <m>[0]</m> nor <m>[1]</m> are roots for this polynomial, a contradiction.
                 </li>
               </ol>
             </p>
@@ -10687,7 +10793,10 @@
     
             <solution>
               <p>
-                Note that <m>2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m> and thus <m>(1+\sqrt{-5})(1-\sqrt{-5})\in (2)</m>. However we claim that neither <m>1+\sqrt{-5}</m> nor <m>1-\sqrt{-5}</m> are in <m>(2)</m>. If <m>\a=1\pm\sqrt{-5}\in (2)</m> then <m>\a=2\beta</m> for some <m>\beta\in\Z[\sqrt{-5}]</m> and so <m>6=N(\a)=N(2)N(\beta)=4N(\beta)</m>, a contradiction. Thus <m>2</m> is not prime.
+                Note that <m>2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m> and thus <m>(1+\sqrt{-5})(1-\sqrt{-5})\in (2)</m>. 
+                However we claim that neither <m>1+\sqrt{-5}</m> nor <m>1-\sqrt{-5}</m> are in <m>(2)</m>. 
+                If <m>\a=1\pm\sqrt{-5}\in (2)</m> then <m>\a=2\beta</m> for some <m>\beta\in\Z[\sqrt{-5}]</m> and so <m>6=N(\a)=N(2)N(\beta)=4N(\beta)</m>, a contradiction. 
+                Thus <m>2</m> is not prime.
               </p>
             </solution>
           </exercise>
@@ -10701,7 +10810,9 @@
     
             <solution>
               <p>
-                Since <m>\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. The element <m>y</m> is irreducible for degree reasons. The ideal <m>\igen{y}</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
+                Since <m>\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. 
+                The element <m>y</m> is irreducible for degree reasons. 
+                The ideal <m>\igen{y}</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
               </p>
             </solution>
           </exercise>
@@ -10728,11 +10839,21 @@
     
             <proof>
               <p>
-                Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. Then <m>r \ne 0</m> and <m>r</m> is not a unit. Suppose <m>r = yz</m>. Then <m>yz \in \igen r</m> and hence by definition either <m>y \in \igen r</m> or <m>z \in \igen r</m>. If <m>y \in \igen r</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
+                Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. 
+                Then <m>r \ne 0</m> and <m>r</m> is not a unit. 
+                Suppose <m>r = yz</m>. 
+                Then <m>yz \in \igen r</m> and hence by definition either <m>y \in \igen r</m> or <m>z \in \igen r</m>. 
+                If <m>y \in \igen r</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. 
+                Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
               </p>
     
               <p>
-                Assume <m>R</m> is a PID and that <m>r</m> is irreducible. Since <m>r</m> is not a unit, <m>\igen r</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by Theorem . We show <m>\igen r= M</m> and hence <m>\igen r</m> is prime. Since <m>R</m> is a PID, <m>M = \igen y</m> for some <m>y</m>. So <m>x = yt</m> for some <m>t</m>. But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>\igen x = \igen y = M</m>.
+                Assume <m>R</m> is a PID and that <m>r</m> is irreducible. 
+                Since <m>r</m> is not a unit, <m>\igen r</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by <xref provisional="cite"/> 
+                We show <m>\igen r= M</m> and hence <m>\igen r</m> is prime. 
+                Since <m>R</m> is a PID, <m>M = \igen y</m> for some <m>y</m>. 
+                So <m>x = yt</m> for some <m>t</m>. 
+                But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>\igen x = \igen y = M</m>.
               </p>
             </proof>
           </theorem>
@@ -10740,17 +10861,20 @@
           <theorem xml:id="thm-factorizations-permutations-and-associates"><title>Factorizations and Permutations</title>
             <statement>
               <p>
-                Assume <m>R</m> is a PID <m>r\in R</m> is non zero and not a unit and <m>r = p_1 \cdots p_n = q_1 \cdots q_m</m> are two different irreducible factorization of <m>r</m>. Then <m>n=m</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+                Assume <m>R</m> is a PID <m>r\in R</m> is non zero and not a unit and <m>r = p_1 \cdots p_n = q_1 \cdots q_m</m> are two different irreducible factorization of <m>r</m>. 
+                Then <m>n=m</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
               </p>
             </statement>
     
             <proof>
               <p>
-                Without loss of generality, assume <m>n \leq m</m>. We induct on <m>m</m>.
+                Without loss of generality, assume <m>n \leq m</m>. 
+                We induct on <m>m</m>.
               </p>
     
               <p>
-                If <m>m =1</m> then <m>n=1</m> as well since <m>n\leq m</m> and <m>n=0</m> would yield <m>r = p_1 \cdots p_n =1</m>, a contradiction. If <m>n=m=1</m> we have <m>p_1=q_1</m> and there is nothing more to prove.
+                If <m>m =1</m> then <m>n=1</m> as well since <m>n\leq m</m> and <m>n=0</m> would yield <m>r = p_1 \cdots p_n =1</m>, a contradiction. 
+                If <m>n=m=1</m> we have <m>p_1=q_1</m> and there is nothing more to prove.
               </p>
     
               <p>
@@ -10758,7 +10882,8 @@
               </p>
     
               <p>
-                Since <m>R</m> is a PID, irreducible elements are prime by Theorem . Since <m>p_1 \cdots p_n\in (p_n)</m> we have that <m>q_1 \cdots q_m\in (p_n)</m> and since <m>(p_n)</m> is a prime ideal it follows that <m>q_i \in (p_n)</m> for some <m>i</m>. Upon reordering, we may as well assume <m>q_m\in (p_n)</m>. Thus <m>q_m = p_n u</m> for some <m>u \in R</m>. Since <m>q_m</m> is irreducible and <m>p_n</m> is not a unit, <m>u</m> must be a unit. We get 
+                Since <m>R</m> is a PID, irreducible elements are prime by <xref provisional="cite"/>.
+                Since <m>p_1 \cdots p_n\in (p_n)</m> we have that <m>q_1 \cdots q_m\in (p_n)</m> and since <m>(p_n)</m> is a prime ideal it follows that <m>q_i \in (p_n)</m> for some <m>i</m>. Upon reordering, we may as well assume <m>q_m\in (p_n)</m>. Thus <m>q_m = p_n u</m> for some <m>u \in R</m>. Since <m>q_m</m> is irreducible and <m>p_n</m> is not a unit, <m>u</m> must be a unit. We get 
                 <me>
                     p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
                 </me> 
@@ -10766,11 +10891,12 @@
                 <me>
                     p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
                 </me> 
-                Notice that <m>(q_{m-1}u)=(q_{m-1})</m> is a prime ideal so <m>q_{m-1}u</m> is irreducible by Theorem .
+                Notice that <m>(q_{m-1}u)=(q_{m-1})</m> is a prime ideal so <m>q_{m-1}u</m> is irreducible by <xref provisional="cite"/> .
               </p>
     
               <p>
-                By the inductive hypothesis we deduce that <m>n-1=m-1</m> hence <m>n=m</m> and also that <m>p_1, \ldots, p_{n-1}</m> are associates to <m>q_1, \ldots, q_{m-2}, q_{m-1}u</m> in some order. This together with <m>p_n</m> associate to <m>q_m</m> establishes the claim.
+                By the inductive hypothesis we deduce that <m>n-1=m-1</m> hence <m>n=m</m> and also that <m>p_1, \ldots, p_{n-1}</m> are associates to <m>q_1, \ldots, q_{m-2}, q_{m-1}u</m> in some order. 
+                This together with <m>p_n</m> associate to <m>q_m</m> establishes the claim.
               </p>
             </proof>
           </theorem>
@@ -10779,36 +10905,52 @@
     
         <section xml:id="subsec-ufds"><title>Unique Factorization Domains</title>
 
-          <blockquote><p><q>Always remember that you are absolutely unique. Just like everyone else.</q></p><attribution>Margaret Mead</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>
+                Always remember that you are absolutely unique. Just like everyone else.
+              </q>
+            </p>
+            <attribution>Margaret Mead</attribution>
+          </blockquote>
     
           <definition xml:id="def-ufd"><title>UFD</title>
             <statement>
               <p>
-                A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+                A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. 
+                That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+                <idx><h>unique factorization domain</h></idx>
+                <idx><h>UFD</h></idx>
               </p>
             </statement>
           </definition>
     
           <example xml:id="ex-ufd-exs"><title>Examples of UFDs</title>
-            <p><ol>
-              <li>
-                <m>\Z</m> is a UFD by the Fundamental Theorem of Arithmetic.
-              </li>
-    
-              <li>
-                <m>F[x]</m> where <m>F</m> is a field is a UFD. This is the case because <m>F[x]</m> is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).
-              </li>
-    
-              <li>
-                We will eventually prove that if <m>R</m> is a UFD then so is <m>R[x]</m>. It follows that <m>F[x_1, \dots, x_n]</m> is a UFD for all <m>n</m>. Note that if <m>n &gt; 1</m>, this ring is not a PID and hence not a Euclidean domain.
-              </li>
-    
-            </ol></p>
+            <p>
+              <ol>
+                <li>
+                  <m>\Z</m> is a UFD by the Fundamental Theorem of Arithmetic.
+                </li>
+      
+                <li>
+                  <m>F[x]</m> where <m>F</m> is a field is a UFD. 
+                  This is the case because <m>F[x]</m> is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).
+                </li>
+      
+                <li>
+                  We will eventually prove that if <m>R</m> is a UFD then so is <m>R[x]</m>. 
+                  It follows that <m>F[x_1, \dots, x_n]</m> is a UFD for all <m>n</m>. 
+                  Note that if <m>n &gt; 1</m>, this ring is not a PID and hence not a Euclidean domain.
+                </li>
+              </ol>
+            </p>
           </example>
     
           <exercise xml:id="ex-zx-not-a-pid"><title><m>\Z[x]</m> is a UFD</title>
             <p>
-              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal <m>\igen{2,x}</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
+              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. 
+              For example, this can be seen because the ideal <m>\igen{2,x}</m> is not a principal ideal. 
+              It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
             </p>
           </exercise>
     
@@ -10849,7 +10991,16 @@
           <definition xml:id="def-ascending-chain-condition"><title>Ascending Chain Condition</title>
             <statement>
               <p>
-                A commutative ring <m>R</m> has the <em>ascending chain condition</em> (on ideals) if given any chain of ideals in <m>R</m> of the form <me>I_1 \subseteq I_2 \subseteq \cdots</me>there is an <m>N</m> such that <me>I_N = I_{N+1} = \cdots.</me>
+                A commutative ring <m>R</m> has the <em>ascending chain condition</em> (on ideals) if given any chain of ideals in <m>R</m> of the form 
+                <me>
+                  I_1 \subseteq I_2 \subseteq \cdots
+                </me>
+                there is an <m>N</m> such that 
+                <me>
+                  I_N = I_{N+1} = \cdots.
+                </me>
+                <idx><h>ascending chain condition</h></idx>
+                <idx><h>ACC</h></idx>
               </p>
             </statement>
           </definition>
@@ -10858,11 +11009,8 @@
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring. 
-                Then <m>R</m> is called a <em>noetherian ring</em> if <m>R</m> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <m>R</m> 
-                <me>
-                  I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
-                </me> 
-                there exists a positive integer <m>n</m> such that <m>I_n = I_{n+1} = I_{n+2} = \cdots=I_{n+k}</m> for all <m>k\geq 0</m>.
+                Then <m>R</m> is called a <em>noetherian ring</em> if <m>R</m> satisfies the ascending chain condition on ideals.
+                <idx><h>noetherian ring</h></idx>
               </p>
             </statement>
           </definition>
@@ -10888,7 +11036,7 @@
                 <me>
                   (a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots
                 </me> 
-                Consider <m>I=\bigcup_{i\geq 1} (a_i)</m> which is an ideal of <m>R</m> by the argument given in <xref provisional="something"/>. 
+                Consider <m>I=\bigcup_{i\geq 1} (a_i)</m> which is an ideal of <m>R</m> by the argument given in <xref provisional="cite"/>. 
                 Since <m>R</m> is a PID, <m>I=(b)</m> for some <m>b\in R</m>. 
                 Since <m>b\in I=\bigcup_{i\geq 1} (a_i)</m>, we must have <m>b\in (a_n)</m> for some <m>n</m>. 
                 Then we see that <m>I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I</m> for all <m>j\geq n</m>, thus <m>I=(a_j)</m> for <m>j\geq n</m> and the chain stabilizes as desired.
@@ -10977,9 +11125,6 @@
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring and <m>S \subseteq R</m> is a subset such that
-              </p>
-    
-              <p>
                 <ol>
                   <li>
                     <p>
@@ -11003,6 +11148,7 @@
     
               <p>
                 Such a subset <m>S</m> is called a <em>multiplicatively closed subset of non zerodivisors</em> of <m>R</m>.
+                <idx><h>multiplicatively closed subset of non zerodivisors</h></idx>
               </p>
             </statement>
           </definition>
@@ -11048,6 +11194,8 @@
                 <me>
                   \frac{r}{s} + \frac{r'}{s'} = \frac{rs' + r's}{ss'} \;\text{and}\; \frac{r}{s} \cdot \frac{r'}{s'} = \frac{rr'}{ss'}.
                 </me>
+                <idx><h>field of fractions</h></idx>
+                <idx><h>fraction field</h></idx>
               </p>
             </statement>
           </definition>
@@ -11055,17 +11203,38 @@
           <theorem xml:id="thm-field-of-fractions-is-field"><title>Field of Fractions is a Field</title>
             <statement>
               <p>
-                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <m>+</m> and <m>\cdot</m> make <m>S^{-1} R</m> into a field. Moreover, the function <m>R\to S^{-1}R</m> sending <m>r</m> to <m>\frac{r}{1}</m> is an injective ring homomorphism.
+                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <m>+</m> and <m>\cdot</m> make <m>S^{-1} R</m> into a field. 
+                Moreover, the function <m>R\to S^{-1}R</m> sending <m>r</m> to <m>\frac{r}{1}</m> is an injective ring homomorphism.
               </p>
             </statement>
     
             <proof>
               <p>
-                There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say <m>\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}</m>. Then <m>rs'= r's</m> and <m>r's'' = r''s'</m>. We need to deduce that <m>rs'' = r''s</m>. The given equations imply <m>rs's'' = r'ss'' = r''ss'</m> and since <m>s'</m> is a nonzerodivisor we conclude <m>rs'' = r''s</m>. This is in fact the only time that the fact that <m>S</m> consists of nonzerodivisors is used.
+                There is a lot of small things to check and we'll just do a few. 
+                Right off the bat we need to be sure the given equivalence relation really is one. 
+                The reflexive and symmetric properties are clear. 
+                But the proof of transitivity illustrates a key point: 
+                Say <m>\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}</m>. 
+                Then <m>rs'= r's</m> and <m>r's'' = r''s'</m>. 
+                We need to deduce that <m>rs'' = r''s</m>. 
+                The given equations imply <m>rs's'' = r'ss'' = r''ss'</m> and since <m>s'</m> is a nonzerodivisor we conclude <m>rs'' = r''s</m>. 
+                This is in fact the only time that the fact that <m>S</m> consists of nonzerodivisors is used.
               </p>
     
               <p>
-                We also need to be sure our rules for <m>+</m> and <m>\cdot</m> make sense and are independent of representation. They <q>make sense</q> since we assume <m>S</m> is closed under <m>\cdot</m>. To show <m>+</m> is independent of representations, say <m>\frac{r}{s} \sim \frac{r''}{s''}</m>, so that <m>rs'' = r''s</m>. Then <me>\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}</me> and <me>\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}</me> and so we need to show <m>(rs' + r's)(s''s') \sim (r''s' + r's'')(ss')</m>. This is clear upon expaning out both sides and using <m>rs'' = r''s</m>. In a similar way one shows <m>\cdot</m> is well-defined.
+                We also need to be sure our rules for <m>+</m> and <m>\cdot</m> make sense and are independent of representation. 
+                They <q>make sense</q> since we assume <m>S</m> is closed under <m>\cdot</m>. 
+                To show <m>+</m> is independent of representations, say <m>\frac{r}{s} \sim \frac{r''}{s''}</m>, so that <m>rs'' = r''s</m>. 
+                Then 
+                <me>
+                  \frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
+                </me> and 
+                <me>
+                  \frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+                </me> 
+                and so we need to show <m>(rs' + r's)(s''s') \sim (r''s' + r's'')(ss')</m>. 
+                This is clear upon expaning out both sides and using <m>rs'' = r''s</m>. 
+                In a similar way one shows <m>\cdot</m> is well-defined.
               </p>
         
               <p>
@@ -11073,20 +11242,29 @@
               </p>
         
               <p>
-                The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that <m>+</m> and <m>\cdot</m> are commutative is clear from their definitions. <m>S^{-1}R</m> is a group under addition since it has a <m>0</m> element, namely <m>\frac{0}{1}</m>, and <m>\frac{r}{s} +
-                \frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}</m>, with the last equality holding since <m>0 \cdot 1 = s^2 \cdot 0</m>. The <m>1</m> element is <m>\frac{1}{1}</m>. (Note that we have used that <m>1 \in S</m> a couple times here — indeed, without this assumption <m>S</m> could be empty and then <m>S^{-1}R</m> would be the empty set.)
+                The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. 
+                The fact that <m>+</m> and <m>\cdot</m> are commutative is clear from their definitions. 
+                The set <m>S^{-1}R</m> is a group under addition since it has a <m>0</m> element, namely <m>\frac{0}{1}</m>, and <m>\frac{r}{s} +\frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}</m>, with the last equality holding since <m>0 \cdot 1 = s^2 \cdot 0</m>. 
+                The <m>1</m> element is <m>\frac{1}{1}</m>. 
+                (Note that we have used that <m>1 \in S</m> a couple times here — indeed, without this assumption <m>S</m> could be empty and then <m>S^{-1}R</m> would be the empty set.)
               </p>
     
               <p>
-                <m>R</m> being a domain means <m>xy=0</m> implies (<m>x=0</m> or <m>y=0</m>). The contrapositive to this statement is: if <m>x\neq 0</m> and <m>y\neq 0</m> then <m>xy\neq 0</m>, which shows <m>S</m> is a multiplicatively closed set of nonzerodivisors.
+                <m>R</m> being a domain means <m>xy=0</m> implies (<m>x=0</m> or <m>y=0</m>). 
+                The contrapositive to this statement is: 
+                if <m>x\neq 0</m> and <m>y\neq 0</m> then <m>xy\neq 0</m>, which shows <m>S</m> is a multiplicatively closed set of nonzerodivisors.
               </p>
     
               <p>
-                It remains only to show every non-zero element of <m>S^{-1}R</m> is a unit. Given <m>\frac{r}{s} \ne 0</m>, note that <m>r \ne 0</m> and hence <m>r \in S</m>. So <m>\frac{s}{r}</m> is also an element of <m>S^{-1}R</m>. We have <m>\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}</m>, where the last equation holds by the definition of <m>\sim</m>.
+                It remains only to show every non-zero element of <m>S^{-1}R</m> is a unit. 
+                Given <m>\frac{r}{s} \ne 0</m>, note that <m>r \ne 0</m> and hence <m>r \in S</m>. 
+                So <m>\frac{s}{r}</m> is also an element of <m>S^{-1}R</m>. 
+                We have <m>\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}</m>, where the last equation holds by the definition of <m>\sim</m>.
               </p>
     
               <p>
-                The fact that <m>r \mapsto \frac{r}{1}</m> is a ring homomorphism is straightforward to check. Its injective since <m>\frac{r}{1} = \frac{0}{1}</m> implies <m>r = 0</m>.
+                The fact that <m>r \mapsto \frac{r}{1}</m> is a ring homomorphism is straightforward to check. 
+                It's injective since <m>\frac{r}{1} = \frac{0}{1}</m> implies <m>r = 0</m>.
               </p>
             </proof>
           </theorem>
@@ -11108,7 +11286,9 @@
     
                 <li>
                   <p>
-                    For yet another, <m>{\mathbb{R}}[x]</m> is an integral domain. Its field of fractions, usually denoted <m>{\mathbb{R}}(x)</m> constists of all <em>rational functions</em>. This last example could be generalized by replacing <m>{\mathbb{R}}</m> with any field and also by using any number of variables.
+                    For yet another, <m>{\mathbb{R}}[x]</m> is an integral domain. 
+                    Its field of fractions, usually denoted <m>{\mathbb{R}}(x)</m> constists of all <em>rational functions</em>.
+                    This last example could be generalized by replacing <m>{\mathbb{R}}</m> with any field and also by using any number of variables.
                   </p>
                 </li>
               </ol>
@@ -11133,6 +11313,7 @@
               <p>
                 For an integral domain <m>R</m>, a polynomial <m>p(x) \in R[x]</m> is called <em>irreducible</em> if <m>p(x)</m> is not a unit and whenever <m>p(x) = f(x) g(x)</m>, either <m>f(x)</m> or <m>g(x)</m> is a unit. 
                 (It follows that such a <m>p(x)</m> also cannot be <m>0</m>.)
+                <idx><h>irreducible polynomial</h></idx>
               </p>
             </statement>
           </definition>
@@ -11164,6 +11345,7 @@
                     <p>
                       (Rational Root Test) If <m>p(x) \in \Q[x]</m> and all the coefficients of <m>p = a_n x^n + \cdots + a_0</m> are integers and <m>\frac{i}{j}</m> is a root of <m>p</m> with <m>i,j \in \Z</m>, then <m>j</m> divides <m>a_n</m> and <m>i</m> divides <m>a_0</m>. 
                       More generally, the same holds with <m>\Z</m> replaced by any PID and <m>\Q</m> replaced by its field of fractions.
+                      <idx><h>rational root test</h></idx>
                     </p>
                   </li>
                 </ol>
@@ -11192,6 +11374,7 @@
               <p>
                 For a PID <m>R</m> and <m>f \in R[x]</m>, define the <em>content</em> of <m>f</m>, written <m>\cont(f)</m>, to be the gcd of the coefficients of <m>f</m>. 
                 Equivalently, <m>\cont(f)</m> is the generator of the principal ideal generated by the coefficients of <m>f</m>.
+                <idx><h>content</h></idx>
               </p>
             </statement>
           </definition>
@@ -11287,6 +11470,7 @@
           </example>
 
           <theorem xml:id="thm-eisensteins-criterion"><title>Eisenstein's Criterion</title>
+            <idx><h>Eisenstein's criterion</h></idx>
             <statement>
               <p>
                 Let <m>R</m> be a PID with field of fractions <m>F</m> and assume <m>f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in R[x]</m> is a polynomial. 
@@ -11344,6 +11528,7 @@
                   f(x) = x^{p-1} + x^{p-2} + \cdots + x^2 + x+1 \in \Z[x]
                 </me>
                 is irreducible in <m>\Q[x]</m>.
+                <idx><h>cyclotomic polynomial</h></idx>
               </p>
             </statement>
 
@@ -11418,32 +11603,31 @@
             </proof>
           </proposition>
 
-          <proposition xml:id="prop-irreducible-poly">
-            <statement>
-              <p>
-                Show that <m>x^3+3x+2 \in \Q[x]</m> is irreducible.
-              </p>
-            </statement>
-          </proposition>
-
           <proposition xml:id="prop-fields-and-group-of-units-1">
             <statement>
               <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. 
+                Then <m>G</m> is cyclic.
               </p>
             </statement>
 
             <proof>
               <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. 
+                Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. 
+                Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
               </p>
 
               <p>
-                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. 
+                By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. 
+                Thus <m>k=n</m>.
               </p>
 
               <p>
-                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
+                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. 
+                Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. 
+                This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; hence <m>G</m> is itself cyclic.
               </p> 
             </proof>
           </proposition>
