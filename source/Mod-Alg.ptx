@@ -601,7 +601,7 @@
                       <p>
                         An operation satisfies the <em>identity property</em> if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
                         Such an element <m>e</m> is called an <em>identity element</em>.
-                        <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation> 
+                        <idx><h><m>e</m></h></idx>
                         <idx><h>identity property</h></idx>
                       </p>
                     </li>
@@ -1587,7 +1587,7 @@
               <statement>
                 <p>
                   The <em>dihedral group</em> <m>D_{2n}</m><idx><h>dihedral group</h></idx> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
-                  <notation><usage><m>D_{2n}</m></usage><description>Dihedral Group</description></notation> 
+                  <idx><h><m>D_{2n}</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -1699,7 +1699,7 @@
                   The set of all permutations of a set <m>S</m> is denoted <m>\Perm(S)</m>.
                   <idx><h>permutation group</h></idx>
                   <idx><h><m>\Perm(S)</m></h></idx>
-                  <idx><h><m>\sigma:S\to S</m></h></idx>
+                  <idx><h><m>\sigma</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -1708,7 +1708,7 @@
               <statement>
                 <p>
                   For any <m>n\in\N</m>, the <em>symmetric group</em><idx><h>symmetric group</h></idx> is the set <m>S_n=\Perm(\{1,\dots,n\})</m> equipped with the composition of functions as its binary operation.
-                  <notation><usage><m>S_n</m></usage><description>Symmetric group</description></notation> 
+                  <idx><h><m>S_n</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -2003,7 +2003,7 @@
                 <statement>
                   <p>
                     The <em>alternating group</em><idx><h>alternating group</h></idx> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
-                    <notation><usage><m>A_n</m></usage><description>the alternating group on <m>n</m> elements </description></notation>          
+                    <idx><h><m>A_n</m></h></idx> 
                   </p>
                 </statement>
             </definition>
@@ -2170,7 +2170,8 @@
                 <ol>
                   <li>
                     <p>
-                      The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em><idx><h>trivial homomorphism</h></idx>.
+                      The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>
+                      <idx><h>trivial homomorphism</h></idx>.
                     </p>
                   </li>
 
@@ -2182,7 +2183,8 @@
 
                   <li>
                     <p>
-                      The <em>sign homomorphism</em><idx><h>sign homomorphism</h></idx> <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
+                      The <em>sign homomorphism</em> <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
+                      <idx><h>sign homomorphism</h></idx>
                     </p>
                   </li>
 
@@ -2252,6 +2254,7 @@
                 <p>
                   Let <m>G</m> and <m>H</m> be abelian groups. 
                   Then the set <m>\Hom(G,H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
+                  <idx><h><m>\Hom(G,H)</m></h></idx>
                 </p>
               </statement>
             </investigation>   
@@ -2264,7 +2267,7 @@
                   <me>
                     \ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.
                   </me>
-                  <notation><usage><m>\ker(\varphi)</m></usage><description>the kernel of a homomorphism <m>\varphi</m> <m>\cdot</m></description></notation>          
+                  <idx><h><m>\ker(\varphi)</m> (groups)</h></idx> 
                 </p>
               </statement>
             </definition>
@@ -2426,7 +2429,9 @@
             <theorem xml:id="thm-iso-inv"><title>Isomorphism Invariants</title>
               <statement>
                 <p>
-                  Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
+                  Let <m>G</m> and <m>H</m> be groups. 
+                  If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
+                  <idx><h>isomorphism invariant</h></idx>
                 </p>
       
                 <p>
@@ -2452,12 +2457,6 @@
                     <li>
                       <p>
                         <m>|Z(G)|=|Z(H)|</m>
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>G</m> is finitely generated if and only if <m>H</m> is finitely generated.
                       </p>
                     </li>
                   </ol>
@@ -2566,7 +2565,8 @@
               <statement>
                 <p>
                   Let <m>G</m> be a group. 
-                  An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em><idx><h>automorphism</h></idx> of <m>G</m>. 
+                  An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em>
+                  <idx><h>automorphism</h></idx> of <m>G</m>. 
                 </p>
               </statement>
             </definition>
@@ -2582,6 +2582,7 @@
               <statement>
                 <p>
                   The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term><idx><h>automorphism group</h></idx> of <m>G</m> and denoted <m>\Aut(G)</m>.
+                  <idx><h><m>\Aut(G)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -2594,7 +2595,6 @@
               <statement>
                 <p>
                   The set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
-                  <notation><usage><m>\Aut(G)</m></usage><description>the automorphism group of a group <m>G</m></description></notation> 
                 </p>
               </statement>
 
@@ -2645,6 +2645,7 @@
                   Let <m>G</m> be a group and <m>x\in G</m>. 
                   The function <m>\psi_x:G\to G</m> defined by <m>\psi_x(a)=xax^{-1}</m> is called the <em>inner automorphism</em><idx><h>inner automorphism</h></idx> of <m>G</m> induced by <m>x</m>.
                   The set of <em>inner automorphisms</em><idx><h>inner automorphism group</h></idx> of <m>G</m> is denoted <m>\Inn(G)=\{\psi_x\mid x\in G\}</m>.
+                  <idx><h><m>\Inn(G)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -2741,15 +2742,14 @@
                 <p>
                   A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>,  
                   if and only if <m>H</m> is a group under the multiplication law of <m>G</m>.
-                  <notation><usage><m>\leq</m></usage><description>Subgroup</description></notation> 
-                  <notation><usage><m>H,K</m></usage><description>in group theory, <m>H</m> and <m>K</m> usually denote subgroups.</description></notation>
+                  <idx><h><m>\leq</m> (groups)</h></idx>
                   <idx><h>subgroup</h></idx>
                 </p>
       
                 <p>
                   A subgroup <m>H</m> of a group <m>G</m> is a called <em>proper</em> subgroup, denoted <m>H&lt;G</m>, if and only if <m>H\neq G</m>.
                   <idx><h>proper subgroup</h></idx>
-                  <notation><usage><m>&lt;</m></usage><description>Proper subgroup</description></notation> 
+                  <idx><h><m>&lt;</m> (groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -2852,7 +2852,7 @@
                     <p>
                       Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. 
                       Then <m>n\Z\leq\Z</m> for all <m>n</m>.
-                      <notation><usage><m>n\Z</m></usage><description><m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m></description></notation> 
+                      <idx><h><m>n\Z</m></h></idx>
                     </p>
                   </li>
                 </ol>
@@ -3097,7 +3097,7 @@
                   <me>
                     Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }y \in G\}.
                   </me>
-                  <notation><usage><m>Z(G)</m></usage><description>the center of a group <m>G</m></description></notation>  
+                  <idx><h><m>Z(G)</m></h></idx>
                   <idx><h>center of a group</h></idx>        
                 </p>
               </statement>
@@ -3197,7 +3197,7 @@
                     \langle S \rangle := \bigcap_{H \leq G, H \supseteq X} H.
                   </me> 
                   If <m>S=\{s\}</m> is a set with one element then we write <m>\langle S \rangle=\langle s \rangle</m> and we refer to this as the <em>cyclic subgroup generated by</em><idx><h>generated cyclic subgroup</h></idx> <m>s</m>.
-                  <notation><usage><m>\langle S \rangle</m></usage><description>the subgroup generated by <m>S</m></description></notation>
+                  <idx><h><m>\langle S \rangle</m></h></idx>
                 </p>
 
                 <p>
@@ -3364,7 +3364,7 @@
                 Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. 
                 This is known as the <term>commutator subgroup</term>
                 <idx><h>commutator subgroup</h></idx> of <m>G</m>.
-                <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
+                <idx><h><m>G'</m></h></idx>    
               </p>
             </example>
       
@@ -4062,7 +4062,8 @@
             <lemma xml:id="lem-cosetfacts"><title>Coset Equivalencies</title>
               <statement>
                 <p>
-                  Let <m>H \leq G</m>. The following facts about left cosets are equivalent for <m>x,y \in G</m>:
+                  Let <m>H \leq G</m>. 
+                  The following facts about left cosets are equivalent for <m>x,y \in G</m>:
                   <ol>
                     <li>
                       <p>
@@ -4182,12 +4183,13 @@
                     \rho: H \to Hg
                   </me> 
                   by <m>\rho(h) = hg</m>. 
-                  Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
+                  We see <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
                 </p>
               </proof>
             </corollary>
 
             <theorem xml:id="thm-lagrange"><title>Lagrange's Theorem</title>
+              <idx><h>Lagrange's theorem</h></idx>
               <statement>
                 <p>
                   If <m>G</m> is a finite group and <m>H \leq G</m>, then 
@@ -4214,7 +4216,7 @@
               <statement>
                 <p>
                   In finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em>index</em> of <m>H</m> in <m>G</m>.
-                  <notation><usage><m>[G:H]</m></usage><description>Index of <m>H</m> in <m>G</m></description></notation> 
+                  <idx><h><m>[G:H]</m></h></idx>
                   <idx><h>index</h></idx>
                 </p>
               </statement>
@@ -4299,6 +4301,7 @@
             </p>
 
             <theorem xml:id="thm-index-tower"><title>The Index Tower</title>
+              <idx><h>index tower</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. 
@@ -4325,6 +4328,7 @@
               <statement>
                 <p>
                   Prove Fermat's Little Theorem: for every integer <m>a</m> and every prime <m>p</m>, <m>a^p\mod p=a\mod p</m>.
+                  <idx><h>Fermat's little theorem</h></idx>
                 </p>
               </statement>
             </exercise>
@@ -4400,7 +4404,7 @@
                 <p>
                   A subgroup <m>N</m> of a group <m>G</m> is <em>normal</em> in <m>G</m>, written <m>N\nsg G</m>, if <m>gNg^{-1} = N</m> for all <m>g \in G</m>. 
                   <idx><h>normal subgroup</h></idx>
-                  <notation><usage><m>\nsg</m></usage><description>Normal subgroup</description></notation>
+                  <idx><h><m>\nsg</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -4643,6 +4647,7 @@
                         <me>
                           \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
                         </me> 
+                        <idx><h>generated normal subgroup</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -4676,7 +4681,7 @@
             </remark>
 
             <exercise xml:id="exe-lagrange-converse-false"><title>Converse to Lagrange's Theorem is False</title>
-
+              <idx><h>converse to Lagrange's theorem</h></idx>
               <statement>
                 <p>
                   Prove the converse to <xref text="title" ref="thm-lagrange"/> is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>.
@@ -4785,7 +4790,6 @@
             </p>
 
             <theorem xml:id="thm-quotient-iff-normal"><title>Quotients and Normal Subgroups</title>
-              <creator>1889</creator>
               <statement>
                 <p>
                   Let <m>N\leq G</m>. 
@@ -4820,7 +4824,8 @@
             
              <exploration xml:id="exe-mod-n-iso"><title>Modular Integer? Barely Know 'Er!</title>
               <p>
-                Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> should be: <m>\Z/n</m> <m>\Z/n\Z</m>, <m>\Z/n</m>, <m>\Z_n</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n}</m>, or whatever other horrors you can conjure.
+                Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> should be: 
+                <m>\Z/n</m> <m>\Z/n\Z</m>, <m>\Z/n</m>, <m>\Z_n</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n}</m>, or whatever other horrors you can conjure.
               </p>
             </exploration>
 
@@ -4860,7 +4865,7 @@
                   So <m>f(x) = g(x)\operatorname{SL}_n(F) = A \operatorname{SL}_n(F)</m>. 
                   This proves <m>f</m> is onto. 
                   If <m>f(x) = e</m>, then <m>g(x) \operatorname{SL}_n(F) = \operatorname{SL}_n(F)</m> and so <m>g(x) \in \operatorname{SL}_n(F)</m>. 
-                  Clearly this means <m>x = 1</m>.
+                  This means <m>x = 1</m>.
                 </p>
               </solution>
             </exercise>
@@ -4881,7 +4886,7 @@
               <statement>
                 <p>
                   For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>q:G \to G/N</m> is defined by <m>q(g)=gN</m>.
-                  <idx><h>quotient map</h></idx>
+                  <idx><h>quotient map (groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -4984,7 +4989,8 @@
               We come to the so-called Isomorphism Theorems.
             </p>
       
-            <theorem xml:id="thm-ump-quotient"><title>UMP for Quotients</title>
+            <theorem xml:id="thm-ump-quotient"><title>UMP for Quotient Groups</title>
+              <idx><h>UMP for quotient groups</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>N</m> a normal subgroup. 
@@ -5067,10 +5073,12 @@
       
               <p>
                 The group <m>G/G'</m> is called the <em>abelianization of <m>G</m></em> and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization.
+                <idx><h>abelianization</h></idx>
               </p>
             </example>
       
             <theorem xml:id="thm-fit-group"><title>First Isomorphism Theorem</title>
+              <idx><h>first isomorphism theorem for groups</h></idx>
               <statement>
                 <p>
                   If <m>\varphi: G \to H</m> is a homomorphism of groups, then <m>\operatorname{ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by <xref ref="thm-ump-quotient"/> induces an isomorphism 
@@ -5134,8 +5142,8 @@
                   <me>
                     HK = \{hk \mid h \in H, k\in K\}.
                   </me>
-                  <notation><usage><m>HK</m></usage><description>the product of the groups <m>H</m> and <m>K</m></description></notation> 
-                  <idx><h><m>HK</m></h></idx>         
+                  <idx><h><m>HK</m></h></idx>
+                  <idx><h>product (groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -5213,7 +5221,8 @@
               The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
             </p>
       
-            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem</title>          
+            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem</title>
+              <idx><h>second isomorphism theorem for groups</h></idx>    
               <statement>
                 <p>
                   Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. 
@@ -5249,6 +5258,7 @@
             </p>
             
             <theorem xml:id="thm-tit-group"><title>Third Isomorphism Theorem</title>     
+              <idx><h>third isomorphism theorem for groups</h></idx>
               <statement>
                 <p>
                   Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. 
@@ -5279,7 +5289,8 @@
               </proof>
             </theorem>
 
-            <theorem xml:id="thm-lit-group"><title>The Lattice Isomorphism Theorem</title>
+            <theorem xml:id="thm-lit-group"><title>Lattice Isomorphism Theorem</title>
+              <idx><h>lattice isomorphism theorem for groups</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. 
@@ -5513,6 +5524,7 @@
                     </li>
                   </ol>
                   <idx><h>group action</h></idx>
+                  <idx><h><m>G</m>-action</h></idx>
                 </p>
               </statement>
             </definition>
@@ -5537,8 +5549,7 @@
                     <p>
                       For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>.
                       <fn>And similarly for right multiplication, yet we do not speak of that here.</fn>
-                      <idx><h>left multiplication</h></idx>
-                      <idx><h>left regular action</h></idx>
+                      <idx><h>left multiplication action</h></idx>
                     </p>
                   </li>
 
@@ -5572,6 +5583,7 @@
             </p>
           
             <theorem xml:id="thm-permrep"><title>Permutation Representation</title>
+              <idx><h>permutation representation</h></idx>
               <statement>
                 <p>
                   Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
@@ -5581,7 +5593,6 @@
                     <li>
                       <p>
                         If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
-                        <notation><usage><m>\rho</m></usage><description>we will attempt to reserve <m>\rho</m> for the permutation representation homomorphism of a group action.</description></notation>
                       </p>
                     </li>
           
@@ -5757,6 +5768,7 @@
                           g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
                         </me>
                         This is also known as the <em>left regular action</em>
+                        <idx><h>left regular action</h></idx>
                       </p>
                     </li>
 
@@ -5908,7 +5920,7 @@
                   Let <m>G</m> be a group. 
                   Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m>.
                   Two subsets <m>S,S' \subseteq G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-                  <idx><h>conjugate</h></idx>         
+                  <idx><h>conjugate</h></idx>    
                 </p>
               </statement>
             </definition>
@@ -5917,8 +5929,8 @@
               <statement>
                 <p>
                   The <em>conjugacy class</em> of an element <m>x \in G</m> is <m>C_G(x) = \{gxg^{-1} \mid g \in G\}</m>.
-                  <notation><usage><m>C_G(x)</m></usage><description>the conjugacy class of the element <m>x\in G=\{gxg^{-1} \mid g \in G\}</m></description></notation>
-                  <idx><h>conjugacy class</h></idx>          
+                  <idx><h>conjugacy class</h></idx>  
+                  <idx><h><m>C_G(x)</m></h></idx>        
                 </p>
               </statement>
             </definition>
@@ -6085,8 +6097,8 @@
                   <me>
                     \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
                   </me>
-                  <notation><usage><m>\Orb_G(s)</m></usage><description>the orbit of an element <m>s</m></description></notation>          
                   <idx><h>orbit</h></idx>
+                  <idx><h><m>\Orb_G(s)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -6130,6 +6142,7 @@
                   Let <m>G</m> be a group acting on a set <m>S</m>. 
                   The <em>equivalence relation</em> on <m>S</m> induced by the action of <m>G</m>, written <m>\sim_G</m>, is defined by <m>s\sim_G s'</m> if and only if there is a <m>g \in G</m> such that <m>s'=g\cdot s</m>. 
                   The equivalence classes of <m>\sim_G</m> are the orbits.
+                  <idx><h>equivalence relation induced by a group action</h></idx>
                 </p>
               </statement>
             </definition>
@@ -6174,8 +6187,8 @@
                   <me>
                     \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
                   </me>
-                  <notation><usage><m>\Stab_G(s)</m></usage><description>the stabilizer of <m>s</m>.</description></notation> 
-                  <idx><h>stabilizer</h></idx>         
+                  <idx><h>stabilizer</h></idx>        
+                  <idx><h><m>\Stab_G(s)</m></h></idx> 
                 </p>
               </statement>
             </definition>
@@ -6200,6 +6213,7 @@
             </p>
       
             <theorem xml:id="thm-LOIS"><title>The Length of the Orbit is the Index of the Stabilizer (LOIS)</title>
+              <idx><h>LOIS</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
@@ -6235,6 +6249,7 @@
             </p>
       
             <theorem xml:id="thm-orbit-stabilizer"><title>Orbit-Stabilizer Theorem</title>
+              <idx><h>orbit-stabilizer theorem</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. 
@@ -6337,8 +6352,8 @@
                     Z_G(g):= \{g \in G \mid gx = xg\}
                   </me> 
                   is called the <em>centralizer</em> of <m>g</m> in <m>G</m> 
-                  <notation><usage><m>Z_G(g)</m></usage><description>the centralizer of an element <m>g\in G</m></description></notation>          
                   <idx><h>centralizer</h></idx>
+                  <idx><h><m>Z_G(g)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -6370,8 +6385,8 @@
                     N_G(S):= \{g \in G \mid gSg^{-1}=S\}
                   </me> 
                   is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
-                  <notation><usage><m>N_G(S)</m></usage><description>the normalizer of a set <m>S\sse G</m></description></notation>          
                   <idx><h>normalizer</h></idx>
+                  <idx><h><m>N_G(S)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -6458,7 +6473,8 @@
               </statement>
             </theorem>
       
-            <theorem xml:id="thm-class-eq"><title>Class Equation</title>        
+            <theorem xml:id="thm-class-eq"><title>Class Equation</title>   
+              <idx><h>class equation</h></idx>     
               <statement>
                 <p>
                   Let <m>G</m> be a finite group and let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m>. 
@@ -6620,6 +6636,7 @@
             </theorem>
 
             <theorem xml:id="thm-cauchy"><title>Cauchy's Theorem</title>
+              <idx><h>Cauchy's theorem</h></idx>
               <statement>
                 <p>
                   If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. 
@@ -6655,10 +6672,10 @@
       
                 <p>
                   We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
-                  <notation><usage><m>\Syl_p(G)</m></usage><description>the collection of all Sylow <m>p</m>-subgroups of <m>G</m></description></notation>
-                  <notation><usage><m>n_p</m></usage><description>the the number of Sylow <m>p</m>-subgroups</description></notation>
                   <idx><h>Sylow subgroup</h></idx>
                   <idx><h>Sylow <m>p</m>-subgroup</h></idx>
+                  <idx><h><m>\Syl_p(G)</m></h></idx>
+                  <idx><h><m>n_p</m></h></idx>
                 </p>
               </statement>
               
@@ -6747,7 +6764,8 @@
               </proof>
             </lemma>
       
-            <theorem xml:id="thm-sylow"><title>Sylow's Theorem</title>
+            <theorem xml:id="thm-sylow"><title>Sylow's Theorems</title>
+              <idx><h>Sylow's theorems</h></idx>
               <statement>
                 <p>
                   Assume <m>G</m> is a group of order <m>p^e m</m> where <m>p</m> is prime, <m>e \geq 0</m>, and <m>\operatorname{gcd}(p,m) = 1</m>.
@@ -7021,6 +7039,8 @@
             </example>
 
             <example xml:id="ex-no-order-12-simple"><title>No Simple Groups of Order <m>12</m> (Counting Elements)</title>
+              <idx><h>counting elements</h></idx>
+              <idx><h>element counting argument</h></idx>
               <statement>
                 <p>
                   Let us prove that no group or order <m>12</m> is simple. 
@@ -7062,6 +7082,7 @@
             </remark>
 
             <example xml:id="ex-no-order-80-simple"><title>No Simple Groups of Order <m>80</m> (Group Actions)</title>
+              <idx><h>group action argument</h></idx>
               <statement>
                 <p>
                   No group of order <m>80=5 \cdot 16</m> is simple.
@@ -7081,6 +7102,7 @@
             </example>
 
             <example xml:id="ex-no-order-90-simple"><title>No Simple Groups of Order <m>90</m> (Normalizers)</title>
+              <idx><h>normalizer argument</h></idx>
               <statement>
                 <p>
                   No group of order <m>90</m> is simple.
@@ -7556,7 +7578,7 @@
                     (h,k)(h',k') = (h\rho(k)(h'),kk').
                   </me> 
                   This group is denoted by <m>H \rtimes_\rho K</m>.
-                  <notation><usage><m>\rtimes</m></usage><description>Semidirect product</description></notation>
+                  <idx><h><m>\rtimes</m></h></idx>
                   <idx><h>semidirect product</h></idx>
                   <idx><h>external semidirect product</h></idx>
                 </p>
@@ -8138,7 +8160,7 @@
                   \phi([j]_m) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}})
                 </me> 
                 where <m>[j]_b</m> denote the class of an integer <m>j</m> in <m>\mathbb{Z}/b</m>.
-                <idx><h>Sunzi's Remainder Theorem for groups</h></idx>
+                <idx><h>Sunzi's remainder theorem for groups</h></idx>
               </p>
             </statement>
 
@@ -8149,7 +8171,7 @@
                 <me>
                   \psi(j) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}}).
                 </me> 
-                Clearly <m>m \in \operatorname{ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. 
+                We see <m>m \in \operatorname{ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. 
                 Conversely, if <m>\psi(n) = 0</m>, then <m>p_i^{e_i} \mid n</m> for all <m>i</m> and since <m>p_1^{e_1}, \dots, p_l^{e_l}</m> are pairwise relatively prime, it follows that <m>m \mid n</m>. 
                 This proves <m>\operatorname{ker}(\psi) = \langle m \rangle</m>. 
                 The claim follows by the <xref text="title" ref="thm-fit-group"/>.
@@ -8187,8 +8209,8 @@
           </p>
 
           <theorem xml:id="thm-ftfgag"><title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>
-            <idx><h>Fundamental Theorem of Finitely Generated Abelian Groups</h></idx>
-            <idx><h></h></idx>
+            <idx><h>fundamental theorem of finitely generated abelian groups</h></idx>
+            <idx><h>FTFGAG</h></idx>
             <statement>
               <p>
                 Let <m>G</m> be a finitely generated abelian group. 
@@ -11685,6 +11707,8 @@
                       </p>
                     </li>
                   </ol>
+                  <idx><h>module</h></idx>
+                  <idx><h><m>R</m>-module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -11751,19 +11775,19 @@
                 <p>
                   <ol>
                     <li>
-                    For the first, <m>0m = (0+0)m = 0m + 0m</m> and hence <m>0m = 0</m>.
+                      For the first, <m>0m = (0+0)m = 0m + 0m</m> and hence <m>0m = 0</m>.
                     </li>
       
                     <li>
-                    For the second, <m>0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm</m> and hence <m>0_Rm = 0_M</m> since <m>M</m> is an abelian group.
+                      For the second, <m>0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm</m> and hence <m>0_Rm = 0_M</m> since <m>M</m> is an abelian group.
                     </li>
       
                     <li>
-                    For the third, <m>m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M</m> (using the second) and hence <m>(-1)m</m> is the additive inverse of <m>m</m>.
+                      For the third, <m>m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M</m> (using the second) and hence <m>(-1)m</m> is the additive inverse of <m>m</m>.
                     </li>
       
                     <li>
-                    Finally, <m>(-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)</m> (using the fact that <m>(-1)r = -r</m> holds in any ring and the previous result).
+                      Finally, <m>(-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)</m> (using the fact that <m>(-1)r = -r</m> holds in any ring and the previous result).
                     </li>
                   </ol>
                 </p>
@@ -11775,6 +11799,7 @@
                 <ol>
                   <li>
                     For any ring <m>R</m>, the <em>trivial module</em> is <m>0=\{0\}</m> with <m>r0=0</m> for any <m>r\in R</m>.
+                    <idx><h>trivial module</h></idx>
                   </li>
       
                   <li>
@@ -11807,6 +11832,7 @@
                   \begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
                   r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
                 </me>
+                <idx><h>standard free module</h></idx>
               </p>
             </example>
 
@@ -11822,6 +11848,7 @@
                 <p>
                   Let <m>F</m> be a field. 
                   An <m>F</m>-vector space is a (left) <m>F</m>-module.
+                  <idx><h>vector space</h></idx>
                 </p>
               </statement>
             </definition>
@@ -11903,33 +11930,34 @@
                       </p>
                     </li>
                   </ul>
+                  <idx><h>restriction of scalars</h></idx>
                 </p>
               </statement>
 
-                <proof>
-                  <p>
-                    Let <m>x,y \in R</m> and <m>m,n \in M</m>. 
-                    One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. 
-                    In detail, 
-                    <me>
-                      (x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
-                    </me> 
-                    since <m>\phi</m> preserves addition, 
-                    <me>
-                      x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
-                    </me> 
-                    since <m>\phi</m> preserves multiplication, and 
-                    <me>
-                      1 \cdot m = \phi(1) m = 1_S m = m
-                    </me> 
-                    since <m>\phi</m> preserves multiplicative identities. 
-                    This gives three of the axioms. 
-                    The final also holds: 
-                    <me>
-                      x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
-                    </me>
-                  </p>
-                </proof>
+              <proof>
+                <p>
+                  Let <m>x,y \in R</m> and <m>m,n \in M</m>. 
+                  One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. 
+                  In detail, 
+                  <me>
+                    (x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
+                  </me> 
+                  since <m>\phi</m> preserves addition, 
+                  <me>
+                    x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
+                  </me> 
+                  since <m>\phi</m> preserves multiplication, and 
+                  <me>
+                    1 \cdot m = \phi(1) m = 1_S m = m
+                  </me> 
+                  since <m>\phi</m> preserves multiplicative identities. 
+                  This gives three of the axioms. 
+                  The final also holds: 
+                  <me>
+                    x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
+                  </me>
+                </p>
+              </proof>
             </theorem>
 
             <p>
@@ -11996,6 +12024,7 @@
                       </p>
                     </li>
                   </ol>
+                  <idx><h>submodule</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12023,12 +12052,13 @@
               </statement>
             </theorem>
 
-            <exercise>
+            <exercise><title>Simple Modules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
-                  An <m>R</m>-module <m>M</m> is simple if it has no nontrivial submodules. 
+                  An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
                   Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
+                  <idx><h>simple module</h></idx>
                 </p>
               </statement>
             </exercise>
@@ -12053,7 +12083,8 @@
             <definition xml:id="def-module-homomorphism"><title>Module Homomorphism</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. An <m>R</m>-module <em>homomorphism</em> from <m>M</m> to <m>N,</m> sometimes called an <m>R</m>-<em>map</em>, is a function <m>\varphi: M \to N</m> such that for all <m>r \in R</m> and <m>m,n \in M</m> we have 
+                  Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
+                  An <m>R</m>-module <em>homomorphism</em> from <m>M</m> to <m>N,</m> sometimes called an <m>R</m>-<em>map</em>, is a function <m>\varphi: M \to N</m> such that for all <m>r \in R</m> and <m>m,n \in M</m> we have 
                   <ol>
                     <li>
                       <p>
@@ -12067,6 +12098,9 @@
                       </p>
                     </li>
                   </ol>
+                  <idx><h>module homomorphism</h></idx>
+                  <idx><h><m>R</m>-module homomorphism</h></idx>
+                  <idx><h><m>R</m>-map</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12098,7 +12132,9 @@
             <definition xml:id="def-linear-transformation"><title>Linear Transformation</title>
               <statement>
                 <p>
-                  Let <m>F</m> be a field and let <m>M</m> and <m>N</m> be vector spaces over <m>F</m>. A <em>linear transformation</em> from <m>M</m> to <m>N</m> is an <m>F</m>-module homomorphism <m>h:M \to N</m>.
+                  Let <m>F</m> be a field and let <m>M</m> and <m>N</m> be vector spaces over <m>F</m>. 
+                  A <em>linear transformation</em> from <m>M</m> to <m>N</m> is an <m>F</m>-module homomorphism <m>h:M \to N</m>.
+                  <idx><h>linear transformation</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12128,6 +12164,8 @@
               <statement>
                 <p>
                   An <m>R</m>-module homomorphism <m>\varphi: M \to N</m> is an <m>R</m>-module <em>isomorphism</em> if there is another <m>R</m>-module homomorphism <m>\phi: N \to M</m> such that <m>\varphi \circ \phi = \id_M</m> and <m>\phi \circ \varphi = \id_N</m>.
+                  <idx><h>module isomorphism</h></idx>
+                  <idx><h><m>R</m>-module isomorphism</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12153,11 +12191,12 @@
               <statement>
                 <p>
                   The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(h) := \{m \in M \mid h(m) = 0_N\}</m>
+                  <idx><h>kernel (<m>R</m>-map)</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <exercise>
+            <exercise><title>Inclusion Map is <m>R</m>-map</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
@@ -12170,6 +12209,7 @@
               <statement>
                 <p>
                   The <term>cokernel</term> of an <m>R</m>-module homomorphism is the set 
+                  <idx><h>cokernel</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12215,6 +12255,9 @@
                   Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
                   Then <m>\Hom_R(M, N )</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>, and <m>\End_R(M)</m> denotes the set <m>\Hom_R(M, M)</m>. 
                   We call <m>\End(M)</m> the <term>endomorphism ring</term> of <m>M</m> , and elements of <m>\End(M)</m> are called <term>endomorphisms</term> of <m>M</m>.
+                  <idx><h><m>\End_R</m></h></idx>
+                  <idx><h><m>\Hom_R</m></h></idx>
+                  <idx><h>endomorphism</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12316,7 +12359,9 @@
                   The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be 
                   <me>
                     r \cdot (m + N) = rm + N
-                  </me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                  </me> 
+                  for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                  <idx><h>quotient module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12335,6 +12380,7 @@
                 <p>
                   Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
                   Define the canonical <em>quotient map</em> <m>\pi: M \to M/N</m> by <m>\pi(m) = m + N</m>.
+                  <idx><h>quotient map (modules)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12406,6 +12452,7 @@
                         Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. 
                         If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. 
                         In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
+                        <idx><h>UMP for quotient modules</h></idx>
                       </p>
                     </li>
 
@@ -12413,6 +12460,7 @@
                       <p>
                         Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. 
                         Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
+                        <idx><h>first isomorphism theorem for modules</h></idx>
                       </p>
                     </li>
 
@@ -12420,6 +12468,7 @@
                       <p>
                         Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. 
                         Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
+                        <idx><h>second isomorphism theorem for modules</h></idx>
                       </p>
                     </li>
 
@@ -12427,6 +12476,7 @@
                       <p>
                         Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. 
                         Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
+                        <idx><h>third isomorphism theorem for modules</h></idx>
                       </p>
                     </li>
 
@@ -12439,6 +12489,7 @@
                         </me>
                         defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. 
                         Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
+                        <idx><h>lattice isomorphism theorem for modules</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -12527,6 +12578,8 @@
                   Let <m>M</m> be an <m>R</m>-module and <m>m_1, \dots, m_n \in M</m>. 
                   An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>. 
                   (If <m>n = 0</m>, this gives the empty sum which is interpreted to give <m>0_M</m>.)
+                  <idx><h>linear combination</h></idx>
+                  <idx><h><m>R</m>-linear combination</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12543,6 +12596,7 @@
 
                 <p>
                   We say <m>M</m> is <term>generated</term> by <m>A</m> if <m>M = RA</m>.
+                  <idx><h>generated module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12569,6 +12623,7 @@
               <statement>
                 <p>
                   If <m>M = R \cdot a</m> for some single element <m>a \in M</m>, we say that <m>M</m> is <em>cyclic</em>.
+                  <idx><h>cyclic module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12596,7 +12651,13 @@
 
               <solution>
                 <p>
-                  Say <m>M</m> is cyclic and <m>m \in M</m> is a generator of <m>M</m>, so that <m>M = \{rm \mid r \in R\}</m>. Define <m>f: R \to M</m> to be the unique <m>R</m>-map with <m>f(1) = m</m>. Here I am applying the UMP for bases, using that <m>\{1\}</m> is a basis of <m>R</m> as a left <m>R</m>-modules. More explicitly, <me>f(r) = f(r\cdot 1) = r f(1) = rm</me> for all <m>r \in R</m>. Then <m>f</m> is onto, since <m>m</m> generates <m>M</m>. Its kernel is a left ideal <m>I</m> of <m>R</m>, since submodules of <m>R</m> are the same thing as left ideals. By the FIT, there is an isomorphism <m>R/I \xra{\cong} M</m> sending <m>r + I</m> to <m>rm</m>.
+                  Say <m>M</m> is cyclic and <m>m \in M</m> is a generator of <m>M</m>, so that <m>M = \{rm \mid r \in R\}</m>. 
+                  Define <m>f: R \to M</m> to be the unique <m>R</m>-map with <m>f(1) = m</m>. 
+                  Here I am applying the UMP for bases, using that <m>\{1\}</m> is a basis of <m>R</m> as a left <m>R</m>-modules. 
+                  More explicitly, <me>f(r) = f(r\cdot 1) = r f(1) = rm</me> for all <m>r \in R</m>. 
+                  Then <m>f</m> is onto, since <m>m</m> generates <m>M</m>. 
+                  Its kernel is a left ideal <m>I</m> of <m>R</m>, since submodules of <m>R</m> are the same thing as left ideals. 
+                  By the FIT, there is an isomorphism <m>R/I \xra{\cong} M</m> sending <m>r + I</m> to <m>rm</m>.
                 </p>
               </solution>
             </exercise>
@@ -12605,6 +12666,7 @@
               <statement>
                 <p>
                   A module <m>M</m> is <em>finitely generated</em> if there exists some finite subset <m>A</m> of <m>M</m> such that <m>M = R \cdot A</m>.
+                  <idx><h>finitely generated module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12674,6 +12736,8 @@
                   Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. 
                   The set <m>A</m> is <em>linearly independent</em> if whenever <m>r_1,\ldots,r_n \in R</m> and <m>a_1,\ldots ,a_n</m> are distinct elements of <m>A</m> satisfying <m>r_1a_1 + \dots + r_na_n = 0</m>, then <m>r_1 = \dots = r_n = 0</m>. 
                   Otherwise <m>A</m> is <em>linearly dependent</em>.
+                  <idx><h>linearly independent</h></idx>
+                  <idx><h>linearly dependent</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12730,6 +12794,8 @@
                 <p>
                   A subset <m>A</m> of an <m>R</m>-module <m>M</m> is a <em>basis</em> of <m>M</m>, if the set <m>A</m> generates <m>M</m> and is linearly independent.
                   An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
+                  <idx><h>basis</h></idx>
+                  <idx><h>free module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12739,6 +12805,7 @@
                 <p>
                   Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
                   The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
+                  <idx><h>rank (modules)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12756,7 +12823,7 @@
                   <li>
                     <p>
                       <m>R</m> is free since <m>\{1\}</m> is a basis for <m>R</m>. 
-                      It clearly generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
+                      It generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
                     </p>
                   </li>
 
@@ -12887,6 +12954,7 @@
             </example>
 
             <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
+              <idx><h>UMP for free <m>R</m>-modules</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a ring, let <m>M</m> be a free <m>R</m>-module with basis <m>B</m>, let <m>N</m> be an <m>R</m>-module, and let <m>j: B \to N</m> be any function. 
@@ -13086,7 +13154,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-vectors"><title>Vector Spaces and Linear Transformations</title>
+      <chapter xml:id="ch-vector"><title>Vector Spaces and Linear Transformations</title>
 
         <section xml:id="sec-vecbasis"><title>Dimension</title>
 
@@ -13110,6 +13178,7 @@
                     \Span(A)=\left\{\sum_{i=1}^n c_ia_i \mid n\geq 0, c_i\in F, a_{i\in}A\right\}.
                   </me>
                   As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+                  <idx><h>span</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13198,7 +13267,6 @@
             </theorem>
 
             <corollary xml:id="cor-every-vector-space-has-a-basis"><title>Every Vector Space has a Basis</title>
-
               <statement>
                 <p>
                   Every <m>F</m>-vector space <m>V</m> has a basis. 
@@ -13208,7 +13276,8 @@
 
               <proof>
                 <p>
-                  For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
+                  For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. 
+                  For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
                 </p>
               </proof>
             </corollary>
@@ -13256,6 +13325,7 @@
             </p>
 
             <lemma xml:id="lem-exchange-lemma"><title>Exchange Lemma</title>
+              <idx><h>exchange lemma</h></idx>
               <statement>
                 <p>
                   Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. 
@@ -13276,17 +13346,16 @@
     
                 <p>
                   Since <m>B''</m> is a basis, there is a (unique) equation of the form 
-
                   <me>
                     w_{k+1} = \sum_{i=1}^n a_i u_i
                   </me> 
-
-                  with <m>u_i \in B''</m> and <m>a_i \ne 0</m>. Now, there must be at least one <m>u_i</m> that is not in <m>\{w_1, \dots, w_k\}</m>, for otherwise we would have <m>w_{k+1} \in \Span( w_1, \dots, w_k)</m>, contrary to <m>C</m> being linearly independent. Let <m>v_{k+1} = u_i</m> for such an <m>i</m>. Then by the sublemma
-
+                  with <m>u_i \in B''</m> and <m>a_i \ne 0</m>. 
+                  Now, there must be at least one <m>u_i</m> that is not in <m>\{w_1, \dots, w_k\}</m>, for otherwise we would have <m>w_{k+1} \in \Span( w_1, \dots, w_k)</m>, contrary to <m>C</m> being linearly independent. 
+                  Let <m>v_{k+1} = u_i</m> for such an <m>i</m>. 
+                  Then by the sublemma
                   <me>
                     (B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
                   </me> 
-                  
                   is a basis of <m>V</m>.
                 </p>
               </proof>
@@ -13301,18 +13370,26 @@
             <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
               <statement>
                 <p>
-                  The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. 
-                  This is the same as the rank of <m>V</m> as an <m>F</m>-module.
+                  The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases.
                   A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
+                  <idx><h>dimension (vector space)</h></idx>
+                  <idx><h>finite dimensional (vector space)</h></idx>
                 </p>
               </statement>
             </definition>
+
+            <remark>
+              <p>
+                This is the same as the rank of <m>V</m> as an <m>F</m>-module.
+              </p>
+            </remark>
 
             <p>
               But what if two bases of <m>V</m> have different cardinalities? I'm <em>so</em> glad you asked.
             </p>
 
             <theorem xml:id="thm-dimension"><title>Dimension Theorem</title>
+              <idx><h>dimension theorem</h></idx>
               <statement>
                 <p>
                   Any two bases of the same vector space have the same dimension.
@@ -13353,15 +13430,22 @@
               </p>
     
               <p>
-                It is not hard to see <m>V</m> is a <m>\R</m>-vector space. It can be identified with the collection of all sequences <m>\{a_n\}</m> of real numbers. One might be interested in a basis for this vector space. At first glance the most obvious choice would be <m>E=\{e_1,e_2,\ldots\}</m>, where <m>e_i</m> is the sequence with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s everywhere else.
+                It is not hard to see <m>V</m> is a <m>\R</m>-vector space. 
+                It can be identified with the collection of all sequences <m>\{a_n\}</m> of real numbers. 
+                One might be interested in a basis for this vector space. 
+                At first glance the most obvious choice would be <m>E=\{e_1,e_2,\ldots\}</m>, where <m>e_i</m> is the sequence with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s everywhere else.
               </p>
     
               <p>
-                However, this set does not span <m>V</m> as <m>v = (1,1,\ldots)</m> can not be represented as a finite linear combination of these elements. (It turns out that <m>E</m> is the basis for the direct sum <m>\bigoplus_{i\in \N}\R</m>, which may be identified with all sequences having only a finite number of non-zero terms.)
+                However, this set does not span <m>V</m> as <m>v = (1,1,\ldots)</m> can not be represented as a finite linear combination of these elements. 
+                (It turns out that <m>E</m> is the basis for the direct sum <m>\bigoplus_{i\in \N}\R</m>, which may be identified with all sequences having only a finite number of non-zero terms.)
               </p>
     
               <p>
-                Now, since we know since <m>v</m> is not in <m>\Span(E)</m>, we have that <m>E \cup \{v\}</m> is a linearly independent set. However, this does not span either as <m>(1, 2, 3, 4, \dots)</m> is not in the span of this set. We know that <m>V</m> has a basis, but it can be shown that no countable collection of vectors forms a basis for this space, in fact <m>\dim_\R \R^\N =|\R|</m>. An explicit basis of this vector space is impossible to describe.
+                Now, since we know since <m>v</m> is not in <m>\Span(E)</m>, we have that <m>E \cup \{v\}</m> is a linearly independent set.
+                However, this does not span either as <m>(1, 2, 3, 4, \dots)</m> is not in the span of this set. 
+                We know that <m>V</m> has a basis, but it can be shown that no countable collection of vectors forms a basis for this space, in fact <m>\dim_\R \R^\N =|\R|</m>. 
+                An explicit basis of this vector space is impossible to describe.
               </p>
 
             </example>
@@ -13380,6 +13464,7 @@
             </blockquote>
 
             <theorem xml:id="thm-fg-vs-classification"><title>Classification Theorem</title>
+              <idx><h>classification of finitely generated vector spaces</h></idx>
               <statement>
                 <p>
                   Let <m>F</m> be a field.
@@ -13524,6 +13609,8 @@
                 <p>
                   Let <m>f: V \to W</m> be a linear transformation. The <em>nullspace</em> of <m>f</m> is <m>\ker(f)</m>.
                   The <em>nullity</em> of <m>f</m> is <m>\dim(\ker(f))</m>.
+                  <idx><h>nullspace</h></idx>
+                  <idx><h>nullity</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13533,6 +13620,7 @@
             </p>
 
             <theorem xml:id="thm-rank-nullity"><title>Rank-Nullity Theorem</title>
+              <idx><h>rank-nullity theorem</h></idx>
               <statement>
                 <p>
                   Let <m>F</m> be a field and <m>f: V \to W</m> an <m>F</m>-linear transformation between <m>F</m>-vector spaces <m>V</m> and <m>W</m>, and assume <m>V</m> is finite dimensional. 
@@ -13550,7 +13638,7 @@
               <proof>
                 <p>
                   By the <xref text="title" ref="fit-module"/> we have <m>V/\ker(f)\cong\im(f)</m>, thus <m>\dim\left(V/\ker(f)\right)=\dim(\im(f))</m>. 
-                  By the previous theorem we have 
+                  By <xref ref="thm-dimension-and-subspaces"/> we have
                   <me>
                     \dim(V)=\dim(\ker(f)) \dim\left(V/\ker(f)\right) =\dim(\ker(V))+\dim(\im(f)).
                   </me>
@@ -13608,11 +13696,13 @@
                   </me>
                   is said to <em>represent</em> the homomorphism <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
                   In the case that <m>V</m> and <m>W</m> are <m>F</m>-vector spaces, the matrix <m>[f]_{B}^{C}</m> is called the <em>matrix of the linear transformation</em> <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
+                  <idx><h>matrix of a linear transformation</h></idx>
+                  <idx><h>matrix of a free module homomorphism</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <example xml:id="exe-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
+            <example xml:id="ex-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
               <p>
                 If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence 
                 <me>
@@ -13621,7 +13711,7 @@
               </p>
             </example>
 
-            <example xml:id="exe-r-vector-space-of-polynomials-p_n"><title>Matrix Representing the Derivative Operator</title>
+            <example xml:id="ex-r-vector-space-of-polynomials-p_n"><title>Matrix Representing the Derivative Operator</title>
               <p>
                 Let <m>P_{3}</m> denote the the <m>F</m>-vector space of polynomials of degree at most <m>3</m> (including the zero polynomial) and consider the linear transformation <m>d: P_{3} \rightarrow P_{3}</m> given by taking the derivative <m>d(f)=f^{\prime}</m>. 
                 Let <m>B=\left\{1, x, x^{2}, x^{3}\right\}</m>. 
@@ -13654,7 +13744,8 @@
                 <p>
                   Let <m>V</m> be a finitely generated free module over a commutative ring <m>R</m>, and let <m>B</m> and <m>C</m> be bases of <m>V</m>. 
                   Let <m>\operatorname{id}_{V}</m> be the identity map on <m>V</m>. 
-                  Then <m>\left[\operatorname{id}_{V}\right]_{B}^{C}</m> is a matrix called the change of basis matrix from <m>B</m> to <m>C</m>.
+                  Then <m>\left[\operatorname{id}_{V}\right]_{B}^{C}</m> is a matrix called the <em>change of basis matrix</em> from <m>B</m> to <m>C</m>.
+                  <idx><h>change of basis matrix</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13714,6 +13805,8 @@
                   Let <m>V</m> be a finitely generated free module over a commutative ring <m>R</m>. 
                   Two <m>R</m>-module homomorphisms <m>f, g: V \rightarrow V</m> are <em>similar</em> if there is a bijective linear transformation <m>h: V \rightarrow V</m> such that <m>g=h \circ f \circ h^{-1}</m>. 
                   Two <m>n \times n</m> matrices <m>A</m> and <m>B</m> with entries in <m>R</m> are <em>similar</em> if there is an invertible <m>n \times n</m> matrix <m>P</m> such that <m>B=P A P^{-1}</m>.
+                  <idx><h>similar matrices</h></idx>
+                  <idx><h>similar <m>R</m>-module homomorphisms</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13766,17 +13859,18 @@
             <definition xml:id="def-elementary-basis-change-operations"><title>Elementary Basis Change Operations</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>M</m> be a free <m>R</m>-module of finite rank <m>n</m>, and let <m>B = \{b_1,\dots ,b_n\}</m> be an ordered basis for <m>M</m>. An <em>elementary basis change operation</em> on the basis <m>B</m> is one of the following three types of operations: 
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>M</m> be a free <m>R</m>-module of finite rank <m>n</m>, and let <m>B = \{b_1,\dots ,b_n\}</m> be an ordered basis for <m>M</m>. 
+                  An <em>elementary basis change operation</em> on the basis <m>B</m> is one of the following three types of operations: 
                   <ol>
                     <li>
                       <p>
-                        (Type I) Replacing <m>b_i</m> by <m>b_i + rb_j</m> for some <m>i \neq j</m> and some <m>r\in R</m>. 
+                        (Type I) Replacing <m>b_i</m> by <m>b_i + rb_j</m> for some <m>i \neq j</m> and some <m>r\in R</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        (Type II) Replacing <m>b_i</m> by <m>ub_i</m> for some <m>i</m> and some unit <m>u</m> of <m>R</m>, 
+                        (Type II) Replacing <m>b_i</m> by <m>ub_i</m> for some <m>i</m> and some unit <m>u</m> of <m>R</m>,
                       </p>
                     </li>
 
@@ -13786,6 +13880,7 @@
                       </p>
                     </li>
                   </ol>
+                  <idx><h>elementary basis change operation</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13794,6 +13889,8 @@
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary row (column) operation</em> on a matrix <m>A \in \Mat_{m,n}(R)</m> is one of the following three types of operations: 
+                  <idx><h>elementary row operation</h></idx>
+                  <idx><h>elementary column operation</h></idx>
                   <ol>
                     <li>
                       <p>
@@ -13822,7 +13919,7 @@
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary matrix</em> over <m>R</m> is an <m>n \times n</m> matrix obtained from <m>I_n</m> by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: 
-
+                  <idx><h>elementary matrix</h></idx>
                   <ol>
                     <li>
                       <p>

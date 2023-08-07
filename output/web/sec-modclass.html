@@ -715,7 +715,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-vectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Vector Spaces and Linear Transformations</span></a></div>
+<div class="toc-item"><a href="ch-vector.html" class="internal"><span class="codenumber">12</span> <span class="title">Vector Spaces and Linear Transformations</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Dimension</span></a></div>
@@ -861,17 +861,17 @@ M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))
 </div>
 <div class="para">with <span class="process-math">\(r, s, f_1, \dots, f_s\)</span> as in the Corollary. But <span class="process-math">\(r\)</span> must be <span class="process-math">\(0\)</span> since <span class="process-math">\(k[x]\)</span> is infinite dimensional as a <span class="process-math">\(k\)</span>-vector space. Moreover, <span class="process-math">\(\dim_F k[x]/g = \deg(g)\)</span> for any non-zero polynomial <span class="process-math">\(g\text{.}\)</span> So we must have <span class="process-math">\(\sum_i \deg(f_i) = 4\text{.}\)</span> There are five possibilities:</div>
 <ol class="decimal">
-<li id="li-561"><div class="para" id="p-1753">
+<li id="li-560"><div class="para" id="p-1753">
 <span class="process-math">\(s = 1\)</span> and <span class="process-math">\(f_1\)</span> is monic of degree <span class="process-math">\(4\text{.}\)</span>
 </div></li>
-<li id="li-562"><div class="para" id="p-1754">
+<li id="li-561"><div class="para" id="p-1754">
 <span class="process-math">\(s = 2\text{,}\)</span> <span class="process-math">\(f_1\)</span> is linear, <span class="process-math">\(f_2\)</span> is cubic and <span class="process-math">\(f_1 \mid f_2\text{.}\)</span> (So if <span class="process-math">\(f_1 = x-a\text{,}\)</span> then <span class="process-math">\(a\)</span> must be a root of <span class="process-math">\(f_2\)</span>).</div></li>
-<li id="li-563"><div class="para" id="p-1755">
+<li id="li-562"><div class="para" id="p-1755">
 <span class="process-math">\(s = 2\text{,}\)</span> <span class="process-math">\(f_1 = f_2\)</span> is quadratic.</div></li>
-<li id="li-564"><div class="para" id="p-1756">
+<li id="li-563"><div class="para" id="p-1756">
 <span class="process-math">\(s = 3\text{,}\)</span> <span class="process-math">\(f_1 = f_2\)</span> is linear and <span class="process-math">\(f_3\)</span> is quadratic with <span class="process-math">\(f_1 \mid f_3\text{.}\)</span>
 </div></li>
-<li id="li-565"><div class="para" id="p-1757">
+<li id="li-564"><div class="para" id="p-1757">
 <span class="process-math">\(s = 4\text{,}\)</span> <span class="process-math">\(f_1 = f_2 = f_3 = f_4\)</span> is linear.</div></li>
 </ol>
 <div class="para">Now suppose <span class="process-math">\(k = \Z/p\text{.}\)</span> What is the total number of possibilities? For case <span class="process-math">\(1\text{,}\)</span> there are <span class="process-math">\(p^4\)</span> monic polynomial of degree <span class="process-math">\(4\text{.}\)</span> For case <span class="process-math">\(2\text{,}\)</span> there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1\)</span> and <span class="process-math">\(p^2\)</span> choices for <span class="process-math">\(f_2\)</span> since <span class="process-math">\(f_2 = f_1 \cdot q\)</span> for a unique quadratic <span class="process-math">\(q\text{,}\)</span> for a total of <span class="process-math">\(p^3\)</span> possibilities. For case <span class="process-math">\(3\)</span> there are <span class="process-math">\(p^2\)</span> choices. For case <span class="process-math">\(4\)</span> there are <span class="process-math">\(p^2\)</span> choices since there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1 = f_2\)</span> and <span class="process-math">\(f_3 = f_1 \cdot l\)</span> for a unique linear <span class="process-math">\(l\text{.}\)</span> For case <span class="process-math">\(5\text{,}\)</span> there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1\text{.}\)</span> In total there are <span class="process-math">\(2p + 2p^2 + p^4\)</span> such modules up to isomorphism.</div>
@@ -1000,10 +1000,10 @@ M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x +
 </div>
 <div class="para">first when</div>
 <ol class="decimal">
-<li id="li-566"><div class="para" id="p-1772"><span class="process-math">\(k = \Z/2\text{,}\)</span></div></li>
-<li id="li-567"><div class="para" id="p-1773">
+<li id="li-565"><div class="para" id="p-1772"><span class="process-math">\(k = \Z/2\text{,}\)</span></div></li>
+<li id="li-566"><div class="para" id="p-1773">
 <span class="process-math">\(k = \R\)</span> and</div></li>
-<li id="li-568"><div class="para" id="p-1774"><span class="process-math">\(k = \C\text{.}\)</span></div></li>
+<li id="li-567"><div class="para" id="p-1774"><span class="process-math">\(k = \C\text{.}\)</span></div></li>
 </ol>
 </div></article></section></div>
 <div class="ptx-content-footer">

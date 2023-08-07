@@ -715,7 +715,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-vectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Vector Spaces and Linear Transformations</span></a></div>
+<div class="toc-item"><a href="ch-vector.html" class="internal"><span class="codenumber">12</span> <span class="title">Vector Spaces and Linear Transformations</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Dimension</span></a></div>
@@ -874,7 +874,7 @@ a &amp; 0 \\
 </div>
 <div class="para">By Lemma  we have <span class="process-math">\(\gcd(D) = \gcd(A)\text{,}\)</span> and thus there is some element <span class="process-math">\(e\)</span> of <span class="process-math">\(E\)</span> such that <span class="process-math">\(a \nmid e\)</span> (since we are assuming <span class="process-math">\(a\)</span> is not the gcd of <span class="process-math">\(A\)</span>). A suitable row operation puts <span class="process-math">\(e\)</span> into row one without affecting <span class="process-math">\(a\text{,}\)</span> and we are back to the previously solved Case I.</div>
 </div></article></div>
-<article class="remark remark-like" id="remark-64"><h3 class="heading">
+<article class="remark remark-like" id="remark-65"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">13.14</span><span class="period">.</span>
 </h3>
 <div class="para" id="p-1733">Note that some of the diagonal entries could be <span class="process-math">\(0\text{.}\)</span> Recall <span class="process-math">\(s \mid 0\)</span> for all <span class="process-math">\(s \in R\)</span> (including <span class="process-math">\(s = 0\)</span>), and <span class="process-math">\(0\)</span> is the only element that divides <span class="process-math">\(0\text{.}\)</span> So, the “tail'' end of the sequence could be all <span class="process-math">\(0\)</span>'s, and indeed if <span class="process-math">\(s_{i,i} = 0\)</span> for some <span class="process-math">\(i\)</span> then all subsequent diagonal entries must be <span class="process-math">\(0\text{.}\)</span>
@@ -916,7 +916,7 @@ S=\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 &amp; 0 \\0 &amp;
 </div>
 <div class="para">Conclude that the module presented by <span class="process-math">\(A\)</span> is isomorphic to <span class="process-math">\(\Z/6\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="remark-65"><h3 class="heading">
+</div></article><article class="remark remark-like" id="remark-66"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">13.18</span><span class="period">.</span>
 </h3>
 <div class="para" id="p-1739">A version of the SNF Theorem and its Corollary are valid for PIDs: If <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{,}\)</span> there there exist invertible matrices <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> such that <span class="process-math">\(PAQ\)</span> has the form <span class="process-math">\(S\)</span> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.</div> <div class="para" id="p-1740">For Euclidean domains, <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.</div></article><article class="lemma theorem-like" id="lem-gcd-of-a-matrix-in-pid"><h3 class="heading">
@@ -941,7 +941,7 @@ d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_
 </div>
 <div class="para">In particular, the SNF of a matrix is unique up to associates.</div>
 </div></article><article class="hiddenproof" id="proof-110"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-110"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-110"><article class="hiddenproof"><div class="para" id="p-1745">Recall that for a PID <span class="process-math">\(R\text{,}\)</span> the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma  implies that <span class="process-math">\(\gcd_k(A) = \gcd_k(S)\)</span> for all <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(S\)</span> is diagonal, the only non-zero minors of <span class="process-math">\(S\)</span> are those given by indices <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq m\)</span> and<span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq m\)</span> for which <span class="process-math">\(i_t = j_t\)</span> for all <span class="process-math">\(1 \leq t \leq k\text{,}\)</span> and moreover such a minor is equal to <span class="process-math">\(d_{i_1} \cdots d_{i_k}\text{.}\)</span> Since <span class="process-math">\(d_l \mid d_{l+1}\)</span> for all <span class="process-math">\(l\text{,}\)</span> it follows that <span class="process-math">\(d_{1} \cdots d_k\)</span> divides <span class="process-math">\(d_{i_1} \cdots d_{i_k}\)</span> for all <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq n\text{.}\)</span> Thus <span class="process-math">\(\gcd_k(S) = d_1 \cdots d_k\text{,}\)</span> for each <span class="process-math">\(k\text{,}\)</span> and hence <span class="process-math">\(d_k = \gcd_k(S)/\gcd_{k-1}(S)\)</span> as claimed.</div></article></div>
-<article class="remark remark-like" id="remark-66"><h3 class="heading">
+<article class="remark remark-like" id="remark-67"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">13.23</span><span class="period">.</span>
 </h3>
 <div class="para" id="p-1746">So, another way of finding the SNF of a matrix <span class="process-math">\(A\)</span> with entries in a Euclidean domain is to calculate <span class="process-math">\(\gcd_k(A)\)</span> for all <span class="process-math">\(k\text{.}\)</span> This is not practical except in very special cases.</div></article></section></div>

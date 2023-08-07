@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">If <span class="process-math">\(p \mid |Z(G)|\text{,}\)</span> then by <a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 5.4: Cauchy's Theorem">Cauchy's Theorem</a>, there is an element <span class="process-math">\(z \in Z(G)\)</span> of order <span class="process-math">\(p\text{.}\)</span> Set <span class="process-math">\(N = \langle z \rangle\text{.}\)</span> Since <span class="process-math">\(z \in Z(G)\text{,}\)</span> we have <span class="process-math">\(N \unlhd G\text{.}\)</span> Since <span class="process-math">\(|G/N| = p^{e-1}m\text{,}\)</span> by induction <span class="process-math">\(G/N\)</span> has a subgroup of order <span class="process-math">\(p^{e-1}\)</span> (i.e. of index <span class="process-math">\(m\)</span>). By <a href="" class="xref" data-knowl="./knowl/thm-lit-group.html" title="Theorem 3.56: The Lattice Isomorphism Theorem">The Lattice Isomorphism Theorem</a>, this subgroup corresponds to a subgroup of <span class="process-math">\(G\)</span> of index <span class="process-math">\(m\text{,}\)</span> hence of order <span class="process-math">\(p^e\text{.}\)</span>
+<div class="para logical">
+<div class="para">For the second case, assume <span class="process-math">\(p \nmid |Z(G)|\)</span> and consider the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.43: Class Equation">Class Equation</a> for <span class="process-math">\(G\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_{i=1}^k [G: C_G(g_i)]
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(g_1, \dots, g_k\)</span> are a complete and non-redundant list of non-central conjugacy class representatives. Since <span class="process-math">\(p \nmid |Z(G)|\)</span> and <span class="process-math">\(p \mid |G|\text{,}\)</span> we must have <span class="process-math">\(p \nmid [G:C_G(g_i)]\)</span> for at least one <span class="process-math">\(i\text{.}\)</span> For this <span class="process-math">\(i\text{,}\)</span> we have <span class="process-math">\(|C_G(g_i)|= p^e j\)</span> where <span class="process-math">\(p \nmid j\text{.}\)</span> Since <span class="process-math">\(g_i\)</span> is not central, <span class="process-math">\(|C_G(g_i)| &lt; |G|\)</span> and hence, by induction, <span class="process-math">\(C_G(g_i)\)</span> contains a subgroup of order <span class="process-math">\(p^e\text{.}\)</span> But this subgroup is also a subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-p-groups.html#p-835" class="internal">in-context</a></span>
 </body>
