@@ -15741,6 +15741,15 @@
           </subsection>
 
           <subsection xml:id="subsec-field-ext-degree"><title>Degree of a Field Extension</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  I may not have a degree, but I certainly got an education.
+                </q>
+              </p>
+              <attribution>Jodi Picoult</attribution>
+            </blockquote>
   
             <definition xml:id="def-degree-field-extension"><title>Degree of a Field Extension</title>
               <statement>
@@ -15834,6 +15843,15 @@
           </subsection>
 
           <subsection xml:id="subsec-simple-gen-ext"><title>Simple and Generated Extensions</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  It's not easy, but it's simple.
+                </q>
+              </p>
+              <attribution>Eric Thomas</attribution>
+            </blockquote>
     
             <definition xml:id="def-simple-extension"><title>Simple Extension, Primitive Element</title>
               <statement>
@@ -15908,6 +15926,15 @@
           </subsection>
 
           <subsection xml:id="subsec-unique-ext"><title>Uniqueness of Simple Extensions</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Feeling unique is no indication of uniqueness.
+                </q>
+              </p>
+              <attribution>Douglas Coupland</attribution>
+            </blockquote>
 
             <p>
               Next we will show that if <m>\alpha</m> is a root of a given polynomial <m>p(x) \in F[x]</m>, then <m>F(\alpha)</m> is determined by <m>p(x)</m> up to isomorphism.
@@ -16024,1215 +16051,1257 @@
         </section>
   
         <section xml:id="sec-algebraic"><title>Algebraic Extensions</title>
-  
-          <definition xml:id="def-algebraic-element"><title>Algebraic Element</title>
-            <statement>
-              <p>
-                For a field extension <m>F \subseteq L</m> and <m>\a \in L</m>, we say <m>\a</m> is <em>algebraic</em> over <m>F</m> if <m>f(\a) = 0</m> for some non-zero polynomial <m>f(x) \in F[x]</m>. 
-                Otherwise, <m>\a</m> is <em>transcendental</em> over <m>F</m>.
-                <idx><h>algebraic element</h></idx>
-                <idx><h>transcendental element</h></idx>
-              </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-i-algebraic-over-r">
-            <p>
-              <m>i \in \C</m> is algebraic over <m>\R</m>. 
-              Indeed, every element of <m>\C</m> is algebraic over <m>\R</m>. 
-              (E.g., <m>z = a + bi</m> is a root of <m>x^2 -2ax +a^2 + b^2</m>.) 
-              <m>e^{2 \pi i/n} \in \C</m> ia algebraic over <m>\Q</m>. 
-              So is <m>\sqrt{m}</m> for any <m>m \in \Z</m>. 
-              The numbers <m>\pi</m> and <m>e</m> of <m>\R</m> are transcendental over <m>\Q</m>; these are deep facts.
-            </p>
-          </example>
-  
-          <theorem xml:id="thm-properties-of-algebraic-elements"><title>Properties of Algebraic Elements</title>
-            <statement>
-              <p>
-                Suppose <m>F \subseteq L</m> is a field extension and <m>\a \in L</m>. 
-                Define <me>I := \{f(x) \in F[x] \mid f(\a) = 0\},</me> a subset of <m>F[x]</m>.
-                <ol>
-                  <li>
-                    The subset <m>I</m> is an ideal of <m>F[x]</m>.
-                  </li>
 
-                  <li>
-                    <m>I = 0</m> if and only if <m>\a</m> is transcendental over <m>F</m>; so <m>I\neq 0</m> if and only if <m>\a</m> is algebraic over <m>F</m>.
-                  </li>
+          <subsection xml:id="subsec-algebraic-elements"><title>Algebraic Elements</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  People aren't trees, so it is false when they speak of roots.
+                </q>
+              </p>
+              <attribution>Tom Robbins</attribution>
+            </blockquote>
+  
+            <definition xml:id="def-algebraic-element"><title>Algebraic Element</title>
+              <statement>
+                <p>
+                  For a field extension <m>F \subseteq L</m> and <m>\a \in L</m>, we say <m>\a</m> is <em>algebraic</em> over <m>F</m> if <m>f(\a) = 0</m> for some non-zero polynomial <m>f(x) \in F[x]</m>. 
+                  Otherwise, <m>\a</m> is <em>transcendental</em> over <m>F</m>.
+                  <idx><h>algebraic element</h></idx>
+                  <idx><h>transcendental element</h></idx>
+                </p>
+              </statement>
+            </definition>
     
-                  <li>
-                    Assume <m>\a</m> is algebraic over <m>F</m>.
-                    <ul>
-                      <li>
-                        The unique monic generator of <m>I</m>, which we will write as <m>m_{\a, F}(x)</m>, is irreducible (and hence <m>I</m> is a prime ideal).
-                      </li>
-          
-                      <li>
-                        There is a unique isomorphism of fields 
-                        <me>
-                          F[x]/(m_{\a, F}(x)) \cong F(\a)
-                        </me>
-                        sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>.
-                      </li>
-          
-                      <li>
-                        <m>F[\a] = F(\a)</m> and in particular <m>F[\a]</m> is a field.
-                      </li>
-                    </ul>
-                  </li>
-          
-                  <li>
-                    <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. 
-                    In this case, 
-                    <me>
-                      [F(\a): F] = \deg(m_{\a, F}(x)).
-                    </me>
-                  </li>
+            <example xml:id="exe-i-algebraic-over-r">
+              <p>
+                <m>i \in \C</m> is algebraic over <m>\R</m>. 
+                Indeed, every element of <m>\C</m> is algebraic over <m>\R</m>. 
+                (E.g., <m>z = a + bi</m> is a root of <m>x^2 -2ax +a^2 + b^2</m>.) 
+                <m>e^{2 \pi i/n} \in \C</m> ia algebraic over <m>\Q</m>. 
+                So is <m>\sqrt{m}</m> for any <m>m \in \Z</m>. 
+                The numbers <m>\pi</m> and <m>e</m> of <m>\R</m> are transcendental over <m>\Q</m>; these are deep facts.
+              </p>
+            </example>
+    
+            <theorem xml:id="thm-properties-of-algebraic-elements"><title>Properties of Algebraic Elements</title>
+              <statement>
+                <p>
+                  Suppose <m>F \subseteq L</m> is a field extension and <m>\a \in L</m>. 
+                  Define <me>I := \{f(x) \in F[x] \mid f(\a) = 0\},</me> a subset of <m>F[x]</m>.
+                  <ol>
+                    <li>
+                      The subset <m>I</m> is an ideal of <m>F[x]</m>.
+                    </li>
+
+                    <li>
+                      <m>I = 0</m> if and only if <m>\a</m> is transcendental over <m>F</m>; so <m>I\neq 0</m> if and only if <m>\a</m> is algebraic over <m>F</m>.
+                    </li>
       
-                  <li>
-                    <m>\a</m> is transcendental over <m>F</m> if and only if <m>[F(\a): F] = \infty</m>. 
-                    In this case, there is a unique isomorphism of fields 
-                    <me>
-                      (x) \cong F(\a)
-                    </me> 
-                    sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>. 
-                    (Here, <m>F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}</m> is the field of fractions of <m>F[x]</m>.)
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
+                    <li>
+                      Assume <m>\a</m> is algebraic over <m>F</m>.
+                      <ul>
+                        <li>
+                          The unique monic generator of <m>I</m>, which we will write as <m>m_{\a, F}(x)</m>, is irreducible (and hence <m>I</m> is a prime ideal).
+                        </li>
+            
+                        <li>
+                          There is a unique isomorphism of fields 
+                          <me>
+                            F[x]/(m_{\a, F}(x)) \cong F(\a)
+                          </me>
+                          sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>.
+                        </li>
+            
+                        <li>
+                          <m>F[\a] = F(\a)</m> and in particular <m>F[\a]</m> is a field.
+                        </li>
+                      </ul>
+                    </li>
+            
+                    <li>
+                      <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. 
+                      In this case, 
+                      <me>
+                        [F(\a): F] = \deg(m_{\a, F}(x)).
+                      </me>
+                    </li>
+        
+                    <li>
+                      <m>\a</m> is transcendental over <m>F</m> if and only if <m>[F(\a): F] = \infty</m>. 
+                      In this case, there is a unique isomorphism of fields 
+                      <me>
+                        (x) \cong F(\a)
+                      </me> 
+                      sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>. 
+                      (Here, <m>F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}</m> is the field of fractions of <m>F[x]</m>.)
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  All parts use the following construction:
+                </p>
+    
+                <p>
+                  Let <m>\phi: F[x] \to L</m> be the evaluation homomorphism, given by sending <m>f(x)</m> to <m>f(\a)</m> <xref provisional="empty"/>. 
+                  Note that <m>\phi</m> satisfies <m>\phi|_F = \id_F</m> and <m>\phi(x) = \alpha</m>. 
+                  We have <m>\im(\phi) = F[\a]</m> by definition of the latter. 
+                  The <xref text="title" ref="thm-ring-fit"/> thus gives that <m>\phi</m> induces a ring isomorphism 
+                  <me>
+                    \ov{\phi}: \frac{F[x]}{I} \xra{\cong} F[\a]
+                  </me>
+                  given by <m>\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)</m>. 
+                  In particular, since <m>F[\a]</m> is a subring of <m>L</m>, it is an integral domain, <xref provisional="empty"/> and hence <m>I</m> must be a prime ideal (possibly the <m>0</m> ideal). <xref provisional="empty"/>
+                </p>
+    
+                <p>
+                  Let us now prove the various parts:
+                </p>
+    
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        holds because <m>I</m> is the kernel of the ring map <m>\phi</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                      is by definition.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+    
+                <p>
+                  For (3) assume <m>\a</m> is algebraic. 
+                  Then <m>I \ne 0</m> and hence it has a unique monic generator, which we write <m>m_{\a, F}(x)</m>. 
+                  Since <m>I</m> is prime, <m>m_{\a, F}(x)</m> is irreducible <xref provisional="empty"/>; this proves (3a). 
+                  Also, this shows that <m>\frac{F[x]}{(m_{\a,F}(x))}</m> is a field <xref provisional="empty"/> and hence so is <m>F[\a]</m>. 
+                  Since <m>F[\a] \subseteq F(\a)</m>, <m>F[\a]</m> contains <m>F</m> and <m>\a</m>, and <m>F[\a]</m> is a field, we must have <m>F[\a] = F(\a)</m>. 
+                  This proves (3b) and (3c).
+                </p>
+    
+                <p>
+                  For (4), if <m>\a</m> is algebraic over <m>F</m>, then <m>[F(\a):F] = \deg(m_{\a, F}(x)) &lt; \infty</m> by (3b) and Proposition <xref provisional="empty"/>. 
+                  For the converse, if <m>[F(\a): F] &lt; \infty</m>, then the infinite list <m>1, \a, \a^2, \dots</m> of elements of <m>F(\a)</m> cannot be <m>F</m>-linearly independent <xref provisional="empty"/>. 
+                  So, <m>a_0 + a_1 \a + \cdots a_n \a^n = 0</m> for some <m>n</m> and some <m>a_0, \dots, a_n \in F</m> not all of which are <m>0</m>. 
+                  This shows <m>\a</m> is the root of a non-zero polynomial.
+                </p>
+    
+                <p>
+                  For (5), if <m>\a</m> is transcendental, then <m>I = 0</m> and so <m>\phi: F[x] \into L</m> is injective. 
+                  Since <m>L</m> is a field, <m>F[x]</m> is a domain <xref provisional="empty"/>, and <m>\phi</m> is injective <xref provisional="empty"/>, it can be extended to the field of fractions <m>F(x)</m> of <m>F[x]</m>, i.e. there is a ring homomorphism 
+                  <me>
+                    \tilde{\phi}: F(x) \to L
+                  </me> 
+                  given by <m>\tilde{\phi} \left(\frac{f(x)}{g(x)}\right) = \frac{f(\a)}{g(\a)}</m> for all <m>f(x), g(x) \in F[x]</m> with <m>g(x) \ne 0</m>. 
+                  The image of <m>\tilde{\phi}</m> is precisely <m>F(\a)</m>. 
+                  The map <m>\tilde{\phi}</m> is injective since it is a ring homomorphism whose source is a field. <xref provisional="empty"/>
+                </p>
+              </proof>
+            </theorem>
+    
+            <definition xml:id="def-minimum-polynomial"><title>Minimum Polynomial</title>
+              <statement>
+                <p>
+                  Let <m>F \subseteq L</m> be a field extension and <m>\alpha \in L</m>, and consider the ideal
+                  <me>
+                    I=\{f(x) \in F[x] \mid f(\alpha)=0\}
+                  </me>
+                  from <xref ref="thm-properties-of-algebraic-elements"/>. 
+                  The unique monic generator <m>m_{\alpha, F}(x)</m> for <m>I</m> is called the <em>minimal polynomial</em> of <m>\alpha</m> over <m>F</m>.
+                  <idx><h>minimum polynomial over a field extension</h></idx>
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
               <p>
-                All parts use the following construction:
+                Note that the minimum polynomial of <m>\a</m> over <m>F</m> (if it exists) divides every polynomial in <m>F[x]</m> that has <m>\a</m> as a root. 
+                In particular, it is the unique monic, irreducible polynomial having <m>\a</m> as a root. 
+                It can also be characterized as the monic polynomial in <m>F[x]</m> of least degree having <m>\a</m> as a root.
               </p>
-  
-              <p>
-                Let <m>\phi: F[x] \to L</m> be the evaluation homomorphism, given by sending <m>f(x)</m> to <m>f(\a)</m> <xref provisional="empty"/>. 
-                Note that <m>\phi</m> satisfies <m>\phi|_F = \id_F</m> and <m>\phi(x) = \alpha</m>. 
-                We have <m>\im(\phi) = F[\a]</m> by definition of the latter. 
-                The <xref text="title" ref="thm-ring-fit"/> thus gives that <m>\phi</m> induces a ring isomorphism 
-                <me>
-                  \ov{\phi}: \frac{F[x]}{I} \xra{\cong} F[\a]
-                </me>
-                given by <m>\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)</m>. 
-                In particular, since <m>F[\a]</m> is a subring of <m>L</m>, it is an integral domain, <xref provisional="empty"/> and hence <m>I</m> must be a prime ideal (possibly the <m>0</m> ideal). <xref provisional="empty"/>
-              </p>
-  
-              <p>
-                Let us now prove the various parts:
-              </p>
-  
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      holds because <m>I</m> is the kernel of the ring map <m>\phi</m>.
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                    is by definition.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-  
-              <p>
-                For (3) assume <m>\a</m> is algebraic. 
-                Then <m>I \ne 0</m> and hence it has a unique monic generator, which we write <m>m_{\a, F}(x)</m>. 
-                Since <m>I</m> is prime, <m>m_{\a, F}(x)</m> is irreducible <xref provisional="empty"/>; this proves (3a). 
-                Also, this shows that <m>\frac{F[x]}{(m_{\a,F}(x))}</m> is a field <xref provisional="empty"/> and hence so is <m>F[\a]</m>. 
-                Since <m>F[\a] \subseteq F(\a)</m>, <m>F[\a]</m> contains <m>F</m> and <m>\a</m>, and <m>F[\a]</m> is a field, we must have <m>F[\a] = F(\a)</m>. 
-                This proves (3b) and (3c).
-              </p>
-  
-              <p>
-                For (4), if <m>\a</m> is algebraic over <m>F</m>, then <m>[F(\a):F] = \deg(m_{\a, F}(x)) &lt; \infty</m> by (3b) and Proposition <xref provisional="empty"/>. 
-                For the converse, if <m>[F(\a): F] &lt; \infty</m>, then the infinite list <m>1, \a, \a^2, \dots</m> of elements of <m>F(\a)</m> cannot be <m>F</m>-linearly independent <xref provisional="empty"/>. 
-                So, <m>a_0 + a_1 \a + \cdots a_n \a^n = 0</m> for some <m>n</m> and some <m>a_0, \dots, a_n \in F</m> not all of which are <m>0</m>. 
-                This shows <m>\a</m> is the root of a non-zero polynomial.
-              </p>
-  
-              <p>
-                For (5), if <m>\a</m> is transcendental, then <m>I = 0</m> and so <m>\phi: F[x] \into L</m> is injective. 
-                Since <m>L</m> is a field, <m>F[x]</m> is a domain <xref provisional="empty"/>, and <m>\phi</m> is injective <xref provisional="empty"/>, it can be extended to the field of fractions <m>F(x)</m> of <m>F[x]</m>, i.e. there is a ring homomorphism 
-                <me>
-                  \tilde{\phi}: F(x) \to L
-                </me> 
-                given by <m>\tilde{\phi} \left(\frac{f(x)}{g(x)}\right) = \frac{f(\a)}{g(\a)}</m> for all <m>f(x), g(x) \in F[x]</m> with <m>g(x) \ne 0</m>. 
-                The image of <m>\tilde{\phi}</m> is precisely <m>F(\a)</m>. 
-                The map <m>\tilde{\phi}</m> is injective since it is a ring homomorphism whose source is a field. <xref provisional="empty"/>
-              </p>
-            </proof>
-          </theorem>
-  
-          <definition xml:id="def-minimum-polynomial"><title>Minimum Polynomial</title>
-            <statement>
-              <p>
-                Let <m>F \subseteq L</m> be a field extension and <m>\alpha \in L</m>, and consider the ideal
-                <me>
-                  I=\{f(x) \in F[x] \mid f(\alpha)=0\}
-                </me>
-                from <xref ref="thm-properties-of-algebraic-elements"/>. 
-                The unique monic generator <m>m_{\alpha, F}(x)</m> for <m>I</m> is called the <em>minimal polynomial</em> of <m>\alpha</m> over <m>F</m>.
-                <idx><h>minimum polynomial over a field extension</h></idx>
-              </p>
-            </statement>
-          </definition>
-  
-          <remark>
-            <p>
-              Note that the minimum polynomial of <m>\a</m> over <m>F</m> (if it exists) divides every polynomial in <m>F[x]</m> that has <m>\a</m> as a root. 
-              In particular, it is the unique monic, irreducible polynomial having <m>\a</m> as a root. 
-              It can also be characterized as the monic polynomial in <m>F[x]</m> of least degree having <m>\a</m> as a root.
-            </p>
-          </remark>
+            </remark>
 
-          <example>
-            <statement>
+            <example>
+              <statement>
+                <p>
+                  The minimal polynomial of <m>i</m> over <m>\mathbb{R}</m> is <m>m_{i, \mathbb{R}}(x)=x^{2}+1</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  
+                </p>
+              </solution>
+            </example>
+    
+            <example xml:id="ex-primitive-roots-of-unity">
               <p>
-                The minimal polynomial of <m>i</m> over <m>\mathbb{R}</m> is <m>m_{i, \mathbb{R}}(x)=x^{2}+1</m>.
+                For any prime integer <m>p</m>, set <m>\mu_p = e^{2 \pi i/p}</m>, a so-called “primitive <m>p</m>-th root of unity". 
+                Let us find <m>m_{\mu_p, \Q}(x)</m>. 
+                Note that <m>\mu_p</m> is a root of <m>x^p -1</m> which factors as <m>(x-1) g(x)</m> where <m>g(x) = x^{p-1} + \cdots + x + 1</m>. 
+                As we showed before <xref provisional="empty"/>, <m>g(x)</m> is irreducible in <m>\Q[x]</m>. 
+                Since <m>\mu_p</m> is not a root of <m>x-1</m>, it must be a root of <m>g(x)</m>, and since <m>g(x)</m> is irreducible, it must be <m>m_{\mu_p, \Q}(x)</m> (see the Remark).<xref provisional="empty"/>
               </p>
-            </statement>
-            <solution>
-              <p>
-                
-              </p>
-            </solution>
-          </example>
-  
-          <example xml:id="ex-primitive-roots-of-unity">
-            <p>
-              For any prime integer <m>p</m>, set <m>\mu_p = e^{2 \pi i/p}</m>, a so-called “primitive <m>p</m>-th root of unity". 
-              Let us find <m>m_{\mu_p, \Q}(x)</m>. 
-              Note that <m>\mu_p</m> is a root of <m>x^p -1</m> which factors as <m>(x-1) g(x)</m> where <m>g(x) = x^{p-1} + \cdots + x + 1</m>. 
-              As we showed before <xref provisional="empty"/>, <m>g(x)</m> is irreducible in <m>\Q[x]</m>. 
-              Since <m>\mu_p</m> is not a root of <m>x-1</m>, it must be a root of <m>g(x)</m>, and since <m>g(x)</m> is irreducible, it must be <m>m_{\mu_p, \Q}(x)</m> (see the Remark).<xref provisional="empty"/>
-            </p>
-          </example>
-  
-          <theorem xml:id="thm-degree-formula"><title>The Degree Formula</title>
-            <idx><h>degree formula</h></idx>
-            <statement>
-              <p>
-                Suppose <m>F \subseteq L \subseteq K</m> are field extensions. 
-                Then 
-                <me>
-                  [K:F] = [K:L] [L:F].
-                </me> 
-                In particular, the composition of two finite extensions of fields is again a finite extension.
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Let <m>A \subseteq K</m> be a basis for <m>K</m> as an <m>L</m>-vector space and let <m>B \subseteq L</m> be a basis for <m>L</m> as an <m>F</m>-vector space. 
-                Let <m>AB</m> denote the subset <m>\{ab \mid a \in A, b \in B\}</m> of <m>K</m>. 
-                The Theorem follows from the following two facts:
-                <ol>
-                  <li>
-                    <p>
-                      <m>AB</m> is a basis of <m>K</m> as an <m>F</m>-vector space and 
-                    </p>
-                  </li>
+            </example>
+    
+            <theorem xml:id="thm-degree-formula"><title>The Degree Formula</title>
+              <idx><h>degree formula</h></idx>
+              <statement>
+                <p>
+                  Suppose <m>F \subseteq L \subseteq K</m> are field extensions. 
+                  Then 
+                  <me>
+                    [K:F] = [K:L] [L:F].
+                  </me> 
+                  In particular, the composition of two finite extensions of fields is again a finite extension.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Let <m>A \subseteq K</m> be a basis for <m>K</m> as an <m>L</m>-vector space and let <m>B \subseteq L</m> be a basis for <m>L</m> as an <m>F</m>-vector space. 
+                  Let <m>AB</m> denote the subset <m>\{ab \mid a \in A, b \in B\}</m> of <m>K</m>. 
+                  The Theorem follows from the following two facts:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>AB</m> is a basis of <m>K</m> as an <m>F</m>-vector space and 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      the function <m>A \times B \to AB, (a,b) \mapsto ab</m> is bijective (so that the cardinality of <m>AB</m> is <m>|A| \cdot |B|</m>). 
-                    </p>
-                  </li>
-                </ol> 
-                Concerning (a), for <m>\a \in K</m>, we have <m>\a = \sum_i l_i a_i</m> for some <m>a_1, \dots, a_m \in A</m> and <m>l_1, \dots, l_m \in L</m>. 
-                For each <m>i</m>, <m>l_i</m> is an <m>F</m>-linear combination of a finite set of elements of <m>B</m>. 
-                Combining these gives that <m>\a</m> is in the <m>F</m>-span of <m>AB</m>.
-              </p>
-  
+                    <li>
+                      <p>
+                        the function <m>A \times B \to AB, (a,b) \mapsto ab</m> is bijective (so that the cardinality of <m>AB</m> is <m>|A| \cdot |B|</m>). 
+                      </p>
+                    </li>
+                  </ol> 
+                  Concerning (a), for <m>\a \in K</m>, we have <m>\a = \sum_i l_i a_i</m> for some <m>a_1, \dots, a_m \in A</m> and <m>l_1, \dots, l_m \in L</m>. 
+                  For each <m>i</m>, <m>l_i</m> is an <m>F</m>-linear combination of a finite set of elements of <m>B</m>. 
+                  Combining these gives that <m>\a</m> is in the <m>F</m>-span of <m>AB</m>.
+                </p>
+    
+                <p>
+                  To prove linear independence, it suffices to prove that if <m>a_1, \dots, a_m</m> and <m>b_1, \dots, b_n</m> be distinct elements of <m>A</m> and <m>B</m> respectively, then the set <m>\{a_ib_j\}</m> is linearly independent. 
+                  Suppose <m>\sum_{i,j} f_{i,j} a_i b_j = 0</m> for some <m>f_{i,j} \in F</m>. 
+                  Since the <m>b_j</m>'s are <m>L</m>-linearly independent and 
+                  <me>
+                    \sum_{i,j} f_{i,j} a_i b_j = \sum_j (\sum_i f_{i,j} a_i) b_j
+                  </me>
+                  and <m>f_{i,j} a_i \in L</m>, we get that, for each <m>j</m>, <m>\sum_i f_{i,j} a_i = 0</m>. 
+                  Using now that the <m>a_i</m>'s are <m>F</m>-linearly independent, we have that for all <m>j</m> and all <m>i</m>, <m>f_{i,j} = 0</m>. 
+                  This proves <m>\{a_i b_j \mid i = 1, \dots, m, j = 1, \dots, n\}</m> is linearly independent over <m>F</m>, and hence <m>AB</m> is linearly independent over <m>F</m>.
+                </p>
+    
+                <p>
+                  Concerning (b), if <m>ab = a'b'</m> for some <m>a,a' \in A, b, b' \in B</m>, then <m>ab - a'b' = 0</m>, and since the <m>b</m>'s are <m>L</m>-linearly independent, we must have <m>b = b'</m> and hence <m>a = a'</m>.
+                </p>
+              </proof>
+            </theorem>
+    
+            <example xml:id="ex-rwc-for-all-wnotinr">
               <p>
-                To prove linear independence, it suffices to prove that if <m>a_1, \dots, a_m</m> and <m>b_1, \dots, b_n</m> be distinct elements of <m>A</m> and <m>B</m> respectively, then the set <m>\{a_ib_j\}</m> is linearly independent. 
-                Suppose <m>\sum_{i,j} f_{i,j} a_i b_j = 0</m> for some <m>f_{i,j} \in F</m>. 
-                Since the <m>b_j</m>'s are <m>L</m>-linearly independent and 
-                <me>
-                  \sum_{i,j} f_{i,j} a_i b_j = \sum_j (\sum_i f_{i,j} a_i) b_j
-                </me>
-                and <m>f_{i,j} a_i \in L</m>, we get that, for each <m>j</m>, <m>\sum_i f_{i,j} a_i = 0</m>. 
-                Using now that the <m>a_i</m>'s are <m>F</m>-linearly independent, we have that for all <m>j</m> and all <m>i</m>, <m>f_{i,j} = 0</m>. 
-                This proves <m>\{a_i b_j \mid i = 1, \dots, m, j = 1, \dots, n\}</m> is linearly independent over <m>F</m>, and hence <m>AB</m> is linearly independent over <m>F</m>.
+                Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. 
+                Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. 
+                Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. 
+                It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. 
+                As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
               </p>
-  
+            </example>
+    
+            <example xml:id="ex-degree-and-x2-5">
               <p>
-                Concerning (b), if <m>ab = a'b'</m> for some <m>a,a' \in A, b, b' \in B</m>, then <m>ab - a'b' = 0</m>, and since the <m>b</m>'s are <m>L</m>-linearly independent, we must have <m>b = b'</m> and hence <m>a = a'</m>.
-              </p>
-            </proof>
-          </theorem>
-  
-          <example xml:id="ex-rwc-for-all-wnotinr">
-            <p>
-              Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. 
-              Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. 
-              Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. 
-              It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. 
-              As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
-            </p>
-          </example>
-  
-          <example xml:id="ex-degree-and-x2-5">
-            <p>
-              Let <m>F</m> be the result of adjoining to <m>\Q</m> all of the roots in <m>\C</m> of <m>x^2 - 5</m>. 
-              That is, <m>F = \Q(\a_1, \a_2, \a_3, \a_4)</m> where <m>\a_1 = \sqrt[4]{5}</m>, <m>\a_2 = i \sqrt[4]{5}</m>, <m>\a_3 = -\sqrt[4]{5}</m>, and <m>\a_4 = - i \sqrt[4]{5}</m>. 
-              As we shall see later, <m>F</m> is an example of a “splitting field". 
-              Let's find <m>[F: \Q]</m>.
-            </p>
-  
-            <p>
-              First, let us note that we can also describe <m>F</m> as <m>F = \Q(\sqrt[4]{5}, i)</m>. 
-              This holds since each of <m>\a_1, \dots, \a_4</m> belongs to <m>\Q(\sqrt[4]{5}, i)</m> and hence <m>F \subseteq \Q(\sqrt[4]{5}, i)</m>. 
-              The opposite containment holds because <m>\sqrt[4]{5}, i \in F</m>, with the latter being true because <m>i = \a_2/\a_1</m>.
-            </p>
-  
-            <p>
-              Set <m>E = \Q(i)</m>. 
-              Then <m>[E: \Q] = 2</m>. 
-              Since <m>F = E(\sqrt[4]{5})</m> and <m>\sqrt[4]{5}</m> is a root of <m>x^4-5</m>, we have <m>[F : E]</m> is at most <m>4</m> and it will be exactly <m>4</m> if and only if <m>x^4 -5</m> is irreducible in <m>\Q(i)[x]</m>. 
-              This is unclear.
-            </p>
-  
-            <p>
-              So instead let's try a different approach. 
-              Let <m>L = \Q(\sqrt[4]{5})</m>. 
-              Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>, we have <m>[L: \Q] = 4</m>. 
-              Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. 
-              But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. 
-              Thus <m>[F:L] = 2</m>.
-            </p>
-  
-            <p>
-              By the <xref text="title" ref="thm-degree-formula"/> we conclude that 
-              <me>
-                [F: \Q] = [F:L][L:\Q] = 2 \cdot 4 = 8.
-              </me> 
-              Note that, in hindsight, it must have been true that <m>x^4 - 5</m> is irreducible in <m>\Q(i)[x]</m>, since otherwise the <xref text="title" ref="thm-degree-formula"/> would give that <m>[F: \Q] &lt; 8</m>.
-            </p>
-          </example>
-  
-          <definition xml:id="def-algebraic-extension"><title>Algebraic Extension</title>
-            <statement>
-              <p>
-                A field extension <m>F \subseteq L</m> is called <em>algebraic</em> if every element <m>\a \in L</m> is algebraic over <m>F</m> 
-                (i.e., if every element of <m>L</m> is the root of a non-zero polynomial with coefficients in <m>F</m>).
-                <idx><h>algebraic field extension</h></idx>
-              </p>
-            </statement>
-          </definition>
-  
-          <proposition xml:id="prop-finite-extensions-are-algebraic"><title>Finite Extensions are Algebraic</title>
-            <statement>
-              <p>
-                If <m>F \subseteq L</m> is a finite extension of fields, then it is algebraic.
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Pick <m>\a \in L</m>. 
-                Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. 
-                (One could also appeal to the <xref text="title" ref="thm-degree-formula"/> for this.) 
-                So by (4) of Theorem <xref ref="thm-properties-of-algebraic-elements"/>, <m>\a</m> is algebraic of <m>F</m>.
-              </p>
-            </proof>
-          </proposition>
-  
-          <example xml:id="exe-infinite-algebraic-extension"><title>Infinite Algebraic Extension</title>
-            <p>
-              Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. 
-              Then <m>F</m> is a subfield of <m>\C</m>: 
-              To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. 
-              Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. 
-              Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. 
-              This proves <m>F</m> is field extension of <m>\Q</m>. 
-              It is algebraic over <m>\Q</m> since each <m>E_n</m> is. 
-              But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> 
-              (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
-            </p>
-          </example>
-  
-          <theorem xml:id="thm-algebraic-extensions-are-transitive"><title>Transitivity of Algebraic Extensions</title>
-            <statement>
-              <p>
-                Let <m>F \subseteq K \subseteq L</m> be extensions of fields, not necessarily finite.
+                Let <m>F</m> be the result of adjoining to <m>\Q</m> all of the roots in <m>\C</m> of <m>x^2 - 5</m>. 
+                That is, <m>F = \Q(\a_1, \a_2, \a_3, \a_4)</m> where <m>\a_1 = \sqrt[4]{5}</m>, <m>\a_2 = i \sqrt[4]{5}</m>, <m>\a_3 = -\sqrt[4]{5}</m>, and <m>\a_4 = - i \sqrt[4]{5}</m>. 
+                As we shall see later, <m>F</m> is an example of a “splitting field". 
+                Let's find <m>[F: \Q]</m>.
               </p>
     
               <p>
-                <ol>
-                  <li>
-                    Then <m>K/F</m> and <m>L/K</m> are algebraic if and only if <m>L/F</m> is algebraic.
-                  </li>
-    
-                  <li>
-                    Give an example where <m>K/F</m> and <m>L/K</m> are Galois but <m>L/F</m> is not Galois.
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Let <m>F \subseteq K \subseteq L</m> be extensions of fields, not necessarily finite.
-              </p>
-  
-              <p>
-                Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. 
-                Let <m>\a\in L</m>. 
-                Then <m>\a</m> is the root of the polynomial
-                <me>
-                  f(x)=a_nx^n+\dots+a_0,
-                </me>
-                with <m>a_{i}\in K</m>. 
-                Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. 
-                Consider the chain of field extensions 
-                <me>
-                  F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
-                </me> 
-                Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. 
-                By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. 
-                By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
-              </p>
-  
-              <p>
-                Next suppose that <m>L/F</m> is algebraic. 
-                Let <m>\a\in K</m>. 
-                Then <m>\a\in L</m>, and so it is algebraic over <m>F</m>. 
-                Now let <m>\b\in L</m>. 
-                Then <m>\b</m> is the root of a polynomial in <m>F</m>, which is also in <m>K</m>, so <m>L/K</m> is algebraic as well.
-              </p>
-  
-              <p>
-                <m>K=\Q(\sqrt{2})</m> is Galois over <m>F=\Q</m>, and <m>L=\Q(\sqrt{2},\sqrt[4]{2})</m> is Galois over <m>K</m>, but <m>L</m> is not Galois over <m>F,</m> as the splitting field of <m>x^4-2</m> has degree <m>8</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              The converse of this proposition is also true: 
-              Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. 
-            </p>
-          </remark>
-  
-          <theorem xml:id="thm-relatively-prime-extension">
-            <statement>
-              <p>
-                Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
-                If <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
+                First, let us note that we can also describe <m>F</m> as <m>F = \Q(\sqrt[4]{5}, i)</m>. 
+                This holds since each of <m>\a_1, \dots, \a_4</m> belongs to <m>\Q(\sqrt[4]{5}, i)</m> and hence <m>F \subseteq \Q(\sqrt[4]{5}, i)</m>. 
+                The opposite containment holds because <m>\sqrt[4]{5}, i \in F</m>, with the latter being true because <m>i = \a_2/\a_1</m>.
               </p>
     
               <p>
-                Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
+                Set <m>E = \Q(i)</m>. 
+                Then <m>[E: \Q] = 2</m>. 
+                Since <m>F = E(\sqrt[4]{5})</m> and <m>\sqrt[4]{5}</m> is a root of <m>x^4-5</m>, we have <m>[F : E]</m> is at most <m>4</m> and it will be exactly <m>4</m> if and only if <m>x^4 -5</m> is irreducible in <m>\Q(i)[x]</m>. 
+                This is unclear.
               </p>
-
+    
               <p>
-                First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. 
-                Suppose then that <m>d&gt;1</m>. 
-                There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. 
-                Consider <m>K(r)</m>. 
-                As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. 
-                Using the <xref text="title" ref="thm-degree-formula"/> we see that 
-                <me>
-                  [K(r):F]=[K(r):K][K:F]=qn.
-                </me> 
-                However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. 
-                As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. 
-                But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. 
-                As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so <m>f=kg</m> for some <m>k\in F</m>. 
-                As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+                So instead let's try a different approach. 
+                Let <m>L = \Q(\sqrt[4]{5})</m>. 
+                Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>, we have <m>[L: \Q] = 4</m>. 
+                Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. 
+                But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. 
+                Thus <m>[F:L] = 2</m>.
               </p>
-            </proof>
-          </theorem>
+    
+              <p>
+                By the <xref text="title" ref="thm-degree-formula"/> we conclude that 
+                <me>
+                  [F: \Q] = [F:L][L:\Q] = 2 \cdot 4 = 8.
+                </me> 
+                Note that, in hindsight, it must have been true that <m>x^4 - 5</m> is irreducible in <m>\Q(i)[x]</m>, since otherwise the <xref text="title" ref="thm-degree-formula"/> would give that <m>[F: \Q] &lt; 8</m>.
+              </p>
+            </example>
 
-          <p>
-            The statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
-          </p>
+          </subsection>
 
-          <example>
+          <subsection xml:id="subsec-algebraic-extension"><title>Algebraic Field Extensions</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  If you forget your roots, you've lost sight of everything.
+                </q>
+              </p>
+              <attribution>Walter Payton</attribution>
+            </blockquote>
+  
+            <definition xml:id="def-algebraic-extension"><title>Algebraic Extension</title>
+              <statement>
+                <p>
+                  A field extension <m>F \subseteq L</m> is called <em>algebraic</em> if every element <m>\a \in L</m> is algebraic over <m>F</m> 
+                  (i.e., if every element of <m>L</m> is the root of a non-zero polynomial with coefficients in <m>F</m>).
+                  <idx><h>algebraic field extension</h></idx>
+                </p>
+              </statement>
+            </definition>
+    
+            <proposition xml:id="prop-finite-extensions-are-algebraic"><title>Finite Extensions are Algebraic</title>
+              <statement>
+                <p>
+                  If <m>F \subseteq L</m> is a finite extension of fields, then it is algebraic.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Pick <m>\a \in L</m>. 
+                  Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. 
+                  (One could also appeal to the <xref text="title" ref="thm-degree-formula"/> for this.) 
+                  So by (4) of Theorem <xref ref="thm-properties-of-algebraic-elements"/>, <m>\a</m> is algebraic of <m>F</m>.
+                </p>
+              </proof>
+            </proposition>
+    
+            <example xml:id="exe-infinite-algebraic-extension"><title>Infinite Algebraic Extension</title>
+              <p>
+                Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. 
+                Then <m>F</m> is a subfield of <m>\C</m>: 
+                To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. 
+                Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. 
+                Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. 
+                This proves <m>F</m> is field extension of <m>\Q</m>. 
+                It is algebraic over <m>\Q</m> since each <m>E_n</m> is. 
+                But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> 
+                (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
+              </p>
+            </example>
+    
+            <theorem xml:id="thm-algebraic-extensions-are-transitive"><title>Transitivity of Algebraic Extensions</title>
+              <statement>
+                <p>
+                  Let <m>F \subseteq K \subseteq L</m> be extensions of fields, not necessarily finite.
+                </p>
+      
+                <p>
+                  <ol>
+                    <li>
+                      Then <m>K/F</m> and <m>L/K</m> are algebraic if and only if <m>L/F</m> is algebraic.
+                    </li>
+      
+                    <li>
+                      Give an example where <m>K/F</m> and <m>L/K</m> are Galois but <m>L/F</m> is not Galois.
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Let <m>F \subseteq K \subseteq L</m> be extensions of fields, not necessarily finite.
+                </p>
+    
+                <p>
+                  Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. 
+                  Let <m>\a\in L</m>. 
+                  Then <m>\a</m> is the root of the polynomial
+                  <me>
+                    f(x)=a_nx^n+\dots+a_0,
+                  </me>
+                  with <m>a_{i}\in K</m>. 
+                  Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. 
+                  Consider the chain of field extensions 
+                  <me>
+                    F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
+                  </me> 
+                  Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. 
+                  By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. 
+                  By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
+                </p>
+    
+                <p>
+                  Next suppose that <m>L/F</m> is algebraic. 
+                  Let <m>\a\in K</m>. 
+                  Then <m>\a\in L</m>, and so it is algebraic over <m>F</m>. 
+                  Now let <m>\b\in L</m>. 
+                  Then <m>\b</m> is the root of a polynomial in <m>F</m>, which is also in <m>K</m>, so <m>L/K</m> is algebraic as well.
+                </p>
+    
+                <p>
+                  <m>K=\Q(\sqrt{2})</m> is Galois over <m>F=\Q</m>, and <m>L=\Q(\sqrt{2},\sqrt[4]{2})</m> is Galois over <m>K</m>, but <m>L</m> is not Galois over <m>F,</m> as the splitting field of <m>x^4-2</m> has degree <m>8</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
+              <p>
+                The converse of this proposition is also true: 
+                Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. 
+              </p>
+            </remark>
+    
+            <theorem xml:id="thm-relatively-prime-extension">
+              <statement>
+                <p>
+                  Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
+                  If <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
+                </p>
+      
+                <p>
+                  Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
+                </p>
+
+                <p>
+                  First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. 
+                  Suppose then that <m>d&gt;1</m>. 
+                  There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. 
+                  Consider <m>K(r)</m>. 
+                  As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. 
+                  Using the <xref text="title" ref="thm-degree-formula"/> we see that 
+                  <me>
+                    [K(r):F]=[K(r):K][K:F]=qn.
+                  </me> 
+                  However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. 
+                  As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. 
+                  But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. 
+                  As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so <m>f=kg</m> for some <m>k\in F</m>. 
+                  As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+                </p>
+              </proof>
+            </theorem>
+
             <p>
-              Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. 
-              Let <m>K=F[x]/p(x)</m>. 
-              Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. 
-              Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>.
-              Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
+              The statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
             </p>
-          </example>
+
+            <example>
+              <p>
+                Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. 
+                Let <m>K=F[x]/p(x)</m>. 
+                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. 
+                Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>.
+                Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
+              </p>
+            </example>
+
+          </subsection>
         
         </section>
   
         <section xml:id="sec-closure"><title>Algebraic Closures</title>
-  
-          <definition xml:id="def-algebraically-closed"><title>Algebraic Closure</title>
-            <statement>
-              <p>
-                A field <m>L</m> is <em>algebraically closed</em> if every non-constant polynomial <m>f(x) \in L[x]</m> has a root in <m>L.</m>
-                <idx><h>algebraically closed field</h></idx>
-              </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-c-is-closed"><title><m>\C</m> is algebraically closed</title>
-            <p>
-              <m>\C</m> is algebraically closed. 
-              This is the Fundamental Theorem of Algebra.
-            </p>
-          </example>
-  
-          <proposition xml:id="prop-equivalencies-of-algebraically-closed"><title>Equivalent Algebraically Closed Characterizations</title>
-            <statement>
-              <p>
-                The following are equivalent for a field <m>L</m>: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>L</m> is algebraically closed. 
-                    </p>
-                  </li>
 
-                  <li>
-                    <p>
-                      Every non-constant polynomial with coefficients in <m>L</m> splits completely into (not necessarily distinct) linear factors. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      There are no non-trivial algebraic extensions of <m>L</m>: If <m>L \subseteq E</m> is an algebraic field extension then <m>L = E</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
+          <subsection xml:id="subsec-closures"><title>Clooooosing Time</title>
+            
+            <blockquote>
               <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>\Rightarrow</m> (2): 
-                      Given a non-constant <m>f(x) \in L[x]</m>, by assumption <m>f</m> has a root <m>a \in L</m> and thus <m>f(x) = (x - a)g(x)</m> with <m>g(x) \in L[x]</m>. 
-                      But then <m>g</m> also has a root and so it too factors, and so on.
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      <m>\Rightarrow</m> (3): 
-                      Say <m>L \subseteq E</m> is algebraic. 
-                      Pick <m>\a \in E</m>. 
-                      Then <m>\a</m> is a root of some <m>f(x) \in F[x]</m>. 
-                      But since <m>f</m> factors completely, <m>\a \in L</m>.
-                    </p>
-                  </li>
+                <q>
+                  I think sometimes people really requite the satisfaction of closure.
+                </q>
+              </p>
+              <attribution>Diablo Cody</attribution>
+            </blockquote>
     
-                  <li>
-                    <p>
-                      <m>\Rightarrow</m> (1). Pick a non-constant <m>f(x) \in L[x]</m>. 
-                      By <xref provisional="cite"/> , there there is finite extension <m>L'</m> of <m>L</m> in which <m>f</m> does have a root. 
-                      By assumption <m>L = L'</m> and so this root must be in <m>L</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </proof>
-          </proposition>
-  
-          <definition xml:id="def-algebraic-closure"><title>Algebraic Closure</title>
-            <statement>
+            <definition xml:id="def-algebraically-closed"><title>Algebraic Closure</title>
+              <statement>
+                <p>
+                  A field <m>L</m> is <em>algebraically closed</em> if every non-constant polynomial <m>f(x) \in L[x]</m> has a root in <m>L.</m>
+                  <idx><h>algebraically closed field</h></idx>
+                </p>
+              </statement>
+            </definition>
+    
+            <example xml:id="exe-c-is-closed"><title><m>\C</m> is algebraically closed</title>
               <p>
-                Given a field <m>F</m>, a field <m>\ov{F}</m> is called an <em>algebraic closure</em> of <m>F</m> if <m>\ov{F}</m> is an algebraic field extension of <m>F</m> and <m>\ov{F}</m> is algebraically closed.
-                <idx><h>algebraic closute</h></idx>
+                <m>\C</m> is algebraically closed. 
+                This is the Fundamental Theorem of Algebra.
               </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-c-is-the-algebraic-closure-of-r">
-            <p>
-              <m>\C</m> is an algebraic closure of <m>\R</m>. 
-              This follows from the fact that <m>\R \subseteq \C</m> is a finite extension, hence algebraic, and the Fundamental Theorem of Algebra, which we will not prove.
-            </p>
-          </example>
-  
-          <proposition xml:id="prop-collection-of-algebraic-elements-is-closed"><title>Collection of Algebraic Elements is Algebraically Closed</title>
-            <statement>
-              <p>
-                Let 
-                <me>
-                  \ov{\Q} := \{ z \in \C \mid z\text{ is algebraic over }\Q\}.
-                </me> 
-                Then <m>\ov{\Q}</m> is an algebraic closure of <m>\Q</m>.
-              </p>
-  
-              <p>
-                More generally, if <m>F \subseteq L</m> is a field extension and <m>L</m> is algebraically closed, then the collection <m>\ov{F}</m> of elements of <m>L</m> that are algebraic over <m>F</m> is an algebraic closure of <m>F</m>.
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                It is far from clear that <m>\ov{F}</m> is a subfield of <m>L</m>, and so we first prove that: Given <m>\a, \beta \in \ov{F}</m>, we have that <m>[F(\a): F]</m> and <m>[F(\a, \beta): F(\a)]</m> are finite and hence so is <m>[F(\a, \beta): F]</m>. Thus, every element of <m>F(\a, \beta)</m> is algebraic over <m>F</m>; that is, <m>F(\a, \beta) \subseteq \ov{F}</m>. Since <m>F(\a, \beta)</m> is a field, it follows that <m>\ov{F}</m> contains <m>\a \pm \beta</m>, <m>\a \cdot \beta</m> and <m>\a^{-1}</m> if <m>\a \ne 0</m>. This proves that <m>\ov{F}</m> is indeed a subfield of <m>L</m>.
-              </p>
-  
-              <p>
-                It is clear from the definition that <m>F \subseteq \ov{F}</m> is an algebraic field extension.
-              </p>
-  
-              <p>
-                Given a non-constant <m>g(x) \in \ov{F}[x]</m>, let <m>\a</m> be one of its roots in <m>L</m> (which exists since we assume <m>L</m> is algebraically closed). Then <m>\ov{F} \subseteq \ov{F}(\a)</m> is an algebraic extension and hence so is <m>F \subseteq \ov{F}(\a)</m> by Proposition . This proves <m>\a \in \ov{F}</m> and hence that <m>\ov{F}</m> is algebraically closed.
-              </p>
-            </proof>
-          </proposition>
-  
-          <proposition xml:id="prop-algebraic-elements-closed">
-            <statement>
-              <p>
-                Let <m>F \sse L</m> be a field extension with <m>L</m> algebraically closed. 
-                Consider the set 
-                <me>
-                  K = \{\a\in L : f (α) = 0 \text{ for some monic polynomial }f (x) \in F [x]\}.
-                </me>
-                <ol>
-                  <li>
-                    <p>
-                      Show that <m>K</m> is a field. 
-                    </p>
-                  </li>
+            </example>
+    
+            <proposition xml:id="prop-equivalencies-of-algebraically-closed"><title>Equivalent Algebraically Closed Characterizations</title>
+              <statement>
+                <p>
+                  The following are equivalent for a field <m>L</m>: 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>L</m> is algebraically closed. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      Show that <m>K</m> is algebraically closed.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
+                    <li>
+                      <p>
+                        Every non-constant polynomial with coefficients in <m>L</m> splits completely into (not necessarily distinct) linear factors. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        There are no non-trivial algebraic extensions of <m>L</m>: If <m>L \subseteq E</m> is an algebraic field extension then <m>L = E</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\Rightarrow</m> (2): 
+                        Given a non-constant <m>f(x) \in L[x]</m>, by assumption <m>f</m> has a root <m>a \in L</m> and thus <m>f(x) = (x - a)g(x)</m> with <m>g(x) \in L[x]</m>. 
+                        But then <m>g</m> also has a root and so it too factors, and so on.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        <m>\Rightarrow</m> (3): 
+                        Say <m>L \subseteq E</m> is algebraic. 
+                        Pick <m>\a \in E</m>. 
+                        Then <m>\a</m> is a root of some <m>f(x) \in F[x]</m>. 
+                        But since <m>f</m> factors completely, <m>\a \in L</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>\Rightarrow</m> (1). Pick a non-constant <m>f(x) \in L[x]</m>. 
+                        By <xref provisional="cite"/> , there there is finite extension <m>L'</m> of <m>L</m> in which <m>f</m> does have a root. 
+                        By assumption <m>L = L'</m> and so this root must be in <m>L</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </proposition>
+    
+            <definition xml:id="def-algebraic-closure"><title>Algebraic Closure</title>
+              <statement>
+                <p>
+                  Given a field <m>F</m>, a field <m>\ov{F}</m> is called an <em>algebraic closure</em> of <m>F</m> if <m>\ov{F}</m> is an algebraic field extension of <m>F</m> and <m>\ov{F}</m> is algebraically closed.
+                  <idx><h>algebraic closute</h></idx>
+                </p>
+              </statement>
+            </definition>
+    
+            <example xml:id="exe-c-is-the-algebraic-closure-of-r">
               <p>
-                Let <m>a,b\in K</m>. 
-                Notice that <m>a\inv, ab,</m> and <m>a+b</m> are contained in <m>F(a,b)</m>. 
-                As <m>b\in K</m>, there exists some polynomial with coefficients in <m>F</m> such that <m>b</m> is a root. 
-                However, this polynomial also lives in <m>F(a)</m>, so we have <m>[F(a,b):F(a)]</m> algebraic. 
-                As <m>[F(a):F]</m> is also algebraic, we have <m>F[a,b]</m> algebraic as well, as it is a finite extension by the <xref text="title" ref="thm-degree-formula"/>. 
-                Thus <m>a+b, a\inv,</m> and <m>ab</m> are algebraic over <m>F</m> as well, making <m>K</m> a field.
+                <m>\C</m> is an algebraic closure of <m>\R</m>. 
+                This follows from the fact that <m>\R \subseteq \C</m> is a finite extension, hence algebraic, and the Fundamental Theorem of Algebra, which we will not prove.
               </p>
-  
-              <p>
-                Let <m>\a\in K</m>. 
-                Thus <m>\a</m> is the root of a polynomial <m>f(x)=a_nx^n+\dots+a_0</m>, where <m>a_{i}\in F</m>. 
-                Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)</m> as well, and thus <m>\a</m> is algebraic over this extension as well. 
-                Consider the chain of extensions 
-                <me>
-                  F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).
-                </me>
-                As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by <xref provisional="cite"/>
-                By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. 
-                Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
-              </p>
-            </proof>
-          </proposition>
-  
-          <theorem xml:id="thm-existence-and-uniqueness-of-algebraic-closures"><title>Existence and Uniqueness of Algebraic Closures</title>
-            <statement>
-              <p>
-                For any field <m>F</m>, there exists an algebraic closure of <m>F</m>. 
-                If <m>L</m> and <m>L'</m> are two algebraic closures of the same field <m>F</m>, then there exists a field isomorphism <m>\phi: L \xra{\cong} L'</m> such that <m>\phi|_F = \id_F</m> (i.e., <m>\phi(a) = a</m> for all <m>a \in F</m>).
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Fake Proof of Existence:
-              </p>
-  
-              <p>
-                Let <m>\cS</m> be the collection of all algebraic field extensions of <m>F</m>. 
-                Make <m>\cS</m> into a poset by declaring <m>L \leq L'</m> iff <m>L \subseteq L'</m>. 
-                We prove <m>\cS</m> has a maximal element.
-              </p>
-  
-              <p>
-                Let <m>\cT</m> be any totally ordered subset of <m>\cS</m>. 
-                If <m>\cT</m> is empty, then <m>F \in \cS</m> is an upper bound for <m>\cT</m>. 
-                If <m>\cT</m> is non-empty, set <m>K := \cup_{E \in \cT} E</m>. 
-                Using that <m>\cT</m> is totally ordered, it is not hard to see that <m>K</m> is indeed a field. 
-                It clearly contains <m>F</m> as a subfield and every element of it is algebraic over <m>F</m>. 
-                So <m>K \in \cS</m> and it is an upper bound for <m>\cT</m>. 
-                By <xref text="title" ref="lem-zorn"/>, <m>\cS</m> has a maximal member <m>L</m>.
-              </p>
-  
-              <p>
-                By construction <m>L</m> is algebraic over <m>F</m>. 
-                If <m>L</m> were not algebraically closed, then there would be a non-trivial algebraic extension <m>L \subsetneq E</m> of it, by <xref provisional="cite"/> . 
-                But then <m>F \subseteq E</m> is algebraic by Proposition <xref provisional="cite"/>, and this contradicts the maximality of <m>L</m>.
-              </p>
-  
-              <p>
-                Why is this only a fake proof? 
-                It's because <m>\cS</m>, as we've defined it, is not a <em>set</em> but rather it is something bigger than that. 
-                <xref text="title" ref="lem-zorn"/> only applies to po<em>sets</em>. 
-                How annoying!
-              </p>
-            </proof>
-          </theorem>
+            </example>
+    
+            <proposition xml:id="prop-collection-of-algebraic-elements-is-closed"><title>Collection of Algebraic Elements is Algebraically Closed</title>
+              <statement>
+                <p>
+                  Let 
+                  <me>
+                    \ov{\Q} := \{ z \in \C \mid z\text{ is algebraic over }\Q\}.
+                  </me> 
+                  Then <m>\ov{\Q}</m> is an algebraic closure of <m>\Q</m>.
+                </p>
+    
+                <p>
+                  More generally, if <m>F \subseteq L</m> is a field extension and <m>L</m> is algebraically closed, then the collection <m>\ov{F}</m> of elements of <m>L</m> that are algebraic over <m>F</m> is an algebraic closure of <m>F</m>.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  It is far from clear that <m>\ov{F}</m> is a subfield of <m>L</m>, and so we first prove that: Given <m>\a, \beta \in \ov{F}</m>, we have that <m>[F(\a): F]</m> and <m>[F(\a, \beta): F(\a)]</m> are finite and hence so is <m>[F(\a, \beta): F]</m>. Thus, every element of <m>F(\a, \beta)</m> is algebraic over <m>F</m>; that is, <m>F(\a, \beta) \subseteq \ov{F}</m>. Since <m>F(\a, \beta)</m> is a field, it follows that <m>\ov{F}</m> contains <m>\a \pm \beta</m>, <m>\a \cdot \beta</m> and <m>\a^{-1}</m> if <m>\a \ne 0</m>. This proves that <m>\ov{F}</m> is indeed a subfield of <m>L</m>.
+                </p>
+    
+                <p>
+                  It is clear from the definition that <m>F \subseteq \ov{F}</m> is an algebraic field extension.
+                </p>
+    
+                <p>
+                  Given a non-constant <m>g(x) \in \ov{F}[x]</m>, let <m>\a</m> be one of its roots in <m>L</m> (which exists since we assume <m>L</m> is algebraically closed). Then <m>\ov{F} \subseteq \ov{F}(\a)</m> is an algebraic extension and hence so is <m>F \subseteq \ov{F}(\a)</m> by Proposition . This proves <m>\a \in \ov{F}</m> and hence that <m>\ov{F}</m> is algebraically closed.
+                </p>
+              </proof>
+            </proposition>
+    
+            <theorem xml:id="thm-existence-and-uniqueness-of-algebraic-closures"><title>Existence and Uniqueness of Algebraic Closures</title>
+              <statement>
+                <p>
+                  For any field <m>F</m>, there exists an algebraic closure of <m>F</m>. 
+                  If <m>L</m> and <m>L'</m> are two algebraic closures of the same field <m>F</m>, then there exists a field isomorphism <m>\phi: L \xra{\cong} L'</m> such that <m>\phi|_F = \id_F</m> (i.e., <m>\phi(a) = a</m> for all <m>a \in F</m>).
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Fake Proof of Existence:
+                </p>
+    
+                <p>
+                  Let <m>\cS</m> be the collection of all algebraic field extensions of <m>F</m>. 
+                  Make <m>\cS</m> into a poset by declaring <m>L \leq L'</m> iff <m>L \subseteq L'</m>. 
+                  We prove <m>\cS</m> has a maximal element.
+                </p>
+    
+                <p>
+                  Let <m>\cT</m> be any totally ordered subset of <m>\cS</m>. 
+                  If <m>\cT</m> is empty, then <m>F \in \cS</m> is an upper bound for <m>\cT</m>. 
+                  If <m>\cT</m> is non-empty, set <m>K := \cup_{E \in \cT} E</m>. 
+                  Using that <m>\cT</m> is totally ordered, it is not hard to see that <m>K</m> is indeed a field. 
+                  It clearly contains <m>F</m> as a subfield and every element of it is algebraic over <m>F</m>. 
+                  So <m>K \in \cS</m> and it is an upper bound for <m>\cT</m>. 
+                  By <xref text="title" ref="lem-zorn"/>, <m>\cS</m> has a maximal member <m>L</m>.
+                </p>
+    
+                <p>
+                  By construction <m>L</m> is algebraic over <m>F</m>. 
+                  If <m>L</m> were not algebraically closed, then there would be a non-trivial algebraic extension <m>L \subsetneq E</m> of it, by <xref provisional="cite"/> . 
+                  But then <m>F \subseteq E</m> is algebraic by Proposition <xref provisional="cite"/>, and this contradicts the maximality of <m>L</m>.
+                </p>
+    
+                <p>
+                  Why is this only a fake proof? 
+                  It's because <m>\cS</m>, as we've defined it, is not a <em>set</em> but rather it is something bigger than that. 
+                  <xref text="title" ref="lem-zorn"/> only applies to po<em>sets</em>. 
+                  How annoying!
+                </p>
+              </proof>
+            </theorem>
+        
+          </subsection>
 
         </section>
   
         <section xml:id="sec-splitting"><title>Splitting Fields</title>
+
+          <subsection xml:id="subsec-splitting"><title>Split Up and Look For Clues</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  The best way to carve is not to split.
+                </q>
+              </p>
+              <attribution>Laozi</attribution>
+            </blockquote>
         
-          <definition xml:id="def-splitting-field"><title>Splitting Field</title>
-            <statement>
-              <p>
-                For a field <m>F</m> and non-constant polynomial <m>f(x) \in F[x]</m>, a <em>splitting field</em> of <m>f(x)</m> over <m>F</m> is a field extension <m>F \subseteq L</m> such that 
-                <ol>
-                  <li>
-                    <p>
-                      <m>f(x)</m> <em>splits</em> completely into linear factors in <m>L[x]</m>; that is, <m>f(x) = c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in L</m>, and 
-                    </p>
-                  </li>
+            <definition xml:id="def-splitting-field"><title>Splitting Field</title>
+              <statement>
+                <p>
+                  For a field <m>F</m> and non-constant polynomial <m>f(x) \in F[x]</m>, a <em>splitting field</em> of <m>f(x)</m> over <m>F</m> is a field extension <m>F \subseteq L</m> such that 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>f(x)</m> <em>splits</em> completely into linear factors in <m>L[x]</m>; that is, <m>f(x) = c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in L</m>, and 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>L = F(\a_1, \dots, \a_n)</m>; that is, <m>L</m> is the smallest subfield of <m>L</m> that contains <m>F</m> and all the roots of <m>f(x)</m>.
-                    </p>
-                  </li>
-                </ol>
-                <idx><h>splitting field</h></idx>
-              </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-common-splitting-fields"><title>Splitting Fields</title>
-            <p>
-              <ul>
-                <li>
-                  As a silly example, if <m>f(x)</m> already splits into linear factors over <m>F[x]</m>, then <m>F</m> itself is the splitting field of <m>f(x)</m> over <m>F</m>.
-                </li>
-  
-                <li>
-                  The splitting field of <m>x^2 + 1</m> over <m>\R</m> is <m>\C</m>.
-                </li>
+                    <li>
+                      <p>
+                        <m>L = F(\a_1, \dots, \a_n)</m>; that is, <m>L</m> is the smallest subfield of <m>L</m> that contains <m>F</m> and all the roots of <m>f(x)</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  <idx><h>splitting field</h></idx>
+                </p>
+              </statement>
+            </definition>
     
-                <li>
-                  If <m>q(x)</m> is any irreducible quadratic polynomial in <m>\R[x]</m>, then the splitting field of <m>q(x)</m> is <m>\C</m>.
-                </li>
+            <example xml:id="exe-common-splitting-fields"><title>Splitting Fields</title>
+              <p>
+                <ul>
+                  <li>
+                    As a silly example, if <m>f(x)</m> already splits into linear factors over <m>F[x]</m>, then <m>F</m> itself is the splitting field of <m>f(x)</m> over <m>F</m>.
+                  </li>
     
-                <li>
-                  In general, given <m>f(x) \in \Q[x]</m>, a splitting field of <m>f(x)</m> is given by <m>\Q(\a_1, \dots, \a_n)</m> where <m>\a_1, \dots, \a_n \in \C</m> are all of the roots of <m>f(x)</m> in <m>\C</m>.
-                </li>
-              </ul>
-            </p>
-          </example>
-  
-          <remark>
-            <p>
-              More generally, we may speak of the splitting field of a list of polynomials in <m>F[x]</m>: it is a field extension over which each polynomial factors completely and which is generated by all the roots of all the polynomials.
-            </p>
-  
-            <p>
-              Note that given a finite list <m>f_1(x), \dots, f_k(x) \in F[x]</m>, a splitting field for this list is identical to a splitting field for their product <m>f_1(x)\cdots f_k(x)</m>.
-            </p>
-          </remark>
-  
-          <theorem xml:id="thm-properties-of-splitting-fields"><title>Properties of Splitting Fields</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>f(x) \in F[x]</m> a non-constant polynomial. 
-                <ol>
                   <li>
-                    <p>
-                      There exists a splitting field <m>L</m> for <m>f(x)</m> over <m>F</m>. 
-                    </p>
+                    The splitting field of <m>x^2 + 1</m> over <m>\R</m> is <m>\C</m>.
                   </li>
+      
+                  <li>
+                    If <m>q(x)</m> is any irreducible quadratic polynomial in <m>\R[x]</m>, then the splitting field of <m>q(x)</m> is <m>\C</m>.
+                  </li>
+      
+                  <li>
+                    In general, given <m>f(x) \in \Q[x]</m>, a splitting field of <m>f(x)</m> is given by <m>\Q(\a_1, \dots, \a_n)</m> where <m>\a_1, \dots, \a_n \in \C</m> are all of the roots of <m>f(x)</m> in <m>\C</m>.
+                  </li>
+                </ul>
+              </p>
+            </example>
+    
+            <remark>
+              <p>
+                More generally, we may speak of the splitting field of a list of polynomials in <m>F[x]</m>: it is a field extension over which each polynomial factors completely and which is generated by all the roots of all the polynomials.
+              </p>
+    
+              <p>
+                Note that given a finite list <m>f_1(x), \dots, f_k(x) \in F[x]</m>, a splitting field for this list is identical to a splitting field for their product <m>f_1(x)\cdots f_k(x)</m>.
+              </p>
+            </remark>
+    
+            <theorem xml:id="thm-properties-of-splitting-fields"><title>Properties of Splitting Fields</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and <m>f(x) \in F[x]</m> a non-constant polynomial. 
+                  <ol>
+                    <li>
+                      <p>
+                        There exists a splitting field <m>L</m> for <m>f(x)</m> over <m>F</m>. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      If <m>F \subseteq L'</m> is another splitting field of <m>f(x)</m> over <m>F</m>, then there is a field isomorphism <m>\s: L \xra{\cong} L'</m> such that <m>\s|_F = \id_F</m>. 
-                    </p>
-                  </li>
+                    <li>
+                      <p>
+                        If <m>F \subseteq L'</m> is another splitting field of <m>f(x)</m> over <m>F</m>, then there is a field isomorphism <m>\s: L \xra{\cong} L'</m> such that <m>\s|_F = \id_F</m>. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      The degree of any splitting field of <m>f(x)</m> is at most <m>n!</m> where <m>n = \deg(f)</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
+                    <li>
+                      <p>
+                        The degree of any splitting field of <m>f(x)</m> is at most <m>n!</m> where <m>n = \deg(f)</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  For (1), let <m>\ov{F}</m> be an algebraic closure of <m>F</m>, which exists by the previous Theorem. 
+                  Let <m>\a_1, \dots, \a_m</m> be the roots of <m>f(x)</m> in <m>\ov{F}</m>, and set <m>L = F(\a_1, \dots, \a_m)</m>.
+                </p>
+    
+                <p>
+                  It is clear <m>L</m> is a splitting field.
+                </p>
+    
+                <p>
+                  To prove (2), we proceed by induction on the degree of <m>f(x)</m>. 
+                  If <m>f</m> is linear, then the only splitting field of <m>f</m> over <m>F</m> is <m>F</m> itself and so the result is clear in this case. 
+                  Say <m>\a_1, \dots, \a_m</m> and <m>\a'_1, \dots, \a'_m</m> are the roots of <m>f(x)</m> in <m>L</m> and <m>L'</m>, respectively, and say they are ordered so that, <m>\a_m</m> and <m>\a'_m</m> are roots of the same irreducible factor of <m>f(x)</m> in <m>F[x]</m>.
+                </p>
+    
+                <p>
+                  By Corollary  there is an isomorphism <m>\phi: F(\a_n) \xra{\cong} F(\a_n')</m> that fixes <m>F</m>. 
+                  Note that <m>f(x)</m> factors as <m>(x-\a_n) g(x)</m> in <m>F(\a_n)[x]</m> and that <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, and similarly <m>f(x)</m> factors as <m>(x-\a'_n) g'(x)</m> in <m>F(\a'_n)[x]</m> and that <m>L</m> is the splitting field of <m>g'(x)</m> over <m>F(\a'_n)</m>. 
+                  If we blur our eyes slightly and pretend <m>\phi</m> is the identity map, we can apply the inductive hypothesis, since <m>\deg(g) &lt; \deg(f)</m>, to conclude that there is an isomorphism <m>\s</m> as in the statement.
+                  I leave a more rigorous argument to your imaginations.
+                </p>
+    
+                <p>
+                  To prove (3), we also proceed by induction on the degree of <m>f</m>, using the same notation as in the proof of (2).
+                </p>
+    
+                <p>
+                  Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence 
+                  <me>
+                    [F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.
+                  </me> 
+                  In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. 
+                  By the <xref text="title" ref="thm-degree-formula"/> 
+                  <me>
+                    [L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.
+                  </me>
+                </p>
+              </proof>
+            </theorem>
+    
+            <remark>
               <p>
-                For (1), let <m>\ov{F}</m> be an algebraic closure of <m>F</m>, which exists by the previous Theorem. 
-                Let <m>\a_1, \dots, \a_m</m> be the roots of <m>f(x)</m> in <m>\ov{F}</m>, and set <m>L = F(\a_1, \dots, \a_m)</m>.
+                Recall from before that we proved there exists a field extension <m>F \subseteq E</m> in which <m>f(x)</m> has at least one root. So <m>f(x) = (x-\a_1) g(x)</m> for some <m>\a_1 \in E</m> and <m>g(x) \in E[x]</m>. 
+                We can then find a field extension of <m>E</m> in which <m>g</m> has at least one root <m>\a_2</m>, and so on. 
+                In this way we build a field extension <m>F \subseteq K</m> such that <m>g</m> factors in <m>K</m> as <m>c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in K</m>. 
+                Finally, <m>L = F(\a_1, \dots, \a_n)</m> is a splitting field of <m>f</m>.
               </p>
-  
+            </remark>
+            
+            <example xml:id="exe-splitting-fields-and-x3-2">
               <p>
-                It is clear <m>L</m> is a splitting field.
+                The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. 
+                It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. 
+                We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by <xref text="title" ref="thm-eisensteins-criterion"/>). 
+                Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. 
+                By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. 
+                (We could also have proven this without appealing to the Theorem.)
               </p>
-  
+            </example>
+    
+            <example xml:id="exe-splitting-fields-and-x4-5x26">
               <p>
-                To prove (2), we proceed by induction on the degree of <m>f(x)</m>. 
-                If <m>f</m> is linear, then the only splitting field of <m>f</m> over <m>F</m> is <m>F</m> itself and so the result is clear in this case. 
-                Say <m>\a_1, \dots, \a_m</m> and <m>\a'_1, \dots, \a'_m</m> are the roots of <m>f(x)</m> in <m>L</m> and <m>L'</m>, respectively, and say they are ordered so that, <m>\a_m</m> and <m>\a'_m</m> are roots of the same irreducible factor of <m>f(x)</m> in <m>F[x]</m>.
-              </p>
-  
-              <p>
-                By Corollary  there is an isomorphism <m>\phi: F(\a_n) \xra{\cong} F(\a_n')</m> that fixes <m>F</m>. 
-                Note that <m>f(x)</m> factors as <m>(x-\a_n) g(x)</m> in <m>F(\a_n)[x]</m> and that <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, and similarly <m>f(x)</m> factors as <m>(x-\a'_n) g'(x)</m> in <m>F(\a'_n)[x]</m> and that <m>L</m> is the splitting field of <m>g'(x)</m> over <m>F(\a'_n)</m>. 
-                If we blur our eyes slightly and pretend <m>\phi</m> is the identity map, we can apply the inductive hypothesis, since <m>\deg(g) &lt; \deg(f)</m>, to conclude that there is an isomorphism <m>\s</m> as in the statement.
-                I leave a more rigorous argument to your imaginations.
-              </p>
-  
-              <p>
-                To prove (3), we also proceed by induction on the degree of <m>f</m>, using the same notation as in the proof of (2).
-              </p>
-  
-              <p>
-                Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence 
+                The splitting field of <m>f(x) = x^4 - 5x^2 + 6</m> is 
                 <me>
-                  [F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.
+                  \Q(\sqrt{2}, -\sqrt{2}, \sqrt{3}, -\sqrt{3}) = \Q(\sqrt{2}, \sqrt{3}) = \Q(\sqrt{2} + \sqrt{3}).
                 </me> 
-                In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. 
-                By the <xref text="title" ref="thm-degree-formula"/> 
-                <me>
-                  [L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.
-                </me>
+                This holds since <m>f(x) = (x^2-3)(x^2-2)</m>. 
+                It is not too hard to see that the degree of this splitting field over <m>\Q</m> is <m>4</m>, far smaller than the <m>4!</m> upper bound given by the Theorem.
               </p>
-            </proof>
-          </theorem>
-  
-          <remark>
-            <p>
-              Recall from before that we proved there exists a field extension <m>F \subseteq E</m> in which <m>f(x)</m> has at least one root. So <m>f(x) = (x-\a_1) g(x)</m> for some <m>\a_1 \in E</m> and <m>g(x) \in E[x]</m>. 
-              We can then find a field extension of <m>E</m> in which <m>g</m> has at least one root <m>\a_2</m>, and so on. 
-              In this way we build a field extension <m>F \subseteq K</m> such that <m>g</m> factors in <m>K</m> as <m>c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in K</m>. 
-              Finally, <m>L = F(\a_1, \dots, \a_n)</m> is a splitting field of <m>f</m>.
-            </p>
-          </remark>
-          
-          <example xml:id="exe-splitting-fields-and-x3-2">
-            <p>
-              The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. 
-              It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. 
-              We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by <xref text="title" ref="thm-eisensteins-criterion"/>). 
-              Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. 
-              By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. 
-              (We could also have proven this without appealing to the Theorem.)
-            </p>
-          </example>
-  
-          <example xml:id="exe-splitting-fields-and-x4-5x26">
-            <p>
-              The splitting field of <m>f(x) = x^4 - 5x^2 + 6</m> is 
-              <me>
-                \Q(\sqrt{2}, -\sqrt{2}, \sqrt{3}, -\sqrt{3}) = \Q(\sqrt{2}, \sqrt{3}) = \Q(\sqrt{2} + \sqrt{3}).
-              </me> 
-              This holds since <m>f(x) = (x^2-3)(x^2-2)</m>. 
-              It is not too hard to see that the degree of this splitting field over <m>\Q</m> is <m>4</m>, far smaller than the <m>4!</m> upper bound given by the Theorem.
-            </p>
-          </example>
-  
-          <example xml:id="exe-splitting-fields-and-xn-1">
-            <p>
-              Let <m>f(x) = x^n -1 \in \Q[x]</m>. 
-              Then <m>f(x)</m> splits completely in <m>\C[x]</m> and its roots are the <m>n</m> <m>n</m>-th roots of <m>1</m>. 
-              One of these is <m>\zeta_n := e^{2 \pi i/n}</m>. 
-              Notice that every other <m>n</m>-th root of <m>1</m> is a power of this one. 
-              We thus see that <m>\Q(\zeta_n)</m> is the splitting field of <m>x^n-1</m> over <m>\Q</m>. 
-              This field is called the {} of <m>n-th</m> roots of 1 over <m>\Q</m>. 
-              This is a somewhat special example: upon joining one of the roots of <m>f</m> we got all the others for free. 
-              This happens in other examples too, but is certainly {} a general principle.
-            </p>
-  
-            <p>
-              In particular, we see that the degree of <m>\Q \subseteq \Q(\zeta_n)</m> is at most <m>n</m>, far less than the bound of <m>n!</m> given by the Proposition above. 
-              In fact, it is at most <m>n-1</m> since <m>f</m> factors as <m>(x-1)(x^{n-1} + \cdots + x + 1)</m>, and hence the minimum polynomial of <m>\zeta_n</m> is a divisor of <m>x^{n-1} + \cdots + x + 1</m>.
-            </p>
-  
-            <p>
-              When <m>n = p</m> is prime, then <m>x^{p-1} + \cdots + x + 1</m> is irreducible, as we proved before, and hence it must equal the minimum polynomial of <m>\zeta_p</m>. 
-              So, in this case, the degree of <m>\Q \subseteq \Q(\zeta_p)</m> is exactly <m>p-1</m>, but it can be smaller than <m>n-1</m> in general; 
-              for example, when <m>n = 4</m>, <m>\zeta_4= i</m> and <m>[\Q(i): \Q] = 2</m>. Note that <m>x^3 + x^2 + x + 1</m> factors as <m>(x^2+1)(x+1)</m> and of course <m>m_{i, \Q}(x) = x^2 + 1</m>.
-            </p>
-  
-            <p>
-              The irreducible polynomial <m>m_{\zeta_n, \Q}(x)</m> is known as the {}.
-            </p>
-          </example>
-  
-          <corollary xml:id="cor-porism"><title>The Porism</title>
-            <idx><h>porism</h></idx>
-            <statement>
+            </example>
+    
+            <example xml:id="exe-splitting-fields-and-xn-1">
               <p>
-                If <m>L</m> is the splitting field over <m>F</m> of an irreducible polynomial <m>f(x) \in \F[x]</m> and if <m>\a, \beta \in L</m> are any two roots of <m>f</m>, then there is a field automorphism <m>\s: L \xra{\cong} L</m> such that <m>\s|_F = \id_F</m> and <m>\s(\a) = \beta</m>.
+                Let <m>f(x) = x^n -1 \in \Q[x]</m>. 
+                Then <m>f(x)</m> splits completely in <m>\C[x]</m> and its roots are the <m>n</m> <m>n</m>-th roots of <m>1</m>. 
+                One of these is <m>\zeta_n := e^{2 \pi i/n}</m>. 
+                Notice that every other <m>n</m>-th root of <m>1</m> is a power of this one. 
+                We thus see that <m>\Q(\zeta_n)</m> is the splitting field of <m>x^n-1</m> over <m>\Q</m>. 
+                This field is called the {} of <m>n-th</m> roots of 1 over <m>\Q</m>. 
+                This is a somewhat special example: upon joining one of the roots of <m>f</m> we got all the others for free. 
+                This happens in other examples too, but is certainly {} a general principle.
               </p>
-            </statement>
-  
-            <proof>
+    
               <p>
-                We basically already proved this, but since it is of large importance, let's do so again:
+                In particular, we see that the degree of <m>\Q \subseteq \Q(\zeta_n)</m> is at most <m>n</m>, far less than the bound of <m>n!</m> given by the Proposition above. 
+                In fact, it is at most <m>n-1</m> since <m>f</m> factors as <m>(x-1)(x^{n-1} + \cdots + x + 1)</m>, and hence the minimum polynomial of <m>\zeta_n</m> is a divisor of <m>x^{n-1} + \cdots + x + 1</m>.
               </p>
-  
+    
               <p>
-                Since <m>\a, \beta</m> are roots of the same irreducible polynomial, by Corollary  there is an isomorphism <m>\tau: F(\a) \to F(\beta)</m> such that <m>\tau|_F = \id_F</m> and <m>\tau(\a) = \beta</m>. 
-                We have two field maps, <m>F(\a) \into L</m> (actual inclusion) and the composition of <m>F(\a) \xra{\tau} F(\beta)\into L</m>, and they realize <m>L</m> as the splitting field of <m>f(x)</m> over <m>F(\a)</m> in two different ways. 
-                Since splitting fields are unique, an isomorphism such as <m>\s</m> exists.
+                When <m>n = p</m> is prime, then <m>x^{p-1} + \cdots + x + 1</m> is irreducible, as we proved before, and hence it must equal the minimum polynomial of <m>\zeta_p</m>. 
+                So, in this case, the degree of <m>\Q \subseteq \Q(\zeta_p)</m> is exactly <m>p-1</m>, but it can be smaller than <m>n-1</m> in general; 
+                for example, when <m>n = 4</m>, <m>\zeta_4= i</m> and <m>[\Q(i): \Q] = 2</m>. Note that <m>x^3 + x^2 + x + 1</m> factors as <m>(x^2+1)(x+1)</m> and of course <m>m_{i, \Q}(x) = x^2 + 1</m>.
               </p>
-            </proof>
-          </corollary>
-  
-          <example xml:id="exe-porism-and-x3-2">
-            <p>
-              Let <m>L</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>; so <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3}\sqrt[3]{2}, e^{4 \pi i/3}\sqrt[3]{2})</m>.
-            </p>
-  
-            <p>
-              <xref ref="cor-porism"/> gives that there is a field automorphism <m>\s</m> of <m>L</m> such that <m>\s(e^{2 \pi i/3}\sqrt[3]{2}) = e^{4 \pi i/3}\sqrt[3]{2}</m>. 
-              Complex conjugation gives such an isomorphism.
-            </p>
-  
-            <p>
-              It also gives there is a field automorphism <m>\tau</m> of <m>L</m> such that <m>\tau(\sqrt[3]{2}) = e^{2 \pi i/3}\sqrt[3]{2}</m>. 
-              This is less obvious.
-            </p>
-          </example>
+    
+              <p>
+                The irreducible polynomial <m>m_{\zeta_n, \Q}(x)</m> is known as the {}.
+              </p>
+            </example>
+    
+            <corollary xml:id="cor-porism"><title>The Porism</title>
+              <idx><h>porism</h></idx>
+              <statement>
+                <p>
+                  If <m>L</m> is the splitting field over <m>F</m> of an irreducible polynomial <m>f(x) \in \F[x]</m> and if <m>\a, \beta \in L</m> are any two roots of <m>f</m>, then there is a field automorphism <m>\s: L \xra{\cong} L</m> such that <m>\s|_F = \id_F</m> and <m>\s(\a) = \beta</m>.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  We basically already proved this, but since it is of large importance, let's do so again:
+                </p>
+    
+                <p>
+                  Since <m>\a, \beta</m> are roots of the same irreducible polynomial, by Corollary  there is an isomorphism <m>\tau: F(\a) \to F(\beta)</m> such that <m>\tau|_F = \id_F</m> and <m>\tau(\a) = \beta</m>. 
+                  We have two field maps, <m>F(\a) \into L</m> (actual inclusion) and the composition of <m>F(\a) \xra{\tau} F(\beta)\into L</m>, and they realize <m>L</m> as the splitting field of <m>f(x)</m> over <m>F(\a)</m> in two different ways. 
+                  Since splitting fields are unique, an isomorphism such as <m>\s</m> exists.
+                </p>
+              </proof>
+            </corollary>
+    
+            <example xml:id="exe-porism-and-x3-2">
+              <p>
+                Let <m>L</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>; so <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3}\sqrt[3]{2}, e^{4 \pi i/3}\sqrt[3]{2})</m>.
+              </p>
+    
+              <p>
+                <xref ref="cor-porism"/> gives that there is a field automorphism <m>\s</m> of <m>L</m> such that <m>\s(e^{2 \pi i/3}\sqrt[3]{2}) = e^{4 \pi i/3}\sqrt[3]{2}</m>. 
+                Complex conjugation gives such an isomorphism.
+              </p>
+    
+              <p>
+                It also gives there is a field automorphism <m>\tau</m> of <m>L</m> such that <m>\tau(\sqrt[3]{2}) = e^{2 \pi i/3}\sqrt[3]{2}</m>. 
+                This is less obvious.
+              </p>
+            </example>
+        
+          </subsection>
   
         </section>
 
         <section xml:id="sec-separable"><title>Separability</title>
 
-          <definition xml:id="def-ring-characteristic"><title>Characteristic</title>
-            <statement>
+          <subsection xml:id="subsec-characteristic"><title>Ring Characteristic</title>
+
+            <blockquote>
               <p>
-                Let <m>R</m> be a commutative ring. 
-                The <em>characteristic</em> of <m>R</m>, written <m>\char(R)</m>, is the unique non-negative generator of the kernel of the unique ring homomorphism <m>\varphi: \Z \to R</m>. 
-                (Recall <m>\varphi(n) = n \cdot 1_R</m>.)
-                <idx><h>characteristic</h></idx>
+                <q>
+                  Life is a zero sum game.
+                </q>
+              </p>
+              <attribution>George Carlin</attribution>
+            </blockquote>
+
+            <definition xml:id="def-ring-characteristic"><title>Characteristic</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring. 
+                  The <em>characteristic</em> of <m>R</m>, written <m>\char(R)</m>, is the unique non-negative generator of the kernel of the unique ring homomorphism <m>\varphi: \Z \to R</m>. 
+                  (Recall <m>\varphi(n) = n \cdot 1_R</m>.)
+                  <idx><h>characteristic</h></idx>
+                </p>
+
+                <p>
+                  Equivalently, <m>\char(R)</m> is the smallest positive integer <m>n</m> such that <m>n\cdot 1_R=\underbrace{1_R+\cdots+1_R}_{n}=0_R</m>, if such and integer exists, and <m>\char(R) = 0</m> otherwise.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                Observe that for any integer <m>n</m> and commutative ring <m>R</m>, we have <m>n = 0</m> in <m>R</m> (i.e., <m>n \cdot 1_R = 0</m>) if and only if <m>\char(R) \mid n</m>.
+              </p>
+            </remark>
+
+            <example xml:id="exe-charz"><title><m>\char(\Z)</m></title>
+
+              <p>
+                <m>\char(\Z)=0</m> and <m>\char(\Z/n)=n</m> for any <m>n \geq 0</m>.
+              </p>
+
+            </example>
+
+            <definition xml:id="def-prime-field"><title>Prime Field</title>
+              <statement>
+                <p>
+                  For a field <m>F</m> its <em>prime field</em> is the smallest subfield of <m>F</m>; i.e., it is the intersection of all subfields of <m>F</m>.
+                  <idx><h>prime field</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-characteristic-and-prime-fields"><title>Prime Fields and Characteristic</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field. 
+                  <ol>
+                    <li>
+                      <p>
+                        The characteristic <m>\char(F)</m> is either <m>0</m> or a prime number <m>p</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\char(F) = 0</m> if and only if the prime subfield of <m>F</m> is isomorphic to <m>\Q</m>; <m>\char(F) = p</m> for a prime integer <m>p</m> if and only if the prime subfield of <m>F</m> is isomorphic to <m>\Z/p</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  For the first assertion, consider the unique ring homomorphism <m>\varphi:\Z \to F</m>. 
+                  Since <m>F</m> is a domain, the kernel of <m>\varphi</m> is a prime ideal (since <m>\Z/\ker(\varphi) \cong \im(\varphi)</m> and <m>\im(\varphi)</m> is a subring of <m>F</m>). 
+                  The result holds since the only prime ideals of <m>\Z</m> are <m>(0)</m> and <m>(p)</m> for a prime integer <m>p</m>. 
+                  (Note that this proof shows that, more generally, the characteristic of an integral domain must be either <m>0</m> or a prime.)
+                </p>
+
+                <p>
+                  For the second assertion, observe that the smallest {} of <m>F</m> is the image of the ring map <m>\varphi: \Z \to F</m>, and by the first assertion, this image is isomorphic to either <m>\Z</m> or <m>\Z/p</m>. 
+                  The latter is already a field and hence it is the prime field of <m>F</m>. 
+                  In the former case, the prime subfield is isomorphic to the field of fractions of <m>\Z</m>, which is <m>\Q</m>.
+                </p>
+              </proof>
+            </proposition>
+
+            <proposition xml:id="prop-no-homomorphisms-if-different-characteristics"><title>No Homomorphisms if Different Characteristics</title>
+              <statement>
+                <p>
+                  If <m>F</m> and <m>E</m> are fields such that <m>\char(F) \ne \char(E)</m> then there exist no ring homomorphisms from <m>E</m> to <m>F</m> (or vice versa).
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Suppose <m>F</m> and <m>E</m> are fields and <m>\s: F \to E</m> is a ring homomorphism. 
+                  Let <m>\phi_F: \Z \to F</m> and <m>\phi_E: \Z \to E</m> be the unique ring maps from <m>\Z</m> to <m>F</m> and <m>E</m>. 
+                  Since <m>\s \circ \phi_F</m> is a ring map from <m>\Z</m> to <m>E</m>, we have <m>\s \circ \phi_F = \phi_E</m> by the uniqueness of <m>\phi_E</m>. 
+                  Since <m>F</m> is a field and <m>E</m> is not the zero ring, the map <m>\s</m> is injective. 
+                  Since <m>\s</m> is injective, it follows that <m>\ker(\s \circ \phi_F) = \ker(\phi_F)</m>, and hence we obtain that <m>\ker(\phi_F) = \ker(\phi_E)</m>. 
+                  By definition of characteristic, we conclude <m>\ker(E) = \ker(F)</m>.
+                </p>
+              </proof>
+            </proposition>
+        
+          </subsection>
+          
+          <subsection xml:id="subsec-sep-poly"><title>Separable Polynomials</title>
+            
+            <blockquote>
+              <p>
+                <q>
+                  I'm trying to be very aware of not repeating myself.
+                </q>
+              </p>
+              <attribution>Christoph Waltz</attribution>
+            </blockquote>
+
+            <definition xml:id="def-root-multiplicity"><title>Root Multiplicity</title>
+              <statement>
+                <p>
+                  For a field <m>F</m> and a polynomial <m>f(x) \in F[x]</m>, let <m>\ov{F}</m> be an algebraic closure of <m>F</m> and <m>\a \in \ov{F}</m> a root of <m>f(x)</m>. 
+                  The <em>multiplicity</em> of <m>\a</m> in <m>f</m> is the number of times <m>(x - \a)</m> appears in the factorization <m>f(x) = c \prod_i (x - \a_i)</m> of <m>f</m> in <m>\ov{F}[x]</m>. 
+                  (This number is independent of choice of algebraic closure by uniqueness of such closures up to isomorphism.)
+                  <idx><h>mutliplicity of a root</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-separable-polynomial"><title>Separable (Polynomial)</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and <m>f(x)</m> a polynomial in <m>F[x]</m>. 
+                  If the multiplicity of every root is <m>1</m>, we say <m>f(x)</m> is a <em>separable polynomial</em>; 
+                  i.e. <m>f</m> is separable provided it has no repeated roots.
+                  <idx><h>separable polynomial</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-derivative"><title>Derivative</title>
+              <statement>
+                <p>
+                  For any field <m>F</m> and <m>f(x) = a_n x^n + \dots + a_1 x + a_0 \in F[x]</m>, define its <em>derivative</em> to be 
+                  <me>
+                    f'(x) = n a_n x^{n-1} + (n-1) a_{n-1} x^{n-2} + \cdots + 2 a_2 x + a_1.
+                  </me>
+                  <idx><h>derivative of a polynomial</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="exe-derivatives-in-characteristic-p"><title>Derivatives in Characteristic <m>p</m></title>
+              <p>
+                If <m>\char(F) = p</m> and <m>f(x) = x^p +c</m> for <m>c \in F</m>, then <m>f'(x) = 0</m>. 
+                So beware that non-constant polynomials can have <m>0</m> derivatives! 
+                Observe, however, that this cannot occur in characteristic <m>0</m>.
+              </p>
+            </example>
+
+            <lemma xml:id="lem-gcd-and-field-extensions"><title>GCD and Field Extensions</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field. 
+                  For <m>f, g \in F[x]</m>, not both of which are <m>0</m>, recall that <m>\gcd_{F[x]}(f,g)</m> denotes the unique monic generator of the ideal in <m>F[x]</m> generated by <m>f</m> and <m>g</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        For any field extension <m>F \subseteq L</m>, <m>\gcd_{F[x]}(f,g) = \gcd_{L[x]}(f,g)</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>\overline{F}</m> be an algebraic closure of <m>F</m>. <m>\gcd_{F[x]}(f,g) = 1</m> if any only if <m>f</m> and <m>g</m> have no common roots in <m>\overline{F}</m>.
+                      </p>
+                    </li>
+                  </ol> 
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>h = \gcd_{F[x]}(f, g)</m>. 
+                  To prove (1), we note that <m>h</m> is the unique monic polynomial such that
+                  - <m>h = f \cdot p + g \cdot q</m> for some <m>p,q \in F[x]</m>, 
+                  - <m>f = h \cdot \a</m> for soem <m>\a \in F[x]</m>, and 
+                  - <m>g = h \cdot \beta</m> for soem <m>\beta \in F[x]</m>. 
+                  Since <m>F[x]</m> is a subring of <m>L[x]</m>, these three properties also hold when we regard <m>h,f,g</m> as belonging to <m>L[x]</m> and thus by the uniqueness property, we have <m>h = \gcd_{L[x]}(f,g)</m>.
+                </p>
+
+                <p>
+                  <ol>
+                    <li>
+                      is a consequence of (1), since if two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common.
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </lemma>
+
+            <theorem xml:id="prop-criteria-for-separability"><title>Criteria for Separability</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be field and <m>\ov{F}</m> an algebraic closure of <m>F</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Given <m>f(x) \in F[x]</m> and <m>\a \in \ov{F}</m>, the multiplicity of <m>\a</m> in <m>f(x)</m> is at least <m>2</m> if and only if <m>f(\a) = 0</m> and <m>f'(\a) = 0</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>f</m> is separable if and only if <m>\gcd(f(x), f'(x)) = 1</m> in <m>F[x]</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>f(x)</m> is irreducible in <m>F[x]</m>, then <m>f</m> is separable if and only if <m>f'(x) \neq 0</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  For (1), suppose <m>\a</m> is a root of <m>f(x)</m> of multiplicity at least two. 
+                  Then <m>f(x) = (x-\a)^2g(x)</m> in <m>\ov{F}[x]</m> and hence <m>f'(x) = 2(x - \a) g(x) + (x-\a)^2 g(x)</m>, by the Product Rule. 
+                  It follows that <m>f'(\a) = 0</m>. 
+                  Conversely, suppose <m>f(\a) = f'(\a) =0</m>.
+                  Since <m>f(\a) = 0</m>, we have <m>f(x) = (x-\a)h(x)</m> and hence <m>f'(x) = h(x) + (x-\a)h'(x)</m>. 
+                  Since <m>f'(\a) = 0</m> it follows <m>h(\a) = 0</m> and thus <m>\a</m> has multiplicity at least two.
+                </p>
+
+                <p>
+                  For the second assertion, by (1), we have that <m>f</m> is separable if and only if <m>f</m> and <m>f'</m> has no common roots in <m>\ov{F}</m>. 
+                  The result thus follows from the Lemma <xref provisional="cite"/>
+                </p>
+
+                <p>
+                  For the final assertion, assume <m>f(x)</m> is irreducible. 
+                  Since the degree of <m>f'(x)</m> is strictly less than the degree of <m>f(x)</m>, we have that <m>\gcd(f(x),f'(x)) \ne 1</m> if and only if <m>f'(x) = 0</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <example xml:id="ex-separability-and-x4-x3-x1"><title>Separability and <m>(x^4-x^3-x+1)</m></title>
+              <p>
+                <m>x^4 -x^3 -x + 1</m> is not separable sine <m>x-1</m> is a double root (it factors as <m>(x^3-1)(x-1) = (x^2+x+1)(x-1)^2</m>). 
+                As predicted by the Theorem <xref provisional="cite"/>, it fails to be relatively prime to its derivative, which is <m>4x^3 - 3x^2 -1</m>, since each are divisible by <m>x-1</m>.
               </p>
 
               <p>
-                Equivalently, <m>\char(R)</m> is the smallest positive integer <m>n</m> such that <m>n\cdot 1_R=\underbrace{1_R+\cdots+1_R}_{n}=0_R</m>, if such and integer exists, and <m>\char(R) = 0</m> otherwise.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              Observe that for any integer <m>n</m> and commutative ring <m>R</m>, we have <m>n = 0</m> in <m>R</m> (i.e., <m>n \cdot 1_R = 0</m>) if and only if <m>\char(R) \mid n</m>.
-            </p>
-          </remark>
-
-          <example xml:id="exe-charz"><title><m>\char(\Z)</m></title>
-
-            <p>
-              <m>\char(\Z)=0</m> and <m>\char(\Z/n)=n</m> for any <m>n \geq 0</m>.
-            </p>
-
-          </example>
-
-          <definition xml:id="def-prime-field"><title>Prime Field</title>
-            <statement>
-              <p>
-                For a field <m>F</m> its <em>prime field</em> is the smallest subfield of <m>F</m>; i.e., it is the intersection of all subfields of <m>F</m>.
-                <idx><h>prime field</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <proposition xml:id="prop-characteristic-and-prime-fields"><title>Prime Fields and Characteristic</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field. 
-                <ol>
-                  <li>
-                    <p>
-                      The characteristic <m>\char(F)</m> is either <m>0</m> or a prime number <m>p</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\char(F) = 0</m> if and only if the prime subfield of <m>F</m> is isomorphic to <m>\Q</m>; <m>\char(F) = p</m> for a prime integer <m>p</m> if and only if the prime subfield of <m>F</m> is isomorphic to <m>\Z/p</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                For the first assertion, consider the unique ring homomorphism <m>\varphi:\Z \to F</m>. 
-                Since <m>F</m> is a domain, the kernel of <m>\varphi</m> is a prime ideal (since <m>\Z/\ker(\varphi) \cong \im(\varphi)</m> and <m>\im(\varphi)</m> is a subring of <m>F</m>). 
-                The result holds since the only prime ideals of <m>\Z</m> are <m>(0)</m> and <m>(p)</m> for a prime integer <m>p</m>. 
-                (Note that this proof shows that, more generally, the characteristic of an integral domain must be either <m>0</m> or a prime.)
+                <m>x^3-1</m> is separable in <m>\R[x]</m> because it has <m>3</m> distinct roots in <m>\C</m>, namely <m>1,\zeta_3,\zeta_3^2</m>. 
+                As predicted by the Theorem, it is relatively prime to its derivative <m>3x^2</m>.
               </p>
 
               <p>
-                For the second assertion, observe that the smallest {} of <m>F</m> is the image of the ring map <m>\varphi: \Z \to F</m>, and by the first assertion, this image is isomorphic to either <m>\Z</m> or <m>\Z/p</m>. 
-                The latter is already a field and hence it is the prime field of <m>F</m>. 
-                In the former case, the prime subfield is isomorphic to the field of fractions of <m>\Z</m>, which is <m>\Q</m>.
+                Now interpret <m>x^3 - 1</m> as belonging to <m>(\Z/3)[x]</m>. 
+                Then <m>x^3 - 1 = (x-1)^3</m> is not separable. 
+                As predicted by the Theorem, it is not relatively prime to its derivative, which is <m>0</m>.
               </p>
-            </proof>
-          </proposition>
 
-          <proposition xml:id="prop-no-homomorphisms-if-different-characteristics"><title>No Homomorphisms if Different Characteristics</title>
-            <statement>
+            </example>
+
+            <example xml:id="ex-zpy"><title><m>\Z/p(y)</m></title>
               <p>
-                If <m>F</m> and <m>E</m> are fields such that <m>\char(F) \ne \char(E)</m> then there exist no ring homomorphisms from <m>E</m> to <m>F</m> (or vice versa).
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>F</m> and <m>E</m> are fields and <m>\s: F \to E</m> is a ring homomorphism. 
-                Let <m>\phi_F: \Z \to F</m> and <m>\phi_E: \Z \to E</m> be the unique ring maps from <m>\Z</m> to <m>F</m> and <m>E</m>. 
-                Since <m>\s \circ \phi_F</m> is a ring map from <m>\Z</m> to <m>E</m>, we have <m>\s \circ \phi_F = \phi_E</m> by the uniqueness of <m>\phi_E</m>. 
-                Since <m>F</m> is a field and <m>E</m> is not the zero ring, the map <m>\s</m> is injective. 
-                Since <m>\s</m> is injective, it follows that <m>\ker(\s \circ \phi_F) = \ker(\phi_F)</m>, and hence we obtain that <m>\ker(\phi_F) = \ker(\phi_E)</m>. 
-                By definition of characteristic, we conclude <m>\ker(E) = \ker(F)</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <definition xml:id="def-root-multiplicity"><title>Root Multiplicity</title>
-            <statement>
-              <p>
-                For a field <m>F</m> and a polynomial <m>f(x) \in F[x]</m>, let <m>\ov{F}</m> be an algebraic closure of <m>F</m> and <m>\a \in \ov{F}</m> a root of <m>f(x)</m>. 
-                The <em>multiplicity</em> of <m>\a</m> in <m>f</m> is the number of times <m>(x - \a)</m> appears in the factorization <m>f(x) = c \prod_i (x - \a_i)</m> of <m>f</m> in <m>\ov{F}[x]</m>. 
-                (This number is independent of choice of algebraic closure by uniqueness of such closures up to isomorphism.)
-                <idx><h>mutliplicity of a root</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-separable-polynomial"><title>Separable (Polynomial)</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>f(x)</m> a polynomial in <m>F[x]</m>. 
-                If the multiplicity of every root is <m>1</m>, we say <m>f(x)</m> is a <em>separable polynomial</em>; 
-                i.e. <m>f</m> is separable provided it has no repeated roots.
-                <idx><h>separable polynomial</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-derivative"><title>Derivative</title>
-            <statement>
-              <p>
-                For any field <m>F</m> and <m>f(x) = a_n x^n + \dots + a_1 x + a_0 \in F[x]</m>, define its <em>derivative</em> to be 
-                <me>
-                  f'(x) = n a_n x^{n-1} + (n-1) a_{n-1} x^{n-2} + \cdots + 2 a_2 x + a_1.
-                </me>
-                <idx><h>derivative of a polynomial</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="exe-derivatives-in-characteristic-p"><title>Derivatives in Characteristic <m>p</m></title>
-            <p>
-              If <m>\char(F) = p</m> and <m>f(x) = x^p +c</m> for <m>c \in F</m>, then <m>f'(x) = 0</m>. 
-              So beware that non-constant polynomials can have <m>0</m> derivatives! 
-              Observe, however, that this cannot occur in characteristic <m>0</m>.
-            </p>
-          </example>
-
-          <lemma xml:id="lem-gcd-and-field-extensions"><title>GCD and Field Extensions</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field. 
-                For <m>f, g \in F[x]</m>, not both of which are <m>0</m>, recall that <m>\gcd_{F[x]}(f,g)</m> denotes the unique monic generator of the ideal in <m>F[x]</m> generated by <m>f</m> and <m>g</m>.
-                <ol>
-                  <li>
-                    <p>
-                      For any field extension <m>F \subseteq L</m>, <m>\gcd_{F[x]}(f,g) = \gcd_{L[x]}(f,g)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>\overline{F}</m> be an algebraic closure of <m>F</m>. <m>\gcd_{F[x]}(f,g) = 1</m> if any only if <m>f</m> and <m>g</m> have no common roots in <m>\overline{F}</m>.
-                    </p>
-                  </li>
-                </ol> 
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>h = \gcd_{F[x]}(f, g)</m>. 
-                To prove (1), we note that <m>h</m> is the unique monic polynomial such that
-                 - <m>h = f \cdot p + g \cdot q</m> for some <m>p,q \in F[x]</m>, 
-                 - <m>f = h \cdot \a</m> for soem <m>\a \in F[x]</m>, and 
-                 - <m>g = h \cdot \beta</m> for soem <m>\beta \in F[x]</m>. 
-                 Since <m>F[x]</m> is a subring of <m>L[x]</m>, these three properties also hold when we regard <m>h,f,g</m> as belonging to <m>L[x]</m> and thus by the uniqueness property, we have <m>h = \gcd_{L[x]}(f,g)</m>.
+                Let <m>F</m> be a field of characteristic <m>p &gt; 0</m> and assume <m>a \in F</m> is an element such that <m>a \ne b^p</m> for all <m>b \in F</m>.
+                Then <m>x^p - a</m> is irreducible but not separable. 
+                It is not separable since in <m>\ov{F}</m> we have <m>x^p - a= (x-b)^p</m> where <m>b^p = a</m>. 
+                Also note that its derivative is <m>px^{p-1} = 0</m>.
               </p>
 
               <p>
-                <ol>
-                  <li>
-                    is a consequence of (1), since if two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common.
-                  </li>
-                </ol>
+                It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: 
+                Take <m>F = \Z/p(y)</m> (the field of fractions of the polynomial ring <m>\Z/p[y]</m>) and let <m>a = y</m>. 
+                In this case, <m>x^p - y</m> is seen to be irreducible, by <xref text="title" ref="thm-eisensteins-criterion"/>, but not separable.
               </p>
-            </proof>
-          </lemma>
+            </example>
 
-          <theorem xml:id="prop-criteria-for-separability"><title>Criteria for Separability</title>
-            <statement>
+            <corollary xml:id="cor-separability-and-characteristic-zero"><title>Separability and Characteristic Zero</title>
+              <statement>
+                <p>
+                  If <m>f(x)</m> is an irreducible polynomial with coefficients in a field of characteristic <m>0</m>, then <m>f(x)</m> is separable. 
+                  More generally, if <m>f(x)</m> is irreducible of degree <m>n</m> and <m>\char(F) \nmid n</m>, then <m>f(x)</m> is separable.
+                </p>
+              </statement>
+            </corollary>
+        
+          </subsection>
+
+          <subsection xml:id="subsec-sep-field"><title>Separable Field Extensions</title>
+            
+            <blockquote>
               <p>
-                Let <m>F</m> be field and <m>\ov{F}</m> an algebraic closure of <m>F</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Given <m>f(x) \in F[x]</m> and <m>\a \in \ov{F}</m>, the multiplicity of <m>\a</m> in <m>f(x)</m> is at least <m>2</m> if and only if <m>f(\a) = 0</m> and <m>f'(\a) = 0</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>f</m> is separable if and only if <m>\gcd(f(x), f'(x)) = 1</m> in <m>F[x]</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>f(x)</m> is irreducible in <m>F[x]</m>, then <m>f</m> is separable if and only if <m>f'(x) \neq 0</m>.
-                    </p>
-                  </li>
-                </ol>
+                <q>
+                  Because we are separated everything separates us, even our efforts to join each other.
+                </q>
               </p>
-            </statement>
+              <attribution>Simone de Beauvoir</attribution>
+            </blockquote>
 
-            <proof>
+            <definition xml:id="def-separable-field-extension"><title>Separable (Field Extension)</title>
+              <statement>
+                <p>
+                  An algebraic field extension <m>F \subseteq L</m> is called <em>separable</em> if for every <m>\a \in L</m> its minimum polynomial <m>m_{\a, F}(x)</m> is separable (i.e., has no repeated roots in an algebraic closure of <m>F</m>).
+                  <idx><h>separable field extension</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <corollary xml:id="cor-separability-algebraic-extensions-and-char-zero"><title>Separability, Algebraic Extensions, and Char Zero</title>
+              <statement>
+                <p>
+                  If <m>\char(F) = 0</m>, then every algebraic field extension <m>F \subseteq L</m> is separable.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Suppose <m>F\subseteq L</m> is an algebraic extension and let <m>\alpha\in L</m> be algebraic over <m>F</m>. 
+                  Then the minimal polynomial <m>f(x)</m> of <m>\alpha</m> over <m>F</m> has coefficients in <m>F</m> and is of the form 
+                  <me>
+                    f(x) = x^m + a_{m-1} x^{m-1} + \cdots + a_1 x + a_0
+                  </me> 
+                  where <m>a_i \in F</m>. 
+                  We need to show that <m>f(x)</m> is separable, i.e., has no repeated roots in its splitting field.
+                </p>
+
+                <p>
+                  Suppose <m>f(x)</m> has a repeated root <m>\beta</m> in some splitting field <m>K</m> of <m>f(x)</m>, i.e., <m>f(x) = (x-\beta)^2 g(x)</m> for some polynomial <m>g(x) \in K[x]</m>. 
+                  Since <m>\alpha</m> is also a root of <m>f(x)</m>, we have <m>(\alpha - \beta)^2 g(\alpha) = 0</m>. 
+                  Since <m>F\subseteq L</m> is an algebraic extension, <m>\alpha</m> is algebraic over <m>F</m>, so <m>g(\alpha)\neq 0</m>. 
+                  It follows that <m>(\alpha-\beta)^2=0</m>, i.e., <m>\alpha=\beta</m>, which means that <m>\alpha</m> is a repeated root of <m>f(x)</m>, contradicting the assumption that <m>f(x)</m> has no repeated roots. 
+                  Hence <m>f(x)</m> is separable, and since <m>\alpha</m> was an arbitrary algebraic element of <m>L</m>, we conclude that <m>F\subseteq L</m> is a separable extension.
+                </p>
+              </proof>
+            </corollary>
+
+            <example xml:id="ex-f-zpy-subseteq-zpz-l"><title><m>F = (\Z/p)(y) \subseteq (\Z/p)(z) = L</m></title>
               <p>
-                For (1), suppose <m>\a</m> is a root of <m>f(x)</m> of multiplicity at least two. 
-                Then <m>f(x) = (x-\a)^2g(x)</m> in <m>\ov{F}[x]</m> and hence <m>f'(x) = 2(x - \a) g(x) + (x-\a)^2 g(x)</m>, by the Product Rule. 
-                It follows that <m>f'(\a) = 0</m>. 
-                Conversely, suppose <m>f(\a) = f'(\a) =0</m>.
-                Since <m>f(\a) = 0</m>, we have <m>f(x) = (x-\a)h(x)</m> and hence <m>f'(x) = h(x) + (x-\a)h'(x)</m>. 
-                Since <m>f'(\a) = 0</m> it follows <m>h(\a) = 0</m> and thus <m>\a</m> has multiplicity at least two.
-              </p>
-
-              <p>
-                For the second assertion, by (1), we have that <m>f</m> is separable if and only if <m>f</m> and <m>f'</m> has no common roots in <m>\ov{F}</m>. 
-                The result thus follows from the Lemma <xref provisional="cite"/>
-              </p>
-
-              <p>
-                For the final assertion, assume <m>f(x)</m> is irreducible. 
-                Since the degree of <m>f'(x)</m> is strictly less than the degree of <m>f(x)</m>, we have that <m>\gcd(f(x),f'(x)) \ne 1</m> if and only if <m>f'(x) = 0</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <example xml:id="ex-separability-and-x4-x3-x1"><title>Separability and <m>(x^4-x^3-x+1)</m></title>
-            <p>
-              <m>x^4 -x^3 -x + 1</m> is not separable sine <m>x-1</m> is a double root (it factors as <m>(x^3-1)(x-1) = (x^2+x+1)(x-1)^2</m>). 
-              As predicted by the Theorem <xref provisional="cite"/>, it fails to be relatively prime to its derivative, which is <m>4x^3 - 3x^2 -1</m>, since each are divisible by <m>x-1</m>.
-            </p>
-
-            <p>
-              <m>x^3-1</m> is separable in <m>\R[x]</m> because it has <m>3</m> distinct roots in <m>\C</m>, namely <m>1,\zeta_3,\zeta_3^2</m>. 
-              As predicted by the Theorem, it is relatively prime to its derivative <m>3x^2</m>.
-            </p>
-
-            <p>
-              Now interpret <m>x^3 - 1</m> as belonging to <m>(\Z/3)[x]</m>. 
-              Then <m>x^3 - 1 = (x-1)^3</m> is not separable. 
-              As predicted by the Theorem, it is not relatively prime to its derivative, which is <m>0</m>.
-            </p>
-
-          </example>
-
-          <example xml:id="ex-zpy"><title><m>\Z/p(y)</m></title>
-            <p>
-              Let <m>F</m> be a field of characteristic <m>p &gt; 0</m> and assume <m>a \in F</m> is an element such that <m>a \ne b^p</m> for all <m>b \in F</m>.
-              Then <m>x^p - a</m> is irreducible but not separable. 
-              It is not separable since in <m>\ov{F}</m> we have <m>x^p - a= (x-b)^p</m> where <m>b^p = a</m>. 
-              Also note that its derivative is <m>px^{p-1} = 0</m>.
-            </p>
-
-            <p>
-              It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: 
-              Take <m>F = \Z/p(y)</m> (the field of fractions of the polynomial ring <m>\Z/p[y]</m>) and let <m>a = y</m>. 
-              In this case, <m>x^p - y</m> is seen to be irreducible, by <xref text="title" ref="thm-eisensteins-criterion"/>, but not separable.
-            </p>
-          </example>
-
-          <corollary xml:id="cor-separability-and-characteristic-zero"><title>Separability and Characteristic Zero</title>
-            <statement>
-              <p>
-                If <m>f(x)</m> is an irreducible polynomial with coefficients in a field of characteristic <m>0</m>, then <m>f(x)</m> is separable. 
-                More generally, if <m>f(x)</m> is irreducible of degree <m>n</m> and <m>\char(F) \nmid n</m>, then <m>f(x)</m> is separable.
-              </p>
-            </statement>
-          </corollary>
-
-          <definition xml:id="def-separable-field-extension"><title>Separable (Field Extension)</title>
-            <statement>
-              <p>
-                An algebraic field extension <m>F \subseteq L</m> is called <em>separable</em> if for every <m>\a \in L</m> its minimum polynomial <m>m_{\a, F}(x)</m> is separable (i.e., has no repeated roots in an algebraic closure of <m>F</m>).
-                <idx><h>separable field extension</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <corollary xml:id="cor-separability-algebraic-extensions-and-char-zero"><title>Separability, Algebraic Extensions, and Char Zero</title>
-            <statement>
-              <p>
-                If <m>\char(F) = 0</m>, then every algebraic field extension <m>F \subseteq L</m> is separable.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>F\subseteq L</m> is an algebraic extension and let <m>\alpha\in L</m> be algebraic over <m>F</m>. 
-                Then the minimal polynomial <m>f(x)</m> of <m>\alpha</m> over <m>F</m> has coefficients in <m>F</m> and is of the form 
-                <me>
-                  f(x) = x^m + a_{m-1} x^{m-1} + \cdots + a_1 x + a_0
-                </me> 
-                where <m>a_i \in F</m>. 
-                We need to show that <m>f(x)</m> is separable, i.e., has no repeated roots in its splitting field.
+                Let <m>y</m> and <m>z</m> be indeterminants. 
+                The extension of fields <m>F = (\Z/p)(y) \subseteq (\Z/p)(z)= L</m> given by identifying <m>y</m> with <m>z^p</m> is not separable. 
+                Somewhat more precisely, <m>F</m> is isomorphism to the subfield of <m>L</m> consisting of elements of the form <m>\frac{\sum_i a_i z^{ip}}{\sum_j b_j z^{jp}}</m>, with the isomorphism given by sending <m>\frac{\sum_i a_i y^{i}}{\sum_j b_j y^{j}}</m> to <m>\frac{\sum_i a_i z^{ip}}{\sum_j b_j z^{jp}}</m>.
               </p>
 
               <p>
-                Suppose <m>f(x)</m> has a repeated root <m>\beta</m> in some splitting field <m>K</m> of <m>f(x)</m>, i.e., <m>f(x) = (x-\beta)^2 g(x)</m> for some polynomial <m>g(x) \in K[x]</m>. 
-                Since <m>\alpha</m> is also a root of <m>f(x)</m>, we have <m>(\alpha - \beta)^2 g(\alpha) = 0</m>. 
-                Since <m>F\subseteq L</m> is an algebraic extension, <m>\alpha</m> is algebraic over <m>F</m>, so <m>g(\alpha)\neq 0</m>. 
-                It follows that <m>(\alpha-\beta)^2=0</m>, i.e., <m>\alpha=\beta</m>, which means that <m>\alpha</m> is a repeated root of <m>f(x)</m>, contradicting the assumption that <m>f(x)</m> has no repeated roots. 
-                Hence <m>f(x)</m> is separable, and since <m>\alpha</m> was an arbitrary algebraic element of <m>L</m>, we conclude that <m>F\subseteq L</m> is a separable extension.
+                Then <m>z \in L</m> is a root of the polynomial <m>x^p - y \in F[x]</m>. 
+                Moreover since <m>F</m> is the field of fractions of the PID <m>R = (\Z/p)[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply <xref text="title" ref="thm-eisensteins-criterion"/> (and Gauss) to conclude that <m>x^p - y</m> is irreducible in <m>F[x]</m>. 
+                This proves that <m>m_{z, F}(x) = x^p - y</m>. 
+                This polynomial is not separable since in <m>L[x]</m> it is equal to <m>(x-z)^p</m> and hence has a repeated root. 
+                (Or, you may use that its derivative is <m>0</m>.)
               </p>
-            </proof>
-          </corollary>
-
-          <example xml:id="ex-f-zpy-subseteq-zpz-l"><title><m>F = (\Z/p)(y) \subseteq (\Z/p)(z) = L</m></title>
-            <p>
-              Let <m>y</m> and <m>z</m> be indeterminants. 
-              The extension of fields <m>F = (\Z/p)(y) \subseteq (\Z/p)(z)= L</m> given by identifying <m>y</m> with <m>z^p</m> is not separable. 
-              Somewhat more precisely, <m>F</m> is isomorphism to the subfield of <m>L</m> consisting of elements of the form <m>\frac{\sum_i a_i z^{ip}}{\sum_j b_j z^{jp}}</m>, with the isomorphism given by sending <m>\frac{\sum_i a_i y^{i}}{\sum_j b_j y^{j}}</m> to <m>\frac{\sum_i a_i z^{ip}}{\sum_j b_j z^{jp}}</m>.
-            </p>
-
-            <p>
-              Then <m>z \in L</m> is a root of the polynomial <m>x^p - y \in F[x]</m>. 
-              Moreover since <m>F</m> is the field of fractions of the PID <m>R = (\Z/p)[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply <xref text="title" ref="thm-eisensteins-criterion"/> (and Gauss) to conclude that <m>x^p - y</m> is irreducible in <m>F[x]</m>. 
-              This proves that <m>m_{z, F}(x) = x^p - y</m>. 
-              This polynomial is not separable since in <m>L[x]</m> it is equal to <m>(x-z)^p</m> and hence has a repeated root. 
-              (Or, you may use that its derivative is <m>0</m>.)
-            </p>
-          </example>
+            </example>
+        
+          </subsection>
 
         </section>
         
@@ -18083,19 +18152,25 @@
                   <ul>
                     <li xml:id="def-natural-numbers"><title>Natural Numbers</title>
                       <p>
-                        The set of <term>natural numbers</term> is denoted by <m>\N=\{1,2,3\dots\}</m>
+                        The set of <term>natural numbers</term> is denoted by <m>\N=\{1,2,3\dots\}</m>.
+                        <idx><h>natural numbers</h></idx>
+                        <idx><h><m>\N</m></h></idx>
                       </p>
                     </li>
 
                     <li xml:id="def-integers"><title>Integers</title>
                       <p>
-                        The set of <term>integers</term> is denoted by <m>\Z=\{\dots,-2,-1,0,1,2\dots\}</m>
+                        The set of <term>integers</term> is denoted by <m>\Z=\{\dots,-2,-1,0,1,2\dots\}</m>.
+                        <idx><h>integers</h></idx>
+                        <idx><h><m>\Z</m></h></idx>
                       </p>
                     </li>
 
                     <li xml:id="def-rational-numbers"><title>Rational Numbers</title>
                       <p>
-                        The set of <term>rational numbers</term> is denoted by <m>\Q=\{\frac{p}{q}|p,q\in\Z,q\neq 0\}</m>
+                        The set of <term>rational numbers</term> is denoted by <m>\Q=\{\frac{p}{q}|p,q\in\Z,q\neq 0\}</m>.
+                        <idx><h>rational numbers</h></idx>
+                        <idx><h><m>\Q</m></h></idx>
                       </p>
                     </li>
 
@@ -18103,12 +18178,16 @@
                       <p>
                         The set of <term>real numbers</term> is denoted by <m>\R</m>, and is a little trickier to define both rigorously and succinctly. 
                         Heuristically, it is the set of all numbers on the number line.
+                        <idx><h>real numbers</h></idx>
+                        <idx><h><m>\R</m></h></idx>
                       </p>
                     </li>
 
                     <li xml:id="def-complex-numbers"><title>Complex Numbers</title>
                       <p>
-                        The set of <term>complex numbers</term> is denoted by <m>\C=\{a+bi|a,b\in\R\}</m>
+                        The set of <term>complex numbers</term> is denoted by <m>\C=\{a+bi|a,b\in\R\}</m>.
+                        <idx><h>complex numbers</h></idx>
+                        <idx><h><m>\C</m></h></idx>
                       </p>
                     </li>
                   </ul>
@@ -18124,18 +18203,23 @@
                       <li>
                         <p>
                           The set <m>A</m> is a <term>subset</term> of the set <m>B</m>, denoted <m>A \subseteq B</m>, if <m>x\in  A</m> implies <m>x\in B</m>. 
+                          <idx><h>subset</h></idx>
+                          <idx><h><m>\sse</m></h></idx>
                         </p>
                       </li>
 
                       <li>
                         <p>
-                          The set <m>A</m> <term>equals</term> the set <m>B</m>, denoted <m>A = B</m>, if <m>A \subseteq B</m> and <m>B \subseteq  A</m>. 
+                          The set <m>A</m> <term>equals</term> the set <m>B</m>, denoted <m>A = B</m>, if <m>A \subseteq B</m> and <m>B \subseteq A</m>.
+                          <idx><h>set equality</h></idx>
                         </p>
                       </li>
 
                       <li>
                         <p>
                           The set <m>A</m> is a <term>proper subset</term> of the set <m>B</m>, denoted <m>A \subset B</m>, if <m>A \subseteq B</m> and <m>A \neq B</m>. 
+                          <idx><h>proper subset</h></idx>
+                          <idx><h><m>\subset</m></h></idx>
                         </p>
                       </li>
                     </ol>
@@ -18143,7 +18227,7 @@
                 </statement>
             </definition>
 
-            <definition xml:id="def-union-intersection">
+            <definition xml:id="def-union-intersection"><title>Union, Intersection</title>
               <statement>
                 <p>
                   Let <m>A</m> and <m>B</m> be sets. 
@@ -18155,21 +18239,27 @@
                   <me>
                     A \cap B = \{x | x\in  A \text{ and }x\in B\}
                   </me>. 
+                  <idx><h>union</h></idx>
+                  <idx><h>intersection</h></idx>
+                  <idx><h><m>\cup</m></h></idx>
+                  <idx><h><m>\cap</m></h></idx>
               </p>
               </statement>
             </definition>
 
-            <definition xml:id="def-family-of-sets">
+            <definition xml:id="def-family-of-sets"><title>Family of Sets</title>
               <statement>
                 <p>
                   Let <m>\cA</m> be a set. 
-                  The set <m>\cA</m> is called a <term>family of sets</term> if all the elements of A are sets. 
+                  The set <m>\cA</m> is called a <term>family of sets</term> if all the elements of <m>\cA</m> are sets. 
                   The family of sets <m>\cA</m> is <term>indexed</term> by <m>I</m>, denoted <m>\cA = \{A_i\}_{i\in I}</m>, if there is a non-empty set <m>I</m> such that there is an element <m>A_i\in \cA</m> for each <m>i\in  I</m>, and that every element of <m>\cA</m> equals <m>A_i</m> for exactly one <m>i\in  I</m>. 
+                  <idx><h>family of sets</h></idx>
+                  <idx><h>indexed family of sets</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <definition xml:id="def-union-intersection-2">
+            <definition xml:id="def-union-intersection-2"><title>Union and Intersection of Families of Sets</title>
               <statement>
                 <p>
                   Let <m>\cA</m> be a family of sets. 
@@ -18183,14 +18273,16 @@
             </definition>
             
             <theorem xml:id="thm-distributive-laws"><title>Distributive Laws</title>
+              <idx><h>distributive law (sets)</h></idx>
               <statement>
                 <p>
-                  <m>A \cap  (\bigcup_\alpha  B_\alpha ) = \bigcup_\alpha (A \cap  B_\alpha )</m> and <m>A \cup  (\bigcap_\alpha  B_\alpha ) = \bigcap_\alpha (A \cup  B_\alpha )</m>
+                  <m>A \cap (\bigcup_\alpha  B_\alpha ) = \bigcup_\alpha (A \cap  B_\alpha )</m> and <m>A \cup  (\bigcap_\alpha  B_\alpha ) = \bigcap_\alpha (A \cup  B_\alpha )</m>
                 </p>
               </statement>
             </theorem>
 
             <theorem xml:id="thm-de-morgans-laws"><title>De Morgan's Laws</title>
+              <idx><h>De Morgan's laws (sets)</h></idx>
               <statement>
                 <p>
                   <m>A \sm (\bigcup_\alpha  B_\alpha ) = \bigcap_\alpha (A \sm B_\alpha )</m> and <m>A \sm (\bigcap_\alpha  B_\alpha ) = \bigcup_\alpha (A \sm B_\alpha )</m>
@@ -18199,9 +18291,11 @@
             </theorem>
 
             <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
+              <idx><h>Cartesian product</h></idx>
               <statement>
                 <p>
-                  Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
+                  Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. 
+                  The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
                 </p>
               </statement>
             </definition>
@@ -18219,6 +18313,10 @@
           <subsection xml:id="subsec-functions"><title>Functions</title>
 
             <definition xml:id="def-function"><title>Function</title>
+              <idx><h>function</h></idx>
+              <idx><h>map</h></idx>
+              <idx><h>domain of a function</h></idx>
+              <idx><h>range of a function</h></idx>
               <statement>
                 <p>
                 Let <m>A</m> and <m>B</m> be sets. 
@@ -18229,6 +18327,7 @@
             </definition>
 
             <definition xml:id="def-well-defined"><title>Well-defined Function</title>
+              <idx><h>well defined function</h></idx>
               <statement>
                 <p>
                   A function <m>f: G \to H</m> is <em>well-defined</em> if whenever <m>g,g' \in  G</m> and <m>g = g'</m>, then <m>f(g) = f(g')</m>.
@@ -18248,30 +18347,35 @@
                 <li>
                   <p>
                     A <term>constant map</term> <m>f : A \to B</m> is any function of the form <m>f (x) = b</m> for all <m>x\in  A</m>, where <m>b\in B</m> is some fixed element.
+                    <idx><h>constant map</h></idx>
                   </p>
                 </li>
 
                 <li>
                   <p>
                     The <term>identity map</term> on <m>A</m> is the function <m>1_A : A \to  A</m> defined by <m>1_A(x) = x</m> for all <m>x\in  A</m>.
+                    <idx><h>identity map</h></idx>
                   </p>
                 </li>
 
                 <li>
                   <p>
                     The <term>inclusion map</term> from <m>S</m> to <m>A</m> is the function <m>\iota : S \to  A</m> defined by <m>j(x) = x</m> for all <m>x\in  S</m>
+                    <idx><h>inclusion map</h></idx>
                   </p>
                 </li>
 
                 <li>
                   <p>
                     If <m>f : A \to B</m> is a function, the <term>restriction</term> of <m>f</m> to <m>S</m>, denoted <m>f|_S</m>, is the function <m>f|_S : S \to B</m> defined by <m>f|_S(x) = f (x)</m> for all <m>x\in  S</m>.
+                    <idx><h>restriction of a function</h></idx>
                   </p>
                 </li>
 
                 <li>
                   <p>
                     If <m>g : S \to B</m> is a function, an <term>extension</term> of <m>g</m> to <m>A</m> is any function <m>G : A \to B</m> such that <m>G|S = g</m>.
+                    <idx><h>extension of a function</h></idx>
                   </p>
                 </li>
 
@@ -18281,6 +18385,7 @@
                     For any finite collection of sets <m>A1, \dots, A p</m>, projection maps
                     <me>π_i : A1 \times\cdots \times  A p \to  A_i</me>
                     for all <m>i\in  {1, \dots, p}</m> can be defined similarly.
+                    <idx><h>projection map</h></idx>
                   </p>
                 </li>
 
@@ -18295,6 +18400,7 @@
                         0, &amp; if y\in  X - S.
                       \end{cases}
                     </me>
+                    <idx><h>characteristic map</h></idx>
                   </p>
                 </li>
               </ul>
@@ -18309,24 +18415,30 @@
                     <li>
                       <p>
                         The function <m>f</m> is <em>one-to-one</em> (also called an <em>injection</em> and denoted <m>f: X \hookrightarrow  Y</m>) if whenever <m>x,x' \in  X</m> and <m>f(x) = f(x')</m> then <m>x = x'</m>.  
+                        <idx><h>injective</h></idx>
+                        <idx><h>one-to-one</h></idx>
                       </p>
                     </li>
 
                     <li>
                       <p>
                         The function <m>f</m> is <em>onto</em> (also called a <em>surjection</em> and denoted <m>f: X ↠ Y</m>) if for every <m>y</m> in <m>Y</m>, there is an <m>x</m> in <m>X</m> with <m>f(x) = y</m>.
+                        <idx><h>surjective</h></idx>
+                        <idx><h>onto</h></idx>
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The function <m>f</m> is a <em>bijection</em> if <m>f</m> is both one-to-one and onto.  
+                        The function <m>f</m> is a <em>bijection</em> if <m>f</m> is both one-to-one and onto. 
+                        <idx><h>bijective</h></idx> 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The function <m>f</m> is <em>invertible</em> if there is a function <m>g:Y \to  X</m> such that <m>f \circ  g = 1_Y</m> and <m>g \circ  f = 1X</m>.
+                        The function <m>f</m> is <em>invertible</em> if there is a function <m>g:Y \to  X</m> such that <m>f \circ  g = 1_Y</m> and <m>g \circ  f = 1_X</m>.
+                        <idx><h>invertible function</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -18341,6 +18453,7 @@
             </exercise>
 
             <definition xml:id="def-composition"><title>Composition</title>
+              <idx><h>composition of functions</h></idx>
               <statement>
                 <p>
                 Let <m>A</m>, <m>B</m> and <m>C</m> be sets, and let <m>f : A \to B</m> and <m>g : B \to  C</m> be functions.
@@ -18356,8 +18469,8 @@
             <theorem xml:id="thm-compositions-and-jectivity"><title>Compositions and 'Jectivity</title>
               <statement>
                 <p>
-                  Let <m>a: G \to  H</m>, <m>b: H \to  K</m>, and <m>c: K \to L</m> be functions. Then:
-                  
+                  Let <m>a: G \to  H</m>, <m>b: H \to  K</m>, and <m>c: K \to L</m> be functions. 
+                  Then:
                   <ol>
                     <li>
                       <p>
@@ -18400,13 +18513,15 @@
                   <ol>
                     <li>
                       <p>
-                        The <em>image</em> of a subset <m>A</m> of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
+                        The <em>image</em> of a subset <m>A</m> of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.
+                        <idx><h>image</h></idx>  
                       </p>
                     </li>
 
                     <li>
                       <p>
                         The <em>preimage</em> of a subset <m>B</m> of <m>Y</m> is <m>f\inv(B) := \{g | g \in  X and f(g) \in  B\}</m>.  
+                        <idx><h>preimage</h></idx>
                       </p>
                     </li>
 
@@ -18420,7 +18535,8 @@
               </statement>
             </definition>
 
-            <theorem xml:id="thm-pan"><title>PAN</title>   
+            <theorem xml:id="thm-pan"><title>PAN</title>
+              <idx><h>PAN</h></idx>
               <statement>
                 <p>
                   If <m>f: X \to  Y, E \subseteq  E' \subseteq  Y</m>, and <m>E_\alpha  \subseteq  Y</m> for all <m>\alpha</m>, then 
@@ -18454,6 +18570,7 @@
             </theorem>
 
             <theorem xml:id="thm-iasn"><title>IASN</title>
+              <idx><h>IASN</h></idx>
               <statement>
                 <p>
                   If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C_\alpha \subseteq  X</m> for all <m>\alpha</m>, then 
@@ -18496,13 +18613,15 @@
                   <ol>
                     <li>
                       <p>
-                        If <m>A \subseteq  X</m>, then <m>A \subseteq  f\inv(f(A))</m>; if moreover <m>f</m> is injective then <m>A = f\inv(f(A))</m>. 
+                        If <m>A \subseteq  X</m>, then <m>A \subseteq f\inv(f(A))</m>; 
+                        if moreover <m>f</m> is injective then <m>A = f\inv(f(A))</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If <m>B \subseteq  Y</m> then <m>f(f\inv (B)) \subseteq B</m>; if moreover <m>f</m> is surjective then <m>f(f\inv(B)) = B</m>.
+                        If <m>B \subseteq  Y</m> then <m>f(f\inv (B)) \subseteq B</m>; 
+                        if moreover <m>f</m> is surjective then <m>f(f\inv(B)) = B</m>.
                       </p>
                     </li>
                   </ol>
@@ -18521,12 +18640,14 @@
              <definition xml:id="def-projection-map"><title>Projection Map</title>
                 <statement>
                   <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The <em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. 
+                    The <em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
                   </p>
                 </statement>
               </definition>
 
               <definition xml:id="def-product-inclusion"><title>Product Inclusion Map</title>
+                <idx><h>product inclusion map</h></idx>
                 <statement>
                   <p>
                     Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em> map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
@@ -18561,6 +18682,7 @@
             <subsubsection xml:id="subsubsec-quotient-sets"><title>Equivalence Relations and Modular Arithmetic</title>
 
               <definition xml:id="def-equivalence-relation"><title>Equivalence Relation</title>
+                <idx><h>equivalence relation</h></idx>
                 <statement>
                   <p>
                     An <em>equivalence relation</em> <m>\sim</m>  on a set <m>X</m> is a subset <m>S \sse X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
@@ -18568,18 +18690,21 @@
                       <li><title>Reflexivity</title>
                         <p>
                           <m>a \sim  a</m>, 
+                          <idx><h>reflexive relation</h></idx>
                         </p>
                       </li>
 
                       <li><title>Symmetry</title>
                         <p>
                           <m>a \sim  b</m> implies <m>b \sim  a</m>, and 
+                          <idx><h>symmetric relation</h></idx>
                         </p>
                       </li>
 
                       <li><title>Transitivity</title>
                         <p>
                           <m>a \sim  b</m> and <m>b \sim  c</m> implies <m>a \sim  c</m>.  
+                          <idx><h>transitive relation</h></idx>
                         </p>
                       </li>
                     </ol>
@@ -18587,14 +18712,16 @@
 
                   <p>
                     The <em>equivalence class</em> of an element a of <m>X</m> is <m>[a]:= \{b | b \sim  a\}</m>.  
+                    <idx><h>equivalence class</h></idx>
                   </p>
 
                   <p>
-                    The notation <m>X/\sim</m> denotes the <em>set of equivalence classes </em>, also called the <em>quotient</em> of <m>X</m> with respect to <m>\sim</m>.  
+                    The notation <m>X/\sim</m> denotes the <em>set of equivalence classes </em>, also called the <em>quotient</em> of <m>X</m> with respect to <m>\sim</m>.
                   </p>
 
                   <p>
-                    The function <m>q:X \to  X/\sim</m>  defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the <em>quotient map </em>.
+                    The function <m>q:X \to  X/\sim</m> defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the <em>quotient map</em>.
+                    <idx><h>quotient map</h></idx>
                   </p>
                   
                 </statement>
@@ -18604,6 +18731,7 @@
                 <statement>
                   <p>
                     A <em>partition</em> of a set <m>X</m> is a collection of nonempty disjoint subsets of <m>X</m> whose union is <m>X</m>.
+                    <idx><h>partition</h></idx>
                   </p>
                 </statement>
               </definition>
@@ -18638,6 +18766,7 @@
 
                   <p>
                     For each <m>n ∈ N</m>, we obtain a relation on <m>\Z</m> given by congruence modulo <m>n</m>, which we call <em>the integers modulo</em> <m>n</m>.
+                    <idx><h>integers modulo <m>n</m></h></idx>
                   </p>
                 </statement>
               </definition>
@@ -18648,16 +18777,17 @@
 
         </section>
 
-        <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, Cardinality</title>
+        <section xml:id="sec-numbers-and-cardinality"><title>Numbers, Counting, Cardinality</title>
 
-          <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
+          <subsection xml:id="subsec-number-systems"><title>Number Theory</title>
 
             <definition xml:id="def-divides"><title>Divisibility</title>
               <statement>
                 <p>
                   Let <m>a</m> and <m>b</m> be integers. 
                   The integer <m>a</m> <term>divides</term> the integer <m>b</m> if and only if there is some integer <m>q</m> such that <m>aq = b</m>. 
-                  If <m>a</m> divides <m>b</m>, we write <m>a|b</m>, and we say that <m>a</m> is a factor of <m>b</m>, and that <m>b</m> is <term>divisible</term> by <m>a</m>. 
+                  If <m>a</m> divides <m>b</m>, we write <m>a|b</m>, and we say that <m>a</m> is a factor of <m>b</m>, and that <m>b</m> is <term>divisible</term> by <m>a</m>.
+                  <idx><h>divides</h></idx> 
                 </p>
               </statement>
             </definition>
@@ -18668,6 +18798,7 @@
                   Let <m>p</m> be an integer greater than <m>1</m>.
                   The integer <m>p</m> is a <term>prime</term> number if and only if the only positive integers that divide <m>p</m> are <m>1</m> and <m>p</m>. 
                   The integer <m>p</m> is a <term>composite</term> number iff it is not a prime number. 
+                  <idx><h>prime integer</h></idx>
                 </p>
               </statement>
             </definition>
@@ -18681,10 +18812,13 @@
             </definition>
 
             <theorem xml:id="thm-division-algorithm"><title>Division Algorithm</title>
+              <idx><h>division algorithm</h></idx>
               <statement>
                 <p>
                   Let <m>a</m> and <m>b</m> be integers with <m>b&gt;0</m>. Then there exist unique integers <m>q</m> and <m>r</m> such that 
-                  <me>a=bq+r\quad\text{and}\quad 0\leq r&lt;b</me>
+                  <me>
+                    a=bq+r\quad\text{and}\quad 0\leq r&lt;b
+                  </me>
                 </p>
               </statement>
 
@@ -18700,6 +18834,7 @@
           <subsection xml:id="subsec-counting"><title>Counting (*)</title>
 
             <definition xml:id="def-binomial-coefficient"><title>Binomial Coefficient (*)</title>
+              <idx><h>binomial coefficient</h></idx>
               <statement>
                 <p>
                   
@@ -18708,8 +18843,7 @@
             </definition>
 
             <theorem xml:id="thm-binomial-theorem"><title>Binomial Theorem (*)</title>
-            
-            
+              <idx><h>binomial theorem</h></idx>
               <statement>
                 <p>
                   
@@ -18722,13 +18856,19 @@
           <subsection xml:id="subsec-cardinality"><title>Cardinality</title>
           
             <definition xml:id="def-cardinality"><title>Cardinality</title>
+              <idx><h>finite set</h></idx>
+              <idx><h>cardinality</h></idx>
+              <idx><h>countably infinite set</h></idx>
+              <idx><h>uncountably infinite set</h></idx>
               <statement>
                 <p>
-                  A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the <em>cardinality</em> of <m>X</m>.  
+                  A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. 
+                  In this case the number <m>n</m> is called the <em>cardinality</em> of <m>X</m>.  
                 </p>
 
                 <p>
-                  A set <m>X</m> is <em>infinite</em> if <m>X</m> is not finite. A set <m>X</m> is <em>countable</em> if there is an injection <m>X \hookrightarrow  \N</m>.
+                  A set <m>X</m> is <em>infinite</em> if <m>X</m> is not finite. 
+                  A set <m>X</m> is <em>countable</em> if there is an injection <m>X \hookrightarrow  \N</m>.
                 </p>
               </statement>
             </definition>
