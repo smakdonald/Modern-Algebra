@@ -13,68 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Suppose <span class="process-math">\(F \subseteq L\)</span> is a (finite) Galois field extension. Then the functions</div>
+<div class="para">For a field <span class="process-math">\(L\)</span> and a subgroup <span class="process-math">\(G\)</span> of <span class="process-math">\(\Aut(L)\text{,}\)</span> the subfield of <span class="process-math">\(L\)</span> fixed by <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(L^G\text{,}\)</span> is by definition</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Psi:\left\{\text{intermediate fields $E$, with $F\subseteq E \subseteq L$}\right\} \to\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\}
+L^G := \{ \a \in L \mid \s(\a) = \a, \text{ for all }\s \in G\}.
 \end{equation*}
 </div>
-<div class="para">given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi(E)=\Gal(L/E)
-\end{equation*}
-</div>
-<div class="para">is a bijection whose inverse</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi^{-1}:
-\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\} \to
-\left\{\text{intermediate fields $E$, with $F \subseteq E \subseteq L$}\right\}
-\end{equation*}
-</div>
-<div class="para">is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\Psi^{-1}(H)=L^H.
-\end{equation*}
-</div>
-<div class="para">Moreover, this bijective correspondence enjoys the following properties:</div>
-<ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> each reverse the order of inclusions.</div></li>
-<li><div class="para logical">
 <div class="para">
-<span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> convert degrees of extensions to indices of subgroups:</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\([\Gal(L/F) : H] = [L^H:F]\)</span> or, equivalently,</div></li>
-<li><div class="para"><span class="process-math">\([\Gal(L/F) : \Gal(L/E)] = [E:F]\text{.}\)</span></div></li>
-</ul>
-</div></li>
-<li><div class="para logical">
-<div class="para">Normal subgroups correspond to intermediate fields that are Galois over <span class="process-math">\(F\text{:}\)</span>
-</div>
-<ul class="disc">
-<li><div class="para">If <span class="process-math">\(N \nsg G\)</span> then <span class="process-math">\(L^N/F\)</span> is Galois.</div></li>
-<li><div class="para">If <span class="process-math">\(E/F\)</span> is Galois, then <span class="process-math">\(\Gal(L/E) \nsg \Gal(L/F)\text{.}\)</span>
-</div></li>
-</ul>
-</div></li>
-<li><div class="para">If <span class="process-math">\(E = L^N\)</span> for a normal subgroup <span class="process-math">\(N \nsg \Gal(L/F)\text{,}\)</span> then <span class="process-math">\(\Gal(E/F) \cong \Gal(L/F)/N\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">If <span class="process-math">\(H_1, H_2\)</span> are subgroups of <span class="process-math">\(G\)</span> with corresponding fixed subfields <span class="process-math">\(E_1=L^{H_1}\)</span> and <span class="process-math">\(E_2=L^{H_2}\text{,}\)</span> then</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\(E_1\cap E_2=L^{&lt;H_1,H_2&gt;}\)</span> and <span class="process-math">\(\Gal(L/E_1\cap E_2)=\langle H_1,H_2\rangle\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(E_1 E_2=L^{H_1\cap H_2}\)</span> and <span class="process-math">\(\Gal(L/E_1E_2)=H_1\cap H_2\text{.}\)</span>
-</div></li>
-</ul>
-</div></li>
-</ol>
+<span class="process-math">\(L^G\)</span> really is a subfield of <span class="process-math">\(L\)</span> since <span class="process-math">\(L^G = \bigcap_{\s \in G} L^\s\)</span> where <span class="process-math">\(L^\s = \{\a \in L \mid \s(\a) = \a\}\text{,}\)</span> and we proved before that <span class="process-math">\(L^\s\)</span> is a subfield of <span class="process-math">\(L\text{.}\)</span> </div>
 </div>
 <span class="incontext"><a href="sec-ftgt.html#p-2116" class="internal">in-context</a></span>
 </body>
