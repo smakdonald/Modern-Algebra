@@ -7262,7 +7262,7 @@
             </p>
           </introduction> 
 
-          <subsection xml:id="subsec-external-dps-revisited"><title>Direct Products: Revisited</title>
+          <subsection xml:id="subsec-external-dps-revisited"><title>Direct Products of Groups</title>
 
             <blockquote>
               <p>
@@ -7273,7 +7273,7 @@
               <attribution>John-Paul Sartre</attribution>
             </blockquote>
 
-            <definition xml:id="def-dp-external"><title>Direct Product, Direct Sum</title>
+            <definition xml:id="def-dp-external"><title>Direct Product</title>
               <statement>
                 <p>
                   Let <m>G_\alpha</m> be a group for all <m>\alpha</m> in an index set <m>J</m>.
@@ -7370,6 +7370,7 @@
             </theorem>    
 
             <example xml:id="ex-dp-cyclic"><title>Direct Product of Cyclic Groups</title>
+              <idx><h>direct product of cyclic groups</h></idx>
               <p>
                 If <m>\operatorname{gcd}(m,n)=1</m> then <m>\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn</m>. 
                 Indeed consider the elements <m>x=(1,0)</m> and <m>y=(0,1)</m> in <m>\mathbb{Z}/m\times \mathbb{Z}/n</m>. 
@@ -7395,7 +7396,7 @@
             
           </subsection>
 
-          <subsection xml:id="subsec-internal-recognition"><title>Recognition Theorem</title>
+          <subsection xml:id="subsec-internal-recognition"><title>Internal and External Direct Products</title>
 
             <blockquote>
               <p>
@@ -7406,7 +7407,8 @@
               <attribution>Abraham Lincoln</attribution>
             </blockquote>
 
-            <theorem xml:id="thm-dp-recognition"><title>Recognition Theorem for Direct Products</title>               
+            <theorem xml:id="thm-dp-recognition"><title>Recognition Theorem for Direct Products</title> 
+              <idx><h>recognition theorem (direct products)</h></idx>              
               <statement>
                 <p>
                   Suppose <m>G</m> is a group with normal subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> such that <m>H\cap K=\{e\}</m>. 
@@ -7460,7 +7462,7 @@
               </proof>
             </theorem>
             
-            <definition xml:id="def-int-ext-dp"><title>Internal and External Direct Product</title>
+            <definition xml:id="def-int-ext-dp"><title>Internal and External Direct Products</title>
               <statement>
                 <p>
                   If <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> are such that <m>H\cap K=\{e\}</m> then we call <m>HK</m> is called the <em>internal direct product</em> of <m>H</m> and <m>K</m> and <m>H\times K</m> the <em>external direct product</em> of <m>H</m> and <m>K</m>.
@@ -7471,6 +7473,29 @@
             </definition>
   
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  The <xref text="title" ref="def-dp-external"/> of groups is again a group.
+                  <fn>See: <xref ref="thm-dp-a-group"/>.</fn>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  We define <xref text="title" ref="def-int-ext-dp"/> and identify them with the <xref text="title" ref="thm-dp-recognition"/>, the requirement being <m>H,K\nsg G</m> and <m>H\cap K=\{e\}</m>.
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
 
         </section>
         
@@ -7776,7 +7801,8 @@
               <fn>the semidirect product, not the Reagan quote.</fn>
             </p>
   
-            <theorem xml:id="thm-sdp-recognition"><title>Recognition Theorem for Internal Semidirect Products</title>    
+            <theorem xml:id="thm-sdp-recognition"><title>Recognition Theorem for Internal Semidirect Products</title>  
+              <idx><h>recognition theorem (internal semidirect products)</h></idx>  
               <statement>
                 <p>
                   For a group <m>G</m>, suppose we are given <m>H</m> and <m>K</m> so that
@@ -7839,7 +7865,7 @@
               </proof>
             </theorem>
             
-            <definition xml:id="def-spd-internal"><title>Internal Semidirect Product</title>
+            <definition xml:id="def-spd-internal"><title>Internal Semidirect Products</title>
               <statement>
                 <p>
                   In this situation of the <xref ref="thm-sdp-recognition" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.
@@ -7973,6 +7999,7 @@
             </p>
   
             <theorem xml:id="thm-order-pq"><title>Classification for Groups of Order <m>pq</m></title>
+              <idx><h>classification of groups of order <m>pq</m></h></idx>
               <statement>
                 <p>
                   Let <m>p&lt;q</m> be primes.
@@ -7998,7 +8025,7 @@
               <proof>
                 <p>
                   Let <m>G</m> be a group of order <m>pq</m> and let <m>H, K</m> be Sylow subgroups of order <m>q</m> and <m>p</m> respectively. 
-                  We see that <m>H</m> is a normal subgroup using a HW problem, since <m>[G:H]=p</m> is the smallest prime that divides <m>|G|</m>.
+                  We see that <m>H</m> is a normal subgroup using <xref ref="thm-smallest-prime-normal"/>, since <m>[G:H]=p</m> is the smallest prime that divides <m>|G|</m>.
                 </p>
         
                 <p>
@@ -8007,7 +8034,7 @@
                   <me>
                     |HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
                   </me> 
-                  and so <m>HK=G</m>. 
+                  and so <m>HK=G</m>.
                   <xref ref="thm-sdp-recognition"/> now yields that 
                   <me>
                     G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p
@@ -8024,19 +8051,45 @@
                 <p>
                   <em>Case 2:</em> if <m>|z|=p</m> then it must be the case by Lagrange that <m>p\mid |\operatorname{Aut}(C_q)</m>. 
                   By <xref ref="cor-aut-cp" /> we know that <m>\operatorname{Aut}(C_q)\cong C_{p-1}</m> is a cyclic group. 
-                  Therefore we have that <m>p\mid (q-1)</m> if and only if there exists an element <m>z\in \operatorname{Aut}(C_q)</m> of order <m>p</m> by <xref provisional="thm:cyclic" /> (2).
+                  Therefore we have that <m>p\mid (q-1)</m> if and only if there exists an element <m>z\in \operatorname{Aut}(C_q)</m> of order <m>p</m> by <xref ref="thm-cyclic-divisors-and-subgroups" /> (2).
                   Moreover any such element <m>z</m> generates a subgroup of <m>\operatorname{Aut}(C_q)</m> of order <m>p</m>. 
-                  Since there is a unique subgroup of a cyclic group of a given order by Theorem <xref provisional="thm:cyclic" /> (2) we see that the image of <m>\rho</m> is independent of the choice of <m>z</m>. 
-                  Thus by <xref provisional="prop:conjugateAut" /> we conclude that all subgroups resulting from any choice of <m>z</m> of order <m>p</m> are isomorphic.
+                  Since there is a unique subgroup of a cyclic group of a given order by <xref ref="thm-cyclic-divisors-and-subgroups" /> (2) we see that the image of <m>\rho</m> is independent of the choice of <m>z</m>. 
+                  Thus by <xref ref="thm-conjugate-aut" /> we conclude that all subgroups resulting from any choice of <m>z</m> of order <m>p</m> are isomorphic.
                 </p>
         
                 <p>
-                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <m>C_{pq}</m>.
+                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; 
+                  in particular it is not isomorphic to <m>C_{pq}</m>.
                 </p>
               </proof>
             </theorem>
             
           </subsection>
+
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  <xref text="title" ref="def-sdp-external"/> are defined using homomorphisms into automorphism groups.
+                  <fn>See: <xref ref="thm-sdp"/></fn>
+                  They are often used to construct non-abelian groups.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <xref text="title" ref="def-spd-internal"/> are similar to their direct counterparts, though only require that one of <m>H</m> or <m>K</m> be normal.
+                  They can be identified using the <xref text="title" ref="thm-sdp-recognition"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Using semidirect products, we are able to provide a <xref text="title" ref="thm-order-pq"/>.
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
 
         </section>
 
@@ -8051,13 +8104,9 @@
             <attribution>Herman Melville</attribution>
           </blockquote>
 
-          <lemma xml:id="lem-cyclic-relprime"><title>Cyclic Groups of Relatively Prime Order</title>
-            <statement>
-              <p>
-                Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
-              </p>
-            </statement>
-          </lemma>
+          <p>
+            In this section we see that we can classify finitely generated abelian groups into isomorphism classes.
+          </p>
 
           <theorem xml:id="thm-sunzi"><title>Sunzi's Remainder Theorem</title>
             <statement>
@@ -8099,11 +8148,7 @@
             </p>
           </remark>
 
-          <p>
-            In this section we see that we can classify finitely generated abelian groups into isomorphism classes.
-          </p>
-
-          <definition xml:id="def-fg-group"><title>Finitely Generated Group</title>
+          <definition xml:id="def-fg-group"><title>Finitely Generated</title>
             <statement>
               <p>
                 A group <m>G</m> is <em>finitely generated</em> provided that <m>G=\langle A \rangle</m>, where <m>A</m> is a finite set.
@@ -8124,8 +8169,9 @@
             The full proof will be given in the spring semester.
           </p>
 
-          <theorem xml:id="thm-ftfgag"><title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>   
-            
+          <theorem xml:id="thm-ftfgag"><title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>
+            <idx><h>Fundamental Theorem of Finitely Generated Abelian Groups</h></idx>
+            <idx><h></h></idx>
             <statement>
               <p>
                 Let <m>G</m> be a finitely generated abelian group. 
@@ -8194,9 +8240,10 @@
                 with <m>d_1 \mid d_2 \mid \cdots \mid d_n</m>, we may apply <xref text="title" ref="thm-sunzi"/> to each <m>\mathbb{Z}/d_i</m> to find its elementary divisor form.
               </p>
             </proof>
+            
           </theorem>
 
-          <example><title></title>
+          <example><title>FTFGAG in Action</title>
             <p>
               For <m>G\cong\mathbb{Z}/3\times Z/5\times Z/5</m> we have <m>Q_1=\mathbb{Z}/3</m>, <m>Q_2=\mathbb{Z}/5\times Z/5</m>.
             </p>
@@ -8206,16 +8253,20 @@
             <statement>
               <p>
                 In <xref ref="thm-ftfgag" />, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the <m>p_i^{a_{i,k}}</m> are the <em>elementary divisors</em> of <m>G</m>, and the decomposition of <m>G</m> in parts (1-2) is called the <em>elementary divisor decomposition</em> of <m>G</m>. 
+                <idx><h>elementary divisors (groups)</h></idx>
+                <idx><h>elementary divisor form (groups)</h></idx>
                 The decomposition in part (1) is also called a <em>primary decomposition</em>.
               </p>
 
               <p>
                 In <xref ref="thm-ftfgag" />, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
+                <idx><h>invariant factors (groups)</h></idx>
+                <idx><h>invariant factor form (groups)</h></idx>
               </p>
             </statement>
           </definition>
 
-          <example><title></title>
+          <example xml:id="ex-if-to-ed"><title>Elementary Divisor Form to Invariant Factor Form</title>
             <p>
               Say I tell you 
               <me>
@@ -8237,7 +8288,7 @@
 				    </p>
           </example>
 
-          <example><title></title>
+          <example xml:id="ex-ed-to-if"><title>Invariant Factor Form to Elementary Divisor Form</title>
             <p>
               Suppose now I tell you 
               <me>
@@ -8287,6 +8338,30 @@
             </p>
           </example>
 
+          <outcomes>
+            <ul>
+              <li>
+                <p>
+                  <xref text="title" ref="thm-sunzi"/> allows us to decompose cyclic groups into direct products of their prime factors.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>G</m> is an abelian <xref text="title" ref="def-fg-group"/>, then it is isomorphic to a direct product of cyclic groups.
+                  This is known as the <xref text="title" ref="thm-ftfgag"/>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="thm-ftfgag"/> has two forms, each using either invariant factors or elementary divisors of a group, though it is possible to move from one to the other.
+                  <fn>See: <xref ref="ex-if-to-ed"/> and <xref ref="ex-ed-to-if"/>.</fn>
+                </p>
+              </li>
+            </ul>
+          </outcomes> 
+
         </section>
         
       </chapter>
@@ -8314,6 +8389,7 @@
                 <statement>
                   <p>
                     A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
+                    <idx><h>ring</h></idx>
                   </p>
   
                   <p>
@@ -8330,9 +8406,10 @@
                         </p>
                       </li>
 
-                      <li><title>Distributive Law</title>
+                      <li><title>Distributive Property</title>
                         <p>
                           <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
+                          <idx><h>distributive property</h></idx>
                         </p>
                       </li>
                     </ul>
@@ -8340,6 +8417,9 @@
 
                   <p>
                     <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if, in addition to (1), (2), (3)
+                    <idx><h>unital ring</h></idx>
+                    <idx><h>ring with unity</h></idx>
+                    <idx><h>ring with identity</h></idx>
                   </p>
           
                   <p>
@@ -8354,6 +8434,7 @@
           
                   <p>
                     <m>R</m> is <em>commutative</em> if in addition to (1)–(3)
+                    <idx><h>commutative ring</h></idx>
                   </p>
           
                   <p>
@@ -8368,6 +8449,7 @@
           
                   <p>
                     <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m>, (1)–(4) and (6) hold
+                    <idx><h>division ring</h></idx>
                   </p>
           
                   <p>
@@ -8382,6 +8464,7 @@
 
                   <p xml:id="def-field">
                     <m>R</m> is a <em>field</em> if <m>1\neq 0</m> and (1)–(6) hold (i.e. a field is a commutative division ring).
+                    <idx><h>field</h></idx>
                   </p>
                 </statement>
               </definition>
@@ -8406,6 +8489,7 @@
               </p>
   
               <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
+                <idx><h>ring arithmetic</h></idx>
                 <statement>
                   <p>
                     For any ring <m>R</m> and all <m>a,b \in R</m> we have:
@@ -8494,6 +8578,8 @@
                       <p>
                         <m>R=\{0\}</m> is called the <em>trivial ring</em>, or <em>zero ring</em>.
                         <fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
+                        <idx><h>trivial ring</h></idx>
+                        <idx><h>zero ring</h></idx>
                       </p>
                     </li>
 
@@ -8518,6 +8604,7 @@
                     <li xml:id="def-gaussian-integers">
                       <p>
                         The set <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> is a commutative ring known as the <em>Gaussian integers</em>.
+                        <idx><h>Gaussian integers</h></idx>
                       </p>
                     </li>
 
@@ -8568,6 +8655,8 @@
                         Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. 
                         This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). 
                         Then <m>R^{op}</m> is also a ring
+                        <idx><h>opposite ring</h></idx>
+                        <idx><h><m>R^{op}</m></h></idx>
                       </p>
                     </li>
 
@@ -8576,12 +8665,15 @@
                         If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. 
                         Then <m>\operatorname{Fun}(X,R)</m> is a ring.
                          If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
+                         <idx><h><m>\operatorname{Fun}(X,R)</m></h></idx>
                       </p>
                     </li>
                     
                     <li> <title>Endomorphism Ring</title>
                       <p>
                         If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
+                        <idx><h>endomorphism ring</h></idx>
+                        <idx><h><m>\End(A)</m></h></idx>
                       </p>
 
                       <p>
@@ -8598,6 +8690,7 @@
               </p>
 
               <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
+                <idx><h>binomial theorem (commutative rings)</h></idx>
                 <statement>
                   <p>
                     For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
@@ -8627,6 +8720,7 @@
                 <p>
                   An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that <m>uv=1</m> and <m>vu=1</m>. 
                   If such a <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
+                  <idx><h>unit</h></idx>
                 </p>
               </statement>
             </definition>
@@ -8636,6 +8730,7 @@
                 <p>
                   The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. 
                   This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                  <idx><h>group of units</h></idx>
                 </p>
               </statement>
             </definition>
@@ -8786,6 +8881,7 @@
                     <p>
                     A <em>zerodivisor</em> in a ring <m>R</m> is an element <m>x\ne 0</m> such that <m>xy = 0</m> or <m>yx=0</m> for some <m>y \ne 0</m>.
                     <fn>We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?</fn>
+                    <idx><h>zerodivisor</h></idx>
                     </p>
                 </statement>
               </definition>
@@ -8798,6 +8894,7 @@
                 <statement>
                     <p>
                       A unital ring <m>R</m> is an <em>integral domain</em> (often shortened to <em>domain</em>) if <m>1 \ne 0</m>, <m>R</m> is commutative, and <m>R</m> has no zerodivisors.
+                      <idx><h>integral domain</h></idx>
                     </p>
                 </statement>
               </definition>
@@ -8828,6 +8925,7 @@
                     Let <m>R</m> be a commutative ring with identity. 
                     Then <m>R</m> is an integral domain if and only if for all <m>x,y,z\in R</m> such that <m>xy=xz</m>, we have <m>y=z</m>. 
                     This property is called <alert>cancellation</alert>.
+                    <idx><h>cancellation (integral domains)</h></idx>
                   </p>
                 </statement>
               </lemma>
@@ -8928,6 +9026,7 @@
                 <statement>
                   <p>
                     An element <m>a</m> of a ring <m>R</m> is called <em>nilpotent</em> if <m>a^n = 0</m> for some integer <m>n \geq 1</m>.
+                    <idx><h>nilpotent</h></idx>
                   </p>
                 </statement>
               </definition>
@@ -8939,9 +9038,12 @@
               </lemma>
   
               <definition xml:id="def-idempotent"><title>Idempotent</title>
-                <statement><p>
+                <statement>
+                  <p>
                     Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
-                </p></statement>
+                    <idx><h>idempotent</h></idx>
+                  </p>
+                </statement>
               </definition>
   
               <exercise><title>Potent Idempotents</title>
@@ -9003,16 +9105,19 @@
               <statement>
                 <p>
                   A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>.
+                  <idx><h>subring</h></idx>
                 </p>
   
                 <p>
                   When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m>
                   <fn>We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</fn>.
+                  <idx><h>subfield</h></idx>
                 </p>
               </statement>
             </definition>
       
             <lemma xml:id="lem-subring-test"><title>Subring Test</title>
+              <idx><h>subring test</h></idx>
               <statement>
                 <p>
                   A nonempty subset <m>S</m> of a ring <m>R</m> is a subring if and only if either one of the following hold:
@@ -9064,6 +9169,7 @@
             <investigation><title>Nilradical Radishes</title>
               <p>
                 Prove that the set of all nilpotent elements of a ring <m>R</m> is a subring of <m>R</m>, which we call the <term>nilradical</term>.
+                <idx><h>nilradical</h></idx>
               </p>
             </investigation>
   
@@ -9100,6 +9206,7 @@
                   <me>
                     Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
                   </me>
+                  <idx><h>center (of a ring)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9126,6 +9233,8 @@
                     \Q(\sqrt {d}) = \{a + b\sqrt{d} \mid a,b \in \Q\}
                   </me> 
                   of <m>\C</m> is a subring that is a field (called a <em>quadratic field</em>), and <m>\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}</m> is a subring of <m>\Q(\sqrt{d})</m>.
+                  <idx><h>quadratic field</h></idx>
+                  <idx><h><m>\Q(\sqrt d)</m></h></idx>
                 </p>
               </statement>
       
@@ -9188,6 +9297,7 @@
                     R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}\right\}
                   </me>
                   with addition and multiplication defined by rules similar to the ones seen above.
+                  <idx><h>polynomial ring</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9207,6 +9317,7 @@
                 <p>
                   Let <m>f(x)\in R[x]</m>, <m>f(x)\neq0</m>. Say <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m>, where <m>a_n\neq0</m>. 
                   Then <m>n</m> is the <em>degree</em>of <m>f</m>.
+                  <idx><h>degree (polynomial)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9216,6 +9327,7 @@
                 <p>
                   A polynomial <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m> is <em>monic</em> if <m>a_n=1</m>.
                   <fn>Please do not confuse this with the notion of a <em>yonic</em> polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.</fn>
+                  <idx><h>monic polynomial</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9253,6 +9365,7 @@
             </p>
   
             <theorem xml:id="thm-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
+              <idx><h>UMP for polynomial rings</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
@@ -9296,6 +9409,7 @@
             <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
               <p>
                 If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
+                <idx><h>evaluation homomorphism</h></idx>
               </p>
             </exercise>
       
@@ -9309,21 +9423,29 @@
       
             <exercise xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
               <p>
-                Continuing with <xref ref="ex-applying-ring-homomorphism-to-coefficients"/>, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then 
-                <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> 
+                Continuing with <xref ref="ex-applying-ring-homomorphism-to-coefficients"/>, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. 
+                Then 
+                <me>
+                  \tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]
+                </me> 
                 takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
+                <idx><h>reduction homomorphism</h></idx>
               </p>
             </exercise>
   
             <theorem xml:id="thm-polynomial-division-algorithm"><title>Polynomial Division Algorithm</title>
+              <idx><h>division algorithm (polynomial rings)</h></idx>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
+                  Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. 
+                  Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. 
+                  Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
                 </p>
               </statement>
             </theorem>
   
             <theorem xml:id="thm-factor-thm"><title>Factor Theorem</title>
+              <idx><h>factor theorem</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity, <m>f(x)\in R[x]</m> and <m>a\in R</m>. Then <m>f(a)=0</m> if and only if <m>(x-a)|f(x)</m>. 
@@ -9337,7 +9459,13 @@
     
         <section xml:id="sec-ring-hom"><title>Homomorphisms</title>
 
-          <blockquote><p><q>When you have a map, you know where to go.</q></p><attribution>Shakira</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>
+                When you have a map, you know where to go.
+              </q>
+            </p><attribution>Shakira</attribution>
+          </blockquote>
     
           <definition xml:id="def-ring-homomorphism"><title>Ring Homomorphism</title>
             <statement>
@@ -9357,16 +9485,22 @@
                   </li>
                 </ol>
                 Ring homomorphisms are often referred to as <em>ring maps</em>.
+                <idx><h>ring homomorphism</h></idx>
               </p>
             </statement>
           </definition>
 
-          <p>So basically the same as a group homomorphism, we just have an extra operation that we need to preserve.</p>
+          <p>
+            So basically the same as a group homomorphism, but with an extra operation that we need to preserve.
+          </p>
     
           <definition xml:id="def-ring-isomorphism"><title>Ring Isomorphism</title>
             <statement>
               <p>
-                A ring homomorphism <m>f: R \to S</m> that is bijective is called a <em>ring isomorphism</em>. Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.<fn>Ring isomorphisms are not usually referred to as <em>super ring maps</em>, but it would be cool if they were.</fn>
+                A ring homomorphism <m>f: R \to S</m> that is bijective is called a <em>ring isomorphism</em>. 
+                Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.
+                <fn>Ring isomorphisms are not usually referred to as <em>super ring maps</em>, but it would be cool if they were.</fn>
+                <idx><h>ring isomorphism</h></idx>
               </p>
             </statement>
           </definition>
@@ -9477,16 +9611,18 @@
     
           <exercise xml:id="exe-equivalent-field-definitions"><title>Equivalent Field Characterizations</title>
             <statement>
-            <p>
-              Let <m>R</m> be a nontrivial ring. Then <m>R</m> is a field if and only if every homomorphism of <m>R</m> into a nonzero ring <m>S</m> is injective.
-            </p>
+              <p>
+                Let <m>R</m> be a nontrivial ring. 
+                Then <m>R</m> is a field if and only if every homomorphism of <m>R</m> into a nonzero ring <m>S</m> is injective.
+              </p>
             </statement>
-
           </exercise>
     
           <exercise><title>Isomorphisms and Idempotents</title>
             <p>
-              Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that the map <m>\phi:R\to Re \times R(1-e)</m> given by <m>\phi(r)=(re, r(1-e))</m> is a ring isomorphism.
+              Suppose <m>R</m> is commutative and <m>e</m> an idempotent. 
+              Let <m>Re:=\{re\mid r\in R\}</m>. 
+              Prove that the map <m>\phi:R\to Re \times R(1-e)</m> given by <m>\phi(r)=(re, r(1-e))</m> is a ring isomorphism.
             </p>
           </exercise>
     
@@ -9543,11 +9679,15 @@
     
                     <li>
                       <p>
-                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m>. This is often called <em>absorption</em><fn>Personally I think it would be splendid if we could rename ideals <em>sponges</em> to match this imagery.</fn>.
+                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m>. This is often called <em>absorption</em>
+                        <fn>Personally I think it would be splendid if we could rename ideals <em>sponges</em> to match this imagery.</fn>.
+                        <idx><h>absorption</h></idx>
                       </p>
                     </li>
                   </ol>
                   For a ring <m>R</m>, a <em>proper ideal</em> is an ideal <m>I</m> such that <m>I\neq R</m>.
+                  <idx><h>ideal</h></idx>
+                  <idx><h>proper ideal</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9564,7 +9704,8 @@
                   </li>
       
                   <li>
-                    The sets <m>R_i=\left\{\begin{bmatrix} 0 &amp; 0 &amp; \cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp;a_{in} \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp;0\end{bmatrix}\right\}</m> and <m>L_j=\left\{\begin{bmatrix} 0 &amp; \cdots &amp; a_{j1} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\0 &amp; \cdots &amp; a_{ji} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; \cdots &amp; a_{jn} &amp;\cdots &amp; 0\\\end{bmatrix}\right\}</m> are a right ideal and a left ideal of <m>\M_n(R)</m> respectively. Neither are two-sided ideals.
+                    The sets <m>R_i=\left\{\begin{bmatrix} 0 &amp; 0 &amp; \cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp;a_{in} \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp;0\end{bmatrix}\right\}</m> and <m>L_j=\left\{\begin{bmatrix} 0 &amp; \cdots &amp; a_{j1} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\0 &amp; \cdots &amp; a_{ji} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; \cdots &amp; a_{jn} &amp;\cdots &amp; 0\\\end{bmatrix}\right\}</m> are a right ideal and a left ideal of <m>\M_n(R)</m> respectively. 
+                    Neither are two-sided ideals.
                   </li>
       
                   <li>
@@ -9573,7 +9714,8 @@
     
                   <li>
                     <p>
-                      Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Then <m>I</m> is an ideal in <m>R</m>.
+                      Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. 
+                      Then <m>I</m> is an ideal in <m>R</m>.
                     </p>
                   </li>
                 </ul>
@@ -9623,7 +9765,7 @@
                   <ol>
                     <li>
                       <p>
-                        <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
+                        <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal
                       </p>
                     </li>
     
@@ -9636,6 +9778,7 @@
                     <li>
                       <p>
                         <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
+                        <idx><h><m>IJ</m></h></idx>
                       </p>
                     </li>
     
@@ -9662,7 +9805,7 @@
                 Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. 
                 Then 
                 <me>
-                  I\cap(J+K)=I\cap J+I\cap K
+                  I\cap(J+K)=I\cap J+I\cap K.
                 </me>
               </p>
             </exercise>
@@ -9752,7 +9895,9 @@
                   <me>
                     \igen A=\bigcap_{I\;\text{ideal of}\;R, A\subseteq I} I.
                   </me>
-                    An ideal <m>I</m> is <em>finitely generated</em> if <m>I = \igen A</m> for some finite subset <m>A</m> of <m>R</m>.
+                  An ideal <m>I</m> is <em>finitely generated</em> if <m>I = \igen A</m> for some finite subset <m>A</m> of <m>R</m>.
+                  <idx><h>generated ideal</h></idx>
+                  <idx><h>finitely generated (ideal)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9866,6 +10011,7 @@
               <statement>
                 <p>
                   For a two-sided ideal <m>I</m> of <m>R</m> The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I</m>.
+                  <idx><h>quotient ring</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9934,6 +10080,7 @@
             </p>
 
             <theorem xml:id="thm-ump-for-quotient-rings"><title>UMP for Quotient Rings</title>
+              <idx><h>UMP for quotient rings</h></idx>
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>, there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. 
@@ -9954,7 +10101,8 @@
               </proof>
             </theorem>
     
-            <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>           
+            <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>   
+              <idx><h>first isomorphism theorem for rings</h></idx>        
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism, then <m>R/\ker(f)\cong \im(f)</m> via the map <m>\overline{f}</m> given by <m>\ov{f}(r + \ker(f)) = f(r)</m>.
@@ -9970,6 +10118,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-sit"><title>Second Isomorphism Theorem for Rings</title>
+              <idx><h>second isomorphism theorem for rings</h></idx>
               <statement>
                 <p>
                   Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. 
@@ -9982,6 +10131,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-tit"><title>Third Isomorphism Theorem for Rings</title>
+              <idx><h>third isomorphism theorem for rings</h></idx>
               <statement>
                 <p>
                   If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m> is an ideal of <m>R/I</m> and 
@@ -9992,7 +10142,8 @@
               </statement>
             </theorem>
     
-            <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Quotient Rings</title>
+            <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Rings</title>
+              <idx><h>lattice isomorphism theorem for rings</h></idx>
               <statement>
                 <p>
                   Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. 
@@ -10034,27 +10185,37 @@
               <statement>
                 <p>
                   A <em>prime ideal</em> of a commutative ring <m>R</m> is a proper ideal <m>P</m> such that whenever <m>xy \in P</m> for <m>x, y \in R</m>, we have <m>x \in P</m> or <m>y \in P</m>.
+                  <idx><h>prime ideal</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <remark><p>We often refer to prime ideals as just <q>primes</q>, this will become gently confusing later and we will avoid doing so when possible.</p></remark>
+            <remark>
+              <p>
+                We often refer to prime ideals as just <q>primes</q>, this will become gently confusing later and we will avoid doing so when possible.
+              </p>
+            </remark>
     
             <example xml:id="ex-prime-ideals"><title>Examples of Prime Ideals</title>
               <p>
                 <ul>
                   <li>
-                  In <m>\Z</m>, the prime ideals are <m>\igen0</m> and the ideals generated by prime integers <m>P=\igen p</m>, where <m>p</m> is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular <m>\igen0</m> is prime but not maximal.
+                    In <m>\Z</m>, the prime ideals are <m>\igen0</m> and the ideals generated by prime integers <m>P=\igen p</m>, where <m>p</m> is a prime integer. 
+                    The maximal ideals are the ideals generated by prime integers. 
+                    In particular <m>\igen0</m> is prime but not maximal.
                   </li>
       
                   <li>
-                  In <m>\Z[i]</m> the ideal <m>\igen{13}</m> is not prime, because <m>13=(3+2i)(3-2i)\in\igen{13}</m>, but <m>3+2i\not \in \igen{13}</m> and <m>3-2i\not \in \igen{13}</m> (because if <m>3\pm2i=13\a</m> then <m>N(3\pm2i)=N(13)N(\a)</m> so <m>13=13^2N(\a)</m>, a contradiction).
+                    In <m>\Z[i]</m> the ideal <m>\igen{13}</m> is not prime, because <m>13=(3+2i)(3-2i)\in\igen{13}</m>, but <m>3+2i\not \in \igen{13}</m> and <m>3-2i\not \in \igen{13}</m> 
+                    (because if <m>3\pm2i=13\a</m> then <m>N(3\pm2i)=N(13)N(\a)</m> so <m>13=13^2N(\a)</m>, a contradiction).
                   </li>
                 </ul>
               </p>
             </example>
 
-            <p>Here is an equivalent characterization of prime ideals that will become very useful in a later course on commutative algebra.</p>
+            <p>
+              Here is an equivalent characterization of prime ideals that will become very useful in a later course on commutative algebra.
+            </p>
     
             <proposition xml:id="prop-prime-iff-complement-closed"><title>Prime iff Complement is Closed</title>
               <statement>
@@ -10064,33 +10225,49 @@
               </statement>
             </proposition>
 
-            <p>And here is another equivalent characterization<fn>One might say it is an equivalent equivalent characterization... but we shant.</fn> that will become very useful instantly and will never really stop.</p>
+            <p>
+              And here is another equivalent characterization
+              <fn>One might say it is an equivalent equivalent characterization... but we shant.</fn> 
+              that will become very useful instantly and will never really stop.
+            </p>
     
             <theorem xml:id="thm-prime-iff-domain"><title>Prime iff Quotient is Domain</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. The ideal <m>I</m> is prime if and only if <m>R/I</m> is an integral domain.
+                  Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. 
+                  The ideal <m>I</m> is prime if and only if <m>R/I</m> is an integral domain.
                 </p>
               </statement>
     
               <proof>
                 <p>
-                  Suppose <m>I</m> is prime. If <m>(r + I)(r' + I) = 0 + I</m>, then <m>rr' \in I</m> and hence either <m>r \in I</m> or <m>r' \in I</m>, so that either <m>r + I = 0</m> or <m>r'+ I = 0</m>. This proves <m>R/I</m> is a domain. Suppose <m>R/I</m> is a domain and that <m>xy \in I</m>. Then <m>(x + I)(y + I) = 0</m> in <m>R/I</m> and hence either <m>x+ I = 0</m> or <m>y + I = 0</m>. It follows <m>x \in I</m> or <m>y \in I</m>, so that <m>I</m> is prime.
+                  Suppose <m>I</m> is prime. 
+                  If <m>(r + I)(r' + I) = 0 + I</m>, then <m>rr' \in I</m> and hence either <m>r \in I</m> or <m>r' \in I</m>, so that either <m>r + I = 0</m> or <m>r'+ I = 0</m>. 
+                  This proves <m>R/I</m> is a domain. 
+                  Suppose <m>R/I</m> is a domain and that <m>xy \in I</m>. 
+                  Then <m>(x + I)(y + I) = 0</m> in <m>R/I</m> and hence either <m>x+ I = 0</m> or <m>y + I = 0</m>. 
+                  It follows <m>x \in I</m> or <m>y \in I</m>, so that <m>I</m> is prime.
                 </p>
               </proof>
             </theorem>
 
-            <p>Since we're on such a roll of equivalent characterizations, let's through in one more for good measure.</p>
+            <p>
+              Since we're on such a roll of equivalent characterizations, let's through in one more for good measure.
+            </p>
     
             <proposition xml:id="prop-equivalent-integral-domain-definition"><title>Equivalent Domain Characterization</title>
               <statement>
                 <p>
-                  Let <m>A</m> be a nontrivial ring. Then <m>A</m> is an integral domain if and only if the ideal <m>\igen0</m> is prime.
+                  Let <m>A</m> be a nontrivial ring. 
+                  Then <m>A</m> is an integral domain if and only if the ideal <m>\igen0</m> is prime.
                 </p>
               </statement>
             </proposition>
 
-            <p>Prime ideals and homomorphisms? I thought you'd never ask.</p>
+            <p>
+              Prime ideals and homomorphisms? 
+              I thought you'd never ask.
+            </p>
 
             <theorem xml:id="thm-primes-and-maps"><title>Prime Ideals and Ring Maps</title>
               <statement>
@@ -10116,17 +10293,30 @@
     
           <subsection xml:id="subsec-maximal-ideals"><title>Maximal Ideals</title>
 
-            <blockquote><p><q>It's just like, we know how to push ourselves to the max.</q></p><attribution>Young Dolph</attribution></blockquote>
+            <blockquote>
+              <p>
+                <q>
+                  It's just like, we know how to push ourselves to the max.
+                </q>
+              </p>
+              <attribution>Young Dolph</attribution>
+            </blockquote>
     
             <definition xml:id="def-maximal-ideal"><title>Maximal Ideal</title>
               <statement>
                 <p>
                   A <em>maximal ideal</em> of an arbitrary ring <m>R</m> is a proper ideal <m>\fm</m> such that the only ideals of <m>R</m> containing <m>\fm</m> are <m>\fm</m> and <m>R</m>.
+                  <idx><h>maximal ideal</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <remark><p>It is not uncommon to denote maximal ideals with <m>M</m>. We reserve this notation for <xref ref="part-modules"/> when we dive into modules.</p></remark>
+            <aside>
+              <p>
+                It is not uncommon to denote maximal ideals with <m>M</m>. 
+                We reserve this notation for <xref ref="part-modules"/> when we dive into modules.
+              </p>
+            </aside>
 
             <exercise xml:id="exe-2x-prime-and-maximal-in-zx"><title><m>\igen{2,x}</m> in <m>\Z[x]</m></title>
               <p>
@@ -10134,18 +10324,21 @@
               </p>
             </exercise>
     
-            <p>And, matching up quite nicely with <xref ref="thm-prime-iff-domain"/>, we have one of the spicier meatballs of the chapter.</p>
+            <p>
+              And, matching up quite nicely with <xref ref="thm-prime-iff-domain"/>, we have one of the spicier meatballs of the chapter.
+            </p>
     
             <theorem xml:id="thm-maximal-iff-field"><title>Maximal Ideal iff Quotient is a Field</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. The ideal <m>I</m> is maximal if and only if <m>R/I</m> is a field.
+                  Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. 
+                  The ideal <m>I</m> is maximal if and only if <m>R/I</m> is a field.
                 </p>
               </statement>
     
               <proof>
                 <p>
-                  The first assertion follows immediately from the Lattice Isomorphism Theorem and the fact that <m>R/I</m> is a field if and only if its only ideals are <m>0</m> and <m>R/I</m>.
+                  The first assertion follows immediately from the <xref text="title" ref="thm-ring-lit"/> and the fact that <m>R/I</m> is a field if and only if its only ideals are <m>0</m> and <m>R/I</m>.
                 </p>
               </proof>
             </theorem>
@@ -10164,22 +10357,16 @@
               </proof>
             </corollary>
 
-            <p>Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.</p>
-
-            <!--
-            <exercise xml:id="exe-preimage-of-maximal-ideal-possibly-not-maximal"><title>Preimage of Maximal Ideal not Necessarily Maximal</title>
-              <statement>
-                <p>
-                  Give an explicit example of a ring homomorphism <m>f:A\to B</m> and maximal ideal <m>\fm</m> of <m>A</m> such that <m>f(\fm)</m> is not maximal in <m>B</m>.
-                </p>
-              </statement>
-            </exercise>
-            -->
+            <p>
+              Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.
+            </p>
 
             <lemma xml:id="lem-zorn"><title>Zorn's Lemma</title>          
               <statement>
                 <p>
-                  Let <m>P</m> be a non-empty family of sets. Suppose that for each chain <m>C</m> in <m>P</m>, the set <m>\bigcup_{C_{i}\in C}C_{i}</m> is in <m>P</m>. Then <m>P</m> has a maximal element.
+                  Let <m>P</m> be a non-empty family of sets. 
+                  Suppose that for each chain <m>C</m> in <m>P</m>, the set <m>\bigcup_{C_{i}\in C}C_{i}</m> is in <m>P</m>. 
+                  Then <m>P</m> has a maximal element.
                 </p>
               </statement>
             </lemma>
@@ -10187,13 +10374,18 @@
             <theorem xml:id="thm-all-ideals-contained-in-maximal-ideal"><title>All Ideals Contained in Maximal Ideal</title>
               <statement>
                 <p>
-                  If <m>R</m> is a ring with <m>1\neq 0</m> and <m>I</m> is a proper ideal of <m>R</m>, then there is a maximal ideal of <m>R</m> containing <m>I</m>. In particular every ring <m>R</m> contains a maximal ideal.
+                  If <m>R</m> is a ring with <m>1\neq 0</m> and <m>I</m> is a proper ideal of <m>R</m>, then there is a maximal ideal of <m>R</m> containing <m>I</m>. 
+                  In particular every ring <m>R</m> contains a maximal ideal.
                 </p>
               </statement>
     
               <proof>
                 <p>
-                  Let <m>\cC</m> be the set of proper ideals of <m>R</m> that contain <m>I</m> and view <m>\cC</m> as a poset under containment. We will apply <xref text="title" ref="lem-zorn"/>. Suppose <m>\cT</m> is a totally ordered subset of <m>\cC</m>. We need to show <m>\cT</m> has an upper bound in <m>\cC</m>. If <m>\cT</m> is empty, <m>I</m> is such a bound. Otherwise, let <m>U = \bigcup_{L \in \cT} L</m>.
+                  Let <m>\cC</m> be the set of proper ideals of <m>R</m> that contain <m>I</m> and view <m>\cC</m> as a poset under containment. 
+                  We will apply <xref text="title" ref="lem-zorn"/>. 
+                  Suppose <m>\cT</m> is a totally ordered subset of <m>\cC</m>. 
+                  We need to show <m>\cT</m> has an upper bound in <m>\cC</m>. If <m>\cT</m> is empty, <m>I</m> is such a bound. 
+                  Otherwise, let <m>U = \bigcup_{L \in \cT} L</m>.
                 </p>
     
                 <p>
@@ -10201,7 +10393,9 @@
                 </p>
     
                 <p>
-                  Given <m>x,y \in U</m>, then <m>x \in L, y \in L'</m> for some <m>L, L' \in \cT</m>. Since <m>\cT</m> is totally ordered, either <m>L \subseteq L'</m> or <m>L' \subseteq L</m>, and hence <m>x + y \in L</m> or <m>x +y \in L'</m>. Either way, <m>x + y \in U</m>.
+                  Given <m>x,y \in U</m>, then <m>x \in L, y \in L'</m> for some <m>L, L' \in \cT</m>. 
+                  Since <m>\cT</m> is totally ordered, either <m>L \subseteq L'</m> or <m>L' \subseteq L</m>, and hence <m>x + y \in L</m> or <m>x +y \in L'</m>. 
+                  Either way, <m>x + y \in U</m>.
                 </p>
     
                 <p>
@@ -10209,7 +10403,10 @@
                 </p>
     
                 <p>
-                  This proves <m>U</m> is an ideal that contains <m>I</m>. Since every <m>L\in\cT</m> is a proper ideal, <m>L\cap R^\times =\emptyset</m>, so <m>U\cap R^\times = \bigcup_{L \in \cT} L\cap R^\times=\emptyset</m> and hence <m>U</m> is a proper ideal, so <m>U\in\cC</m>. By <xref text="title" ref="lem-zorn"/>, we conclude <m>\cC</m> has at least one maximal element <m>M</m>. This is a maximal ideal in the sense of definition  since if <m>J</m> is an ideal of <m>R</m> and <m>M\subseteq J</m> then either <m>J=R</m> or, if <m>J</m> is proper, then <m>J\in \cC</m>, which yields <m>J=M</m> by using that <m>M</m> is a maximal element of <m>\cC</m>.
+                  This proves <m>U</m> is an ideal that contains <m>I</m>. 
+                  Since every <m>L\in\cT</m> is a proper ideal, <m>L\cap R^\times =\emptyset</m>, so <m>U\cap R^\times = \bigcup_{L \in \cT} L\cap R^\times=\emptyset</m> and hence <m>U</m> is a proper ideal, so <m>U\in\cC</m>. 
+                  By <xref text="title" ref="lem-zorn"/>, we conclude <m>\cC</m> has at least one maximal element <m>M</m>. 
+                  This is a maximal ideal in the sense of definition  since if <m>J</m> is an ideal of <m>R</m> and <m>M\subseteq J</m> then either <m>J=R</m> or, if <m>J</m> is proper, then <m>J\in \cC</m>, which yields <m>J=M</m> by using that <m>M</m> is a maximal element of <m>\cC</m>.
                 </p>
     
                 <p>

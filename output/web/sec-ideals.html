@@ -598,8 +598,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="sec-dps.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-dps.html#subsec-external-dps-revisited" class="internal"><span class="title">Direct Products: Revisited</span></a></div></li>
-<li><div class="toc-item"><a href="sec-dps.html#subsec-internal-recognition" class="internal"><span class="title">Recognition Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="sec-dps.html#subsec-external-dps-revisited" class="internal"><span class="title">Direct Products of Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-dps.html#subsec-internal-recognition" class="internal"><span class="title">Internal and External Direct Products</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -829,105 +829,103 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Ideal or No Deal</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-42">
-<div class="para" id="p-1165">“It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.”</div> <cite class="attribution">―Jose Rizal</cite>
+<div class="para" id="p-1173">“It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.”</div> <cite class="attribution">―Jose Rizal</cite>
 </blockquote>
 <article class="definition definition-like" id="def-ideal"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Ideal.</span>
-</h4> <div class="para logical" id="p-1166">
+</h4> <div class="para logical" id="p-1174">
 <div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> an <em class="emphasis">ideal</em> (or a <em class="emphasis">two sided ideal</em>) of <span class="process-math">\(R\)</span> is a non empty subset <span class="process-math">\(I\)</span> such that</div>
 <ol class="decimal">
-<li id="li-425"><div class="para" id="p-1167">
+<li id="li-434"><div class="para" id="p-1175">
 <span class="process-math">\((I,+)\)</span> is a subgroup of <span class="process-math">\((R,+)\)</span> and</div></li>
-<li id="li-426"><div class="para" id="p-1168">for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(a \in I\text{,}\)</span> we have <span class="process-math">\(ra \in I\)</span> and <span class="process-math">\(ar \in I\text{.}\)</span> This is often called <em class="emphasis">absorption</em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 1 </sup></a>.</div></li>
+<li id="li-435"><div class="para" id="p-1176">for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(a \in I\text{,}\)</span> we have <span class="process-math">\(ra \in I\)</span> and <span class="process-math">\(ar \in I\text{.}\)</span> This is often called <em class="emphasis">absorption</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-74" id="fn-74"><sup> 1 </sup></a>. </div></li>
 </ol>
-<div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> a <em class="emphasis">proper ideal</em> is an ideal <span class="process-math">\(I\)</span> such that <span class="process-math">\(I\neq R\text{.}\)</span>
-</div>
+<div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> a <em class="emphasis">proper ideal</em> is an ideal <span class="process-math">\(I\)</span> such that <span class="process-math">\(I\neq R\text{.}\)</span> </div>
 </div></article><article class="example example-like" id="ex-ideal-examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2</span><span class="period">.</span><span class="space"> </span><span class="title">Ideals.</span>
-</h4> <div class="para logical" id="p-1169"><ul class="disc">
-<li id="li-427"><div class="para" id="p-derived-li-427">In any ring <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(\{0\}\)</span> and <span class="process-math">\(R\)</span> itself are ideals.</div></li>
-<li id="li-428"><div class="para" id="p-derived-li-428">The ideals of <span class="process-math">\(\Z\)</span> are <span class="process-math">\(n\Z\text{.}\)</span>
+</h4> <div class="para logical" id="p-1177"><ul class="disc">
+<li id="li-436"><div class="para" id="p-derived-li-436">In any ring <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(\{0\}\)</span> and <span class="process-math">\(R\)</span> itself are ideals.</div></li>
+<li id="li-437"><div class="para" id="p-derived-li-437">The ideals of <span class="process-math">\(\Z\)</span> are <span class="process-math">\(n\Z\text{.}\)</span>
 </div></li>
-<li id="li-429"><div class="para" id="p-derived-li-429">The sets <span class="process-math">\(R_i=\left\{\begin{bmatrix} 0 &amp; 0 &amp; \cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp;a_{in} \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp;0\end{bmatrix}\right\}\)</span> and <span class="process-math">\(L_j=\left\{\begin{bmatrix} 0 &amp; \cdots &amp; a_{j1} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\0 &amp; \cdots &amp; a_{ji} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; \cdots &amp; a_{jn} &amp;\cdots &amp; 0\\\end{bmatrix}\right\}\)</span> are a right ideal and a left ideal of <span class="process-math">\(\M_n(R)\)</span> respectively. Neither are two-sided ideals.</div></li>
-<li id="li-430"><div class="para" id="p-derived-li-430">The set <span class="process-math">\(\cR\)</span> of all nilpotent elements in a ring <span class="process-math">\(A\)</span> is an ideal.</div></li>
-<li id="li-431"><div class="para" id="p-1170">Let <span class="process-math">\(R\)</span> be a commutative ring, and set <span class="process-math">\(I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}\text{.}\)</span> Then <span class="process-math">\(I\)</span> is an ideal in <span class="process-math">\(R\text{.}\)</span>
+<li id="li-438"><div class="para" id="p-derived-li-438">The sets <span class="process-math">\(R_i=\left\{\begin{bmatrix} 0 &amp; 0 &amp; \cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp;a_{in} \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp;0\end{bmatrix}\right\}\)</span> and <span class="process-math">\(L_j=\left\{\begin{bmatrix} 0 &amp; \cdots &amp; a_{j1} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\0 &amp; \cdots &amp; a_{ji} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; \cdots &amp; a_{jn} &amp;\cdots &amp; 0\\\end{bmatrix}\right\}\)</span> are a right ideal and a left ideal of <span class="process-math">\(\M_n(R)\)</span> respectively. Neither are two-sided ideals.</div></li>
+<li id="li-439"><div class="para" id="p-derived-li-439">The set <span class="process-math">\(\cR\)</span> of all nilpotent elements in a ring <span class="process-math">\(A\)</span> is an ideal.</div></li>
+<li id="li-440"><div class="para" id="p-1178">Let <span class="process-math">\(R\)</span> be a commutative ring, and set <span class="process-math">\(I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}\text{.}\)</span> Then <span class="process-math">\(I\)</span> is an ideal in <span class="process-math">\(R\text{.}\)</span>
 </div></li>
-</ul></div></article><div class="para" id="p-1171">A fun fact about ideals is that they are subrings.</div>
+</ul></div></article><div class="para" id="p-1179">A fun fact about ideals is that they are subrings.</div>
 <article class="proposition theorem-like" id="prop-ideals-are-subrings"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span><span class="space"> </span><span class="title">Ideals are Subrings.</span>
 </h4>
-<div class="para" id="p-1172">Any ideal <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(R\)</span>
-</div></article><div class="para" id="p-1173">The converse need not be true, however.</div>
+<div class="para" id="p-1180">Any ideal <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(R\)</span>
+</div></article><div class="para" id="p-1181">The converse need not be true, however.</div>
 <article class="exercise exercise-like" id="exercise-67"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-67"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.4</span><span class="period">.</span><span class="space"> </span><span class="title">Subrings Need not be Ideals.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-67"><article class="exercise exercise-like"><div class="para" id="p-1174">Find, with justification, a subring which is not an ideal.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-67"><article class="exercise exercise-like"><div class="para" id="p-1182">Find, with justification, a subring which is not an ideal.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="para" id="p-1175">In <span class="process-math">\(\R[x]\text{,}\)</span> the set <span class="process-math">\(S\)</span> of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, <span class="process-math">\(p(x)=x^2\in S\text{,}\)</span> but <span class="process-math">\(xp(x)=x^3\not\in S\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="para" id="p-1183">In <span class="process-math">\(\R[x]\text{,}\)</span> the set <span class="process-math">\(S\)</span> of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, <span class="process-math">\(p(x)=x^2\in S\text{,}\)</span> but <span class="process-math">\(xp(x)=x^3\not\in S\text{.}\)</span>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-1176">Another fun fact is that we can combine ideals in all sorts of ways to get new ones!</div>
+<div class="para" id="p-1184">Another fun fact is that we can combine ideals in all sorts of ways to get new ones!</div>
 <article class="theorem theorem-like" id="thm-properties-of-ideals"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span><span class="space"> </span><span class="title">Combinations of Ideals.</span>
 </h4>
-<div class="para logical" id="p-1177">
+<div class="para logical" id="p-1185">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(I,J\)</span> be ideals of <span class="process-math">\(R\text{.}\)</span> Then</div>
 <ol class="decimal">
-<li id="li-432"><div class="para" id="p-1178">
+<li id="li-441"><div class="para" id="p-1186">
 <span class="process-math">\(I + J := \{a + b \mid a \in I, b \in J\}\)</span> is an ideal</div></li>
-<li id="li-433"><div class="para" id="p-1179">
+<li id="li-442"><div class="para" id="p-1187">
 <span class="process-math">\(I\cap J\)</span> is an ideal</div></li>
-<li id="li-434"><div class="para" id="p-1180">
-<span class="process-math">\(IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}\)</span> is an ideal and <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span>
-</div></li>
-<li id="li-435"><div class="para" id="p-1181">The intersection <span class="process-math">\(\bigcap_{\a\in J} I_\a\)</span> of any collection of ideals <span class="process-math">\(I_\a\)</span> of <span class="process-math">\(R\)</span> is an ideal.</div></li>
+<li id="li-443"><div class="para" id="p-1188">
+<span class="process-math">\(IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}\)</span> is an ideal and <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span> </div></li>
+<li id="li-444"><div class="para" id="p-1189">The intersection <span class="process-math">\(\bigcap_{\a\in J} I_\a\)</span> of any collection of ideals <span class="process-math">\(I_\a\)</span> of <span class="process-math">\(R\)</span> is an ideal.</div></li>
 </ol>
 <div class="para">The set of all ideals of a ring <span class="process-math">\(R\)</span> forms a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals <span class="process-math">\(I,J\)</span> is <span class="process-math">\(I+J\)</span> and the infimum is <span class="process-math">\(I\cap J\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="exe-the-union-of-ideals-need-not-be-an-ideal"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-the-union-of-ideals-need-not-be-an-ideal"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span><span class="space"> </span><span class="title">Union of Ideals Need not be an Ideal.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-the-union-of-ideals-need-not-be-an-ideal"><article class="exercise exercise-like"><div class="para" id="p-1182">Give an example</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-the-union-of-ideals-need-not-be-an-ideal"><article class="exercise exercise-like"><div class="para" id="p-1190">Give an example</div></article></div>
 <article class="exercise exercise-like" id="exe-modular-law"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-modular-law"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span><span class="space"> </span><span class="title">Modular Law.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-modular-law"><article class="exercise exercise-like"><div class="para logical" id="p-1183">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-modular-law"><article class="exercise exercise-like"><div class="para logical" id="p-1191">
 <div class="para">Let <span class="process-math">\(I,J,K\)</span> be ideals in <span class="process-math">\(R\)</span> such that <span class="process-math">\(J\sse I\)</span> or <span class="process-math">\(K\sse I\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-I\cap(J+K)=I\cap J+I\cap K
+I\cap(J+K)=I\cap J+I\cap K.
 \end{equation*}
 </div>
 </div></article></div>
-<div class="para" id="p-1184">And here are some important properties to wrap up on.</div>
+<div class="para" id="p-1192">And here are some important properties to wrap up on.</div>
 <article class="proposition theorem-like" id="prop-proper-ideals"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span><span class="space"> </span><span class="title">Proper Ideals, Fields, and Units.</span>
 </h4>
-<div class="para" id="p-1185">An ideal <span class="process-math">\(I\)</span> of a unital ring <span class="process-math">\(R\)</span> is proper if and only if <span class="process-math">\(I\)</span> contains no units. Moreover, if <span class="process-math">\(F\)</span> is a field it has only two ideals <span class="process-math">\(\{0\}\)</span> and <span class="process-math">\(F\text{.}\)</span>
+<div class="para" id="p-1193">An ideal <span class="process-math">\(I\)</span> of a unital ring <span class="process-math">\(R\)</span> is proper if and only if <span class="process-math">\(I\)</span> contains no units. Moreover, if <span class="process-math">\(F\)</span> is a field it has only two ideals <span class="process-math">\(\{0\}\)</span> and <span class="process-math">\(F\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-homomorphisms-and-ideals"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span><span class="space"> </span><span class="title">Homomorphisms and Ideals.</span>
 </h4>
-<div class="para logical" id="p-1186">
+<div class="para logical" id="p-1194">
 <div class="para">If <span class="process-math">\(\varphi: R \to S\)</span> is a ring homomorphism, then</div>
 <ol class="decimal">
-<li id="li-436"><div class="para" id="p-1187">the image of <span class="process-math">\(\varphi\)</span> is a subring of <span class="process-math">\(S\)</span> and</div></li>
-<li id="li-437"><div class="para" id="p-1188">the kernel of <span class="process-math">\(\varphi\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span>
+<li id="li-445"><div class="para" id="p-1195">the image of <span class="process-math">\(\varphi\)</span> is a subring of <span class="process-math">\(S\)</span> and</div></li>
+<li id="li-446"><div class="para" id="p-1196">the kernel of <span class="process-math">\(\varphi\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span>
 </div></li>
-<li id="li-438"><div class="para" id="p-1189">
+<li id="li-447"><div class="para" id="p-1197">
 <span class="process-math">\(\varphi\)</span> is injective if and only if <span class="process-math">\(\ker(\varphi)=\{0\}\text{.}\)</span>
 </div></li>
-<li id="li-439"><div class="para" id="p-1190">if <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(R\)</span> then <span class="process-math">\(\varphi(I)\)</span> is an ideal of <span class="process-math">\(\varphi(R)\text{.}\)</span>
+<li id="li-448"><div class="para" id="p-1198">if <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(R\)</span> then <span class="process-math">\(\varphi(I)\)</span> is an ideal of <span class="process-math">\(\varphi(R)\text{.}\)</span>
 </div></li>
-<li id="li-440"><div class="para" id="p-1191">if <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(S\)</span> then <span class="process-math">\(\varphi^{-1}(J)\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span>
+<li id="li-449"><div class="para" id="p-1199">if <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(S\)</span> then <span class="process-math">\(\varphi^{-1}(J)\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para logical" id="p-1192"><ol class="decimal"><li id="li-441"><div class="para" id="p-derived-li-441">Since <span class="process-math">\(\)</span> is a ring homomorphism, it is in particular a group homomorphism <span class="process-math">\((R,+)\to (S,+)\text{.}\)</span> We know the kernel of a group homomorphism is a subgroup, so <span class="process-math">\(\ker(f)\leq (S,+)\text{.}\)</span> All that remains to be shown is that for any <span class="process-math">\(r\in R\)</span> <span class="process-math">\(r\ker(f)\subseteq \ker(f)\)</span> and <span class="process-math">\(\ker(f)r\subseteq \ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in \ker(f)\text{;}\)</span> then <span class="process-math">\(f(x)=0\)</span> and <span class="process-math">\(f(rx)=f(r)f(x)=0\text{,}\)</span> <span class="process-math">\(f(xr)=f(x)f(r)=0\)</span> show <span class="process-math">\(rx,xr\in \ker(f)\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para logical" id="p-1200"><ol class="decimal"><li id="li-450"><div class="para" id="p-derived-li-450">Since <span class="process-math">\(\)</span> is a ring homomorphism, it is in particular a group homomorphism <span class="process-math">\((R,+)\to (S,+)\text{.}\)</span> We know the kernel of a group homomorphism is a subgroup, so <span class="process-math">\(\ker(f)\leq (S,+)\text{.}\)</span> All that remains to be shown is that for any <span class="process-math">\(r\in R\)</span> <span class="process-math">\(r\ker(f)\subseteq \ker(f)\)</span> and <span class="process-math">\(\ker(f)r\subseteq \ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in \ker(f)\text{;}\)</span> then <span class="process-math">\(f(x)=0\)</span> and <span class="process-math">\(f(rx)=f(r)f(x)=0\text{,}\)</span> <span class="process-math">\(f(xr)=f(x)f(r)=0\)</span> show <span class="process-math">\(rx,xr\in \ker(f)\text{.}\)</span>
 </div></li></ol></div></article></div></section><section class="subsection" id="subsec-generated-ideals"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Generated Ideals</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-43">
-<div class="para" id="p-1193">“If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.”</div> <cite class="attribution">―Liam Neeson, Batman Begins</cite>
+<div class="para" id="p-1201">“If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.”</div> <cite class="attribution">―Liam Neeson, Batman Begins</cite>
 </blockquote>
 <article class="definition definition-like" id="def-generated-ideal"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span><span class="space"> </span><span class="title">Generated Ideals.</span>
-</h4> <div class="para logical" id="p-1194">
+</h4> <div class="para logical" id="p-1202">
 <div class="para">If <span class="process-math">\(A\)</span> is any subset of a ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">ideal generated by</em> <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(\igen A\text{,}\)</span> is the intersection of all ideals of <span class="process-math">\(R\)</span> that contain <span class="process-math">\(A\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -935,16 +933,15 @@ I\cap(J+K)=I\cap J+I\cap K
 \igen A=\bigcap_{I\;\text{ideal of}\;R, A\subseteq I} I.
 \end{equation*}
 </div>
-<div class="para">An ideal <span class="process-math">\(I\)</span> is <em class="emphasis">finitely generated</em> if <span class="process-math">\(I = \igen A\)</span> for some finite subset <span class="process-math">\(A\)</span> of <span class="process-math">\(R\text{.}\)</span>
-</div>
-</div></article><aside class="aside aside-like" id="aside-17"><div class="para" id="p-1195">It is common for <span class="process-math">\(\igen A\)</span> to be written as <span class="process-math">\((A)\text{;}\)</span> this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.</div></aside><article class="remark remark-like" id="remark-37"><h4 class="heading">
+<div class="para">An ideal <span class="process-math">\(I\)</span> is <em class="emphasis">finitely generated</em> if <span class="process-math">\(I = \igen A\)</span> for some finite subset <span class="process-math">\(A\)</span> of <span class="process-math">\(R\text{.}\)</span> </div>
+</div></article><aside class="aside aside-like" id="aside-17"><div class="para" id="p-1203">It is common for <span class="process-math">\(\igen A\)</span> to be written as <span class="process-math">\((A)\text{;}\)</span> this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.</div></aside><article class="remark remark-like" id="remark-37"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-1196">By <a href="" class="xref" data-knowl="./knowl/thm-properties-of-ideals.html" title="Theorem 8.5: Combinations of Ideals">Theorem 8.5</a>, <span class="process-math">\(\igen A\)</span> is an ideal. It is also the smallest ideal of <span class="process-math">\(R\)</span> that contains <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="p-1204">By <a href="" class="xref" data-knowl="./knowl/thm-properties-of-ideals.html" title="Theorem 8.5: Combinations of Ideals">Theorem 8.5</a>, <span class="process-math">\(\igen A\)</span> is an ideal. It is also the smallest ideal of <span class="process-math">\(R\)</span> that contains <span class="process-math">\(A\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-formula-for-generated-ideal"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span><span class="space"> </span><span class="title">Elements in Generated Ideals.</span>
 </h4>
-<div class="para logical" id="p-1197">
+<div class="para logical" id="p-1205">
 <div class="para">For a subset <span class="process-math">\(A\)</span> of a ring <span class="process-math">\(R\)</span> with <span class="process-math">\(1\text{,}\)</span> the ideal generated by <span class="process-math">\(A\)</span> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -959,27 +956,27 @@ I\cap(J+K)=I\cap J+I\cap K
 </div>
 </div></article><article class="exercise exercise-like" id="exe-generated-ideals-and-z"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-generated-ideals-and-z"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span><span class="space"> </span><span class="title">Generated Ideals and <span class="process-math">\(\Z\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-generated-ideals-and-z"><article class="exercise exercise-like"><div class="para logical" id="p-1198"><ul class="disc">
-<li id="li-442"><div class="para" id="p-1199">In the commutative ring <span class="process-math">\(\Z\text{,}\)</span> we have <span class="process-math">\(\igen{2,3}=\igen 1=\Z\text{.}\)</span> Indeed any element <span class="process-math">\(n\in \Z\)</span> can be written as <span class="process-math">\(n=(-n)\cdot 2+n\cdot 3=n\cdot 1\text{.}\)</span> Note that <span class="process-math">\(1=\gcd(2,3)\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-generated-ideals-and-z"><article class="exercise exercise-like"><div class="para logical" id="p-1206"><ul class="disc">
+<li id="li-451"><div class="para" id="p-1207">In the commutative ring <span class="process-math">\(\Z\text{,}\)</span> we have <span class="process-math">\(\igen{2,3}=\igen 1=\Z\text{.}\)</span> Indeed any element <span class="process-math">\(n\in \Z\)</span> can be written as <span class="process-math">\(n=(-n)\cdot 2+n\cdot 3=n\cdot 1\text{.}\)</span> Note that <span class="process-math">\(1=\gcd(2,3)\text{.}\)</span>
 </div></li>
-<li id="li-443"><div class="para" id="p-1200">In the commutative ring <span class="process-math">\(\Z\text{,}\)</span> we have <span class="process-math">\(\igen{2,4}=\igen 2=2\Z\text{,}\)</span> the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <span class="process-math">\(2=\gcd(2,4)\text{.}\)</span>
+<li id="li-452"><div class="para" id="p-1208">In the commutative ring <span class="process-math">\(\Z\text{,}\)</span> we have <span class="process-math">\(\igen{2,4}=\igen 2=2\Z\text{,}\)</span> the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <span class="process-math">\(2=\gcd(2,4)\text{.}\)</span>
 </div></li>
 </ul></div></article></div>
 <article class="exercise exercise-like" id="exe-finite-generated-ideal-and-nilpotent"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-finite-generated-ideal-and-nilpotent"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.14</span><span class="period">.</span><span class="space"> </span><span class="title">Finitely Generated Ideals and Nilpotent Elements.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finite-generated-ideal-and-nilpotent"><article class="exercise exercise-like"><div class="para" id="p-1201">Let <span class="process-math">\(I\)</span> be a finitely generated ideal of <span class="process-math">\(R\text{.}\)</span> Suppose every element of <span class="process-math">\(I\)</span> is nilpotent. Prove that there exists an integer <span class="process-math">\(n\geq 1\)</span> such that <span class="process-math">\(b^n=0\)</span> for all <span class="process-math">\(b\in I\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finite-generated-ideal-and-nilpotent"><article class="exercise exercise-like"><div class="para" id="p-1209">Let <span class="process-math">\(I\)</span> be a finitely generated ideal of <span class="process-math">\(R\text{.}\)</span> Suppose every element of <span class="process-math">\(I\)</span> is nilpotent. Prove that there exists an integer <span class="process-math">\(n\geq 1\)</span> such that <span class="process-math">\(b^n=0\)</span> for all <span class="process-math">\(b\in I\text{.}\)</span>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-72"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-72"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.15</span><span class="period">.</span><span class="space"> </span><span class="title">Infinitely Generated Ideal.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-72"><article class="exercise exercise-like"><div class="para logical" id="p-1202">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-72"><article class="exercise exercise-like"><div class="para logical" id="p-1210">
 <div class="para">Let <span class="process-math">\(I=\{f\in \cC[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-444"><div class="para" id="p-1203">Prove that <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(\cC[0,1]\text{.}\)</span>
+<li id="li-453"><div class="para" id="p-1211">Prove that <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(\cC[0,1]\text{.}\)</span>
 </div></li>
-<li id="li-445"><div class="para" id="p-1204">Prove that <span class="process-math">\(I\)</span> is not finitely generated.</div></li>
+<li id="li-454"><div class="para" id="p-1212">Prove that <span class="process-math">\(I\)</span> is not finitely generated.</div></li>
 </ol>
-</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-70"><div class="fn">Personally I think it would be splendid if we could rename ideals <em class="emphasis">sponges</em> to match this imagery.</div></div>
+</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-74"><div class="fn">Personally I think it would be splendid if we could rename ideals <em class="emphasis">sponges</em> to match this imagery.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-idealquot.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-ring-quotients.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

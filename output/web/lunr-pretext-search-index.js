@@ -2455,7 +2455,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Sylow's Theorem",
-  "body": "Sylow's Theorem   We come to a very powerful technique for analyzing finite groups of relatively small order. One aspect of Sylow theory is that it allows us to deduce, in certain special cases, the existence of a unique subgroup of a given order, and thus it allows one to construct a normal subgroup.   Groups of Prime Order    The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.   Optimus Prime   -group   For a prime number , a -group is a group of order for some . -group     Center of -group is Nontrivial   If is a prime number and is a finite group of order for some , then is not the trivial group (In fact for some ).    Let be a list of unique representatives of all of the conjugacy classes of of size greater than as in . Then for each , so . Since , it follows that for each . From we deduce that so, .    Order and   Let be prime.   Any group of order is cyclic.    Any group of order is abelian.       Cauchy's Theorem   If is a finite group and is a prime number dividing , then has an element of order . (In fact, at least elements of order .)     allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups.  For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of , which provides information about the structure of finite groups.   has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.   Sylow Subgroups  Sylow -subgroup   Let be a finite group and a prime. Write the order of as where . A Sylow -subgroup of is a subgroup such that . That is, a Sylow -subgroup of is a subgroup whose order is the highest conceivable power of according to .  We set to be the collection of all Sylow -subgroups of and to be the number of Sylow -subgroups. the collection of all Sylow -subgroups of  the the number of Sylow -subgroups  Sylow subgroup  Sylow -subgroup      We allow the case when , in which case and has a unique Sylow -subgroup, namely which has order .   Sylow Subgroups in  In for a prime , is a Sylow -subgroup. If , there is only one Sylow -subgroup of , so .  In for odd, each of the subgroups , for is a Sylow -subgroup, so .   Sylow Subgroups in  In , the Sylow -subgroups are the cyclic groups for any five cycle , so because there are five cycles, but there are four of these in every Sylow -subgroup. The Sylow -subgroups are the cyclic groups for any three cycle , so because there are three cycles, but there are two of these in every Sylow -subgroup.  A Sylow -subgroup of is any subgroup of order . For example is a Sylow -subgroup. There are many others.    Sylows-Theorem    What makes me unique is that I'm normal.   Scotty McCreery     If is a finite group and is a prime with , then acts on the set of its Sylow -subgroups via conjugation.     As of now, for all we know, this might be the action on the empty set, but we’ll see in a bit that the set of Sylow -subgroups is in fact not empty.   Sylow Theory is all about understanding this action very well.  Sylow's Lemma   Let be a finite group, a prime, a Sylow -subgroup of , and any -subgroup of . Then .    Since , we have . For the reverse containment, let . Since , is a subgroup of . (Technically, we only proved is a subgroup if , but the proof applies verbatim provided the weaker condition holds.) Also and since each of , , and is a power of , is a -subgroup of . But and is a -subgroup of largest possible order. So . This proves and thus .    Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence           Recall that we write where . We need to prove contains a subgroup of order , and we proceed by induction on .  If or, more generally, if , then is a Sylow -subgroup. We may thus assume . We proceed by considering two cases, depending on whether or not divides .  If , then by , there is an element of order . Set . Since , we have . Since , by induction has a subgroup of order (i.e. of index ). By , this subgroup corresponds to a subgroup of of index , hence of order .  For the second case, assume and consider the for : where are a complete and non-redundant list of non-central conjugacy class representatives. Since and , we must have for at least one . For this , we have where . Since is not central, and hence, by induction, contains a subgroup of order . But this subgroup is also a subgroup of .    Let be a Sylow -subgroup and let be any -subgroup. Let denote the collection of all conjugates of : Part (3) tells us the consists of all Sylow -subgroups of , but we don’t yet know this. Nonetheless, acts (transitively) on by conjugation, and thus also acts on (not necessarily transitively). The key to proving parts (2) and (3) of the Sylow Theorem is to analyse the action of on to establish and below.  Let be the orbits of the action of on , and for each pick a representative . We have , where the last equation uses the Lemma. By LOIS, we thus have and hence   This equation holds for any -subgroup of . In particular, we can take . In this case the first term is and, since for all , the remaining terms are divisible by . This gives (This does not yet prove part (3) since we don’t yet know that consists of all Sylow -subgroups.)  We can now prove part (2): By way of contradiction, suppose is a -subgroup of such that is not contained in any of the subgroups belonging to . Then for all and thus every term on the right-hand side of is divisble by , contrary to . The second assertion in (2) follows by taking to be a Sylow -subgroup.  This proves, in particular, that in fact does consist of all Sylow -subgroups.    Part (3) thus follows from .    For any , the stabilizer of for the action of on by conjugation is . Since we now know the action is transitive, Moreover, since and , it follows that .        provides a systematic way of analyzing the subgroups of a finite group. It allows us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.   In general, can be deduced from part one of . For say . Then there exists a Sylow -subgroup of . Pick any , . Then for some . Then has order .   Recalling , we have the following:  Sylow Subgroup Normal iff Unique   A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of .    Order of  Prove that has precisely three distinct subgroups of order , all of which are isomorphic to    Any subgroup of of order is a Sylow -subgroup. By , the number of Sylow -subgroups is either or . As any -cycle or -cycle must be contained in a Sylow -subgroup (since such elements generate subgroups of order , for some ) and there are six -cycles and six -cycles, there has to be more than one Sylow -subgroup. Hence, there are precisely distinct subgroups of order .  As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that contains a subgroup isomorphic to . Let be the set of left cosets of the subgroup of . Note that . Let act on by left multiplication. This action induces a homomorphism where is the permutation group on . As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in , which is . Thus, is injective and the image of is a subgroup of isomorphic to .       Groups of prime order are cyclic.     tells us that if is a finite group and is a prime number dividing , then has an element of order .    A of is a subgroup whose order is the highest conceivable power of possible.     tells us and . Furthermore, acts transitively on the set of Sylow -subgroups by conjugation, making them all conjugate to one another.    A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of . See:      "
+  "body": "Sylow's Theorem   We come to a very powerful technique for analyzing finite groups of relatively small order. One aspect of Sylow theory is that it allows us to deduce, in certain special cases, the existence of a unique subgroup of a given order, and thus it allows one to construct a normal subgroup.   Groups of Prime Order    The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.   Optimus Prime   -group   For a prime number , a -group is a group of order for some . -group     Center of -group is Nontrivial   If is a prime number and is a finite group of order for some , then is not the trivial group (In fact for some ).    Let be a list of unique representatives of all of the conjugacy classes of of size greater than as in . Then for each , so . Since , it follows that for each . From we deduce that so, .    Order and   Let be prime.   Any group of order is cyclic.    Any group of order is abelian.       Cauchy's Theorem   If is a finite group and is a prime number dividing , then has an element of order . (In fact, at least elements of order .)     allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups.  For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of , which provides information about the structure of finite groups.   has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.   Sylow Subgroups  Sylow -subgroup   Let be a finite group and a prime. Write the order of as where . A Sylow -subgroup of is a subgroup such that . That is, a Sylow -subgroup of is a subgroup whose order is the highest conceivable power of according to .  We set to be the collection of all Sylow -subgroups of and to be the number of Sylow -subgroups. the collection of all Sylow -subgroups of  the the number of Sylow -subgroups  Sylow subgroup  Sylow -subgroup      We allow the case when , in which case and has a unique Sylow -subgroup, namely which has order .   Sylow Subgroups in  In for a prime , is a Sylow -subgroup. If , there is only one Sylow -subgroup of , so .  In for odd, each of the subgroups , for is a Sylow -subgroup, so .   Sylow Subgroups in  In , the Sylow -subgroups are the cyclic groups for any five cycle , so because there are five cycles, but there are four of these in every Sylow -subgroup. The Sylow -subgroups are the cyclic groups for any three cycle , so because there are three cycles, but there are two of these in every Sylow -subgroup.  A Sylow -subgroup of is any subgroup of order . For example is a Sylow -subgroup. There are many others.    Sylows-Theorem    What makes me unique is that I'm normal.   Scotty McCreery     If is a finite group and is a prime with , then acts on the set of its Sylow -subgroups via conjugation.     As of now, for all we know, this might be the action on the empty set, but we’ll see in a bit that the set of Sylow -subgroups is in fact not empty.   Sylow Theory is all about understanding this action very well.  Sylow's Lemma   Let be a finite group, a prime, a Sylow -subgroup of , and any -subgroup of . Then .    Since , we have . For the reverse containment, let . Since , is a subgroup of . (Technically, we only proved is a subgroup if , but the proof applies verbatim provided the weaker condition holds.) Also and since each of , , and is a power of , is a -subgroup of . But and is a -subgroup of largest possible order. So . This proves and thus .    Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence           Recall that we write where . We need to prove contains a subgroup of order , and we proceed by induction on .  If or, more generally, if , then is a Sylow -subgroup. We may thus assume . We proceed by considering two cases, depending on whether or not divides .  If , then by , there is an element of order . Set . Since , we have . Since , by induction has a subgroup of order (i.e. of index ). By , this subgroup corresponds to a subgroup of of index , hence of order .  For the second case, assume and consider the for : where are a complete and non-redundant list of non-central conjugacy class representatives. Since and , we must have for at least one . For this , we have where . Since is not central, and hence, by induction, contains a subgroup of order . But this subgroup is also a subgroup of .    Let be a Sylow -subgroup and let be any -subgroup. Let denote the collection of all conjugates of : Part (3) tells us the consists of all Sylow -subgroups of , but we don’t yet know this. Nonetheless, acts (transitively) on by conjugation, and thus also acts on (not necessarily transitively). The key to proving parts (2) and (3) of the Sylow Theorem is to analyse the action of on to establish and below.  Let be the orbits of the action of on , and for each pick a representative . We have , where the last equation uses the Lemma. By LOIS, we thus have and hence   This equation holds for any -subgroup of . In particular, we can take . In this case the first term is and, since for all , the remaining terms are divisible by . This gives (This does not yet prove part (3) since we don’t yet know that consists of all Sylow -subgroups.)  We can now prove part (2): By way of contradiction, suppose is a -subgroup of such that is not contained in any of the subgroups belonging to . Then for all and thus every term on the right-hand side of is divisble by , contrary to . The second assertion in (2) follows by taking to be a Sylow -subgroup.  This proves, in particular, that in fact does consist of all Sylow -subgroups.    Part (3) thus follows from .    For any , the stabilizer of for the action of on by conjugation is . Since we now know the action is transitive, Moreover, since and , it follows that .        provides a systematic way of analyzing the subgroups of a finite group. It allows us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.   In general, can be deduced from part one of . For say . Then there exists a Sylow -subgroup of . Pick any , . Then for some . Then has order .   Recalling , we have the following:  Sylow Subgroup Normal iff Unique   A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of .    Order of  Prove that has precisely three distinct subgroups of order , all of which are isomorphic to    Any subgroup of of order is a Sylow -subgroup. By , the number of Sylow -subgroups is either or . As any -cycle or -cycle must be contained in a Sylow -subgroup (since such elements generate subgroups of order , for some ) and there are six -cycles and six -cycles, there has to be more than one Sylow -subgroup. Hence, there are precisely distinct subgroups of order .  As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that contains a subgroup isomorphic to . Let be the set of left cosets of the subgroup of . Note that . Let act on by left multiplication. This action induces a homomorphism where is the permutation group on . As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in , which is . Thus, is injective and the image of is a subgroup of isomorphic to .       Groups of prime order are cyclic, and the center of any group of prime power order is nontrivial. See: and      tells us that if is a finite group and is a prime number dividing , then has an element of order .    A of is a subgroup whose order is the highest conceivable power of possible.     tells us and . Furthermore, acts transitively on the set of Sylow -subgroups by conjugation, making them all conjugate to one another.    A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of . See:      "
 },
 {
   "id": "def-p-group",
@@ -2599,7 +2599,7 @@ var ptx_lunr_docs = [
   "type": "Summary",
   "number": "5.1",
   "title": "",
-  "body": "   Groups of prime order are cyclic.     tells us that if is a finite group and is a prime number dividing , then has an element of order .    A of is a subgroup whose order is the highest conceivable power of possible.     tells us and . Furthermore, acts transitively on the set of Sylow -subgroups by conjugation, making them all conjugate to one another.    A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of . See:     "
+  "body": "   Groups of prime order are cyclic, and the center of any group of prime power order is nontrivial. See: and      tells us that if is a finite group and is a prime number dividing , then has an element of order .    A of is a subgroup whose order is the highest conceivable power of possible.     tells us and . Furthermore, acts transitively on the set of Sylow -subgroups by conjugation, making them all conjugate to one another.    A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of . See:     "
 },
 {
   "id": "sec-simple-groups",
@@ -2707,7 +2707,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Direct Products",
-  "body": "Direct Products   We now discuss how to build new groups from old ones.   Direct Products: Revisited    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre   Direct Product, Direct Sum   Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product. direct product of groups  direct sum of groups      A direct sum is the same thing as a finite direct product.   Direct Product of Groups is a Group   The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.     The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.   Properties of Direct Products      The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .       Direct Products and Homomorphisms      Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.       Direct Product of Cyclic Groups  If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus    No Cancellation in Products  Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.    Recognition Theorem    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln   Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that . Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.    Internal and External Direct Product   If and are such that then we call is called the internal direct product of and and the external direct product of and . internal direct product  external direct product      "
+  "body": "Direct Products   We now discuss how to build new groups from old ones.   Direct Products of Groups    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre   Direct Product   Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product. direct product of groups  direct sum of groups      A direct sum is the same thing as a finite direct product.   Direct Product of Groups is a Group   The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.     The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.   Properties of Direct Products      The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .       Direct Products and Homomorphisms      Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.       Direct Product of Cyclic Groups  direct product of cyclic groups  If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus    No Cancellation in Products  Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.    Internal and External Direct Products    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln   Recognition Theorem for Direct Products  recognition theorem (direct products)   Suppose is a group with normal subgroups and such that . Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.    Internal and External Direct Products   If and are such that then we call is called the internal direct product of and and the external direct product of and . internal direct product  external direct product         The of groups is again a group. See: .      .    We define and identify them with the , the requirement being and .     "
 },
 {
   "id": "def-dp-external",
@@ -2715,8 +2715,8 @@ var ptx_lunr_docs = [
   "url": "sec-dps.html#def-dp-external",
   "type": "Definition",
   "number": "6.1",
-  "title": "Direct Product, Direct Sum.",
-  "body": "Direct Product, Direct Sum   Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product. direct product of groups  direct sum of groups    "
+  "title": "Direct Product.",
+  "body": "Direct Product   Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product. direct product of groups  direct sum of groups    "
 },
 {
   "id": "remark-27",
@@ -2770,7 +2770,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.7",
   "title": "Direct Product of Cyclic Groups.",
-  "body": "Direct Product of Cyclic Groups  If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus   "
+  "body": "Direct Product of Cyclic Groups  direct product of cyclic groups  If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus   "
 },
 {
   "id": "exe-no-group-cancellation-in-products",
@@ -2788,7 +2788,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "6.9",
   "title": "Recognition Theorem for Direct Products.",
-  "body": "Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that . Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.   "
+  "body": "Recognition Theorem for Direct Products  recognition theorem (direct products)   Suppose is a group with normal subgroups and such that . Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.   "
 },
 {
   "id": "def-int-ext-dp",
@@ -2796,8 +2796,17 @@ var ptx_lunr_docs = [
   "url": "sec-dps.html#def-int-ext-dp",
   "type": "Definition",
   "number": "6.10",
-  "title": "Internal and External Direct Product.",
-  "body": "Internal and External Direct Product   If and are such that then we call is called the internal direct product of and and the external direct product of and . internal direct product  external direct product    "
+  "title": "Internal and External Direct Products.",
+  "body": "Internal and External Direct Products   If and are such that then we call is called the internal direct product of and and the external direct product of and . internal direct product  external direct product    "
+},
+{
+  "id": "outcomes-17",
+  "level": "2",
+  "url": "sec-dps.html#outcomes-17",
+  "type": "Summary",
+  "number": "6.1",
+  "title": "",
+  "body": "   The of groups is again a group. See: .      .    We define and identify them with the , the requirement being and .    "
 },
 {
   "id": "sec-spds",
@@ -2806,7 +2815,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "Semidirect Products",
-  "body": "Semidirect Products  External Semidirect Products    Don't give up and always keep on believing in your product.   Niels van Deuren   We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.  Suppose is a group with subgroups and such that . Then we still have ; let's see what we would need the multiplication on the cartesian product to be in order for defined by to still be a group homomorphism: where is such that .  This means that we would need to have for to be a homomorphism. This motivates the following definition.  External Semidirect Products   Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by . Semidirect product  semidirect product  external semidirect product       Decide amongst yourselves whether it should be spelled \"semidirect\", \"semi-direct\", \"semi direct\".    Before we prove that the construction above actually gives a group, let's compute a few examples.  Semidirect, Sans the Semi  Given and we could always take to be the trivial homomorphism, so that for all and . Then is just the usual direct product:     Fix a group , a normal subgroup and a subgroup . Then the function given by for is a homomorphism. Thus acts on via automorphisms.    Let be cyclic of order and be cyclic of order for any . There is an automorphism of that sends to . This automorphism is its own inverse; i.e., it has order . Therefore, by , there is a group homomorphism with . We may thus form the group The elements of are for and , in particular . Set Then  and Looks familar!  Indeed, by the universal mapping property for we have a homomorphism such that and . Moreover, is onto since and since it follows that is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders and respectively: and is the inversion homomorphism as described above.   Semidirect Products are Groups   If and are groups and is a homomorphism, then setting:      is a group     and      .          The proof is straightforward but a bit messy. For associativity, note that On the other hand This gives associativity.  The fact that is a two-sided identity follows from the fact that .  Finally and similarly     Define a funtion as . Then is a homomorphism, since The map is clearly injective and hence its image is isomorphic to . In fact, the image is normal since the second component of is clearly . Let us write this image as   The function defined by is also an injective homomorphism and thus its image is isomorphic to . is typically not normal, however. Finally, it is easy to see that and . Putting this all together we have    ,     ,     , and     .       Consider the projection onto the second factor given by . This is a goup homomorphism since the second component of is and is surjective by definition. Now By the we conclude that .        Internal Semidirect Products    I've often said there's nothing better for the inside of a man than the outside of a horse.   Ronald Reagan   We can turn this around. the semidirect product, not the Reagan quote.   Recognition Theorem for Internal Semidirect Products   For a group , suppose we are given and so that    ,     ,     , and     .     Let be the permutation representation of the action of on via automorphisms given by in . (This means that for any  , where is the function for all .) Then the function defined by is an isomorphism of groups. Moreover, under this isomorphism, corresponds to and corresponds to (referring to the notation in above).    We have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism. It is obvious that and .    Internal Semidirect Product   In this situation of the , we will say that is the internal semi-direct product of and . internal semidirect product      Returning to , let and . Then , , and . So, is isomorphic to a semi-direct product, as we already showed.    Let , and . Then , , and . It follows that where is cyclic of order and the action sends to conjugation by .   It is important to be aware that for a fixed pair of groups and , different actions of on via automorphisms can result in isomorphic semi-direct products. Indeed, determining when is in general a tricky business. The previous example shows this.   Let and again, but this time take (assuming ). Then we get where is cyclic of order and the action sends to conjugation by .  The actions and are not identical. For example, assuming we have and Yet since each is isomorphic to .  On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because and are conjugate in . More generally, below is a criterion for a two semidirect products to be isomorphic.   Isomorphisms of Semidirect Products   Let be a finite cyclic group and let be an arbitrary group. Suppose that the images of and are conjugate subgroups of . Then .     Groups of Order    I did not know I was in my prime until afterwards.   Mason Cooley   Groups of Order   Any group of order is isomorphic either to or to .    Let be a group of order . gives that there exist elements with and . Let and . Since , is a normal subgroup of and since is a common subgroup of and  gives that . Thus and since we deduce that . now gives that is the internal semidirect product of and . More to the point, , where gives the action of on by .  We now analyze the possibilities for . By , . There are two possibilities for the image of : either or .  If , then (which implies ) and . Therefore, in this case , where the last isomorphism uses the .  If , then is the map and by an earlier example for this we have , so .  Finally, because the former is abelian and the latter is not.    Let's repeat the previous example for classifying groups of order with distinct primes into isomorphism classes.  Classification for Groups of Order   Let be primes.     If there is a unique group of order up to isomorphism, namely .    If there are exactly two groups of order up to isomorphism, namely and a non-abelian group.       Let be a group of order and let be Sylow subgroups of order and respectively. We see that is a normal subgroup using a HW problem, since is the smallest prime that divides .  Furthermore, since is a subgroup of both and we have by that , so that . From here it follows that and so . now yields that for some homomorphism , equivalently . By to give such a homomorphism is equivalent to giving an element so that , which will give for . Thus yielding that either or .   Case 1: if then is the trivial homomorphism and thus .   Case 2: if then it must be the case by Lagrange that . By we know that is a cyclic group. Therefore we have that if and only if there exists an element of order by (2). Moreover any such element generates a subgroup of of order . Since there is a unique subgroup of a cyclic group of a given order by Theorem (2) we see that the image of is independent of the choice of . Thus by we conclude that all subgroups resulting from any choice of of order are isomorphic.  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to .     "
+  "body": "Semidirect Products  External Semidirect Products    Don't give up and always keep on believing in your product.   Niels van Deuren   We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.  Suppose is a group with subgroups and such that . Then we still have ; let's see what we would need the multiplication on the cartesian product to be in order for defined by to still be a group homomorphism: where is such that .  This means that we would need to have for to be a homomorphism. This motivates the following definition.  External Semidirect Products   Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by . Semidirect product  semidirect product  external semidirect product       Decide amongst yourselves whether it should be spelled \"semidirect\", \"semi-direct\", \"semi direct\".    Before we prove that the construction above actually gives a group, let's compute a few examples.  Semidirect, Sans the Semi  Given and we could always take to be the trivial homomorphism, so that for all and . Then is just the usual direct product:     Fix a group , a normal subgroup and a subgroup . Then the function given by for is a homomorphism. Thus acts on via automorphisms.    Let be cyclic of order and be cyclic of order for any . There is an automorphism of that sends to . This automorphism is its own inverse; i.e., it has order . Therefore, by , there is a group homomorphism with . We may thus form the group The elements of are for and , in particular . Set Then  and Looks familar!  Indeed, by the universal mapping property for we have a homomorphism such that and . Moreover, is onto since and since it follows that is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders and respectively: and is the inversion homomorphism as described above.   Semidirect Products are Groups   If and are groups and is a homomorphism, then setting:      is a group     and      .          The proof is straightforward but a bit messy. For associativity, note that On the other hand This gives associativity.  The fact that is a two-sided identity follows from the fact that .  Finally and similarly     Define a funtion as . Then is a homomorphism, since The map is clearly injective and hence its image is isomorphic to . In fact, the image is normal since the second component of is clearly . Let us write this image as   The function defined by is also an injective homomorphism and thus its image is isomorphic to . is typically not normal, however. Finally, it is easy to see that and . Putting this all together we have    ,     ,     , and     .       Consider the projection onto the second factor given by . This is a goup homomorphism since the second component of is and is surjective by definition. Now By the we conclude that .        Internal Semidirect Products    I've often said there's nothing better for the inside of a man than the outside of a horse.   Ronald Reagan   We can turn this around. the semidirect product, not the Reagan quote.   Recognition Theorem for Internal Semidirect Products  recognition theorem (internal semidirect products)   For a group , suppose we are given and so that    ,     ,     , and     .     Let be the permutation representation of the action of on via automorphisms given by in . (This means that for any  , where is the function for all .) Then the function defined by is an isomorphism of groups. Moreover, under this isomorphism, corresponds to and corresponds to (referring to the notation in above).    We have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism. It is obvious that and .    Internal Semidirect Products   In this situation of the , we will say that is the internal semi-direct product of and . internal semidirect product      Returning to , let and . Then , , and . So, is isomorphic to a semi-direct product, as we already showed.    Let , and . Then , , and . It follows that where is cyclic of order and the action sends to conjugation by .   It is important to be aware that for a fixed pair of groups and , different actions of on via automorphisms can result in isomorphic semi-direct products. Indeed, determining when is in general a tricky business. The previous example shows this.   Let and again, but this time take (assuming ). Then we get where is cyclic of order and the action sends to conjugation by .  The actions and are not identical. For example, assuming we have and Yet since each is isomorphic to .  On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because and are conjugate in . More generally, below is a criterion for a two semidirect products to be isomorphic.   Isomorphisms of Semidirect Products   Let be a finite cyclic group and let be an arbitrary group. Suppose that the images of and are conjugate subgroups of . Then .     Groups of Order    I did not know I was in my prime until afterwards.   Mason Cooley   Groups of Order   Any group of order is isomorphic either to or to .    Let be a group of order . gives that there exist elements with and . Let and . Since , is a normal subgroup of and since is a common subgroup of and  gives that . Thus and since we deduce that . now gives that is the internal semidirect product of and . More to the point, , where gives the action of on by .  We now analyze the possibilities for . By , . There are two possibilities for the image of : either or .  If , then (which implies ) and . Therefore, in this case , where the last isomorphism uses the .  If , then is the map and by an earlier example for this we have , so .  Finally, because the former is abelian and the latter is not.    Let's repeat the previous example for classifying groups of order with distinct primes into isomorphism classes.  Classification for Groups of Order  classification of groups of order   Let be primes.     If there is a unique group of order up to isomorphism, namely .    If there are exactly two groups of order up to isomorphism, namely and a non-abelian group.       Let be a group of order and let be Sylow subgroups of order and respectively. We see that is a normal subgroup using , since is the smallest prime that divides .  Furthermore, since is a subgroup of both and we have by that , so that . From here it follows that and so . now yields that for some homomorphism , equivalently . By to give such a homomorphism is equivalent to giving an element so that , which will give for . Thus yielding that either or .   Case 1: if then is the trivial homomorphism and thus .   Case 2: if then it must be the case by Lagrange that . By we know that is a cyclic group. Therefore we have that if and only if there exists an element of order by (2). Moreover any such element generates a subgroup of of order . Since there is a unique subgroup of a cyclic group of a given order by (2) we see that the image of is independent of the choice of . Thus by we conclude that all subgroups resulting from any choice of of order are isomorphic.  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to .         are defined using homomorphisms into automorphism groups. See: They are often used to construct non-abelian groups.     are similar to their direct counterparts, though only require that one of or be normal. They can be identified using the .    Using semidirect products, we are able to provide a .     "
 },
 {
   "id": "def-sdp-external",
@@ -2869,7 +2878,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "6.16",
   "title": "Recognition Theorem for Internal Semidirect Products.",
-  "body": "Recognition Theorem for Internal Semidirect Products   For a group , suppose we are given and so that    ,     ,     , and     .     Let be the permutation representation of the action of on via automorphisms given by in . (This means that for any  , where is the function for all .) Then the function defined by is an isomorphism of groups. Moreover, under this isomorphism, corresponds to and corresponds to (referring to the notation in above).    We have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism. It is obvious that and .   "
+  "body": "Recognition Theorem for Internal Semidirect Products  recognition theorem (internal semidirect products)   For a group , suppose we are given and so that    ,     ,     , and     .     Let be the permutation representation of the action of on via automorphisms given by in . (This means that for any  , where is the function for all .) Then the function defined by is an isomorphism of groups. Moreover, under this isomorphism, corresponds to and corresponds to (referring to the notation in above).    We have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism. It is obvious that and .   "
 },
 {
   "id": "def-spd-internal",
@@ -2877,8 +2886,8 @@ var ptx_lunr_docs = [
   "url": "sec-spds.html#def-spd-internal",
   "type": "Definition",
   "number": "6.17",
-  "title": "Internal Semidirect Product.",
-  "body": "Internal Semidirect Product   In this situation of the , we will say that is the internal semi-direct product of and . internal semidirect product    "
+  "title": "Internal Semidirect Products.",
+  "body": "Internal Semidirect Products   In this situation of the , we will say that is the internal semi-direct product of and . internal semidirect product    "
 },
 {
   "id": "example-44",
@@ -2932,7 +2941,16 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "6.23",
   "title": "Classification for Groups of Order <span class=\"process-math\">\\(pq\\)<\/span>.",
-  "body": "Classification for Groups of Order   Let be primes.     If there is a unique group of order up to isomorphism, namely .    If there are exactly two groups of order up to isomorphism, namely and a non-abelian group.       Let be a group of order and let be Sylow subgroups of order and respectively. We see that is a normal subgroup using a HW problem, since is the smallest prime that divides .  Furthermore, since is a subgroup of both and we have by that , so that . From here it follows that and so . now yields that for some homomorphism , equivalently . By to give such a homomorphism is equivalent to giving an element so that , which will give for . Thus yielding that either or .   Case 1: if then is the trivial homomorphism and thus .   Case 2: if then it must be the case by Lagrange that . By we know that is a cyclic group. Therefore we have that if and only if there exists an element of order by (2). Moreover any such element generates a subgroup of of order . Since there is a unique subgroup of a cyclic group of a given order by Theorem (2) we see that the image of is independent of the choice of . Thus by we conclude that all subgroups resulting from any choice of of order are isomorphic.  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to .   "
+  "body": "Classification for Groups of Order  classification of groups of order   Let be primes.     If there is a unique group of order up to isomorphism, namely .    If there are exactly two groups of order up to isomorphism, namely and a non-abelian group.       Let be a group of order and let be Sylow subgroups of order and respectively. We see that is a normal subgroup using , since is the smallest prime that divides .  Furthermore, since is a subgroup of both and we have by that , so that . From here it follows that and so . now yields that for some homomorphism , equivalently . By to give such a homomorphism is equivalent to giving an element so that , which will give for . Thus yielding that either or .   Case 1: if then is the trivial homomorphism and thus .   Case 2: if then it must be the case by Lagrange that . By we know that is a cyclic group. Therefore we have that if and only if there exists an element of order by (2). Moreover any such element generates a subgroup of of order . Since there is a unique subgroup of a cyclic group of a given order by (2) we see that the image of is independent of the choice of . Thus by we conclude that all subgroups resulting from any choice of of order are isomorphic.  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to .   "
+},
+{
+  "id": "outcomes-18",
+  "level": "2",
+  "url": "sec-spds.html#outcomes-18",
+  "type": "Summary",
+  "number": "6.2",
+  "title": "",
+  "body": "    are defined using homomorphisms into automorphism groups. See: They are often used to construct non-abelian groups.     are similar to their direct counterparts, though only require that one of or be normal. They can be identified using the .    Using semidirect products, we are able to provide a .    "
 },
 {
   "id": "sec-ftfgag",
@@ -2941,23 +2959,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Finitely Generated Abelian Groups",
-  "body": "Finitely Generated Abelian Groups    The classification of the constituents of a chaos, nothing less is here essayed.   Herman Melville   Cyclic Groups of Relatively Prime Order   Prove that if are positive integers such that then there is a group isomorphism .    Sunzi's Remainder Theorem   Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in . Sunzi's Remainder Theorem for groups     Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .     This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem    In this section we see that we can classify finitely generated abelian groups into isomorphism classes.  Finitely Generated Group   A group is finitely generated provided that , where is a finite set. finitely generated group      Any finite group is finitely generated (take ), but a finitely generated group need not be finite.   The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.  Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.     For we have , .   Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .     Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .    Suppose now I tell you Then by  given the elementary divisor form.   The makes classification of finite abelian groups a very quick matter.  Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.   "
-},
-{
-  "id": "lem-cyclic-relprime",
-  "level": "2",
-  "url": "sec-ftfgag.html#lem-cyclic-relprime",
-  "type": "Lemma",
-  "number": "6.24",
-  "title": "Cyclic Groups of Relatively Prime Order.",
-  "body": "Cyclic Groups of Relatively Prime Order   Prove that if are positive integers such that then there is a group isomorphism .   "
+  "body": "Finitely Generated Abelian Groups    The classification of the constituents of a chaos, nothing less is here essayed.   Herman Melville   In this section we see that we can classify finitely generated abelian groups into isomorphism classes.  Sunzi's Remainder Theorem   Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in . Sunzi's Remainder Theorem for groups     Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .     This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem    Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group      Any finite group is finitely generated (take ), but a finitely generated group need not be finite.   The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.  Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)  Fundamental Theorem of Finitely Generated Abelian Groups    Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.    FTFGAG in Action  For we have , .   Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . elementary divisors (groups)  elementary divisor form (groups) The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of . invariant factors (groups)  invariant factor form (groups)     Elementary Divisor Form to Invariant Factor Form  Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .   Invariant Factor Form to Elementary Divisor Form  Suppose now I tell you Then by  given the elementary divisor form.   The makes classification of finite abelian groups a very quick matter.  Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.       allows us to decompose cyclic groups into direct products of their prime factors.    If is an abelian , then it is isomorphic to a direct product of cyclic groups. This is known as the .    The has two forms, each using either invariant factors or elementary divisors of a group, though it is possible to move from one to the other. See: and .      "
 },
 {
   "id": "thm-sunzi",
   "level": "2",
   "url": "sec-ftfgag.html#thm-sunzi",
   "type": "Theorem",
-  "number": "6.25",
+  "number": "6.24",
   "title": "Sunzi's Remainder Theorem.",
   "body": "Sunzi's Remainder Theorem   Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in . Sunzi's Remainder Theorem for groups     Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .   "
 },
@@ -2966,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#remark-29",
   "type": "Remark",
-  "number": "6.26",
+  "number": "6.25",
   "title": "",
   "body": " This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem   "
 },
@@ -2975,16 +2984,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#def-fg-group",
   "type": "Definition",
-  "number": "6.27",
-  "title": "Finitely Generated Group.",
-  "body": "Finitely Generated Group   A group is finitely generated provided that , where is a finite set. finitely generated group    "
+  "number": "6.26",
+  "title": "Finitely Generated.",
+  "body": "Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group    "
 },
 {
   "id": "remark-30",
   "level": "2",
   "url": "sec-ftfgag.html#remark-30",
   "type": "Remark",
-  "number": "6.28",
+  "number": "6.27",
   "title": "",
   "body": " Any finite group is finitely generated (take ), but a finitely generated group need not be finite.  "
 },
@@ -2993,54 +3002,63 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#thm-ftfgag",
   "type": "Theorem",
-  "number": "6.29",
+  "number": "6.28",
   "title": "Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG).",
-  "body": "Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.   "
+  "body": "Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)  Fundamental Theorem of Finitely Generated Abelian Groups    Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.   "
 },
 {
   "id": "example-47",
   "level": "2",
   "url": "sec-ftfgag.html#example-47",
   "type": "Example",
-  "number": "6.30",
-  "title": ".",
-  "body": " For we have , .  "
+  "number": "6.29",
+  "title": "FTFGAG in Action.",
+  "body": "FTFGAG in Action  For we have , .  "
 },
 {
   "id": "def-eds-and-ifs",
   "level": "2",
   "url": "sec-ftfgag.html#def-eds-and-ifs",
   "type": "Definition",
-  "number": "6.31",
+  "number": "6.30",
   "title": "Rank, Invariant Factors, Elementary Divisors.",
-  "body": "Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .   "
+  "body": "Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . elementary divisors (groups)  elementary divisor form (groups) The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of . invariant factors (groups)  invariant factor form (groups)    "
 },
 {
-  "id": "example-48",
+  "id": "ex-if-to-ed",
   "level": "2",
-  "url": "sec-ftfgag.html#example-48",
+  "url": "sec-ftfgag.html#ex-if-to-ed",
+  "type": "Example",
+  "number": "6.31",
+  "title": "Elementary Divisor Form to Invariant Factor Form.",
+  "body": "Elementary Divisor Form to Invariant Factor Form  Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .  "
+},
+{
+  "id": "ex-ed-to-if",
+  "level": "2",
+  "url": "sec-ftfgag.html#ex-ed-to-if",
   "type": "Example",
   "number": "6.32",
-  "title": ".",
-  "body": " Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .  "
-},
-{
-  "id": "example-49",
-  "level": "2",
-  "url": "sec-ftfgag.html#example-49",
-  "type": "Example",
-  "number": "6.33",
-  "title": ".",
-  "body": " Suppose now I tell you Then by  given the elementary divisor form.  "
+  "title": "Invariant Factor Form to Elementary Divisor Form.",
+  "body": "Invariant Factor Form to Elementary Divisor Form  Suppose now I tell you Then by  given the elementary divisor form.  "
 },
 {
   "id": "example-50",
   "level": "2",
   "url": "sec-ftfgag.html#example-50",
   "type": "Example",
-  "number": "6.34",
+  "number": "6.33",
   "title": "Abelian Groups of Order <span class=\"process-math\">\\(75\\)<\/span>.",
   "body": "Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.  "
+},
+{
+  "id": "outcomes-19",
+  "level": "2",
+  "url": "sec-ftfgag.html#outcomes-19",
+  "type": "Summary",
+  "number": "6.3",
+  "title": "",
+  "body": "    allows us to decompose cyclic groups into direct products of their prime factors.    If is an abelian , then it is isomorphic to a direct product of cyclic groups. This is known as the .    The has two forms, each using either invariant factors or elementary divisors of a group, though it is possible to move from one to the other. See: and .     "
 },
 {
   "id": "sec-defn-ex",
@@ -3049,7 +3067,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.1",
   "title": "Ring Basics",
-  "body": "Ring Basics  From Rings to Fields    I made a lot of mistakes out of the ring, but I never made any in it.   Jack Johnson   Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an abelian group with identity element denoted ,   Associative Multiplication   is associative (making a )   Distributive Law   and hold for all .      is a unital ring (or a ring with identity ) if, in addition to (1), (2), (3)     there is a multiplicative identity element written as such that for all .      is commutative if in addition to (1)–(3)      holds for all .      is a division ring if , (1)–(4) and (6) hold      is a group under (i.e. every has a multiplicative inverse)      is a field if and (1)–(6) hold (i.e. a field is a commutative division ring).     Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng  Get it? . However, we'll stick with the more classical definition for now.    One could argue that commutative rings should really be called abelian rings to remain consistent with abelian groups. Discuss.   Here are some basic consequences of the axioms.  Ring Arithmetic   For any ring and all we have:      ,     ,     .     For a unital ring and all we have:      is unique, and     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Phew. Let's take a breather and see some examples.  Relevant Rings      is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.    The set is a commutative ring known as the Gaussian integers .    If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well.  Less Relevant Rings   Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.     Here is a nice generalization that will prove usful quite a few times down the road.  Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Absolute Units    There is more power in unity than division.   Emmanuel Cleaver   Unit   An element of a unital ring with is called a unit there exists such that and . If such a exists, it is unique, it is called the inverse of and denoted by .    Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.    Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .     is often the standard way of proving that something is a field.   If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .   Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. That was a joke. I'm very funny.    Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .       The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in .    A Zero Divided Cannot Stand    The only way on Earth to multiply happiness is to divide it.  Paul Scherrer   We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.     Note that by saying that is equivalent to saying that is nontrivial.   is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.    Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .     This is sometimes taken to be the definition of an integral domain, but we're not like the ~other~ algebra books.   Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent   An element of a ring is called nilpotent if for some integer .    Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Idempotent  Let be a ring with identity. An element is called idempotent if .   Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).    Prove that the only idempotents in an integral domain are and .      "
+  "body": "Ring Basics  From Rings to Fields    I made a lot of mistakes out of the ring, but I never made any in it.   Jack Johnson   Ring   A ring is a set equipped with two binary operations, and , satisfying: ring       is an abelian group with identity element denoted ,   Associative Multiplication   is associative (making a )   Distributive Property   and hold for all . distributive property       is a unital ring (or a ring with identity ) if, in addition to (1), (2), (3) unital ring  ring with unity  ring with identity      there is a multiplicative identity element written as such that for all .      is commutative if in addition to (1)–(3) commutative ring       holds for all .      is a division ring if , (1)–(4) and (6) hold division ring       is a group under (i.e. every has a multiplicative inverse)      is a field if and (1)–(6) hold (i.e. a field is a commutative division ring). field      Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng  Get it? . However, we'll stick with the more classical definition for now.    One could argue that commutative rings should really be called abelian rings to remain consistent with abelian groups. Discuss.   Here are some basic consequences of the axioms.  Ring Arithmetic  ring arithmetic   For any ring and all we have:      ,     ,     .     For a unital ring and all we have:      is unique, and     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Phew. Let's take a breather and see some examples.  Relevant Rings      is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .  trivial ring  zero ring      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.    The set is a commutative ring known as the Gaussian integers . Gaussian integers     If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well.  Less Relevant Rings   Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring opposite ring     Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .     Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself. endomorphism ring    Then is a ring with addition and multiplication . This is almost always a non-commutative ring.     Here is a nice generalization that will prove usful quite a few times down the road.  Binomial Theorem for Commutative Rings  binomial theorem (commutative rings)   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Absolute Units    There is more power in unity than division.   Emmanuel Cleaver   Unit   An element of a unital ring with is called a unit there exists such that and . If such a exists, it is unique, it is called the inverse of and denoted by . unit     Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication. group of units     Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .     is often the standard way of proving that something is a field.   If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .   Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. That was a joke. I'm very funny.    Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .       The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in .    A Zero Divided Cannot Stand    The only way on Earth to multiply happiness is to divide it.  Paul Scherrer   We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?  zerodivisor     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors. integral domain      Note that by saying that is equivalent to saying that is nontrivial.   is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.    Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation . cancellation (integral domains)      This is sometimes taken to be the definition of an integral domain, but we're not like the ~other~ algebra books.   Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent   An element of a ring is called nilpotent if for some integer . nilpotent     Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Idempotent   Let be a ring with identity. An element is called idempotent if . idempotent     Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).    Prove that the only idempotents in an integral domain are and .      "
 },
 {
   "id": "def-ring",
@@ -3058,7 +3076,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.1",
   "title": "Ring.",
-  "body": "Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an abelian group with identity element denoted ,   Associative Multiplication   is associative (making a )   Distributive Law   and hold for all .      is a unital ring (or a ring with identity ) if, in addition to (1), (2), (3)     there is a multiplicative identity element written as such that for all .      is commutative if in addition to (1)–(3)      holds for all .      is a division ring if , (1)–(4) and (6) hold      is a group under (i.e. every has a multiplicative inverse)      is a field if and (1)–(6) hold (i.e. a field is a commutative division ring).   "
+  "body": "Ring   A ring is a set equipped with two binary operations, and , satisfying: ring       is an abelian group with identity element denoted ,   Associative Multiplication   is associative (making a )   Distributive Property   and hold for all . distributive property       is a unital ring (or a ring with identity ) if, in addition to (1), (2), (3) unital ring  ring with unity  ring with identity      there is a multiplicative identity element written as such that for all .      is commutative if in addition to (1)–(3) commutative ring       holds for all .      is a division ring if , (1)–(4) and (6) hold division ring       is a group under (i.e. every has a multiplicative inverse)      is a field if and (1)–(6) hold (i.e. a field is a commutative division ring). field    "
 },
 {
   "id": "exploration-5",
@@ -3076,7 +3094,7 @@ var ptx_lunr_docs = [
   "type": "Proposition",
   "number": "7.2",
   "title": "Ring Arithmetic.",
-  "body": "Ring Arithmetic   For any ring and all we have:      ,     ,     .     For a unital ring and all we have:      is unique, and     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.      "
+  "body": "Ring Arithmetic  ring arithmetic   For any ring and all we have:      ,     ,     .     For a unital ring and all we have:      is unique, and     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.      "
 },
 {
   "id": "ex-ring-examples",
@@ -3085,7 +3103,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "7.3",
   "title": "Relevant Rings.",
-  "body": "Relevant Rings      is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.    The set is a commutative ring known as the Gaussian integers .    If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:       "
+  "body": "Relevant Rings      is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .  trivial ring  zero ring      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.    The set is a commutative ring known as the Gaussian integers . Gaussian integers     If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:       "
 },
 {
   "id": "exe-1-is-0",
@@ -3112,7 +3130,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "7.6",
   "title": "Less Relevant Rings.",
-  "body": "Less Relevant Rings   Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.    "
+  "body": "Less Relevant Rings   Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring opposite ring     Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .     Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself. endomorphism ring    Then is a ring with addition and multiplication . This is almost always a non-commutative ring.    "
 },
 {
   "id": "thm-binomial-thm-rings",
@@ -3121,7 +3139,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "7.7",
   "title": "Binomial Theorem for Commutative Rings.",
-  "body": "Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .   "
+  "body": "Binomial Theorem for Commutative Rings  binomial theorem (commutative rings)   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .   "
 },
 {
   "id": "def-unit",
@@ -3130,7 +3148,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.8",
   "title": "Unit.",
-  "body": "Unit   An element of a unital ring with is called a unit there exists such that and . If such a exists, it is unique, it is called the inverse of and denoted by .   "
+  "body": "Unit   An element of a unital ring with is called a unit there exists such that and . If such a exists, it is unique, it is called the inverse of and denoted by . unit    "
 },
 {
   "id": "def-group-of-units",
@@ -3139,7 +3157,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.9",
   "title": "Group of Units.",
-  "body": "Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.   "
+  "body": "Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication. group of units    "
 },
 {
   "id": "exe-group-of-units-is-a-group",
@@ -3220,7 +3238,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.18",
   "title": "Zerodivisor.",
-  "body": "Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?    "
+  "body": "Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?  zerodivisor    "
 },
 {
   "id": "def-integral-domain",
@@ -3229,7 +3247,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.19",
   "title": "Integral Domain.",
-  "body": "Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.   "
+  "body": "Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors. integral domain    "
 },
 {
   "id": "remark-34",
@@ -3256,7 +3274,7 @@ var ptx_lunr_docs = [
   "type": "Lemma",
   "number": "7.22",
   "title": "Cancellation in Domains.",
-  "body": "Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .   "
+  "body": "Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation . cancellation (integral domains)    "
 },
 {
   "id": "lem-zerodivisor-not-unit",
@@ -3292,7 +3310,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.26",
   "title": "Nilpotent.",
-  "body": "Nilpotent   An element of a ring is called nilpotent if for some integer .   "
+  "body": "Nilpotent   An element of a ring is called nilpotent if for some integer . nilpotent    "
 },
 {
   "id": "lem-nilpotents-and-units",
@@ -3310,7 +3328,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.28",
   "title": "Idempotent.",
-  "body": "Idempotent  Let be a ring with identity. An element is called idempotent if .  "
+  "body": "Idempotent   Let be a ring with identity. An element is called idempotent if . idempotent    "
 },
 {
   "id": "exercise-59",
@@ -3328,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.2",
   "title": "Subrings and Polynomial Rings",
-  "body": " Subrings and Polynomial Rings  Subrings    We all live in a yellow subma-ring   (Ring)o Starr   We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .    Subring Test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings     is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .     Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical .   Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .     Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.    Polynomial Rings    I had a polynomial once. My doctor removed it.   Michael Grant   Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.     One often views as the subring of consisting of the constant polynomials.   Let's remind ourselves of some classic notions of polynomials.  Degree   Let , . Say , where . Then is the degree of .    Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.     Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )       Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. As a treat.  UMP for Polynomial Rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism.  Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by .  Polynomial Division Algorithm   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Factor Theorem   Let be a commutative ring with identity, and . Then if and only if .     "
+  "body": " Subrings and Polynomial Rings  Subrings    We all live in a yellow subma-ring   (Ring)o Starr   We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of . subring   When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. . subfield     Subring Test  subring test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings     is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .     Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical . nilradical    Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set  center (of a ring)     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of . quadratic field      Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .     Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.    Polynomial Rings    I had a polynomial once. My doctor removed it.   Michael Grant   Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above. polynomial ring      One often views as the subring of consisting of the constant polynomials.   Let's remind ourselves of some classic notions of polynomials.  Degree   Let , . Say , where . Then is the degree of . degree (polynomial)     Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.  monic polynomial     Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )       Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. As a treat.  UMP for Polynomial Rings  UMP for polynomial rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. evaluation homomorphism   Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . reduction homomorphism   Polynomial Division Algorithm  division algorithm (polynomial rings)   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Factor Theorem  factor theorem   Let be a commutative ring with identity, and . Then if and only if .     "
 },
 {
   "id": "def-subring",
@@ -3337,7 +3355,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.30",
   "title": "Subring.",
-  "body": "Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .   "
+  "body": "Subring   A subring of a ring is a subset such that is a ring under the operations of . subring   When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. . subfield    "
 },
 {
   "id": "lem-subring-test",
@@ -3346,7 +3364,7 @@ var ptx_lunr_docs = [
   "type": "Lemma",
   "number": "7.31",
   "title": "Subring Test.",
-  "body": "Subring Test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.      "
+  "body": "Subring Test  subring test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.      "
 },
 {
   "id": "exe-subring-preservations",
@@ -3373,7 +3391,7 @@ var ptx_lunr_docs = [
   "type": "Exploration",
   "number": "7.2",
   "title": "Nilradical Radishes.",
-  "body": "Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical .  "
+  "body": "Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical . nilradical   "
 },
 {
   "id": "exe-finding-subring-counterexamples",
@@ -3391,7 +3409,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.35",
   "title": "Center of a Ring.",
-  "body": "Center of a Ring   The center of a ring is the set    "
+  "body": "Center of a Ring   The center of a ring is the set  center (of a ring)    "
 },
 {
   "id": "lem-center-is-subring",
@@ -3409,7 +3427,7 @@ var ptx_lunr_docs = [
   "type": "Lemma",
   "number": "7.37",
   "title": "<span class=\"process-math\">\\(\\Q(\\sqrt {d})\\)<\/span>.",
-  "body": "  Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .   "
+  "body": "  Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of . quadratic field      Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .   "
 },
 {
   "id": "remark-35",
@@ -3427,7 +3445,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.39",
   "title": "Polynomial Ring.",
-  "body": "Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.   "
+  "body": "Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above. polynomial ring    "
 },
 {
   "id": "remark-36",
@@ -3445,7 +3463,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.41",
   "title": "Degree.",
-  "body": "Degree   Let , . Say , where . Then is the degree of .   "
+  "body": "Degree   Let , . Say , where . Then is the degree of . degree (polynomial)    "
 },
 {
   "id": "def-monic",
@@ -3454,7 +3472,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.42",
   "title": "Monic.",
-  "body": "Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.    "
+  "body": "Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.  monic polynomial    "
 },
 {
   "id": "prop-polynomials-domains-degrees-units",
@@ -3472,7 +3490,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "7.44",
   "title": "UMP for Polynomial Rings.",
-  "body": "UMP for Polynomial Rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.   "
+  "body": "UMP for Polynomial Rings  UMP for polynomial rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.   "
 },
 {
   "id": "exe-evaluation-homomorphism",
@@ -3481,7 +3499,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "7.45",
   "title": "Evalutation Homomorphism.",
-  "body": "Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. "
+  "body": "Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. evaluation homomorphism  "
 },
 {
   "id": "ex-applying-ring-homomorphism-to-coefficients",
@@ -3499,7 +3517,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "7.47",
   "title": "Reduction Homomorphism.",
-  "body": "Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . "
+  "body": "Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . reduction homomorphism  "
 },
 {
   "id": "thm-polynomial-division-algorithm",
@@ -3508,7 +3526,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "7.48",
   "title": "Polynomial Division Algorithm.",
-  "body": "Polynomial Division Algorithm   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .   "
+  "body": "Polynomial Division Algorithm  division algorithm (polynomial rings)   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .   "
 },
 {
   "id": "thm-factor-thm",
@@ -3517,7 +3535,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "7.49",
   "title": "Factor Theorem.",
-  "body": "Factor Theorem   Let be a commutative ring with identity, and . Then if and only if .   "
+  "body": "Factor Theorem  factor theorem   Let be a commutative ring with identity, and . Then if and only if .   "
 },
 {
   "id": "sec-ring-hom",
@@ -3526,7 +3544,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.3",
   "title": "Homomorphisms",
-  "body": "Homomorphisms  When you have a map, you know where to go. Shakira  Ring Homomorphism   If and are rings, a ring homomorphism from to is a function that satisfies:    for all ,     for all .   Ring homomorphisms are often referred to as ring maps .    So basically the same as a group homomorphism, we just have an extra operation that we need to preserve.  Ring Isomorphism   A ring homomorphism that is bijective is called a ring isomorphism . Two rings and are isomorphic , written , if there is an isomorphism from to . Ring isomorphisms are not usually referred to as super ring maps , but it would be cool if they were.     Isomorphism Invariants   The following are ring isomorphism invariants:   all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if then ).    being unital, being commutative, division ring, field, integral domain    the number of zerodivisors.    if is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if then ).    the isomorphism type of the center (i.e., if then ).       Examples of Ring Maps    The identity map is a ring isomorphism.  The zero map is a ring map.  Let be a subring of a ring . The inclusion mapping of into is a ring homomorphism.  Projection maps are ring homomorphisms.     Properties of Ring Maps   If is a ring homomorphism, then    and .    if , are unital then can be either or a zerodivisor.    If and then .    If and are ring homomorphisms (or isomorphisms, respectively), then is a ring homomorphism (or isomorphism).         Since we have , thus Now either or (which yields ) or both of these are nonzero and then they are complementary zerodivisors (in particular, is a zerodivisor).      Equivalent Field Characterizations  Let be a nontrivial ring. Then is a field if and only if every homomorphism of into a nonzero ring is injective.   Isomorphisms and Idempotents Suppose is commutative and an idempotent. Let . Prove that the map given by is a ring isomorphism.  More Isomorphisms Let be squarefree integers and set and .   There is a group isomorphism .    There is a ring isomorphism if and only if .     "
+  "body": "Homomorphisms    When you have a map, you know where to go.  Shakira   Ring Homomorphism   If and are rings, a ring homomorphism from to is a function that satisfies:    for all ,     for all .   Ring homomorphisms are often referred to as ring maps . ring homomorphism     So basically the same as a group homomorphism, but with an extra operation that we need to preserve.  Ring Isomorphism   A ring homomorphism that is bijective is called a ring isomorphism . Two rings and are isomorphic , written , if there is an isomorphism from to . Ring isomorphisms are not usually referred to as super ring maps , but it would be cool if they were.  ring isomorphism     Isomorphism Invariants   The following are ring isomorphism invariants:   all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if then ).    being unital, being commutative, division ring, field, integral domain    the number of zerodivisors.    if is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if then ).    the isomorphism type of the center (i.e., if then ).       Examples of Ring Maps    The identity map is a ring isomorphism.  The zero map is a ring map.  Let be a subring of a ring . The inclusion mapping of into is a ring homomorphism.  Projection maps are ring homomorphisms.     Properties of Ring Maps   If is a ring homomorphism, then    and .    if , are unital then can be either or a zerodivisor.    If and then .    If and are ring homomorphisms (or isomorphisms, respectively), then is a ring homomorphism (or isomorphism).         Since we have , thus Now either or (which yields ) or both of these are nonzero and then they are complementary zerodivisors (in particular, is a zerodivisor).      Equivalent Field Characterizations  Let be a nontrivial ring. Then is a field if and only if every homomorphism of into a nonzero ring is injective.   Isomorphisms and Idempotents Suppose is commutative and an idempotent. Let . Prove that the map given by is a ring isomorphism.  More Isomorphisms Let be squarefree integers and set and .   There is a group isomorphism .    There is a ring isomorphism if and only if .     "
 },
 {
   "id": "def-ring-homomorphism",
@@ -3535,7 +3553,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.50",
   "title": "Ring Homomorphism.",
-  "body": "Ring Homomorphism   If and are rings, a ring homomorphism from to is a function that satisfies:    for all ,     for all .   Ring homomorphisms are often referred to as ring maps .   "
+  "body": "Ring Homomorphism   If and are rings, a ring homomorphism from to is a function that satisfies:    for all ,     for all .   Ring homomorphisms are often referred to as ring maps . ring homomorphism    "
 },
 {
   "id": "def-ring-isomorphism",
@@ -3544,7 +3562,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.51",
   "title": "Ring Isomorphism.",
-  "body": "Ring Isomorphism   A ring homomorphism that is bijective is called a ring isomorphism . Two rings and are isomorphic , written , if there is an isomorphism from to . Ring isomorphisms are not usually referred to as super ring maps , but it would be cool if they were.    "
+  "body": "Ring Isomorphism   A ring homomorphism that is bijective is called a ring isomorphism . Two rings and are isomorphic , written , if there is an isomorphism from to . Ring isomorphisms are not usually referred to as super ring maps , but it would be cool if they were.  ring isomorphism    "
 },
 {
   "id": "prop-ring-isomorphism-invariants",
@@ -3607,7 +3625,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.1",
   "title": "Ideals",
-  "body": "Ideals  Ideal or No Deal    It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.   Jose Rizal   Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption Personally I think it would be splendid if we could rename ideals sponges to match this imagery. .   For a ring , a proper ideal is an ideal such that .    Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal.   Let be a commutative ring, and set . Then is an ideal in .      A fun fact about ideals is that they are subrings.  Ideals are Subrings   Any ideal of a ring is a subring of     The converse need not be true, however.  Subrings Need not be Ideals  Find, with justification, a subring which is not an ideal.   In , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .   Another fun fact is that we can combine ideals in all sorts of ways to get new ones!  Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .    The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring forms a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .    Union of Ideals Need not be an Ideal Give an example  Modular Law Let be ideals in such that or . Then   And here are some important properties to wrap up on.  Proper Ideals, Fields, and Units   An ideal of a unital ring is proper if and only if contains no units. Moreover, if is a field it has only two ideals and .    Homomorphisms and Ideals   If is a ring homomorphism, then   the image of is a subring of and    the kernel of is an ideal of .     is injective if and only if .    if is an ideal of then is an ideal of .    if is an ideal of then is an ideal of .         Since is a ring homomorphism, it is in particular a group homomorphism . We know the kernel of a group homomorphism is a subgroup, so . All that remains to be shown is that for any  and . Let ; then and , show .       Generated Ideals    If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.   Liam Neeson, Batman Begins   Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .     It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.    By , is an ideal. It is also the smallest ideal of that contains .   Elements in Generated Ideals   For a subset of a ring with , the ideal generated by is given by If is commutative and is any subset, then there is a simpler formula     Generated Ideals and    In the commutative ring , we have . Indeed any element can be written as . Note that .    In the commutative ring , we have , the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that .     Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all .  Infinitely Generated Ideal Let    Prove that is an ideal of .    Prove that is not finitely generated.      "
+  "body": "Ideals  Ideal or No Deal    It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.   Jose Rizal   Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption  Personally I think it would be splendid if we could rename ideals sponges to match this imagery. . absorption    For a ring , a proper ideal is an ideal such that . ideal  proper ideal     Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal.   Let be a commutative ring, and set . Then is an ideal in .      A fun fact about ideals is that they are subrings.  Ideals are Subrings   Any ideal of a ring is a subring of     The converse need not be true, however.  Subrings Need not be Ideals  Find, with justification, a subring which is not an ideal.   In , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .   Another fun fact is that we can combine ideals in all sorts of ways to get new ones!  Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .     The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring forms a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .    Union of Ideals Need not be an Ideal Give an example  Modular Law Let be ideals in such that or . Then   And here are some important properties to wrap up on.  Proper Ideals, Fields, and Units   An ideal of a unital ring is proper if and only if contains no units. Moreover, if is a field it has only two ideals and .    Homomorphisms and Ideals   If is a ring homomorphism, then   the image of is a subring of and    the kernel of is an ideal of .     is injective if and only if .    if is an ideal of then is an ideal of .    if is an ideal of then is an ideal of .         Since is a ring homomorphism, it is in particular a group homomorphism . We know the kernel of a group homomorphism is a subgroup, so . All that remains to be shown is that for any  and . Let ; then and , show .       Generated Ideals    If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.   Liam Neeson, Batman Begins   Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of . generated ideal  finitely generated (ideal)      It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.    By , is an ideal. It is also the smallest ideal of that contains .   Elements in Generated Ideals   For a subset of a ring with , the ideal generated by is given by If is commutative and is any subset, then there is a simpler formula     Generated Ideals and    In the commutative ring , we have . Indeed any element can be written as . Note that .    In the commutative ring , we have , the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that .     Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all .  Infinitely Generated Ideal Let    Prove that is an ideal of .    Prove that is not finitely generated.      "
 },
 {
   "id": "def-ideal",
@@ -3616,7 +3634,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.1",
   "title": "Ideal.",
-  "body": "Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption Personally I think it would be splendid if we could rename ideals sponges to match this imagery. .   For a ring , a proper ideal is an ideal such that .   "
+  "body": "Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption  Personally I think it would be splendid if we could rename ideals sponges to match this imagery. . absorption    For a ring , a proper ideal is an ideal such that . ideal  proper ideal    "
 },
 {
   "id": "ex-ideal-examples",
@@ -3652,7 +3670,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "8.5",
   "title": "Combinations of Ideals.",
-  "body": "Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .    The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring forms a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .   "
+  "body": "Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .     The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring forms a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .   "
 },
 {
   "id": "exe-the-union-of-ideals-need-not-be-an-ideal",
@@ -3697,7 +3715,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.10",
   "title": "Generated Ideals.",
-  "body": "Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .   "
+  "body": "Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of . generated ideal  finitely generated (ideal)    "
 },
 {
   "id": "remark-37",
@@ -3751,7 +3769,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Quotient Rings",
-  "body": "Quotient Rings  Quotient Rings    Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.   Alan Perlis   Additive Cosets form Abelian Group   For a two-sided ideal of , the set of additive cosets modulo is This is an abelian group with respect to addition given by .    Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by .    Quotient Rings are Rings Given a two-sided ideal of , prove that the quotient ring is indeed a ring.  Just like we had with groups, it turns out our dear friend has been a quotient all along.  Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .    This is where the common notation comes from, even though it should be anyway.   And, once again, we have a quotient map that turns out to be a homomorphism.  Quotient Map is Surjective Ring Map Prove that the canonical quotient map is a surjective ring homomorphism.  Last but certainly not least, we have an analogue of for ideals. Once again, I would like to suggest that ideal subgroup is a far better name for a normal subgroup.   Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that .     The Ring Isomorphism Theorems    I'm not a very structured person, so when I get some structure, it's cool; it's good for me.  J. Cole   We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.  UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.    First Isomorphism Theorem for Rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.    Second Isomorphism Theorem for Rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and     Third Isomorphism Theorem for Rings   If is a ring and are two ideals of , then is an ideal of and     Lattice Isomorphism Theorem for Quotient Rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .     "
+  "body": "Quotient Rings  Quotient Rings    Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.   Alan Perlis   Additive Cosets form Abelian Group   For a two-sided ideal of , the set of additive cosets modulo is This is an abelian group with respect to addition given by .    Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by . quotient ring     Quotient Rings are Rings Given a two-sided ideal of , prove that the quotient ring is indeed a ring.  Just like we had with groups, it turns out our dear friend has been a quotient all along.  Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .    This is where the common notation comes from, even though it should be anyway.   And, once again, we have a quotient map that turns out to be a homomorphism.  Quotient Map is Surjective Ring Map Prove that the canonical quotient map is a surjective ring homomorphism.  Last but certainly not least, we have an analogue of for ideals. Once again, I would like to suggest that ideal subgroup is a far better name for a normal subgroup.   Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that .     The Ring Isomorphism Theorems    I'm not a very structured person, so when I get some structure, it's cool; it's good for me.  J. Cole   We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.  UMP for Quotient Rings  UMP for quotient rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.    First Isomorphism Theorem for Rings  first isomorphism theorem for rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.    Second Isomorphism Theorem for Rings  second isomorphism theorem for rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and     Third Isomorphism Theorem for Rings  third isomorphism theorem for rings   If is a ring and are two ideals of , then is an ideal of and     Lattice Isomorphism Theorem for Rings  lattice isomorphism theorem for rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .     "
 },
 {
   "id": "lem-cosets-abelian",
@@ -3769,7 +3787,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.17",
   "title": "Quotient Ring.",
-  "body": "Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by .   "
+  "body": "Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by . quotient ring    "
 },
 {
   "id": "exe-quotient-ring-is-ring",
@@ -3814,7 +3832,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "8.22",
   "title": "UMP for Quotient Rings.",
-  "body": "UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.   "
+  "body": "UMP for Quotient Rings  UMP for quotient rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.   "
 },
 {
   "id": "thm-ring-fit",
@@ -3823,7 +3841,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "8.23",
   "title": "First Isomorphism Theorem for Rings.",
-  "body": "First Isomorphism Theorem for Rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.   "
+  "body": "First Isomorphism Theorem for Rings  first isomorphism theorem for rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.   "
 },
 {
   "id": "thm-ring-sit",
@@ -3832,7 +3850,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "8.24",
   "title": "Second Isomorphism Theorem for Rings.",
-  "body": "Second Isomorphism Theorem for Rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and    "
+  "body": "Second Isomorphism Theorem for Rings  second isomorphism theorem for rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and    "
 },
 {
   "id": "thm-ring-tit",
@@ -3841,7 +3859,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "8.25",
   "title": "Third Isomorphism Theorem for Rings.",
-  "body": "Third Isomorphism Theorem for Rings   If is a ring and are two ideals of , then is an ideal of and    "
+  "body": "Third Isomorphism Theorem for Rings  third isomorphism theorem for rings   If is a ring and are two ideals of , then is an ideal of and    "
 },
 {
   "id": "thm-ring-lit",
@@ -3849,8 +3867,8 @@ var ptx_lunr_docs = [
   "url": "sec-ring-quotients.html#thm-ring-lit",
   "type": "Theorem",
   "number": "8.26",
-  "title": "Lattice Isomorphism Theorem for Quotient Rings.",
-  "body": "Lattice Isomorphism Theorem for Quotient Rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .   "
+  "title": "Lattice Isomorphism Theorem for Rings.",
+  "body": "Lattice Isomorphism Theorem for Rings  lattice isomorphism theorem for rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .   "
 },
 {
   "id": "sec-primemax-ideals",
@@ -3859,7 +3877,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.3",
   "title": "Prime and Maximal Ideals",
-  "body": "Prime and Maximal Ideals  Prime Ideals    I have as much chance of becoming Prime Minister as of being decapitated by a frisbee or of finding Elvis.   Boris Johnson, former Prime Minister   Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or .    We often refer to prime ideals as just primes , this will become gently confusing later and we will avoid doing so when possible.  Examples of Prime Ideals    In , the prime ideals are and the ideals generated by prime integers , where is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular is prime but not maximal.  In the ideal is not prime, because , but and (because if then so , a contradiction).     Here is an equivalent characterization of prime ideals that will become very useful in a later course on commutative algebra.  Prime iff Complement is Closed   An ideal is prime if and only if is closed under multiplication.    And here is another equivalent characterization One might say it is an equivalent equivalent characterization... but we shant. that will become very useful instantly and will never really stop.  Prime iff Quotient is Domain   Let be a commutative ring with , and let be an ideal of . The ideal is prime if and only if is an integral domain.    Suppose is prime. If , then and hence either or , so that either or . This proves is a domain. Suppose is a domain and that . Then in and hence either or . It follows or , so that is prime.    Since we're on such a roll of equivalent characterizations, let's through in one more for good measure.  Equivalent Domain Characterization   Let be a nontrivial ring. Then is an integral domain if and only if the ideal is prime.    Prime ideals and homomorphisms? I thought you'd never ask.  Prime Ideals and Ring Maps      If is a domain, is a ring and is a ring homomorphism, then is a prime ideal.    If is a ring homomorphism and is a prime ideal in , then is prime in .        Maximal Ideals  It's just like, we know how to push ourselves to the max. Young Dolph  Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and .    It is not uncommon to denote maximal ideals with . We reserve this notation for when we dive into modules.  in In the ideal is maximal and prime, the ideals and are prime but not maximal.  And, matching up quite nicely with , we have one of the spicier meatballs of the chapter.  Maximal Ideal iff Quotient is a Field   Let be a commutative ring with , and let be an ideal of . The ideal is maximal if and only if is a field.    The first assertion follows immediately from the Lattice Isomorphism Theorem and the fact that is a field if and only if its only ideals are and .    Maximal Ideals are Prime   Every maximal ideal is prime.    If is maximal, then is a field, which in particular implies that is a domain, so is prime.    Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.   Zorn's Lemma   Let be a non-empty family of sets. Suppose that for each chain in , the set is in . Then has a maximal element.    All Ideals Contained in Maximal Ideal   If is a ring with and is a proper ideal of , then there is a maximal ideal of containing . In particular every ring contains a maximal ideal.    Let be the set of proper ideals of that contain and view as a poset under containment. We will apply . Suppose is a totally ordered subset of . We need to show has an upper bound in . If is empty, is such a bound. Otherwise, let .  Since is non-empty, we have and so .  Given , then for some . Since is totally ordered, either or , and hence or . Either way, .  For and , we have for some and hence .  This proves is an ideal that contains . Since every is a proper ideal, , so and hence is a proper ideal, so . By , we conclude has at least one maximal element . This is a maximal ideal in the sense of definition since if is an ideal of and then either or, if is proper, then , which yields by using that is a maximal element of .  The existence of a maximal ideal follows by applying the first part of the theorem for .     "
+  "body": "Prime and Maximal Ideals  Prime Ideals    I have as much chance of becoming Prime Minister as of being decapitated by a frisbee or of finding Elvis.   Boris Johnson, former Prime Minister   Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or . prime ideal      We often refer to prime ideals as just primes , this will become gently confusing later and we will avoid doing so when possible.   Examples of Prime Ideals    In , the prime ideals are and the ideals generated by prime integers , where is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular is prime but not maximal.  In the ideal is not prime, because , but and (because if then so , a contradiction).     Here is an equivalent characterization of prime ideals that will become very useful in a later course on commutative algebra.  Prime iff Complement is Closed   An ideal is prime if and only if is closed under multiplication.    And here is another equivalent characterization One might say it is an equivalent equivalent characterization... but we shant. that will become very useful instantly and will never really stop.  Prime iff Quotient is Domain   Let be a commutative ring with , and let be an ideal of . The ideal is prime if and only if is an integral domain.    Suppose is prime. If , then and hence either or , so that either or . This proves is a domain. Suppose is a domain and that . Then in and hence either or . It follows or , so that is prime.    Since we're on such a roll of equivalent characterizations, let's through in one more for good measure.  Equivalent Domain Characterization   Let be a nontrivial ring. Then is an integral domain if and only if the ideal is prime.    Prime ideals and homomorphisms? I thought you'd never ask.  Prime Ideals and Ring Maps      If is a domain, is a ring and is a ring homomorphism, then is a prime ideal.    If is a ring homomorphism and is a prime ideal in , then is prime in .        Maximal Ideals    It's just like, we know how to push ourselves to the max.   Young Dolph   Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and . maximal ideal      It is not uncommon to denote maximal ideals with . We reserve this notation for when we dive into modules.   in In the ideal is maximal and prime, the ideals and are prime but not maximal.  And, matching up quite nicely with , we have one of the spicier meatballs of the chapter.  Maximal Ideal iff Quotient is a Field   Let be a commutative ring with , and let be an ideal of . The ideal is maximal if and only if is a field.    The first assertion follows immediately from the and the fact that is a field if and only if its only ideals are and .    Maximal Ideals are Prime   Every maximal ideal is prime.    If is maximal, then is a field, which in particular implies that is a domain, so is prime.    Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.  Zorn's Lemma   Let be a non-empty family of sets. Suppose that for each chain in , the set is in . Then has a maximal element.    All Ideals Contained in Maximal Ideal   If is a ring with and is a proper ideal of , then there is a maximal ideal of containing . In particular every ring contains a maximal ideal.    Let be the set of proper ideals of that contain and view as a poset under containment. We will apply . Suppose is a totally ordered subset of . We need to show has an upper bound in . If is empty, is such a bound. Otherwise, let .  Since is non-empty, we have and so .  Given , then for some . Since is totally ordered, either or , and hence or . Either way, .  For and , we have for some and hence .  This proves is an ideal that contains . Since every is a proper ideal, , so and hence is a proper ideal, so . By , we conclude has at least one maximal element . This is a maximal ideal in the sense of definition since if is an ideal of and then either or, if is proper, then , which yields by using that is a maximal element of .  The existence of a maximal ideal follows by applying the first part of the theorem for .     "
 },
 {
   "id": "def-prime-ideal",
@@ -3868,7 +3886,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.27",
   "title": "Prime Ideal.",
-  "body": "Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or .   "
+  "body": "Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or . prime ideal    "
 },
 {
   "id": "remark-38",
@@ -3877,7 +3895,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "8.28",
   "title": "",
-  "body": "We often refer to prime ideals as just primes , this will become gently confusing later and we will avoid doing so when possible. "
+  "body": " We often refer to prime ideals as just primes , this will become gently confusing later and we will avoid doing so when possible.  "
 },
 {
   "id": "ex-prime-ideals",
@@ -3931,23 +3949,14 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.34",
   "title": "Maximal Ideal.",
-  "body": "Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and .   "
-},
-{
-  "id": "remark-39",
-  "level": "2",
-  "url": "sec-primemax-ideals.html#remark-39",
-  "type": "Remark",
-  "number": "8.35",
-  "title": "",
-  "body": "It is not uncommon to denote maximal ideals with . We reserve this notation for when we dive into modules. "
+  "body": "Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and . maximal ideal    "
 },
 {
   "id": "exe-2x-prime-and-maximal-in-zx",
   "level": "2",
   "url": "sec-primemax-ideals.html#exe-2x-prime-and-maximal-in-zx",
   "type": "Exercise",
-  "number": "8.36",
+  "number": "8.35",
   "title": "<span class=\"process-math\">\\(\\igen{2,x}\\)<\/span> in <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
   "body": "in In the ideal is maximal and prime, the ideals and are prime but not maximal. "
 },
@@ -3956,16 +3965,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-maximal-iff-field",
   "type": "Theorem",
-  "number": "8.37",
+  "number": "8.36",
   "title": "Maximal Ideal iff Quotient is a Field.",
-  "body": "Maximal Ideal iff Quotient is a Field   Let be a commutative ring with , and let be an ideal of . The ideal is maximal if and only if is a field.    The first assertion follows immediately from the Lattice Isomorphism Theorem and the fact that is a field if and only if its only ideals are and .   "
+  "body": "Maximal Ideal iff Quotient is a Field   Let be a commutative ring with , and let be an ideal of . The ideal is maximal if and only if is a field.    The first assertion follows immediately from the and the fact that is a field if and only if its only ideals are and .   "
 },
 {
   "id": "cor-maximal-prime",
   "level": "2",
   "url": "sec-primemax-ideals.html#cor-maximal-prime",
   "type": "Corollary",
-  "number": "8.38",
+  "number": "8.37",
   "title": "Maximal Ideals are Prime.",
   "body": "Maximal Ideals are Prime   Every maximal ideal is prime.    If is maximal, then is a field, which in particular implies that is a domain, so is prime.   "
 },
@@ -3974,7 +3983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#lem-zorn",
   "type": "Lemma",
-  "number": "8.39",
+  "number": "8.38",
   "title": "Zorn's Lemma.",
   "body": "Zorn's Lemma   Let be a non-empty family of sets. Suppose that for each chain in , the set is in . Then has a maximal element.   "
 },
@@ -3983,7 +3992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-all-ideals-contained-in-maximal-ideal",
   "type": "Theorem",
-  "number": "8.40",
+  "number": "8.39",
   "title": "All Ideals Contained in Maximal Ideal.",
   "body": "All Ideals Contained in Maximal Ideal   If is a ring with and is a proper ideal of , then there is a maximal ideal of containing . In particular every ring contains a maximal ideal.    Let be the set of proper ideals of that contain and view as a poset under containment. We will apply . Suppose is a totally ordered subset of . We need to show has an upper bound in . If is empty, is such a bound. Otherwise, let .  Since is non-empty, we have and so .  Given , then for some . Since is totally ordered, either or , and hence or . Either way, .  For and , we have for some and hence .  This proves is an ideal that contains . Since every is a proper ideal, , so and hence is a proper ideal, so . By , we conclude has at least one maximal element . This is a maximal ideal in the sense of definition since if is an ideal of and then either or, if is proper, then , which yields by using that is a maximal element of .  The existence of a maximal ideal follows by applying the first part of the theorem for .   "
 },
@@ -4042,9 +4051,9 @@ var ptx_lunr_docs = [
   "body": "GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .      "
 },
 {
-  "id": "remark-40",
+  "id": "remark-39",
   "level": "2",
-  "url": "sec-eds.html#remark-40",
+  "url": "sec-eds.html#remark-39",
   "type": "Remark",
   "number": "9.6",
   "title": "",
@@ -4159,9 +4168,9 @@ var ptx_lunr_docs = [
   "body": "GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .   "
 },
 {
-  "id": "remark-41",
+  "id": "remark-40",
   "level": "2",
-  "url": "sec-pids.html#remark-41",
+  "url": "sec-pids.html#remark-40",
   "type": "Remark",
   "number": "9.18",
   "title": "",
@@ -4348,9 +4357,9 @@ var ptx_lunr_docs = [
   "body": "Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.   "
 },
 {
-  "id": "remark-42",
+  "id": "remark-41",
   "level": "2",
-  "url": "subsec-noeth.html#remark-42",
+  "url": "subsec-noeth.html#remark-41",
   "type": "Remark",
   "number": "9.37",
   "title": "",
@@ -4438,9 +4447,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions.      "
 },
 {
-  "id": "remark-43",
+  "id": "remark-42",
   "level": "2",
-  "url": "sec-irrpoly.html#remark-43",
+  "url": "sec-irrpoly.html#remark-42",
   "type": "Remark",
   "number": "10.8",
   "title": "",
@@ -4591,9 +4600,9 @@ var ptx_lunr_docs = [
   "body": "Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.  "
 },
 {
-  "id": "remark-44",
+  "id": "remark-43",
   "level": "2",
-  "url": "sec-defmod.html#remark-44",
+  "url": "sec-defmod.html#remark-43",
   "type": "Remark",
   "number": "11.3",
   "title": "",
@@ -4762,9 +4771,9 @@ var ptx_lunr_docs = [
   "body": "  .   The condition says that is a homomorphism of abelian groups.  "
 },
 {
-  "id": "remark-45",
+  "id": "remark-44",
   "level": "2",
-  "url": "sec-modhom.html#remark-45",
+  "url": "sec-modhom.html#remark-44",
   "type": "Remark",
   "number": "11.21",
   "title": "",
@@ -4870,9 +4879,9 @@ var ptx_lunr_docs = [
   "body": "  Let and be -modules over a commutative ring . Then is an -module using the following structure: Given , is the map defined by , and given and , is the -module homomorphism defined by The zero element of is the zero map.   "
 },
 {
-  "id": "remark-46",
+  "id": "remark-45",
   "level": "2",
-  "url": "sec-modhom.html#remark-46",
+  "url": "sec-modhom.html#remark-45",
   "type": "Remark",
   "number": "11.33",
   "title": "",
@@ -5041,9 +5050,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that .   "
 },
 {
-  "id": "remark-47",
+  "id": "remark-46",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#remark-47",
+  "url": "sec-linear-ind-gen.html#remark-46",
   "type": "Remark",
   "number": "11.51",
   "title": "",
@@ -5077,9 +5086,9 @@ var ptx_lunr_docs = [
   "body": "Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent .   "
 },
 {
-  "id": "remark-48",
+  "id": "remark-47",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#remark-48",
+  "url": "sec-linear-ind-gen.html#remark-47",
   "type": "Remark",
   "number": "11.55",
   "title": "",
@@ -5158,9 +5167,9 @@ var ptx_lunr_docs = [
   "body": "Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.  "
 },
 {
-  "id": "remark-49",
+  "id": "remark-48",
   "level": "2",
-  "url": "sec-free-mod.html#remark-49",
+  "url": "sec-free-mod.html#remark-48",
   "type": "Remark",
   "number": "11.63",
   "title": "",
@@ -5176,9 +5185,9 @@ var ptx_lunr_docs = [
   "body": " If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .  "
 },
 {
-  "id": "remark-50",
+  "id": "remark-49",
   "level": "2",
-  "url": "sec-free-mod.html#remark-50",
+  "url": "sec-free-mod.html#remark-49",
   "type": "Remark",
   "number": "11.65",
   "title": "",
@@ -5212,9 +5221,9 @@ var ptx_lunr_docs = [
   "body": "UMP for Free -Modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .   "
 },
 {
-  "id": "remark-51",
+  "id": "remark-50",
   "level": "2",
-  "url": "sec-free-mod.html#remark-51",
+  "url": "sec-free-mod.html#remark-50",
   "type": "Remark",
   "number": "11.69",
   "title": "",
@@ -5239,9 +5248,9 @@ var ptx_lunr_docs = [
   "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
 },
 {
-  "id": "remark-52",
+  "id": "remark-51",
   "level": "2",
-  "url": "sec-free-mod.html#remark-52",
+  "url": "sec-free-mod.html#remark-51",
   "type": "Remark",
   "number": "11.72",
   "title": "",
@@ -5302,9 +5311,9 @@ var ptx_lunr_docs = [
   "body": "Linear Independence and Span   Suppose is a linearly independent subset of an -vector space and , then is also linearly independent.    We need to prove that every finite subset of is linearly independent. Let be a list of distinct elements of and suppose for some . If for all , then for all since is linearly independent. Without loss, say . If , then , contrary to the assumption. So we must have . But then for all by the same reasoning as in the first case.   "
 },
 {
-  "id": "remark-53",
+  "id": "remark-52",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-53",
+  "url": "sec-vecbasis.html#remark-52",
   "type": "Remark",
   "number": "12.3",
   "title": "",
@@ -5347,9 +5356,9 @@ var ptx_lunr_docs = [
   "body": "Basis of Subspaces Extent   Suppose is a field an is a subspace (i.e., submodule) of the -vector space (i.e., -module) . Then every basis of extends to a basis of - that is, if is a basis of then there exists a basis of such that is a subset of .    Apply with and . (Since is a basis of , it is linearly independent, and observe that remains linearly independent when regarded as a subset of .)   "
 },
 {
-  "id": "remark-54",
+  "id": "remark-53",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-54",
+  "url": "sec-vecbasis.html#remark-53",
   "type": "Remark",
   "number": "12.8",
   "title": "",
@@ -5365,9 +5374,9 @@ var ptx_lunr_docs = [
   "body": "Exchange Lemma   Let be a field, let be a basis of an -vector space , and let be any finite set of linearly independent vectors in . Then there are distinct vectors in , such that is also a basis .    Let . As noted, the sublemma establishes the case of the Exchange Lemma. The general case proceeds recursively:  Suppose that for some , we have found such that is a basis for some . We need to show we can “swap out one more''; that is, we need to prove there is a such that is also a basis.  Since is a basis, there is a (unique) equation of the form with and . Now, there must be at least one that is not in , for otherwise we would have , contrary to being linearly independent. Let for such an . Then by the sublemma is a basis of .   "
 },
 {
-  "id": "remark-55",
+  "id": "remark-54",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-55",
+  "url": "sec-vecbasis.html#remark-54",
   "type": "Remark",
   "number": "12.10",
   "title": "",
@@ -5437,9 +5446,9 @@ var ptx_lunr_docs = [
   "body": "Dimension and Subspaces   Let be a field and let be a subspace of a finite dimensional -vector space . Then     Pick a basis of . Regarded as a subset of , remains linearly independent and thus it may be extended to a basis of by Corollary . Let us write this basis of as with .  Let . I claim that is a basis of .  Given we have for some and scalars . Since for all , we have . This proves spans. Say for some . Then and hence , whence . Since is linearly independent, and for all . This proves is linearly independent.  We have with the second equality holding since and are disjoint.   "
 },
 {
-  "id": "remark-56",
+  "id": "remark-55",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-56",
+  "url": "sec-vecbasis.html#remark-55",
   "type": "Remark",
   "number": "12.18",
   "title": "",
@@ -5464,9 +5473,9 @@ var ptx_lunr_docs = [
   "body": "Rank-Nullity Theorem   Let be a field and an -linear transformation between -vector spaces and , and assume is finite dimensional. Then or equivalently     By the we have , thus . By the previous theorem we have    "
 },
 {
-  "id": "remark-57",
+  "id": "remark-56",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-57",
+  "url": "sec-vecbasis.html#remark-56",
   "type": "Remark",
   "number": "12.21",
   "title": "",
@@ -5482,9 +5491,9 @@ var ptx_lunr_docs = [
   "body": "Linear Transformations and Change of Basis  Matrices of Linear Transformations    No one can be told what the matrix is. You have to see it for yourself.   Morpheus    Recall that when is a field an -module homomorphism is called a -linear transformation. Since every -vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.   Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. Let and be ordered bases of and . Given an -module homomorphism , we define elements for and by the formulas The matrix is said to represent the homomorphism with respect to the bases and . In the case that and are -vector spaces, the matrix is called the matrix of the linear transformation  with respect to the bases and .    Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence    Matrix Representing the Derivative Operator  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by taking the derivative . Let . Then     Change of Basis    Change brings opportunity.   Nido R. Qubein   Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to .     In we will show that is invertible with inverse .   CoB and  Consider , let and be bases of . We calculate the change of basis matrix. We have Thus, the change of basis matrix is given by    CoB and Identity   If are finitely generated free -modules spaces with ordered bases , , and , and if and are -module homomorphisms, then     Given , we have so .    Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is a bijective linear transformation such that . Two matrices and with entries in are similar if there is an invertible matrix such that .     For elements , the notions of similar and conjugate are the same.   Similar CoB Matrices   Let be finitely generated free modules over a commutative ring , let and be bases of , let and be bases of , and let be a homomorphism. Then In particular, if is an -module homomorphism, then and are similar.    Since , by we have Setting , and we have . Notice that is the identity matrix, so the previous formula says that Setting , we notice that the previous identity gives .  Now set and to obtain     We now come to certain special changes of basis and their matrices:  Elementary Basis Change Operations   Let be a commutative ring with , let be a free -module of finite rank , and let be an ordered basis for . An elementary basis change operation on the basis is one of the following three types of operations:   (Type I) Replacing by for some and some .    (Type II) Replacing by for some and some unit of ,    (Type III) Swapping the positions of and for some .       Elementary Row Operations   Let be a commutative ring with . An elementary row (column) operation on a matrix is one of the following three types of operations:   (Type I) Adding an element of times a row (column) of to a different row column of .    (Type II) Multiplying a row (column) of by a unit of .    (Type III) Interchanging two rows (columns) of .       Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail:   (Type I) For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.    (Type II) For and let be the type II elementary matrix with entry , entry for all , and everywhere else.    (Type III) For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.        "
 },
 {
-  "id": "remark-58",
+  "id": "remark-57",
   "level": "2",
-  "url": "sec-cob.html#remark-58",
+  "url": "sec-cob.html#remark-57",
   "type": "Remark",
   "number": "12.22",
   "title": "",
@@ -5527,9 +5536,9 @@ var ptx_lunr_docs = [
   "body": "Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to .   "
 },
 {
-  "id": "remark-59",
+  "id": "remark-58",
   "level": "2",
-  "url": "sec-cob.html#remark-59",
+  "url": "sec-cob.html#remark-58",
   "type": "Remark",
   "number": "12.27",
   "title": "",
@@ -5563,9 +5572,9 @@ var ptx_lunr_docs = [
   "body": "Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is a bijective linear transformation such that . Two matrices and with entries in are similar if there is an invertible matrix such that .   "
 },
 {
-  "id": "remark-60",
+  "id": "remark-59",
   "level": "2",
-  "url": "sec-cob.html#remark-60",
+  "url": "sec-cob.html#remark-59",
   "type": "Remark",
   "number": "12.31",
   "title": "",
@@ -5653,18 +5662,18 @@ var ptx_lunr_docs = [
   "body": "Matrices, Modules, and Isomorphisms   Let be a non-zero commutative ring and let and for some . Then and present isomorphic -modules if can be obtained from by any finite sequence of operations of the following form:   an elementary row operation,    an elementary column operation,    deletion of the -th column and -th row of a matrix whose -th column is the vector ,    the reverse of (3),    deletion of a column of all 's,    the reverse of (5).       Note: This proof was not covered in class. Assume is obtained from by a single one of the steps listed above. We need to prove that there is an isomorphism of -modules.   In this case, for some elementary matrix . More generally, let be any invertible matrix such that . Then is an isomorphism and it maps bijectively onto . It follows that the kernel of the composition is and hence by the first isomorphism theorem it induces an isomorphism     In this case, for some elementary matrix . More generally, assume is any invertible matrix such that . Since is an isomorphism, we have and so . (For this one we get equality, not merely an isomorphism.)    For notational simplicity, let us assume ; that is, the first column of is and is obtained by deleting the first row and column of , giving a matrix. So where denotes some row vector and denotes a column of all 's. Let and be projection onto the last and components, respectively. Because of the nature of and , the diagram (page 40 in notes) commutes. Moreover, the kernel of is and the kernel of is , and since the first column of is , maps the kernel of bijectively onto the kernel of . A “diagram chase'' shows that . In detail: Since the diagram commutes, and hence induces an -module homomorphism (by the -th isomorphism theorem). Since is onto, so is . Suppose . So, . Say . Since is onto, for some . Then and thus . As noted above, maps onto and hence for some vector . This proves and hence that in . This proves is one-to-one.    The columns of generate the same submodule of as do the columns of , and thus and .    Since the isomorphism relation is reflexive, the statements of parts 3. & 5. show that parts 4.& 6. are true as well.      "
 },
 {
-  "id": "remark-61",
+  "id": "remark-60",
   "level": "2",
-  "url": "sec-modpres.html#remark-61",
+  "url": "sec-modpres.html#remark-60",
   "type": "Remark",
   "number": "13.5",
   "title": "",
   "body": " The converse is true for some rings , including Euclidean domains.  "
 },
 {
-  "id": "remark-62",
+  "id": "remark-61",
   "level": "2",
-  "url": "sec-modpres.html#remark-62",
+  "url": "sec-modpres.html#remark-61",
   "type": "Remark",
   "number": "13.6",
   "title": "",
@@ -5680,9 +5689,9 @@ var ptx_lunr_docs = [
   "body": "Diagonal Presentation   Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.   "
 },
 {
-  "id": "remark-63",
+  "id": "remark-62",
   "level": "2",
-  "url": "sec-modpres.html#remark-63",
+  "url": "sec-modpres.html#remark-62",
   "type": "Remark",
   "number": "13.8",
   "title": "",
@@ -5707,9 +5716,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Modules in Noetherian Rings   If is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.    I will just prove the following special case (since it is all we need): For each , every submodule of is finitely generated. The base case holds by definition (and Lemma ), since a submodule of is the same thing as an ideal.  Assume and the result holds for . Let be any submodule of . Define to be the projection onto the last component of . The kernel of may be identified with and so is a submodule of , and it is therefore finitely generated by assumption. The image of under is a submodule of , that is, an ideal of , and so it too is finitely generated by assumption (and Lemma ).  Furthermore, by the first isomorphism theorem is also finitely generated. By a homework problem, we deduce that is a finitely generated module.  % I'll just sketch the general case (which I don't think we'll actually need): let be any finitely generated -module and any submodule. % Since is finitely generated, there exists a surjective -module homomorphism for some . Then is a submodule of and % hence it is finitely generated by the case we already proved. Moreover, induces a surjective -module homomorphism , % and hence is isomorphic to a quotient of a finitely generated -module and thus it is also finitely generated.   "
 },
 {
-  "id": "remark-64",
+  "id": "remark-63",
   "level": "2",
-  "url": "sec-modpres.html#remark-64",
+  "url": "sec-modpres.html#remark-63",
   "type": "Remark",
   "number": "13.11",
   "title": "",
@@ -5743,9 +5752,9 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form   Let be a Euclidean domain and let . Then there is a sequence of elementary column and column operations that transform into a matrix such that all non-diagonal entries of are and the diagonal entries of satisfy     The main point of the proof is to establish:  {}: There is a sequence of row and column operations that transforms to for some matrix and where . (We adopt the convention that if is the matrix of all 's, then .) Note that, by Lemma , we have and thus .  Granting this claim, by applying it again to we arrive at a matrix of the form where and and . (Observe that the row and column operations on will not affect the first row and column of .) Continuing in this fashion, we arrive at the matrix in the statement.  To prove the claim, let be the upper-left entry of .  Suppose happens to be . Then, in particular, it divides every entry of the first row and column of , and so by doing row and column operations of type I, we may out these entries to arrive at a matrix of the desired form directly.  In general, let to be the number of prime factors in a prime factorization of of , and proceed by induction on .  If , then (up to associates), and we already did this case.  Assume . Then there is at least one entry such that .  Case I: There is such a belonging to the first row of . In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace by and by , as in the example above. Since , is a proper divisor of , and it follows that the number of factors in a prime factorization of is smaller than , and we are done by induction.  Case II: There is such a in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.  Case III: divides every entry of the first row and first column. In this case, suitable row and column operations transform to By Lemma we have , and thus there is some element of such that (since we are assuming is not the gcd of ). A suitable row operation puts into row one without affecting , and we are back to the previously solved Case I.   "
 },
 {
-  "id": "remark-65",
+  "id": "remark-64",
   "level": "2",
-  "url": "sec-snf.html#remark-65",
+  "url": "sec-snf.html#remark-64",
   "type": "Remark",
   "number": "13.14",
   "title": "",
@@ -5779,9 +5788,9 @@ var ptx_lunr_docs = [
   "body": "Finding SNF  Consider the matrix with entries in  Do row and column operations to put into its Smith Normal Form: Conclude that the module presented by is isomorphic to .  "
 },
 {
-  "id": "remark-66",
+  "id": "remark-65",
   "level": "2",
-  "url": "sec-snf.html#remark-66",
+  "url": "sec-snf.html#remark-65",
   "type": "Remark",
   "number": "13.18",
   "title": "",
@@ -5824,9 +5833,9 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form is Unique   Assume is a PID and . Suppose can be obtained from via a sequence of elementary column and column operations and that is diagonal with diagonal entries such that . Then In particular, the SNF of a matrix is unique up to associates.    Recall that for a PID , the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma implies that for all . Since is diagonal, the only non-zero minors of are those given by indices and for which for all , and moreover such a minor is equal to . Since for all , it follows that divides for all . Thus , for each , and hence as claimed.   "
 },
 {
-  "id": "remark-67",
+  "id": "remark-66",
   "level": "2",
-  "url": "sec-snf.html#remark-67",
+  "url": "sec-snf.html#remark-66",
   "type": "Remark",
   "number": "13.23",
   "title": "",
@@ -5959,9 +5968,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form    If everything on Earth were rational, nothing would happen.   Fyodor Dostoevsky    Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:   -Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .    is Actually a -Module   Given a pair as in the definition, really is a -module.    Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.    Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).   Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .     In fact, these rules determine an “isomorphism of categories''.   Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .    Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.     The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)   Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .    Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .   Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.    Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is     The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):   RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have     Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .    Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .   Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.   "
 },
 {
-  "id": "remark-68",
+  "id": "remark-67",
   "level": "2",
-  "url": "sec-rcf.html#remark-68",
+  "url": "sec-rcf.html#remark-67",
   "type": "Remark",
   "number": "14.1",
   "title": "",
@@ -6013,9 +6022,9 @@ var ptx_lunr_docs = [
   "body": "Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .   "
 },
 {
-  "id": "remark-69",
+  "id": "remark-68",
   "level": "2",
-  "url": "sec-rcf.html#remark-69",
+  "url": "sec-rcf.html#remark-68",
   "type": "Remark",
   "number": "14.7",
   "title": "",
@@ -6040,9 +6049,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.   "
 },
 {
-  "id": "remark-70",
+  "id": "remark-69",
   "level": "2",
-  "url": "sec-rcf.html#remark-70",
+  "url": "sec-rcf.html#remark-69",
   "type": "Remark",
   "number": "14.10",
   "title": "",
@@ -6085,9 +6094,9 @@ var ptx_lunr_docs = [
   "body": "Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is   "
 },
 {
-  "id": "remark-71",
+  "id": "remark-70",
   "level": "2",
-  "url": "sec-rcf.html#remark-71",
+  "url": "sec-rcf.html#remark-70",
   "type": "Remark",
   "number": "14.15",
   "title": "",
@@ -6139,9 +6148,9 @@ var ptx_lunr_docs = [
   "body": "The Cayley-Hamilton Theorem    If you stand for nothing, Burr, what will you fall for?   Hamilton   Given a square matrix and polynomial , recall that refers to the square matrix .  Ideals and   Given a matrix with entries in a field , the set forms a non-zero ideal of .     is an ideal since the result of evaluating the sum of two polynomials at is . the result of evaluating the product at is .  To show it is non-zero, consider the matrices . This is a collection of matrices in the dimensional -vector space , and hence the must be linearly dependent: there are , not all of which are , such that . This proves .    Minimum Polynomial of a Matrix   Let be a field and let . The minimum polynomial of , denoted , is the unique monic generator of the ideal . Equivalently, is the monic polynomial of least degree such that .    iff Annihilates   Given an matrix and polynomial , we have if and only if annihilates the -module .  In particular, is the unique monic generator of the annihilator ideal     If , then for each , by definition of the action of on we have and so annihilates . Conversely, if annihilates , then for all . Taking for each , this says that each column of is and hence is the zero matrix.    Minimum Polynomial   More generally, let be an -vector space of dimension , and let be a linear transformation. The minimum polynomial of , denoted , is the unique monic polynomial generating the ideal or, equivalently, the annihilator ideal .    Theorem - Cayley-Hamilton   Let be a field, a finite dimensional -vector space, and an -linear operator. Let be the invariant factors of .   The product of the invariant factors of equals the characteristic polynomial of :     The largest invariant factor of is equal to the minimum polynomial of :     (The Cayley-Hamilton Theorem) The minimum polynomial of divides its characteristic polynomial. In particular, satisfies its characteristic polynomial:        The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of is equal to the determinant of . (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)  For the second, we use the isomorphism of -modules Note that a polynomial annihilates if and only if divides . Since , the annihilator of the -module is generated by . Thus the annihilator of is also generated by , and by the Proposition is the minimum polynomial of .  The third assertion is an immediate consequence of the first two.    Finding Minimum Polynomial  Let's find the minimum polynomial of   We apply the Cayley-Hamilton Theorem: . The polynomial is easy to compute since this matrix is upper-triangular: So for some . By brute-force, we verify that and thus it must be the case that .   Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .   "
 },
 {
-  "id": "remark-72",
+  "id": "remark-71",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#remark-72",
+  "url": "sec-cayley-hamilton.html#remark-71",
   "type": "Remark",
   "number": "14.20",
   "title": "",
@@ -6229,9 +6238,9 @@ var ptx_lunr_docs = [
   "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix as: But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block .  "
 },
 {
-  "id": "remark-73",
+  "id": "remark-72",
   "level": "2",
-  "url": "sec-jcf.html#remark-73",
+  "url": "sec-jcf.html#remark-72",
   "type": "Remark",
   "number": "14.29",
   "title": "",
@@ -6247,9 +6256,9 @@ var ptx_lunr_docs = [
   "body": "Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)   "
 },
 {
-  "id": "remark-74",
+  "id": "remark-73",
   "level": "2",
-  "url": "sec-jcf.html#remark-74",
+  "url": "sec-jcf.html#remark-73",
   "type": "Remark",
   "number": "14.31",
   "title": "",
@@ -6283,9 +6292,9 @@ var ptx_lunr_docs = [
   "body": " Not every operator has a Jordan Canonical Form: only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF.  "
 },
 {
-  "id": "remark-75",
+  "id": "remark-74",
   "level": "2",
-  "url": "sec-jcf.html#remark-75",
+  "url": "sec-jcf.html#remark-74",
   "type": "Remark",
   "number": "14.35",
   "title": "",
@@ -6346,9 +6355,9 @@ var ptx_lunr_docs = [
   "body": "Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .   "
 },
 {
-  "id": "remark-76",
+  "id": "remark-75",
   "level": "2",
-  "url": "field-extension-basics.html#remark-76",
+  "url": "field-extension-basics.html#remark-75",
   "type": "Remark",
   "number": "15.2",
   "title": "",
@@ -6364,9 +6373,9 @@ var ptx_lunr_docs = [
   "body": "Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.  "
 },
 {
-  "id": "remark-77",
+  "id": "remark-76",
   "level": "2",
-  "url": "field-extension-basics.html#remark-77",
+  "url": "field-extension-basics.html#remark-76",
   "type": "Remark",
   "number": "15.4",
   "title": "",
@@ -6481,9 +6490,9 @@ var ptx_lunr_docs = [
   "body": "Simple Extension, Primitive Element   A field extension is called simple if for some element of . We call such an a primitive element for the extension.   "
 },
 {
-  "id": "remark-78",
+  "id": "remark-77",
   "level": "2",
-  "url": "field-extension-basics.html#remark-78",
+  "url": "field-extension-basics.html#remark-77",
   "type": "Remark",
   "number": "15.17",
   "title": "",
@@ -6517,9 +6526,9 @@ var ptx_lunr_docs = [
   "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example shows is simple and is a primitive element of this field extension.  "
 },
 {
-  "id": "remark-79",
+  "id": "remark-78",
   "level": "2",
-  "url": "field-extension-basics.html#remark-79",
+  "url": "field-extension-basics.html#remark-78",
   "type": "Remark",
   "number": "15.21",
   "title": "",
@@ -6634,9 +6643,9 @@ var ptx_lunr_docs = [
   "body": "Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over .   "
 },
 {
-  "id": "remark-80",
+  "id": "remark-79",
   "level": "2",
-  "url": "sec-algebraic.html#remark-80",
+  "url": "sec-algebraic.html#remark-79",
   "type": "Remark",
   "number": "15.33",
   "title": "",
@@ -6724,9 +6733,9 @@ var ptx_lunr_docs = [
   "body": "Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .   "
 },
 {
-  "id": "remark-81",
+  "id": "remark-80",
   "level": "2",
-  "url": "sec-algebraic.html#remark-81",
+  "url": "sec-algebraic.html#remark-80",
   "type": "Remark",
   "number": "15.43",
   "title": "",
@@ -6859,9 +6868,9 @@ var ptx_lunr_docs = [
   "body": "Splitting Fields    As a silly example, if already splits into linear factors over , then itself is the splitting field of over .  The splitting field of over is .  If is any irreducible quadratic polynomial in , then the splitting field of is .  In general, given , a splitting field of is given by where are all of the roots of in .    "
 },
 {
-  "id": "remark-82",
+  "id": "remark-81",
   "level": "2",
-  "url": "sec-splitting.html#remark-82",
+  "url": "sec-splitting.html#remark-81",
   "type": "Remark",
   "number": "15.56",
   "title": "",
@@ -6877,9 +6886,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Splitting Fields   Let be a field and a non-constant polynomial.   There exists a splitting field for over .    If is another splitting field of over , then there is a field isomorphism such that .    The degree of any splitting field of is at most where .       For (1), let be an algebraic closure of , which exists by the previous Theorem. Let be the roots of in , and set .  It is clear is a splitting field.  To prove (2), we proceed by induction on the degree of . If is linear, then the only splitting field of over is itself and so the result is clear in this case. Say and are the roots of in and , respectively, and say they are ordered so that, and are roots of the same irreducible factor of in .  By Corollary there is an isomorphism that fixes . Note that factors as in and that is the splitting field of over , and similarly factors as in and that is the splitting field of over . If we blur our eyes slightly and pretend is the identity map, we can apply the inductive hypothesis, since , to conclude that there is an isomorphism as in the statement. I leave a more rigorous argument to your imaginations.  To prove (3), we also proceed by induction on the degree of , using the same notation as in the proof of (2).  Since is a root of , we have and hence In we have with and, as before, is the splitting field of over , so that by induction . By the     "
 },
 {
-  "id": "remark-83",
+  "id": "remark-82",
   "level": "2",
-  "url": "sec-splitting.html#remark-83",
+  "url": "sec-splitting.html#remark-82",
   "type": "Remark",
   "number": "15.58",
   "title": "",
@@ -6949,9 +6958,9 @@ var ptx_lunr_docs = [
   "body": "Characteristic   Let R be a commutative ring. The characteristic of , written , is the unique non-negative generator of the kernel of the unique ring homomorphism . (Recall .)  Equivalently, is the smallest positive integer such that , if such and integer exists, and otherwise.   "
 },
 {
-  "id": "remark-84",
+  "id": "remark-83",
   "level": "2",
-  "url": "sec-separable.html#remark-84",
+  "url": "sec-separable.html#remark-83",
   "type": "Remark",
   "number": "15.65",
   "title": "",
@@ -7237,9 +7246,9 @@ var ptx_lunr_docs = [
   "body": "Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois.   "
 },
 {
-  "id": "remark-85",
+  "id": "remark-84",
   "level": "2",
-  "url": "sec-galext.html#remark-85",
+  "url": "sec-galext.html#remark-84",
   "type": "Remark",
   "number": "16.15",
   "title": "",
@@ -7363,9 +7372,9 @@ var ptx_lunr_docs = [
   "body": "Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of 1 over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .  "
 },
 {
-  "id": "remark-86",
+  "id": "remark-85",
   "level": "2",
-  "url": "sec-ftgt.html#remark-86",
+  "url": "sec-ftgt.html#remark-85",
   "type": "Remark",
   "number": "16.28",
   "title": "",
@@ -7408,9 +7417,9 @@ var ptx_lunr_docs = [
   "body": "Set   The basic undefined term we will use is that of a set , which we take to be any collection of objects, not necessarily mathematical ones.   "
 },
 {
-  "id": "remark-87",
+  "id": "remark-86",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-87",
+  "url": "sec-sets-functions.html#remark-86",
   "type": "Remark",
   "number": "A.2",
   "title": "",
@@ -7516,9 +7525,9 @@ var ptx_lunr_docs = [
   "body": "Well-defined Function   A function is well-defined if whenever and , then .   "
 },
 {
-  "id": "remark-88",
+  "id": "remark-87",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-88",
+  "url": "sec-sets-functions.html#remark-87",
   "type": "Remark",
   "number": "A.14",
   "title": "",
