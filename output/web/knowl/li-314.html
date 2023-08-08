@@ -12,21 +12,23 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h5>
+<div class="para">Recall that we write <span class="process-math">\(|G| = p^em\)</span> where <span class="process-math">\(p \nmid m\text{.}\)</span> We need to prove <span class="process-math">\(G\)</span> contains a subgroup of order <span class="process-math">\(p^e\text{,}\)</span> and we proceed by induction on <span class="process-math">\(|G|\text{.}\)</span>
+</div>
+<div class="para">If <span class="process-math">\(|G| = 1\)</span> or, more generally, if <span class="process-math">\(p \nmid |G|\text{,}\)</span> then <span class="process-math">\(\{e\}\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup. We may thus assume <span class="process-math">\(p \mid |G|\text{.}\)</span> We proceed by considering two cases, depending on whether or not <span class="process-math">\(p\)</span> divides <span class="process-math">\(|Z(G)|\text{.}\)</span>
+</div>
+<div class="para">If <span class="process-math">\(p \mid |Z(G)|\text{,}\)</span> then by <a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 5.4: Cauchy's Theorem">Cauchy's Theorem</a>, there is an element <span class="process-math">\(z \in Z(G)\)</span> of order <span class="process-math">\(p\text{.}\)</span> Set <span class="process-math">\(N = \langle z \rangle\text{.}\)</span> Since <span class="process-math">\(z \in Z(G)\text{,}\)</span> we have <span class="process-math">\(N \unlhd G\text{.}\)</span> Since <span class="process-math">\(|G/N| = p^{e-1}m\text{,}\)</span> by induction <span class="process-math">\(G/N\)</span> has a subgroup of order <span class="process-math">\(p^{e-1}\)</span> (i.e. of index <span class="process-math">\(m\)</span>). By <a href="" class="xref" data-knowl="./knowl/thm-lit-group.html" title="Theorem 3.56: Lattice Isomorphism Theorem">Lattice Isomorphism Theorem</a>, this subgroup corresponds to a subgroup of <span class="process-math">\(G\)</span> of index <span class="process-math">\(m\text{,}\)</span> hence of order <span class="process-math">\(p^e\text{.}\)</span>
+</div>
 <div class="para logical">
-<div class="para">For any <span class="process-math">\(P \in \operatorname{Syl}_p(G)\text{,}\)</span>
+<div class="para">For the second case, assume <span class="process-math">\(p \nmid |Z(G)|\)</span> and consider the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.43: Class Equation">Class Equation</a> for <span class="process-math">\(G\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
 \begin{equation*}
-|\operatorname{Syl}_p(G)| = [G: N_G(P)],
+|G| = |Z(G)| + \sum_{i=1}^k [G: C_G(g_i)]
 \end{equation*}
 </div>
-<div class="para">and hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-|\operatorname{Syl}_p(G)| \mid m.
-\end{equation*}
+<div class="para">where <span class="process-math">\(g_1, \dots, g_k\)</span> are a complete and non-redundant list of non-central conjugacy class representatives. Since <span class="process-math">\(p \nmid |Z(G)|\)</span> and <span class="process-math">\(p \mid |G|\text{,}\)</span> we must have <span class="process-math">\(p \nmid [G:C_G(g_i)]\)</span> for at least one <span class="process-math">\(i\text{.}\)</span> For this <span class="process-math">\(i\text{,}\)</span> we have <span class="process-math">\(|C_G(g_i)|= p^e j\)</span> where <span class="process-math">\(p \nmid j\text{.}\)</span> Since <span class="process-math">\(g_i\)</span> is not central, <span class="process-math">\(|C_G(g_i)| &lt; |G|\)</span> and hence, by induction, <span class="process-math">\(C_G(g_i)\)</span> contains a subgroup of order <span class="process-math">\(p^e\text{.}\)</span> But this subgroup is also a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="sec-p-groups.html#li-314" class="internal">in-context</a></span>
 </body>

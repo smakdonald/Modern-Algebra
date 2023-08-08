@@ -13,19 +13,19 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
+<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tilde{\phi}: R[x] \to S
+\psi: R[x_1, \dots, x_{n-1}] \to S
 \end{equation*}
 </div>
-<div class="para">by</div>
+<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
 \end{equation*}
 </div>
-<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
+<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
 </div>
 <span class="incontext"><a href="sec-sub-poly.html#p-1141" class="internal">in-context</a></span>
 </body>

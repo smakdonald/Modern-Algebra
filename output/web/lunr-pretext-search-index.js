@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Acknowledgements",
   "number": "",
   "title": "Acknowledgements",
-  "body": " The content of this text is heavily based on the 817-818 sequence of courses offered in UNL, specificlly those taught during the 2021 and 2022 academic years. As such, the content and structure have been heavily based on the notes of the following faculty:    Eloísa Grifo      Alexandra Seceleanu      Mark Walker  Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.    I am very thankful to Eloísa, Alexandra, and Mark for sharing their .tex files with me.  And, as always, I reserve a speical thank you for Erin McNicholas and Inga Johnson for forever tinting the world of mathematics purple.  "
+  "body": " The content of this text is heavily based on the 817-818 sequence of courses offered in UNL, specificlly those taught during the 2021 and 2022 academic years. As such, the content and structure have been heavily based on the notes of the following faculty:    Eloísa Grifo      Alexandra Seceleanu      Mark Walker  Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.    I am very thankful to Eloísa, Alexandra, and Mark for sharing their .tex files with me.  And, as always, I reserve a speical thank you for Erin McNicholas and Inga Johnson for forever tinting the world of mathematics purple.  Supplementary \/ Source Material      Alexandra Seceleanu's Algebra Lecture Notes      Eloísa Grifo's 818 Lecture Notes       "
 },
 {
   "id": "preface-1",
@@ -25,16 +25,16 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "How to Use This Book",
-  "body": "How to Use This Book  I'm still in the process of figuring out exactly what this text is for. Some possibilities include:   Future lecture notes for the hopeful possibility that one day I will teach a course over this material.    Current notes for students taking the first year algebra sequence.    Assistance in studying for the Algebra Qualifying Exam at UNL.    Clout.     Blocks  Here are the types of environments you are likely to encounter throughout the text and what they are used for.  Definition   These are pretty standard and probably what you'd be expecting. The building blocks of what we'll be working with.   Examples   Specific instances of a definition. For example, the empty set, is an example of a set, and thus would be contained within an example environment. At some point the line between example and definition becomes incoherently blurred, but I have done my best to keep things consistent.   Theorem   A result.   Lemma   A true mathematical statement that was proven mainly to help in the proof of some theorem.   Corollary   An important result whose proof comes directly from a previous theorem.   Proposition   Results that require proof but are more specific and\/or contained in a larger result coming later.   Exploration   Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem   Used for qualifying exam problems.   Remark   Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Convention      Discussion   Usually for arguing about notation.   Footnotes   Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense. It should really be feetnote if you think about it.       Supplementary \/ Source Material      Alexandra Seceleanu's Algebra Lecture Notes      Eloísa Grifo's 818 Lecture Notes       "
+  "body": "How to Use This Book  I'm still in the process of figuring out exactly what this text is for. Some possibilities include:   Future lecture notes for the hopeful possibility that one day I will teach a course over this material.    Current notes for students taking the first year algebra sequence.    Assistance in studying for the Algebra Qualifying Exam at UNL.    Clout.     Blocks  Here are the types of environments you are likely to encounter throughout the text and what they are used for.  Definition   The building blocks of what we'll be working with.   Examples   Specific instances of a definition. For example, the empty set, is an example of a set, and thus would be contained within an example environment. See: . At some point the line between example and definition becomes incoherently blurred, but I have done my best to keep things consistent.   Theorem   A result.   Lemma   A true mathematical statement that was proven mainly to help in the proof of some theorem.   Corollary   An important result whose proof comes directly from a previous theorem.   Proposition   Results that require proof but are more specific and\/or contained in a larger result coming later.   Exercise   Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem   Used for qualifying exam problems.   Remark   Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Discussion   Usually for arguing about notation.   Footnotes   Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense. It should really be feetnote if you think about it.       Don't Forget the Index!  This text (and algebra in general) contains an otherworldly amount of definitions and notation, it can sometimes be overwhelming keeping track of it all, and that's okay! The is here to help; it contains a comprehensive list of all the terms and notation used here, as well as where to find their definition \/ first usage in the text. Use it, it's here for you!   "
 },
 {
-  "id": "p-11",
+  "id": "p-14",
   "level": "2",
-  "url": "preface-1.html#p-11",
+  "url": "preface-1.html#p-14",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Definition Examples Theorem Lemma Corollary Proposition Exploration Problem Remark Convention Discussion Footnotes "
+  "body": "Definition Examples Theorem Lemma Corollary Proposition Exercise Problem Remark Discussion Footnotes "
 },
 {
   "id": "sec-group-basics",
@@ -43,12 +43,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": "Group Basics  Binary Operations and Algebraic Structures    The operation was a success, but I'm afraid the doctor is dead.   Steve Martin   A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Additionally, a binary operation can be commutative   Commutative Property   An operation satisfies the commutative property if for all . commutative property     Monoid   A monoid is a pair where is a set and is a binary operation on satisfying the associative and identity properties. monoid     Semigroups and Monoids  Some mathematicians choose to define a semigroup as we have defined a monoid (e.g. satisfying both the associative and identity properties). We have yet to grasp why. semigroup    For those who appreciate a snazzy visual, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver     Groups    Most great learning happens in groups.   Ken Robinson   Group      A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group      An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group         Though a group is a pair, we will usually refer to the group by only naming the underlying set, .   Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The property of holds in monoids (and unital magmas) as well. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".     The inverse of an element is often written , for reasons we will see in the next section.   Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .       Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing. This is similar to general relativity, relatively speaking ('Relatively' meaning 'not very much at all' in this context).    Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
+  "body": "Group Basics  Binary Operations and Algebraic Structures    The operation was a success, but I'm afraid the doctor is dead.   Steve Martin   A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Additionally, a binary operation can be commutative .  Commutative Property   An operation satisfies the commutative property if for all . commutative property     Monoid   A monoid is a pair where is a set and is a binary operation on satisfying the associative and identity properties. monoid     Semigroups and Monoids  Some mathematicians choose to define a semigroup as we have defined a monoid (e.g. satisfying both the associative and identity properties). We have yet to grasp why. semigroup    For those who appreciate a snazzy visual, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver     Groups    Most great learning happens in groups.   Ken Robinson   Group      A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group      An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group         Though a group is a pair, we will usually refer to the group by only naming the underlying set, .   Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The property of holds in monoids (and unital magmas) as well. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".     The inverse of an element is often written , for reasons we will see in the next section.   Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .       Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing. This is similar to general relativity, relatively speaking ('Relatively' meaning 'not very much at all' in this context).    Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
 },
 {
-  "id": "p-40",
+  "id": "p-39",
   "level": "2",
-  "url": "sec-group-basics.html#p-40",
+  "url": "sec-group-basics.html#p-39",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
+  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
 },
 {
   "id": "def-power",
@@ -313,7 +313,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.27",
   "title": "Element Order.",
-  "body": "Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that       "
+  "body": "Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the We have and so, by the definition of order , it must be that       "
 },
 {
   "id": "exe-order-and-gcd",
@@ -1240,7 +1240,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Cyclic Groups",
-  "body": "Cyclic Groups  Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche   We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group     Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that     Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.       Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.      Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups    There is no way to be in cyclic existence without creating the causes of suffering.   Jetsunma Ahkon Lhamo   UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . UMP for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .     This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .   Classification Theorem for Cyclic Groups  classification of cyclic groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .     Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group .         A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .      "
+  "body": "Cyclic Groups  Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche   We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group     Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that     Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.       Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.      Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the  for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups    There is no way to be in cyclic existence without creating the causes of suffering.   Jetsunma Ahkon Lhamo   UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . UMP for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .     This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .   Classification Theorem for Cyclic Groups  classification of cyclic groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .     Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group .         A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .      "
 },
 {
   "id": "def-cyclic-group",
@@ -1330,7 +1330,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "2.46",
   "title": "Subgroups of Cyclic Groups.",
-  "body": "Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.      "
+  "body": "Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the  for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.      "
 },
 {
   "id": "exe-small-cyclic",
@@ -3346,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.2",
   "title": "Subrings and Polynomial Rings",
-  "body": " Subrings and Polynomial Rings  Subrings    We all live in a yellow subma-ring   (Ring)o Starr   We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of . subring   When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. . subfield     Subring Test  subring test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings     is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .     Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical . nilradical    Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set  center (of a ring)     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of . quadratic field      Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .     Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.    Polynomial Rings    I had a polynomial once. My doctor removed it.   Michael Grant   Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above. polynomial ring      One often views as the subring of consisting of the constant polynomials.   Let's remind ourselves of some classic notions of polynomials.  Degree   Let , . Say , where . Then is the degree of . degree (polynomial)     Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.  monic polynomial     Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )       Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. As a treat.  UMP for Polynomial Rings  UMP for polynomial rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. evaluation homomorphism   Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . reduction homomorphism   Polynomial Division Algorithm  division algorithm (polynomial rings)   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Factor Theorem  factor theorem   Let be a commutative ring with identity, and . Then if and only if .     "
+  "body": " Subrings and Polynomial Rings  Subrings    We all live in a yellow subma-ring   (Ring)o Starr   We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of . subring   When is a field we call a subfield of  We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. . subfield     Subring Test  subring test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings     is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .     Nilradical Radishes  Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical . nilradical    Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set  center (of a ring)     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of . quadratic field      Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .     Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.    Polynomial Rings    I had a polynomial once. My doctor removed it.   Michael Grant   Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above. polynomial ring      One often views as the subring of consisting of the constant polynomials.   Let's remind ourselves of some classic notions of polynomials.  Degree   Let , . Say , where . Then is the degree of . degree (polynomial)     Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.  monic polynomial     Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )       Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. As a treat.  UMP for Polynomial Rings  UMP for polynomial rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. evaluation homomorphism   Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . reduction homomorphism   Luckily for us, it turns out that the holds in polynomial rings as well.  Polynomial Division Algorithm  division algorithm (polynomial rings)   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Factor Theorem  factor theorem   Let be a commutative ring with identity, and . Then if and only if .     "
 },
 {
   "id": "def-subring",
@@ -4003,7 +4003,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Euclidean Domains",
-  "body": "Euclidean Domains    Find your domain and serve it to the world.   Myles Munroe   Euclidean Domain   A Euclidean domain (ED) is a domain together with a norm function such that and the following property holds: for any two elements with , there are elements and of such that  Euclidean domain  norm function     In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.  Lets take a look at some examples to deepen our understanding.  Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.   Polynomial Rings over Fields are Euclidean Domains  The next classical example is with a field and where we define the norm to be polynomial degree: if and . This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in .    Guassian Integers are a Euclidean Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.   GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .    gcd (Euclidean domain)      Note that is equivalent to .   "
+  "body": "Euclidean Domains    Find your domain and serve it to the world.   Myles Munroe   Euclidean Domain   A Euclidean domain (ED) is a domain together with a norm function such that and the following property holds: for any two elements with , there are elements and of such that  Euclidean domain  norm function     In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the for integers, which is what makes Euclidean domains so useful in number theory and algebra.  Lets take a look at some examples to deepen our understanding.  Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the , since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.   Polynomial Rings over Fields are Euclidean Domains  The next classical example is with a field and where we define the norm to be polynomial degree: if and . This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in .    Guassian Integers are a Euclidean Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.   GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .    gcd (Euclidean domain)      Note that is equivalent to .   "
 },
 {
   "id": "def-ed",
@@ -4021,7 +4021,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "9.2",
   "title": "Trivial Norm.",
-  "body": "Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.  "
+  "body": "Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the , since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.  "
 },
 {
   "id": "ex-degree-and-norm",
@@ -4426,7 +4426,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Irredicuble Polynomials",
-  "body": "Irredicuble Polynomials    Eliminate all other factors, and the one which remains must be the truth.   Sir Arthur Conan Doyle     For an integral domain , a polynomial is called irreducible if is not a unit and whenever , either or is a unit. (It follows that such a also cannot be .) irreducible polynomial       Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions. rational root test         Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than ; they are false.    Does have any roots? No. The only possible roots are and , and a careful check rules these out. Is irreducible? No, it factors as times      For a PID and , define the content of , written , to be the gcd of the coefficients of . Equivalently, is the generator of the principal ideal generated by the coefficients of . content     Gauss's Lemma: Part 1   Let where is a PID. Then (up to associates).    We first show the following special case: If and , then .  To see this, pick a prime and write for the result of modding out the coefficients of by . Then (since the map sending to is a ring map). Since , we have that and . Since is a domain, it follows that . This proves does not divide all of the coefficients of . Since was arbitrary, .  For the general case, let and where and . Note that and . By the case already proven, . It follows .    Gauss's Lemma: Part 2   Let be a PID and let be its field of fractions, and assume is a non-constant polynomial with coefficients in . is irreducible in if and only if it is irreducible in and .    Suppose with . We can find an element of such that . (We can take to be the product of all the denominators of the coefficients of , for example; this is called “clearing denominators''.) Similarly, there is an such that . Further, write where , , and and similarly where , , and . We have Using Gauss's Lemma, Part 1, we have and hence We also have (since we've already proven that ).  So and thus by dividing we arrive at But is irreducible in . It follows that either or must be a unit in (i.e., a unit in ) and it follows that either or is a unit in . This proves is irreducible in .  ( ) Say irreducible in and . If with then, since is irreducible in , one of or must be a constant. But since , this constant must be .     Let's prove is irreducible. By Gauss's Lemma, we just need to show it is irreducible in .  If did factor in as a product of monic polynomials, then would also factor in this way. Now . This has no roots (the only possibilities are or ) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in is (the others all have roots). But . This proves is irreducible in and hence must be irreducible in .   Eisenstein's Criterion  Eisenstein's criterion   Let be a PID with field of fractions and assume is a polynomial. Suppose there is a prime element such that , for all , and . Then is irreducible in .    We have with and . Since does not divide the leading coefficient of , we have . It therefore follows that the three assumptions involving the coefficients of are also satisfied by the coefficients . Moreover, is irreducible in if and only if is irreducible in . We may therefore assume without loss of generality that .  By Gauss's Lemma we just need to prove it is irreducible in . Suppose with , where and where and .  Upon modding out by we get The assumptions on give that with . Since is a domain, it follows that On the other hand, we also have and since , we have that or . So or . This can only occur if or .  We have shown that if factors in as , then at least one of of must be a constant polynomial. Since , this factor must be a unit. So is irreducible in .     For instance, is irreducible in thanks to applied with . (Note that it isn't irreducible in since it does not have unit content.)     For any prime , the -th cyclotomic polynomial  is irreducible in . cyclotomic polynomial     Consider the ring isomorphism given by . I claim that To see this, we note that and by the binomial theorem we have Since , the claim follows.  By , is irreducible in and, since is an isomorphism, it follows that is irreducible in .      Assume is an integral domain and is a monic polynomial with coefficients in . If there is a prime element such that is irreducible in , then is irreducible in .    We prove the contrapositive. Suppose is reducible in . Then we have for some monic, non-constant polynomials and in . It follows that holds in . But since and are monic, non-constant polynomials, and are both non-constant polynomials in and hence is reducible in .     The assumption that be monic in this Proposition is necessary. Consider for instance . Modding out by yields a linear polynomial in which is thus irreducible. But isn't irreducible in . (The Proposition can be generalized to non-monic polynomials by adding the assumption that does not divided the leading coefficient of .)     Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.      Let be a field and a finite subgroup of the multiplicative group . Then is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; hence is itself cyclic.    "
+  "body": "Irredicuble Polynomials    Eliminate all other factors, and the one which remains must be the truth.   Sir Arthur Conan Doyle     For an integral domain , a polynomial is called irreducible if is not a unit and whenever , either or is a unit. (It follows that such a also cannot be .) irreducible polynomial     In general, it can be very difficult to determine if a polynomial is irreducible. Here we cover some tricks that sometimes work. We will focus mostly on polynomials in .    Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions. rational root test         Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than ; they are false.    Does have any roots? No. The only possible roots are and , and a careful check rules these out. Is irreducible? No, it factors as times      For a PID and , define the content of , written , to be the gcd of the coefficients of . Equivalently, is the generator of the principal ideal generated by the coefficients of . content     Gauss's Lemma: Part 1   Let where is a PID. Then (up to associates).    We first show the following special case: If and , then .  To see this, pick a prime and write for the result of modding out the coefficients of by . Then (since the map sending to is a ring map). Since , we have that and . Since is a domain, it follows that . This proves does not divide all of the coefficients of . Since was arbitrary, .  For the general case, let and where and . Note that and . By the case already proven, . It follows .    Gauss's Lemma: Part 2   Let be a PID and let be its field of fractions, and assume is a non-constant polynomial with coefficients in . is irreducible in if and only if it is irreducible in and .    Suppose with . We can find an element of such that . (We can take to be the product of all the denominators of the coefficients of , for example; this is called “clearing denominators''.) Similarly, there is an such that . Further, write where , , and and similarly where , , and . We have Using Gauss's Lemma, Part 1, we have and hence We also have (since we've already proven that ).  So and thus by dividing we arrive at But is irreducible in . It follows that either or must be a unit in (i.e., a unit in ) and it follows that either or is a unit in . This proves is irreducible in .  ( ) Say irreducible in and . If with then, since is irreducible in , one of or must be a constant. But since , this constant must be .     Let's prove is irreducible. By Gauss's Lemma, we just need to show it is irreducible in .  If did factor in as a product of monic polynomials, then would also factor in this way. Now . This has no roots (the only possibilities are or ) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in is (the others all have roots). But . This proves is irreducible in and hence must be irreducible in .   Eisenstein's Criterion  Eisenstein's criterion   Let be a PID with field of fractions and assume is a polynomial. Suppose there is a prime element such that , for all , and . Then is irreducible in .    We have with and . Since does not divide the leading coefficient of , we have . It therefore follows that the three assumptions involving the coefficients of are also satisfied by the coefficients . Moreover, is irreducible in if and only if is irreducible in . We may therefore assume without loss of generality that .  By Gauss's Lemma we just need to prove it is irreducible in . Suppose with , where and where and .  Upon modding out by we get The assumptions on give that with . Since is a domain, it follows that On the other hand, we also have and since , we have that or . So or . This can only occur if or .  We have shown that if factors in as , then at least one of of must be a constant polynomial. Since , this factor must be a unit. So is irreducible in .     For instance, is irreducible in thanks to applied with . (Note that it isn't irreducible in since it does not have unit content.)     For any prime , the -th cyclotomic polynomial  is irreducible in . cyclotomic polynomial     Consider the ring isomorphism given by . I claim that To see this, we note that and by the binomial theorem we have Since , the claim follows.  By , is irreducible in and, since is an isomorphism, it follows that is irreducible in .      Assume is an integral domain and is a monic polynomial with coefficients in . If there is a prime element such that is irreducible in , then is irreducible in .    We prove the contrapositive. Suppose is reducible in . Then we have for some monic, non-constant polynomials and in . It follows that holds in . But since and are monic, non-constant polynomials, and are both non-constant polynomials in and hence is reducible in .     The assumption that be monic in this Proposition is necessary. Consider for instance . Modding out by yields a linear polynomial in which is thus irreducible. But isn't irreducible in . (The Proposition can be generalized to non-monic polynomials by adding the assumption that does not divided the leading coefficient of .)     Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.      Let be a field and a finite subgroup of the multiplicative group . Then is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; hence is itself cyclic.    "
 },
 {
   "id": "def-irreducible-polynomial",
@@ -6343,7 +6343,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "15.1",
   "title": "Field Extension Basics",
-  "body": "Field Extension Basics  Welcome to Field Extensions    Give me extension and motion and I will construct the universe.   René Descartes   One motivation for studying field extensions is that we want to build fields in which certain polynomials have roots. Here is a classical example going back to Gauss: while over the polynomial has no roots, if we want a field in which does have a root we need to consider .  Starting from a smaller field and an irreducible polynomial , we want to build a larger field . One way to do this is to take a root of and adjoin it to obtaining the field , which is the collection of all expressions that one can build using addition, subtraction, multiplication and division starting from the of elements of . Another way to build a larger field from a smaller field and an irreducible polynomial is to let . We will show below that these two ways of creating larger fields are one and the same.  Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of . field extension      Recall that if and are fields, then every ring homomorphism necessarily injective. (Proof: since , is a proper ideal of , and since is a field, the only proper ideal of it is .) Thus maps isomorphically onto its image and is a field extension. By abuse of notation we will typically think of as being a field extension, even though it is technically just an injective homomorphism of fields.   Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.    The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .   The previous example was a quadratic extension, which is misleadingly simple.  Yet More Field Extensions  Consider . It is irreducible (e.g., by ) and has roots , and in . So there are three ways in which we could “adjoin a root\" to : First we could form the field It is not completely obvious this is a field, but we'll prove it later. The reason that we don't need third or higher powers is that, e.g., . Or we could instead form the field or the field . There are not all equal since, for example, but is not in . However, they are {} field extensions as we will prove below.     Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the smallest subfield of that contains and .   adjoining an element      We read as adjoin .   Intersection of Subfields  Show that exists by proving that the intersection of any two subfields is again a subfield.   In some cases we have   When  Prove whenever is the root of some polynomial with coefficients in .     If is a field extension and , the field is the fraction field of : more precisely,     Soon we will give an even better description for in the case where is the root of a polynomial .  is a Field  Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.   is not a Field   is not a field, and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)    Degree of a Field Extension    I may not have a degree, but I certainly got an education.   Jodi Picoult   Degree of a Field Extension   The degree of a field extension is  degree of a field extension     Degrees of Common Extensions  We have that and . (We could in fact say is the cardinality of , but in general we lump all infinite field extensions together when talking about degree.) We have where .   Properties of Extension Degrees   Assume is a field and is an irreducible polynomial. Set , and for , let denote the coset . The following hold:    is a field extension via the map given by for . (This is technically an injective homomorphisms of fields.)     .     has a root in ; in fact, the element is a root of this polynomial: .       Because is irreducible and is a PID, is a maximal ideal . Thus is a field . The map given by is a ring map since it is the composition of the two ring maps  . Since it is a ring map between two fields, it is injective .  The equality holds since is a basis for regarded as an -vector space, as we have seen before .  The last assertion is tricky only because the notation is confusing. Say and just to keep things straight let's set . We need to show : We have     The last part of the proposition is notationally confusing to prove in general but clear in examples.   Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . Let's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .    Simple and Generated Extensions    It's not easy, but it's simple.   Eric Thomas   Simple Extension, Primitive Element   A field extension is called simple if for some element of . We call such an a primitive element for the extension. simple field extension  primative element      If is a simple field extension, note that there might be many different elements such that . Thus primitive elements are not necessarily unique.     is a primitive element of the extension . So is and, more generally, for any with .   We can generalize this to adjoining a subset instead of a single element.  Generated Subfield   If is a field extension and is any subset of , the subfield generated by over , denoted , is the smallest subfield of that contains all of . If is a finite set, we write for . generated subfield      Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example shows is simple and is a primitive element of this field extension.    This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple).    Uniqueness of Simple Extensions    Feeling unique is no indication of uniqueness.   Douglas Coupland   Next we will show that if is a root of a given polynomial , then is determined by up to isomorphism.    Let be a field extension and let be an irreducible polynomial. If has a root , then there is an isomorphism with and     Let be the evaluation homomorphism that sends ; more precisely, , and the restriction of this map to is the identity on . Since , we have , and since is a maximal ideal and , we conclude that .  Now by Theorem 1.43 we get an injective ring homomorphism such that .  It remains to be shown that is surjective. We will actually show more, namely that . Note first that by the definition of above, the image of on is . However, since is injective the image of is a field contained in , and since the smallest field containing is , we must in fact have .    Let's formalize the extra information we have obtained in the course of proving the theorem. First we used the following useful fact:   If is an injective ring homomorphism and and are fields then the image of is a subfield of .     Let be a field extension and let be irreducible having a root . Then .    Uniqueness of   Let be irreducible and let and be two roots of in some extensions and of . Then , so that the two roots are algebraically indistinguishable.    Complex Conjugation   Taking with roots and in , we actually obtain equal fields . But gives that there is an interesting isomorphism that sends to . In general, we have for .      Another example illustrating is that and are isomorphic fields. In fact, the are equal: . But again Corollary 5.25 gives that there is an interesting isomorphism that sends to . In general, we have for .     Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The two examples above preview the central idea of Galois theory.   "
+  "body": "Field Extension Basics  Welcome to Field Extensions    Give me extension and motion and I will construct the universe.   René Descartes   One motivation for studying field extensions is that we want to build fields in which certain polynomials have roots. Here is a classical example going back to Gauss: while over the polynomial has no roots, if we want a field in which does have a root we need to consider .  Starting from a smaller field and an irreducible polynomial , we want to build a larger field . One way to do this is to take a root of and adjoin it to obtaining the field , which is the collection of all expressions that one can build using addition, subtraction, multiplication and division starting from the of elements of . Another way to build a larger field from a smaller field and an irreducible polynomial is to let . We will show below that these two ways of creating larger fields are one and the same.  Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of . field extension      Recall that if and are fields, then every ring homomorphism necessarily injective. (Proof: since , is a proper ideal of , and since is a field, the only proper ideal of it is .) Thus maps isomorphically onto its image and is a field extension. By abuse of notation we will typically think of as being a field extension, even though it is technically just an injective homomorphism of fields.   Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.    The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .   The previous example was a quadratic extension, which is misleadingly simple.  Yet More Field Extensions  Consider . It is irreducible (e.g., by ) and has roots , and in . So there are three ways in which we could “adjoin a root\" to : First we could form the field It is not completely obvious this is a field, but we'll prove it later. The reason that we don't need third or higher powers is that, e.g., . Or we could instead form the field or the field . There are not all equal since, for example, but is not in . However, they are {} field extensions as we will prove below.   Let us formalize some of these definitions:    Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the smallest subfield of that contains and .   adjoining an element      We read as adjoin .   Intersection of Subfields  Show that exists by proving that the intersection of any two subfields is again a subfield.   In some cases we have .  When  Prove whenever is the root of some polynomial with coefficients in .     If is a field extension and , the field is the fraction field of : more precisely,     Soon we will give an even better description for in the case where is the root of a polynomial .  is a Field  Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.   is not a Field   is not a field, and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)    Degree of a Field Extension    I may not have a degree, but I certainly got an education.   Jodi Picoult   Degree of a Field Extension   The degree of a field extension is  degree of a field extension     Degrees of Common Extensions  We have that and . (We could in fact say is the cardinality of , but in general we lump all infinite field extensions together when talking about degree.) We have where .   Properties of Extension Degrees   Assume is a field and is an irreducible polynomial. Set , and for , let denote the coset . The following hold:    is a field extension via the map given by for . (This is technically an injective homomorphisms of fields.)     .     has a root in ; in fact, the element is a root of this polynomial: .       Because is irreducible and is a PID, is a maximal ideal . Thus is a field . The map given by is a ring map since it is the composition of the two ring maps  . Since it is a ring map between two fields, it is injective .  The equality holds since is a basis for regarded as an -vector space, as we have seen before .  The last assertion is tricky only because the notation is confusing. Say and just to keep things straight let's set . We need to show : We have     The last part of the proposition is notationally confusing to prove in general but clear in examples.   Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . Let's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .    Simple and Generated Extensions    It's not easy, but it's simple.   Eric Thomas   Simple Extension, Primitive Element   A field extension is called simple if for some element of . We call such an a primitive element for the extension. simple field extension  primative element      If is a simple field extension, note that there might be many different elements such that . Thus primitive elements are not necessarily unique.     is a primitive element of the extension . So is and, more generally, for any with .   We can generalize this to adjoining a subset instead of a single element.  Generated Subfield   If is a field extension and is any subset of , the subfield generated by over , denoted , is the smallest subfield of that contains all of . If is a finite set, we write for . generated subfield      Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example shows is simple and is a primitive element of this field extension.    This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple).    Uniqueness of Simple Extensions    Feeling unique is no indication of uniqueness.   Douglas Coupland   Next we will show that if is a root of a given polynomial , then is determined by up to isomorphism.    Let be a field extension and let be an irreducible polynomial. If has a root , then there is an isomorphism with and     Let be the evaluation homomorphism that sends ; more precisely, , and the restriction of this map to is the identity on . Since , we have , and since is a maximal ideal and , we conclude that .  Now by Theorem 1.43 we get an injective ring homomorphism such that .  It remains to be shown that is surjective. We will actually show more, namely that . Note first that by the definition of above, the image of on is . However, since is injective the image of is a field contained in , and since the smallest field containing is , we must in fact have .    Let's formalize the extra information we have obtained in the course of proving the theorem. First we used the following useful fact:   If is an injective ring homomorphism and and are fields then the image of is a subfield of .     Let be a field extension and let be irreducible having a root . Then .    Uniqueness of   Let be irreducible and let and be two roots of in some extensions and of . Then , so that the two roots are algebraically indistinguishable.    Complex Conjugation   Taking with roots and in , we actually obtain equal fields . But gives that there is an interesting isomorphism that sends to . In general, we have for .      Another example illustrating is that and are isomorphic fields. In fact, the are equal: . But again Corollary 5.25 gives that there is an interesting isomorphism that sends to . In general, we have for .     Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The two examples above preview the central idea of Galois theory.   "
 },
 {
   "id": "def-field-extension",
@@ -6604,7 +6604,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "15.2",
   "title": "Algebraic Extensions",
-  "body": "Algebraic Extensions  Algebraic Elements    People aren't trees, so it is false when they speak of roots.   Tom Robbins   Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over . algebraic element  transcendental element       is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.   Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .  The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)      All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:     holds because is the kernel of the ring map .    is by definition.     For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over . minimum polynomial over a field extension      Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.     The minimal polynomial of over is .         For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    The Degree Formula  degree formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Theorem follows from the following two facts:    is a basis of as an -vector space and    the function is bijective (so that the cardinality of is ).   Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .    Algebraic Field Extensions    If you forget your roots, you've lost sight of everything.   Walter Payton   Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ). algebraic field extension     Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and .     Assume that is a finite extension of fields of degree . If is irreducible of degree and then remains irreducible when regarded as an element of the ring .    Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .    The statement in part (a) would become false if the assumption that were omitted.   Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2    "
+  "body": "Algebraic Extensions  Algebraic Elements    People aren't trees, so it is false when they speak of roots.   Tom Robbins   Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over . algebraic element  transcendental element     Algebraic Elements   is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any .   Transcendental Elements   The numbers and of are transcendental over ; these are deep facts.    Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .  The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)      All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:     holds because is the kernel of the ring map .    is by definition.     For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over . minimum polynomial over a field extension      Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.     The minimal polynomial of over is .         For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    The Degree Formula  degree formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Theorem follows from the following two facts:    is a basis of as an -vector space and    the function is bijective (so that the cardinality of is ).   Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .    Algebraic Field Extensions    If you forget your roots, you've lost sight of everything.   Walter Payton   Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ). algebraic field extension     Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and .     Assume that is a finite extension of fields of degree . If is irreducible of degree and then remains irreducible when regarded as an element of the ring .    Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .    The statement in part (a) would become false if the assumption that were omitted.   Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2    "
 },
 {
   "id": "def-algebraic-element",
@@ -6621,15 +6621,24 @@ var ptx_lunr_docs = [
   "url": "sec-algebraic.html#exe-i-algebraic-over-r",
   "type": "Example",
   "number": "15.30",
-  "title": "",
-  "body": "  is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.  "
+  "title": "Algebraic Elements.",
+  "body": "Algebraic Elements   is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any .  "
+},
+{
+  "id": "ex-transcendental",
+  "level": "2",
+  "url": "sec-algebraic.html#ex-transcendental",
+  "type": "Example",
+  "number": "15.31",
+  "title": "Transcendental Elements.",
+  "body": "Transcendental Elements   The numbers and of are transcendental over ; these are deep facts.   "
 },
 {
   "id": "thm-properties-of-algebraic-elements",
   "level": "2",
   "url": "sec-algebraic.html#thm-properties-of-algebraic-elements",
   "type": "Theorem",
-  "number": "15.31",
+  "number": "15.32",
   "title": "Properties of Algebraic Elements.",
   "body": "Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .  The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)      All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:     holds because is the kernel of the ring map .    is by definition.     For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.    "
 },
@@ -6638,7 +6647,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#def-minimum-polynomial",
   "type": "Definition",
-  "number": "15.32",
+  "number": "15.33",
   "title": "Minimum Polynomial.",
   "body": "Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over . minimum polynomial over a field extension    "
 },
@@ -6647,16 +6656,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#remark-80",
   "type": "Remark",
-  "number": "15.33",
+  "number": "15.34",
   "title": "",
   "body": " Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.  "
 },
 {
-  "id": "example-124",
+  "id": "example-125",
   "level": "2",
-  "url": "sec-algebraic.html#example-124",
+  "url": "sec-algebraic.html#example-125",
   "type": "Example",
-  "number": "15.34",
+  "number": "15.35",
   "title": "",
   "body": "  The minimal polynomial of over is .       "
 },
@@ -6665,7 +6674,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#ex-primitive-roots-of-unity",
   "type": "Example",
-  "number": "15.35",
+  "number": "15.36",
   "title": "",
   "body": " For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).   "
 },
@@ -6674,7 +6683,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#thm-degree-formula",
   "type": "Theorem",
-  "number": "15.36",
+  "number": "15.37",
   "title": "The Degree Formula.",
   "body": "The Degree Formula  degree formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Theorem follows from the following two facts:    is a basis of as an -vector space and    the function is bijective (so that the cardinality of is ).   Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .   "
 },
@@ -6683,7 +6692,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#ex-rwc-for-all-wnotinr",
   "type": "Example",
-  "number": "15.37",
+  "number": "15.38",
   "title": "",
   "body": " Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.  "
 },
@@ -6692,7 +6701,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#ex-degree-and-x2-5",
   "type": "Example",
-  "number": "15.38",
+  "number": "15.39",
   "title": "",
   "body": " Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .  "
 },
@@ -6701,7 +6710,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#def-algebraic-extension",
   "type": "Definition",
-  "number": "15.39",
+  "number": "15.40",
   "title": "Algebraic Extension.",
   "body": "Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ). algebraic field extension    "
 },
@@ -6710,7 +6719,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#prop-finite-extensions-are-algebraic",
   "type": "Proposition",
-  "number": "15.40",
+  "number": "15.41",
   "title": "Finite Extensions are Algebraic.",
   "body": "Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the for this.) So by (4) of Theorem , is algebraic of .   "
 },
@@ -6719,7 +6728,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#exe-infinite-algebraic-extension",
   "type": "Example",
-  "number": "15.41",
+  "number": "15.42",
   "title": "Infinite Algebraic Extension.",
   "body": "Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .   "
 },
@@ -6728,7 +6737,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#thm-algebraic-extensions-are-transitive",
   "type": "Theorem",
-  "number": "15.42",
+  "number": "15.43",
   "title": "Transitivity of Algebraic Extensions.",
   "body": "Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .   "
 },
@@ -6737,7 +6746,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#remark-81",
   "type": "Remark",
-  "number": "15.43",
+  "number": "15.44",
   "title": "",
   "body": " The converse of this proposition is also true: Given field extensions , if is algebraic then so are and .  "
 },
@@ -6746,16 +6755,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#thm-relatively-prime-extension",
   "type": "Theorem",
-  "number": "15.44",
+  "number": "15.45",
   "title": "",
   "body": "  Assume that is a finite extension of fields of degree . If is irreducible of degree and then remains irreducible when regarded as an element of the ring .    Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .   "
 },
 {
-  "id": "example-129",
+  "id": "example-130",
   "level": "2",
-  "url": "sec-algebraic.html#example-129",
+  "url": "sec-algebraic.html#example-130",
   "type": "Example",
-  "number": "15.45",
+  "number": "15.46",
   "title": "",
   "body": " Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2  "
 },
@@ -6773,7 +6782,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#def-algebraically-closed",
   "type": "Definition",
-  "number": "15.46",
+  "number": "15.47",
   "title": "Algebraic Closure.",
   "body": "Algebraic Closure   A field is algebraically closed if every non-constant polynomial has a root in  algebraically closed field    "
 },
@@ -6782,7 +6791,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#exe-c-is-closed",
   "type": "Example",
-  "number": "15.47",
+  "number": "15.48",
   "title": "<span class=\"process-math\">\\(\\C\\)<\/span> is algebraically closed.",
   "body": "is algebraically closed   is algebraically closed. This is the Fundamental Theorem of Algebra.  "
 },
@@ -6791,7 +6800,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#prop-equivalencies-of-algebraically-closed",
   "type": "Proposition",
-  "number": "15.48",
+  "number": "15.49",
   "title": "Equivalent Algebraically Closed Characterizations.",
   "body": "Equivalent Algebraically Closed Characterizations   The following are equivalent for a field :    is algebraically closed.    Every non-constant polynomial with coefficients in splits completely into (not necessarily distinct) linear factors.    There are no non-trivial algebraic extensions of : If is an algebraic field extension then .           (2): Given a non-constant , by assumption has a root and thus with . But then also has a root and so it too factors, and so on.     (3): Say is algebraic. Pick . Then is a root of some . But since factors completely, .     (1). Pick a non-constant . By , there there is finite extension of in which does have a root. By assumption and so this root must be in .      "
 },
@@ -6800,7 +6809,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#def-algebraic-closure",
   "type": "Definition",
-  "number": "15.49",
+  "number": "15.50",
   "title": "Algebraic Closure.",
   "body": "Algebraic Closure   Given a field , a field is called an algebraic closure of if is an algebraic field extension of and is algebraically closed. algebraic closute    "
 },
@@ -6809,7 +6818,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#exe-c-is-the-algebraic-closure-of-r",
   "type": "Example",
-  "number": "15.50",
+  "number": "15.51",
   "title": "",
   "body": "  is an algebraic closure of . This follows from the fact that is a finite extension, hence algebraic, and the Fundamental Theorem of Algebra, which we will not prove.  "
 },
@@ -6818,7 +6827,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#prop-collection-of-algebraic-elements-is-closed",
   "type": "Proposition",
-  "number": "15.51",
+  "number": "15.52",
   "title": "Collection of Algebraic Elements is Algebraically Closed.",
   "body": "Collection of Algebraic Elements is Algebraically Closed   Let Then is an algebraic closure of .  More generally, if is a field extension and is algebraically closed, then the collection of elements of that are algebraic over is an algebraic closure of .    It is far from clear that is a subfield of , and so we first prove that: Given , we have that and are finite and hence so is . Thus, every element of is algebraic over ; that is, . Since is a field, it follows that contains , and if . This proves that is indeed a subfield of .  It is clear from the definition that is an algebraic field extension.  Given a non-constant , let be one of its roots in (which exists since we assume is algebraically closed). Then is an algebraic extension and hence so is by Proposition . This proves and hence that is algebraically closed.   "
 },
@@ -6827,7 +6836,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#thm-existence-and-uniqueness-of-algebraic-closures",
   "type": "Theorem",
-  "number": "15.52",
+  "number": "15.53",
   "title": "Existence and Uniqueness of Algebraic Closures.",
   "body": "Existence and Uniqueness of Algebraic Closures   For any field , there exists an algebraic closure of . If and are two algebraic closures of the same field , then there exists a field isomorphism such that (i.e., for all ).    Fake Proof of Existence:  Let be the collection of all algebraic field extensions of . Make into a poset by declaring iff . We prove has a maximal element.  Let be any totally ordered subset of . If is empty, then is an upper bound for . If is non-empty, set . Using that is totally ordered, it is not hard to see that is indeed a field. It clearly contains as a subfield and every element of it is algebraic over . So and it is an upper bound for . By , has a maximal member .  By construction is algebraic over . If were not algebraically closed, then there would be a non-trivial algebraic extension of it, by . But then is algebraic by Proposition , and this contradicts the maximality of .  Why is this only a fake proof? It's because , as we've defined it, is not a set but rather it is something bigger than that. only applies to po sets . How annoying!   "
 },
@@ -6845,7 +6854,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#def-splitting-field",
   "type": "Definition",
-  "number": "15.53",
+  "number": "15.54",
   "title": "Splitting Field.",
   "body": "Splitting Field   For a field and non-constant polynomial , a splitting field of over is a field extension such that     splits completely into linear factors in ; that is, for some , and     ; that is, is the smallest subfield of that contains and all the roots of .    splitting field    "
 },
@@ -6854,7 +6863,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-common-splitting-fields",
   "type": "Example",
-  "number": "15.54",
+  "number": "15.55",
   "title": "Splitting Fields.",
   "body": "Splitting Fields    As a silly example, if already splits into linear factors over , then itself is the splitting field of over .  The splitting field of over is .  If is any irreducible quadratic polynomial in , then the splitting field of is .  In general, given , a splitting field of is given by where are all of the roots of in .    "
 },
@@ -6863,7 +6872,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#remark-82",
   "type": "Remark",
-  "number": "15.55",
+  "number": "15.56",
   "title": "",
   "body": " More generally, we may speak of the splitting field of a list of polynomials in : it is a field extension over which each polynomial factors completely and which is generated by all the roots of all the polynomials.  Note that given a finite list , a splitting field for this list is identical to a splitting field for their product .  "
 },
@@ -6872,7 +6881,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#thm-properties-of-splitting-fields",
   "type": "Theorem",
-  "number": "15.56",
+  "number": "15.57",
   "title": "Properties of Splitting Fields.",
   "body": "Properties of Splitting Fields   Let be a field and a non-constant polynomial.   There exists a splitting field for over .    If is another splitting field of over , then there is a field isomorphism such that .    The degree of any splitting field of is at most where .       For (1), let be an algebraic closure of , which exists by the previous Theorem. Let be the roots of in , and set .  It is clear is a splitting field.  To prove (2), we proceed by induction on the degree of . If is linear, then the only splitting field of over is itself and so the result is clear in this case. Say and are the roots of in and , respectively, and say they are ordered so that, and are roots of the same irreducible factor of in .  By Corollary there is an isomorphism that fixes . Note that factors as in and that is the splitting field of over , and similarly factors as in and that is the splitting field of over . If we blur our eyes slightly and pretend is the identity map, we can apply the inductive hypothesis, since , to conclude that there is an isomorphism as in the statement. I leave a more rigorous argument to your imaginations.  To prove (3), we also proceed by induction on the degree of , using the same notation as in the proof of (2).  Since is a root of , we have and hence In we have with and, as before, is the splitting field of over , so that by induction . By the     "
 },
@@ -6881,7 +6890,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#remark-83",
   "type": "Remark",
-  "number": "15.57",
+  "number": "15.58",
   "title": "",
   "body": " Recall from before that we proved there exists a field extension in which has at least one root. So for some and . We can then find a field extension of in which has at least one root , and so on. In this way we build a field extension such that factors in as for some . Finally, is a splitting field of .  "
 },
@@ -6890,7 +6899,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-x3-2",
   "type": "Example",
-  "number": "15.58",
+  "number": "15.59",
   "title": "",
   "body": " The splitting field of over is , where . It is not hard to see that . We have since is irreducible in (by ). Since and thus , the gives that . By the Theorem, and hence . (We could also have proven this without appealing to the Theorem.)  "
 },
@@ -6899,7 +6908,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-x4-5x26",
   "type": "Example",
-  "number": "15.59",
+  "number": "15.60",
   "title": "",
   "body": " The splitting field of is This holds since . It is not too hard to see that the degree of this splitting field over is , far smaller than the upper bound given by the Theorem.  "
 },
@@ -6908,7 +6917,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-xn-1",
   "type": "Example",
-  "number": "15.60",
+  "number": "15.61",
   "title": "",
   "body": " Let . Then splits completely in and its roots are the  -th roots of . One of these is . Notice that every other -th root of is a power of this one. We thus see that is the splitting field of over . This field is called the {} of roots of 1 over . This is a somewhat special example: upon joining one of the roots of we got all the others for free. This happens in other examples too, but is certainly {} a general principle.  In particular, we see that the degree of is at most , far less than the bound of given by the Proposition above. In fact, it is at most since factors as , and hence the minimum polynomial of is a divisor of .  When is prime, then is irreducible, as we proved before, and hence it must equal the minimum polynomial of . So, in this case, the degree of is exactly , but it can be smaller than in general; for example, when , and . Note that factors as and of course .  The irreducible polynomial is known as the {}.  "
 },
@@ -6917,7 +6926,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#cor-porism",
   "type": "Corollary",
-  "number": "15.61",
+  "number": "15.62",
   "title": "The Porism.",
   "body": "The Porism  porism   If is the splitting field over of an irreducible polynomial and if are any two roots of , then there is a field automorphism such that and .    We basically already proved this, but since it is of large importance, let's do so again:  Since are roots of the same irreducible polynomial, by Corollary there is an isomorphism such that and . We have two field maps, (actual inclusion) and the composition of , and they realize as the splitting field of over in two different ways. Since splitting fields are unique, an isomorphism such as exists.   "
 },
@@ -6926,7 +6935,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-porism-and-x3-2",
   "type": "Example",
-  "number": "15.62",
+  "number": "15.63",
   "title": "",
   "body": " Let be the splitting field of over ; so .   gives that there is a field automorphism of such that . Complex conjugation gives such an isomorphism.  It also gives there is a field automorphism of such that . This is less obvious.  "
 },
@@ -6944,7 +6953,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-ring-characteristic",
   "type": "Definition",
-  "number": "15.63",
+  "number": "15.64",
   "title": "Characteristic.",
   "body": "Characteristic   Let be a commutative ring. The characteristic of , written , is the unique non-negative generator of the kernel of the unique ring homomorphism . (Recall .) characteristic   Equivalently, is the smallest positive integer such that , if such and integer exists, and otherwise.   "
 },
@@ -6953,7 +6962,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#remark-84",
   "type": "Remark",
-  "number": "15.64",
+  "number": "15.65",
   "title": "",
   "body": " Observe that for any integer and commutative ring , we have in (i.e., ) if and only if .  "
 },
@@ -6962,7 +6971,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-charz",
   "type": "Example",
-  "number": "15.65",
+  "number": "15.66",
   "title": "<span class=\"process-math\">\\(\\char(\\Z)\\)<\/span>.",
   "body": "  and for any .  "
 },
@@ -6971,7 +6980,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-prime-field",
   "type": "Definition",
-  "number": "15.66",
+  "number": "15.67",
   "title": "Prime Field.",
   "body": "Prime Field   For a field its prime field is the smallest subfield of ; i.e., it is the intersection of all subfields of . prime field    "
 },
@@ -6980,7 +6989,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-characteristic-and-prime-fields",
   "type": "Proposition",
-  "number": "15.67",
+  "number": "15.68",
   "title": "Prime Fields and Characteristic.",
   "body": "Prime Fields and Characteristic   Let be a field.   The characteristic is either or a prime number .     if and only if the prime subfield of is isomorphic to ; for a prime integer if and only if the prime subfield of is isomorphic to .       For the first assertion, consider the unique ring homomorphism . Since is a domain, the kernel of is a prime ideal (since and is a subring of ). The result holds since the only prime ideals of are and for a prime integer . (Note that this proof shows that, more generally, the characteristic of an integral domain must be either or a prime.)  For the second assertion, observe that the smallest {} of is the image of the ring map , and by the first assertion, this image is isomorphic to either or . The latter is already a field and hence it is the prime field of . In the former case, the prime subfield is isomorphic to the field of fractions of , which is .   "
 },
@@ -6989,7 +6998,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-no-homomorphisms-if-different-characteristics",
   "type": "Proposition",
-  "number": "15.68",
+  "number": "15.69",
   "title": "No Homomorphisms if Different Characteristics.",
   "body": "No Homomorphisms if Different Characteristics   If and are fields such that then there exist no ring homomorphisms from to (or vice versa).    Suppose and are fields and is a ring homomorphism. Let and be the unique ring maps from to and . Since is a ring map from to , we have by the uniqueness of . Since is a field and is not the zero ring, the map is injective. Since is injective, it follows that , and hence we obtain that . By definition of characteristic, we conclude .   "
 },
@@ -6998,7 +7007,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-root-multiplicity",
   "type": "Definition",
-  "number": "15.69",
+  "number": "15.70",
   "title": "Root Multiplicity.",
   "body": "Root Multiplicity   For a field and a polynomial , let be an algebraic closure of and a root of . The multiplicity of in is the number of times appears in the factorization of in . (This number is independent of choice of algebraic closure by uniqueness of such closures up to isomorphism.) mutliplicity of a root    "
 },
@@ -7007,7 +7016,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-separable-polynomial",
   "type": "Definition",
-  "number": "15.70",
+  "number": "15.71",
   "title": "Separable (Polynomial).",
   "body": "Separable (Polynomial)   Let be a field and a polynomial in . If the multiplicity of every root is , we say is a separable polynomial ; i.e. is separable provided it has no repeated roots. separable polynomial    "
 },
@@ -7016,7 +7025,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-derivative",
   "type": "Definition",
-  "number": "15.71",
+  "number": "15.72",
   "title": "Derivative.",
   "body": "Derivative   For any field and , define its derivative to be  derivative of a polynomial    "
 },
@@ -7025,7 +7034,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-derivatives-in-characteristic-p",
   "type": "Example",
-  "number": "15.72",
+  "number": "15.73",
   "title": "Derivatives in Characteristic <span class=\"process-math\">\\(p\\)<\/span>.",
   "body": "Derivatives in Characteristic  If and for , then . So beware that non-constant polynomials can have derivatives! Observe, however, that this cannot occur in characteristic .  "
 },
@@ -7034,7 +7043,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#lem-gcd-and-field-extensions",
   "type": "Lemma",
-  "number": "15.73",
+  "number": "15.74",
   "title": "GCD and Field Extensions.",
   "body": "GCD and Field Extensions   Let be a field. For , not both of which are , recall that denotes the unique monic generator of the ideal in generated by and .   For any field extension , .    Let be an algebraic closure of . if any only if and have no common roots in .       Let . To prove (1), we note that is the unique monic polynomial such that - for some , - for soem , and - for soem . Since is a subring of , these three properties also hold when we regard as belonging to and thus by the uniqueness property, we have .    is a consequence of (1), since if two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common.     "
 },
@@ -7043,7 +7052,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-criteria-for-separability",
   "type": "Theorem",
-  "number": "15.74",
+  "number": "15.75",
   "title": "Criteria for Separability.",
   "body": "Criteria for Separability   Let be field and an algebraic closure of .   Given and , the multiplicity of in is at least if and only if and .     is separable if and only if in .    If is irreducible in , then is separable if and only if .       For (1), suppose is a root of of multiplicity at least two. Then in and hence , by the Product Rule. It follows that . Conversely, suppose . Since , we have and hence . Since it follows and thus has multiplicity at least two.  For the second assertion, by (1), we have that is separable if and only if and has no common roots in . The result thus follows from the Lemma   For the final assertion, assume is irreducible. Since the degree of is strictly less than the degree of , we have that if and only if .   "
 },
@@ -7052,7 +7061,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#ex-separability-and-x4-x3-x1",
   "type": "Example",
-  "number": "15.75",
+  "number": "15.76",
   "title": "Separability and <span class=\"process-math\">\\((x^4-x^3-x+1)\\)<\/span>.",
   "body": "Separability and   is not separable sine is a double root (it factors as ). As predicted by the Theorem , it fails to be relatively prime to its derivative, which is , since each are divisible by .   is separable in because it has distinct roots in , namely . As predicted by the Theorem, it is relatively prime to its derivative .  Now interpret as belonging to . Then is not separable. As predicted by the Theorem, it is not relatively prime to its derivative, which is .  "
 },
@@ -7061,7 +7070,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#ex-zpy",
   "type": "Example",
-  "number": "15.76",
+  "number": "15.77",
   "title": "<span class=\"process-math\">\\(\\Z\/p(y)\\)<\/span>.",
   "body": " Let be a field of characteristic and assume is an element such that for all . Then is irreducible but not separable. It is not separable since in we have where . Also note that its derivative is .  It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: Take (the field of fractions of the polynomial ring ) and let . In this case, is seen to be irreducible, by , but not separable.  "
 },
@@ -7070,7 +7079,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#cor-separability-and-characteristic-zero",
   "type": "Corollary",
-  "number": "15.77",
+  "number": "15.78",
   "title": "Separability and Characteristic Zero.",
   "body": "Separability and Characteristic Zero   If is an irreducible polynomial with coefficients in a field of characteristic , then is separable. More generally, if is irreducible of degree and , then is separable.   "
 },
@@ -7079,7 +7088,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-separable-field-extension",
   "type": "Definition",
-  "number": "15.78",
+  "number": "15.79",
   "title": "Separable (Field Extension).",
   "body": "Separable (Field Extension)   An algebraic field extension is called separable if for every its minimum polynomial is separable (i.e., has no repeated roots in an algebraic closure of ). separable field extension    "
 },
@@ -7088,7 +7097,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#cor-separability-algebraic-extensions-and-char-zero",
   "type": "Corollary",
-  "number": "15.79",
+  "number": "15.80",
   "title": "Separability, Algebraic Extensions, and Char Zero.",
   "body": "Separability, Algebraic Extensions, and Char Zero   If , then every algebraic field extension is separable.    Suppose is an algebraic extension and let be algebraic over . Then the minimal polynomial of over has coefficients in and is of the form where . We need to show that is separable, i.e., has no repeated roots in its splitting field.  Suppose has a repeated root in some splitting field of , i.e., for some polynomial . Since is also a root of , we have . Since is an algebraic extension, is algebraic over , so . It follows that , i.e., , which means that is a repeated root of , contradicting the assumption that has no repeated roots. Hence is separable, and since was an arbitrary algebraic element of , we conclude that is a separable extension.   "
 },
@@ -7097,7 +7106,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#ex-f-zpy-subseteq-zpz-l",
   "type": "Example",
-  "number": "15.80",
+  "number": "15.81",
   "title": "<span class=\"process-math\">\\(F = (\\Z\/p)(y) \\subseteq (\\Z\/p)(z) = L\\)<\/span>.",
   "body": " Let and be indeterminants. The extension of fields given by identifying with is not separable. Somewhat more precisely, is isomorphism to the subfield of consisting of elements of the form , with the isomorphism given by sending to .  Then is a root of the polynomial . Moreover since is the field of fractions of the PID and is a prime element of , we may apply (and Gauss) to conclude that is irreducible in . This proves that . This polynomial is not separable since in it is equal to and hence has a repeated root. (Or, you may use that its derivative is .)  "
 },
@@ -7396,7 +7405,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.1",
   "title": "Sets, Functions, Constructions",
-  "body": "Sets, Functions, Constructions  Sets  Set   The basic undefined term we will use is that of a set , which we take to be any collection of objects, not necessarily mathematical ones.     A more rigrorous description of sets can be found using the ZFC axioms for set theory, which are listed around here somewhere.   Sets of Numbers     Natural Numbers  The set of natural numbers is denoted by . natural numbers     Integers  The set of integers is denoted by . integers     Rational Numbers  The set of rational numbers is denoted by . rational numbers     Real Numbers  The set of real numbers is denoted by , and is a little trickier to define both rigorously and succinctly. Heuristically, it is the set of all numbers on the number line. real numbers     Complex Numbers  The set of complex numbers is denoted by . complex numbers         Set Containments   Let and be sets.   The set is a subset of the set , denoted , if implies . subset      The set  equals the set , denoted , if and . set equality     The set is a proper subset of the set , denoted , if and . proper subset         Union, Intersection   Let and be sets. The union of and , denoted , is the set defined by . The intersection of and , denoted , is the set defined by . union  intersection       Family of Sets   Let be a set. The set is called a family of sets if all the elements of are sets. The family of sets is indexed by , denoted , if there is a non-empty set such that there is an element for each , and that every element of equals for exactly one . family of sets  indexed family of sets     Union and Intersection of Families of Sets   Let be a family of sets. If is indexed by a set , then we write to denote the union and intersection of the sets in , respectively.    Distributive Laws  distributive law (sets)    and     De Morgan's Laws  De Morgan's laws (sets)    and     Cartesian Product  Cartesian product   Let and for be sets. The Cartesian product  and     Subsets of Cartesian Products  If and , then .    Functions  Function  function  map  domain of a function  range of a function   Let and be sets. A function (also called a map ) from to , denoted , is a subset such that for each , there is one and only one pair in of the form . The set is called the domain of and the set is called the codomain of .    Well-defined Function  well defined function   A function is well-defined if whenever and , then .     All functions are well-defined.   Commonly Encountered Functions     A constant map  is any function of the form for all , where is some fixed element. constant map     The identity map on is the function defined by for all . identity map     The inclusion map from to is the function defined by for all  inclusion map     If is a function, the restriction of to , denoted , is the function defined by for all . restriction of a function     If is a function, an extension of to is any function such that . extension of a function     The projection maps from are the functions and defined by and for all . For any finite collection of sets , projection maps for all can be defined similarly. projection map     Let be a non-empty set, and let be a subset. The characteristic map for in , denoted , is the function defined by  characteristic map       Injective, Surjective, Bijective   Let be a function.   The function is one-to-one (also called an injection and denoted ) if whenever and then . injective  one-to-one     The function is onto (also called a surjection and denoted ) if for every in , there is an in with . surjective  onto     The function is a bijection if is both one-to-one and onto. bijective     The function is invertible if there is a function such that and . invertible function        Surjective iff Image is Codomain A function is surjective if and only if .  Composition  composition of functions   Let , and be sets, and let and be functions. The composition of and is the function defined by for all .    Compositions and 'Jectivity   Let , , and be functions. Then:   If and are one-to-one then is one-to-one.    If is one-to-one then is one-to-one.    If and are onto then is onto.    If is onto then is onto.     is a bijection if and only if is invertible.       Image and Preimage   Let be a function.   The image of a subset of is . image     The preimage of a subset of is . preimage     The image  is .       PAN  PAN   If , and for all , then    .     .     .     .       IASN  IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .       Containments of Images, Preimages   Let .   If , then ; if moreover is injective then .    If then ; if moreover is surjective then .       Inclusions are Injective   If and is the inclusion, then is an injection.    Projection Map   Let for all be sets and let . The projection map is defined by .    Product Inclusion Map  product inclusion map   Let for all be sets, let , and for each , let . The associated product inclusion map is defined for each by , where .    Properties of Projections and Product Inclusions      Projection maps are surjections.    Product inclusion maps are injections.        Set Constructions  Equivalence Relations and Modular Arithmetic  Equivalence Relation  equivalence relation   An equivalence relation  on a set is a subset (where is written ) that satisfies the following for all in :  Reflexivity   , reflexive relation    Symmetry   implies , and symmetric relation    Transitivity   and implies . transitive relation      The equivalence class of an element a of is . equivalence class   The notation denotes the set of equivalence classes , also called the quotient of with respect to .  The function defined by for all is called the quotient map . quotient map     Partition   A partition of a set is a collection of nonempty disjoint subsets of whose union is . partition     EPT   Let be a set.   If is an equivalence relation on , then is a partition of .    If is a partition of , and , then is an equivalence relation on .       The Integers Modulo   Let , and let . The number is congruent to the number modulo , denoted , if for some .  For each , we obtain a relation on given by congruence modulo , which we call the integers modulo  . integers modulo       "
+  "body": "Sets, Functions, Constructions  Sets  Set   The basic undefined term we will use is that of a set , which we take to be any collection of objects, not necessarily mathematical ones.     A more rigrorous description of sets can be found using the ZFC axioms for set theory, which are listed around here somewhere.   Empty Set       Sets of Numbers     Natural Numbers  The set of natural numbers is denoted by . natural numbers     Integers  The set of integers is denoted by . integers     Rational Numbers  The set of rational numbers is denoted by . rational numbers     Real Numbers  The set of real numbers is denoted by , and is a little trickier to define both rigorously and succinctly. Heuristically, it is the set of all numbers on the number line. real numbers     Complex Numbers  The set of complex numbers is denoted by . complex numbers         Set Containments   Let and be sets.   The set is a subset of the set , denoted , if implies . subset      The set  equals the set , denoted , if and . set equality     The set is a proper subset of the set , denoted , if and . proper subset         Power Set       Union, Intersection   Let and be sets. The union of and , denoted , is the set defined by . The intersection of and , denoted , is the set defined by . union  intersection       Family of Sets   Let be a set. The set is called a family of sets if all the elements of are sets. The family of sets is indexed by , denoted , if there is a non-empty set such that there is an element for each , and that every element of equals for exactly one . family of sets  indexed family of sets     Union and Intersection of Families of Sets   Let be a family of sets. If is indexed by a set , then we write to denote the union and intersection of the sets in , respectively.    Distributive Laws  distributive law (sets)    and     De Morgan's Laws  De Morgan's laws (sets)    and     Cartesian Product  Cartesian product   Let and for be sets. The Cartesian product  and     Subsets of Cartesian Products  If and , then .    Functions  Function  function  map  domain of a function  range of a function   Let and be sets. A function (also called a map ) from to , denoted , is a subset such that for each , there is one and only one pair in of the form . The set is called the domain of and the set is called the codomain of .    Well-defined Function  well defined function   A function is well-defined if whenever and , then .     All functions are well-defined.   Commonly Encountered Functions     A constant map  is any function of the form for all , where is some fixed element. constant map     The identity map on is the function defined by for all . identity map     The inclusion map from to is the function defined by for all  inclusion map     If is a function, the restriction of to , denoted , is the function defined by for all . restriction of a function     If is a function, an extension of to is any function such that . extension of a function     The projection maps from are the functions and defined by and for all . For any finite collection of sets , projection maps for all can be defined similarly. projection map     Let be a non-empty set, and let be a subset. The characteristic map for in , denoted , is the function defined by  characteristic map       Injective, Surjective, Bijective   Let be a function.   The function is one-to-one (also called an injection and denoted ) if whenever and then . injective  one-to-one     The function is onto (also called a surjection and denoted ) if for every in , there is an in with . surjective  onto     The function is a bijection if is both one-to-one and onto. bijective     The function is invertible if there is a function such that and . invertible function        Surjective iff Image is Codomain A function is surjective if and only if .  Composition  composition of functions   Let , and be sets, and let and be functions. The composition of and is the function defined by for all .    Compositions and 'Jectivity   Let , , and be functions. Then:   If and are one-to-one then is one-to-one.    If is one-to-one then is one-to-one.    If and are onto then is onto.    If is onto then is onto.     is a bijection if and only if is invertible.       Image and Preimage   Let be a function.   The image of a subset of is . image     The preimage of a subset of is . preimage     The image  is .       PAN  PAN   If , and for all , then    .     .     .     .       IASN  IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .       Containments of Images, Preimages   Let .   If , then ; if moreover is injective then .    If then ; if moreover is surjective then .       Inclusions are Injective   If and is the inclusion, then is an injection.    Projection Map   Let for all be sets and let . The projection map is defined by .    Product Inclusion Map  product inclusion map   Let for all be sets, let , and for each , let . The associated product inclusion map is defined for each by , where .    Properties of Projections and Product Inclusions      Projection maps are surjections.    Product inclusion maps are injections.        Set Constructions  Equivalence Relations and Modular Arithmetic  Equivalence Relation  equivalence relation   An equivalence relation  on a set is a subset (where is written ) that satisfies the following for all in :  Reflexivity   , reflexive relation    Symmetry   implies , and symmetric relation    Transitivity   and implies . transitive relation      The equivalence class of an element a of is . equivalence class   The notation denotes the set of equivalence classes , also called the quotient of with respect to .  The function defined by for all is called the quotient map . quotient map     Partition   A partition of a set is a collection of nonempty disjoint subsets of whose union is . partition     EPT   Let be a set.   If is an equivalence relation on , then is a partition of .    If is a partition of , and , then is an equivalence relation on .       The Integers Modulo   Let , and let . The number is congruent to the number modulo , denoted , if for some .  For each , we obtain a relation on given by congruence modulo , which we call the integers modulo  . integers modulo       "
 },
 {
   "id": "heur-set",
@@ -7417,11 +7426,20 @@ var ptx_lunr_docs = [
   "body": " A more rigrorous description of sets can be found using the ZFC axioms for set theory, which are listed around here somewhere.  "
 },
 {
-  "id": "def-number-sets",
+  "id": "ex-empty-set",
   "level": "2",
-  "url": "sec-sets-functions.html#def-number-sets",
-  "type": "Definition",
+  "url": "sec-sets-functions.html#ex-empty-set",
+  "type": "Example",
   "number": "A.3",
+  "title": "Empty Set.",
+  "body": "Empty Set      "
+},
+{
+  "id": "ex-number-sets",
+  "level": "2",
+  "url": "sec-sets-functions.html#ex-number-sets",
+  "type": "Example",
+  "number": "A.4",
   "title": "Sets of Numbers.",
   "body": "Sets of Numbers     Natural Numbers  The set of natural numbers is denoted by . natural numbers     Integers  The set of integers is denoted by . integers     Rational Numbers  The set of rational numbers is denoted by . rational numbers     Real Numbers  The set of real numbers is denoted by , and is a little trickier to define both rigorously and succinctly. Heuristically, it is the set of all numbers on the number line. real numbers     Complex Numbers  The set of complex numbers is denoted by . complex numbers        "
 },
@@ -7430,16 +7448,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-subset",
   "type": "Definition",
-  "number": "A.4",
+  "number": "A.5",
   "title": "Set Containments.",
   "body": "Set Containments   Let and be sets.   The set is a subset of the set , denoted , if implies . subset      The set  equals the set , denoted , if and . set equality     The set is a proper subset of the set , denoted , if and . proper subset        "
+},
+{
+  "id": "ex-power-set",
+  "level": "2",
+  "url": "sec-sets-functions.html#ex-power-set",
+  "type": "Example",
+  "number": "A.6",
+  "title": "Power Set.",
+  "body": "Power Set      "
 },
 {
   "id": "def-union-intersection",
   "level": "2",
   "url": "sec-sets-functions.html#def-union-intersection",
   "type": "Definition",
-  "number": "A.5",
+  "number": "A.7",
   "title": "Union, Intersection.",
   "body": "Union, Intersection   Let and be sets. The union of and , denoted , is the set defined by . The intersection of and , denoted , is the set defined by . union  intersection      "
 },
@@ -7448,7 +7475,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-family-of-sets",
   "type": "Definition",
-  "number": "A.6",
+  "number": "A.8",
   "title": "Family of Sets.",
   "body": "Family of Sets   Let be a set. The set is called a family of sets if all the elements of are sets. The family of sets is indexed by , denoted , if there is a non-empty set such that there is an element for each , and that every element of equals for exactly one . family of sets  indexed family of sets    "
 },
@@ -7457,7 +7484,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-union-intersection-2",
   "type": "Definition",
-  "number": "A.7",
+  "number": "A.9",
   "title": "Union and Intersection of Families of Sets.",
   "body": "Union and Intersection of Families of Sets   Let be a family of sets. If is indexed by a set , then we write to denote the union and intersection of the sets in , respectively.   "
 },
@@ -7466,7 +7493,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-distributive-laws",
   "type": "Theorem",
-  "number": "A.8",
+  "number": "A.10",
   "title": "Distributive Laws.",
   "body": "Distributive Laws  distributive law (sets)    and    "
 },
@@ -7475,7 +7502,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-de-morgans-laws",
   "type": "Theorem",
-  "number": "A.9",
+  "number": "A.11",
   "title": "De Morgan's Laws.",
   "body": "De Morgan's Laws  De Morgan's laws (sets)    and    "
 },
@@ -7484,7 +7511,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-cartesian-product",
   "type": "Definition",
-  "number": "A.10",
+  "number": "A.12",
   "title": "Cartesian Product.",
   "body": "Cartesian Product  Cartesian product   Let and for be sets. The Cartesian product  and    "
 },
@@ -7493,7 +7520,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#exe-cartesian-subsets",
   "type": "Exercise",
-  "number": "A.11",
+  "number": "A.13",
   "title": "Subsets of Cartesian Products.",
   "body": "Subsets of Cartesian Products  If and , then .  "
 },
@@ -7502,7 +7529,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-function",
   "type": "Definition",
-  "number": "A.12",
+  "number": "A.14",
   "title": "Function.",
   "body": "Function  function  map  domain of a function  range of a function   Let and be sets. A function (also called a map ) from to , denoted , is a subset such that for each , there is one and only one pair in of the form . The set is called the domain of and the set is called the codomain of .   "
 },
@@ -7511,7 +7538,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-well-defined",
   "type": "Definition",
-  "number": "A.13",
+  "number": "A.15",
   "title": "Well-defined Function.",
   "body": "Well-defined Function  well defined function   A function is well-defined if whenever and , then .   "
 },
@@ -7520,7 +7547,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#remark-88",
   "type": "Remark",
-  "number": "A.14",
+  "number": "A.16",
   "title": "",
   "body": " All functions are well-defined.  "
 },
@@ -7529,7 +7556,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#ex-common-functions",
   "type": "Example",
-  "number": "A.15",
+  "number": "A.17",
   "title": "Commonly Encountered Functions.",
   "body": "Commonly Encountered Functions     A constant map  is any function of the form for all , where is some fixed element. constant map     The identity map on is the function defined by for all . identity map     The inclusion map from to is the function defined by for all  inclusion map     If is a function, the restriction of to , denoted , is the function defined by for all . restriction of a function     If is a function, an extension of to is any function such that . extension of a function     The projection maps from are the functions and defined by and for all . For any finite collection of sets , projection maps for all can be defined similarly. projection map     Let be a non-empty set, and let be a subset. The characteristic map for in , denoted , is the function defined by  characteristic map      "
 },
@@ -7538,7 +7565,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-jectivity",
   "type": "Definition",
-  "number": "A.16",
+  "number": "A.18",
   "title": "Injective, Surjective, Bijective.",
   "body": "Injective, Surjective, Bijective   Let be a function.   The function is one-to-one (also called an injection and denoted ) if whenever and then . injective  one-to-one     The function is onto (also called a surjection and denoted ) if for every in , there is an in with . surjective  onto     The function is a bijection if is both one-to-one and onto. bijective     The function is invertible if there is a function such that and . invertible function       "
 },
@@ -7547,7 +7574,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#surjective-iff-image",
   "type": "Exercise",
-  "number": "A.17",
+  "number": "A.19",
   "title": "Surjective iff Image is Codomain.",
   "body": "Surjective iff Image is Codomain A function is surjective if and only if . "
 },
@@ -7556,7 +7583,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-composition",
   "type": "Definition",
-  "number": "A.18",
+  "number": "A.20",
   "title": "Composition.",
   "body": "Composition  composition of functions   Let , and be sets, and let and be functions. The composition of and is the function defined by for all .   "
 },
@@ -7565,7 +7592,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-compositions-and-jectivity",
   "type": "Theorem",
-  "number": "A.19",
+  "number": "A.21",
   "title": "Compositions and 'Jectivity.",
   "body": "Compositions and 'Jectivity   Let , , and be functions. Then:   If and are one-to-one then is one-to-one.    If is one-to-one then is one-to-one.    If and are onto then is onto.    If is onto then is onto.     is a bijection if and only if is invertible.      "
 },
@@ -7574,7 +7601,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-image-preimage",
   "type": "Definition",
-  "number": "A.20",
+  "number": "A.22",
   "title": "Image and Preimage.",
   "body": "Image and Preimage   Let be a function.   The image of a subset of is . image     The preimage of a subset of is . preimage     The image  is .      "
 },
@@ -7583,7 +7610,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-pan",
   "type": "Theorem",
-  "number": "A.21",
+  "number": "A.23",
   "title": "PAN.",
   "body": "PAN  PAN   If , and for all , then    .     .     .     .      "
 },
@@ -7592,7 +7619,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-iasn",
   "type": "Theorem",
-  "number": "A.22",
+  "number": "A.24",
   "title": "IASN.",
   "body": "IASN  IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
@@ -7601,7 +7628,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#theorem-139",
   "type": "Theorem",
-  "number": "A.23",
+  "number": "A.25",
   "title": "Containments of Images, Preimages.",
   "body": "Containments of Images, Preimages   Let .   If , then ; if moreover is injective then .    If then ; if moreover is surjective then .      "
 },
@@ -7610,7 +7637,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#prop-inclusions-injective",
   "type": "Proposition",
-  "number": "A.24",
+  "number": "A.26",
   "title": "Inclusions are Injective.",
   "body": "Inclusions are Injective   If and is the inclusion, then is an injection.   "
 },
@@ -7619,7 +7646,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-projection-map",
   "type": "Definition",
-  "number": "A.25",
+  "number": "A.27",
   "title": "Projection Map.",
   "body": "Projection Map   Let for all be sets and let . The projection map is defined by .   "
 },
@@ -7628,7 +7655,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-product-inclusion",
   "type": "Definition",
-  "number": "A.26",
+  "number": "A.28",
   "title": "Product Inclusion Map.",
   "body": "Product Inclusion Map  product inclusion map   Let for all be sets, let , and for each , let . The associated product inclusion map is defined for each by , where .   "
 },
@@ -7637,7 +7664,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-proj-sur-incl-inj",
   "type": "Theorem",
-  "number": "A.27",
+  "number": "A.29",
   "title": "Properties of Projections and Product Inclusions.",
   "body": "Properties of Projections and Product Inclusions      Projection maps are surjections.    Product inclusion maps are injections.      "
 },
@@ -7646,7 +7673,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-equivalence-relation",
   "type": "Definition",
-  "number": "A.28",
+  "number": "A.30",
   "title": "Equivalence Relation.",
   "body": "Equivalence Relation  equivalence relation   An equivalence relation  on a set is a subset (where is written ) that satisfies the following for all in :  Reflexivity   , reflexive relation    Symmetry   implies , and symmetric relation    Transitivity   and implies . transitive relation      The equivalence class of an element a of is . equivalence class   The notation denotes the set of equivalence classes , also called the quotient of with respect to .  The function defined by for all is called the quotient map . quotient map    "
 },
@@ -7655,7 +7682,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-partition",
   "type": "Definition",
-  "number": "A.29",
+  "number": "A.31",
   "title": "Partition.",
   "body": "Partition   A partition of a set is a collection of nonempty disjoint subsets of whose union is . partition    "
 },
@@ -7664,7 +7691,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#thm-equiv-partition",
   "type": "Theorem",
-  "number": "A.30",
+  "number": "A.32",
   "title": "EPT.",
   "body": "EPT   Let be a set.   If is an equivalence relation on , then is a partition of .    If is a partition of , and , then is an equivalence relation on .      "
 },
@@ -7673,7 +7700,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sets-functions.html#def-integers-modulo",
   "type": "Definition",
-  "number": "A.31",
+  "number": "A.33",
   "title": "The Integers Modulo <span class=\"process-math\">\\(n\\)<\/span>.",
   "body": "The Integers Modulo   Let , and let . The number is congruent to the number modulo , denoted , if for some .  For each , we obtain a relation on given by congruence modulo , which we call the integers modulo  . integers modulo    "
 },
@@ -7684,14 +7711,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.2",
   "title": "Numbers, Counting, Cardinality",
-  "body": "Numbers, Counting, Cardinality  Number Theory  Divisibility   Let and be integers. The integer  divides the integer if and only if there is some integer such that . If divides , we write , and we say that is a factor of , and that is divisible by . divides     Prime Integer   Let be an integer greater than . The integer is a prime number if and only if the only positive integers that divide are and . The integer is a composite number iff it is not a prime number. prime integer     GCD, LCM (*)       Division Algorithm  division algorithm   Let and be integers with . Then there exist unique integers and such that     Coming soon!     Counting (*)  Binomial Coefficient (*)  binomial coefficient       Binomial Theorem (*)  binomial theorem        Cardinality  Cardinality  finite set  cardinality  countably infinite set  uncountably infinite set   A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
+  "body": "Numbers, Counting, Cardinality  Number Theory  Divisibility   Let and be integers. The integer  divides the integer if and only if there is some integer such that . If divides , we write , and we say that is a factor of , and that is divisible by . divides     Prime   Let be an integer greater than . The integer is a prime number if and only if the only positive integers that divide are and . The integer is a composite number iff it is not a prime number. prime integer     GCD, LCM (*)       Division Algorithm  division algorithm   Let and be integers with . Then there exist unique integers and such that     Coming soon!     Counting (*)  Binomial Coefficient (*)  binomial coefficient       Binomial Theorem (*)  binomial theorem        Cardinality  Cardinality  finite set  cardinality  countably infinite set  uncountably infinite set   A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
 },
 {
   "id": "def-divides",
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#def-divides",
   "type": "Definition",
-  "number": "A.32",
+  "number": "A.34",
   "title": "Divisibility.",
   "body": "Divisibility   Let and be integers. The integer  divides the integer if and only if there is some integer such that . If divides , we write , and we say that is a factor of , and that is divisible by . divides    "
 },
@@ -7700,16 +7727,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#def-prime-number",
   "type": "Definition",
-  "number": "A.33",
-  "title": "Prime Integer.",
-  "body": "Prime Integer   Let be an integer greater than . The integer is a prime number if and only if the only positive integers that divide are and . The integer is a composite number iff it is not a prime number. prime integer    "
+  "number": "A.35",
+  "title": "Prime.",
+  "body": "Prime   Let be an integer greater than . The integer is a prime number if and only if the only positive integers that divide are and . The integer is a composite number iff it is not a prime number. prime integer    "
 },
 {
   "id": "def-gcd-lcm",
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#def-gcd-lcm",
   "type": "Definition",
-  "number": "A.34",
+  "number": "A.36",
   "title": "GCD, LCM (*).",
   "body": "GCD, LCM (*)      "
 },
@@ -7718,7 +7745,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#thm-division-algorithm",
   "type": "Theorem",
-  "number": "A.35",
+  "number": "A.37",
   "title": "Division Algorithm.",
   "body": "Division Algorithm  division algorithm   Let and be integers with . Then there exist unique integers and such that     Coming soon!   "
 },
@@ -7727,7 +7754,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#def-binomial-coefficient",
   "type": "Definition",
-  "number": "A.36",
+  "number": "A.38",
   "title": "Binomial Coefficient (*).",
   "body": "Binomial Coefficient (*)  binomial coefficient      "
 },
@@ -7736,7 +7763,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#thm-binomial-theorem",
   "type": "Theorem",
-  "number": "A.37",
+  "number": "A.39",
   "title": "Binomial Theorem (*).",
   "body": "Binomial Theorem (*)  binomial theorem      "
 },
@@ -7745,7 +7772,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#def-cardinality",
   "type": "Definition",
-  "number": "A.38",
+  "number": "A.40",
   "title": "Cardinality.",
   "body": "Cardinality  finite set  cardinality  countably infinite set  uncountably infinite set   A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .   "
 },
@@ -7754,7 +7781,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#thm-cardinality-equivalencies",
   "type": "Theorem",
-  "number": "A.39",
+  "number": "A.41",
   "title": "",
   "body": "  Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .         "
 },
@@ -7763,7 +7790,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-numbers-and-cardinality.html#thm-cardinality-closures",
   "type": "Theorem",
-  "number": "A.40",
+  "number": "A.42",
   "title": "",
   "body": "     The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.      "
 },
@@ -7867,9 +7894,9 @@ var ptx_lunr_docs = [
   "body": "Problem 9   Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is algebraic over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .   "
 },
 {
-  "id": "index-1",
+  "id": "index",
   "level": "1",
-  "url": "index-1.html",
+  "url": "index.html",
   "type": "Index",
   "number": "",
   "title": "Index",
