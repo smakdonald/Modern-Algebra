@@ -322,9 +322,9 @@
     <rename element="investigation">Exploration</rename>  
     <rename element="inlineexercise">Exercise</rename>
     <rename element="exploration">Discussion</rename>
-    <rename element="activity">Problem</rename>
-    <rename element="heuristic">Vague Semidefinition</rename>
+    <rename element="heuristic">Vague Definition</rename>
     <rename element="outcomes">Summary</rename>
+    <rename element="exercises">Qualifying Exam Problems</rename>
 
   </docinfo>
   
@@ -601,7 +601,7 @@
 
                     <li xml:id="identity-property">
                       <p>
-                        An operation satisfies the <em>identity property</em> if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
+                        An operation satisfies the <em>identity property</em> if there exists <m>e\in G</m> such that <m>e*g=g*e=g</m> for all <m>g\in G</m>.
                         Such an element <m>e</m> is called an <em>identity element</em>.
                         <idx><h><m>e</m></h></idx>
                         <idx><h>identity property</h></idx>
@@ -636,7 +636,7 @@
             <definition xml:id="def-monoid"><title>Monoid</title> 
               <statement>
                 <p>
-                  A <em>monoid</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
+                  A <em>monoid</em> is a pair <m>(S, *)</m> where <m>S</m> is a set and <m>*</m> is a binary operation on <m>S</m> satisfying the associative and identity properties.
                   <idx><h>monoid</h></idx>   
                 </p>
               </statement>
@@ -649,6 +649,14 @@
                 <idx><h>semigroup</h></idx>
               </p>
             </aside>
+
+            <insight>
+              <p>
+                We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>x*y</m>, is an element of <m>S</m>. 
+                However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
+                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
+              </p>
+            </insight>
 
             <p>
               For those who appreciate a snazzy visual, here is a handy little graphic.
@@ -782,12 +790,11 @@
               </proof>
             </theorem>
 
-            <insight>
+            <remark>
               <p>
                  The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids (and unital magmas) as well.
-                 <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
-            </insight>
+            </remark>
 
             <aside>
               <p>
@@ -19035,613 +19042,620 @@
           <url href="https://math.unl.edu/graduate/exams/quals/algebra/817-818Qualifier_Syllabus.pdf" visual="">UNL Algebra Qualifying Exam Syllabus</url>
         </p>
 
-        <paragraphs><title>May 2022</title>
+        <exercises xml:id="exercises-qual">
+
+          <exercisegroup><title>May 2022</title>
           
-          <activity><title>Problem 1</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>. 
-                Prove that <m>N\cap Z(G)\neq{1}</m>, where <m>Z(G)</m> is the center of <m>G</m>.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
-              </p>
-
-              <p>
-                First, we show that the center of <m>G</m> is nontrivial. 
-                Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. 
-                We examine the conjugacy classes of <m>G</m>. 
-                From the <xref text="title" ref="thm-class-eq"/>, we know
-                <me>
-                  |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
-                </me>
-                Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. 
-                In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. 
-                By <xref text="title" ref="thm-lagrange"/>, <m>[G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. 
-                Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. 
-                Thus <m>Z(G)\neq\{e\}</m>.
-              </p>
-
-              <p>
-                As <m>N\nsg G</m>, by <xref ref="thm-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
-                Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. 
-                This yields 
-                <me>
-                  |N| = 1+ \sum_i^r |G : C_G(g_i)|.
-                </me> 
-                However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. 
-                Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 2</title>
-            <statement>
-              <p>
-                A non-abelian group of order <m>27</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Prove there exists a non-abelian group of <m>27</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Find, with justification, a presentation of the group you found in part (1).
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <hint>
-              <p>
-                Use a semi-direct product.
-              </p>
-            </hint>
-
-            <solution>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>C_3 = \langle a \rangle</m> be the cyclic group of order <m>3</m>, and let <m>C_9 = \langle b \rangle</m> be the cyclic group of order <m>9</m>. 
-                      Let <m>\phi \colon C_9 \to \operatorname{Aut}(C_3)</m> be the homomorphism defined by <m>\phi(b^i)(a) = a^i</m> for <m>0 \le i \le 8</m>, where we identify <m>\operatorname{Aut}(C_3)</m> with <m>C_2</m> via the isomorphism <m>\operatorname{Aut}(C_3) \cong C_2</m> given by sending the non-identity automorphism to the generator of <m>C_2</m>.
-                    </p>
-
-                    <p>
-                      Then the semi-direct product <m>G = C_3 \rtimes_{\phi} C_9</m> has order <m>27</m> and is non-abelian. 
-                      To see that <m>G</m> is non-abelian, note that <m>bab^{-1} \neq a</m> for any <m>b \in C_9 \setminus {1}</m>, since <m>a</m> has no non-trivial automorphisms.
-                    </p>
-                  </li>
-                    
-                  <li>
-                    <p>
-                      To find a presentation of <m>G</m>, we need to identify the generators and relations. 
-                      Since <m>C_3</m> and <m>C_9</m> are both cyclic, we can take the generators to be <m>a</m> and <m>b</m> respectively. 
-                      Moreover, since <m>C_3</m> is normal in <m>G</m>, we have <m>bab^{-1} = a^i</m> for some <m>i \in {1, 2}</m>.
-                    </p>
-
-                    <p>
-                      To determine the value of <m>i</m>, note that <m>C_9</m> acts on <m>C_3</m> by automorphisms, and the non-identity automorphism of <m>C_3</m> is inversion <m>a \mapsto a^{-1}</m>. 
-                      Since <m>bab^{-1} \neq a^{-1}</m>, we must have <m>i = 2</m>.
-                    </p>
-
-                    <p>
-                      Therefore, a presentation of <m>G</m> is given by <m>\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 3</title>
-            <statement>
-              <p>
-                Let G be a group of order <m>2^5\cdot 7^3</m>. 
-                Prove that <m>G</m> is not simple.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. 
-                Thus our options are <m>1</m> and <m>8</m>. 
-                Suppose that <m>\Syl_7(G)=8</m>.
-              </p>
-
-              <p>
-                Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <m>\rho: G \to S_8</m> via the <xref text="title" ref="thm-permrep"/>. 
-                This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. 
-                Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref ref="thm-norm-iff-ker"/>. 
-                Thus <m>G</m> is not simple.
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 4</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
-                Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-              </p>
-
-              <p>
-                <ol>
-                  <li>
-                    Prove <m>IJ = I\cap J</m>. 
-                  </li>
-
-                  <li>
-                    Prove the following special case of <xref text="title" ref="thm-sunzi"/>: 
-                    There is an isomorphism of rings of the form <m>R/(I \cap J)\cong R/I \times R/J</m>.
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
-                Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-              </p>
-
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>x\in IJ</m>. 
-                      Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. 
-                      As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. 
-                      Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
-                    </p>
-
-                    <p>
-                      Let <m>x\in I\cap J</m>. 
-                      Thus <m>x\in I</m> and <m>x\in J</m>. 
-                      Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. 
-                      So <m>x=x1=xa+xb</m>. 
-                      As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. 
-                      Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
-                    </p>
-
-                    <p>
-                      Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. 
-                      Let <m>x\in\ker(f)</m>. 
-                      Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. 
-                      Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
-                    </p>
-
-                    <p>
-                      Observe 
-                      <me>
-                        \begin{aligned}
-                        f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
-                        =&amp;((x+I)+(y+I),(x+J)+(y+J))\\
-                        =&amp;((x+I),(x+J))+(y+I),(y+J)\\
-                        =&amp;f(x)+f(y),
-                        \end{aligned}
-                      </me> 
-                      making <m>f</m> a homomorphism of rings.
-                    </p>
-
-                    <p>
-                      Let <m>(a+I,b+J)\in R/I\times R/J</m>. 
-                      As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. 
-                      However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
-                    </p>
-
-                    <p>
-                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe 
-                      <me>
-                        f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
-                      </me>
-                      However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see 
-                      <me>
-                        (a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
-                      </me> 
-                      Thus <m>f</m> is a surjective homomorphism. 
-                      Hence, by the <xref text="title" ref="thm-ring-fit"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 5</title>
-            <statement>
-              <p>
-					      Prove the Rank-Nullity Theorem: If <m>F</m> is a field, <m>V</m> and <m>W</m> are a finite dimensional <m>F</m> -vector spaces, and <m>g : V \to W</m> is an <m>F</m>-linear transformation, then <me>\rank(g) + \operatorname{nullity}(g) = \dim(V). </me>(Recall the <em>rank</em> of <m>g</m> is the dimension of its image and the nullity of <m>g</m> is the dimension of its kernel.)
-				      </p>
-            </statement>
-
-            <solution>
-              <p>
-                See: <xref text="title" ref="thm-rank-nullity"/>
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 6</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>n</m> a positive integer. 
-                We say an <m>n\times n</m> matrix <m>A</m> with entries in <m>F</m> is <em>unipotent</em> if <m>A-In</m> is nilpotent (i.e., <m>(A-In)^k = 0</m> for some <m>k \geq 1</m>). 
-                For the field <m>F = \Q</m>, find (with complete justification) the number of similarity classes of <m>4\times 4</m> unipotent matrices and give an explicit representative for each class.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>F=\Q</m>, <m>n</m> a positive integer, and <m>A</m> a unipotent <m>4\times 4</m> matrix with entries in <m>F</m>. 
-                Thus <m>A-I</m> is nilpotent. 
-                Let <m>\l</m> be an eigenvalue of <m>A-I</m>. 
-                Then <m>(A-I)v=\l v</m>, so <m>Av-Iv=\l v</m> and <m>Av=\l v+Iv</m>. 
-                As <m>Iv=v</m>, we have <m>Av=\l v+v</m> and <m>Av=(\l+1)v</m>.
-              </p>
-
-              <p>
-                Notice that as <m>\l</m> is an eigenvalue of <m>I</m>, we have <m>\l +1</m> as an eigenvalue of <m>A</m>.
-              </p>
-
-              <p>
-                Assume inductively that <m>\l^{n-1}</m> is an eigenvalue of <m>(A-I)^{n-1}</m>.
-                Notice 
-                <me>
-                  (A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
-                </me>
-                making <m>\l</m> an eigenvalue of <m>(A+I)^n</m>. 
-                Thus if <m>\l</m> is an eigenvalue of <m>A-I</m>, it is an eigenvalue of <m>(A-I)^n</m> as well. 
-                As <m>(A-I)</m> is nilpotent, there exists some <m>k</m> such that <m>(A-I)^k=0</m>. 
-                This means that <m>\l^kv=0</m>. 
-                As <m>v\neq 0</m> and <m>\l^k</m> is a scalar in a field (and hence integral domain) we have <m>\l=0</m>. 
-                Thus the only eigenvalue of <m>(A-I)</m> is <m>0</m>, meaning that the only eigenvalue of <m>A</m> is <m>1</m>.
-              </p>
-
-              <p>
-                Eigenvalues of <m>A</m> correspond to the roots of <m>\cp_A(x)</m>, which is a monic quartic polynomial, as <m>A</m> is a <m>4\times 4</m> matrix. 
-                Thus <m>\cp_A(x)=(x-1)^4</m>, as all roots must be <m>1</m>.
-              </p>
-
-              <p>
-                Two matrices are similar if and only if they share the same invariant factors. 
-                Given that invariant factors divide <m>\cp_A(x)</m> and each invariant factor must divide the following one, the possible sets of invariant factors for <m>A</m> are the following: 
-                <ul>
-                  <li>
-                    <p>
-                      <m>\{(x-1)^4\}</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\{(x-1),(x-1)^3\}</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\{(x-1), (x-1), (x-1)^2\}</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\{(x-1)^2, (x-1)^2\}</m>, and 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\{(x-1), (x-1), (x-1), (x-1)\}</m>. 
-                    </p>
-                  </li>
-                </ul>
-                We identify the companion matrices for each possible invariant factor: 
-                <ul>
-                  <li>
-                    <p>
-                      <me>
-                        C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
-                      </me>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <me>
-                        C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
-                      </me> 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <me>
-                        C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
-                      </me> 
-                      and
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <me>
-                        C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
-                      </me> 
-                    </p>
-                  </li>
-                </ul>
-                We define the following: 
-                <ul>
-                  <li>
-                    <p>
-                        <m>B=C((x-1)^4)</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>C=C(x-1)\oplus C((x-1)^3)</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>E=C((x-1)^2)\oplus C((x-1)^2)</m>, and 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)</m>.
-                    </p>
-                  </li>
-                </ul>
-                As each of these matrices is in <xref text="title" ref="thm-rcf"/>, they are explicit representatives for each similarity class.
-              </p>
-            </solution>
-          </activity>
-
-          <activity><title>Problem 7</title>
-            <statement>
-              <p>
-                Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>.
-              </p>
-
-              <p>
-                <ol>
-                  <li>
-                    Find, with justification, the degree of <m>L</m> over <m>\Q</m>.
-                  </li>
-
-                  <li>
-                    Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>, a primitive <m>5\th</m> root of unity. 
-                    Prove <m>x^5 - 11</m> is irreducible in <m>F[x]</m>.
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>L</m> be the splitting field of <m>f(x)=x^5 - 11</m> over <m>\Q</m>.
-              </p>
-
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
-                    </p>
-
-                    <p>
-                      The roots of <m>f</m> are the following: 
-                      <ul>
-                        <li>
-                          <p>
-                            <m>\a_1=\sqrt[5]{11}\z</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>\a_2=\sqrt[5]{11}\z^2</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>\a_3=\sqrt[5]{11}\z^3</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>\a_4=\sqrt[5]{11}\z^4</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
-                          </p>
-                        </li>
-                      </ul>
-                    </p>
-
-                    <p>
-                      As <m>f</m> is monic and irreducible, it is the minimum polynomial of <m>\a_5</m>. 
-                      Let <m>E=\Q(\a_5)</m> and notice <m>[E:\Q]=5</m>.
-                    </p>
-
-                    <p>
-                      Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> by <xref provisional="prop-cylcotomic-irreducible"/>. 
-                      Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
-                    </p>
-
-                    <p>
-                      We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}</m>.
-                      Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. 
-                      By the <xref text="title" ref="thm-degree-formula"/>, we have 
-                      <ul>
-                        <li>
-                          <p>
-                            <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m>
-                          </p>
-                        </li>
-                      </ul>
-                      As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
-                    </p>
-
-                    <p>
-                      Thus we have <m>n=20</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. 
-                      From Part (a) we know <m>[L:F]=5</m>. 
-                      As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. 
-                      As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 8</title>
-            <statement>
-              <p>
-                Let <m>L</m> be the splitting field of <m>x^4-2022</m> over <m>\Q</m>. 
-                Prove there exists a unique intermediate field <m>\Q\subseteq K\subseteq L</m> such that <m>[K : \Q] = 4</m> and <m>\Q\subseteq K</m> is a Galois extension.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>L</m> be the splitting field of <m>f(x)=x^4-2022</m> over <m>\Q</m>. 
-                Let <m>\z</m> be a primitive fourth root of unity.
-                 Thus <m>\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i</m>.
-              </p>
-
-              <p>
-                Notice that the roots of <m>f</m> are the following: 
-                <ul>
-                  <li>
-                    <p>
-                      <m>\sqrt[4]{2022} i</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\sqrt[4]{2022}i^2=-\sqrt[4]{2022}</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i</m>, and 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\sqrt[4]{2022}i^4=\sqrt[4]{2022}</m>. 
-                    </p>
-                  </li>
-                </ul>
-                Thus <m>L=\Q(\sqrt[4]{2022},i)</m>.
-              </p>
-
-              <p>
-                Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. 
-                Let <m>\a=\sqrt[4]{2022}</m>, and notice that <m>f</m> is the minimum polynomial of <m>\a</m>. 
-                Let <m>K=\Q(\a)</m> and observe <m>[K:\Q]=4</m>.
-              </p>
-
-              <p>
-                As <m>i</m> is the root of the monic irreducible polynomial <m>x^2+1</m> we have <m>[L:F]=2</m> and <m>[L:\Q]=[L:F][F:\Q]=2\cdot4=8</m>. 
-                Thus <m>G=\Gal(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> of order <m>8</m>, making it <m>D_8</m>.
-              </p>
-
-              <p>
-                Notice that <m>K</m> is an extension of degree <m>24</m>, and thus by the <xref text="title" ref="thm-ftgt"/> we have a subgroup <m>H\leq G</m> such that <m>H=\Gal(L/K)</m>. 
-                As <m>[L:\Q]=[L:K][K:\Q]</m> we have <m>8=[L:K]\cdot 4</m>, and thus <m>|H|=2</m>. 
-                This makes <m>H</m> the cyclic subgroup of <m>D_8</m> generated by a reflection, the only element of order <m>2</m> in <m>D_8</m>, making it unique. 
-                This is also a normal subgroup of <m>D_8</m>, making <m>K</m> Galois over <m>\Q</m>.
-              </p>
-            </solution>
-          
-          </activity>
-
-          <activity><title>Problem 9</title>
-            <statement>
-              <p>
-                Assume <m>F\subseteq L</m> is an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>. 
-                Prove <m>L</m> is an algebraic closure of <m>F</m>.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Let <m>F\subseteq L</m> be an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>.
-              </p>
-
-              <p>
-                Let <m>f</m> be a polynomial in <m>L[x]</m>, so <m>f=a_nx^n+\dots+a_1x+a_0</m>, with <m>a_i\in L</m>, and let <m>\a</m> be a root of <m>f</m>. 
-                There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] 
-                some field extension <m>L\subseteq K</m> such that <m>K</m> is algebraically closed, meaning <m>\a\in K</m>. 
-                Notice that <m>\a</m> is algebraic over <m>L(\a)</m>.
-              </p>
-
-              <p>
-                Consider the chain of field extensions
-                <me>
-                  F\subseteq L\subseteq L(\a),
-                </me>
-                making <m>\a</m> algebraic over <m>F</m> as well. 
-                As every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>, this yields <m>\a\in L</m>.
-              </p>
-            </solution>
-          
-          </activity>
-
-        </paragraphs>
+            <introduction>
+              <p></p>
+            </introduction>
+            
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>. 
+                  Prove that <m>N\cap Z(G)\neq{1}</m>, where <m>Z(G)</m> is the center of <m>G</m>.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
+                </p>
+  
+                <p>
+                  First, we show that the center of <m>G</m> is nontrivial. 
+                  Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. 
+                  We examine the conjugacy classes of <m>G</m>. 
+                  From the <xref text="title" ref="thm-class-eq"/>, we know
+                  <me>
+                    |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
+                  </me>
+                  Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. 
+                  In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. 
+                  By <xref text="title" ref="thm-lagrange"/>, <m>[G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. 
+                  Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. 
+                  Thus <m>Z(G)\neq\{e\}</m>.
+                </p>
+  
+                <p>
+                  As <m>N\nsg G</m>, by <xref ref="thm-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
+                  Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. 
+                  This yields 
+                  <me>
+                    |N| = 1+ \sum_i^r |G : C_G(g_i)|.
+                  </me> 
+                  However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. 
+                  Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
+                </p>
+              </solution>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  A non-abelian group of order <m>27</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Prove there exists a non-abelian group of <m>27</m>. 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Find, with justification, a presentation of the group you found in part (1).
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <hint>
+                <p>
+                  Use a semi-direct product.
+                </p>
+              </hint>
+  
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>C_3 = \langle a \rangle</m> be the cyclic group of order <m>3</m>, and let <m>C_9 = \langle b \rangle</m> be the cyclic group of order <m>9</m>. 
+                        Let <m>\phi \colon C_9 \to \operatorname{Aut}(C_3)</m> be the homomorphism defined by <m>\phi(b^i)(a) = a^i</m> for <m>0 \le i \le 8</m>, where we identify <m>\operatorname{Aut}(C_3)</m> with <m>C_2</m> via the isomorphism <m>\operatorname{Aut}(C_3) \cong C_2</m> given by sending the non-identity automorphism to the generator of <m>C_2</m>.
+                      </p>
+  
+                      <p>
+                        Then the semi-direct product <m>G = C_3 \rtimes_{\phi} C_9</m> has order <m>27</m> and is non-abelian. 
+                        To see that <m>G</m> is non-abelian, note that <m>bab^{-1} \neq a</m> for any <m>b \in C_9 \setminus {1}</m>, since <m>a</m> has no non-trivial automorphisms.
+                      </p>
+                    </li>
+                      
+                    <li>
+                      <p>
+                        To find a presentation of <m>G</m>, we need to identify the generators and relations. 
+                        Since <m>C_3</m> and <m>C_9</m> are both cyclic, we can take the generators to be <m>a</m> and <m>b</m> respectively. 
+                        Moreover, since <m>C_3</m> is normal in <m>G</m>, we have <m>bab^{-1} = a^i</m> for some <m>i \in {1, 2}</m>.
+                      </p>
+  
+                      <p>
+                        To determine the value of <m>i</m>, note that <m>C_9</m> acts on <m>C_3</m> by automorphisms, and the non-identity automorphism of <m>C_3</m> is inversion <m>a \mapsto a^{-1}</m>. 
+                        Since <m>bab^{-1} \neq a^{-1}</m>, we must have <m>i = 2</m>.
+                      </p>
+  
+                      <p>
+                        Therefore, a presentation of <m>G</m> is given by <m>\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let G be a group of order <m>2^5\cdot 7^3</m>. 
+                  Prove that <m>G</m> is not simple.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. 
+                  Thus our options are <m>1</m> and <m>8</m>. 
+                  Suppose that <m>\Syl_7(G)=8</m>.
+                </p>
+  
+                <p>
+                  Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <m>\rho: G \to S_8</m> via the <xref text="title" ref="thm-permrep"/>. 
+                  This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. 
+                  Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref ref="thm-norm-iff-ker"/>. 
+                  Thus <m>G</m> is not simple.
+                </p>
+              </solution>
+            
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
+                  Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+                </p>
+  
+                <p>
+                  <ol>
+                    <li>
+                      Prove <m>IJ = I\cap J</m>. 
+                    </li>
+  
+                    <li>
+                      Prove the following special case of <xref text="title" ref="thm-sunzi"/>: 
+                      There is an isomorphism of rings of the form <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
+                  Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+                </p>
+  
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>x\in IJ</m>. 
+                        Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. 
+                        As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. 
+                        Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
+                      </p>
+  
+                      <p>
+                        Let <m>x\in I\cap J</m>. 
+                        Thus <m>x\in I</m> and <m>x\in J</m>. 
+                        Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. 
+                        So <m>x=x1=xa+xb</m>. 
+                        As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. 
+                        Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
+                      </p>
+  
+                      <p>
+                        Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. 
+                        Let <m>x\in\ker(f)</m>. 
+                        Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. 
+                        Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
+                      </p>
+  
+                      <p>
+                        Observe 
+                        <me>
+                          \begin{aligned}
+                          f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
+                          =&amp;((x+I)+(y+I),(x+J)+(y+J))\\
+                          =&amp;((x+I),(x+J))+(y+I),(y+J)\\
+                          =&amp;f(x)+f(y),
+                          \end{aligned}
+                        </me> 
+                        making <m>f</m> a homomorphism of rings.
+                      </p>
+  
+                      <p>
+                        Let <m>(a+I,b+J)\in R/I\times R/J</m>. 
+                        As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. 
+                        However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
+                      </p>
+  
+                      <p>
+                        Consider the element <m>x=(a_j+b_i)\in R</m>, and observe 
+                        <me>
+                          f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
+                        </me>
+                        However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see 
+                        <me>
+                          (a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
+                        </me> 
+                        Thus <m>f</m> is a surjective homomorphism. 
+                        Hence, by the <xref text="title" ref="thm-ring-fit"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            
+            </exercise>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Prove the Rank-Nullity Theorem: If <m>F</m> is a field, <m>V</m> and <m>W</m> are a finite dimensional <m>F</m> -vector spaces, and <m>g : V \to W</m> is an <m>F</m>-linear transformation, then <me>\rank(g) + \operatorname{nullity}(g) = \dim(V). </me>(Recall the <em>rank</em> of <m>g</m> is the dimension of its image and the nullity of <m>g</m> is the dimension of its kernel.)
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  See: <xref text="title" ref="thm-rank-nullity"/>
+                </p>
+              </solution>
+            
+            </exercise>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and <m>n</m> a positive integer. 
+                  We say an <m>n\times n</m> matrix <m>A</m> with entries in <m>F</m> is <em>unipotent</em> if <m>A-In</m> is nilpotent (i.e., <m>(A-In)^k = 0</m> for some <m>k \geq 1</m>). 
+                  For the field <m>F = \Q</m>, find (with complete justification) the number of similarity classes of <m>4\times 4</m> unipotent matrices and give an explicit representative for each class.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>F=\Q</m>, <m>n</m> a positive integer, and <m>A</m> a unipotent <m>4\times 4</m> matrix with entries in <m>F</m>. 
+                  Thus <m>A-I</m> is nilpotent. 
+                  Let <m>\l</m> be an eigenvalue of <m>A-I</m>. 
+                  Then <m>(A-I)v=\l v</m>, so <m>Av-Iv=\l v</m> and <m>Av=\l v+Iv</m>. 
+                  As <m>Iv=v</m>, we have <m>Av=\l v+v</m> and <m>Av=(\l+1)v</m>.
+                </p>
+  
+                <p>
+                  Notice that as <m>\l</m> is an eigenvalue of <m>I</m>, we have <m>\l +1</m> as an eigenvalue of <m>A</m>.
+                </p>
+  
+                <p>
+                  Assume inductively that <m>\l^{n-1}</m> is an eigenvalue of <m>(A-I)^{n-1}</m>.
+                  Notice 
+                  <me>
+                    (A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+                  </me>
+                  making <m>\l</m> an eigenvalue of <m>(A+I)^n</m>. 
+                  Thus if <m>\l</m> is an eigenvalue of <m>A-I</m>, it is an eigenvalue of <m>(A-I)^n</m> as well. 
+                  As <m>(A-I)</m> is nilpotent, there exists some <m>k</m> such that <m>(A-I)^k=0</m>. 
+                  This means that <m>\l^kv=0</m>. 
+                  As <m>v\neq 0</m> and <m>\l^k</m> is a scalar in a field (and hence integral domain) we have <m>\l=0</m>. 
+                  Thus the only eigenvalue of <m>(A-I)</m> is <m>0</m>, meaning that the only eigenvalue of <m>A</m> is <m>1</m>.
+                </p>
+  
+                <p>
+                  Eigenvalues of <m>A</m> correspond to the roots of <m>\cp_A(x)</m>, which is a monic quartic polynomial, as <m>A</m> is a <m>4\times 4</m> matrix. 
+                  Thus <m>\cp_A(x)=(x-1)^4</m>, as all roots must be <m>1</m>.
+                </p>
+  
+                <p>
+                  Two matrices are similar if and only if they share the same invariant factors. 
+                  Given that invariant factors divide <m>\cp_A(x)</m> and each invariant factor must divide the following one, the possible sets of invariant factors for <m>A</m> are the following: 
+                  <ul>
+                    <li>
+                      <p>
+                        <m>\{(x-1)^4\}</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\{(x-1),(x-1)^3\}</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\{(x-1), (x-1), (x-1)^2\}</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\{(x-1)^2, (x-1)^2\}</m>, and 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\{(x-1), (x-1), (x-1), (x-1)\}</m>. 
+                      </p>
+                    </li>
+                  </ul>
+                  We identify the companion matrices for each possible invariant factor: 
+                  <ul>
+                    <li>
+                      <p>
+                        <me>
+                          C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+                        </me>
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <me>
+                          C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+                        </me> 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <me>
+                          C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+                        </me> 
+                        and
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <me>
+                          C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+                        </me> 
+                      </p>
+                    </li>
+                  </ul>
+                  We define the following: 
+                  <ul>
+                    <li>
+                      <p>
+                          <m>B=C((x-1)^4)</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>C=C(x-1)\oplus C((x-1)^3)</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>E=C((x-1)^2)\oplus C((x-1)^2)</m>, and 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)</m>.
+                      </p>
+                    </li>
+                  </ul>
+                  As each of these matrices is in <xref text="title" ref="thm-rcf"/>, they are explicit representatives for each similarity class.
+                </p>
+              </solution>
+            </exercise>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>.
+                </p>
+  
+                <p>
+                  <ol>
+                    <li>
+                      Find, with justification, the degree of <m>L</m> over <m>\Q</m>.
+                    </li>
+  
+                    <li>
+                      Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>, a primitive <m>5\th</m> root of unity. 
+                      Prove <m>x^5 - 11</m> is irreducible in <m>F[x]</m>.
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>L</m> be the splitting field of <m>f(x)=x^5 - 11</m> over <m>\Q</m>.
+                </p>
+  
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
+                      </p>
+  
+                      <p>
+                        The roots of <m>f</m> are the following: 
+                        <ul>
+                          <li>
+                            <p>
+                              <m>\a_1=\sqrt[5]{11}\z</m> 
+                            </p>
+                          </li>
+  
+                          <li>
+                            <p>
+                              <m>\a_2=\sqrt[5]{11}\z^2</m> 
+                            </p>
+                          </li>
+  
+                          <li>
+                            <p>
+                              <m>\a_3=\sqrt[5]{11}\z^3</m> 
+                            </p>
+                          </li>
+  
+                          <li>
+                            <p>
+                              <m>\a_4=\sqrt[5]{11}\z^4</m> 
+                            </p>
+                          </li>
+  
+                          <li>
+                            <p>
+                              <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
+                            </p>
+                          </li>
+                        </ul>
+                      </p>
+  
+                      <p>
+                        As <m>f</m> is monic and irreducible, it is the minimum polynomial of <m>\a_5</m>. 
+                        Let <m>E=\Q(\a_5)</m> and notice <m>[E:\Q]=5</m>.
+                      </p>
+  
+                      <p>
+                        Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> by <xref provisional="prop-cylcotomic-irreducible"/>. 
+                        Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
+                      </p>
+  
+                      <p>
+                        We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}</m>.
+                        Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. 
+                        By the <xref text="title" ref="thm-degree-formula"/>, we have 
+                        <ul>
+                          <li>
+                            <p>
+                              <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
+                            </p>
+                          </li>
+  
+                          <li>
+                            <p>
+                              <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m>
+                            </p>
+                          </li>
+                        </ul>
+                        As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
+                      </p>
+  
+                      <p>
+                        Thus we have <m>n=20</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. 
+                        From Part (a) we know <m>[L:F]=5</m>. 
+                        As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. 
+                        As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+  
+              </solution>
+            
+            </exercise>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>L</m> be the splitting field of <m>x^4-2022</m> over <m>\Q</m>. 
+                  Prove there exists a unique intermediate field <m>\Q\subseteq K\subseteq L</m> such that <m>[K : \Q] = 4</m> and <m>\Q\subseteq K</m> is a Galois extension.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>L</m> be the splitting field of <m>f(x)=x^4-2022</m> over <m>\Q</m>. 
+                  Let <m>\z</m> be a primitive fourth root of unity.
+                   Thus <m>\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i</m>.
+                </p>
+  
+                <p>
+                  Notice that the roots of <m>f</m> are the following: 
+                  <ul>
+                    <li>
+                      <p>
+                        <m>\sqrt[4]{2022} i</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\sqrt[4]{2022}i^2=-\sqrt[4]{2022}</m>, 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i</m>, and 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>\sqrt[4]{2022}i^4=\sqrt[4]{2022}</m>. 
+                      </p>
+                    </li>
+                  </ul>
+                  Thus <m>L=\Q(\sqrt[4]{2022},i)</m>.
+                </p>
+  
+                <p>
+                  Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. 
+                  Let <m>\a=\sqrt[4]{2022}</m>, and notice that <m>f</m> is the minimum polynomial of <m>\a</m>. 
+                  Let <m>K=\Q(\a)</m> and observe <m>[K:\Q]=4</m>.
+                </p>
+  
+                <p>
+                  As <m>i</m> is the root of the monic irreducible polynomial <m>x^2+1</m> we have <m>[L:F]=2</m> and <m>[L:\Q]=[L:F][F:\Q]=2\cdot4=8</m>. 
+                  Thus <m>G=\Gal(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> of order <m>8</m>, making it <m>D_8</m>.
+                </p>
+  
+                <p>
+                  Notice that <m>K</m> is an extension of degree <m>24</m>, and thus by the <xref text="title" ref="thm-ftgt"/> we have a subgroup <m>H\leq G</m> such that <m>H=\Gal(L/K)</m>. 
+                  As <m>[L:\Q]=[L:K][K:\Q]</m> we have <m>8=[L:K]\cdot 4</m>, and thus <m>|H|=2</m>. 
+                  This makes <m>H</m> the cyclic subgroup of <m>D_8</m> generated by a reflection, the only element of order <m>2</m> in <m>D_8</m>, making it unique. 
+                  This is also a normal subgroup of <m>D_8</m>, making <m>K</m> Galois over <m>\Q</m>.
+                </p>
+              </solution>
+            
+            </exercise>
+  
+            <exercise>
+              <statement>
+                <p>
+                  Assume <m>F\subseteq L</m> is an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>. 
+                  Prove <m>L</m> is an algebraic closure of <m>F</m>.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>F\subseteq L</m> be an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>.
+                </p>
+  
+                <p>
+                  Let <m>f</m> be a polynomial in <m>L[x]</m>, so <m>f=a_nx^n+\dots+a_1x+a_0</m>, with <m>a_i\in L</m>, and let <m>\a</m> be a root of <m>f</m>. 
+                  There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] 
+                  some field extension <m>L\subseteq K</m> such that <m>K</m> is algebraically closed, meaning <m>\a\in K</m>. 
+                  Notice that <m>\a</m> is algebraic over <m>L(\a)</m>.
+                </p>
+  
+                <p>
+                  Consider the chain of field extensions
+                  <me>
+                    F\subseteq L\subseteq L(\a),
+                  </me>
+                  making <m>\a</m> algebraic over <m>F</m> as well. 
+                  As every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>, this yields <m>\a\in L</m>.
+                </p>
+              </solution>
+            
+            </exercise>
+
+          </exercisegroup>
+
+        </exercises>
 
       </appendix>
 
