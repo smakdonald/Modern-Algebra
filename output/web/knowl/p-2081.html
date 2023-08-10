@@ -12,7 +12,13 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">This action is faithful: if <span class="process-math">\(\sigma\)</span> fixes all the roots <span class="process-math">\(\alpha_{1}, \ldots, \alpha_{n}\)</span> of <span class="process-math">\(f\text{,}\)</span> then it fixes every element of <span class="process-math">\(F\left(\alpha_{1}, \ldots, \alpha_{n}\right)=L\text{.}\)</span> Thus the corresponding group homomorphism <span class="process-math">\(\operatorname{Aut}(L / F) \rightarrow \operatorname{Aut}(S)\)</span> is injective. On the other hand, the group of automorphisms on a set of <span class="process-math">\(n\)</span> elements is isomorphic to <span class="process-math">\(S_{n}\text{,}\)</span> so we have an inclusion of <span class="process-math">\(\operatorname{Aut}(L / F)\)</span> into <span class="process-math">\(S_{n}\text{,}\)</span> and thus <span class="process-math">\(\operatorname{Aut}(L / F)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_{n}\text{.}\)</span>
+<div class="para logical">
+<div class="para">By assumption, <span class="process-math">\(\sigma\)</span> is a homomorphism and it restricts to the identity on <span class="process-math">\(F\text{.}\)</span> Thus for any polynomial <span class="process-math">\(q=a_{n} x^{n}+\cdots+a_{0} \in F[x]\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(q(c))=\sigma\left(a_{n} c^{n}+\cdots+a_{0}\right)=\sigma\left(a_{n}\right) \sigma(c)^{n}+\cdots+\sigma\left(a_{0}\right)=a_{n} \sigma(c)^{n}+\cdots+a_{0}=q(\sigma(c)).
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-2081" class="internal">in-context</a></span>
 </body>

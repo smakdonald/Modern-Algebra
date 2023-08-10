@@ -13,17 +13,37 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G=\operatorname{Aut}(L / F)\text{.}\)</span> To see that the the action above is well-defined, notice that if <span class="process-math">\(b \in S\)</span> then <span class="process-math">\(\sigma(b) \in S\)</span> by Lemma 6.10. <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> Now we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Let <span class="process-math">\(L\)</span> be a field and let <span class="process-math">\(\sigma \in \operatorname{Aut}(L)\text{.}\)</span> Then the <a href="" class="xref" data-knowl="./knowl/thm-ump-polynomial-rings.html" title="Theorem 7.44: UMP for Polynomial Rings">Theorem 7.44</a> gives that there is an induced ring homomorphism <span class="process-math">\((-)^{\sigma}: L[x] \rightarrow L[x]\)</span> such that for each <span class="process-math">\(q=a_{n} x^{n}+\cdots+a_{0} \in K[x]\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-polynomial-rings.html">
 \begin{equation*}
-\begin{gathered}
-\sigma \cdot\left(\sigma^{\prime} \cdot b\right)=\sigma\left(\sigma^{\prime}(b)\right)=\left(\sigma \circ \sigma^{\prime}\right)(b) \quad \text { for all } \sigma, \sigma^{\prime} \in G, b \in S, \\
-1_{G} \cdot b=\operatorname{id}_{K}(b)=b \quad \text { for all } \sigma \in G \text { and } b \in S,
-\end{gathered}
+q^{\sigma}(x)=\sigma\left(a_{n}\right) x^{n}+\cdots+\sigma\left(a_{0}\right).
 \end{equation*}
 </div>
-<div class="para">so the given formula does indeed define an action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\text{.}\)</span>
+<div class="para">If <span class="process-math">\(\sigma \in \operatorname{Aut}(L / K)\)</span> and <span class="process-math">\(q \in K[x]\text{,}\)</span> then <span class="process-math">\(q^{\sigma}=q\text{.}\)</span>
 </div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">By assumption, <span class="process-math">\(\sigma\)</span> is a homomorphism and it restricts to the identity on <span class="process-math">\(F\text{.}\)</span> Thus for any polynomial <span class="process-math">\(q=a_{n} x^{n}+\cdots+a_{0} \in F[x]\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(q(c))=\sigma\left(a_{n} c^{n}+\cdots+a_{0}\right)=\sigma\left(a_{n}\right) \sigma(c)^{n}+\cdots+\sigma\left(a_{0}\right)=a_{n} \sigma(c)^{n}+\cdots+a_{0}=q(\sigma(c)).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">If <span class="process-math">\(\alpha\)</span> is a root of <span class="process-math">\(f\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+0=\sigma(0) &amp; =\sigma(q(\alpha)) \\
+&amp; =q(\sigma(\alpha)) \quad \text { by a })
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">showing that <span class="process-math">\(\sigma(\alpha)\)</span> is also a root of <span class="process-math">\(q\text{.}\)</span>
+</div>
+</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-2080" class="internal">in-context</a></span>
 </body>

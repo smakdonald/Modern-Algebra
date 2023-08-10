@@ -12,12 +12,18 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">E.20.1</span><span class="period">.</span>
-</h3>
-<div class="para">First, we know that <span class="process-math">\(G=C_{21}\)</span> is a group of order <span class="process-math">\(21\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 6.9: Cauchy's Theorem">Cauchy's Theorem</a>, as <span class="process-math">\(3\)</span> and <span class="process-math">\(7\)</span> are primes dividing the order of <span class="process-math">\(G\)</span> there exist elements <span class="process-math">\(k,h\)</span> of orders <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> respectively. Consider <span class="process-math">\(K=\langle k\rangle\)</span> and <span class="process-math">\(H=\langle h\rangle\text{,}\)</span> both of which are subgroups of <span class="process-math">\(C_{21}\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.8: Lagrange's Theorem">Lagrange's Theorem</a> we see <span class="process-math">\([C_{21}:H]=3\text{,}\)</span> the smallest prime dividing <span class="process-math">\(21\text{,}\)</span> making <span class="process-math">\(H\)</span> normal in <span class="process-math">\(G.\)</span> Thus <span class="process-math">\(HK\leq G\text{,}\)</span> but as <span class="process-math">\(K\cap H=\{e\}\)</span> we have <span class="process-math">\(|HK|=21=|G|\)</span> and thus that <span class="process-math">\(HK=G\text{.}\)</span> By the [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have <span class="process-math">\(H\sdp_\rho K\cong G\text{,}\)</span> where <span class="process-math">\(\rho:K\to\Aut(H)\)</span> is the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.6: The Permutation Representation">The Permutation Representation</a> of the action of <span class="process-math">\(K\)</span> on <span class="process-math">\(H\)</span> via automorphisms given by conjugation in <span class="process-math">\(G\text{.}\)</span>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">B.1.1.1</span><span class="period">.</span>
+</h4>
+<div class="para logical"><ol class="lower-alpha">
+<li>
+<div class="para">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\)</span> by left multiplication, yielding the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> Let <span class="process-math">\(N\)</span> conspicuously denote the kernel of this function.</div>
+<div class="para">Let <span class="process-math">\(x\in N\text{.}\)</span> Then <span class="process-math">\(\rho(n)\text{,}\)</span> the automorphism <span class="process-math">\(\s:G/K\to G/K\)</span> defined by <span class="process-math">\(\s(gK)=xgK\)</span> is precisely the identity permutation. Thus <span class="process-math">\(xgK=gK\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(g\inv xgK=K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> so <span class="process-math">\(x\in\text{.}\)</span> This means the elements of <span class="process-math">\(N\)</span> are precisely those that are in the conjugacy class of <span class="process-math">\(gKg\inv\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> There cannot exist a larger normal subgroup of <span class="process-math">\(G\)</span> contained in <span class="process-math">\(K\text{,}\)</span> as it would contain an element that was not in some conjugacy class for <span class="process-math">\(G\text{,}\)</span> negating the definition of a normal subgroup.</div>
+</li>
+<li><div class="para">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.43: First Isomorphism Theorem">First Isomorphism Theorem</a> tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
+</div></li>
+</ol></div>
 </div>
-</div>
-<span class="incontext"><a href="section-66.html#solution-46" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-qual.html#solution-46" class="internal">in-context</a></span>
 </body>
 </html>
