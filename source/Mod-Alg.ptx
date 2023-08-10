@@ -9100,6 +9100,12 @@
                   </p>
                 </proof>
               </theorem>
+
+              <paragraphs><title>Qual Watch</title>
+                <p>
+                  Proving Part (2) of <xref ref="integral-domains-and-fields"/> was Part (a) of <xref ref="jan-2022-4"/> on the <xref text="title" ref="jan-2022"/> qualifying exam.
+                </p>
+              </paragraphs>
   
               <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
                 <p>
@@ -10453,10 +10459,16 @@
     
               <proof>
                 <p>
-                  If <m>I</m> is maximal, then <m>R/I</m> is a field, which in particular implies that <m>R/I</m> is a domain, so <m>I</m> is prime.
+                  If <m>I</m> is maximal, then <m>R/I</m> is a field by <xref ref="thm-maximal-iff-field"/> which in particular implies that <m>R/I</m> is a domain, so <m>I</m> is prime by <xref ref="thm-prime-iff-domain"/>.
                 </p>
               </proof>
             </corollary>
+
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="cor-maximal-prime"/> was <xref ref="jan-2021-4"/> on the <xref text="title" ref="jan-2021"/> qualifying exam.
+              </p>
+            </paragraphs>
 
             <p>
               Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.
@@ -10548,6 +10560,12 @@
               </p>
             </statement>
           </definition>
+
+          <paragraphs><title>Qual Watch</title>
+            <p>
+              Stating <xref ref="def-ed"/> was Part (a) of <xref ref="jan-2020-4"/> on the <xref text="title" ref="jan-2020"/> qualifying exam.
+            </p>
+          </paragraphs>
 
           <p>
             In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. 
@@ -10703,11 +10721,17 @@
             </statement>
           </definition>
     
-          <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings over Fields are PIDs</title>
+          <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings PID iff Field</title>
             <p>
-              For any field <m>F</m>, every ideal of <m>F[x]</m> is principal (<m>F[x]</m> is a PID)
+              A polynomial ring <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
             </p>
           </exercise>
+
+          <paragraphs><title>Qual Watch</title>
+            <p>
+              Proving <xref ref="exe-fx-is-a-pid"/> was <xref ref="june-2016-8"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
+            </p>
+          </paragraphs>
     
           <theorem xml:id="thm-ed-is-a-pid"><title>Euclidean Domains are PIDs</title>
             <statement>
@@ -10749,13 +10773,19 @@
             </p>
           </example>
     
-          <proposition xml:id="exe-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
+          <proposition xml:id="prop-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
             <statement>
               <p>
                 If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
               </p>
             </statement>
           </proposition>
+
+          <paragraphs><title>Qual Watch</title>
+            <p>
+              Proving <xref ref="prop-nonzero-primes-maximal-in-pid"/> was <xref ref="jan-2023-4"/> on the <xref text="title" ref="jan-2023"/> qualifying exam.
+            </p>
+          </paragraphs>
     
           <definition xml:id="def-associate"><title>Associate</title>
             <statement>
@@ -16582,56 +16612,6 @@
                 Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. 
               </p>
             </remark>
-    
-            <theorem xml:id="thm-relatively-prime-extension">
-              <statement>
-                <p>
-                  Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
-                  If <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
-                </p>
-              </statement>
-    
-              <proof>
-                <p>
-                  Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
-                </p>
-      
-                <p>
-                  Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
-                </p>
-
-                <p>
-                  First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. 
-                  Suppose then that <m>d&gt;1</m>. 
-                  There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. 
-                  Consider <m>K(r)</m>. 
-                  As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. 
-                  Using the <xref text="title" ref="thm-degree-formula"/> we see that 
-                  <me>
-                    [K(r):F]=[K(r):K][K:F]=qn.
-                  </me> 
-                  However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. 
-                  As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. 
-                  But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. 
-                  As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so <m>f=kg</m> for some <m>k\in F</m>. 
-                  As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
-                </p>
-              </proof>
-            </theorem>
-
-            <p>
-              The statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
-            </p>
-
-            <example>
-              <p>
-                Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. 
-                Let <m>K=F[x]/p(x)</m>. 
-                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. 
-                Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>.
-                Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
-              </p>
-            </example>
 
           </subsection>
         
@@ -16814,6 +16794,62 @@
                 </p>
               </proof>
             </theorem>
+
+            <theorem xml:id="thm-relatively-prime-extension"><title>Relatively Prime Degrees and Irreducibility</title>
+              <statement>
+                <p>
+                  Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
+                  If <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
+                </p>
+      
+                <p>
+                  Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
+                </p>
+
+                <p>
+                  First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. 
+                  Suppose then that <m>d&gt;1</m>. 
+                  There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. 
+                  Consider <m>K(r)</m>. 
+                  As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. 
+                  Using the <xref text="title" ref="thm-degree-formula"/> we see that 
+                  <me>
+                    [K(r):F]=[K(r):K][K:F]=qn.
+                  </me> 
+                  However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. 
+                  As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. 
+                  But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. 
+                  As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so <m>f=kg</m> for some <m>k\in F</m>. 
+                  As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <p>
+              The statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
+            </p>
+
+            <example>
+              <p>
+                Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. 
+                Let <m>K=F[x]/p(x)</m>. 
+                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. 
+                Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>.
+                Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
+              </p>
+            </example>
+
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="thm-relatively-prime-extension"/> was <xref ref="jan-2023-7"/> on the <xref text="title" ref="jan-2023"/> qualifying exam and <xref ref="may-2017-7"/> on the <xref text="title" ref="may-2017"/> qualifying exam.
+              </p>
+            </paragraphs>
         
           </subsection>
 
@@ -19417,7 +19453,7 @@
                 <p></p>
               </introduction>
 
-              <exercise xml:id="jan-2023-1"><title>Problem 1</title>
+              <exercise xml:id="jan-2023-1" number="1"><title>Problem 1</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime dividing the order of <m>G</m>. 
@@ -19428,6 +19464,35 @@
                 <solution>
                   <p>
                     This is <xref ref="thm-smallest-prime-normal"/>.
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="jan-2023-4" number="4"><title>Problem 4</title>
+                <statement>
+                  <p>
+                    Prove that in a principal ideal domain a nonzero ideal is prime if and only if it is maximal.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    This is <xref ref="prop-nonzero-primes-maximal-in-pid"/>.
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="jan-2023-7" number="7"><title>Problem 7</title>
+                <statement>
+                  <p>
+                    Let <m>K ⊆ L</m> be a finite extension of fields and assume <m>f (x)</m> is a polynomial with coefficients in <m>K</m> that is irreducible in the ring <m>K[x]</m>. 
+                    Prove <m>f (x)</m> remains irreducible when regarded as an element of the ring <m>L[x]</m> provided <m>[L : K]</m> is relatively prime to the degree of <m>f (x)</m>.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    See: <xref ref="thm-relatively-prime-extension"/>.
                   </p>
                 </solution>
               </exercise>
@@ -20088,6 +20153,95 @@
                 </solution>
               </exercise>
 
+              <exercise xml:id="jan-2022-4" number="4"><title>Problem 4</title>
+                <statement>
+                  <p>
+                    <ol>
+                      <li>
+                        Prove that a finite integral domain <m>D</m> must be a field.
+                      </li>
+      
+                      <li>
+                        Prove that if <m>R</m> is a commutative ring and <m>P\subseteq R</m> is a prime ideal such that <m>P</m> has finite index as an additive subgroup of <m>R</m>, then <m>P</m> is a maximal ideal. 
+                        Give an example to show that this implication may fail if the finite index assumption is dropped.
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          See: <xref ref="integral-domains-and-fields"/>.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </solution>
+              </exercise>
+
+            </exercisegroup>
+
+            <exercisegroup xml:id="jan-2021"><title>January 2021</title>
+
+              <introduction>
+                <p></p>
+              </introduction>
+
+              <exercise xml:id="jan-2021-4" number="4"><title>Problem 4</title>
+                <statement>
+                  <p>
+                    Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>.
+                  </p>
+        
+                  <p>
+                    <ol>
+                      <li>
+                        Prove that every maximal ideal of <m>R</m> is a prime ideal.
+                      </li>
+        
+                      <li>
+                        Assume <m>R</m> is a finite ring. 
+                        Prove that every prime ideal is a maximal ideal.
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          See: <xref ref="cor-maximal-prime"/>.
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          Let <m>R</m> be a finite ring, and let <m>P</m> be a prime ideal in <m>R</m>. 
+                          By <xref ref="thm-prime-iff-domain"/> <m>R/P</m> is a finite integral domain.
+                          We show <m>R/P</m> is a field. 
+                          Let <m>a\not\in P</m>, and consider <m>a^n</m> for all <m>n\in\N</m>. 
+                          As <m>R/P</m> is finite, there exists some <m>k&lt;m\in N</m> such that <m>a^k=a^m</m>. 
+                          Then <m>a^{m-k}\cdot a^k=a^m=a^k</m>, meaning that <m>a^{m-k}=e</m>. 
+                          Thus <m>a</m> has inverse <m>a^{m-k-1}</m>, making <m>a</m> a unit.
+                          Thus <m>R/P</m> is a field, making <m>P</m> a maximal ideal by <xref ref="thm-maximal-iff-field"/>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </solution>
+              </exercise>
+
             </exercisegroup>
 
             <exercisegroup xml:id="june-2020"><title>June 2020</title>
@@ -20193,6 +20347,91 @@
                      </li>
                    </ol>
                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="jan-2020-4" number="4"><title>Problem 4</title>
+                <statement>
+                  <p>
+                    Let <m>R</m> be a commutative domain. 
+                    <ol>
+                      <li>
+                        <p>
+                          State the definition for <m>R</m> to be a Euclidean domain. 
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          Prove that in a Euclidean domain every ideal is principal.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Let <m>R</m> be a commutative domain.
+                 </p>
+   
+                 <p>
+                   <ol>
+                     <li>
+                       <p>
+                         See: <xref text="title" ref="def-ed"/>
+                       </p>
+                     </li>
+   
+                     <li>
+                       <p>
+                        Let <m>I</m> be an ideal in <m>R</m>, and let <m>S</m> denote the set of norms for a nonzero generating set of <m>I</m>. 
+                        If none exist then <m>I=(0)</m> then in it is principally generated, so we can assume there is some nonzero <m>x\in I</m>, meaning our set <m>S</m> is nonempty.
+                      </p>
+        
+                      <p>
+                        As <m>S</m> is a set of natural numbers bounded below, by the 
+                        Least Upper Bound Axiom 
+                        there exists a smallest element. Let <m>b</m> denote the nonzero element in <m>S</m> with smallest norm.
+                      </p>
+        
+                      <p>
+                        Suppose <m>a</m> and <m>b</m> are nonzero elements of the generating set for <m>I</m>. 
+                        As <m>R</m> is an ED there exist <m>q,r\in R</m> such that <m>a=qb+r</m> with either <m>r=0</m> or <m>N(r)&lt;N(b)</m>.
+                      </p>
+        
+                      <p>
+                        Notice that <m>r=a-qb</m>, where <m>a\in I</m> and <m>-qb\in I</m> by absorption. 
+                        Thus <m>r\in I</m>, meaning that <m>N(r)\geq N(b)</m>. 
+                        Thus <m>r=0</m> and <m>a=qb</m>, meaning that <m>a\in (b)</m>. 
+                        Thus every element in the generating set for <m>I</m> is contained in <m>(b)</m>, and thus <m>I=(b)</m>, making <m>I</m> principally generated.
+                      </p>
+                     </li>
+                   </ol>
+                 </p>
+                </solution>
+              </exercise>
+
+            </exercisegroup>
+
+            <exercisegroup xml:id="may-2017"><title>May 2017</title>
+
+              <introduction>
+                <p></p>
+              </introduction>
+
+              <exercise xml:id="may-2017-7" number="7"><title>Problem 7</title>
+                <statement>
+                  <p>
+                    Let <m>F \sse L</m> be a finite extension of fields and let <m>f(x) \in F[x]</m> be an irreducible polynomial of degree <m>d</m>. 
+                    Prove that, if <m>\gcd(d,[L : F ]) = 1</m>, then <m>f (x)</m> is also irreducible in <m>L[x]</m>.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    See: <xref ref="thm-relatively-prime-extension"/>.
+                  </p>
                 </solution>
               </exercise>
 
@@ -20307,6 +20546,37 @@
                       </li>
                     </ol>
                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="june-2016-8" number="8"><title>Problem 8</title>
+                <statement>
+                  <p>
+                    Let <m>R</m> be a commutative ring and <m>x</m> an indeterminant. 
+                    Prove that <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Let <m>R</m> be a commutative ring and <m>x</m> an indeterminant.
+                  </p>
+      
+                  <p>
+                    First, suppose <m>R[x]</m> is a PID. 
+                    Let <m>I</m> be a nonzero ideal in <m>R</m>, and consider the ideal <m>(I,x)\in R[x]</m>. 
+                    As <m>R[x]</m> is a PID we see <m>(I,x)=(z)</m> for some <m>z\in R[x]</m>. Then <m>z|x</m>, but <m>x</m> is an indeterminant and thus irreducible, so <m>z</m> must be a unit or <m>x</m> itself. 
+                    But <m>z</m> also generates <m>I</m>, so <m>z</m> can't be <m>x</m>, so <m>z</m> is a unit, meaning <m>z\in R</m> and so <m>I=(R)</m>. 
+                    Thus the only ideals of <m>R</m> are <m>(0)</m> and <m>R</m>, making <m>R</m> a field.
+                  </p>
+      
+                  <p>
+                    Next, suppose <m>R</m> is a field. 
+                    Let <m>J</m> be an ideal in <m>R[x]</m>. 
+                    If <m>J\in R</m> then <m>J=R</m> or <m>J=(0)</m>, both of which are principal. 
+                    Thus <m>x\in J</m>, and so <m>J=(x)</m>, making <m>J</m> principal as well. 
+                    Hence <m>R[x]</m> is a PID.
+                  </p>
                 </solution>
               </exercise>
 

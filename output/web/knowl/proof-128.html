@@ -12,17 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(F \subseteq K\)</span> be a finite extension of fields of degree <span class="process-math">\(n = [K : F ]\text{.}\)</span>
-</div> <div class="para">Suppose that <span class="process-math">\(f \in F[x]\)</span> is irreducible of degree <span class="process-math">\(d\)</span> and <span class="process-math">\(\gcd(d, n) = 1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">First, note that if <span class="process-math">\(d=1\)</span> then <span class="process-math">\(f(x)\)</span> will remain irreducible in <span class="process-math">\(K[x]\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Suppose then that <span class="process-math">\(d&gt;1\text{.}\)</span> There exists an algebraically closed extension <span class="process-math">\(\widetilde F\)</span> such that <span class="process-math">\(f\)</span> has a root <span class="process-math">\(r\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Consider <span class="process-math">\(K(r)\text{.}\)</span> As <span class="process-math">\(r\)</span> is algebraic in <span class="process-math">\(K(r)\)</span> we know there exists some unique irreducible minimum polynomial <span class="process-math">\(g\)</span> of degree <span class="process-math">\(q\text{,}\)</span> and thus that <span class="process-math">\([K(r):K]=q\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Using the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 15.37: The Degree Formula">The Degree Formula</a> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="   ./knowl/thm-degree-formula.html">
-\begin{equation*}
-[K(r):F]=[K(r):K][K:F]=qn.
-\end{equation*}
-</div>
-<div class="para">However, <span class="process-math">\([K(r):F]=[K(r):F(r)][F(r):F]\)</span> and so <span class="process-math">\(qn=md\)</span> for some <span class="process-math">\(m\in\Z\text{,}\)</span> so <span class="process-math">\(d|qn\text{.}\)</span> As <span class="process-math">\(\gcd(n,d)=1\)</span> we must have <span class="process-math">\(d|q\text{.}\)</span> But <span class="process-math">\(q\)</span> was defined to be the degree of <span class="process-math">\(g\text{,}\)</span> which divides <span class="process-math">\(f\text{.}\)</span> As <span class="process-math">\(d|q\)</span> and <span class="process-math">\(q\leq d\text{,}\)</span> we see that <span class="process-math">\(d=q\text{,}\)</span> so <span class="process-math">\(f=kg\)</span> for some <span class="process-math">\(k\in F\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(K[x]\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="sec-algebraic.html#proof-128" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(\Rightarrow\)</span> (2): Given a non-constant <span class="process-math">\(f(x) \in L[x]\text{,}\)</span> by assumption <span class="process-math">\(f\)</span> has a root <span class="process-math">\(a \in L\)</span> and thus <span class="process-math">\(f(x) = (x - a)g(x)\)</span> with <span class="process-math">\(g(x) \in L[x]\text{.}\)</span> But then <span class="process-math">\(g\)</span> also has a root and so it too factors, and so on.</div></li>
+<li><div class="para">
+<span class="process-math">\(\Rightarrow\)</span> (3): Say <span class="process-math">\(L \subseteq E\)</span> is algebraic. Pick <span class="process-math">\(\a \in E\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is a root of some <span class="process-math">\(f(x) \in F[x]\text{.}\)</span> But since <span class="process-math">\(f\)</span> factors completely, <span class="process-math">\(\a \in L\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\Rightarrow\)</span> (1). Pick a non-constant <span class="process-math">\(f(x) \in L[x]\text{.}\)</span> By <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> , there there is finite extension <span class="process-math">\(L'\)</span> of <span class="process-math">\(L\)</span> in which <span class="process-math">\(f\)</span> does have a root. By assumption <span class="process-math">\(L = L'\)</span> and so this root must be in <span class="process-math">\(L\text{.}\)</span>
+</div></li>
+</ol></div></article><span class="incontext"><a href="sec-closure.html#proof-128" class="internal">in-context</a></span>
 </body>
 </html>

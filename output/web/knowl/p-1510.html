@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module and <span class="process-math">\(m_1, \dots, m_n \in M\text{.}\)</span> An <span class="process-math">\(R\)</span>-<em class="emphasis">linear combination</em> of <span class="process-math">\(m_1, \dots, m_n\)</span> is an element of <span class="process-math">\(M\)</span> of the form <span class="process-math">\(r_1m_1 + \cdots + r_nm_n\)</span> for some <span class="process-math">\(n \geq 0\)</span> and <span class="process-math">\(r_1,\dots,r_n \in R\text{.}\)</span> (If <span class="process-math">\(n = 0\text{,}\)</span> this gives the empty sum which is interpreted to give <span class="process-math">\(0_M\text{.}\)</span>) </div>
-<span class="incontext"><a href="sec-linear-ind-gen.html#p-1510" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">For the second isomorphism theorem, we need to first check that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are submodules. From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span> Now, we know from 817 that there is an isomorphism of abelian groups <span class="process-math">\(h: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(h(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(h\)</span> preserves scaling:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-modhom.html#p-1510" class="internal">in-context</a></span>
 </body>
 </html>
