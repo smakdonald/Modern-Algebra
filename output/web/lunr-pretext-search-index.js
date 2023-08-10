@@ -3493,9 +3493,9 @@ var ptx_lunr_docs = [
   "body": "Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )      "
 },
 {
-  "id": "thm-ump-for-polynomial-rings",
+  "id": "thm-ump-polynomial-rings",
   "level": "2",
-  "url": "sec-sub-poly.html#thm-ump-for-polynomial-rings",
+  "url": "sec-sub-poly.html#thm-ump-polynomial-rings",
   "type": "Theorem",
   "number": "7.44",
   "title": "UMP for Polynomial Rings.",
@@ -7126,7 +7126,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "16.1",
   "title": "Galois Extensions",
-  "body": "Galois Extensions  Field Automorphism Group   Let be a field. The automorphism group of , written , is the collection of field automorphisms of , with the binary operation of composition. automorphism group (fields)    The automorphism group of a field extension , written , is the subgroup of consisting of those field automorphisms of that restrict to the identity on . automorphism group (field extensions)       I claim has two elements (and so is a cyclic group of order ): the identity map on and the element given as complex conjugation. It is easy to see each of these is an element of — for , this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends to ).  To see these are the only elements of , suppose . For any , we have since . Moreover, and so . Thus or .    For any square-free integer , has order , and its two elements are the identity and the map sending to . Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to the previous example.   and  For a more complicated example, let be the splitting field of over . Recall  Let us ponder how big could be. Pick any . Since is a ring homomorphism, for any we have and thus is also a root of . In other words, for each we have for some . Moreover, since is generated as a field extension of by , the action of on the three roots completely determines the action of on all of . In more detail, every element of is given taking -linear combinations of sums and products and quotients of these roots, and any element of preserves sums, products and -linear combinations.  To summarize, we have proven that there are {} possibilities for . In fact, more is true: The function given by sending to its restriction to the subset is an injective group homomorphism. Thus is isomorphic to a subgroup of . I claim that and hence . I will prove this directly - we will learn of fancier methods to do so later.  First we notice that the field automorphism of given by complex conjugation, namely , permutes the roots of and hence it restricts to a field map from into . Since this map is -linear and injective (as are all field maps) and is a finite dimensional -vector space, this map must be onto as well. So, we obtain an element given by for all . It corresponds .  Next, we apply , which gives such that . So, in the numbering above, corresponds to either or in . We don't really know which of these it is. (In fact, both will occur — the map is not unique.) But either way we have proven the claim: For notice that both subsets and of generated all of .  In other words, every possible permutation of roots of arises as a field automorphism of its splitting field over . This is what I meant before when I said that the roots of are “as symmetric as possible''.   Automorphisms and Permutations (Fields)   Suppose is a field extension and . Let , the set of roots of in .   For any and , we have .    If then for all .    The function given by for is a homomorphism of groups.    If then is one-to-one. In particular, if is the splitting field over of , then is isomorphic to a subgroup of where is the number of roots of in . (Note that .)       Say with . Then This proves (1) and (2) is an immediate consequence.  To show (3) we need to first prove that for all , the function is a bijection. (The target of this function is indeed by (2).) Since is finite, we just need to show its one-to-one. This holds since itself is one-to-one. (If for then and, since is one-to-one, we have .) Since the group laws of and are both given as function composition, it is clear that is a group homomorphism. In detail, for all and so .  Now asssume . We show is one-to-one by showing its kernel is trivial. Suppose ; that is, suppose for all . We show . Define the so-called fixed fielf of . Note that since and we also have by assumption. It is easy to see that is a subfield of . (Here are the details: . For , we have and, if , and thus .) So, is a subfield of that contains and , but recall that is the {} subfield of that contains and , and so we must have . But then for all and hence .    Fixed Field   Let . Define the so-called fixed field of . fixed field     Automorphisms and Group Actions (Fields)   Let be the spitting field of some .   The group acts on the set of roots in by the rule .    This action is faithful.    If is irreducible, this action is transitive.       We proceed by induction on . When , we have and is the one element group.  For , pick and let . Consider the extension . Note that is a subgroup of , by definition. By induction we have . Using the and the fact that , it suffices to prove . This follows from:   Claim Let be the set of roots of that belong to . Then the function given by is well-defined and injective. (Note: is not necessarily normal, and so isn't a group. By I just mean the set of left cosets of in .)  By Proposition , for each we have . Moreover, by definition of , for all , we have and hence . This proves is a well-defined function (i.e., it is independent of left coset representative). For , if then which implies (since if an automorphism of fixes and then it fixes ). Thus implies and hence is one-to-one.  Since , we conclude from the claim that . Putting all this together gives .    Automorphisms and Finite Extension Degree   If is a finite extension of fields, then .    We proceed by induction on . When , we have and is the one element group.  For , pick and let . Consider the extension . Note that is a subgroup of , by definition. By induction we have . Using the and the fact that , it suffices to prove . This follows from:  {} Let be the set of roots of that belong to . Then the function given by is well-defined and injective. (Note: is not necessarily normal, and so isn't a group. By I just mean the set of left cosets of in .)  By Proposition , for each we have . Moreover, by definition of , for all , we have and hence . This proves is a well-defined function (i.e., it is independent of left coset representative). For , if then which implies (since if an automorphism of fixes and then it fixes ). Thus implies and hence is one-to-one.    and  Let be the splitting field of the irreducible polynomial . So where . By , the action of on is faithful so that we have an injective group homomorphism .  Note that this map cannot possibly be onto: there is no such that , , , and ; i.e., the permutation of these roots is not realizable by a field automorphism. To see this note that if then . So, any field automorphism that interchanges and would have to also interchange and . In fact, as we shall see, , considerably smaller than .  Let us compute . Note that since and in fact . In the chain of extensions the first one has degree , since is irreducible by , and the second has degree at most since is a root of . It would be less than two if factors in . But since and is not contained in , the second extension cannot be trivial and so must have degree exactly . We conclude . It follows from Proposition that . (In fact, since is the splitting field of a separable polynomial, the Theorem below will tell us that . But we won't appeal to this fact here.)  We claim and is isomorphic to the subgroup of generated by and . (This is isomorphic to .)  The map given by complex conjugation permutes the roots of and it restricts to an automorphism of — specially, it fixes and interchanges and . It follows that complex conjugation determines an element that corresponds to .  By the we get . Since , the degree of must be . This shows that must remain irreducible as a polynomial in ; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.  To construct another element of , we use that that is the splitting field of the polynomial over and that, as we just showed, is irreducible in . We may thus apply Porism (also stated in the Corollary) to get that there is an element such that . We may regard as an element of since, by definition, is a subgroup of . We have since by construction. A key point here is that if we had merely specified to be an element of sending to , then we would have no idea what does to — it was key to define as we did. We then also get and . So corresponds to the permutation .  We have proven that is isomorphic to a subgroup of having order at most (by the Proposition above) and that it contains and . Since the subgroup generated by these two elements has order , the claim follows.   Normal Extension   A finite extension is called normal if is the splitting field of some (non-unique) polynomial . normal field extension     Normal Extension   is a normal extension of since it is the splitting field of .   not Normal  Is normal? It isn't the splitting field of , but maybe it somehow is the splitting field of some other polynomial. It in fact is not normal, but it is not so obvious that it isn't. will allow us to prove it isn't normal.   Galois Extension Equivalencies   Let be a finite extension of fields. The following are equivalent.        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .       Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois. Galois extension  Galois group       Recall from the Proposition above that holds for any finite field extension. So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.   Galois Extension   is a Galois extension of , since it the splitting field of . We proved above that has six elements and , as the Theorem predicts.   not Galois  I claim is not a Galois extension of . Let be the set of all roots of in . Since , has just one element: . Since , the function is injective by Proposition and so since , we have . Thus it isn't Galois. Since it is separable, must not be a normal extension of .   One Root to Factor them All   Suppose is a finite extension of fields and is an irreducible polynomial. If is a normal extension and has at least one root in , then factors completely in .    Say is the splitting field of . Let be the splitting field of . So . Say is a root of that belongs to , and let be any other root. We aim to prove .  Recall that we know that if is a splitting field over of an irreducible polynomial, then acts transitively on the roots of this polynomial. Something more general is true: If is the splitting field over of some possibly reducible polynomial , then for each irreducible factors , acts transitively on the roots of . I won't prove this, but will apply it to . Since is irreducible, we get that there is there a such that . Let be all the roots of , so that . Since fixes , it must permute these roots. In particular, . But then .    Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case.   "
+  "body": "Galois Extensions  Group Actions and Automorphism Groups    Give me extension and motion and I will construct the universe.   René Descartes   Field Automorphism Group   Let be a field. The automorphism group of , written , is the collection of field automorphisms of , with the binary operation of composition. automorphism group (fields)    The automorphism group of a field extension , written , is the subgroup of consisting of those field automorphisms of that restrict to the identity on . automorphism group (field extensions)       Some books write for , and call it the Galois group of over . We will reserve that notation for a special type of finite extensions - those that are Galois - and use only for the general case.    Let be a field extension. Then is a group under composition of maps, and is a subgroup of .    I claim has two elements (and so is a cyclic group of order ): the identity map on and the element given as complex conjugation. Each of these is an element of — for , this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends to ).  To see these are the only elements of , suppose . For any , we have since . Moreover, and so . Thus or .    For any square-free integer , has order , and its two elements are the identity and the map sending to . Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to    Root Permutations   Let be a field extension, , and .   For all , we have .    If is a root of , then also is a root of .       Let be a field and let . Then the gives that there is an induced ring homomorphism such that for each , we have If and , then .   By assumption, is a homomorphism and it restricts to the identity on . Thus for any polynomial , we have     If is a root of , then showing that is also a root of .       We now come to the main idea connecting field extensions and groups. It concerns the action of the group of automorphisms of a splitting field of a polynomial on the set of roots of that polynomial.  Acts on Roots   Let be the splitting field of a polynomial . Let be the set of distinct roots of in , and let .   The group Aut acts faithfully on , via for all and , and hence is isomorphic to a subgroup of .    If is an irreducible polynomial, then acts transitively on .          Let . To see that the the action above is well-defined, notice that if then by Lemma 6.10. Now we have so the given formula does indeed define an action of on .  This action is faithful: if fixes all the roots of , then it fixes every element of . Thus the corresponding group homomorphism is injective. On the other hand, the group of automorphisms on a set of elements is isomorphic to , so we have an inclusion of into , and thus is isomorphic to a subgroup of .    Let be any two roots of . By Theorem 5.69, there is an isomorphism that fixes .  Our polynomial factors both as and . Since and , we must have . Theorem 5.69 applies, showing there is an automorphism that extends . In particular, fixes , since extends and , so . Moreover, since extends we have . This proves the action is transitive on the set of roots of any irreducible polynomial.       Soon we will show that if is separable but not necessarily irreducible, and is the splitting field of , then the orbits of the action of on the set of roots of are precisely the sets of roots of the same irreducible factor of . But to do so, we will need a little bit of Galois theory.    Let be the splitting field of a polynomial with distinct roots. Then .    We showed in that is isomorphic to a subgroup of , and thus it as at most elements.    We will give an improved version of this result soon.   Let be a field and , where are elements in some extension of that are algebraic over . Each element is uniquely determined by .   A typical question that arises from is to explicitly identify the automorphisms of a splitting field extension as a subgroup of the symmetric group.  and  For a more complicated example, let be the splitting field of over . Recall  Let us ponder how big could be. Pick any . Since is a ring homomorphism, for any we have and thus is also a root of . In other words, for each we have for some . Moreover, since is generated as a field extension of by , the action of on the three roots completely determines the action of on all of . In more detail, every element of is given taking -linear combinations of sums and products and quotients of these roots, and any element of preserves sums, products and -linear combinations.  To summarize, we have proven that there are {} possibilities for . In fact, more is true: The function given by sending to its restriction to the subset is an injective group homomorphism. Thus is isomorphic to a subgroup of . I claim that and hence . I will prove this directly - we will learn of fancier methods to do so later.  First we notice that the field automorphism of given by complex conjugation, namely , permutes the roots of and hence it restricts to a field map from into . Since this map is -linear and injective (as are all field maps) and is a finite dimensional -vector space, this map must be onto as well. So, we obtain an element given by for all . It corresponds .  Next, we apply , which gives such that . So, in the numbering above, corresponds to either or in . We don't really know which of these it is. (In fact, both will occur — the map is not unique.) But either way we have proven the claim: For notice that both subsets and of generated all of .  In other words, every possible permutation of roots of arises as a field automorphism of its splitting field over . This is what I meant before when I said that the roots of are “as symmetric as possible''.   and  Let be the splitting field of the irreducible polynomial . So where . By , the action of on is faithful so that we have an injective group homomorphism .  Note that this map cannot possibly be onto: there is no such that , , , and ; i.e., the permutation of these roots is not realizable by a field automorphism. To see this note that if then . So, any field automorphism that interchanges and would have to also interchange and . In fact, as we shall see, , considerably smaller than .  Let us compute . Note that since and in fact . In the chain of extensions the first one has degree , since is irreducible by , and the second has degree at most since is a root of . It would be less than two if factors in . But since and is not contained in , the second extension cannot be trivial and so must have degree exactly . We conclude . It follows from Proposition that . (In fact, since is the splitting field of a separable polynomial, the Theorem below will tell us that . But we won't appeal to this fact here.)  We claim and is isomorphic to the subgroup of generated by and . (This is isomorphic to .)  The map given by complex conjugation permutes the roots of and it restricts to an automorphism of — specially, it fixes and interchanges and . It follows that complex conjugation determines an element that corresponds to .  By the we get . Since , the degree of must be . This shows that must remain irreducible as a polynomial in ; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.  To construct another element of , we use that that is the splitting field of the polynomial over and that, as we just showed, is irreducible in . We may thus apply Porism (also stated in the Corollary) to get that there is an element such that . We may regard as an element of since, by definition, is a subgroup of . We have since by construction. A key point here is that if we had merely specified to be an element of sending to , then we would have no idea what does to — it was key to define as we did. We then also get and . So corresponds to the permutation .  We have proven that is isomorphic to a subgroup of having order at most (by the Proposition above) and that it contains and . Since the subgroup generated by these two elements has order , the claim follows.    Finite Extensions and Galois Groups    Give me extension and motion and I will construct the universe.   René Descartes   We will now focus on finite field extensions and their automorphism groups. We start by giving a much better upper bound on the order of the automorphism group of a finite field extension.  Order and Degree   Let be a finite field extension. Then If is the splitting field of a separable polynomial in , then     We proceed by induction on . In the base case, , and thus , so is the trivial group, and both statements hold.  Now let and suppose that holds for all and such that . Let . Pick and let , and consider .  Note that is a proper subgroup of . By induction, we have . We claim that it suffices to prove . Indeed, using the Degree Formula and the fact that , if then   To show that , consider the function   By , for any the element is also a root of . For any , we have   Thus is well-defined. Moreover, for any we have which is equivalent to saying that fixes , and equivalently This proves that the function is injective.  By Theorem  . Thus is an inclusion of into a set with at most many elements. Therefore, Now suppose that is separable, so that with for and .  Set and let be the irreducible factor of that has as a root. Notice . As before, we consider and set . Note that is also the splitting field of over , and is also separable. By induction , and it remains to show that   Since is separable, so is , so is exactly the number of distinct roots of . Showing that amounts to the assertion that the injective map is also surjective. This holds since acts transitively on the roots of , as shown in .    The finite field extensions whose automorphism group is as large as possible are very important, and are the main subject of this final chapter.  Galois Extension   A finite field extension is Galois if . In this case we write for , and say is the Galois group of over .    not Galois  I claim is not a Galois extension of . Let be the set of all roots of in . Since , has just one element: . Since , the function is injective by Proposition and so since , we have . Thus it isn't Galois. Since it is separable, must not be a normal extension of .    tells us how to construct Galois extensions:  First Construction of Galois Extensions from Splitting Fields   If is the splitting field of a separable polynomial , then is Galois.    Galois Extension   is a Galois extension of , since it the splitting field of . We proved above that has six elements and , as the Theorem predicts.   Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case.   We will need the following notation.  Fixed Subfield   If is subgroup of , the subfield of fixed by , denoted , is by definition      Some textbooks write this as .    If is subgroup of , show that is a subfield of .     Let . Then is the subgroup of complex numbers fixed by all the elements in , which we saw in has only two elements, the identity and the conjugation map . Therefore, is the set of complex numbers fixed by conjugation, and thus .     "
 },
 {
   "id": "def-aut-k",
@@ -7138,166 +7138,166 @@ var ptx_lunr_docs = [
   "body": "Field Automorphism Group   Let be a field. The automorphism group of , written , is the collection of field automorphisms of , with the binary operation of composition. automorphism group (fields)    The automorphism group of a field extension , written , is the subgroup of consisting of those field automorphisms of that restrict to the identity on . automorphism group (field extensions)     "
 },
 {
+  "id": "exercise-100",
+  "level": "2",
+  "url": "sec-galext.html#exercise-100",
+  "type": "Exercise",
+  "number": "16.2",
+  "title": "",
+  "body": " Let be a field extension. Then is a group under composition of maps, and is a subgroup of .  "
+},
+{
   "id": "ex-autcr",
   "level": "2",
   "url": "sec-galext.html#ex-autcr",
   "type": "Example",
-  "number": "16.2",
+  "number": "16.3",
   "title": "<span class=\"process-math\">\\(\\Aut(\\C\/\\R)\\)<\/span>.",
-  "body": " I claim has two elements (and so is a cyclic group of order ): the identity map on and the element given as complex conjugation. It is easy to see each of these is an element of — for , this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends to ).  To see these are the only elements of , suppose . For any , we have since . Moreover, and so . Thus or .  "
+  "body": " I claim has two elements (and so is a cyclic group of order ): the identity map on and the element given as complex conjugation. Each of these is an element of — for , this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends to ).  To see these are the only elements of , suppose . For any , we have since . Moreover, and so . Thus or .  "
 },
 {
   "id": "ex-autqsqrt-dq",
   "level": "2",
   "url": "sec-galext.html#ex-autqsqrt-dq",
   "type": "Example",
-  "number": "16.3",
+  "number": "16.4",
   "title": "<span class=\"process-math\">\\(\\Aut(\\Q(\\sqrt d)\/\\Q)\\)<\/span>.",
-  "body": " For any square-free integer , has order , and its two elements are the identity and the map sending to . Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to the previous example.  "
+  "body": " For any square-free integer , has order , and its two elements are the identity and the map sending to . Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to   "
+},
+{
+  "id": "lem-root-perm",
+  "level": "2",
+  "url": "sec-galext.html#lem-root-perm",
+  "type": "Lemma",
+  "number": "16.5",
+  "title": "Root Permutations.",
+  "body": "Root Permutations   Let be a field extension, , and .   For all , we have .    If is a root of , then also is a root of .       Let be a field and let . Then the gives that there is an induced ring homomorphism such that for each , we have If and , then .   By assumption, is a homomorphism and it restricts to the identity on . Thus for any polynomial , we have     If is a root of , then showing that is also a root of .      "
+},
+{
+  "id": "thm-field-aut-action",
+  "level": "2",
+  "url": "sec-galext.html#thm-field-aut-action",
+  "type": "Theorem",
+  "number": "16.6",
+  "title": "<span class=\"process-math\">\\(\\Aut\\)<\/span> Acts on Roots.",
+  "body": "Acts on Roots   Let be the splitting field of a polynomial . Let be the set of distinct roots of in , and let .   The group Aut acts faithfully on , via for all and , and hence is isomorphic to a subgroup of .    If is an irreducible polynomial, then acts transitively on .          Let . To see that the the action above is well-defined, notice that if then by Lemma 6.10. Now we have so the given formula does indeed define an action of on .  This action is faithful: if fixes all the roots of , then it fixes every element of . Thus the corresponding group homomorphism is injective. On the other hand, the group of automorphisms on a set of elements is isomorphic to , so we have an inclusion of into , and thus is isomorphic to a subgroup of .    Let be any two roots of . By Theorem 5.69, there is an isomorphism that fixes .  Our polynomial factors both as and . Since and , we must have . Theorem 5.69 applies, showing there is an automorphism that extends . In particular, fixes , since extends and , so . Moreover, since extends we have . This proves the action is transitive on the set of roots of any irreducible polynomial.      "
+},
+{
+  "id": "cor-aut-order",
+  "level": "2",
+  "url": "sec-galext.html#cor-aut-order",
+  "type": "Corollary",
+  "number": "16.7",
+  "title": "",
+  "body": "  Let be the splitting field of a polynomial with distinct roots. Then .    We showed in that is isomorphic to a subgroup of , and thus it as at most elements.   "
+},
+{
+  "id": "exercise-101",
+  "level": "2",
+  "url": "sec-galext.html#exercise-101",
+  "type": "Exercise",
+  "number": "16.8",
+  "title": "",
+  "body": " Let be a field and , where are elements in some extension of that are algebraic over . Each element is uniquely determined by .  "
 },
 {
   "id": "ex-aut-and-x3-2",
   "level": "2",
   "url": "sec-galext.html#ex-aut-and-x3-2",
   "type": "Example",
-  "number": "16.4",
+  "number": "16.9",
   "title": "<span class=\"process-math\">\\(\\Aut\\)<\/span> and <span class=\"process-math\">\\((x^3-2)\\)<\/span>.",
   "body": "and  For a more complicated example, let be the splitting field of over . Recall  Let us ponder how big could be. Pick any . Since is a ring homomorphism, for any we have and thus is also a root of . In other words, for each we have for some . Moreover, since is generated as a field extension of by , the action of on the three roots completely determines the action of on all of . In more detail, every element of is given taking -linear combinations of sums and products and quotients of these roots, and any element of preserves sums, products and -linear combinations.  To summarize, we have proven that there are {} possibilities for . In fact, more is true: The function given by sending to its restriction to the subset is an injective group homomorphism. Thus is isomorphic to a subgroup of . I claim that and hence . I will prove this directly - we will learn of fancier methods to do so later.  First we notice that the field automorphism of given by complex conjugation, namely , permutes the roots of and hence it restricts to a field map from into . Since this map is -linear and injective (as are all field maps) and is a finite dimensional -vector space, this map must be onto as well. So, we obtain an element given by for all . It corresponds .  Next, we apply , which gives such that . So, in the numbering above, corresponds to either or in . We don't really know which of these it is. (In fact, both will occur — the map is not unique.) But either way we have proven the claim: For notice that both subsets and of generated all of .  In other words, every possible permutation of roots of arises as a field automorphism of its splitting field over . This is what I meant before when I said that the roots of are “as symmetric as possible''.  "
-},
-{
-  "id": "prop-automorphisms-and-permutations-fields",
-  "level": "2",
-  "url": "sec-galext.html#prop-automorphisms-and-permutations-fields",
-  "type": "Proposition",
-  "number": "16.5",
-  "title": "Automorphisms and Permutations (Fields).",
-  "body": "Automorphisms and Permutations (Fields)   Suppose is a field extension and . Let , the set of roots of in .   For any and , we have .    If then for all .    The function given by for is a homomorphism of groups.    If then is one-to-one. In particular, if is the splitting field over of , then is isomorphic to a subgroup of where is the number of roots of in . (Note that .)       Say with . Then This proves (1) and (2) is an immediate consequence.  To show (3) we need to first prove that for all , the function is a bijection. (The target of this function is indeed by (2).) Since is finite, we just need to show its one-to-one. This holds since itself is one-to-one. (If for then and, since is one-to-one, we have .) Since the group laws of and are both given as function composition, it is clear that is a group homomorphism. In detail, for all and so .  Now asssume . We show is one-to-one by showing its kernel is trivial. Suppose ; that is, suppose for all . We show . Define the so-called fixed fielf of . Note that since and we also have by assumption. It is easy to see that is a subfield of . (Here are the details: . For , we have and, if , and thus .) So, is a subfield of that contains and , but recall that is the {} subfield of that contains and , and so we must have . But then for all and hence .   "
-},
-{
-  "id": "def-fixed-field",
-  "level": "2",
-  "url": "sec-galext.html#def-fixed-field",
-  "type": "Definition",
-  "number": "16.6",
-  "title": "Fixed Field.",
-  "body": "Fixed Field   Let . Define the so-called fixed field of . fixed field    "
-},
-{
-  "id": "cor-automorphisms-and-group-actions-fields",
-  "level": "2",
-  "url": "sec-galext.html#cor-automorphisms-and-group-actions-fields",
-  "type": "Corollary",
-  "number": "16.7",
-  "title": "Automorphisms and Group Actions (Fields).",
-  "body": "Automorphisms and Group Actions (Fields)   Let be the spitting field of some .   The group acts on the set of roots in by the rule .    This action is faithful.    If is irreducible, this action is transitive.       We proceed by induction on . When , we have and is the one element group.  For , pick and let . Consider the extension . Note that is a subgroup of , by definition. By induction we have . Using the and the fact that , it suffices to prove . This follows from:   Claim Let be the set of roots of that belong to . Then the function given by is well-defined and injective. (Note: is not necessarily normal, and so isn't a group. By I just mean the set of left cosets of in .)  By Proposition , for each we have . Moreover, by definition of , for all , we have and hence . This proves is a well-defined function (i.e., it is independent of left coset representative). For , if then which implies (since if an automorphism of fixes and then it fixes ). Thus implies and hence is one-to-one.  Since , we conclude from the claim that . Putting all this together gives .   "
-},
-{
-  "id": "prop-automorphisms-and-finite-extension-degree",
-  "level": "2",
-  "url": "sec-galext.html#prop-automorphisms-and-finite-extension-degree",
-  "type": "Proposition",
-  "number": "16.8",
-  "title": "Automorphisms and Finite Extension Degree.",
-  "body": "Automorphisms and Finite Extension Degree   If is a finite extension of fields, then .    We proceed by induction on . When , we have and is the one element group.  For , pick and let . Consider the extension . Note that is a subgroup of , by definition. By induction we have . Using the and the fact that , it suffices to prove . This follows from:  {} Let be the set of roots of that belong to . Then the function given by is well-defined and injective. (Note: is not necessarily normal, and so isn't a group. By I just mean the set of left cosets of in .)  By Proposition , for each we have . Moreover, by definition of , for all , we have and hence . This proves is a well-defined function (i.e., it is independent of left coset representative). For , if then which implies (since if an automorphism of fixes and then it fixes ). Thus implies and hence is one-to-one.   "
 },
 {
   "id": "exe-lq-and-x4-2",
   "level": "2",
   "url": "sec-galext.html#exe-lq-and-x4-2",
   "type": "Example",
-  "number": "16.9",
+  "number": "16.10",
   "title": "<span class=\"process-math\">\\([L:\\Q]\\)<\/span> and <span class=\"process-math\">\\((x^4-2)\\)<\/span>.",
   "body": "and  Let be the splitting field of the irreducible polynomial . So where . By , the action of on is faithful so that we have an injective group homomorphism .  Note that this map cannot possibly be onto: there is no such that , , , and ; i.e., the permutation of these roots is not realizable by a field automorphism. To see this note that if then . So, any field automorphism that interchanges and would have to also interchange and . In fact, as we shall see, , considerably smaller than .  Let us compute . Note that since and in fact . In the chain of extensions the first one has degree , since is irreducible by , and the second has degree at most since is a root of . It would be less than two if factors in . But since and is not contained in , the second extension cannot be trivial and so must have degree exactly . We conclude . It follows from Proposition that . (In fact, since is the splitting field of a separable polynomial, the Theorem below will tell us that . But we won't appeal to this fact here.)  We claim and is isomorphic to the subgroup of generated by and . (This is isomorphic to .)  The map given by complex conjugation permutes the roots of and it restricts to an automorphism of — specially, it fixes and interchanges and . It follows that complex conjugation determines an element that corresponds to .  By the we get . Since , the degree of must be . This shows that must remain irreducible as a polynomial in ; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.  To construct another element of , we use that that is the splitting field of the polynomial over and that, as we just showed, is irreducible in . We may thus apply Porism (also stated in the Corollary) to get that there is an element such that . We may regard as an element of since, by definition, is a subgroup of . We have since by construction. A key point here is that if we had merely specified to be an element of sending to , then we would have no idea what does to — it was key to define as we did. We then also get and . So corresponds to the permutation .  We have proven that is isomorphic to a subgroup of having order at most (by the Proposition above) and that it contains and . Since the subgroup generated by these two elements has order , the claim follows.  "
 },
 {
-  "id": "def-normal-extension",
+  "id": "thm-aut-order",
   "level": "2",
-  "url": "sec-galext.html#def-normal-extension",
-  "type": "Definition",
-  "number": "16.10",
-  "title": "Normal Extension.",
-  "body": "Normal Extension   A finite extension is called normal if is the splitting field of some (non-unique) polynomial . normal field extension    "
-},
-{
-  "id": "exe-normal-extension",
-  "level": "2",
-  "url": "sec-galext.html#exe-normal-extension",
-  "type": "Example",
-  "number": "16.11",
-  "title": "Normal Extension.",
-  "body": "Normal Extension   is a normal extension of since it is the splitting field of .  "
-},
-{
-  "id": "exe-qsqrt32-not-normal",
-  "level": "2",
-  "url": "sec-galext.html#exe-qsqrt32-not-normal",
-  "type": "Example",
-  "number": "16.12",
-  "title": "<span class=\"process-math\">\\(\\Q(\\sqrt[3]2)\\)<\/span> not Normal.",
-  "body": "not Normal  Is normal? It isn't the splitting field of , but maybe it somehow is the splitting field of some other polynomial. It in fact is not normal, but it is not so obvious that it isn't. will allow us to prove it isn't normal.  "
-},
-{
-  "id": "thm-galois-extension-equivalencies",
-  "level": "2",
-  "url": "sec-galext.html#thm-galois-extension-equivalencies",
+  "url": "sec-galext.html#thm-aut-order",
   "type": "Theorem",
-  "number": "16.13",
-  "title": "Galois Extension Equivalencies.",
-  "body": "Galois Extension Equivalencies   Let be a finite extension of fields. The following are equivalent.        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .      "
+  "number": "16.11",
+  "title": "Order and Degree.",
+  "body": "Order and Degree   Let be a finite field extension. Then If is the splitting field of a separable polynomial in , then     We proceed by induction on . In the base case, , and thus , so is the trivial group, and both statements hold.  Now let and suppose that holds for all and such that . Let . Pick and let , and consider .  Note that is a proper subgroup of . By induction, we have . We claim that it suffices to prove . Indeed, using the Degree Formula and the fact that , if then   To show that , consider the function   By , for any the element is also a root of . For any , we have   Thus is well-defined. Moreover, for any we have which is equivalent to saying that fixes , and equivalently This proves that the function is injective.  By Theorem  . Thus is an inclusion of into a set with at most many elements. Therefore, Now suppose that is separable, so that with for and .  Set and let be the irreducible factor of that has as a root. Notice . As before, we consider and set . Note that is also the splitting field of over , and is also separable. By induction , and it remains to show that   Since is separable, so is , so is exactly the number of distinct roots of . Showing that amounts to the assertion that the injective map is also surjective. This holds since acts transitively on the roots of , as shown in .   "
 },
 {
   "id": "def-galois-extension",
   "level": "2",
   "url": "sec-galext.html#def-galois-extension",
   "type": "Definition",
-  "number": "16.14",
+  "number": "16.12",
   "title": "Galois Extension.",
-  "body": "Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois. Galois extension  Galois group     "
-},
-{
-  "id": "remark-86",
-  "level": "2",
-  "url": "sec-galext.html#remark-86",
-  "type": "Remark",
-  "number": "16.15",
-  "title": "",
-  "body": " Recall from the Proposition above that holds for any finite field extension. So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.  "
-},
-{
-  "id": "exe-galois-extension",
-  "level": "2",
-  "url": "sec-galext.html#exe-galois-extension",
-  "type": "Example",
-  "number": "16.16",
-  "title": "Galois Extension.",
-  "body": "Galois Extension   is a Galois extension of , since it the splitting field of . We proved above that has six elements and , as the Theorem predicts.  "
+  "body": "Galois Extension   A finite field extension is Galois if . In this case we write for , and say is the Galois group of over .   "
 },
 {
   "id": "exe-qsqrt32-not-galois",
   "level": "2",
   "url": "sec-galext.html#exe-qsqrt32-not-galois",
   "type": "Example",
-  "number": "16.17",
+  "number": "16.13",
   "title": "<span class=\"process-math\">\\(\\Q(\\sqrt[3]2)\\)<\/span> not Galois.",
   "body": "not Galois  I claim is not a Galois extension of . Let be the set of all roots of in . Since , has just one element: . Since , the function is injective by Proposition and so since , we have . Thus it isn't Galois. Since it is separable, must not be a normal extension of .  "
 },
 {
-  "id": "prop-one-root-to-factor-them-all",
+  "id": "cor-gal-construction",
   "level": "2",
-  "url": "sec-galext.html#prop-one-root-to-factor-them-all",
-  "type": "Proposition",
-  "number": "16.18",
-  "title": "One Root to Factor them All.",
-  "body": "One Root to Factor them All   Suppose is a finite extension of fields and is an irreducible polynomial. If is a normal extension and has at least one root in , then factors completely in .    Say is the splitting field of . Let be the splitting field of . So . Say is a root of that belongs to , and let be any other root. We aim to prove .  Recall that we know that if is a splitting field over of an irreducible polynomial, then acts transitively on the roots of this polynomial. Something more general is true: If is the splitting field over of some possibly reducible polynomial , then for each irreducible factors , acts transitively on the roots of . I won't prove this, but will apply it to . Since is irreducible, we get that there is there a such that . Let be all the roots of , so that . Since fixes , it must permute these roots. In particular, . But then .   "
+  "url": "sec-galext.html#cor-gal-construction",
+  "type": "Corollary",
+  "number": "16.14",
+  "title": "First Construction of Galois Extensions from Splitting Fields.",
+  "body": "First Construction of Galois Extensions from Splitting Fields   If is the splitting field of a separable polynomial , then is Galois.   "
+},
+{
+  "id": "exe-galois-extension",
+  "level": "2",
+  "url": "sec-galext.html#exe-galois-extension",
+  "type": "Example",
+  "number": "16.15",
+  "title": "Galois Extension.",
+  "body": "Galois Extension   is a Galois extension of , since it the splitting field of . We proved above that has six elements and , as the Theorem predicts.  "
 },
 {
   "id": "exe-galois-and-characteristic-p",
   "level": "2",
   "url": "sec-galext.html#exe-galois-and-characteristic-p",
   "type": "Example",
-  "number": "16.19",
+  "number": "16.16",
   "title": "Galois and Characteristic <span class=\"process-math\">\\(p\\)<\/span>.",
   "body": "Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case.  "
+},
+{
+  "id": "def-fixed-subfield",
+  "level": "2",
+  "url": "sec-galext.html#def-fixed-subfield",
+  "type": "Definition",
+  "number": "16.17",
+  "title": "Fixed Subfield.",
+  "body": "Fixed Subfield   If is subgroup of , the subfield of fixed by , denoted , is by definition    "
+},
+{
+  "id": "exercise-102",
+  "level": "2",
+  "url": "sec-galext.html#exercise-102",
+  "type": "Exercise",
+  "number": "16.18",
+  "title": "",
+  "body": " If is subgroup of , show that is a subfield of .  "
+},
+{
+  "id": "example-150",
+  "level": "2",
+  "url": "sec-galext.html#example-150",
+  "type": "Example",
+  "number": "16.19",
+  "title": "",
+  "body": "  Let . Then is the subgroup of complex numbers fixed by all the elements in , which we saw in has only two elements, the identity and the conjugation map . Therefore, is the set of complex numbers fixed by conjugation, and thus .   "
 },
 {
   "id": "sec-ftgt",
@@ -7306,7 +7306,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "16.2",
   "title": "The Fundamental Theorem of Galois Theory",
-  "body": "The Fundamental Theorem of Galois Theory  Intermediate Field   Given a field extension , an intermediate field is a subfield of that contains , so that . intermediate field     Intermediate Extensions are Galois   If is a (finite) Galois extension, then so is for any intermediate field .    This is immediate from the definition: If is the splitting field over of a separable polynomial , then is also the splitting field over of the same polynomial, now regarded as belonging to .     In the setting of the , need not be Galois over . For , is Galois over but is not Galois over , as we noted before.   Fixed Subfield   For a field and a subgroup of , the subfield of fixed by , denoted , is by definition  really is a subfield of since where , and we proved before that is a subfield of . fixed subfield     Fundamental Theorem of Galois Theory  FTGT  fundamental theorem of Galois theory  Galois correspondance   Suppose is a (finite) Galois field extension. Then the functions given by is a bijection whose inverse is given by Moreover, this bijective correspondence enjoys the following properties:    and each reverse the order of inclusions.     and convert degrees of extensions to indices of subgroups:    or, equivalently,     .       Normal subgroups correspond to intermediate fields that are Galois over :   If then is Galois.    If is Galois, then .       If for a normal subgroup , then .    If are subgroups of with corresponding fixed subfields and , then    and      and .          Galois Correspondence and Lattices   The Galois correspondence induces a lattice isomorphism between the lattice of intermediate fields of a Galois extension and the “dual'' of the lattice of subgroups of .    FTGT and  Let be the splitting field of over . Let's use the fundamental theorem to list all intermediate fields for and to determine which are Galois over . Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.  We know corresponds to the element subgroup of generated by and where we number the roots as .  This group is isomorphic to and we can make this isomorphism explicit by labeling the four corners of a square by , counter-clockwise. So, is rotation by degrees and is reflection about the line joining vertices and .  The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).  The subgroups are and the lattices are INSERT IMAGE The intermediate fields are the fixed subfields of associated to each of these subgroups. In some sense, this answers the question, but let's find explicit generators for at least some of these.   corresponds to and corresponds to .  Set . has degree over . It is clear (and ) belongs to and since , we must have .  Likewise .   also has degree four over . Let and note . If , then would be fixed by a subgroup of index that contains , and the only possibility is . But sends to . So we must have and hence .  I'll skip the details on and , but they are and .   has degree equal to over and so we merely need to find a single, non-rational element of fixed by . Since (which can be seen by looking back at how we built originally or by noting that ), we get .  I'll skip the details on , but it is .   also has degree two over and so we just need to find a single non-rational element fixed by the two generators of . Note that and so is fixed by both and . Thus .  Finally, we note that are normal subgroups of , since is the center of and each of has index two. Some messy checking reveals these to be the only normal subgroups. It follows from the that are the only intermediate fields that are Galois over . As an example, to see directly that is not Galois over , note that is a root of , which is irreducible. But is also a root of this polynomial and it is not in . We conclude from Proposition that is not a normal extension of .   Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .    If is a field of prime characteristic and is an integer that is divisible by , then is not separable.    Let be an irreducible, fifth degree polynomial in with exactly three real roots and let be its splitting field over . Let the real roots be and the imaginary ones be and . Then is isomorphic to . You will prove this on one of the final exam problems (for a specific case), but let me get you started with a couple {}: Show that is isomorphic to a subgroup of with . You may use (without justifying it) that if is a -cycle in and is any five cycle in , then the subgroup of they generate is all of .   Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the , there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.    "
+  "body": "The Fundamental Theorem of Galois Theory  The Fundamental Theorem: Statement and Uses  Intermediate Field   Given a field extension , an intermediate field is a subfield of that contains , so that . intermediate field     Intermediate Extensions are Galois   If is a (finite) Galois extension, then so is for any intermediate field .    If is the splitting field over of a separable polynomial , then is also the splitting field over of the same polynomial, now regarded as belonging to .     In the setting of the , need not be Galois over .      is Galois over but is not Galois over .    Fundamental Theorem of Galois Theory  FTGT  fundamental theorem of Galois theory  Galois correspondance   Suppose is a (finite) Galois field extension. Then the functions given by is a bijection whose inverse is given by Moreover, this bijective correspondence enjoys the following properties:    and each reverse the order of inclusions.     and convert degrees of extensions to indices of subgroups:    or, equivalently,     .       Normal subgroups correspond to intermediate fields that are Galois over :   If then is Galois.    If is Galois, then .       If for a normal subgroup , then .    If are subgroups of with corresponding fixed subfields and , then    and      and .          First, we need to check that both functions are well-defined. For each intermediary field , we know from Corollary 6.31 that is also Galois, and hence it makes sense to write ; moreover, any is an automorphism of that fixes , and thus , so . This shows that is well-defined. Conversely, given a subgroup of is a subfield of by Exercise 18.  Next, we need to check that and are indeed inverse functions. Given a subgroup of , we have by Artin’s Theorem. Thus Conversely, given an intermediate field is Galois by Corollary 6.31, and hence by Corollary 6.24. Thus This establishes the fact that is indeed a bijective correspondence.  Now we check that satisfies the given list of properties. For brevity, set .   The fact that the correspondence is order reversing follows from the definitions. Given intermediate fields , any automorphism of that preserves must also preserve , thus . Conversely, if , then every that is fixed by every must also be fixed in particular by every element of , so .    By definition of Galois extension, . By Artin’s Theorem, for any subgroup the extension is also Galois, and thus by definition . Using the Degree Formula, we have So if , then and the formula above can be rewritten as     Suppose is an intermediate field that is Galois over . Fix and . Since is Galois, by Corollary 6.26 the polynomial is separable and all of its roots are in . By Lemma is also a root of , and thus .  Suppose . For any we have , so . Thus   This proves that and hence that . We have shown that if is Galois over , then the corresponding subgroup of is normal.  For the converse, consider a normal subgroup and the corresponding intermediate field , so that . We will show that is the splitting field over of a separable polynomial in , and hence is Galois over by Corollary 6.18.  Pick any and set . By Corollary 6.26, is separable and all of its roots belong to . We claim that all the roots must in fact belong to . Since is irreducible and is Galois, by Corollary acts transitively on the set of roots of . Thus, given be any other root of , there is a with . Since is normal, for any we have for some . But fixes , so . Therefore, which shows that is also fixed by . But then . Therefore, contains all the roots of , and thus must contain the splitting field of .  We have for some . If are the distinct polynomials among , then is the splitting field of the separable polynomial . By Corollary 6.28, is Galois over .  If for a normal subgroup , then .    Let for a normal subgroup of . We want to show that is isomorphic to .  For each , we claim that . By Lemma 6.10, for all the element is also a root of . But since is Galois, it must contain all of the roots of , by Corollary 6.26, so . Thus , so the restriction of to determines an injective field homomorphism . Since , this map is also a linear transformation of vector spaces over . But is a finite vector space over , and any injective linear transformation must be bijective. We conclude that is an automorphism of . We thus have a well-defined function   Moreover, this map is a group homomorphism by construction. The kernel is the subgroup of of automorphisms that restrict to the identity on , which is precisely . Hence we have an induced injective group homomorphism But , so this map must be an isomorphism.       Galois Correspondence and Lattices   The Galois correspondence induces a lattice isomorphism between the lattice of intermediate fields of a Galois extension and the “dual'' of the lattice of subgroups of .    FTGT and   Let be the splitting field of over . Let's use the fundamental theorem to list all intermediate fields for and to determine which are Galois over . Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.    We know corresponds to the element subgroup of generated by and where we number the roots as .  This group is isomorphic to and we can make this isomorphism explicit by labeling the four corners of a square by , counter-clockwise. So, is rotation by degrees and is reflection about the line joining vertices and .  The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).   and the lattices are of subgroups of and intermediate fields of are   The intermediate fields are the fixed subfields of associated to each of these subgroups. In some sense, this answers the question, but let's find explicit generators for at least some of these.   corresponds to and corresponds to .  Set . has degree over . It is clear (and ) belongs to and since , we must have .  Likewise .   also has degree four over . Let and note . If , then would be fixed by a subgroup of index that contains , and the only possibility is . But sends to . So we must have and hence .  I'll skip the details on and , but they are and .   has degree equal to over and so we merely need to find a single, non-rational element of fixed by . Since (which can be seen by looking back at how we built originally or by noting that ), we get .  I'll skip the details on , but it is .   also has degree two over and so we just need to find a single non-rational element fixed by the two generators of . Note that and so is fixed by both and . Thus .  Finally, we note that are normal subgroups of , since is the center of and each of has index two. Some messy checking reveals these to be the only normal subgroups. It follows from the that are the only intermediate fields that are Galois over . As an example, to see directly that is not Galois over , note that is a root of , which is irreducible. But is also a root of this polynomial and it is not in . We conclude from Proposition that is not a normal extension of .    Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .    If is a field of prime characteristic and is an integer that is divisible by , then is not separable.    Let be an irreducible, fifth degree polynomial in with exactly three real roots and let be its splitting field over . Let the real roots be and the imaginary ones be and . Then is isomorphic to . You will prove this on one of the final exam problems (for a specific case), but let me get you started with a couple {}: Show that is isomorphic to a subgroup of with . You may use (without justifying it) that if is a -cycle in and is any five cycle in , then the subgroup of they generate is all of .   Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the , there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.     "
 },
 {
   "id": "def-intermediate-field",
@@ -7324,7 +7324,7 @@ var ptx_lunr_docs = [
   "type": "Proposition",
   "number": "16.21",
   "title": "Intermediate Extensions are Galois.",
-  "body": "Intermediate Extensions are Galois   If is a (finite) Galois extension, then so is for any intermediate field .    This is immediate from the definition: If is the splitting field over of a separable polynomial , then is also the splitting field over of the same polynomial, now regarded as belonging to .   "
+  "body": "Intermediate Extensions are Galois   If is a (finite) Galois extension, then so is for any intermediate field .    If is the splitting field over of a separable polynomial , then is also the splitting field over of the same polynomial, now regarded as belonging to .   "
 },
 {
   "id": "warning-5",
@@ -7333,16 +7333,16 @@ var ptx_lunr_docs = [
   "type": "Warning",
   "number": "16.22",
   "title": "",
-  "body": " In the setting of the , need not be Galois over . For , is Galois over but is not Galois over , as we noted before.  "
+  "body": " In the setting of the , need not be Galois over .  "
 },
 {
-  "id": "def-fixed-subfield",
+  "id": "example-151",
   "level": "2",
-  "url": "sec-ftgt.html#def-fixed-subfield",
-  "type": "Definition",
+  "url": "sec-ftgt.html#example-151",
+  "type": "Example",
   "number": "16.23",
-  "title": "Fixed Subfield.",
-  "body": "Fixed Subfield   For a field and a subgroup of , the subfield of fixed by , denoted , is by definition  really is a subfield of since where , and we proved before that is a subfield of . fixed subfield    "
+  "title": "",
+  "body": "   is Galois over but is not Galois over .   "
 },
 {
   "id": "thm-ftgt",
@@ -7351,7 +7351,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "16.24",
   "title": "Fundamental Theorem of Galois Theory.",
-  "body": "Fundamental Theorem of Galois Theory  FTGT  fundamental theorem of Galois theory  Galois correspondance   Suppose is a (finite) Galois field extension. Then the functions given by is a bijection whose inverse is given by Moreover, this bijective correspondence enjoys the following properties:    and each reverse the order of inclusions.     and convert degrees of extensions to indices of subgroups:    or, equivalently,     .       Normal subgroups correspond to intermediate fields that are Galois over :   If then is Galois.    If is Galois, then .       If for a normal subgroup , then .    If are subgroups of with corresponding fixed subfields and , then    and      and .         "
+  "body": "Fundamental Theorem of Galois Theory  FTGT  fundamental theorem of Galois theory  Galois correspondance   Suppose is a (finite) Galois field extension. Then the functions given by is a bijection whose inverse is given by Moreover, this bijective correspondence enjoys the following properties:    and each reverse the order of inclusions.     and convert degrees of extensions to indices of subgroups:    or, equivalently,     .       Normal subgroups correspond to intermediate fields that are Galois over :   If then is Galois.    If is Galois, then .       If for a normal subgroup , then .    If are subgroups of with corresponding fixed subfields and , then    and      and .          First, we need to check that both functions are well-defined. For each intermediary field , we know from Corollary 6.31 that is also Galois, and hence it makes sense to write ; moreover, any is an automorphism of that fixes , and thus , so . This shows that is well-defined. Conversely, given a subgroup of is a subfield of by Exercise 18.  Next, we need to check that and are indeed inverse functions. Given a subgroup of , we have by Artin’s Theorem. Thus Conversely, given an intermediate field is Galois by Corollary 6.31, and hence by Corollary 6.24. Thus This establishes the fact that is indeed a bijective correspondence.  Now we check that satisfies the given list of properties. For brevity, set .   The fact that the correspondence is order reversing follows from the definitions. Given intermediate fields , any automorphism of that preserves must also preserve , thus . Conversely, if , then every that is fixed by every must also be fixed in particular by every element of , so .    By definition of Galois extension, . By Artin’s Theorem, for any subgroup the extension is also Galois, and thus by definition . Using the Degree Formula, we have So if , then and the formula above can be rewritten as     Suppose is an intermediate field that is Galois over . Fix and . Since is Galois, by Corollary 6.26 the polynomial is separable and all of its roots are in . By Lemma is also a root of , and thus .  Suppose . For any we have , so . Thus   This proves that and hence that . We have shown that if is Galois over , then the corresponding subgroup of is normal.  For the converse, consider a normal subgroup and the corresponding intermediate field , so that . We will show that is the splitting field over of a separable polynomial in , and hence is Galois over by Corollary 6.18.  Pick any and set . By Corollary 6.26, is separable and all of its roots belong to . We claim that all the roots must in fact belong to . Since is irreducible and is Galois, by Corollary acts transitively on the set of roots of . Thus, given be any other root of , there is a with . Since is normal, for any we have for some . But fixes , so . Therefore, which shows that is also fixed by . But then . Therefore, contains all the roots of , and thus must contain the splitting field of .  We have for some . If are the distinct polynomials among , then is the splitting field of the separable polynomial . By Corollary 6.28, is Galois over .  If for a normal subgroup , then .    Let for a normal subgroup of . We want to show that is isomorphic to .  For each , we claim that . By Lemma 6.10, for all the element is also a root of . But since is Galois, it must contain all of the roots of , by Corollary 6.26, so . Thus , so the restriction of to determines an injective field homomorphism . Since , this map is also a linear transformation of vector spaces over . But is a finite vector space over , and any injective linear transformation must be bijective. We conclude that is an automorphism of . We thus have a well-defined function   Moreover, this map is a group homomorphism by construction. The kernel is the subgroup of of automorphisms that restrict to the identity on , which is precisely . Hence we have an induced injective group homomorphism But , so this map must be an isomorphism.      "
 },
 {
   "id": "cor-galois-correspondence-and-lattices",
@@ -7369,7 +7369,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "16.26",
   "title": "FTGT and <span class=\"process-math\">\\((x^4-2)\\)<\/span>.",
-  "body": "FTGT and  Let be the splitting field of over . Let's use the fundamental theorem to list all intermediate fields for and to determine which are Galois over . Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.  We know corresponds to the element subgroup of generated by and where we number the roots as .  This group is isomorphic to and we can make this isomorphism explicit by labeling the four corners of a square by , counter-clockwise. So, is rotation by degrees and is reflection about the line joining vertices and .  The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).  The subgroups are and the lattices are INSERT IMAGE The intermediate fields are the fixed subfields of associated to each of these subgroups. In some sense, this answers the question, but let's find explicit generators for at least some of these.   corresponds to and corresponds to .  Set . has degree over . It is clear (and ) belongs to and since , we must have .  Likewise .   also has degree four over . Let and note . If , then would be fixed by a subgroup of index that contains , and the only possibility is . But sends to . So we must have and hence .  I'll skip the details on and , but they are and .   has degree equal to over and so we merely need to find a single, non-rational element of fixed by . Since (which can be seen by looking back at how we built originally or by noting that ), we get .  I'll skip the details on , but it is .   also has degree two over and so we just need to find a single non-rational element fixed by the two generators of . Note that and so is fixed by both and . Thus .  Finally, we note that are normal subgroups of , since is the center of and each of has index two. Some messy checking reveals these to be the only normal subgroups. It follows from the that are the only intermediate fields that are Galois over . As an example, to see directly that is not Galois over , note that is a root of , which is irreducible. But is also a root of this polynomial and it is not in . We conclude from Proposition that is not a normal extension of .  "
+  "body": "FTGT and   Let be the splitting field of over . Let's use the fundamental theorem to list all intermediate fields for and to determine which are Galois over . Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.    We know corresponds to the element subgroup of generated by and where we number the roots as .  This group is isomorphic to and we can make this isomorphism explicit by labeling the four corners of a square by , counter-clockwise. So, is rotation by degrees and is reflection about the line joining vertices and .  The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).   and the lattices are of subgroups of and intermediate fields of are   The intermediate fields are the fixed subfields of associated to each of these subgroups. In some sense, this answers the question, but let's find explicit generators for at least some of these.   corresponds to and corresponds to .  Set . has degree over . It is clear (and ) belongs to and since , we must have .  Likewise .   also has degree four over . Let and note . If , then would be fixed by a subgroup of index that contains , and the only possibility is . But sends to . So we must have and hence .  I'll skip the details on and , but they are and .   has degree equal to over and so we merely need to find a single, non-rational element of fixed by . Since (which can be seen by looking back at how we built originally or by noting that ), we get .  I'll skip the details on , but it is .   also has degree two over and so we just need to find a single non-rational element fixed by the two generators of . Note that and so is fixed by both and . Thus .  Finally, we note that are normal subgroups of , since is the center of and each of has index two. Some messy checking reveals these to be the only normal subgroups. It follows from the that are the only intermediate fields that are Galois over . As an example, to see directly that is not Galois over , note that is a root of , which is irreducible. But is also a root of this polynomial and it is not in . We conclude from Proposition that is not a normal extension of .   "
 },
 {
   "id": "exe-cyclotomic-extensions-revisited",
@@ -7381,9 +7381,9 @@ var ptx_lunr_docs = [
   "body": "Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .  "
 },
 {
-  "id": "remark-87",
+  "id": "remark-86",
   "level": "2",
-  "url": "sec-ftgt.html#remark-87",
+  "url": "sec-ftgt.html#remark-86",
   "type": "Remark",
   "number": "16.28",
   "title": "",
@@ -7408,6 +7408,60 @@ var ptx_lunr_docs = [
   "body": "Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the , there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.   "
 },
 {
+  "id": "sec-proving-galois",
+  "level": "1",
+  "url": "sec-proving-galois.html",
+  "type": "Section",
+  "number": "16.3",
+  "title": "Proving the Fundamental Theorem",
+  "body": "Proving the Fundamental Theorem  Artin's Theorem  The following is an important theorem with many corollaries. In fact, the Fundamental Theorem of Galois Theory, which we will state shortly, will follow from this result.  Artin's Theorem   Let be any field. If is a finite subgroup of , then is a subfield of , the extension is finite and Galois, and .    Note that we really do mean equality here: both and are subgroups of , and the theorem states that they coincide. The containment is clear: if , then by construction fixes every element of and hence . The point of the theorem is that the extension is always Galois and that if fixes every element of then must belong to .  We will not prove right away. Instead, we will first deduce some of its consequences, including the . We will then illustrate the Fundamental Theorem with many examples and give some consequences of it too. Only then will we circle back to prove .    The group , where is complex conjugation, is a finite subgroup of Aut . Artin’s Theorem tells us that is finite and Galois with Galois group . It follows that . We already knew all this, since .    As we head towards the , we start by stating a few helpful corollaries of . These will also allow us to show that finite Galois extensions are precisely the splitting fields of separable polynomials.    Let be any Galois extension. Then .    Note that holds by definition, and so by the Degree Formula. But Artin’s Theorem gives and we also know that . Therefore, and thus .      We know from Example 6.14 that is Galois over with Galois group . More precisely, this identification is given by writting and labelling the four corners of a square with , counter-clockwise. Consider and . Then each of and are fixed by every Galois automorphism and hence by Corollary and must be rational. In fact, one can easily see that and , but notice that the exact same reasoning would apply in general to the sum of roots and the product of roots in the splitting field of any separable polynomial.      Let be a Galois extension. For every is separable and all of its roots belong to L. Moreover, acts transitively on the set of roots of .     "
+},
+{
+  "id": "thm-artin",
+  "level": "2",
+  "url": "sec-proving-galois.html#thm-artin",
+  "type": "Theorem",
+  "number": "16.31",
+  "title": "Artin's Theorem.",
+  "body": "Artin's Theorem   Let be any field. If is a finite subgroup of , then is a subfield of , the extension is finite and Galois, and .   "
+},
+{
+  "id": "example-156",
+  "level": "2",
+  "url": "sec-proving-galois.html#example-156",
+  "type": "Example",
+  "number": "16.32",
+  "title": "",
+  "body": "  The group , where is complex conjugation, is a finite subgroup of Aut . Artin’s Theorem tells us that is finite and Galois with Galois group . It follows that . We already knew all this, since .   "
+},
+{
+  "id": "cor-artin",
+  "level": "2",
+  "url": "sec-proving-galois.html#cor-artin",
+  "type": "Corollary",
+  "number": "16.33",
+  "title": "",
+  "body": "  Let be any Galois extension. Then .    Note that holds by definition, and so by the Degree Formula. But Artin’s Theorem gives and we also know that . Therefore, and thus .   "
+},
+{
+  "id": "example-157",
+  "level": "2",
+  "url": "sec-proving-galois.html#example-157",
+  "type": "Example",
+  "number": "16.34",
+  "title": "",
+  "body": "  We know from Example 6.14 that is Galois over with Galois group . More precisely, this identification is given by writting and labelling the four corners of a square with , counter-clockwise. Consider and . Then each of and are fixed by every Galois automorphism and hence by Corollary and must be rational. In fact, one can easily see that and , but notice that the exact same reasoning would apply in general to the sum of roots and the product of roots in the splitting field of any separable polynomial.   "
+},
+{
+  "id": "cor-",
+  "level": "2",
+  "url": "sec-proving-galois.html#cor-",
+  "type": "Corollary",
+  "number": "16.35",
+  "title": "",
+  "body": "  Let be a Galois extension. For every is separable and all of its roots belong to L. Moreover, acts transitively on the set of roots of .   "
+},
+{
   "id": "sec-sets-functions",
   "level": "1",
   "url": "sec-sets-functions.html",
@@ -7426,9 +7480,9 @@ var ptx_lunr_docs = [
   "body": "Set   The basic undefined term we will use is that of a set , which we take to be any collection of objects, not necessarily mathematical ones.   "
 },
 {
-  "id": "remark-88",
+  "id": "remark-87",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-88",
+  "url": "sec-sets-functions.html#remark-87",
   "type": "Remark",
   "number": "A.2",
   "title": "",
@@ -7552,9 +7606,9 @@ var ptx_lunr_docs = [
   "body": "Well-defined Function  well defined function   A function is well-defined if whenever and , then .   "
 },
 {
-  "id": "remark-89",
+  "id": "remark-88",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-89",
+  "url": "sec-sets-functions.html#remark-88",
   "type": "Remark",
   "number": "A.16",
   "title": "",
@@ -7633,9 +7687,9 @@ var ptx_lunr_docs = [
   "body": "IASN  IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-139",
+  "id": "theorem-141",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-139",
+  "url": "sec-sets-functions.html#theorem-141",
   "type": "Theorem",
   "number": "A.25",
   "title": "Containments of Images, Preimages.",
@@ -7822,81 +7876,81 @@ var ptx_lunr_docs = [
   "body": "Qualifying Exams   UNL Algebra Qualifying Exam Syllabus    May 2022      Let be a finite -group for some prime and a normal subgroup of . Prove that , where is the center of .   Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. Suppose by way of contradiction that . We examine the conjugacy classes of . From the , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must divide the order of the group by . By , , where . Since , we see that , which is impossible given that . Thus .  As , by it is a union of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .    A non-abelian group of order .   Prove there exists a non-abelian group of .    Find, with justification, a presentation of the group you found in part (1).      Use a semi-direct product.      Let be the cyclic group of order , and let be the cyclic group of order . Let be the homomorphism defined by for , where we identify with via the isomorphism given by sending the non-identity automorphism to the generator of .  Then the semi-direct product has order and is non-abelian. To see that is non-abelian, note that for any , since has no non-trivial automorphisms.    To find a presentation of , we need to identify the generators and relations. Since and are both cyclic, we can take the generators to be and respectively. Moreover, since is normal in , we have for some .  To determine the value of , note that acts on by automorphisms, and the non-identity automorphism of is inversion . Since , we must have .  Therefore, a presentation of is given by .       Let G be a group of order . Prove that is not simple.   By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.    Let be a commutative ring with identity, and assume . Let and be ideals such that .    Prove .  Prove the following special case of : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .     Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .    Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the , we see .       Prove the Rank-Nullity Theorem: If is a field, and are a finite dimensional -vector spaces, and is an -linear transformation, then (Recall the rank of is the dimension of its image and the nullity of is the dimension of its kernel.)   See:     Let be a field and a positive integer. We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:              and        We define the following:    ,     ,     ,     , and     .   As each of these matrices is in , they are explicit representatives for each similarity class.    Let be the splitting field of over .    Find, with justification, the degree of over .  Let where , a primitive root of unity. Prove is irreducible in .     Let be the splitting field of over .     First, notice that by ( ) we have irreducible in .  The roots of are the following:                             As is monic and irreducible, it is the minimum polynomial of . Let and notice .  Notice that , a primitive -th root of unity, is the root of , the fourth cyclotomic polynomial, which is monic and irreducible in by . Thus is the minimum polynomial of and .  We know that , as every generator of can be written using and . Let , , and . By the , we have    , and thus      , and thus    As and we know that .  Thus we have .    Let where . From Part (a) we know . As , we know that has degree . As is a monic polynomial of degree , we see that it is the minimum polynomial and thus irreducible.       Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following:    ,     ,     , and     .   Thus .  Using with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .    Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .   Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is algebraic over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .     "
 },
 {
-  "id": "exercise-102",
+  "id": "exercise-105",
   "level": "2",
-  "url": "exercises-qual.html#exercise-102",
+  "url": "exercises-qual.html#exercise-105",
   "type": "Exercise",
   "number": "B.1",
   "title": "",
   "body": " Let be a finite -group for some prime and a normal subgroup of . Prove that , where is the center of .   Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. Suppose by way of contradiction that . We examine the conjugacy classes of . From the , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must divide the order of the group by . By , , where . Since , we see that , which is impossible given that . Thus .  As , by it is a union of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .  "
 },
 {
-  "id": "exercise-103",
+  "id": "exercise-106",
   "level": "2",
-  "url": "exercises-qual.html#exercise-103",
+  "url": "exercises-qual.html#exercise-106",
   "type": "Exercise",
   "number": "B.2",
   "title": "",
   "body": " A non-abelian group of order .   Prove there exists a non-abelian group of .    Find, with justification, a presentation of the group you found in part (1).      Use a semi-direct product.      Let be the cyclic group of order , and let be the cyclic group of order . Let be the homomorphism defined by for , where we identify with via the isomorphism given by sending the non-identity automorphism to the generator of .  Then the semi-direct product has order and is non-abelian. To see that is non-abelian, note that for any , since has no non-trivial automorphisms.    To find a presentation of , we need to identify the generators and relations. Since and are both cyclic, we can take the generators to be and respectively. Moreover, since is normal in , we have for some .  To determine the value of , note that acts on by automorphisms, and the non-identity automorphism of is inversion . Since , we must have .  Therefore, a presentation of is given by .     "
 },
 {
-  "id": "exercise-104",
+  "id": "exercise-107",
   "level": "2",
-  "url": "exercises-qual.html#exercise-104",
+  "url": "exercises-qual.html#exercise-107",
   "type": "Exercise",
   "number": "B.3",
   "title": "",
   "body": " Let G be a group of order . Prove that is not simple.   By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.  "
 },
 {
-  "id": "exercise-105",
+  "id": "exercise-108",
   "level": "2",
-  "url": "exercises-qual.html#exercise-105",
+  "url": "exercises-qual.html#exercise-108",
   "type": "Exercise",
   "number": "B.4",
   "title": "",
   "body": " Let be a commutative ring with identity, and assume . Let and be ideals such that .    Prove .  Prove the following special case of : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .     Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .    Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the , we see .     "
 },
 {
-  "id": "exercise-106",
+  "id": "exercise-109",
   "level": "2",
-  "url": "exercises-qual.html#exercise-106",
+  "url": "exercises-qual.html#exercise-109",
   "type": "Exercise",
   "number": "B.5",
   "title": "",
   "body": " Prove the Rank-Nullity Theorem: If is a field, and are a finite dimensional -vector spaces, and is an -linear transformation, then (Recall the rank of is the dimension of its image and the nullity of is the dimension of its kernel.)   See:   "
 },
 {
-  "id": "exercise-107",
+  "id": "exercise-110",
   "level": "2",
-  "url": "exercises-qual.html#exercise-107",
+  "url": "exercises-qual.html#exercise-110",
   "type": "Exercise",
   "number": "B.6",
   "title": "",
   "body": " Let be a field and a positive integer. We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:              and        We define the following:    ,     ,     ,     , and     .   As each of these matrices is in , they are explicit representatives for each similarity class.  "
 },
 {
-  "id": "exercise-108",
+  "id": "exercise-111",
   "level": "2",
-  "url": "exercises-qual.html#exercise-108",
+  "url": "exercises-qual.html#exercise-111",
   "type": "Exercise",
   "number": "B.7",
   "title": "",
   "body": " Let be the splitting field of over .    Find, with justification, the degree of over .  Let where , a primitive root of unity. Prove is irreducible in .     Let be the splitting field of over .     First, notice that by ( ) we have irreducible in .  The roots of are the following:                             As is monic and irreducible, it is the minimum polynomial of . Let and notice .  Notice that , a primitive -th root of unity, is the root of , the fourth cyclotomic polynomial, which is monic and irreducible in by . Thus is the minimum polynomial of and .  We know that , as every generator of can be written using and . Let , , and . By the , we have    , and thus      , and thus    As and we know that .  Thus we have .    Let where . From Part (a) we know . As , we know that has degree . As is a monic polynomial of degree , we see that it is the minimum polynomial and thus irreducible.     "
 },
 {
-  "id": "exercise-109",
+  "id": "exercise-112",
   "level": "2",
-  "url": "exercises-qual.html#exercise-109",
+  "url": "exercises-qual.html#exercise-112",
   "type": "Exercise",
   "number": "B.8",
   "title": "",
   "body": " Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following:    ,     ,     , and     .   Thus .  Using with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .  "
 },
 {
-  "id": "exercise-110",
+  "id": "exercise-113",
   "level": "2",
-  "url": "exercises-qual.html#exercise-110",
+  "url": "exercises-qual.html#exercise-113",
   "type": "Exercise",
   "number": "B.9",
   "title": "",

@@ -11,9 +11,74 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Say <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g(x) \in F[x]\text{.}\)</span> Let <span class="process-math">\(K\)</span> be the splitting field of <span class="process-math">\(g(x) \cdot f(x)\text{.}\)</span> So <span class="process-math">\(F \subseteq L \subseteq K\text{.}\)</span> Say <span class="process-math">\(\a\)</span> is a root of <span class="process-math">\(f\)</span> that belongs to <span class="process-math">\(L\text{,}\)</span> and let <span class="process-math">\(\beta \in K\)</span> be any other root. We aim to prove <span class="process-math">\(\beta \in L\text{.}\)</span>
-</div> <div class="para">Recall that we know that if <span class="process-math">\(E\)</span> is a splitting field over <span class="process-math">\(F\)</span> of an <em class="emphasis">irreducible</em> polynomial, then <span class="process-math">\(\Aut(E/F)\)</span> acts transitively on the roots of this polynomial. Something more general is true: If <span class="process-math">\(E\)</span> is the splitting field over <span class="process-math">\(F\)</span> of some possibly reducible polynomial <span class="process-math">\(h(x)\text{,}\)</span> then for each irreducible factors <span class="process-math">\(p(x)\text{,}\)</span> <span class="process-math">\(\Aut(E/F)\)</span> acts transitively on the roots of <span class="process-math">\(p(x)\text{.}\)</span> I won't prove this, but will apply it to <span class="process-math">\(F \subseteq K\text{.}\)</span> Since <span class="process-math">\(f(x)\)</span> is irreducible, we get that there is there a <span class="process-math">\(\s \in \Aut(K/F)\)</span> such that <span class="process-math">\(\s(\a) = \beta\text{.}\)</span> Let <span class="process-math">\(c_1, \dots, c_m \in L\)</span> be all the roots of <span class="process-math">\(g\text{,}\)</span> so that <span class="process-math">\(L = F(c_1, \dots, c_m)\text{.}\)</span> Since <span class="process-math">\(\s\)</span> fixes <span class="process-math">\(F\text{,}\)</span> it must permute these roots. In particular, <span class="process-math">\(\s(L) \subseteq L\text{.}\)</span> But then <span class="process-math">\(\beta = \s(\a) \in L\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-galext.html#proof-142" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">We proceed by induction on <span class="process-math">\([L: F]\text{.}\)</span> In the base case, <span class="process-math">\([L: F]=1\text{,}\)</span> and thus <span class="process-math">\(L=F\text{,}\)</span> so <span class="process-math">\(\operatorname{Aut}(L / F)\)</span> is the trivial group, and both statements hold.</div> <div class="para">Now let <span class="process-math">\(n \geqslant 1\)</span> and suppose that <span class="process-math">\(|\operatorname{Aut}(L / F)| \leqslant[L: F]\)</span> holds for all <span class="process-math">\(L\)</span> and <span class="process-math">\(F\)</span> such that <span class="process-math">\([L: F]&lt;n\text{.}\)</span> Let <span class="process-math">\([L: F]=n\text{.}\)</span> Pick <span class="process-math">\(\alpha \in L \backslash F\)</span> and let <span class="process-math">\(m=m_{\alpha, F}\text{,}\)</span> and consider <span class="process-math">\(F(\alpha) / F\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Note that <span class="process-math">\(H=\operatorname{Aut}(L / F(\alpha))\)</span> is a proper subgroup of <span class="process-math">\(G=\operatorname{Aut}(L / F)\text{.}\)</span> By induction, we have <span class="process-math">\(|H| \leqslant[L: F(\alpha)]\text{.}\)</span> We claim that it suffices to prove <span class="process-math">\([G: H] \leqslant[F(\alpha): F]\text{.}\)</span> Indeed, using the Degree Formula and the fact that <span class="process-math">\(|G|=|H| \cdot[G: H]\text{,}\)</span> if <span class="process-math">\([G: H] \leqslant[F(\alpha): F]\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|G|=|H| \cdot[G: H] \leqslant[L: F(\alpha)][F(\alpha): F]=[L: F].
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">To show that <span class="process-math">\([G: H] \leqslant[F(\alpha): F]\text{,}\)</span> consider the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{gathered}
+G / H=\{\text { cosets of } H \text { in } G\} \stackrel{\Psi}{\longrightarrow}\{\text { roots of } m \text { in } L\} \\
+g H \longmapsto g(\alpha) .
+\end{gathered}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/lem-root-perm.html" title="Lemma 16.5: Root Permutations">Lemma 16.5</a>, for any <span class="process-math">\(g \in G\)</span> the element <span class="process-math">\(g(\alpha)\)</span> is also a root of <span class="process-math">\(m\text{.}\)</span> For any <span class="process-math">\(h \in H\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-root-perm.html">
+\begin{equation*}
+g h(\alpha)=g(h(\alpha))=g(\alpha).
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Thus <span class="process-math">\(\Psi\)</span> is well-defined. Moreover, for any <span class="process-math">\(g_{1}, g_{2} \in G\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Psi\left(g_{1} H\right)=\Psi\left(g_{2} H\right) \Longleftrightarrow g_{1}(\alpha)=g_{2}(\alpha) \Longleftrightarrow g_{2}^{-1} g_{1}(\alpha)=\alpha
+\end{equation*}
+</div>
+<div class="para">which is equivalent to saying that <span class="process-math">\(g_{2}^{-1} g_{1}\)</span> fixes <span class="process-math">\(F(\alpha)\text{,}\)</span> and equivalently</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g_{2}^{-1} g_{1} \in H \Longleftrightarrow g_{1} H=g_{2} H.
+\end{equation*}
+</div>
+<div class="para">This proves that the function <span class="process-math">\(\Psi\)</span> is injective.</div>
+</div> <div class="para logical">
+<div class="para">By Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> <span class="process-math">\(, \operatorname{deg}(m)=[F(\alpha): F]\text{.}\)</span> Thus <span class="process-math">\(\Psi\)</span> is an inclusion of <span class="process-math">\(G / H\)</span> into a set with at most <span class="process-math">\([F(\alpha): F]\)</span> many elements. Therefore,</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+[G: H]=|G / H| \leqslant[F(\alpha): F].
+\end{equation*}
+</div>
+<div class="para">Now suppose that <span class="process-math">\(f\)</span> is separable, so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f=c \prod_{i=1}^{n}\left(x-\alpha_{i}\right) \in L[x].
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\alpha_{i} \neq \alpha_{j}\)</span> for <span class="process-math">\(i \neq j\)</span> and <span class="process-math">\(L=F\left(\alpha_{1}, \ldots, \alpha_{n}\right)\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Set <span class="process-math">\(\alpha=\alpha_{1}\)</span> and let <span class="process-math">\(m\)</span> be the irreducible factor of <span class="process-math">\(f\)</span> that has <span class="process-math">\(\alpha\)</span> as a root. Notice <span class="process-math">\(m=m_{\alpha, F}\text{.}\)</span> As before, we consider <span class="process-math">\(F(\alpha)\)</span> and set <span class="process-math">\(H=\operatorname{Aut}(L / F(\alpha)) \leq \operatorname{Aut}(L / F)=G\text{.}\)</span> Note that <span class="process-math">\(L\)</span> is also the splitting field of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g=\prod_{i=2}^{n}\left(x-\alpha_{i}\right) \in F(\alpha)[x]
+\end{equation*}
+</div>
+<div class="para">over <span class="process-math">\(F(\alpha)\text{,}\)</span> and <span class="process-math">\(g\)</span> is also separable. By induction <span class="process-math">\(|H|=[L: F(\alpha)]\text{,}\)</span> and it remains to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G: H]=[F(\alpha): F]=\operatorname{deg}(m).
+\end{equation*}
+</div>
+</div> <div class="para">Since <span class="process-math">\(f\)</span> is separable, so is <span class="process-math">\(m\text{,}\)</span> so <span class="process-math">\(\operatorname{deg}(m)\)</span> is exactly the number of distinct roots of <span class="process-math">\(m\text{.}\)</span> Showing that <span class="process-math">\([G: H]=\operatorname{deg}(m)\)</span> amounts to the assertion that the injective map <span class="process-math">\(\Psi\)</span> is also surjective. This holds since <span class="process-math">\(G\)</span> acts transitively on the roots of <span class="process-math">\(m\text{,}\)</span> as shown in <a href="" class="xref" data-knowl="./knowl/thm-field-aut-action.html" title="Theorem 16.6: \Aut Acts on Roots">Theorem 16.6</a>.</div></article><span class="incontext"><a href="sec-galext.html#proof-142" class="internal">in-context</a></span>
 </body>
 </html>

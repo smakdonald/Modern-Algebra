@@ -800,8 +800,21 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">16</span> <span class="title">Galois Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Galois Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">16.2</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Galois Extensions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-galext.html#subsec-actions-aut" class="internal"><span class="title">Group Actions and Automorphism Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-galext.html#subsec-galois-group" class="internal"><span class="title">Finite Extensions and Galois Groups</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">16.2</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#subsec-ftgt" class="internal"><span class="title">The Fundamental Theorem: Statement and Uses</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-proving-galois.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Proving the Fundamental Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-proving-galois.html#subsec-artin" class="internal"><span class="title">Artin's Theorem</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -995,7 +1008,7 @@ R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, 
 <li id="li-413"><div class="para" id="p-1137">the units of <span class="process-math">\(R[x]\)</span> are the units of <span class="process-math">\(R\)</span> (<span class="process-math">\(R[x]^\times=R^\times\)</span>)</div></li>
 </ol>
 </div></article><div class="para" id="p-1138">Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. As a treat.</div>
-<article class="theorem theorem-like" id="thm-ump-for-polynomial-rings"><h4 class="heading">
+<article class="theorem theorem-like" id="thm-ump-polynomial-rings"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.44</span><span class="period">.</span><span class="space"> </span><span class="title">UMP for Polynomial Rings.</span>
 </h4>
 <div class="para logical" id="p-1139">
@@ -1060,8 +1073,8 @@ R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, 
 <article class="example example-like" id="ex-applying-ring-homomorphism-to-coefficients"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.46</span><span class="period">.</span><span class="space"> </span><span class="title">Ring Maps and Coefficients.</span>
 </h4> <div class="para logical" id="p-1144">
-<div class="para">Given a ring map <span class="process-math">\(\phi: R \to S\)</span> between commutative rings, we may apply <a href="" class="xref" data-knowl="./knowl/thm-ump-for-polynomial-rings.html" title="Theorem 7.44: UMP for Polynomial Rings">Theorem 7.44</a> to the composition <span class="process-math">\(R \xra{\phi} S \hookrightarrow S[x]\)</span> using the element <span class="process-math">\(s = x\)</span> of <span class="process-math">\(S[x]\)</span> to get an induced ring map</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-for-polynomial-rings.html">
+<div class="para">Given a ring map <span class="process-math">\(\phi: R \to S\)</span> between commutative rings, we may apply <a href="" class="xref" data-knowl="./knowl/thm-ump-polynomial-rings.html" title="Theorem 7.44: UMP for Polynomial Rings">Theorem 7.44</a> to the composition <span class="process-math">\(R \xra{\phi} S \hookrightarrow S[x]\)</span> using the element <span class="process-math">\(s = x\)</span> of <span class="process-math">\(S[x]\)</span> to get an induced ring map</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-polynomial-rings.html">
 \begin{equation*}
 \tilde{\phi}: R[x] \to S[x]
 \end{equation*}

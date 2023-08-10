@@ -9412,7 +9412,7 @@
               As a treat.
             </p>
   
-            <theorem xml:id="thm-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
+            <theorem xml:id="thm-ump-polynomial-rings"><title>UMP for Polynomial Rings</title>
               <idx><h>UMP for polynomial rings</h></idx>
               <statement>
                 <p>
@@ -9463,7 +9463,7 @@
       
             <example xml:id="ex-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
               <p>
-                Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-for-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
+                Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
                 <me>\tilde{\phi}: R[x] \to S[x]</me>
                 that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
               </p>
@@ -17341,813 +17341,1097 @@
 
         <section xml:id="sec-galext"><title>Galois Extensions</title>
 
-          <definition xml:id="def-aut-k"><title>Field Automorphism Group</title>
-            <statement>
+          <subsection xml:id="subsec-actions-aut"><title>Group Actions and Automorphism Groups</title>
+
+            <blockquote>
               <p>
-                Let <m>K</m> be a field. 
-                The <em>automorphism group</em> of <m>K</m>, written <m>\Aut(K)</m>, is the collection of field automorphisms of <m>K</m>, with the binary operation of composition.
-                <idx><h>automorphism group (fields)</h></idx>
-                <idx><h><m>\Aut(K)</m></h></idx>
+                <q>
+                  Give me extension and motion and I will construct the universe.
+                </q>
               </p>
+              <attribution>René Descartes</attribution>
+            </blockquote>
+            
+            <definition xml:id="def-aut-k"><title>Field Automorphism Group</title>
+              <statement>
+                <p>
+                  Let <m>K</m> be a field. 
+                  The <em>automorphism group</em> of <m>K</m>, written <m>\Aut(K)</m>, is the collection of field automorphisms of <m>K</m>, with the binary operation of composition.
+                  <idx><h>automorphism group (fields)</h></idx>
+                  <idx><h><m>\Aut(K)</m></h></idx>
+                </p>
 
+                <p>
+                  The <em>automorphism group</em> of a field extension <m>F \subseteq K</m>, written <m>\Aut(K/F)</m>, is the subgroup of <m>\Aut(K)</m> consisting of those field automorphisms of <m>K</m> that restrict to the identity on <m>F</m>.
+                  <idx><h>automorphism group (field extensions)</h></idx>
+                  <idx><h><m>\Aut(K/F)</m></h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <aside>
               <p>
-                The <em>automorphism group</em> of a field extension <m>F \subseteq K</m>, written <m>\Aut(K/F)</m>, is the subgroup of <m>\Aut(K)</m> consisting of those field automorphisms of <m>K</m> that restrict to the identity on <m>F</m>.
-                <idx><h>automorphism group (field extensions)</h></idx>
-                <idx><h><m>\Aut(K/F)</m></h></idx>
+                Some books write <m>\operatorname{Gal}(L / F)</m> for <m>\operatorname{Aut}(L / F)</m>, and call it the Galois group of <m>L</m> over <m>F</m>. 
+                We will reserve that notation for a special type of finite extensions - those that are Galois - and use only <m>\operatorname{Aut}(L / F)</m> for the general case.
               </p>
-            </statement>
-          </definition>
+            </aside>
 
-          <example xml:id="ex-autcr"><title><m>\Aut(\C/\R)</m></title>
-            <p>
-              I claim <m>\Aut(\C/\R)</m> has two elements (and so is a cyclic group of order <m>2</m>): 
-              the identity map on <m>\C</m> and the element <m>\s</m> given as complex conjugation. 
-              It is easy to see each of these is an element of <m>\Aut(\C/\R)</m> — for <m>\s</m>, this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends <m>1</m> to <m>1</m>).
-            </p>
-  
-            <p>
-              To see these are the only elements of <m>\Aut(\C/\R)</m>, suppose <m>\tau \in \Aut(\C/\R)</m>. 
-              For any <m>z = a + ib \in \C</m>, we have <m>\tau(z) = a + b \tau(i)</m> since <m>\tau|_\R = \id_\R</m>. 
-              Moreover, <m>-1 = \tau(-1) = \tau(i \cdot i) = \tau(i) \cdot \tau(i)</m> and so <m>\tau(i) = \pm 1</m>. 
-              Thus <m>\tau = \id</m> or <m>\tau = \s</m>.
-            </p>
-          </example>
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>K / F</m> be a field extension. 
+                  Then <m>\operatorname{Aut}(K)</m> is a group under composition of maps, and <m>\operatorname{Aut}(K / F)</m> is a subgroup of <m>\operatorname{Aut}(K)</m>.
+                </p>
+              </statement>
+            </exercise>
 
-          <example xml:id="ex-autqsqrt-dq"><title><m>\Aut(\Q(\sqrt d)/\Q)</m></title>
-            <p>
-              For any square-free integer <m>d</m>, <m>\Aut(\Q(\sqrt{d})/\Q)</m> has order <m>2</m>, and its two elements are the identity and the map sending <m>a + b \sqrt{d}</m> to <m>a - b \sqrt{d}</m>. 
-              Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to the previous example.
-            </p>
-          </example>
-
-          <example xml:id="ex-aut-and-x3-2"><title><m>\Aut</m> and <m>(x^3-2)</m></title>
-            <p>
-              For a more complicated example, let <m>K</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>. 
-              Recall 
-              <me>
-                K= \Q(\a_1, \a_2, \a_3)
-              </me> 
-              <me>
-                \a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
-              </me> 
-              Let us ponder how big <m>\Aut(K/\Q)</m> could be. 
-              Pick any <m>\s \in \Aut(K/\Q)</m>. 
-              Since <m>\s</m> is a ring homomorphism, for any <m>i</m> we have 
-              <me>
-                \s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
-              </me> 
-              and thus <m>\s(\a_i)</m> is also a root of <m>x^2 - 2</m>. 
-              In other words, for each <m>i</m> we have <m>\s(\a_i) = \a_j</m> for some <m>j</m>. 
-              Moreover, since <m>K</m> is generated as a field extension of <m>\Q</m> by <m>\a_1, \a_2, \a_3</m>, the action of <m>\s</m> on the three roots completely determines the action of <m>\s</m> on all of <m>K</m>. 
-              In more detail, every element of <m>K</m> is given taking <m>\Q</m>-linear combinations of sums and products and quotients of these roots, and any element of <m>\Aut(K/\Q)</m> preserves sums, products and <m>\Q</m>-linear combinations.
-            </p>
-  
-            <p>
-              To summarize, we have proven that there are {} <m>3! = 6</m> possibilities for <m>\s</m>. 
-              In fact, more is true: 
-              The function 
-              <me>
-                \phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
-              </me> 
-              given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. 
-              Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. 
-              I claim that <m>|\Aut(K/\Q)| = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. 
-              I will prove this directly - we will learn of fancier methods to do so later.
-            </p>
-  
-            <p>
-              First we notice that the field automorphism of <m>\C</m> given by complex conjugation, namely <m>\C \to \C, z \mapsto \overline{z}</m>, permutes the roots of <m>x^3 - 2</m> and hence it restricts to a field map from <m>K</m> into <m>K</m>. 
-              Since this map is <m>\Q</m>-linear and injective (as are all field maps) and <m>K</m> is a finite dimensional <m>\Q</m>-vector space, this map must be onto as well. 
-              So, we obtain an element <m>\a \in \Aut(K/\Q)</m> given by <m>\a(z) = \overline{z}</m> for all <m>z \in K</m>. 
-              It corresponds <m>(2 \, 3) \in S_3</m>.
-            </p>
-  
-            <p>
-              Next, we apply <xref ref="cor-porism"/>, which gives <m>\gamma \in \Aut(K/\Q)</m> such that <m>\gamma(\sqrt[3]{2})=e^{2 \pi i/3} \sqrt[3]{2}</m>. 
-              So, in the numbering above, <m>\gamma</m> corresponds to either <m>(1 \, 2)</m> or <m>(1 \, 2 \, 3)</m> in <m>S_3</m>. 
-              We don't really know which of these it is. 
-              (In fact, both will occur — the map <m>\gamma</m> is not unique.) 
-              But either way we have proven the claim: For notice that both subsets <m>\{ (2 \, 3), (1 \, 2)\}</m> and <m>\{ (2 \, 3), (1 \, 2 \, 3)\}</m> of <m>S_3</m> generated all of <m>S_3</m>.
-            </p>
-  
-            <p>
-              In other words, every possible permutation of roots of <m>x^3 - 2</m> arises as a field automorphism of its splitting field over <m>\Q</m>. 
-              This is what I meant before when I said that the roots of <m>x^3 - 2</m> are “as symmetric as possible''.
-            </p>
-          </example>
-          
-          <proposition xml:id="prop-automorphisms-and-permutations-fields"><title>Automorphisms and Permutations (Fields)</title>
-            <statement>
+            <example xml:id="ex-autcr"><title><m>\Aut(\C/\R)</m></title>
               <p>
-                Suppose <m>F \subseteq K</m> is a field extension and <m>f(x) = F[x]</m>. 
-                Let <m>R = \{\a \in K \mid f(\a) = 0\}</m>, the set of roots of <m>f</m> in <m>K</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      For any <m>\a \in K</m> and <m>\s \in \Aut(K/F)</m>, we have <m>\s(f(\a)) = f(\s(\a))</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>\a \in R</m> then <m>\s(\a) \in R</m> for all <m>\s \in \Aut(K/F)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The function <m>\phi: \Aut(K/F) \to \Perm(R)</m> given by <m>\phi(\s)(\a) = \s(\a)</m> for <m>\a \in R</m> is a homomorphism of groups. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>K= F(R)</m> then <m>\phi</m> is one-to-one. In particular, if <m>K</m> is the splitting field over <m>F</m> of <m>f(x)</m>, then <m>\Aut(L/K)</m> is isomorphic to a subgroup of <m>S_n</m> where <m>n</m> is the number of roots of <m>f</m> in <m>L</m>. (Note that <m>n \leq \deg(f)</m>.)
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Say <m>f = \sum_i c_i x^i</m> with <m>c_i \in F</m>. 
-                Then 
-                <me>
-                  \s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).
-                </me>
-                This proves (1) and (2) is an immediate consequence.
-              </p>
-  
-              <p>
-                To show (3) we need to first prove that for all <m>\s \in \Aut(K/F)</m>, the function <m>\phi(\s): R \to R</m> is a bijection. 
-                (The target of this function is indeed <m>R</m> by (2).) 
-                Since <m>R</m> is finite, we just need to show its one-to-one.
-                This holds since <m>\s</m> itself is one-to-one. 
-                (If <m>\phi(\s)(\a) = \phi(\s)(\a')</m> for <m>\a, \a' \in R</m> then <m>\s(\a) = \s(\a')</m> and, since <m>\s</m> is one-to-one, we have <m>\a = \a'</m>.) 
-                Since the group laws of <m>\Aut(K/F)</m> and <m>\Perm(R)</m> are both given as function composition, it is clear that <m>\phi</m> is a group homomorphism. 
-                In detail, 
-                <me>
-                  \phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
-                </me> 
-                for all <m>\a</m> and so <m>\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)</m>.
-              </p>
-  
-              <p>
-                Now asssume <m>K = F(R)</m>. We show <m>\phi</m> is one-to-one by showing its kernel is trivial. 
-                Suppose <m>\phi(\s) = \id_{\Perm(R)}</m>; that is, suppose <m>\s(\a) = \a</m> for all <m>\a \in R</m>. 
-                We show <m>\s = \id_K</m>.
-                Define 
-                <me>
-                  K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
-                </me> 
-                the so-called <em>fixed fielf</em> of <m>\s</m>. 
-                Note that <m>F \subseteq K^\s</m> since <m>\s \in \Aut(K/F)</m> and we also have <m>R \subseteq K^\s</m> by assumption. 
-                It is easy to see that <m>K^\s</m> is a subfield of <m>K</m>. 
-                (Here are the details: <m>1 \in K^\s</m>. For <m>\beta_1, \beta_2 \in K^\s</m>, we have 
-                <me>
-                  \s(\beta_1 \pm \beta_2) = \s(\beta_1) \pm \s(\beta_2)  = \beta_1 \pm \beta_2,</me><me>\s(\beta_1 \cdot\beta_2) = \s(\beta_1) \cdot \s(\beta_2)  = \beta_1 \cdot \beta_2,
-                </me>
-                and, if <m>\beta_2 \ne 0</m>, 
-                <me>
-                  \s(1/\beta_2) =1 /\s(\beta_2)  =1/ \beta_2,
-                </me> 
-                and thus <m>\beta_1 \pm \beta_2, \beta_1 \cdot \beta_2, 1/\beta_2 \in K^\s</m>.) 
-                So, <m>K^\s</m> is a subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, but recall that <m>F(R)</m> is the {} subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, and so we must have <m>K^\s = K</m>. 
-                But then <m>\s(\a) = \a</m> for all <m>\a \in K</m> and hence <m>\s = \id_K</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <definition xml:id="def-fixed-field"><title>Fixed Field</title>
-            <statement>
-              <p>
-                Let <m>\s\in\Aut(K)</m>. Define 
-                <me>
-                  K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
-                </me> 
-                the so-called <em>fixed field</em> of <m>\s</m>.
-                <idx><h>fixed field</h></idx>
-              </p>
-            </statement>
-          </definition>
-          
-          <corollary xml:id="cor-automorphisms-and-group-actions-fields"><title>Automorphisms and Group Actions (Fields)</title>
-            <statement>
-              <p>
-                Let <m>K</m> be the spitting field of some <m>f(x) \in F[x]</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      The group <m>\Aut(K/F)</m> acts on the set of roots <m>f(x)</m> in <m>K</m> by the rule <m>\s \cdot \a := \s(\a)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      This action is faithful. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>f</m> is irreducible, this action is transitive.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We proceed by induction on <m>[L:F]</m>. 
-                When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
-              </p>
-  
-              <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. 
-                Consider the extension <m>F \subseteq F(\a)</m>.
-                Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. 
-                By induction we have <m>|H| \leq [L: F(\a)]</m>.
-                Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. 
-                This follows from:
-              </p>
-  
-              <p>
-                <em>Claim</em> Let <m>R</m> be the set of roots of <m>p(x)</m> that belong to <m>L</m>. 
-                Then the function 
-                <me>
-                  \begin{equation}
-                  \theta: G/H  \to R
-                  \end{equation}
-                </me> 
-                given by <m>\theta(gH) = g(\a)</m> is well-defined and injective. 
-                (Note: <m>H</m> is not necessarily normal, and so <m>G/H</m> isn't a group. 
-                By <m>G/H</m> I just mean the set of left cosets of <m>H</m> in <m>G</m>.)
-              </p>
-  
-              <p>
-                By Proposition , for each <m>g \in G</m> we have <m>g(\a) \in R</m>. 
-                Moreover, by definition of <m>H</m>, for all <m>h \in H</m>, we have <m>h(\a) = \a</m> and hence <m>gh(\a)=g(h(\a))=g(\a)</m>. 
-                This proves <m>\theta</m> is a well-defined function (i.e., it is independent of left coset representative). 
-                For <m>g_1, g_2 \in G</m>, if <m>g_1(\a) = g_2(\a)</m> then <m>g_2^{-1}g_1(\a) = \a</m> which implies <m>g_2^{-1}g_1 \in H</m> 
-                (since if an automorphism of <m>L</m> fixes <m>F</m> and <m>\a</m> then it fixes <m>F(\a)</m>). 
-                Thus <m>g_1(\a) = g_2(\a)</m> implies <m>g_1H = g_2H</m> and hence <m>\theta</m> is one-to-one.
-              </p>
-  
-              <p>
-                Since <m>\deg(p(x)) = [F(\a): F]</m>, we conclude from the claim that <m>[G:H] =|G/H|\leq [F(\a): F]</m>. 
-                Putting all this together gives <m>|G| = |H|\cdot [G:H] \leq [L:F(\a)][F(\a):F] = [L:F]</m>.
-              </p>
-            </proof>
-          </corollary>
-
-          <proposition xml:id="prop-automorphisms-and-finite-extension-degree"><title>Automorphisms and Finite Extension Degree</title>
-            <statement>
-              <p>
-                If <m>F \subseteq L</m> is a finite extension of fields, then <m>|\Aut(L/F)| \leq [L : F]</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We proceed by induction on <m>[L:F]</m>. 
-                When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
-              </p>
-  
-              <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. 
-                Consider the extension <m>F \subseteq F(\a)</m>. 
-                Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. 
-                By induction we have <m>|H| \leq [L: F(\a)]</m>. 
-                Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. 
-                This follows from:
-              </p>
-  
-              <p>
-                {} Let <m>R</m> be the set of roots of <m>p(x)</m> that belong to <m>L</m>. 
-                Then the function 
-                <me>
-                  \begin{equation}
-                  \theta: G/H  \to R
-                  \end{equation}
-                </me> 
-                given by <m>\theta(gH) = g(\a)</m> is well-defined and injective. 
-                (Note: <m>H</m> is not necessarily normal, and so <m>G/H</m> isn't a group. 
-                By <m>G/H</m> I just mean the <em>set</em> of left cosets of <m>H</m> in <m>G</m>.)
-              </p>
-  
-              <p>
-                By Proposition <xref provisional="cite"/>, for each <m>g \in G</m> we have <m>g(\a) \in R</m>. 
-                Moreover, by definition of <m>H</m>, for all <m>h \in H</m>, we have <m>h(\a) = \a</m> and hence <m>gh(\a)=g(h(\a))=g(\a)</m>. 
-                This proves <m>\theta</m> is a well-defined function (i.e., it is independent of left coset representative). 
-                For <m>g_1, g_2 \in G</m>, if <m>g_1(\a) = g_2(\a)</m> then <m>g_2^{-1}g_1(\a) = \a</m> which implies <m>g_2^{-1}g_1 \in H</m> 
-                (since if an automorphism of <m>L</m> fixes <m>F</m> and <m>\a</m> then it fixes <m>F(\a)</m>). 
-                Thus <m>g_1(\a) = g_2(\a)</m> implies <m>g_1H = g_2H</m> and hence <m>\theta</m> is one-to-one.
-              </p>
-            </proof>
-          </proposition>
-
-          <example xml:id="exe-lq-and-x4-2"><title><m>[L:\Q]</m> and <m>(x^4-2)</m></title>
-            <p>
-              Let <m>L</m> be the splitting field of the irreducible polynomial <m>q(x) = x^4 - 2 \in \Q[x]</m>. 
-              So <m>L = \Q(R)</m> where <m>R = \{z_1 = \sqrt[4]{2}, z_2 = i \sqrt[4]{2}, z_3= - \sqrt[4]{2}, z_4 = - i\sqrt[4]{2}\}</m>. 
-              By <xref ref="cor-automorphisms-and-group-actions-fields"/>, the action of <m>\Aut(L/\Q)</m> on <m>R</m> is faithful so that we have an injective group homomorphism <m>\Aut(L/\Q) \to \Perm(R)</m>.
-            </p>
-  
-            <p>
-              Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; 
-              i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. 
-              To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. 
-              So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. 
-              In fact, as we shall see, <m>|\Aut(L/\Q)| = 8</m>, considerably smaller than <m>4!</m>.
-            </p>
-  
-            <p>
-              Let us compute <m>[L:\Q]</m>. 
-              Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. 
-              In the chain of extensions 
-              <me>
-                \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
-              </me> 
-              the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by <xref text="title" ref="thm-eisensteins-criterion"/>, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. 
-              It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. 
-              But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. 
-              We conclude <m>[L:\Q] = 8</m>. 
-              It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. 
-              (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. 
-              But we won't appeal to this fact here.)
-            </p>
-  
-            <p>
-              We claim <m>|\Aut(L/\Q)| = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
-              (This is isomorphic to <m>D_8</m>.)
-            </p>
-  
-            <p>
-              The map <m>\C \to \C</m> given by complex conjugation permutes the roots of <m>x^4 - 2</m> and it restricts to an automorphism of <m>L</m> — specially, it fixes <m>z_1, z_3</m> and interchanges <m>z_2</m> and <m>z_4</m>. 
-              It follows that complex conjugation determines an element <m>\s \in \Aut(L/\Q)</m> that corresponds to <m>(2 \, 4) \in H \leq S_4</m>.
-            </p>
-  
-            <p>
-              By the <xref text="title" ref="thm-degree-formula"/> we get <m>[L: \Q(i)] = 4</m>. 
-              Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. 
-              This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; 
-              this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
-            </p>
-  
-            <p>
-              To construct another element of <m>\Aut(L/\Q)</m>, we use that that <m>L</m> is the splitting field of the polynomial <m>x^4 - 2</m> over <m>\Q(i)</m> and that, as we just showed, <m>x^4 - 2</m> is irreducible in <m>\Q(i)[x]</m>. 
-              We may thus apply Porism  (also stated in the Corollary) to get that there is an element <m>\tau \in \Aut(L/\Q(i))</m> such that <m>\tau(z_1) = z_2</m>. We may regard <m>\tau</m> as an element of <m>\Aut(L/\Q)</m> since, by definition, <m>\Aut(L/\Q(i))</m> is a subgroup of <m>\Aut(L/\Q)</m>. 
-              We have 
-              <me>
-                \tau(z_2) = \tau(i z_1) = \tau(i) \tau(z_1) = i z_2 = z_3
-              </me> since <m>\tau(i) = i</m> by construction. 
-              A key point here is that if we had merely specified <m>\tau</m> to be an element of <m>\Aut(L/\Q)</m> sending <m>z_1</m> to <m>z_2</m>, then we would have no idea what <m>\tau</m> does to <m>z_2</m> — it was key to define <m>\tau \in \Aut(L/\Q(i))</m> as we did.
-              We then also get <m>\tau(z_3) = z_4</m> and <m>\tau(z_4) = z_1</m>. So <m>\tau</m> corresponds to the permutation <m>(1 \,2 \, 3 \,4)</m>.
-            </p>
-  
-            <p>
-              We have proven that <m>\Aut(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> having order at most <m>8</m> (by the Proposition above) and that it contains <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
-              Since the subgroup generated by these two elements has order <m>8</m>, the claim follows.
-            </p>
-          </example>
-
-          <definition xml:id="def-normal-extension"><title>Normal Extension</title>
-            <statement>
-              <p>
-                A finite extension <m>F \subseteq L</m> is called <em>normal</em> if <m>L</m> is the splitting field of some (non-unique) polynomial <m>f(x) \in F[x]</m>.
-                <idx><h>normal field extension</h></idx>
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="exe-normal-extension"><title>Normal Extension</title>
-            <p>
-              <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a normal extension of <m>\Q</m> since it is the splitting field of <m>x^3-2</m>.
-            </p>
-          </example>
-
-          <example xml:id="exe-qsqrt32-not-normal"><title><m>\Q(\sqrt[3]2)</m> not Normal</title>
-            <p>
-              Is <m>\Q(\sqrt[3]{2})</m> normal? 
-              It isn't the splitting field of <m>x^3 -2</m>, but maybe it somehow is the splitting field of some other polynomial. 
-              It in fact is not normal, but it is not so obvious that it isn't. 
-              <xref ref="thm-galois-extension-equivalencies"/> will allow us to prove it isn't normal.
-            </p>
-          </example>
-
-          <theorem xml:id="thm-galois-extension-equivalencies"><title>Galois Extension Equivalencies</title>
-            <statement>
-              <p>
-                Let <m>F \subseteq L</m> be a finite extension of fields. 
-                The following are equivalent. 
-                <ol>
-                  <li>
-                    <p>
-                      <m>|\Aut(L/F)| = [L:F]</m> 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The extension is both normal and separable. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>L</m> is the splitting field of some separable polynomial with coefficients in <m>F</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-
-          <definition xml:id="def-galois-extension"><title>Galois Extension</title>
-            <statement>
-              <p>
-                A finite extension of fields is a <em>Galois extension</em> if the three equivalence conditions of this theorem hold: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>|\Aut(L/F)| = [L:F]</m> 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The extension is both normal and separable. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>L</m> is the splitting field of some separable polynomial with coefficients in <m>F</m>.
-                    </p>
-                  </li>
-                </ol>
+                I claim <m>\Aut(\C/\R)</m> has two elements (and so is a cyclic group of order <m>2</m>): 
+                the identity map on <m>\C</m> and the element <m>\s</m> given as complex conjugation. 
+                Each of these is an element of <m>\Aut(\C/\R)</m> — for <m>\s</m>, this amounts to the fact that complex conjugation commutes with addition and multiplication of complex numbers (and that it sends <m>1</m> to <m>1</m>).
               </p>
     
               <p>
-                In this case it is customary to write <m>\Gal(L/F)</m> for the group <m>\Aut(L/F)</m> and to refer to it as the <em>Galois group</em> of the extension - they are exactly the same group, but the former is used only when the extension is Galois.
-                <idx><h>Galois extension</h></idx>
-                <idx><h>Galois group</h></idx>
-                <idx><h><m>\Gal(L/F)</m></h></idx>
+                To see these are the only elements of <m>\Aut(\C/\R)</m>, suppose <m>\tau \in \Aut(\C/\R)</m>. 
+                For any <m>z = a + ib \in \C</m>, we have <m>\tau(z) = a + b \tau(i)</m> since <m>\tau|_\R = \id_\R</m>. 
+                Moreover, <m>-1 = \tau(-1) = \tau(i \cdot i) = \tau(i) \cdot \tau(i)</m> and so <m>\tau(i) = \pm 1</m>. 
+                Thus <m>\tau = \id</m> or <m>\tau = \s</m>.
               </p>
-            </statement>
-          </definition>
+            </example>
 
-          <remark>
-            <p>
-              Recall from the Proposition <xref provisional="cite"/> above that <m>|\Aut(L/F)| \leq [L:F]</m> holds for any finite field extension. 
-              So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.
-            </p>
-          </remark>
-
-          <example xml:id="exe-galois-extension"><title>Galois Extension</title>
-            <p>
-              <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a Galois extension of <m>\Q</m>, since it the splitting field of <m>x^3 - 2</m>. 
-              We proved above that <m>\Aut(L/\Q)</m> has six elements and <m>[L: \Q] = 6</m>, as the Theorem predicts.
-            </p>
-          </example>
-
-          <example xml:id="exe-qsqrt32-not-galois"><title><m>\Q(\sqrt[3]2)</m> not Galois</title>
-            <p>
-              I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. 
-              Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. 
-              Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. 
-              Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. 
-              Thus it isn't Galois. 
-              Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
-            </p>
-          </example>
-
-          <proposition xml:id="prop-one-root-to-factor-them-all"><title>One Root to Factor them All</title>
-            <statement>
+            <example xml:id="ex-autqsqrt-dq"><title><m>\Aut(\Q(\sqrt d)/\Q)</m></title>
               <p>
-                Suppose <m>F \subseteq L</m> is a finite extension of fields and <m>f(x)\in F[x]</m> is an irreducible polynomial. 
-                If <m>F \subseteq L</m> is a normal extension and <m>f</m> has at least one root in <m>L</m>, then <m>f</m> factors completely in <m>L</m>.
+                For any square-free integer <m>d</m>, <m>\Aut(\Q(\sqrt{d})/\Q)</m> has order <m>2</m>, and its two elements are the identity and the map sending <m>a + b \sqrt{d}</m> to <m>a - b \sqrt{d}</m>. 
+                Checking that each really is an element of this group and that there are the only two elements in this group is done similarly to <xref ref="ex-autcr"/>
               </p>
-            </statement>
+            </example>
 
-            <proof>
-              <p>
-                Say <m>L</m> is the splitting field of <m>g(x) \in F[x]</m>. 
-                Let <m>K</m> be the splitting field of <m>g(x) \cdot f(x)</m>. So <m>F \subseteq L \subseteq K</m>. 
-                Say <m>\a</m> is a root of <m>f</m> that belongs to <m>L</m>, and let <m>\beta \in K</m> be any other root. 
-                We aim to prove <m>\beta \in L</m>.
-              </p>
-  
-              <p>
-                Recall that we know that if <m>E</m> is a splitting field over <m>F</m> of an <em>irreducible</em> polynomial, then <m>\Aut(E/F)</m> acts transitively on the roots of this polynomial. 
-                Something more general is true: 
-                If <m>E</m> is the splitting field over <m>F</m> of some possibly reducible polynomial <m>h(x)</m>, then for each irreducible factors <m>p(x)</m>, <m>\Aut(E/F)</m> acts transitively on the roots of <m>p(x)</m>. 
-                I won't prove this, but will apply it to <m>F \subseteq K</m>. 
-                Since <m>f(x)</m> is irreducible, we get that there is there a <m>\s \in \Aut(K/F)</m> such that <m>\s(\a) = \beta</m>. 
-                Let <m>c_1, \dots, c_m \in L</m> be all the roots of <m>g</m>, so that <m>L = F(c_1, \dots, c_m)</m>. 
-                Since <m>\s</m> fixes <m>F</m>, it must permute these roots. 
-                In particular, <m>\s(L) \subseteq L</m>. But then <m>\beta = \s(\a) \in L</m>.
-              </p>
-            </proof>
-          </proposition>
+            <lemma xml:id="lem-root-perm"><title>Root Permutations</title>
+              <statement>
+                <p>
+                  Let <m>K / F</m> be a field extension, <m>\sigma \in \operatorname{Aut}(K / F)</m>, and <m>q \in F[x]</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        For all <m>c \in K</m>, we have <m>\sigma(q(c))=q(\sigma(c))</m>.
+                      </p>
+                    </li>
 
-          <example xml:id="exe-galois-and-characteristic-p"><title>Galois and Characteristic <m>p</m></title>
+                    <li>
+                      <p>
+                        If <m>\alpha \in K</m> is a root of <m>q</m>, then <m>\sigma(\alpha)</m> also is a root of <m>q</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>L</m> be a field and let <m>\sigma \in \operatorname{Aut}(L)</m>. 
+                  Then the <xref ref="thm-ump-polynomial-rings"/> gives that there is an induced ring homomorphism <m>(-)^{\sigma}: L[x] \rightarrow L[x]</m> such that for each <m>q=a_{n} x^{n}+\cdots+a_{0} \in K[x]</m>, we have
+                  <me>
+                    q^{\sigma}(x)=\sigma\left(a_{n}\right) x^{n}+\cdots+\sigma\left(a_{0}\right).
+                  </me>
+                  If <m>\sigma \in \operatorname{Aut}(L / K)</m> and <m>q \in K[x]</m>, then <m>q^{\sigma}=q</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        By assumption, <m>\sigma</m> is a homomorphism and it restricts to the identity on <m>F</m>. 
+                        Thus for any polynomial <m>q=a_{n} x^{n}+\cdots+a_{0} \in F[x]</m>, we have
+                        <me>
+                          \sigma(q(c))=\sigma\left(a_{n} c^{n}+\cdots+a_{0}\right)=\sigma\left(a_{n}\right) \sigma(c)^{n}+\cdots+\sigma\left(a_{0}\right)=a_{n} \sigma(c)^{n}+\cdots+a_{0}=q(\sigma(c)).
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>\alpha</m> is a root of <m>f</m>, then
+                        <me>
+                          \begin{aligned}
+                          0=\sigma(0) &amp; =\sigma(q(\alpha)) \\
+                          &amp; =q(\sigma(\alpha)) \quad \text { by a })
+                          \end{aligned}
+                        </me>
+                        showing that <m>\sigma(\alpha)</m> is also a root of <m>q</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </lemma>
+
             <p>
-              Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. 
-              Then <m>F \subseteq L</m> is not Galois since <m>|\Aut(L/K)| &lt; [L:K]</m> in this case. 
+              We now come to the main idea connecting field extensions and groups. It concerns the action of the group of automorphisms of a splitting field of a polynomial on the set of roots of that polynomial.
             </p>
-          </example>
+
+            <theorem xml:id="thm-field-aut-action"><title><m>\Aut</m> Acts on Roots</title>
+              <statement>
+                <p>
+                  Let <m>L</m> be the splitting field of a polynomial <m>f \in F[x]</m>. Let <m>S</m> be the set of distinct roots of <m>f</m> in <m>K</m>, and let <m>n:=|S|</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        The group Aut <m>(L / F)</m> acts faithfully on <m>S</m>, via
+                        <me>
+                          \sigma \cdot b:=\sigma(b)
+                        </me>
+                        for all <m>\sigma \in \operatorname{Aut}(L / F)</m> and <m>b \in S</m>, and hence <m>\operatorname{Aut}(L / F)</m> is isomorphic to a subgroup of <m>S_{n}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>f \in F[x]</m> is an irreducible polynomial, then <m>\operatorname{Aut}(L / F)</m> acts transitively on <m>S</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>G=\operatorname{Aut}(L / F)</m>. 
+                        To see that the the action above is well-defined, notice that if <m>b \in S</m> then <m>\sigma(b) \in S</m> by Lemma 6.10. <xref provisional="cite"/>
+                        Now we have
+                        <me>
+                          \begin{gathered}
+                          \sigma \cdot\left(\sigma^{\prime} \cdot b\right)=\sigma\left(\sigma^{\prime}(b)\right)=\left(\sigma \circ \sigma^{\prime}\right)(b) \quad \text { for all } \sigma, \sigma^{\prime} \in G, b \in S, \\
+                          1_{G} \cdot b=\operatorname{id}_{K}(b)=b \quad \text { for all } \sigma \in G \text { and } b \in S,
+                          \end{gathered}
+                        </me>
+                        so the given formula does indeed define an action of <m>G</m> on <m>S</m>.
+                      </p>
+
+                      <p>
+                        This action is faithful: if <m>\sigma</m> fixes all the roots <m>\alpha_{1}, \ldots, \alpha_{n}</m> of <m>f</m>, then it fixes every element of <m>F\left(\alpha_{1}, \ldots, \alpha_{n}\right)=L</m>. 
+                        Thus the corresponding group homomorphism <m>\operatorname{Aut}(L / F) \rightarrow \operatorname{Aut}(S)</m> is injective. 
+                        On the other hand, the group of automorphisms on a set of <m>n</m> elements is isomorphic to <m>S_{n}</m>, so we have an inclusion of <m>\operatorname{Aut}(L / F)</m> into <m>S_{n}</m>, and thus <m>\operatorname{Aut}(L / F)</m> is isomorphic to a subgroup of <m>S_{n}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>\alpha, \beta</m> be any two roots of <m>f</m>. By Theorem 5.69, there is an isomorphism <m>\theta: F(\alpha) \rightarrow F(\beta)</m> that fixes <m>F</m>.
+                      </p>
+
+                      <p>
+                        Our polynomial factors both as <m>f=(x-\alpha) g</m> and <m>f=(x-\beta) h</m>. Since <m>f^{\theta}=f</m> and <m>(x-\alpha)^{\theta}=x-\beta</m>, we must have <m>g^{\theta}=h</m>. Theorem 5.69 applies, showing there is an automorphism <m>\sigma: L \rightarrow L</m> that extends <m>\theta</m>. In particular, <m>\sigma</m> fixes <m>F</m>, since <m>\sigma</m> extends <m>\theta</m> and <m>\left.\theta\right|_{F}=\operatorname{id}_{F}</m>, so <m>\sigma \in \operatorname{Aut}(L / F)</m>. Moreover, since <m>\sigma</m> extends <m>\theta</m> we have <m>\sigma(\alpha)=\theta(\alpha)=\beta</m>. This proves the action is transitive on the set of roots of any irreducible polynomial.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <p>
+              Soon we will show that if <m>f \in F[x]</m> is separable but not necessarily irreducible, and <m>L</m> is the splitting field of <m>f</m>, then the orbits of the action of <m>\operatorname{Aut}(L / F)</m> on the set of roots of <m>f</m> are precisely the sets of roots of the same irreducible factor of <m>f</m>. 
+              But to do so, we will need a little bit of Galois theory.
+            </p>
+
+            <corollary xml:id="cor-aut-order">
+              <statement>
+                <p>
+                  Let <m>L</m> be the splitting field of a polynomial <m>f \in F[x]</m> with <m>n</m> distinct roots. 
+                  Then <m>|\operatorname{Aut}(L / F)| \leqslant n !</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We showed in <xref ref="thm-field-aut-action"/> that <m>\operatorname{Aut}(L / F)</m> is isomorphic to a subgroup of <m>S_{n}</m>, and thus it as at most <m>\left|S_{n}\right|=n!</m> elements.
+                </p>
+              </proof>
+            </corollary>
+
+            <p>
+              We will give an improved version of this result soon.
+            </p>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and <m>L=F\left(a_{1}, \ldots, a_{n}\right)</m>, where <m>a_{1}, \ldots, a_{n}</m> are elements in some extension of <m>F</m> that are algebraic over <m>F</m>. 
+                  Each element <m>\sigma \in \operatorname{Aut}(L / F)</m> is uniquely determined by <m>\sigma\left(a_{1}\right), \ldots, \sigma\left(a_{n}\right)</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <p>
+              A typical question that arises from <xref ref="thm-field-aut-action"/> is to explicitly identify the automorphisms of a splitting field extension as a subgroup of the symmetric group.
+            </p>
+            
+            <example xml:id="ex-aut-and-x3-2"><title><m>\Aut</m> and <m>(x^3-2)</m></title>
+              <p>
+                For a more complicated example, let <m>K</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>. 
+                Recall 
+                <me>
+                  K= \Q(\a_1, \a_2, \a_3)
+                </me> 
+                <me>
+                  \a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
+                </me> 
+                Let us ponder how big <m>\Aut(K/\Q)</m> could be. 
+                Pick any <m>\s \in \Aut(K/\Q)</m>. 
+                Since <m>\s</m> is a ring homomorphism, for any <m>i</m> we have 
+                <me>
+                  \s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
+                </me> 
+                and thus <m>\s(\a_i)</m> is also a root of <m>x^2 - 2</m>. 
+                In other words, for each <m>i</m> we have <m>\s(\a_i) = \a_j</m> for some <m>j</m>. 
+                Moreover, since <m>K</m> is generated as a field extension of <m>\Q</m> by <m>\a_1, \a_2, \a_3</m>, the action of <m>\s</m> on the three roots completely determines the action of <m>\s</m> on all of <m>K</m>. 
+                In more detail, every element of <m>K</m> is given taking <m>\Q</m>-linear combinations of sums and products and quotients of these roots, and any element of <m>\Aut(K/\Q)</m> preserves sums, products and <m>\Q</m>-linear combinations.
+              </p>
+    
+              <p>
+                To summarize, we have proven that there are {} <m>3! = 6</m> possibilities for <m>\s</m>. 
+                In fact, more is true: 
+                The function 
+                <me>
+                  \phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
+                </me> 
+                given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. 
+                Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. 
+                I claim that <m>|\Aut(K/\Q)| = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. 
+                I will prove this directly - we will learn of fancier methods to do so later.
+              </p>
+    
+              <p>
+                First we notice that the field automorphism of <m>\C</m> given by complex conjugation, namely <m>\C \to \C, z \mapsto \overline{z}</m>, permutes the roots of <m>x^3 - 2</m> and hence it restricts to a field map from <m>K</m> into <m>K</m>. 
+                Since this map is <m>\Q</m>-linear and injective (as are all field maps) and <m>K</m> is a finite dimensional <m>\Q</m>-vector space, this map must be onto as well. 
+                So, we obtain an element <m>\a \in \Aut(K/\Q)</m> given by <m>\a(z) = \overline{z}</m> for all <m>z \in K</m>. 
+                It corresponds <m>(2 \, 3) \in S_3</m>.
+              </p>
+    
+              <p>
+                Next, we apply <xref ref="cor-porism"/>, which gives <m>\gamma \in \Aut(K/\Q)</m> such that <m>\gamma(\sqrt[3]{2})=e^{2 \pi i/3} \sqrt[3]{2}</m>. 
+                So, in the numbering above, <m>\gamma</m> corresponds to either <m>(1 \, 2)</m> or <m>(1 \, 2 \, 3)</m> in <m>S_3</m>. 
+                We don't really know which of these it is. 
+                (In fact, both will occur — the map <m>\gamma</m> is not unique.) 
+                But either way we have proven the claim: For notice that both subsets <m>\{ (2 \, 3), (1 \, 2)\}</m> and <m>\{ (2 \, 3), (1 \, 2 \, 3)\}</m> of <m>S_3</m> generated all of <m>S_3</m>.
+              </p>
+    
+              <p>
+                In other words, every possible permutation of roots of <m>x^3 - 2</m> arises as a field automorphism of its splitting field over <m>\Q</m>. 
+                This is what I meant before when I said that the roots of <m>x^3 - 2</m> are “as symmetric as possible''.
+              </p>
+            </example>
+
+            <example xml:id="exe-lq-and-x4-2"><title><m>[L:\Q]</m> and <m>(x^4-2)</m></title>
+              <p>
+                Let <m>L</m> be the splitting field of the irreducible polynomial <m>q(x) = x^4 - 2 \in \Q[x]</m>. 
+                So <m>L = \Q(R)</m> where <m>R = \{z_1 = \sqrt[4]{2}, z_2 = i \sqrt[4]{2}, z_3= - \sqrt[4]{2}, z_4 = - i\sqrt[4]{2}\}</m>. 
+                By <xref ref="thm-field-aut-action"/>, the action of <m>\Aut(L/\Q)</m> on <m>R</m> is faithful so that we have an injective group homomorphism <m>\Aut(L/\Q) \to \Perm(R)</m>.
+              </p>
+    
+              <p>
+                Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; 
+                i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. 
+                To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. 
+                So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. 
+                In fact, as we shall see, <m>|\Aut(L/\Q)| = 8</m>, considerably smaller than <m>4!</m>.
+              </p>
+    
+              <p>
+                Let us compute <m>[L:\Q]</m>. 
+                Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. 
+                In the chain of extensions 
+                <me>
+                  \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
+                </me> 
+                the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by <xref text="title" ref="thm-eisensteins-criterion"/>, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. 
+                It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. 
+                But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. 
+                We conclude <m>[L:\Q] = 8</m>. 
+                It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. 
+                (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. 
+                But we won't appeal to this fact here.)
+              </p>
+    
+              <p>
+                We claim <m>|\Aut(L/\Q)| = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
+                (This is isomorphic to <m>D_8</m>.)
+              </p>
+    
+              <p>
+                The map <m>\C \to \C</m> given by complex conjugation permutes the roots of <m>x^4 - 2</m> and it restricts to an automorphism of <m>L</m> — specially, it fixes <m>z_1, z_3</m> and interchanges <m>z_2</m> and <m>z_4</m>. 
+                It follows that complex conjugation determines an element <m>\s \in \Aut(L/\Q)</m> that corresponds to <m>(2 \, 4) \in H \leq S_4</m>.
+              </p>
+    
+              <p>
+                By the <xref text="title" ref="thm-degree-formula"/> we get <m>[L: \Q(i)] = 4</m>. 
+                Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. 
+                This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; 
+                this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
+              </p>
+    
+              <p>
+                To construct another element of <m>\Aut(L/\Q)</m>, we use that that <m>L</m> is the splitting field of the polynomial <m>x^4 - 2</m> over <m>\Q(i)</m> and that, as we just showed, <m>x^4 - 2</m> is irreducible in <m>\Q(i)[x]</m>. 
+                We may thus apply Porism  (also stated in the Corollary) to get that there is an element <m>\tau \in \Aut(L/\Q(i))</m> such that <m>\tau(z_1) = z_2</m>. We may regard <m>\tau</m> as an element of <m>\Aut(L/\Q)</m> since, by definition, <m>\Aut(L/\Q(i))</m> is a subgroup of <m>\Aut(L/\Q)</m>. 
+                We have 
+                <me>
+                  \tau(z_2) = \tau(i z_1) = \tau(i) \tau(z_1) = i z_2 = z_3
+                </me> since <m>\tau(i) = i</m> by construction. 
+                A key point here is that if we had merely specified <m>\tau</m> to be an element of <m>\Aut(L/\Q)</m> sending <m>z_1</m> to <m>z_2</m>, then we would have no idea what <m>\tau</m> does to <m>z_2</m> — it was key to define <m>\tau \in \Aut(L/\Q(i))</m> as we did.
+                We then also get <m>\tau(z_3) = z_4</m> and <m>\tau(z_4) = z_1</m>. So <m>\tau</m> corresponds to the permutation <m>(1 \,2 \, 3 \,4)</m>.
+              </p>
+    
+              <p>
+                We have proven that <m>\Aut(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> having order at most <m>8</m> (by the Proposition above) and that it contains <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
+                Since the subgroup generated by these two elements has order <m>8</m>, the claim follows.
+              </p>
+            </example>
+
+          </subsection>
+
+          <subsection xml:id="subsec-galois-group"><title>Finite Extensions and Galois Groups</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Give me extension and motion and I will construct the universe.
+                </q>
+              </p>
+              <attribution>René Descartes</attribution>
+            </blockquote>
+
+            <p>
+              We will now focus on finite field extensions and their automorphism groups. We start by giving a much better upper bound on the order of the automorphism group of a finite field extension.
+            </p>
+
+            <theorem xml:id="thm-aut-order"><title>Order and Degree</title>
+              <statement>
+                <p>
+                  Let <m>L / F</m> be a finite field extension. 
+                  Then
+                  <me>
+                    |\operatorname{Aut}(L / F)| \leqslant[L: F].
+                  </me>
+                  If <m>L</m> is the splitting field of a separable polynomial in <m>F[x]</m>, then
+                  <me>
+                    |\operatorname{Aut}(L / F)|=[L: F].
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We proceed by induction on <m>[L: F]</m>. 
+                  In the base case, <m>[L: F]=1</m>, and thus <m>L=F</m>, so <m>\operatorname{Aut}(L / F)</m> is the trivial group, and both statements hold.
+                </p>
+          
+                <p>
+                  Now let <m>n \geqslant 1</m> and suppose that <m>|\operatorname{Aut}(L / F)| \leqslant[L: F]</m> holds for all <m>L</m> and <m>F</m> such that <m>[L: F]&lt;n</m>. 
+                  Let <m>[L: F]=n</m>. 
+                  Pick <m>\alpha \in L \backslash F</m> and let <m>m=m_{\alpha, F}</m>, and consider <m>F(\alpha) / F</m>.
+                </p>
+          
+                <p>
+                  Note that <m>H=\operatorname{Aut}(L / F(\alpha))</m> is a proper subgroup of <m>G=\operatorname{Aut}(L / F)</m>. 
+                  By induction, we have <m>|H| \leqslant[L: F(\alpha)]</m>. 
+                  We claim that it suffices to prove <m>[G: H] \leqslant[F(\alpha): F]</m>. 
+                  Indeed, using the Degree Formula and the fact that <m>|G|=|H| \cdot[G: H]</m>, if <m>[G: H] \leqslant[F(\alpha): F]</m> then
+                  <me>
+                    |G|=|H| \cdot[G: H] \leqslant[L: F(\alpha)][F(\alpha): F]=[L: F].
+                  </me>
+                </p>
+          
+                <p>
+                  To show that <m>[G: H] \leqslant[F(\alpha): F]</m>, consider the function
+                  <me>
+                    \begin{gathered}
+                    G / H=\{\text { cosets of } H \text { in } G\} \stackrel{\Psi}{\longrightarrow}\{\text { roots of } m \text { in } L\} \\
+                    g H \longmapsto g(\alpha) .
+                    \end{gathered}
+                  </me>
+                </p>
+          
+                <p>
+                  By <xref ref="lem-root-perm"/>, for any <m>g \in G</m> the element <m>g(\alpha)</m> is also a root of <m>m</m>. 
+                  For any <m>h \in H</m>, we have
+                  <me>
+                    g h(\alpha)=g(h(\alpha))=g(\alpha).
+                  </me>
+                </p>
+          
+                <p>
+                  Thus <m>\Psi</m> is well-defined. 
+                  Moreover, for any <m>g_{1}, g_{2} \in G</m> we have
+                  <me>
+                    \Psi\left(g_{1} H\right)=\Psi\left(g_{2} H\right) \Longleftrightarrow g_{1}(\alpha)=g_{2}(\alpha) \Longleftrightarrow g_{2}^{-1} g_{1}(\alpha)=\alpha
+                  </me>
+                  which is equivalent to saying that <m>g_{2}^{-1} g_{1}</m> fixes <m>F(\alpha)</m>, and equivalently
+                  <me>
+                    g_{2}^{-1} g_{1} \in H \Longleftrightarrow g_{1} H=g_{2} H.
+                  </me>
+                  This proves that the function <m>\Psi</m> is injective.
+                </p>
+          
+                <p>
+                  By Theorem <xref provisional="cite"/> <m>, \operatorname{deg}(m)=[F(\alpha): F]</m>. 
+                  Thus <m>\Psi</m> is an inclusion of <m>G / H</m> into a set with at most <m>[F(\alpha): F]</m> many elements. 
+                  Therefore,
+                  <me>
+                    [G: H]=|G / H| \leqslant[F(\alpha): F].
+                  </me>
+                  Now suppose that <m>f</m> is separable, so that
+                  <me>
+                    f=c \prod_{i=1}^{n}\left(x-\alpha_{i}\right) \in L[x].
+                  </me>
+                  with <m>\alpha_{i} \neq \alpha_{j}</m> for <m>i \neq j</m> and <m>L=F\left(\alpha_{1}, \ldots, \alpha_{n}\right)</m>.
+                </p>
+          
+                <p>
+                  Set <m>\alpha=\alpha_{1}</m> and let <m>m</m> be the irreducible factor of <m>f</m> that has <m>\alpha</m> as a root. 
+                  Notice <m>m=m_{\alpha, F}</m>. As before, we consider <m>F(\alpha)</m> and set <m>H=\operatorname{Aut}(L / F(\alpha)) \leq \operatorname{Aut}(L / F)=G</m>. 
+                  Note that <m>L</m> is also the splitting field of
+                  <me>
+                    g=\prod_{i=2}^{n}\left(x-\alpha_{i}\right) \in F(\alpha)[x]
+                  </me>
+                  over <m>F(\alpha)</m>, and <m>g</m> is also separable. 
+                  By induction <m>|H|=[L: F(\alpha)]</m>, and it remains to show that
+                  <me>
+                    [G: H]=[F(\alpha): F]=\operatorname{deg}(m).
+                  </me>
+                </p>
+          
+                <p>
+                  Since <m>f</m> is separable, so is <m>m</m>, so <m>\operatorname{deg}(m)</m> is exactly the number of distinct roots of <m>m</m>. 
+                  Showing that <m>[G: H]=\operatorname{deg}(m)</m> amounts to the assertion that the injective map <m>\Psi</m> is also surjective. 
+                  This holds since <m>G</m> acts transitively on the roots of <m>m</m>, as shown in <xref ref="thm-field-aut-action"/>.
+                </p>
+              </proof>
+            </theorem>
+
+            <p>
+              The finite field extensions whose automorphism group is as large as possible are very important, and are the main subject of this final chapter.
+            </p>
+
+            <definition xml:id="def-galois-extension"><title>Galois Extension</title>
+              <statement>
+                <p>
+                  A finite field extension <m>F \subseteq L</m> is Galois if <m>|\operatorname{Aut}(L / F)|=[L: F]</m>. In this case we write <m>\operatorname{Gal}(L / F)</m> for <m>\operatorname{Aut}(L / F)</m>, and say <m>\operatorname{Gal}(L / F)</m> is the Galois group of <m>L</m> over <m>F</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="exe-qsqrt32-not-galois"><title><m>\Q(\sqrt[3]2)</m> not Galois</title>
+              <p>
+                I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. 
+                Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. 
+                Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. 
+                Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. 
+                Thus it isn't Galois. 
+                Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
+              </p>
+            </example>
+
+            <p>
+              <xref ref="thm-aut-order"/> tells us how to construct Galois extensions:
+            </p>
+
+            <corollary xml:id="cor-gal-construction"><title>First Construction of Galois Extensions from Splitting Fields</title>
+              <statement>
+                <p>
+                  If <m>L</m> is the splitting field of a separable polynomial <m>f \in F[x]</m>, then <m>L / F</m> is Galois.
+                </p>
+              </statement>
+            </corollary>
+
+            <example xml:id="exe-galois-extension"><title>Galois Extension</title>
+              <p>
+                <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a Galois extension of <m>\Q</m>, since it the splitting field of <m>x^3 - 2</m>. 
+                We proved above that <m>\Aut(L/\Q)</m> has six elements and <m>[L: \Q] = 6</m>, as the Theorem predicts.
+              </p>
+            </example>
+
+            <example xml:id="exe-galois-and-characteristic-p"><title>Galois and Characteristic <m>p</m></title>
+              <p>
+                Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. 
+                Then <m>F \subseteq L</m> is not Galois since <m>|\Aut(L/K)| &lt; [L:K]</m> in this case. 
+              </p>
+            </example>
+
+            <p>
+              We will need the following notation.
+            </p>
+
+            <definition xml:id="def-fixed-subfield"><title>Fixed Subfield</title>
+              <statement>
+                <p>
+                  If <m>G</m> is subgroup of <m>\operatorname{Aut}(L)</m>, the subfield of <m>L</m> fixed by <m>G</m>, denoted <m>L^{G}</m>, is by definition
+                  <me>
+                    L^{G}:=\{\alpha \in L \mid s(\alpha)=\alpha, \text { for all } s \in G\}.
+                  </me>
+                </p>
+              </statement>
+            </definition>
+
+            <aside>
+              <p>
+                Some textbooks write this as <m>L_{G}</m>.
+              </p>
+            </aside>
+
+            <exercise>
+              <statement>
+                <p>
+                  If <m>G</m> is subgroup of <m>\operatorname{Aut}(L)</m>, show that <m>L^{G}</m> is a subfield of <m>L</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <example>
+              <statement>
+                <p>
+                  Let <m>G=\operatorname{Aut}(\mathbb{C} / \mathbb{R})</m>. 
+                  Then <m>\mathbb{C}^{G}</m> is the subgroup of complex numbers fixed by all the elements in <m>\Aut(\mathbb{C} / \mathbb{R})</m>, which we saw in <xref ref="ex-autcr"/> has only two elements, the identity and the conjugation map <m>s</m>. 
+                  Therefore, <m>\mathbb{C}^{G}</m> is the set of complex numbers fixed by conjugation, and thus <m>\mathbb{C}^{\operatorname{Aut}(\mathbb{C} / \mathbb{R})}=\mathbb{R}</m>.
+                </p>
+              </statement>
+            </example>
+
+          </subsection>
           
         </section>
 
         <section xml:id="sec-ftgt"><title>The Fundamental Theorem of Galois Theory</title>
 
-          <definition xml:id="def-intermediate-field"><title>Intermediate Field</title>
-            <statement>
+          <subsection xml:id="subsec-ftgt"><title>The Fundamental Theorem: Statement and Uses</title>
+
+            <definition xml:id="def-intermediate-field"><title>Intermediate Field</title>
+              <statement>
+                <p>
+                  Given a field extension <m>F \subseteq L</m>, an <em>intermediate field</em> is a subfield <m>E</m> of <m>L</m> that contains <m>F</m>, so that <m>F \subseteq E\subseteq L</m>.
+                  <idx><h>intermediate field</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-intermediate-extensions-are-galois"><title>Intermediate Extensions are Galois</title>
+              <statement>
+                <p>
+                  If <m>F \subseteq L</m> is a (finite) Galois extension, then so is <m>E \subseteq L</m> for any intermediate field <m>E</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>L</m> is the splitting field over <m>F</m> of a separable polynomial <m>f(x) \in F[x]</m>, then <m>L</m> is also the splitting field over <m>E</m> of the same polynomial, now regarded as belonging to <m>E[x]</m>.
+                </p>
+              </proof>
+            </proposition>
+
+            <warning>
               <p>
-                Given a field extension <m>F \subseteq L</m>, an <em>intermediate field</em> is a subfield <m>E</m> of <m>L</m> that contains <m>F</m>, so that <m>F \subseteq E\subseteq L</m>.
-                <idx><h>intermediate field</h></idx>
+                In the setting of the <xref ref="prop-intermediate-extensions-are-galois"/>, <m>E</m> need not be Galois over <m>F</m>. 
               </p>
-            </statement>
-          </definition>
+            </warning>
 
-          <proposition xml:id="prop-intermediate-extensions-are-galois"><title>Intermediate Extensions are Galois</title>
-            <statement>
+            <example>
+              <statement>
+                <p>
+                  <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is Galois over <m>F = \Q</m> but <m>E = \Q(\sqrt[3]{2})</m> is not Galois over <m>\Q</m>.
+                </p>
+              </statement>
+            </example>
+
+            <theorem xml:id="thm-ftgt"><title>Fundamental Theorem of Galois Theory</title>
+              <idx><h>FTGT</h></idx>
+              <idx><h>fundamental theorem of Galois theory</h></idx>
+              <idx><h>Galois correspondance</h></idx>
+              <statement>
+                <p>
+                  Suppose <m>F \subseteq L</m> is a (finite) Galois field extension. Then the functions <me>\Psi:\left\{\text{intermediate fields $E$, with $F\subseteq E \subseteq L$}\right\} \to\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\}</me>given by <me>\Psi(E)=\Gal(L/E)</me>is a bijection whose inverse <me>\Psi^{-1}:
+                  \left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\} \to
+                  \left\{\text{intermediate fields $E$, with $F \subseteq E \subseteq L$}\right\}</me>is given by <me>\Psi^{-1}(H)=L^H.</me> Moreover, this bijective correspondence enjoys the following properties: 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\Psi</m> and <m>\Psi^{-1}</m> each reverse the order of inclusions. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\Psi</m> and <m>\Psi^{-1}</m> convert degrees of extensions to indices of subgroups: 
+                        <ul>
+                          <li>
+                            <p>
+                              <m>[\Gal(L/F) : H] = [L^H:F]</m> or, equivalently, 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              <m>[\Gal(L/F) : \Gal(L/E)] = [E:F]</m>. 
+                            </p>
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Normal subgroups correspond to intermediate fields that are Galois over <m>F</m>:
+                        <ul>
+                          <li>
+                            <p>
+                              If <m>N \nsg G</m> then <m>L^N/F</m> is Galois. 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              If <m>E/F</m> is Galois, then <m>\Gal(L/E) \nsg \Gal(L/F)</m>. 
+                            </p>
+                          </li>
+                        </ul> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>E = L^N</m> for a normal subgroup <m>N \nsg \Gal(L/F)</m>, then <m>\Gal(E/F) \cong \Gal(L/F)/N</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>H_1, H_2</m> are subgroups of <m>G</m> with corresponding fixed subfields <m>E_1=L^{H_1}</m> and <m>E_2=L^{H_2}</m>, then 
+                        <ul>
+                          <li>
+                            <p>
+                              <m>E_1\cap E_2=L^{&lt;H_1,H_2&gt;}</m> and <m>\Gal(L/E_1\cap E_2)=\langle H_1,H_2\rangle</m> 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              <m>E_1 E_2=L^{H_1\cap H_2}</m> and <m>\Gal(L/E_1E_2)=H_1\cap H_2</m>.
+                            </p>
+                          </li>
+                        </ul> 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  First, we need to check that both functions are well-defined. 
+                  For each intermediary field <m>E</m>, we know from Corollary 6.31 that <m>L / E</m> is also Galois, and hence it makes sense to write <m>\operatorname{Gal}(L / E)</m>; 
+                  moreover, any <m>\sigma \in \operatorname{Gal}(L / E)</m> is an automorphism of <m>L</m> that fixes <m>E</m>, and thus <m>F \subseteq E</m>, so <m>\sigma \in \operatorname{Gal}(L / F)</m>. 
+                  This shows that <m>\Psi</m> is well-defined. 
+                  Conversely, given a subgroup <m>H</m> of <m>\operatorname{Gal}(L / F), L^{H}</m> is a subfield of <m>L</m> by Exercise 18.
+                </p>
+
+                <p>
+                  Next, we need to check that <m>\Psi</m> and <m>\Psi^{-1}</m> are indeed inverse functions. 
+                  Given a subgroup <m>H</m> of <m>\operatorname{Gal}(L / F)</m>, we have <m>\operatorname{Gal}\left(L / L^{H}\right)=H</m> by Artin’s Theorem. 
+                  Thus
+                  <me>
+                    \Psi \circ \Psi^{-1}(H)=\Psi\left(L^{H}\right)=\operatorname{Gal}\left(L / L^{H}\right)=H .
+                  </me>
+                  Conversely, given an intermediate field <m>E, L / E</m> is Galois by Corollary 6.31, and hence <m>L^{\operatorname{Gal}(L / E)}=E</m> by Corollary 6.24. 
+                  Thus
+                  <me>
+                    \Psi^{-1} \circ \Psi(E)=\Psi(\operatorname{Gal}(L / E))=L^{\operatorname{Gal}(L / E)}=E .
+                  </me>
+                  This establishes the fact that <m>\Psi</m> is indeed a bijective correspondence.
+                </p>
+          
+                <p>
+                  Now we check that <m>\Psi</m> satisfies the given list of properties. 
+                  For brevity, set <m>G:=\operatorname{Gal}(L / F)</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        The fact that the correspondence is order reversing follows from the definitions. 
+                        Given intermediate fields <m>E_{1} \subseteq E_{2}</m>, any automorphism of <m>L</m> that preserves <m>E_{2}</m> must also preserve <m>E_{1}</m>, thus <m>\operatorname{Gal}\left(L / E_{2}\right) \supseteq \operatorname{Gal}\left(L / E_{1}\right)</m>. 
+                        Conversely, if <m>H_{1} \leq H_{2} \leq \operatorname{Gal}(L / E)</m>, then every <m>x \in L</m> that is fixed by every <m>\sigma \in H_{2}</m> must also be fixed in particular by every element of <m>H_{1}</m>, so <m>L^{H_{2}} \supseteq L^{H_{1}}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        By definition of Galois extension, <m>[L: F]=|G|</m>. 
+                        By Artin’s Theorem, for any subgroup <m>H \leq G</m> the extension <m>L^{H} \subseteq L</m> is also Galois, and thus by definition <m>\left[L: L^{H}\right]=|H|</m>. 
+                        Using the Degree Formula, we have
+                        <me>
+                          \left[L^{H}: F\right]=\frac{[L: F]}{\left[L: L^{H}\right]}=\frac{|G|}{|H|}=[G: H] .
+                        </me>
+                        So if <m>H=\Psi(E)=\operatorname{Gal}(E / F)</m>, then <m>L^{H}=E</m> and the formula above can be rewritten as
+                        <me>
+                          [\operatorname{Gal}(L / F): \operatorname{Gal}(L / E)]=[E: F] .
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Suppose <m>E</m> is an intermediate field that is Galois over <m>F</m>. 
+                        Fix <m>\sigma \in G</m> and <m>\alpha \in E</m>. 
+                        Since <m>E / F</m> is Galois, by Corollary 6.26 the polynomial <m>m_{\alpha, F}</m> is separable and all of its roots are in <m>E</m>. 
+                        By Lemma <m>6.10, \sigma(\alpha)</m> is also a root of <m>m_{\alpha, F}</m>, and thus <m>\sigma(\alpha) \in E</m>.
+                      </p>
+
+                      <p>
+                        Suppose <m>\tau \in \operatorname{Gal}(L / E)</m>. 
+                        For any <m>\alpha \in E</m> we have <m>\sigma(\alpha) \in E</m>, so <m>\tau(\sigma(\alpha))=\sigma(\alpha)</m>. 
+                        Thus
+                        <me>
+                          \sigma^{-1}\left(\tau(\sigma(\alpha))=\sigma^{-1}(\sigma(\alpha))=\alpha\right).
+                        </me>
+                      </p>
+
+                      <p>
+                        This proves that <m>\sigma^{-1} \tau \sigma \in \operatorname{Gal}(L / E)</m> and hence that <m>\operatorname{Gal}(L / E) \unlhd G</m>. 
+                        We have shown that if <m>E</m> is Galois over <m>F</m>, then the corresponding subgroup <m>\operatorname{Gal}(L / E)</m> of <m>G</m> is normal.
+                      </p>
+
+                      <p>
+                        For the converse, consider a normal subgroup <m>N \unlhd G</m> and the corresponding intermediate field <m>E=L^{N}</m>, so that <m>N=\operatorname{Gal}(L / E)</m>. 
+                        We will show that <m>E</m> is the splitting field over <m>F</m> of a separable polynomial in <m>F[x]</m>, and hence is Galois over <m>F</m> by Corollary 6.18.
+                      </p>
+
+                      <p>
+                        Pick any <m>\alpha \in E</m> and set <m>m:=m_{\alpha, F}</m>. 
+                        By Corollary 6.26, <m>m</m> is separable and all of its roots belong to <m>L</m>. 
+                        We claim that all the roots must in fact belong to <m>E</m>. 
+                        Since <m>m</m> is irreducible and <m>L / F</m> is Galois, by Corollary <m>6.26 G</m> acts transitively on the set of roots of <m>m</m>. 
+                        Thus, given be any other root <m>\beta \in L</m> of <m>m</m>, there is a <m>\sigma \in G</m> with <m>\sigma(\alpha)=\beta</m>. 
+                        Since <m>N</m> is normal, for any <m>\tau \in N</m> we have <m>\sigma \tau^{\prime}=\tau \sigma</m> for some <m>\tau^{\prime} \in N</m>. 
+                        But <m>\tau^{\prime} \in N</m> fixes <m>E</m>, so <m>\tau^{\prime}(\alpha)=\alpha</m>. 
+                        Therefore,
+                        <me>
+                          \beta=\sigma(\alpha)=\sigma \tau^{\prime}(\alpha)=\tau \sigma(\alpha)=\tau(\beta)
+                        </me>
+                        which shows that <m>\beta</m> is also fixed by <m>N</m>. 
+                        But then <m>\beta \in L^{N}=E</m>. 
+                        Therefore, <m>E</m> contains all the roots of <m>m_{\alpha, F}</m>, and thus <m>E</m> must contain the splitting field of <m>m_{\alpha, F}</m>.
+                      </p>
+
+                      <p>
+                        We have <m>E=F\left(\alpha_{1}, \ldots, \alpha_{l}\right)</m> for some <m>\alpha_{1}, \ldots, \alpha_{l} \in E</m>. 
+                        If <m>m_{1}, \ldots, m_{n}</m> are the distinct polynomials among <m>m_{\alpha_{1}, F}, \ldots, m_{\alpha_{l}, F}</m>, then <m>E</m> is the splitting field of the separable polynomial <m>m_{1} \cdots m_{n}</m>. 
+                        By Corollary 6.28, <m>E</m> is Galois over <m>F</m>.
+                      </p>
+
+                      <p>
+                        If <m>E=L^{N}</m> for a normal subgroup <m>N \unlhd \operatorname{Gal}(L / F)</m>, then <m>\operatorname{Gal}(E / F) \cong \operatorname{Gal}(L / F) / N</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>E=L^{N}</m> for a normal subgroup <m>N</m> of <m>G</m>. 
+                        We want to show that <m>\operatorname{Gal}(E / F)</m> is isomorphic to <m>G / N</m>.
+                      </p>
+
+                      <p>
+                        For each <m>\sigma \in G</m>, we claim that <m>\sigma(E) \subseteq E</m>. 
+                        By Lemma 6.10, for all <m>\alpha \in E</m> the element <m>\sigma(\alpha)</m> is also a root of <m>m_{\alpha, F}</m>. 
+                        But since <m>E / F</m> is Galois, it must contain all of the roots of <m>m_{\alpha, F}</m>, by Corollary 6.26, so <m>\sigma(\alpha) \in E</m>. 
+                        Thus <m>\sigma(E) \subseteq E</m>, so the restriction of <m>\sigma</m> to <m>E</m> determines an injective field homomorphism <m>\left.\sigma\right|_{E}: E \rightarrow E</m>. 
+                        Since <m>\left.\sigma\right|_{F}=\mathrm{id}_{F}</m>, this map is also a linear transformation of vector spaces over <m>F</m>. 
+                        But <m>E</m> is a finite vector space over <m>F</m>, and any injective linear transformation <m>E \rightarrow E</m> must be bijective. 
+                        We conclude that <m>\left.\sigma\right|_{E}</m> is an automorphism of <m>E</m>. 
+                        We thus have a well-defined function
+                        <me>
+                          \begin{gathered}
+                          \phi: G \longrightarrow \operatorname{Gal}(E / F) \\
+                          \sigma \longmapsto \phi(\sigma)=\left.\sigma\right|_{E} .
+                          \end{gathered}
+                        </me>
+                      </p>
+
+                      <p>
+                        Moreover, this map is a group homomorphism by construction. 
+                        The kernel is the subgroup of <m>G</m> of automorphisms that restrict to the identity on <m>E</m>, which is precisely <m>N</m>. 
+                        Hence we have an induced injective group homomorphism
+                        <me>
+                          \bar{\phi}: G / N \rightarrow \operatorname{Gal}(E / F) .
+                        </me>
+                        But <m>|N|=|\operatorname{Gal}(E / F)|&lt;\infty</m>, so this map <m>\bar{\phi}</m> must be an isomorphism.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <corollary xml:id="cor-galois-correspondence-and-lattices"><title>Galois Correspondence and Lattices</title>
+              <statement>
+                <p>
+                  The Galois correspondence induces a lattice isomorphism between the lattice of intermediate fields of a Galois extension <m>F \subseteq L</m> and the “dual'' of the lattice of subgroups of <m>\Gal(L/F)</m>.
+                </p>
+              </statement>
+            </corollary>
+
+            <example xml:id="exe-ftgt-and-x4-2"><title>FTGT and <m>(x^4-2)</m></title>
+              <statement>
+                <p>
+                  Let <m>L</m> be the splitting field of <m>x^4 - 2</m> over <m>\Q</m>. 
+                  Let's use the fundamental theorem to list all intermediate fields for <m>\Q \subseteq L</m> and to determine which are Galois over <m>\Q</m>. 
+                  Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  We know <m>G := \Gal(L/\Q)</m> corresponds to the <m>8</m> element subgroup of <m>S_4</m> generated by <m>\s = (2 \, 4)</m> and <m>\tau = (1 \, 2 \,3 \, 4)</m> where we number the roots as <m>\a_1 = \sqrt[4]{2}, \a_2 = i \a_1, \a_3 = -\a_1, \a_4 =-i\a_1</m>.
+                </p>
+      
+                <p>
+                  This group is isomorphic to <m>D_8</m> and we can make this isomorphism explicit by labeling the four corners of a square by <m>\a_1, \dots,\a_4</m>, counter-clockwise. 
+                  So, <m>\tau</m> is rotation by <m>90</m> degrees and <m>\s</m> is reflection about the line joining vertices <m>1</m> and <m>3</m>.
+                </p>
+      
+                <p>
+                  The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).
+                </p>
+
+                <p>
+                  <me>
+                    \begin{array}{ll}
+                    \{e\} &amp; G=\langle(24),(1234)\rangle \\
+                    H_{1}=\langle(24)\rangle &amp; H_{5}=\langle(13)(24)\rangle \\
+                    H_{2}=\langle(13)\rangle &amp; H_{6}=\langle(1234)\rangle \\
+                    H_{3}=\langle(12)(34)\rangle &amp; H_{7}=\langle(13),(24)\rangle \\
+                    H_{4}=\langle(14)(23)\rangle &amp; H_{8}=\langle(12)(34),(14)(23)\rangle
+                    \end{array}
+                  </me>
+                  and the lattices are of subgroups of <m>G</m> and intermediate fields of <m>\mathbb{Q} \subseteq \mathbb{Q}\left(\alpha_{1}, i\right)</m> are
+                </p>
+                
+                <image source='images/2023_07_25_8ee899f97e942cbf2bc7g-80.jpeg'/>
+
+                <p>
+                The intermediate fields are the fixed subfields of <m>L</m> associated to each of these subgroups. 
+                In some sense, this answers the question, but let's find explicit generators for at least some of these.
+                </p>
+      
+                <p>
+                  <m>G</m> corresponds to <m>\Q</m> and <m>e</m> corresponds to <m>L = \Q(\a_1, i)</m>.
+                </p>
+      
+                <p>
+                  Set <m>E_i = L^{H_i}</m>. 
+                  <m>E_1</m> has degree <m>4 = [G:H_1]</m> over <m>\Q</m>. 
+                  It is clear <m>\a_1</m> (and <m>\a_3</m>) belongs to <m>E_1</m> and since <m>[\Q(\a_1):\Q]=4</m>, we must have <m>E_1 = \Q(\a_1)</m>.
+                </p>
+      
+                <p>
+                  Likewise <m>E_2 = \Q(\a_2)</m>.
+                </p>
+      
+                <p>
+                  <m>E_3</m> also has degree four over <m>\Q</m>. 
+                  Let <m>\beta = \a_1 + \a_2 = (1+i)\sqrt[4]{2}</m> and note <m>\beta \in E_3</m>. 
+                  If <m>[\Q(\beta):\Q] = 2</m>, then <m>\beta</m> would be fixed by a subgroup of index <m>2</m> that contains <m>(1 \,2)(3 \, 4)</m>, and the only possibility is <m>H_8</m>. 
+                  But <m>(1 \, 4)(2 \, 3)</m> sends <m>\beta</m> to <m>\a_4 + \a_3 = - \beta \ne \beta</m>. 
+                  So we must have <m>[\Q(\beta):\Q] = 4</m> and hence <m>E_3 = \Q(\beta)</m>.
+                </p>
+      
+                <p>
+                  I'll skip the details on <m>E_4</m> and <m>E_5</m>, but they are <m>E_4 =\Q((1-i)\a_1)</m> and <m>E_5 = \Q(\sqrt{2},i)</m>.
+                </p>
+      
+                <p>
+                  <m>E_6</m> has degree equal to <m>[G:H_6] = 2</m> over <m>\Q</m> and so we merely need to find a single, non-rational element of <m>L</m> fixed by <m>\tau</m>. 
+                  Since <m>\tau(i) = i</m> (which can be seen by looking back at how we built <m>\tau</m> originally or by noting that <m>\tau(i) = \tau(\a_2/\a_1) = \a_3/\a_2= i</m>), we get <m>E_6 = \Q(i)</m>.
+                </p>
+      
+                <p>
+                  I'll skip the details on <m>E_7</m>, but it is <m>E_7 = \Q(\sqrt{2})</m>.
+                </p>
+      
+                <p>
+                  <m>E_8</m> also has degree two over <m>\Q</m> and so we just need to find a single non-rational element fixed by the two generators of <m>H_8</m>. 
+                  Note that <m>\a_1\a_2 = \a_3\a_4 = i \sqrt{2}</m> and so <m>i \sqrt{2}</m> is fixed by both <m>(1 \, 2)(3 \, 4)</m> and <m>(1 \,4)(2 \, 3)</m>. 
+                  Thus <m>E_8 = \Q(i \sqrt{2})</m>.
+                </p>
+      
+                <p>
+                  Finally, we note that <m>G, \{e\}, H_5, H_6, H_7, H_8</m> are normal subgroups of <m>D_8</m>, since <m>H_5</m> is the center of <m>D_8</m> and each of <m>H_6, H_7, H_8</m> has index two. 
+                  Some messy checking reveals these to be the only normal subgroups. 
+                  It follows from the <xref text="title" ref="thm-ftgt"/> that <m>\Q, L, E_5, E_6, E_7, E_8</m> are the only intermediate fields that are Galois over <m>\Q</m>. 
+                  As an example, to see directly that <m>E_3</m> is not Galois over <m>\Q</m>, note that <m>(1+i)\sqrt[4]{2}</m> is a root of <m>x^4 + 4</m>, which is irreducible. 
+                  But <m>(1-i)\sqrt[4]{2}</m> is also a root of this polynomial and it is not in <m>E_3</m>. 
+                  We conclude from Proposition <xref provisional="cite"/> that <m>E_3</m> is not a normal extension of <m>\Q</m>.
+                </p>
+              </solution>
+            </example>
+
+            <example xml:id="exe-cyclotomic-extensions-revisited"><title>Cyclotomic Extensions Revisited</title>
               <p>
-                If <m>F \subseteq L</m> is a (finite) Galois extension, then so is <m>E \subseteq L</m> for any intermediate field <m>E</m>.
+                Let <m>F</m> be a field, let <m>n</m> be a positive integer such that <m>\char(F)</m> does not divide <m>n</m>, and let <m>\ov{F}</m> be the algebraic closure of <m>F</m>. 
+                If <m>\zeta\ov{F}</m> is a primitive <m>n</m>-th root of <m>1</m> over <m>F</m>, then <m>F(\zeta)/F</m> is a finite Galois extension, and <m>\Gal(F(\zeta)/F)</m> is a cyclic group that is isomorphic to a subgroup of <m>(\Z/n,+)</m>.
               </p>
-            </statement>
+            </example>
 
-            <proof>
+            <remark>
               <p>
-                This is immediate from the definition: 
-                If <m>L</m> is the splitting field over <m>F</m> of a separable polynomial <m>f(x) \in F[x]</m>, then <m>L</m> is also the splitting field over <m>E</m> of the same polynomial, now regarded as belonging to <m>E[x]</m>.
+                If <m>F</m> is a field of prime characteristic <m>p</m> and <m>n</m> is an integer that is divisible by <m>p</m>, then <m>x^n - 1</m> is not separable.
               </p>
-            </proof>
-          </proposition>
+            </remark>
 
-          <warning>
-            <p>
-              In the setting of the <xref ref="prop-intermediate-extensions-are-galois"/>, <m>E</m> need not be Galois over <m>F</m>. 
-              For <m>\ex</m>, <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is Galois over <m>F = \Q</m> but <m>E = \Q(\sqrt[3]{2})</m> is not Galois over <m>\Q</m>, as we noted before.
-            </p>
-          </warning>
-
-          <definition xml:id="def-fixed-subfield"><title>Fixed Subfield</title>
-            <statement>
+            <example xml:id="exe-two-complex-roots-and-s_n">
               <p>
-                For a field <m>L</m> and a subgroup <m>G</m> of <m>\Aut(L)</m>, the subfield of <m>L</m> fixed by <m>G</m>, denoted <m>L^G</m>, is by definition 
-                <me>
-                L^G := \{ \a \in L \mid \s(\a) = \a, \text{ for all }\s \in G\}.
-                </me> 
-                <m>L^G</m> really is a subfield of <m>L</m> since <m>L^G = \bigcap_{\s \in G} L^\s</m> where <m>L^\s = \{\a \in L \mid \s(\a) = \a\}</m>, and we proved before that <m>L^\s</m> is a subfield of <m>L</m>.
-                <idx><h>fixed subfield</h></idx>
+                Let <m>f</m> be an irreducible, fifth degree polynomial in <m>\Q[x]</m> with exactly three real roots and let <m>L</m> be its splitting field over <m>\Q</m>. 
+                Let the real roots be <m>\a_1, \a_2, \a_3</m> and the imaginary ones be <m>\a_4</m> and <m>\a_5</m>. 
+                Then <m>G = \Gal(L/\Q)</m> is isomorphic to <m>S_5</m>. 
+                You will prove this on one of the final exam problems (for a specific case), but let me get you started with a couple {}: 
+                Show that <m>G</m> is isomorphic to a subgroup <m>H</m> of <m>S_5</m> with <m>5 \mid |H|</m>. 
+                You may use (without justifying it) that if <m>\tau</m> is a <m>2</m>-cycle in <m>S_5</m> and <m>\s</m> is any five cycle in <m>S_5</m>, then the subgroup of <m>S_5</m> they generate is all of <m>S_5</m>.
               </p>
-            </statement>
-          </definition>
+            </example>
 
-          <theorem xml:id="thm-ftgt"><title>Fundamental Theorem of Galois Theory</title>
-            <idx><h>FTGT</h></idx>
-            <idx><h>fundamental theorem of Galois theory</h></idx>
-            <idx><h>Galois correspondance</h></idx>
-            <statement>
-              <p>
-                Suppose <m>F \subseteq L</m> is a (finite) Galois field extension. Then the functions <me>\Psi:\left\{\text{intermediate fields $E$, with $F\subseteq E \subseteq L$}\right\} \to\left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\}</me>given by <me>\Psi(E)=\Gal(L/E)</me>is a bijection whose inverse <me>\Psi^{-1}:
-                \left\{\text{subgroups $H$ of $\Gal(L/F)$}\right\} \to
-                \left\{\text{intermediate fields $E$, with $F \subseteq E \subseteq L$}\right\}</me>is given by <me>\Psi^{-1}(H)=L^H.</me> Moreover, this bijective correspondence enjoys the following properties: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>\Psi</m> and <m>\Psi^{-1}</m> each reverse the order of inclusions. 
-                    </p>
-                  </li>
+            <example xml:id="exe-finding-unique-intermediate-field"><title>Finding Unique Intermediate Field</title>
+              <statement>
+                <p>
+                  If <m>F \subseteq L</m> is a finite Galois extension of degree <m>21</m>, then I claim there is a unique intermediate field <m>E</m> with <m>[E:F] = 3</m> and that <m>E</m> must be a Galois extension over <m>F</m>.
+                </p>
+      
+                <p>
+                  To see this, set <m>G= \Gal(L/F)</m>. 
+                  Then <m>|G| = 21 = 3 \cdot 7</m> and by the <xref text="title" ref="thm-sylow"/>, there is a unique Sylow <m>7</m>-subgroup, call it <m>H</m>, and hence <m>H</m> is normal in <m>G</m>. 
+                  It follows from the <xref text="title" ref="thm-ftgt"/> that <m>E := L^H</m> is an intermediate field that 
+                  <ol>
+                    <li>
+                      <p>
+                        is Galois over <m>F</m> and 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>\Psi</m> and <m>\Psi^{-1}</m> convert degrees of extensions to indices of subgroups: 
-                      <ul>
-                        <li>
-                          <p>
-                            <m>[\Gal(L/F) : H] = [L^H:F]</m> or, equivalently, 
-                          </p>
-                        </li>
+                    <li>
+                      <p>
+                        satisfies <m>[E: F] = [G :H] = 3</m>. 
+                        Moreover, it is unique since <m>G</m> has just one subgroup of index <m>3</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+      
+                <p>
+                  In fact, there are exactly two groups of order <m>21</m> up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of <m>\Z/7</m> by <m>\Z/3</m>. 
+                  So, there are just two possible lattices of intermediate fields for such a field extension.
+                </p>
+              </statement>
+            </example>
 
-                        <li>
-                          <p>
-                            <m>[\Gal(L/F) : \Gal(L/E)] = [E:F]</m>. 
-                          </p>
-                        </li>
-                      </ul>
-                    </p>
-                  </li>
+          </subsection>
 
-                  <li>
-                    <p>
-                      Normal subgroups correspond to intermediate fields that are Galois over <m>F</m>:
-                      <ul>
-                        <li>
-                          <p>
-                            If <m>N \nsg G</m> then <m>L^N/F</m> is Galois. 
-                          </p>
-                        </li>
+        </section>
 
-                        <li>
-                          <p>
-                            If <m>E/F</m> is Galois, then <m>\Gal(L/E) \nsg \Gal(L/F)</m>. 
-                          </p>
-                        </li>
-                      </ul> 
-                    </p>
-                  </li>
+        <section xml:id="sec-proving-galois"><title>Proving the Fundamental Theorem</title>
 
-                  <li>
-                    <p>
-                      If <m>E = L^N</m> for a normal subgroup <m>N \nsg \Gal(L/F)</m>, then <m>\Gal(E/F) \cong \Gal(L/F)/N</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>H_1, H_2</m> are subgroups of <m>G</m> with corresponding fixed subfields <m>E_1=L^{H_1}</m> and <m>E_2=L^{H_2}</m>, then 
-                      <ul>
-                        <li>
-                          <p>
-                            <m>E_1\cap E_2=L^{&lt;H_1,H_2&gt;}</m> and <m>\Gal(L/E_1\cap E_2)=\langle H_1,H_2\rangle</m> 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <m>E_1 E_2=L^{H_1\cap H_2}</m> and <m>\Gal(L/E_1E_2)=H_1\cap H_2</m>.
-                          </p>
-                        </li>
-                      </ul> 
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-
-          <corollary xml:id="cor-galois-correspondence-and-lattices"><title>Galois Correspondence and Lattices</title>
-            <statement>
-              <p>
-                The Galois correspondence induces a lattice isomorphism between the lattice of intermediate fields of a Galois extension <m>F \subseteq L</m> and the “dual'' of the lattice of subgroups of <m>\Gal(L/F)</m>.
-              </p>
-            </statement>
-          </corollary>
-
-          <example xml:id="exe-ftgt-and-x4-2"><title>FTGT and <m>(x^4-2)</m></title>
-
+          <subsection xml:id="subsec-artin"><title>Artin's Theorem</title>
+            
             <p>
-              Let <m>L</m> be the splitting field of <m>x^4 - 2</m> over <m>\Q</m>. Let's use the fundamental theorem to list all intermediate fields for <m>\Q \subseteq L</m> and to determine which are Galois over <m>\Q</m>. Notice that without the theorem, it isn't even obvious that there are only a finite number of such intermediate fields.
-            </p>
-  
-            <p>
-              We know <m>G := \Gal(L/\Q)</m> corresponds to the <m>8</m> element subgroup of <m>S_4</m> generated by <m>\s = (2 \, 4)</m> and <m>\tau = (1 \, 2 \,3 \, 4)</m> where we number the roots as <m>\a_1 = \sqrt[4]{2}, \a_2 = i \a_1, \a_3 = -\a_1, \a_4 =-i\a_1</m>.
-            </p>
-  
-            <p>
-              This group is isomorphic to <m>D_8</m> and we can make this isomorphism explicit by labeling the four corners of a square by <m>\a_1, \dots,\a_4</m>, counter-clockwise. So, <m>\tau</m> is rotation by <m>90</m> degrees and <m>\s</m> is reflection about the line joining vertices <m>1</m> and <m>3</m>.
-            </p>
-  
-            <p>
-              The subgroup lattice and intermediate field lattice are represented below, with normal subgroups and Galois extensions highlighted (boxed).
-            </p>
-  
-            <p>
-              The subgroups are 
-              <me>
-                \begin{aligned}
-                G &amp;= \langle (2 \, 4), (1 \, 2 \, 3 \,4) \rangle \\
-                \{e\} &amp; \\
-                H_1 &amp;= \langle (2 \, 4) \rangle \\
-                H_2 &amp;= \langle (1 \, 3)\rangle \\
-                H_3 &amp;= \langle (1 \, 2)(3 \, 4)\rangle \\
-                H_4 &amp; = \langle (1 \,4)(2 \, 3)\rangle \\
-                H_5 &amp;= \langle (1 \,3)(2 \, 4)\rangle \\
-                H_6 &amp; = \langle (1 \, 2 \, 3 \,4) \rangle \\
-                H_7 &amp;= \langle(1 \, 3), (2 \, 4)\rangle \\
-                H_8 &amp;= \langle (1 \, 2)(3 \, 4), (1 \,4)(2 \, 3)\rangle \\
-                \end{aligned}
-            </me> 
-            and the lattices are 
-            INSERT IMAGE 
-            The intermediate fields are the fixed subfields of <m>L</m> associated to each of these subgroups. 
-            In some sense, this answers the question, but let's find explicit generators for at least some of these.
-            </p>
-  
-            <p>
-              <m>G</m> corresponds to <m>\Q</m> and <m>e</m> corresponds to <m>L = \Q(\a_1, i)</m>.
-            </p>
-  
-            <p>
-              Set <m>E_i = L^{H_i}</m>. 
-              <m>E_1</m> has degree <m>4 = [G:H_1]</m> over <m>\Q</m>. 
-              It is clear <m>\a_1</m> (and <m>\a_3</m>) belongs to <m>E_1</m> and since <m>[\Q(\a_1):\Q]=4</m>, we must have <m>E_1 = \Q(\a_1)</m>.
-            </p>
-  
-            <p>
-              Likewise <m>E_2 = \Q(\a_2)</m>.
-            </p>
-  
-            <p>
-              <m>E_3</m> also has degree four over <m>\Q</m>. 
-              Let <m>\beta = \a_1 + \a_2 = (1+i)\sqrt[4]{2}</m> and note <m>\beta \in E_3</m>. 
-              If <m>[\Q(\beta):\Q] = 2</m>, then <m>\beta</m> would be fixed by a subgroup of index <m>2</m> that contains <m>(1 \,2)(3 \, 4)</m>, and the only possibility is <m>H_8</m>. 
-              But <m>(1 \, 4)(2 \, 3)</m> sends <m>\beta</m> to <m>\a_4 + \a_3 = - \beta \ne \beta</m>. 
-              So we must have <m>[\Q(\beta):\Q] = 4</m> and hence <m>E_3 = \Q(\beta)</m>.
-            </p>
-  
-            <p>
-              I'll skip the details on <m>E_4</m> and <m>E_5</m>, but they are <m>E_4 =\Q((1-i)\a_1)</m> and <m>E_5 = \Q(\sqrt{2},i)</m>.
-            </p>
-  
-            <p>
-              <m>E_6</m> has degree equal to <m>[G:H_6] = 2</m> over <m>\Q</m> and so we merely need to find a single, non-rational element of <m>L</m> fixed by <m>\tau</m>. 
-              Since <m>\tau(i) = i</m> (which can be seen by looking back at how we built <m>\tau</m> originally or by noting that <m>\tau(i) = \tau(\a_2/\a_1) = \a_3/\a_2= i</m>), we get <m>E_6 = \Q(i)</m>.
-            </p>
-  
-            <p>
-              I'll skip the details on <m>E_7</m>, but it is <m>E_7 = \Q(\sqrt{2})</m>.
-            </p>
-  
-            <p>
-              <m>E_8</m> also has degree two over <m>\Q</m> and so we just need to find a single non-rational element fixed by the two generators of <m>H_8</m>. 
-              Note that <m>\a_1\a_2 = \a_3\a_4 = i \sqrt{2}</m> and so <m>i \sqrt{2}</m> is fixed by both <m>(1 \, 2)(3 \, 4)</m> and <m>(1 \,4)(2 \, 3)</m>. 
-              Thus <m>E_8 = \Q(i \sqrt{2})</m>.
-            </p>
-  
-            <p>
-              Finally, we note that <m>G, \{e\}, H_5, H_6, H_7, H_8</m> are normal subgroups of <m>D_8</m>, since <m>H_5</m> is the center of <m>D_8</m> and each of <m>H_6, H_7, H_8</m> has index two. 
-              Some messy checking reveals these to be the only normal subgroups. 
-              It follows from the <xref text="title" ref="thm-ftgt"/> that <m>\Q, L, E_5, E_6, E_7, E_8</m> are the only intermediate fields that are Galois over <m>\Q</m>. 
-              As an example, to see directly that <m>E_3</m> is not Galois over <m>\Q</m>, note that <m>(1+i)\sqrt[4]{2}</m> is a root of <m>x^4 + 4</m>, which is irreducible. 
-              But <m>(1-i)\sqrt[4]{2}</m> is also a root of this polynomial and it is not in <m>E_3</m>. 
-              We conclude from Proposition <xref provisional="cite"/> that <m>E_3</m> is not a normal extension of <m>\Q</m>.
+              The following is an important theorem with many corollaries. In fact, the Fundamental Theorem of Galois Theory, which we will state shortly, will follow from this result.
             </p>
 
-          </example>
-
-          <example xml:id="exe-cyclotomic-extensions-revisited"><title>Cyclotomic Extensions Revisited</title>
+            <theorem xml:id="thm-artin"><title>Artin's Theorem</title>
+              <statement>
+                <p>
+                  Let <m>L</m> be any field. 
+                  If <m>G</m> is a finite subgroup of <m>\operatorname{Aut}(L)</m>, then <m>L^{G}</m> is a subfield of <m>L</m>, the extension <m>L / L^{G}</m> is finite and Galois, and <m>\operatorname{Gal}\left(L / L^{G}\right)=G</m>.
+                </p>
+              </statement>
+            </theorem>
+            
             <p>
-              Let <m>F</m> be a field, let <m>n</m> be a positive integer such that <m>\char(F)</m> does not divide <m>n</m>, and let <m>\ov{F}</m> be the algebraic closure of <m>F</m>. 
-              If <m>\zeta\ov{F}</m> is a primitive <m>n</m>-th root of <m>1</m> over <m>F</m>, then <m>F(\zeta)/F</m> is a finite Galois extension, and <m>\Gal(F(\zeta)/F)</m> is a cyclic group that is isomorphic to a subgroup of <m>(\Z/n,+)</m>.
+              Note that we really do mean equality here: 
+              both <m>G</m> and <m>\operatorname{Gal}\left(L / L^{G}\right)</m> are subgroups of <m>\operatorname{Aut}(L)</m>, and the theorem states that they coincide. 
+              The containment <m>G \subseteq \operatorname{Gal}\left(L / L^{G}\right)</m> is clear: if <m>\sigma \in G</m>, then by construction <m>\sigma</m> fixes every element of <m>L^{G}</m> and hence <m>\sigma \in \operatorname{Gal}\left(L / L^{G}\right)</m>. 
+              The point of the theorem is that the extension <m>L^{G} \subseteq L</m> is always Galois and that if <m>\sigma \in \operatorname{Aut}(L)</m> fixes every element of <m>L^{G}</m> then <m>\sigma</m> must belong to <m>G</m>.
             </p>
-          </example>
 
-          <remark>
             <p>
-              If <m>F</m> is a field of prime characteristic <m>p</m> and <m>n</m> is an integer that is divisible by <m>p</m>, then <m>x^n - 1</m> is not separable.
+              We will not prove <xref text="title" ref="thm-artin"/> right away. 
+              Instead, we will first deduce some of its consequences, including the <xref text="title" ref="thm-ftgt"/>. 
+              We will then illustrate the Fundamental Theorem with many examples and give some consequences of it too. 
+              Only then will we circle back to prove <xref text="title" ref="thm-artin"/>.
             </p>
-          </remark>
 
-          <example xml:id="exe-two-complex-roots-and-s_n">
+            <example>
+              <statement>
+                <p>
+                  The group <m>G=\left\{\mathrm{id}_{\mathbb{C}}, \sigma\right\}</m>, where <m>\sigma</m> is complex conjugation, is a finite subgroup of Aut <m>(\mathbb{C})</m>. Artin’s Theorem tells us that <m>\mathbb{C}^{G} \subseteq \mathbb{C}</m> is finite and Galois with Galois group <m>G</m>. It follows that <m>\left[\mathbb{C}: \mathbb{C}^{G}\right]=|G|=2</m>. We already knew all this, since <m>\mathbb{C}^{G}=\mathbb{R}</m>.
+                </p>
+              </statement>
+            </example>
+
             <p>
-              Let <m>f</m> be an irreducible, fifth degree polynomial in <m>\Q[x]</m> with exactly three real roots and let <m>L</m> be its splitting field over <m>\Q</m>. 
-              Let the real roots be <m>\a_1, \a_2, \a_3</m> and the imaginary ones be <m>\a_4</m> and <m>\a_5</m>. 
-              Then <m>G = \Gal(L/\Q)</m> is isomorphic to <m>S_5</m>. 
-              You will prove this on one of the final exam problems (for a specific case), but let me get you started with a couple {}: 
-              Show that <m>G</m> is isomorphic to a subgroup <m>H</m> of <m>S_5</m> with <m>5 \mid |H|</m>. 
-              You may use (without justifying it) that if <m>\tau</m> is a <m>2</m>-cycle in <m>S_5</m> and <m>\s</m> is any five cycle in <m>S_5</m>, then the subgroup of <m>S_5</m> they generate is all of <m>S_5</m>.
+              As we head towards the <xref text="title" ref="thm-ftgt"/>, we start by stating a few helpful corollaries of <xref text="title" ref="thm-artin"/>. 
+              These will also allow us to show that finite Galois extensions are precisely the splitting fields of separable polynomials.
             </p>
-          </example>
 
-          <example xml:id="exe-finding-unique-intermediate-field"><title>Finding Unique Intermediate Field</title>
-            <statement>
-              <p>
-                If <m>F \subseteq L</m> is a finite Galois extension of degree <m>21</m>, then I claim there is a unique intermediate field <m>E</m> with <m>[E:F] = 3</m> and that <m>E</m> must be a Galois extension over <m>F</m>.
-              </p>
-    
-              <p>
-                To see this, set <m>G= \Gal(L/F)</m>. 
-                Then <m>|G| = 21 = 3 \cdot 7</m> and by the <xref text="title" ref="thm-sylow"/>, there is a unique Sylow <m>7</m>-subgroup, call it <m>H</m>, and hence <m>H</m> is normal in <m>G</m>. 
-                It follows from the <xref text="title" ref="thm-ftgt"/> that <m>E := L^H</m> is an intermediate field that 
-                <ol>
-                  <li>
-                    <p>
-                      is Galois over <m>F</m> and 
-                    </p>
-                  </li>
+            <corollary xml:id="cor-artin">
+              <statement>
+                <p>
+                  Let <m>L / F</m> be any Galois extension. 
+                  Then <m>F=L^{\mathrm{Gal}(L / F)}</m>.
+                </p>
+              </statement>
 
-                  <li>
-                    <p>
-                      satisfies <m>[E: F] = [G :H] = 3</m>. 
-                      Moreover, it is unique since <m>G</m> has just one subgroup of index <m>3</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-    
-              <p>
-                In fact, there are exactly two groups of order <m>21</m> up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of <m>\Z/7</m> by <m>\Z/3</m>. 
-                So, there are just two possible lattices of intermediate fields for such a field extension.
-              </p>
-            </statement>
-          </example>
+              <proof>
+                <p>
+                  Note that <m>F \subseteq L^{\mathrm{Gal}(L / F)}</m> holds by definition, and so
+                  <me>
+                    [L: F]=\left[L: L^{\operatorname{Gal}(L / F)}\right]\left[L^{\operatorname{Gal}(L / F)}: F\right]
+                  </me>
+                  by the Degree Formula. 
+                  But Artin’s Theorem gives
+                  <me>
+                    \left[L: L^{\operatorname{Gal}(L / F)}\right]=|\operatorname{Gal}(L / F)|
+                  </me>
+                  and we also know that <m>[L: F]=|\operatorname{Gal}(L / F)|</m>. 
+                  Therefore, <m>\left[L^{\mathrm{Gal}(L / F)}: F\right]=1</m> and thus <m>F=L^{\operatorname{Gal}(L / F)}</m>.
+                </p>
+              </proof>
+            </corollary>
 
+            <example>
+              <statement>
+                <p>
+                  We know from Example 6.14 that <m>L=\mathbb{Q}(\sqrt[4]{2}, i)</m> is Galois over <m>\mathbb{Q}</m> with Galois group <m>D_{8}</m>. 
+                  More precisely, this identification is given by writting
+                  <me>
+                    \alpha_{1}=\sqrt[4]{[2]}, \quad \alpha_{2}=i \sqrt[4]{2}, \quad \alpha_{3}=-\sqrt[4]{2}, \quad \alpha_{4}=-i \sqrt[4]{2}
+                  </me>
+                  and labelling the four corners of a square with <m>\alpha_{1}, \ldots, \alpha_{4}</m>, counter-clockwise. 
+                  Consider
+                  <me>
+                    \beta:=\alpha_{1}+\cdots \alpha_{4}
+                  </me>
+                  and <m>\gamma=\alpha_{1} \cdots \alpha_{4}</m>. 
+                  Then each of <m>\beta</m> and <m>\gamma</m> are fixed by every Galois automorphism and hence by Corollary <m>6.24 \beta</m> and <m>\gamma</m> must be rational. 
+                  In fact, one can easily see that <m>\beta=0</m> and <m>\gamma=2</m>, but notice that the exact same reasoning would apply in general to the sum of roots and the product of roots in the splitting field of any separable polynomial. 
+                </p>
+              </statement>
+            </example>
+
+            <corollary xml:id="cor-">
+              <statement>
+                <p>
+                  Let <m>F \subseteq L</m> be a Galois extension. 
+                  For every <m>\alpha \in L, m_{\alpha, F}</m> is separable and all of its roots belong to L. 
+                  Moreover, <m>\operatorname{Gal}(L / F)</m> acts transitively on the set of roots of <m>m_{\alpha, F}</m>.
+                </p>
+              </statement>
+            </corollary>
+
+          </subsection>
+          
         </section>
         
       </chapter>
