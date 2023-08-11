@@ -2617,7 +2617,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Simple Groups",
-  "body": "Simple Groups  Keeping it Simple    Everything should be made as simple as possible, but not simpler.   Albert Einstein   Simple Group   A group is called simple if it has only two normal subgroups: itself and the trivial subgroup. simple group     Simple   for a prime is simple since any non-trivial element generates the whole group.   No Simple Groups of Order (Counting Elements)  counting elements  element counting argument   Let us prove that no group or order is simple.    Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .   gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By  for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.     In the previous example, it would not be so easy to count elements of order and . We do know that every element in has order , or (any only one has order ), but the size of this set is harder to calculate. For notice that might have order . The most one can say for sure is that has at least elements.   No Simple Groups of Order (Group Actions)  group action argument   No group of order is simple.    By way of contradiciton suppose is simple and . gives and (since they cannot be by the assumption that is simple). The counting elements trick would work, but let's proceed in a different way: Consider the action of on by conjugation and let be the associated homomorphism (obtained by choosing a numbering of the members of ). The map is non-trivial since the action is transitive (part (2) of ). But does not divide and so cannot be injective. It follows that is a non-trivial, proper normal subgroup of , a contradiction.    No Simple Groups of Order (Normalizers)  normalizer argument   No group of order is simple.    By way of contradiction suppose is a simple group of order . Since , we conclude from that   If any of these is , then the corresonding Sylow -subgroup is unique and hence normal, a contradiction.  Although it is not actually needed here, let's show cannot be or . For example, if it were , then the action of on (by conjugation) gives a homomorphism . Since the action is transitive, this homomorphism cannot be the trivial map. Since does not divide , this map cannot be injective. Thus the kernel of is a non-trivial, proper normal subgroup, a contradiction. In a similar way one shows .  We have shown that the only possibility is One is now tempted to count elements: we have elements of order and elements of order . But elements of order are not so easy to count since the various Sylow -subgroups have nine elements each and might interect in subsets of order . The only obvious things is that there are at least of them. This does not give enough elements to reach a contradiction.  The action of on leads to a homomorphism , but since does divide , there is no contradiction lurking here either.  So, we must resort to something really sneaky: let be all of the Sylow -subgroups. Observe that if  for all , then we would have elements of order or . This would give at least elements, which is not possible. So, it must be the case that at least two intersect non-trivially. Without loss, let's say is such that . We ponder . Since is abelian and , , so that . Likewise, too, and since , we get . And of course . We get only three possibilities: Let us show that each is impossible:  If , then we have constructed a subgroup of of index . The action of on the left cosets gives a homomorphism that cannot be the trivial map since the action is transitive. But it cannot be injective either, and this leads to a non-trivial nomal subgroup. The exact same reasoning shows cannot be (or we could use that it has index ). Finally, if , then , which is also impossible.    is Simple    is simple.    the Unique Simple Group of Order   If is a simple group of order , then .    Assume is simple of order . Let us first observe that it suffices to construct a non-trivial action of on a set with elements. For given such an action we obtain a non-trivial homomorphism . Since it's non-trivial and is simple, we must have , so that is injective. Thus , and . But we already know that is the only subgroup of of order , and thus .  So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow -subgroups. By Sylow Theory and the fact that is simple (so that no Sylow -subgroup for can be unique) we get   The next important observation is:   There is no non-trivial action of on a set of size at most .   For if there was such a non-trivial action, we would get a homomorphism for (if , the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.  In particular, and , so that   If then we are done, since this action is transitive and thus certainly non-trivial.  Suppose and let be all the Sylow -subgroups. Since and , has elements of order or . If for all , we would have elements of order or , which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say has two elements. We consider . As in the preivious example, and hence , , and . The possibilities are If then , which is impossible. If , then we obtain an transitive action of on the three element set of left cosets of in , which as shown above is not possible. We are left with . Thus acts transitively (and hence non-trivially) on the five element set of left cosets of in .     The proof shows that if either or , but in hindsight only one of these can actually be possible. It's actually the former: has no elements of order (since four cycles are odd permuations) and the only elements of order are products of two disjoint transpotions, and there are such elements. It's not hard to see that the five -element subgroups of given by the Klein -group and its obvious conjugates (i.e., those obtained by leaving out one of instead of ) are the only Sylow -subgoups of .       A is a group with only two normal subgroups: itself and the trivial subgroup.    We have three main strategies to prove that a group is simple: by counting elements, acting on a set of Sylow -subgroups, or by resorting to diving into the minutae with normalizers. For examples of each, see , , and , respectively.      is simple.     "
+  "body": "Simple Groups  Keeping it Simple    Everything should be made as simple as possible, but not simpler.   Albert Einstein   Simple Group   A group is called simple if it has only two normal subgroups: itself and the trivial subgroup. simple group     Simple   for a prime is simple since any non-trivial element generates the whole group.   No Simple Groups of Order (Counting Elements)  counting elements  element counting argument   Let us prove that no group or order is simple.    Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .   gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By  for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.     In the previous example, it would not be so easy to count elements of order and . We do know that every element in has order , or (any only one has order ), but the size of this set is harder to calculate. For notice that might have order . The most one can say for sure is that has at least elements.   No Simple Groups of Order (Group Actions)  group action argument   No group of order is simple.    By way of contradiciton suppose is simple and . gives and (since they cannot be by the assumption that is simple). The counting elements trick would work, but let's proceed in a different way: Consider the action of on by conjugation and let be the associated homomorphism (obtained by choosing a numbering of the members of ). The map is non-trivial since the action is transitive (part (2) of ). But does not divide and so cannot be injective. It follows that is a non-trivial, proper normal subgroup of , a contradiction.    No Simple Groups of Order (Normalizers)  normalizer argument   No group of order is simple.    By way of contradiction suppose is a simple group of order . Since , we conclude from that   If any of these is , then the corresonding Sylow -subgroup is unique and hence normal, a contradiction.  Although it is not actually needed here, let's show cannot be or . For example, if it were , then the action of on (by conjugation) gives a homomorphism . Since the action is transitive, this homomorphism cannot be the trivial map. Since does not divide , this map cannot be injective. Thus the kernel of is a non-trivial, proper normal subgroup, a contradiction. In a similar way one shows .  We have shown that the only possibility is One is now tempted to count elements: we have elements of order and elements of order . But elements of order are not so easy to count since the various Sylow -subgroups have nine elements each and might interect in subsets of order . The only obvious things is that there are at least of them. This does not give enough elements to reach a contradiction.  The action of on leads to a homomorphism , but since does divide , there is no contradiction lurking here either.  So, we must resort to something really sneaky: let be all of the Sylow -subgroups. Observe that if  for all , then we would have elements of order or . This would give at least elements, which is not possible. So, it must be the case that at least two intersect non-trivially. Without loss, let's say is such that . We ponder . Since is abelian and , , so that . Likewise, too, and since , we get . And of course . We get only three possibilities: Let us show that each is impossible:  If , then we have constructed a subgroup of of index . The action of on the left cosets gives a homomorphism that cannot be the trivial map since the action is transitive. But it cannot be injective either, and this leads to a non-trivial nomal subgroup. The exact same reasoning shows cannot be (or we could use that it has index ). Finally, if , then , which is also impossible.    is Simple    is simple.    the Unique Simple Group of Order   If is a simple group of order , then .    Assume is simple of order . Let us first observe that it suffices to construct a non-trivial action of on a set with elements. For given such an action we obtain a non-trivial homomorphism . Since it's non-trivial and is simple, we must have , so that is injective. Thus , and . But we already know that is the only subgroup of of order , and thus .  So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow -subgroups. By Sylow Theory and the fact that is simple (so that no Sylow -subgroup for can be unique) we get   The next important observation is:   There is no non-trivial action of on a set of size at most .   For if there was such a non-trivial action, we would get a homomorphism for (if , the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.  In particular, and , so that   If then we are done, since this action is transitive and thus certainly non-trivial.  Suppose and let be all the Sylow -subgroups. Since and , has elements of order or . If for all , we would have elements of order or , which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say has two elements. We consider . As in the preivious example, and hence , , and . The possibilities are If then , which is impossible. If , then we obtain an transitive action of on the three element set of left cosets of in , which as shown above is not possible. We are left with . Thus acts transitively (and hence non-trivially) on the five element set of left cosets of in .     The proof shows that if either or , but in hindsight only one of these can actually be possible. It's actually the former: has no elements of order (since four cycles are odd permuations) and the only elements of order are products of two disjoint transpotions, and there are such elements. It's not hard to see that the five -element subgroups of given by the Klein -group and its obvious conjugates (i.e., those obtained by leaving out one of instead of ) are the only Sylow -subgoups of .    A Wealth of Problems on Simple Groups   Let G be a group of order . Prove that is not simple.   By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.    Let be a group of order .    Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.     Let be a group of order .     By we know that and . The possible options are thus and .    Suppose by way of contradiction that is simple. Thus , so . Let act on by conjugation, yielding the homomorphism granted via the . By (2) in we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.       Let be a finite group of order with prime numbers. Show that is not a simple group.   Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.      Let be a simple group of order . Determine the number of elements of of order .  Show that there is no simple group of order .        Let be a simple group of order . By we know that and that . hus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .    Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .       Prove that no group of order is simple.   Let be a group of order and suppose by way of contradiction that is simple. Notice that . By , we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.       A is a group with only two normal subgroups: itself and the trivial subgroup.    We have three main strategies to prove that a group is simple: by counting elements, acting on a set of Sylow -subgroups, or by resorting to diving into the minutae with normalizers. For examples of each, see , , and , respectively.      is simple.     "
 },
 {
   "id": "def-simple-group",
@@ -2699,6 +2699,51 @@ var ptx_lunr_docs = [
   "number": "5.24",
   "title": "",
   "body": " The proof shows that if either or , but in hindsight only one of these can actually be possible. It's actually the former: has no elements of order (since four cycles are odd permuations) and the only elements of order are products of two disjoint transpotions, and there are such elements. It's not hard to see that the five -element subgroups of given by the Klein -group and its obvious conjugates (i.e., those obtained by leaving out one of instead of ) are the only Sylow -subgoups of .  "
+},
+{
+  "id": "exercise-51",
+  "level": "2",
+  "url": "sec-simple-groups.html#exercise-51",
+  "type": "Exercise",
+  "number": "5.25",
+  "title": "",
+  "body": " Let G be a group of order . Prove that is not simple.   By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.  "
+},
+{
+  "id": "exercise-52",
+  "level": "2",
+  "url": "sec-simple-groups.html#exercise-52",
+  "type": "Exercise",
+  "number": "5.26",
+  "title": "",
+  "body": " Let be a group of order .    Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.     Let be a group of order .     By we know that and . The possible options are thus and .    Suppose by way of contradiction that is simple. Thus , so . Let act on by conjugation, yielding the homomorphism granted via the . By (2) in we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.     "
+},
+{
+  "id": "exercise-53",
+  "level": "2",
+  "url": "sec-simple-groups.html#exercise-53",
+  "type": "Exercise",
+  "number": "5.27",
+  "title": "",
+  "body": " Let be a finite group of order with prime numbers. Show that is not a simple group.   Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.  "
+},
+{
+  "id": "exercise-54",
+  "level": "2",
+  "url": "sec-simple-groups.html#exercise-54",
+  "type": "Exercise",
+  "number": "5.28",
+  "title": "",
+  "body": "   Let be a simple group of order . Determine the number of elements of of order .  Show that there is no simple group of order .        Let be a simple group of order . By we know that and that . hus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .    Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .     "
+},
+{
+  "id": "exercise-55",
+  "level": "2",
+  "url": "sec-simple-groups.html#exercise-55",
+  "type": "Exercise",
+  "number": "5.29",
+  "title": "",
+  "body": " Prove that no group of order is simple.   Let be a group of order and suppose by way of contradiction that is simple. Notice that . By , we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.  "
 },
 {
   "id": "outcomes-16",
@@ -3124,18 +3169,18 @@ var ptx_lunr_docs = [
   "body": " Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .  "
 },
 {
-  "id": "exercise-53",
+  "id": "exercise-58",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-53",
+  "url": "sec-defn-ex.html#exercise-58",
   "type": "Exercise",
   "number": "7.5",
   "title": "Direct Product Preservations.",
   "body": "Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well. "
 },
 {
-  "id": "exercise-54",
+  "id": "exercise-59",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-54",
+  "url": "sec-defn-ex.html#exercise-59",
   "type": "Exercise",
   "number": "7.6",
   "title": "Less Relevant Rings.",
@@ -3340,9 +3385,9 @@ var ptx_lunr_docs = [
   "body": "Idempotent   Let be a ring with identity. An element is called idempotent if . idempotent    "
 },
 {
-  "id": "exercise-59",
+  "id": "exercise-64",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-59",
+  "url": "sec-defn-ex.html#exercise-64",
   "type": "Exercise",
   "number": "7.29",
   "title": "Potent Idempotents.",
@@ -3610,18 +3655,18 @@ var ptx_lunr_docs = [
   "body": "Equivalent Field Characterizations  Let be a nontrivial ring. Then is a field if and only if every homomorphism of into a nonzero ring is injective.  "
 },
 {
-  "id": "exercise-65",
+  "id": "exercise-70",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-65",
+  "url": "sec-ring-hom.html#exercise-70",
   "type": "Exercise",
   "number": "7.56",
   "title": "Isomorphisms and Idempotents.",
   "body": "Isomorphisms and Idempotents Suppose is commutative and an idempotent. Let . Prove that the map given by is a ring isomorphism. "
 },
 {
-  "id": "exercise-66",
+  "id": "exercise-71",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-66",
+  "url": "sec-ring-hom.html#exercise-71",
   "type": "Exercise",
   "number": "7.57",
   "title": "More Isomorphisms.",
@@ -3664,9 +3709,9 @@ var ptx_lunr_docs = [
   "body": "Ideals are Subrings   Any ideal of a ring is a subring of    "
 },
 {
-  "id": "exercise-67",
+  "id": "exercise-72",
   "level": "2",
-  "url": "sec-ideals.html#exercise-67",
+  "url": "sec-ideals.html#exercise-72",
   "type": "Exercise",
   "number": "8.4",
   "title": "Subrings Need not be Ideals.",
@@ -3763,9 +3808,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all . "
 },
 {
-  "id": "exercise-72",
+  "id": "exercise-77",
   "level": "2",
-  "url": "sec-ideals.html#exercise-72",
+  "url": "sec-ideals.html#exercise-77",
   "type": "Exercise",
   "number": "8.15",
   "title": "Infinitely Generated Ideal.",
@@ -4717,9 +4762,9 @@ var ptx_lunr_docs = [
   "body": "Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule    "
 },
 {
-  "id": "exercise-85",
+  "id": "exercise-90",
   "level": "2",
-  "url": "sec-defmod.html#exercise-85",
+  "url": "sec-defmod.html#exercise-90",
   "type": "Exercise",
   "number": "11.16",
   "title": "",
@@ -4735,9 +4780,9 @@ var ptx_lunr_docs = [
   "body": "Submodules are Ideals   A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.   "
 },
 {
-  "id": "exercise-86",
+  "id": "exercise-91",
   "level": "2",
-  "url": "sec-defmod.html#exercise-86",
+  "url": "sec-defmod.html#exercise-91",
   "type": "Exercise",
   "number": "11.18",
   "title": "Simple Modules.",
@@ -4762,9 +4807,9 @@ var ptx_lunr_docs = [
   "body": "Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .    module homomorphism  -module homomorphism  -map    "
 },
 {
-  "id": "exercise-87",
+  "id": "exercise-92",
   "level": "2",
-  "url": "sec-modhom.html#exercise-87",
+  "url": "sec-modhom.html#exercise-92",
   "type": "Exercise",
   "number": "11.20",
   "title": "",
@@ -4825,9 +4870,9 @@ var ptx_lunr_docs = [
   "body": "Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)    "
 },
 {
-  "id": "exercise-88",
+  "id": "exercise-93",
   "level": "2",
-  "url": "sec-modhom.html#exercise-88",
+  "url": "sec-modhom.html#exercise-93",
   "type": "Exercise",
   "number": "11.27",
   "title": "Inclusion Map is <span class=\"process-math\">\\(R\\)<\/span>-map.",
@@ -4861,9 +4906,9 @@ var ptx_lunr_docs = [
   "body": "and   Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set . We call the endomorphism ring of , and elements of are called endomorphisms of .   endomorphism    "
 },
 {
-  "id": "exercise-89",
+  "id": "exercise-94",
   "level": "2",
-  "url": "sec-modhom.html#exercise-89",
+  "url": "sec-modhom.html#exercise-94",
   "type": "Exercise",
   "number": "11.31",
   "title": "",
@@ -4897,9 +4942,9 @@ var ptx_lunr_docs = [
   "body": "  For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes   "
 },
 {
-  "id": "exercise-90",
+  "id": "exercise-95",
   "level": "2",
-  "url": "sec-modhom.html#exercise-90",
+  "url": "sec-modhom.html#exercise-95",
   "type": "Exercise",
   "number": "11.35",
   "title": "",
@@ -5023,9 +5068,9 @@ var ptx_lunr_docs = [
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "exercise-91",
+  "id": "exercise-96",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#exercise-91",
+  "url": "sec-linear-ind-gen.html#exercise-96",
   "type": "Exercise",
   "number": "11.48",
   "title": "Cyclic Modules and Ideals.",
@@ -5158,9 +5203,9 @@ var ptx_lunr_docs = [
   "body": "Bases are not Unique  If is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
 {
-  "id": "exercise-93",
+  "id": "exercise-98",
   "level": "2",
-  "url": "sec-free-mod.html#exercise-93",
+  "url": "sec-free-mod.html#exercise-98",
   "type": "Exercise",
   "number": "11.62",
   "title": "Every Module over a Field is Free.",
@@ -5176,9 +5221,9 @@ var ptx_lunr_docs = [
   "body": " A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )  "
 },
 {
-  "id": "exercise-94",
+  "id": "exercise-99",
   "level": "2",
-  "url": "sec-free-mod.html#exercise-94",
+  "url": "sec-free-mod.html#exercise-99",
   "type": "Exercise",
   "number": "11.64",
   "title": "",
@@ -6409,18 +6454,18 @@ var ptx_lunr_docs = [
   "body": "  Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the smallest subfield of that contains and .   adjoining an element    "
 },
 {
-  "id": "exercise-97",
+  "id": "exercise-102",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-97",
+  "url": "field-extension-basics.html#exercise-102",
   "type": "Exercise",
   "number": "15.7",
   "title": "Intersection of Subfields.",
   "body": "Intersection of Subfields  Show that exists by proving that the intersection of any two subfields is again a subfield.  "
 },
 {
-  "id": "exercise-98",
+  "id": "exercise-103",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-98",
+  "url": "field-extension-basics.html#exercise-103",
   "type": "Exercise",
   "number": "15.8",
   "title": "When <span class=\"process-math\">\\(F(\\a)=F[\\a]\\)<\/span>.",
@@ -6553,9 +6598,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a field extension and let be an irreducible polynomial. If has a root , then there is an isomorphism with and     Let be the evaluation homomorphism that sends ; more precisely, , and the restriction of this map to is the identity on . Since , we have , and since is a maximal ideal and , we conclude that .  Now by Theorem 1.43 we get an injective ring homomorphism such that .  It remains to be shown that is surjective. We will actually show more, namely that . Note first that by the definition of above, the image of on is . However, since is injective the image of is a field contained in , and since the smallest field containing is , we must in fact have .   "
 },
 {
-  "id": "exercise-99",
+  "id": "exercise-104",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-99",
+  "url": "field-extension-basics.html#exercise-104",
   "type": "Exercise",
   "number": "15.23",
   "title": "",
@@ -7138,9 +7183,9 @@ var ptx_lunr_docs = [
   "body": "Field Automorphism Group   Let be a field. The automorphism group of , written , is the collection of field automorphisms of , with the binary operation of composition. automorphism group (fields)    The automorphism group of a field extension , written , is the subgroup of consisting of those field automorphisms of that restrict to the identity on . automorphism group (field extensions)     "
 },
 {
-  "id": "exercise-100",
+  "id": "exercise-105",
   "level": "2",
-  "url": "sec-galext.html#exercise-100",
+  "url": "sec-galext.html#exercise-105",
   "type": "Exercise",
   "number": "16.2",
   "title": "",
@@ -7192,9 +7237,9 @@ var ptx_lunr_docs = [
   "body": "  Let be the splitting field of a polynomial with distinct roots. Then .    We showed in that is isomorphic to a subgroup of , and thus it as at most elements.   "
 },
 {
-  "id": "exercise-101",
+  "id": "exercise-106",
   "level": "2",
-  "url": "sec-galext.html#exercise-101",
+  "url": "sec-galext.html#exercise-106",
   "type": "Exercise",
   "number": "16.8",
   "title": "",
@@ -7282,9 +7327,9 @@ var ptx_lunr_docs = [
   "body": "Fixed Subfield   If is subgroup of , the subfield of fixed by , denoted , is by definition    "
 },
 {
-  "id": "exercise-102",
+  "id": "exercise-107",
   "level": "2",
-  "url": "sec-galext.html#exercise-102",
+  "url": "sec-galext.html#exercise-107",
   "type": "Exercise",
   "number": "16.18",
   "title": "",

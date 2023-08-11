@@ -7070,7 +7070,7 @@
     
         <section xml:id="sec-simple-groups"><title>Simple Groups</title>
 
-          <subsection xml:id="subsec-"><title>Keeping it Simple</title>
+          <subsection xml:id="subsec-simple"><title>Keeping it Simple</title>
           
             <blockquote>
               <p>
@@ -7320,6 +7320,169 @@
               </p>
             </remark>
 
+          </subsection>
+
+          <subsection xml:id="subsec-simple-qual"><title>A Wealth of Problems on Simple Groups</title>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let G be a group of order <m>2^5\cdot 7^3</m>. 
+                  Prove that <m>G</m> is not simple.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. 
+                  Thus our options are <m>1</m> and <m>8</m>. 
+                  Suppose that <m>\Syl_7(G)=8</m>.
+                </p>
+
+                <p>
+                  Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <m>\rho: G \to S_8</m> via the <xref text="title" ref="thm-permrep"/>. 
+                  This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. 
+                  Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref ref="thm-norm-iff-ker"/>. 
+                  Thus <m>G</m> is not simple.
+                </p>
+              </solution>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group of order <m>2835 = 3^4\cdot 5\cdot 7</m>.
+                </p>
+  
+                <p>
+                  <ol>
+                    <li>
+                      Show that there are at most two options for <m>n_3</m>, the number of Sylow <m>3</m>-subgroups of <m>G,</m> and list them.
+                    </li>
+  
+                    <li>
+                      Prove that <m>G</m> is not simple.
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>G</m> be a group of order <m>2835</m>.
+                </p>
+    
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        By <xref text="title" ref="thm-sylow"/> we know that <m>n_3=1\mod{3}</m> and <m>n_3|35</m>. 
+                        The possible options are thus <m>1</m> and <m>7</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Suppose by way of contradiction that <m>G</m> is simple. 
+                        Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. 
+                        Let <m>G</m> act on <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism 
+                        <me>
+                          \rho: G\to S_7
+                        </me>
+                        granted via the <xref text="title" ref="thm-permrep"/>. 
+                        By (2) in <xref text="title" ref="thm-sylow"/> we see that <m>\rho</m> is not trivial. 
+                        As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers. Show that <m>G</m> is not a simple group.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we have the following: 
+                  - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. 
+                  - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. 
+                  From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
+                </p>
+              </solution>
+            
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      Let <m>G</m> be a simple group of order <m>60</m>. 
+                      Determine the number of elements of <m>G</m> of order <m>5</m>.
+                    </li>
+        
+                    <li>
+                      Show that there is no simple group of order <m>30</m>.
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5</m>.
+                        By <xref text="title" ref="thm-sylow"/> we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. 
+                        hus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. 
+                        Since <m>G</m> is simple we see that <m>n_5=6</m>. 
+                        As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Suppose by way of contradiction that <m>G</m> is a simple group of order <m>30</m>. 
+                        Similarly to above, <m>n_5=6</m>, yielding <m>24</m> elements of order <m>5</m>. 
+                        Now, <m>n_3|10</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=10</m>, yielding far too many elements to fit in <m>G</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  Prove that no group of order <m>150</m> is simple.
+                </p>
+              </statement>
+  
+              <solution>
+                <p>
+                  Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. 
+                  Notice that <m>150=2\cdot 3\cdot 5^2</m>. 
+                  By <xref text="title" ref="thm-sylow"/>, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. 
+                  Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. 
+                  Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. 
+                  Thus <m>\rho: G\to S_6</m> is a group homomorphism. 
+                  Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. 
+                  By Part (2) of <xref text="title" ref="thm-sylow"/> this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. 
+                  Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. 
+                  Thus no group of order <m>150</m> is simple.
+                </p>
+              </solution>
+            
+            </exercise>
+            
           </subsection>
 
           <outcomes>

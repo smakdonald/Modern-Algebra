@@ -13,25 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We found the Rational Canonical Form of this matrix before. <code class="code-inline tex2jax_ignore">[provisional cross-reference: ]</code> In the process we showed that we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module.</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm-jcf.html">
+<div class="para">We apply the Cayley-Hamilton Theorem: <span class="process-math">\(\mp_A(x) \mid \cp_A(x)\text{.}\)</span> The polynomial <span class="process-math">\(\cp_A(x)\)</span> is easy to compute since this matrix is upper-triangular:</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
+\cp_A(x) =\det(xI_4 - A) = (x-1)^4.
 \end{equation*}
 </div>
-<div class="para">By the Sunzi Remainder Theorem</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm-jcf.html">
-\begin{equation*}
-\Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
-\end{equation*}
-</div>
-<div class="para">and thus the elementary divisors of <span class="process-math">\(\Q^3_A\)</span> are <span class="process-math">\(x-1, x-1, x+1\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-jcf.html" title="Theorem 14.32: Jordan Canonical Form">Theorem 14.32</a> this shows that the JCF of <span class="process-math">\(A\)</span> is</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm-jcf.html">
-\begin{equation*}
-J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.
-\end{equation*}
+<div class="para">So <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> By brute-force, we verify that <span class="process-math">\((A-I_4)^3 \ne 0\)</span> and thus it must be the case that <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^4\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-jcf.html#p-1863" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-cayley-hamilton.html#p-1863" class="internal">in-context</a></span>
 </body>
 </html>

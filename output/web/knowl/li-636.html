@@ -12,33 +12,8 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
+<span class="type">Item</span><span class="period">.</span>
 </h5>
-<div class="para">Suppose <span class="process-math">\(E\)</span> is an intermediate field that is Galois over <span class="process-math">\(F\text{.}\)</span> Fix <span class="process-math">\(\sigma \in G\)</span> and <span class="process-math">\(\alpha \in E\text{.}\)</span> Since <span class="process-math">\(E / F\)</span> is Galois, by Corollary 6.26 the polynomial <span class="process-math">\(m_{\alpha, F}\)</span> is separable and all of its roots are in <span class="process-math">\(E\text{.}\)</span> By Lemma <span class="process-math">\(6.10, \sigma(\alpha)\)</span> is also a root of <span class="process-math">\(m_{\alpha, F}\text{,}\)</span> and thus <span class="process-math">\(\sigma(\alpha) \in E\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Suppose <span class="process-math">\(\tau \in \operatorname{Gal}(L / E)\text{.}\)</span> For any <span class="process-math">\(\alpha \in E\)</span> we have <span class="process-math">\(\sigma(\alpha) \in E\text{,}\)</span> so <span class="process-math">\(\tau(\sigma(\alpha))=\sigma(\alpha)\text{.}\)</span> Thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sigma^{-1}\left(\tau(\sigma(\alpha))=\sigma^{-1}(\sigma(\alpha))=\alpha\right).
-\end{equation*}
-</div>
-</div>
-<div class="para">This proves that <span class="process-math">\(\sigma^{-1} \tau \sigma \in \operatorname{Gal}(L / E)\)</span> and hence that <span class="process-math">\(\operatorname{Gal}(L / E) \unlhd G\text{.}\)</span> We have shown that if <span class="process-math">\(E\)</span> is Galois over <span class="process-math">\(F\text{,}\)</span> then the corresponding subgroup <span class="process-math">\(\operatorname{Gal}(L / E)\)</span> of <span class="process-math">\(G\)</span> is normal.</div>
-<div class="para">For the converse, consider a normal subgroup <span class="process-math">\(N \unlhd G\)</span> and the corresponding intermediate field <span class="process-math">\(E=L^{N}\text{,}\)</span> so that <span class="process-math">\(N=\operatorname{Gal}(L / E)\text{.}\)</span> We will show that <span class="process-math">\(E\)</span> is the splitting field over <span class="process-math">\(F\)</span> of a separable polynomial in <span class="process-math">\(F[x]\text{,}\)</span> and hence is Galois over <span class="process-math">\(F\)</span> by Corollary 6.18.</div>
-<div class="para logical">
-<div class="para">Pick any <span class="process-math">\(\alpha \in E\)</span> and set <span class="process-math">\(m:=m_{\alpha, F}\text{.}\)</span> By Corollary 6.26, <span class="process-math">\(m\)</span> is separable and all of its roots belong to <span class="process-math">\(L\text{.}\)</span> We claim that all the roots must in fact belong to <span class="process-math">\(E\text{.}\)</span> Since <span class="process-math">\(m\)</span> is irreducible and <span class="process-math">\(L / F\)</span> is Galois, by Corollary <span class="process-math">\(6.26 G\)</span> acts transitively on the set of roots of <span class="process-math">\(m\text{.}\)</span> Thus, given be any other root <span class="process-math">\(\beta \in L\)</span> of <span class="process-math">\(m\text{,}\)</span> there is a <span class="process-math">\(\sigma \in G\)</span> with <span class="process-math">\(\sigma(\alpha)=\beta\text{.}\)</span> Since <span class="process-math">\(N\)</span> is normal, for any <span class="process-math">\(\tau \in N\)</span> we have <span class="process-math">\(\sigma \tau^{\prime}=\tau \sigma\)</span> for some <span class="process-math">\(\tau^{\prime} \in N\text{.}\)</span> But <span class="process-math">\(\tau^{\prime} \in N\)</span> fixes <span class="process-math">\(E\text{,}\)</span> so <span class="process-math">\(\tau^{\prime}(\alpha)=\alpha\text{.}\)</span> Therefore,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\beta=\sigma(\alpha)=\sigma \tau^{\prime}(\alpha)=\tau \sigma(\alpha)=\tau(\beta)
-\end{equation*}
-</div>
-<div class="para">which shows that <span class="process-math">\(\beta\)</span> is also fixed by <span class="process-math">\(N\text{.}\)</span> But then <span class="process-math">\(\beta \in L^{N}=E\text{.}\)</span> Therefore, <span class="process-math">\(E\)</span> contains all the roots of <span class="process-math">\(m_{\alpha, F}\text{,}\)</span> and thus <span class="process-math">\(E\)</span> must contain the splitting field of <span class="process-math">\(m_{\alpha, F}\text{.}\)</span>
-</div>
-</div>
-<div class="para">We have <span class="process-math">\(E=F\left(\alpha_{1}, \ldots, \alpha_{l}\right)\)</span> for some <span class="process-math">\(\alpha_{1}, \ldots, \alpha_{l} \in E\text{.}\)</span> If <span class="process-math">\(m_{1}, \ldots, m_{n}\)</span> are the distinct polynomials among <span class="process-math">\(m_{\alpha_{1}, F}, \ldots, m_{\alpha_{l}, F}\text{,}\)</span> then <span class="process-math">\(E\)</span> is the splitting field of the separable polynomial <span class="process-math">\(m_{1} \cdots m_{n}\text{.}\)</span> By Corollary 6.28, <span class="process-math">\(E\)</span> is Galois over <span class="process-math">\(F\text{.}\)</span>
-</div>
-<div class="para">If <span class="process-math">\(E=L^{N}\)</span> for a normal subgroup <span class="process-math">\(N \unlhd \operatorname{Gal}(L / F)\text{,}\)</span> then <span class="process-math">\(\operatorname{Gal}(E / F) \cong \operatorname{Gal}(L / F) / N\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-ftgt.html#li-636" class="internal">in-context</a></span>
+<div class="para">If <span class="process-math">\(N \nsg G\)</span> then <span class="process-math">\(L^N/F\)</span> is Galois.</div></article><span class="incontext"><a href="sec-ftgt.html#li-636" class="internal">in-context</a></span>
 </body>
 </html>
