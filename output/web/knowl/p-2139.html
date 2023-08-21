@@ -13,10 +13,16 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Note that <span class="process-math">\(H=\operatorname{Aut}(L / F(\alpha))\)</span> is a proper subgroup of <span class="process-math">\(G=\operatorname{Aut}(L / F)\text{.}\)</span> By induction, we have <span class="process-math">\(|H| \leqslant[L: F(\alpha)]\text{.}\)</span> We claim that it suffices to prove <span class="process-math">\([G: H] \leqslant[F(\alpha): F]\text{.}\)</span> Indeed, using the Degree Formula and the fact that <span class="process-math">\(|G|=|H| \cdot[G: H]\text{,}\)</span> if <span class="process-math">\([G: H] \leqslant[F(\alpha): F]\)</span> then</div>
+<div class="para">Set <span class="process-math">\(\alpha=\alpha_{1}\)</span> and let <span class="process-math">\(m\)</span> be the irreducible factor of <span class="process-math">\(f\)</span> that has <span class="process-math">\(\alpha\)</span> as a root. Notice <span class="process-math">\(m=m_{\alpha, F}\text{.}\)</span> As before, we consider <span class="process-math">\(F(\alpha)\)</span> and set <span class="process-math">\(H=\operatorname{Aut}(L / F(\alpha)) \leq \operatorname{Aut}(L / F)=G\text{.}\)</span> Note that <span class="process-math">\(L\)</span> is also the splitting field of</div>
 <div class="displaymath process-math">
 \begin{equation*}
-|G|=|H| \cdot[G: H] \leqslant[L: F(\alpha)][F(\alpha): F]=[L: F].
+g=\prod_{i=2}^{n}\left(x-\alpha_{i}\right) \in F(\alpha)[x]
+\end{equation*}
+</div>
+<div class="para">over <span class="process-math">\(F(\alpha)\text{,}\)</span> and <span class="process-math">\(g\)</span> is also separable. By induction <span class="process-math">\(|H|=[L: F(\alpha)]\text{,}\)</span> and it remains to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G: H]=[F(\alpha): F]=\operatorname{deg}(m).
 \end{equation*}
 </div>
 </div>

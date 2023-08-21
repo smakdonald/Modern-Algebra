@@ -551,17 +551,18 @@
 
         <section xml:id="sec-group-basics"><title>Group Basics</title>
 
-          <subsection xml:id="subsec-binop"><title>Binary Operations and Algebraic Structures</title>
+         
+          <subsection xml:id="subsec-groups"><title>Groups</title>
 
             <blockquote>
               <p>
                 <q>
-                  The operation was a success, but I'm afraid the doctor is dead.
+                  Most great learning happens in groups.
                 </q>
               </p>
-              <attribution>Steve Martin</attribution>
+              <attribution>Ken Robinson</attribution>
             </blockquote>
-
+           
             <aside><title>A Brief Notational Aside</title>
               <p>
                 At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.). 
@@ -586,6 +587,10 @@
                 </p>
               </statement>
             </definition>
+
+            <p>
+              One of the nice things about binary operations is that they have <em>properties.</em>
+            </p>
 
             <definition xml:id="def-binary-properties"><title>Binary Properties</title> 
               <statement>
@@ -620,86 +625,13 @@
               </statement>
             </definition>
 
-            <p>
-              Additionally, a binary operation can be <em>commutative</em>.
-            </p>
-
-            <definition xml:id="commutative-axiom"><title>Commutative Property</title>
-              <statement>
-                <p>
-                  An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
-                  <idx><h>commutative property</h></idx>
-                </p>
-              </statement>
-            </definition>
-
-            <definition xml:id="def-monoid"><title>Monoid</title> 
-              <statement>
-                <p>
-                  A <em>monoid</em> is a pair <m>(S, *)</m> where <m>S</m> is a set and <m>*</m> is a binary operation on <m>S</m> satisfying the associative and identity properties.
-                  <idx><h>monoid</h></idx>   
-                </p>
-              </statement>
-            </definition>
-
-            <aside><title>Semigroups and Monoids</title>
-              <p>
-                Some mathematicians choose to define a <em>semigroup</em> as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
-                We have yet to grasp why.
-                <idx><h>semigroup</h></idx>
-              </p>
-            </aside>
-
-            <insight>
-              <p>
-                We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>x*y</m>, is an element of <m>S</m>. 
-                However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
-                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
-              </p>
-            </insight>
-
-            <p>
-              For those who appreciate a snazzy visual, here is a handy little graphic.
-            </p>
-
-            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
-              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
-              <image source="images/magma.png" width="80%"/>
-            </figure>
-    
-          </subsection>
-
-          <subsection xml:id="subsec-groups"><title>Groups</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Most great learning happens in groups.
-                </q>
-              </p>
-              <attribution>Ken Robinson</attribution>
-            </blockquote>
-
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
-                  <ol>
-                    <li>
-                      <p>
-                        A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
-                        <fn>For specifics, see: <xref ref="def-binary-properties"/>.</fn>
-                        <idx><h>group</h></idx>
-                        <idx><h><m>(G,*)</m></h></idx>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-abelian">
-                      <p>
-                        An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
-                        <idx><h>abelian group</h></idx>
-                      </p>
-                    </li>
-                  </ol>
+                  A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
+                  <fn>For specifics, see: <xref ref="def-binary-properties"/>.</fn>
+                  <idx><h>group</h></idx>
+                  <idx><h><m>(G,*)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -709,6 +641,14 @@
                 Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
               </p>
             </aside>
+
+            <insight>
+              <p>
+                We say that <q><m>S</m> is closed under the operation <m>*</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>x*y</m>, is an element of <m>S</m>. 
+                However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
+                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
+              </p>
+            </insight>
 
             <theorem xml:id="thm-properties-of-groups"><title>Properties of Groups</title>
               <statement>
@@ -790,17 +730,38 @@
               </proof>
             </theorem>
 
-            <remark>
-              <p>
-                 The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids (and unital magmas) as well.
-              </p>
-            </remark>
-
             <aside>
               <p>
                 The inverse of an element <m>x</m> is often written <m>x\inv</m>, for reasons we will see in the next section.
               </p>
             </aside>
+
+            <p>
+              Additionally, a binary operation can be <em>commutative</em>.
+              <fn>That's right, a secret <em>additional</em> property. Didn't see that coming, did you?</fn>
+            </p>
+
+            <definition xml:id="commutative-axiom"><title>Commutative Property</title>
+              <statement>
+                <p>
+                  An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
+                  <idx><h>commutative property</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              Lo and behold, this specific property yields a specific type of group!
+            </p>
+
+            <definition xml:id="def-abelian"><title>Abelian Group</title>
+              <statement>
+                <p>
+                  An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
+                  <idx><h>abelian group</h></idx>
+                </p>
+              </statement>
+            </definition>
 
             <example xml:id="ex-group-examples"><title>Group Examples</title>
               <statement>
@@ -855,7 +816,7 @@
             <remark><title>Specific General Linear Groups</title>
               <p>
                 In general, <m>\GL_n(F)</m> is a group for any field <m>F</m> (whatever those are).
-                <fn>To jump ahead and discover what those are, see: <xref ref="def-field"/>.</fn>
+                <fn>To jump ahead and discover what those are, see: <xref ref="def-ring"/>.</fn>
               </p>
             </remark>
 
@@ -1103,6 +1064,16 @@
               As a result of <xref ref="exe-general-associativity"/> any expression formed from the elements <m>x_1\dots,x_n</m> in that order can be written without parenthesis, which will save us oodles of time down the line.
               <fn>This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
             </p>
+
+            <p>
+              As a little aside, we can also look at algebraic structures that are ~almost~ groups. 
+              For those who appreciate a snazzy visual, here is a handy little graphic.
+            </p>
+
+            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
+              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
+              <image source="images/magma.png" width="80%"/>
+            </figure>
 
           </subsection>
 
@@ -1789,14 +1760,6 @@
               </p>
             </example>
 
-            <exercise xml:id="exe-1-cycles"><title><m>1</m>-Cycles in <m>S_n</m></title>
-              <statement>
-                <p>
-                  Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
-                </p>
-              </statement>
-            </exercise>
-
             <remark>
               <p>
                 Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. 
@@ -1950,9 +1913,6 @@
               <statement>
                 <p>
                   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
-                </p>
-
-                <p>
                   In particular, every transposition is its own inverse and the order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
                 </p>
               </statement>
@@ -2179,14 +2139,16 @@
                 <ol>
                   <li>
                     <p>
-                      The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>
-                      <idx><h>trivial homomorphism</h></idx>.
+                      The <xref text="title" ref="ex-identity-map"/> is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>.
+                      <idx><h>trivial homomorphism</h></idx>
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      The zero map is a group homomorphism for any group <m>G</m>.
+                      The zero map
+                      <fn>See: <xref text="title" ref="ex-constant-map"/></fn>
+                      is a group homomorphism for any group <m>G</m>.
                     </p>
                   </li>
 
@@ -2262,8 +2224,8 @@
               <statement>
                 <p>
                   Let <m>G</m> and <m>H</m> be abelian groups. 
-                  Then the set <m>\Hom(G,H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
-                  <idx><h><m>\Hom(G,H)</m></h></idx>
+                  Then the set <m>\Hom_{Ab}(G,H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
+                  <idx><h><m>\Hom_{AB}(G,H)</m></h></idx>
                 </p>
               </statement>
             </investigation>   
@@ -2555,6 +2517,7 @@
                 The quotation marks in the title of this result are importnat. 
                 Equivalenve relations as we know them are only defined on <em>sets</em>, but there is no set of groups.
                 This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.
+                <fn>The time being what, you ask? Great question; haven't the foggiest.</fn>
               </p>
             </remark>
             
@@ -2583,7 +2546,6 @@
             <example xml:id="ex-identity-automorphism">
               <p>
                 In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism.
-                This may prove (pun intended) useful in the following proposition.
               </p>
             </example>
 
@@ -2598,6 +2560,7 @@
 
             <p>
               Let's verify that this group is indeed what it claims to be.
+              <fn>The more pedantic reader might object to a group claiming anything, as it is an abstract concept. However, the more sassy author would politely tell them to keep it to themselves.</fn>
             </p>
 
             <proposition xml:id="prop-aut-is-group"><title>The Automorphism Group</title>
@@ -4734,7 +4697,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Providing such an example as in <xref ref="exe-lagrange-converse-false"/> was Part (b) of <xref ref="jan-2020-1"/> on the <xref text="title" ref="jan-2020"/> qualifying exam.
+                Providing such an example as in <xref ref="exe-lagrange-converse-false"/> was Part (b) of <xref text="title" ref="jan-2020-1"/> on the <xref text="title" ref="jan-2020"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -4954,7 +4917,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="thm-norm-iff-ker"/> was Part (a) of <xref ref="jan-2022-3"/> on the <xref ref="jan-2022"/> qualifying exam.
+                Proving <xref ref="thm-norm-iff-ker"/> was Part (a) of <xref text="title"  ref="jan-2022-3"/> on the <xref text="title" ref="jan-2022"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -5906,7 +5869,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="lem-largest-normal-subgroup"/> is extremely similar to Part (a) on <xref ref="june-2016-1"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
+                Proving <xref ref="lem-largest-normal-subgroup"/> is extremely similar to Part (a) of <xref text="title"  ref="june-2016-1"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -5943,7 +5906,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="thm-smallest-prime-normal"/> was <xref ref="jan-2023-1"/> on the <xref text="title" ref="jan-2023"/> qualifying exam and <xref ref="jan-2015-1"/> on the <xref text="title" ref="jan-2015"/> qualifying exam.
+                Proving <xref ref="thm-smallest-prime-normal"/> was <xref text="title"  ref="jan-2023-1"/> on the <xref text="title" ref="jan-2023"/> qualifying exam and <xref text="title"  ref="jan-2015-1"/> on the <xref text="title" ref="jan-2015"/> qualifying exam.
               </p>
             </paragraphs>
       
@@ -6662,7 +6625,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="thm-center-pgroup"/> was Part (a) of <xref ref="jan-2017-2"/> on the <xref text="title" ref="may-2022"/> qualifying exam.
+                Proving <xref ref="thm-center-pgroup"/> was Part (a) of <xref text="title"  ref="jan-2017-2"/> on the <xref text="title" ref="may-2022"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -6689,7 +6652,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving Part (b) <xref ref="thm-order-p-cyclic"/> was <xref ref="june-2020-1"/> on the <xref text="title" ref="june-2020"/> qualifying exam.
+                Proving Part (b) of <xref ref="thm-order-p-cyclic"/> was <xref text="title"  ref="june-2020-1"/> on the <xref text="title" ref="june-2020"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -8662,7 +8625,7 @@
 
                       <li><title>Associative Multiplication</title>
                         <p>
-                          <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
+                          <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a monoid)
                         </p>
                       </li>
 
@@ -9266,7 +9229,7 @@
 
               <paragraphs><title>Qual Watch</title>
                 <p>
-                  Proving Part (2) of <xref ref="integral-domains-and-fields"/> was Part (a) of <xref ref="jan-2022-4"/> on the <xref text="title" ref="jan-2022"/> qualifying exam.
+                  Proving Part (2) of <xref ref="integral-domains-and-fields"/> was Part (a) of <xref text="title"  ref="jan-2022-4"/> on the <xref text="title" ref="jan-2022"/> qualifying exam.
                 </p>
               </paragraphs>
   
@@ -10629,7 +10592,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="cor-maximal-prime"/> was <xref ref="jan-2021-4"/> on the <xref text="title" ref="jan-2021"/> qualifying exam.
+                Proving <xref ref="cor-maximal-prime"/> was <xref text="title"  ref="jan-2021-4"/> on the <xref text="title" ref="jan-2021"/> qualifying exam.
               </p>
             </paragraphs>
 
@@ -10726,7 +10689,7 @@
 
           <paragraphs><title>Qual Watch</title>
             <p>
-              Stating <xref ref="def-ed"/> was Part (a) of <xref ref="jan-2020-4"/> on the <xref text="title" ref="jan-2020"/> qualifying exam.
+              Stating <xref ref="def-ed"/> was Part (a) of <xref text="title"  ref="jan-2020-4"/> on the <xref text="title" ref="jan-2020"/> qualifying exam.
             </p>
           </paragraphs>
 
@@ -10892,7 +10855,7 @@
 
           <paragraphs><title>Qual Watch</title>
             <p>
-              Proving <xref ref="exe-fx-is-a-pid"/> was <xref ref="june-2016-8"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
+              Proving <xref ref="exe-fx-is-a-pid"/> was <xref text="title"  ref="june-2016-8"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
             </p>
           </paragraphs>
     
@@ -10946,7 +10909,7 @@
 
           <paragraphs><title>Qual Watch</title>
             <p>
-              Proving <xref ref="prop-nonzero-primes-maximal-in-pid"/> was <xref ref="jan-2023-4"/> on the <xref text="title" ref="jan-2023"/> qualifying exam.
+              Proving <xref ref="prop-nonzero-primes-maximal-in-pid"/> was <xref text="title"  ref="jan-2023-4"/> on the <xref text="title" ref="jan-2023"/> qualifying exam.
             </p>
           </paragraphs>
     
@@ -13915,7 +13878,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="thm-rank-nullity"/> was <xref ref="may-2022-5"/> on the <xref text="title" ref="may-2022"/> qualifying exam.
+                Proving <xref ref="thm-rank-nullity"/> was <xref text="title"  ref="may-2022-5"/> on the <xref text="title" ref="may-2022"/> qualifying exam.
               </p>
             </paragraphs>
             
@@ -17010,7 +16973,7 @@
 
             <paragraphs><title>Qual Watch</title>
               <p>
-                Proving <xref ref="thm-relatively-prime-extension"/> was <xref ref="jan-2023-7"/> on the <xref text="title" ref="jan-2023"/> qualifying exam and <xref ref="may-2017-7"/> on the <xref text="title" ref="may-2017"/> qualifying exam.
+                Proving <xref ref="thm-relatively-prime-extension"/> was <xref text="title"  ref="jan-2023-7"/> on the <xref text="title" ref="jan-2023"/> qualifying exam and <xref text="title"  ref="may-2017-7"/> on the <xref text="title" ref="may-2017"/> qualifying exam.
               </p>
             </paragraphs>
         
@@ -18954,42 +18917,43 @@
             <example xml:id="ex-common-functions"><title>Commonly Encountered Functions</title>
               <p>
               <ul>
-                <li>
+                <li xml:id="ex-constant-map"><title>Constant Map</title>
                   <p>
-                    A <term>constant map</term> <m>f : A \to B</m> is any function of the form <m>f (x) = b</m> for all <m>x\in  A</m>, where <m>b\in B</m> is some fixed element.
+                    A <term>constant map</term> <m>f : A \to B</m> is any function of the form <m>f (x) = b</m> for all <m>x\in A</m>, where <m>b\in B</m> is some fixed element.
+                    When <m>b=0</m>, this is often called the <term>zero map</term>.
                     <idx><h>constant map</h></idx>
                   </p>
                 </li>
 
-                <li>
+                <li xml:id="ex-identity-map"><title>Identity Map</title>
                   <p>
                     The <term>identity map</term> on <m>A</m> is the function <m>1_A : A \to  A</m> defined by <m>1_A(x) = x</m> for all <m>x\in  A</m>.
                     <idx><h>identity map</h></idx>
                   </p>
                 </li>
 
-                <li>
+                <li xml:id="ex-inclusion-map"><title>Inclusion Map</title>
                   <p>
                     The <term>inclusion map</term> from <m>S</m> to <m>A</m> is the function <m>\iota : S \to  A</m> defined by <m>j(x) = x</m> for all <m>x\in  S</m>
                     <idx><h>inclusion map</h></idx>
                   </p>
                 </li>
 
-                <li>
+                <li><title>Restriction</title>
                   <p>
                     If <m>f : A \to B</m> is a function, the <term>restriction</term> of <m>f</m> to <m>S</m>, denoted <m>f|_S</m>, is the function <m>f|_S : S \to B</m> defined by <m>f|_S(x) = f (x)</m> for all <m>x\in  S</m>.
                     <idx><h>restriction of a function</h></idx>
                   </p>
                 </li>
 
-                <li>
+                <li><title>Extension Map</title>
                   <p>
                     If <m>g : S \to B</m> is a function, an <term>extension</term> of <m>g</m> to <m>A</m> is any function <m>G : A \to B</m> such that <m>G|S = g</m>.
                     <idx><h>extension of a function</h></idx>
                   </p>
                 </li>
 
-                <li>
+                <li><title>Projection Map</title>
                   <p>
                     The <term>projection maps</term> from <m>A \times B</m> are the functions <m>π_1 : A \times B \to  A</m> and <m>π_2 : A \times B \to B</m> defined by <m>π_1((a, b)) = a</m> and <m>π_2((a, b)) = b</m> for all <m>(a, b)\in A \times B</m>. 
                     For any finite collection of sets <m>A1, \dots, A p</m>, projection maps
@@ -18999,7 +18963,7 @@
                   </p>
                 </li>
 
-                <li>
+                <li><title>Characteristic Map</title>
                   <p>
                     Let <m>X</m> be a non-empty set, and let <m>S \subseteq  X</m> be a subset. 
                     The <term>characteristic map</term> for <m>S</m> in <m>X</m>, denoted <m>χS</m>, is the function <m>χS : X \to  {0, 1}</m> defined by

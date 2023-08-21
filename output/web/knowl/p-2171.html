@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">If <span class="process-math">\(E = L^N\)</span> for a normal subgroup <span class="process-math">\(N \nsg \Gal(L/F)\text{,}\)</span> then <span class="process-math">\(\Gal(E/F) \cong \Gal(L/F)/N\text{.}\)</span>
+<div class="para logical">
+<div class="para">Next, we need to check that <span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> are indeed inverse functions. Given a subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(\operatorname{Gal}(L / F)\text{,}\)</span> we have <span class="process-math">\(\operatorname{Gal}\left(L / L^{H}\right)=H\)</span> by Artin’s Theorem. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Psi \circ \Psi^{-1}(H)=\Psi\left(L^{H}\right)=\operatorname{Gal}\left(L / L^{H}\right)=H .
+\end{equation*}
+</div>
+<div class="para">Conversely, given an intermediate field <span class="process-math">\(E, L / E\)</span> is Galois by Corollary 6.31, and hence <span class="process-math">\(L^{\operatorname{Gal}(L / E)}=E\)</span> by Corollary 6.24. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Psi^{-1} \circ \Psi(E)=\Psi(\operatorname{Gal}(L / E))=L^{\operatorname{Gal}(L / E)}=E .
+\end{equation*}
+</div>
+<div class="para">This establishes the fact that <span class="process-math">\(\Psi\)</span> is indeed a bijective correspondence.</div>
 </div>
 <span class="incontext"><a href="sec-ftgt.html#p-2171" class="internal">in-context</a></span>
 </body>
