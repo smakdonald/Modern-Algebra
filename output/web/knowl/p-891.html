@@ -12,19 +12,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.12: Sylow's Theorems">Sylow's Theorems</a> we know that <span class="process-math">\(n_3=1\mod{3}\)</span> and <span class="process-math">\(n_3|35\text{.}\)</span> The possible options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(7\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Thus <span class="process-math">\(n_3\neq 1\text{,}\)</span> so <span class="process-math">\(n_3=7\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_3(G)\)</span> by conjugation, yielding the homomorphism</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-permrep.html ./knowl/thm-sylow.html">
+<div class="para logical">
+<div class="para">So, we must resort to something really sneaky: let <span class="process-math">\(P_1, \dots, P_{10}\)</span> be all of the Sylow <span class="process-math">\(3\)</span>-subgroups. Observe that <em class="emphasis">if</em> <span class="process-math">\(P_i \cap P_j = \{e\}\)</span> for all <span class="process-math">\(i \ne j\text{,}\)</span> then we would have <span class="process-math">\(10 \cdot 8 = 80\)</span> elements of order <span class="process-math">\(3\)</span> or <span class="process-math">\(9\text{.}\)</span> This would give at least <span class="process-math">\(80+ 15 + 24\)</span> elements, which is not possible. So, it must be the case that at least two intersect non-trivially. Without loss, let's say <span class="process-math">\(H = P_1 \cap P_2\)</span> is such that <span class="process-math">\(|H|= 3\text{.}\)</span> We ponder <span class="process-math">\(N_G(H)\text{.}\)</span> Since <span class="process-math">\(P_1\)</span> is abelian and <span class="process-math">\(H \leq P_1\text{,}\)</span> <span class="process-math">\(P_1 \leq N_G(H)\text{,}\)</span> so that <span class="process-math">\(9 \mid |N_G(H)|\text{.}\)</span> Likewise, <span class="process-math">\(P_2 \leq N_G(H)\)</span> too, and since <span class="process-math">\(|(P_1 \cup P_2)| = 9 + 9 - 2 = 15\text{,}\)</span> we get <span class="process-math">\(15 \leq N_G(H)\text{.}\)</span> And of course <span class="process-math">\(|N_G(H)| \mid 90\text{.}\)</span> We get only three possibilities:</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\rho: G\to S_7
+|N_G(H)| = 18, 45 \text{ or } 90.
 \end{equation*}
 </div>
-<div class="para">granted via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 4.5: Permutation Representation">Permutation Representation</a>. By (2) in <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.12: Sylow's Theorems">Sylow's Theorems</a> we see that <span class="process-math">\(\rho\)</span> is not trivial. As <span class="process-math">\(|S_7|=7!\)</span> we see that <span class="process-math">\(|G|\not\big||S_7|\text{,}\)</span> meaning that the <span class="process-math">\(\ker(\rho)\)</span> is non-trivial, yielding a non-trivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction.</div>
-</div></li>
-</ol></div>
+<div class="para">Let us show that each is impossible:</div>
+</div>
 <span class="incontext"><a href="sec-simple-groups.html#p-891" class="internal">in-context</a></span>
 </body>
 </html>

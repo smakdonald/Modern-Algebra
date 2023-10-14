@@ -550,8 +550,7 @@
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
 
         <section xml:id="sec-group-basics"><title>Group Basics</title>
-
-         
+ 
           <subsection xml:id="subsec-groups"><title>Groups</title>
 
             <blockquote>
@@ -1077,6 +1076,54 @@
 
           </subsection>
 
+          <subsection xml:id="subsec-quat"><title>The Quaternions</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.
+                </q>
+              </p>
+              <attribution>William Thomson</attribution>
+            </blockquote>
+
+            <definition xml:id="def-quaternions"><title>Quaternions</title>
+              <statement>
+                <p>
+                  The <em>quaternion group</em><idx><h>quaternion group</h></idx> <m>Q_8</m> is a set with <m>8</m> elements 
+                  <me>
+                    Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
+                  </me> 
+                  satisfying the following relations: <m>1</m> is the identity element and 
+                  <me>
+                    i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
+                  </me> 
+                  <me>
+                    (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
+                  </me>
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              The quaternion group arises in the study of rotations in three dimensions. 
+              It has important applications in computer graphics and computer vision, as well as in physics and algebra.
+            </p>
+
+            <exercise xml:id="exe-heinous-commutes"><title>Heinous Commutes</title>
+              <statement>
+                <p>
+                  Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups when <m>n&gt;2</m>.
+                </p>
+              </statement>
+            </exercise>
+      
+            <p>
+              There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up.
+            </p>
+      
+          </subsection>
+
           <outcomes>
             <ul>
               <li>
@@ -1482,7 +1529,7 @@
 
         </section>
       
-        <section xml:id="sec-common-groups"><title>Common Groups</title>
+        <section xml:id="sec-symmetric"><title>Permutations and Symmetric Groups</title>
 
           <introduction>
             <p>
@@ -1490,172 +1537,6 @@
               <fn>The quaternions are also here.</fn>
             </p>
           </introduction>
-      
-          <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
-
-            <blockquote>
-              <p>
-                <q>
-                  Reflection is one of the most underused yet powerful tools for success.
-                </q>
-              </p>
-              <attribution>Richard Carlson</attribution>
-            </blockquote>
-                  
-            <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
-              <statement>
-                <p>
-                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon<idx><h>regular <m>n</m>-gon</h></idx>. 
-                  An <em>isometry</em><idx><h>isometry</h></idx> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclidean distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). 
-                  A <em>symmetry</em><idx><h>symmetry</h></idx> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
-                </p>
-              </statement>
-            </definition>
-      
-            <remark>
-              <p>
-                By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>.
-              </p>
-            </remark>
-
-            <p>
-              There are three natural types of isometry in <m>\R^2:</m>
-              <ol>
-                <li>
-                  <p>
-                    rotations about a point,
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    reflections in a line,
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    and translations: in the latter the point <m>(x, y)</m> is moved to <m>(x + a, y + b)</m> for some fixed <m>a, b</m>.
-                  </p>
-                </li>
-              </ol>
-              It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.
-            </p>
-
-            <exercise xml:id="exe-symmetry-compostion"><title>Composition of Symmetries</title>
-              <statement>
-                <p>
-                  The <xref text="title" ref="def-composition"/> of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>.
-                </p>
-              </statement>
-
-              <solution>
-                <p>
-                  Let <m>R = S ∘ T</m> be the composition of <m>S</m> and <m>T</m>, where <m>∘</m> denotes composition. 
-                  Let's take an arbitrary point <m>P</m> on the object.
-                  When we apply the symmetry <m>S</m> to <m>P</m>, it is mapped to a new point, let's call it <m>P1</m>. 
-                  Since <m>S</m> is a symmetry, <m>P1</m> is still on the object.
-                  Next, when we apply the symmetry <m>T</m> to <m>P1</m>, it is mapped to a new point, let's call it <m>P2</m>. 
-                  Again, since <m>T</m> is a symmetry, <m>P2</m> is still on the object.
-                  Therefore, the composition <m>R = S ∘ T</m> maps the point <m>P</m> on the object to the point <m>P2</m>, which is also on the object.
-                  Hence, the composition of symmetries is again a symmetry.
-                </p>
-              </solution>
-            </exercise>
-      
-            <definition xml:id="def-d2n"><title>Dihedral Group</title>
-              <statement>
-                <p>
-                  The <em>dihedral group</em> <m>D_{2n}</m><idx><h>dihedral group</h></idx> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
-                  <idx><h><m>D_{2n}</m></h></idx>
-                </p>
-              </statement>
-            </definition>
-
-            <example xml:id="ex-d2n-elements"><title>Rotations and Reflections</title>
-              <p>
-                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis.        
-                <ol>
-                  <li>
-                    <p>
-                      If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. 
-                      It's inverse is rotation by <m>\frac{2\pi}{n}</m> clock-wise. 
-                      <idx><h>rotation</h></idx>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. 
-                      By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
-                      <idx><h>reflection</h></idx>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </example>
-
-            <figure xml:id="figure-d4"><title>Elements of <m>D_4</m></title>
-              <caption>Elements of <m>D_4</m>. <url href="https://q.uiver.app/#q=WzAsNTYsWzAsMSwiQiJdLFswLDMsIkMiXSxbMiwxLCJBIl0sWzIsMywiRCJdLFs0LDEsIkMiXSxbNiwxLCJCIl0sWzYsMywiQSJdLFs0LDMsIkQiXSxbOCwxLCJEIl0sWzgsMywiQSJdLFsxMCwxLCJDIl0sWzEwLDMsIkIiXSxbMTIsMSwiQSJdLFsxNCwxLCJEIl0sWzE0LDMsIkMiXSxbMTIsMywiQiJdLFswLDUsIkEiXSxbMiw1LCJCIl0sWzAsNywiRCJdLFsyLDcsIkMiXSxbNCw1LCJDIl0sWzYsNSwiRCJdLFs0LDcsIkIiXSxbNiw3LCJBIl0sWzgsNSwiRCJdLFsxMCw1LCJBIl0sWzEwLDcsIkIiXSxbOCw3LCJDIl0sWzEyLDUsIkIiXSxbMTQsNywiRCJdLFsxMiw3LCJBIl0sWzE0LDUsIkMiXSxbNSwwLCI5MFxcZGVncmVlIl0sWzksMCwiMTgwXFxkZWdyZWUiXSxbMTMsMCwiMjcwXFxkZWdyZWUiXSxbNywyLCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs5LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEzLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMyw2LCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs3LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzcsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMSw0LCJmIixbMCwwLDEwMCwxXV0sWzEsMCwiZSJdLFs0LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzYsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCw4LCJmIixbMCwwLDEwMCwxXV0sWzIsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCwyLCIiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDcsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw2LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTAsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsOSwiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMSwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEyLDE1LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIiIsMCx7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTMsMTQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE1LDE0LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxNywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE4LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE3LDE5LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOCwxOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMjIsIiIsMCx7ImNvbG91ciI6WzI3MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIwLDIxLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMSwyMywiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMiwyMywiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI1LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI3LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyNSwyNiwiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI3LDI2LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyOCwzMCwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI4LDMxLCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszMSwyOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzAsMjksIiIsMix7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzIsMzUsInIiLDIseyJjdXJ2ZSI6LTN9XSxbMzMsMzcsIiIsMCx7ImN1cnZlIjotNH1dLFszNywzNiwiIiwwLHsiY3VydmUiOi00fV0sWzM0LDM4LCIiLDAseyJjdXJ2ZSI6LTR9XSxbMzgsMzksIiIsMCx7ImN1cnZlIjotNH1dLFszOSwzNywiIiwwLHsiY3VydmUiOi00fV0sWzQxLDQyLCJzIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzQ5LDQ1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifX19XSxbNDYsNDUsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFs1MCw0MCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzUyLDUzLCJcXHRleHR7SG9yaXpvbnRhbCBGbGlwfSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1NCw1NSwiXFx0ZXh0e1ZlcnRpY2FsIEZsaXB9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d" visual="">Quiver</url></caption>
-              <image source="images/D4.png" width="100%"/>
-            </figure>
-
-            <remark>
-              <p>
-                We see <m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. 
-                The fact that <m>sr</m> is a reflection and hence that <m>srsr=e_{{\mathbb{R}}^2}</m> may be slightly less aparent.
-              </p>
-            </remark>
-      
-            <proposition xml:id="thm-d2n-order"><title>Order of <m>D_{2n}</m></title>
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Every element in <m>D_{2n}</m> can be written as <m>r^j</m> or <m>r^js</m> for <m>0 \leq j \leq n-1</m>.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>|D_{2n}|=2n</m>
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-
-              <proof>
-                <p>
-                  We will use some geometric notions freely without complete justification. 
-                  For example, we use that if an isometry of <m>{\mathbb{R}}^2</m> fixes two points <m>A</m> and <m>B</m>, then it is either the identity element or it is reflection about the line <m>AB</m>. 
-                  We also use that every element of <m>D_{2n}</m> maps the origin to itself (since the origin is the center of mass of <m>P_n</m>). 
-                  Finally, we use that every isometry of <m>{\mathbb{R}}^2</m> is either <em>orientation preserving</em> or <em>orientation reversing</em>.
-                </p>
-
-                <p>
-                  Label the vertices of <m>P_n</m> as <m>V_0, \dots, V_{n-1}</m>, with <m>V_0</m> being the vertex located on the positive <m>s</m>-axis, <m>V_1</m> being the vertex adjacent to <m>V_0</m> in the counter-clockwise direction, etc. 
-                  We have <m>r(V_0) = V_1</m>, <m>r(V_1) = V_2</m>, etc., and so <m>r^j(V_0) = V_{j \pmod{n}}</m>. 
-                  Moreover any isometry must send a vertex to a vertex because the vertices are the points on <m>P_n</m> at largest distance from the origin.
-                </p>
-        
-                <p>
-                  Let <m>\alpha</m> be an arbitrary symmetry of <m>P_n</m>. 
-                  Then <m>\alpha(V_0) =V_ j</m> for some <m>0 \leq j \leq n-1</m>. 
-                  Then the element <m>r^{-j}\alpha</m> fixes <m>V_0</m> and the origin, and hence either <m>r^{-j}\alpha= e</m> or <m>r^{-j}\alpha= s</m> from the discussion above. 
-                  We get that <m>\alpha= r^j</m> or <m>\alpha= r^js</m>, proving the first assertion.
-                </p>
-        
-                <p>
-                  Since <m>r^j(V_0) = V_{j \pmod{n}}</m>, we see that if <m>r^j = r^i</m> for <m>0 \leq i,j \leq n-1</m>, then <m>i=j</m>. 
-                  We have <m>r^js \ne r^i</m> for any <m>i,j</m> since the former is orientation reversing and the latter is orientation preserving. 
-                  If <m>r^is = r^js</m> for <m>0 \leq i,j \leq n-1</m>, then upon multiplying on the left of <m>s^{-1}</m> we get <m>i=j</m>.
-                </p>
-              </proof>
-            </proposition>
-      
-          </subsection>
       
           <subsection xml:id="subsec-symmetric"><title>Symmetric Groups</title>
 
@@ -2003,54 +1884,6 @@
             </exercise>
       
           </subsection>
-      
-          <subsection xml:id="subsec-quat"><title>The Quaternions</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.
-                </q>
-              </p>
-              <attribution>William Thomson</attribution>
-            </blockquote>
-
-            <definition xml:id="def-quaternions"><title>Quaternions</title>
-              <statement>
-                <p>
-                  The <em>quaternion group</em><idx><h>quaternion group</h></idx> <m>Q_8</m> is a set with <m>8</m> elements 
-                  <me>
-                    Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
-                  </me> 
-                  satisfying the following relations: <m>1</m> is the identity element and 
-                  <me>
-                    i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
-                  </me> 
-                  <me>
-                    (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
-                  </me>
-                </p>
-              </statement>
-            </definition>
-
-            <p>
-              The quaternion group arises in the study of rotations in three dimensions. 
-              It has important applications in computer graphics and computer vision, as well as in physics and algebra.
-            </p>
-
-            <exercise xml:id="exe-heinous-commutes"><title>Heinous Commutes</title>
-              <statement>
-                <p>
-                  Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups when <m>n&gt;2</m>.
-                </p>
-              </statement>
-            </exercise>
-      
-            <p>
-              There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up.
-            </p>
-      
-          </subsection>
 
           <outcomes>
             <ul>
@@ -2093,6 +1926,176 @@
               </li>
             </ul>
           </outcomes>  
+          
+        </section>
+
+        <section xml:id="sec-d2n"><title>Dihedral Groups</title>
+
+          <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
+
+            <blockquote>
+              <p>
+                <q>
+                  Reflection is one of the most underused yet powerful tools for success.
+                </q>
+              </p>
+              <attribution>Richard Carlson</attribution>
+            </blockquote>
+                  
+            <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
+              <statement>
+                <p>
+                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon<idx><h>regular <m>n</m>-gon</h></idx>. 
+                  An <em>isometry</em><idx><h>isometry</h></idx> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclidean distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). 
+                  A <em>symmetry</em><idx><h>symmetry</h></idx> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
+                </p>
+              </statement>
+            </definition>
+      
+            <remark>
+              <p>
+                By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>.
+              </p>
+            </remark>
+
+            <p>
+              There are three natural types of isometry in <m>\R^2:</m>
+              <ol>
+                <li>
+                  <p>
+                    rotations about a point,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    reflections in a line,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    and translations: in the latter the point <m>(x, y)</m> is moved to <m>(x + a, y + b)</m> for some fixed <m>a, b</m>.
+                  </p>
+                </li>
+              </ol>
+              It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.
+            </p>
+
+            <exercise xml:id="exe-symmetry-compostion"><title>Composition of Symmetries</title>
+              <statement>
+                <p>
+                  The <xref text="title" ref="def-composition"/> of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Let <m>R = S ∘ T</m> be the composition of <m>S</m> and <m>T</m>, where <m>∘</m> denotes composition. 
+                  Let's take an arbitrary point <m>P</m> on the object.
+                  When we apply the symmetry <m>S</m> to <m>P</m>, it is mapped to a new point, let's call it <m>P1</m>. 
+                  Since <m>S</m> is a symmetry, <m>P1</m> is still on the object.
+                  Next, when we apply the symmetry <m>T</m> to <m>P1</m>, it is mapped to a new point, let's call it <m>P2</m>. 
+                  Again, since <m>T</m> is a symmetry, <m>P2</m> is still on the object.
+                  Therefore, the composition <m>R = S ∘ T</m> maps the point <m>P</m> on the object to the point <m>P2</m>, which is also on the object.
+                  Hence, the composition of symmetries is again a symmetry.
+                </p>
+              </solution>
+            </exercise>
+      
+            <definition xml:id="def-d2n"><title>Dihedral Group</title>
+              <statement>
+                <p>
+                  The <em>dihedral group</em> <m>D_{2n}</m><idx><h>dihedral group</h></idx> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
+                  <idx><h><m>D_{2n}</m></h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="ex-d2n-elements"><title>Rotations and Reflections</title>
+              <p>
+                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis.        
+                <ol>
+                  <li>
+                    <p>
+                      If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. 
+                      It's inverse is rotation by <m>\frac{2\pi}{n}</m> clock-wise. 
+                      <idx><h>rotation</h></idx>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. 
+                      By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+                      <idx><h>reflection</h></idx>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+            <figure xml:id="figure-d4"><title>Elements of <m>D_4</m></title>
+              <caption>Elements of <m>D_4</m>. <url href="https://q.uiver.app/#q=WzAsNTYsWzAsMSwiQiJdLFswLDMsIkMiXSxbMiwxLCJBIl0sWzIsMywiRCJdLFs0LDEsIkMiXSxbNiwxLCJCIl0sWzYsMywiQSJdLFs0LDMsIkQiXSxbOCwxLCJEIl0sWzgsMywiQSJdLFsxMCwxLCJDIl0sWzEwLDMsIkIiXSxbMTIsMSwiQSJdLFsxNCwxLCJEIl0sWzE0LDMsIkMiXSxbMTIsMywiQiJdLFswLDUsIkEiXSxbMiw1LCJCIl0sWzAsNywiRCJdLFsyLDcsIkMiXSxbNCw1LCJDIl0sWzYsNSwiRCJdLFs0LDcsIkIiXSxbNiw3LCJBIl0sWzgsNSwiRCJdLFsxMCw1LCJBIl0sWzEwLDcsIkIiXSxbOCw3LCJDIl0sWzEyLDUsIkIiXSxbMTQsNywiRCJdLFsxMiw3LCJBIl0sWzE0LDUsIkMiXSxbNSwwLCI5MFxcZGVncmVlIl0sWzksMCwiMTgwXFxkZWdyZWUiXSxbMTMsMCwiMjcwXFxkZWdyZWUiXSxbNywyLCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs5LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEzLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMyw2LCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs3LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzcsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMSw0LCJmIixbMCwwLDEwMCwxXV0sWzEsMCwiZSJdLFs0LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzYsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCw4LCJmIixbMCwwLDEwMCwxXV0sWzIsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCwyLCIiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDcsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw2LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTAsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsOSwiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMSwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEyLDE1LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIiIsMCx7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTMsMTQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE1LDE0LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxNywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE4LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE3LDE5LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOCwxOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMjIsIiIsMCx7ImNvbG91ciI6WzI3MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIwLDIxLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMSwyMywiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMiwyMywiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI1LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI3LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyNSwyNiwiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI3LDI2LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyOCwzMCwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI4LDMxLCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszMSwyOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzAsMjksIiIsMix7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzIsMzUsInIiLDIseyJjdXJ2ZSI6LTN9XSxbMzMsMzcsIiIsMCx7ImN1cnZlIjotNH1dLFszNywzNiwiIiwwLHsiY3VydmUiOi00fV0sWzM0LDM4LCIiLDAseyJjdXJ2ZSI6LTR9XSxbMzgsMzksIiIsMCx7ImN1cnZlIjotNH1dLFszOSwzNywiIiwwLHsiY3VydmUiOi00fV0sWzQxLDQyLCJzIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzQ5LDQ1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifX19XSxbNDYsNDUsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFs1MCw0MCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzUyLDUzLCJcXHRleHR7SG9yaXpvbnRhbCBGbGlwfSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1NCw1NSwiXFx0ZXh0e1ZlcnRpY2FsIEZsaXB9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d" visual="">Quiver</url></caption>
+              <image source="images/D4.png" width="100%"/>
+            </figure>
+
+            <remark>
+              <p>
+                We see <m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. 
+                The fact that <m>sr</m> is a reflection and hence that <m>srsr=e_{{\mathbb{R}}^2}</m> may be slightly less aparent.
+              </p>
+            </remark>
+      
+            <proposition xml:id="thm-d2n-order"><title>Order of <m>D_{2n}</m></title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Every element in <m>D_{2n}</m> can be written as <m>r^j</m> or <m>r^js</m> for <m>0 \leq j \leq n-1</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>|D_{2n}|=2n</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We will use some geometric notions freely without complete justification. 
+                  For example, we use that if an isometry of <m>{\mathbb{R}}^2</m> fixes two points <m>A</m> and <m>B</m>, then it is either the identity element or it is reflection about the line <m>AB</m>. 
+                  We also use that every element of <m>D_{2n}</m> maps the origin to itself (since the origin is the center of mass of <m>P_n</m>). 
+                  Finally, we use that every isometry of <m>{\mathbb{R}}^2</m> is either <em>orientation preserving</em> or <em>orientation reversing</em>.
+                </p>
+
+                <p>
+                  Label the vertices of <m>P_n</m> as <m>V_0, \dots, V_{n-1}</m>, with <m>V_0</m> being the vertex located on the positive <m>s</m>-axis, <m>V_1</m> being the vertex adjacent to <m>V_0</m> in the counter-clockwise direction, etc. 
+                  We have <m>r(V_0) = V_1</m>, <m>r(V_1) = V_2</m>, etc., and so <m>r^j(V_0) = V_{j \pmod{n}}</m>. 
+                  Moreover any isometry must send a vertex to a vertex because the vertices are the points on <m>P_n</m> at largest distance from the origin.
+                </p>
+        
+                <p>
+                  Let <m>\alpha</m> be an arbitrary symmetry of <m>P_n</m>. 
+                  Then <m>\alpha(V_0) =V_ j</m> for some <m>0 \leq j \leq n-1</m>. 
+                  Then the element <m>r^{-j}\alpha</m> fixes <m>V_0</m> and the origin, and hence either <m>r^{-j}\alpha= e</m> or <m>r^{-j}\alpha= s</m> from the discussion above. 
+                  We get that <m>\alpha= r^j</m> or <m>\alpha= r^js</m>, proving the first assertion.
+                </p>
+        
+                <p>
+                  Since <m>r^j(V_0) = V_{j \pmod{n}}</m>, we see that if <m>r^j = r^i</m> for <m>0 \leq i,j \leq n-1</m>, then <m>i=j</m>. 
+                  We have <m>r^js \ne r^i</m> for any <m>i,j</m> since the former is orientation reversing and the latter is orientation preserving. 
+                  If <m>r^is = r^js</m> for <m>0 \leq i,j \leq n-1</m>, then upon multiplying on the left of <m>s^{-1}</m> we get <m>i=j</m>.
+                </p>
+              </proof>
+            </proposition>
+      
+          </subsection>
           
         </section>
 
@@ -3958,10 +3961,6 @@
           
         </section>
 
-      </chapter>
-                                                                              
-      <chapter xml:id="ch-normal-quotient"><title>Normal and Quotient Groups</title>
-    
         <section xml:id="sec-cosets"><title>Cosets and Lagrange's Theorem</title>
 
           <subsection xml:id="subsec-cosets"><title>Cosets</title>
@@ -4349,6 +4348,16 @@
             </ul>
           </outcomes> 
     
+        </section>
+
+      </chapter>
+                                                                              
+      <chapter xml:id="ch-normal-quotient"><title>Quotient Groups</title>
+
+        <section xml:id="sec-modular-integers"><title>Motivation and Contructing <m>\Z/n</m></title>
+
+          <p></p>
+          
         </section>
     
         <section xml:id="sec-normal-subgroups"><title>Normal Subgroups</title>
@@ -5477,6 +5486,177 @@
         
       </chapter>
 
+      <chapter xml:id="ch-presentations"><title>Presentations and Free Groups</title>
+
+        <section xml:id="sec-motivation-d2n"><title>Motivation and <m>D_{2n}</m></title>
+
+          <p></p>
+          
+        </section>
+
+        <section xml:id="subsec-presentation-intro"><title>Free Groups</title>
+
+          <definition xml:id="def-free-group"><title>Free Group</title>
+            <statement>
+              <p>
+                Let <m>A</m> be a set. 
+                Consider a new set of symbols <m>A^{-1}=\{a^{-1} \mid a \in A\}</m>. 
+                The <em>free group</em> on <m>A</m>, denoted <m>F(A)</m>, is the set of all finite words written using symbols in <m>A\cup A^{-1}</m>, including the empty word, where two words are equal if one is obtained from the other by erasing a pair of consecutive symbols <m>aa^{-1}</m> or <m>a^{-1}a</m>. 
+                In symbols, 
+                <me>
+                  F(A)=\{a_1^{i_1}a_2^{i_2}\cdots a_m^{i_m} \mid m\geq 0, a_j\in A, i_j\in\{-1,1\}\}.
+                </me> 
+                The set <m>F(A)</m> is a group in which any two words are multiplied by concatenation.
+              </p>
+            </statement>
+          </definition>
+
+          <example>
+            <p>
+              The free group on a singleton set <m>A={x}</m> is the infinite cyclic group <m>C_\infty</m>. 
+              It is easy to visualize this since <m>C_\infty\cong \mathbb{Z}</m>.
+            </p>
+          </example>
+
+          <p>
+            It is already somewhat challenging to visualize the free group on two generators, <m>F({x,y})</m>. 
+            The best one can do to represent it is an infinite graph called the <em>Cayley graph</em> of this group. 
+            It is obtained by starting at the origin (the center of the picture below), then branching out in four directions by a length of 1, then branching out similarly by a length of 1/2, then by 1/4, then by 1/8, etc 
+            (I stopped there, to avoid cluttering the picture too much but to get the complete Cayley graph one continues infinitely obtaining a fractal kind of picture). 
+            Then every element of <m>F ({x, y})</m> corresponds in a rather natural way to exactly one dot in this diagram. 
+            Indeed, we can place the empty word at the center, and we can agree that every <m>x</m> in a word takes us one step to the right, every <m>x^{-1}</m> to the left, every <m>y</m> up, and every <m>y^{-1}</m> down. For example, the word <m>yx^{-1}yx</m> takes us here:
+          </p>
+
+          <theorem xml:id="thm-ump-free"><title>Universal Mapping Property for Free Groups</title>
+            <statement>
+              <p>
+                Let <m>A</m> be a set, let <m>F(A)</m> be the free group on <m>A</m>, let <m>H</m> be a group, and let <m>g:A \to H</m> be a function. 
+                Then there is a unique homomorphism <m>f:F(A) \to H</m> satisfying <m>f(a) = g(a)</m> for all <m>a \in A</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Set <m>f:F(A) \to H</m> to be given by <m>f(a_1^{i_1}a_2^{i_2}\cdots a_m^{i_m})=g(a_1)^{i_1}g(a_2)^{i_2}\cdots g(a_m)^{a_m}</m> for any <m>m\geq 0, a_j\in A, i_j\in\{-1,1\}</m>. 
+                One checks that <m>f</m> is well defined by noting that 
+                <me>
+                  f(a_1^{i_1}a_2^{i_2}\cdots aa^{-1}\cdots a_m^{i_m})=g(a_1)^{i_1}g(a_2)^{i_2}\cdots g(a)g(a)^{-1}\cdots g(a_m)^{a_m}=f(a_1^{i_1}a_2^{i_2}\cdots a_m^{i_m})
+                </me> 
+                for any <m>a\in G</m> and similarly for inserting <m>a^{-1}a</m>. 
+                The fact that <m>f</m> is a group homomorphism and its uniqueness are left as an exercise.
+              </p>
+            </proof>
+          </theorem>
+        </section>
+
+        <section xml:id="sec-presentations"><title>Presentations</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Megamind: Oh, you're a villain, alright, just not a super one.
+              </q>
+            </p>
+            <p>
+              <q>
+                Tighten: Yeah? What's the difference?
+              </q>
+            </p>
+            <p>
+              <q>
+                Megamind: Presentation!
+              </q>
+            </p>
+            <attribution>Megamind (2010)</attribution>
+          </blockquote>
+
+          <definition xml:id="def-gen-normal-subgroup"><title>Generated Normal Subgroup</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group and let <m>R \subseteq G</m> be a set. 
+                The <em>normal subgroup of <m>G</m> generated by <m>R</m></em>, denoted <m>\langle R \rangle ^N</m>, is the set of all products of conjugates of elements of <m>R</m> and inverses of elements of <m>R</m>. 
+                In symbols, 
+                <me>
+                  \langle R \rangle ^N= \{ g_1r_1^{i_1}g_1^{-1} \dots g_mr_m^{i_m}g_m^{-1} \mid m \geq 0, r_j \in R, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-presentation"><title>Presentation</title>
+            <statement>
+              <p>
+                Let <m>A</m> be a set and let <m>R</m> be a subset of the free group <m>F(A)</m>. 
+                The group with <em>presentation</em> <m>\langle A \mid  R \rangle = \langle A | \{r = e \mid r \in R\} \rangle</m> is defined to be the quotient group <m>F(A)/\langle R \rangle ^N</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <example>
+            <p>
+              For <m>A=\{x\}</m>, <m>R=\{x^n\}</m> we obtain the cyclic group of order <m>n</m>: 
+              <me>
+                C_n=\langle x \mid x^n=e\rangle = \frac{F(\{x\})}{\langle x^n\rangle ^N}=C_\infty/\langle x^n \rangle.
+              </me>
+            </p>
+          </example>
+
+          <example>
+            <p>
+              For <m>A=\{r,s\}</m>, <m>R=\{s^2,r^n,srsr\}</m> we obtain the usual presentation for <m>D_{2n}</m>: 
+              <me>
+                D_{2n}=\langle r,s \mid s^2=e,r^n=e,srsr=e \rangle =\frac{F\left( \{r,s\}\right)}{\{s^2,r^n,srsr\}^N}.
+              </me>
+            </p>
+          </example>
+
+          <theorem xml:id="thm-ump-presentation"><title>UMP of a Presentation</title>
+            <statement>
+              <p>
+                Let <m>A</m> be a set, let <m>F(A)</m> be the free group on <m>A</m>, let <m>R</m> be a subset of <m>F(A)</m>, let <m>H</m> be a group, and let <m>g:A \to H</m> be a function satisfying the property that whenever <m>r = a_1^{i1} \cdots a_m^{i_m} \in R</m>, with each <m>a_j \in A, g_j \in G</m> and <m>i_j \in \{1,-1\}</m>, then <m>(g(a_1))^{i_1} \cdots (g(a_m))^{i_m} = e_H</m>. 
+                Then there is a unique homomorphism <m>\overline{f}: \langle A | R \rangle \to H</m> satisfying <m>\overline{f}(a\langle R\rangle ^N) = g(a)</m> for all <m>a \in A</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                By the UMP of the free group there is a unique group homomorphism <m>\tilde f:F(A)\to H</m> such that <m>f(a)=g(a)</m> for all <m>a\in A</m>. 
+                Then for <m>r = a_1^{i1} \cdots a_m^{i_m} \in R</m>, we have <m>f(r)=(g(a_1))^{i_1} \cdots (g(a_m))^{i_m} = e_H</m>, showing that <m>R\subseteq \operatorname{Ker}(f)</m>. 
+                Since <m>\operatorname{Ker}(f)\mathrel{\unlhd}F(A)</m> and <m>\langle R\rangle ^N</m> is the smallest normal subgroup containing <m>R</m>, it follows that <m>\langle R\rangle ^N\subseteq \operatorname{Ker}(f)</m>. 
+                By the UMP of the quotient, <m>f</m> induces a group homomorphism <m>\overline{f}: G/\langle R\rangle ^N\to H</m>. 
+                Moreover, for each <m>a\in A</m> we have <m>g(a)=f(a)=\overline{f}(a\langle R\rangle ^N)</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <remark>
+            <p>
+              The UMP of the presentation says that one can build a homomorphism from a group with a given presentation to any other group <m>H</m> as long as one is able to send the generators (elements of <m>A</m>) via some function <m>g</m> to some elements of <m>H</m> that satisfy the same relations in <m>H</m> as those given in the presentation.
+            </p>
+          </remark>
+
+          <example>
+            <p>
+              To find a groups homomorphism <m>D_{2n}\to \operatorname{GL}_2({\mathbb{R}})</m> it suffices to find a map <m>g:\{r,s\}\to \operatorname{GL}_2({\mathbb{R}})</m>, say <m>r\mapsto R, s\mapsto S</m> and to verify that <m>S^2=I_2,R^n=I_2, SRSR=I_2</m>. 
+              As you have shown on homework, this does hold for the matrices 
+              <me>
+                R=\begin{bmatrix} \cos\left(\frac{2\pi}{n}\right) &amp; -\sin\left(\frac{2\pi}{n}\right) \\ \sin\left(\frac{2\pi}{n}\right)&amp; \cos\left(\frac{2\pi}{n}\right)\end{bmatrix}, S=\begin{bmatrix}  0 &amp; 1 \\ 1&amp; 0\end{bmatrix}.
+              </me> 
+              By the UMP of the presentation there is a group homomorphism <m>f:D_{2n}\to \operatorname{GL}_2({\mathbb{R}})</m> that extends <m>g</m>; that is <m>f(r^is)=R^iS</m> for all <m>0\leq i&lt;n</m>.
+            </p>
+          </example>
+
+          <p>
+            We can use the map above to understand the notions of isometry and orientation-preserving a little more rigorously.
+            Indeed, an invertible linear transformation, equivalently an element <m>M\in \operatorname{GL}_n({\mathbb{R}})</m> is an isometry if and only if <m>\det(M)=\pm 1</m>. 
+            An invertible linear transformation, equivalently an element <m>M\in \operatorname{GL}_n({\mathbb{R}})</m> is orientation-preserving if and only if <m>\det(M)&gt;0</m>. 
+            Thus the group of orientation-preserving isometries of <m>{\mathbb{R}}^n</m> can be identified with <m>\operatorname{SL}_n({\mathbb{R}})</m>.
+          </p>
+          
+        </section>
+        
+      </chapter>
+
       <chapter xml:id="ch-group-actions"><title>Group Actions</title>
   
         <section xml:id="graction"><title>Group Actions</title>
@@ -6575,7 +6755,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-sylow"><title>Sylow Theory</title>
+      <chapter xml:id="ch-sylow"><title>Simple, Solvable, Sylow</title>
     
         <section xml:id="sec-p-groups"><title>Sylow's Theorem</title>
 
@@ -7471,6 +7651,10 @@
             </ul>
           </outcomes> 
 
+        </section>
+
+        <section xml:id="sec-solvable"><title>Solvable Groups</title>
+          <p></p>
         </section>
     
       </chapter>
@@ -19564,6 +19748,157 @@
 
       </appendix> 
 
+      <appendix xml:id="app-extras"><title>Extras</title>
+
+        <section xml:id="sec-binop"><title>Binary Operations and Algebraic Structures</title>
+
+          <subsection xml:id="subsec-binop"><title>Binary Operations, Revisited</title>
+
+            <p></p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-"><title>Algebraic Structures</title>
+
+            <p></p>
+            
+          </subsection>
+          
+        </section>
+
+        <section xml:id="sec-cayley-graphs"><title>Cayley Graphs</title>
+
+          <p></p>
+          
+        </section>
+
+      </appendix>
+
+      <appendix><title>Catalogues</title>
+
+        <section xml:id="sec-catalogue-groups"><title>A Catalogue of Groups</title>
+
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>\Z</m>, <m>\Q</m> <m>\R</m> <m>\C</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\Z^\times</m>, <m>\Q^\times</m> <m>\R^\times</m> <m>\C^\times</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\Z/n</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>S_n</m>, <m>A_n</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+
+          <table><title>Groups of Units up to Isomorphism</title>
+            <tabular>
+              <row>
+                <cell><m>\Z_3^\times</m></cell> <cell><m>\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_4^\times</m></cell> <cell><m>\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_5^\times</m></cell> <cell><m>\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_6^\times</m></cell> <cell><m>\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_7^\times</m></cell> <cell><m>\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_8^\times</m></cell> <cell><m>\Z_2\times\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_9^\times</m></cell> <cell><m>\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{10}^\times</m></cell> <cell><m>\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{11}^\times</m></cell> <cell><m>\Z_{10}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{12}^\times</m></cell> <cell><m>\Z_2\times\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{13}^\times</m></cell> <cell><m>\Z_{12}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{14}^\times</m></cell> <cell><m>\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{15}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{16}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{17}^\times</m></cell> <cell><m>\Z_{16}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{18}^\times</m></cell> <cell><m>\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{19}^\times</m></cell> <cell><m>\Z_{18}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{20}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{21}^\times</m></cell> <cell><m>\Z_2\times\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{22}^\times</m></cell> <cell><m>\Z_{10}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{23}^\times</m></cell> <cell><m>\Z_{22}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{24}^\times</m></cell> <cell><m>\Z_2\times\Z_2\times\Z_2</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{25}^\times</m></cell> <cell><m>\Z_{20}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{26}^\times</m></cell> <cell><m>\Z_{12}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{27}^\times</m></cell> <cell><m>\Z_{18}</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{28}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{29}^\times</m></cell> <cell><m>\Z_2\times\Z_6</m></cell>
+              </row>
+              <row>
+                <cell><m>\Z_{30}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
+              </row>
+            </tabular>
+          </table>
+          
+        </section>
+
+      </appendix>
+
       <appendix><title>Qualifying Exams</title>
 
         <section xml:id="sec-qual"><title>Syllabus and Selected Problems</title>
@@ -19673,7 +20008,7 @@
                 </solution>
               </exercise>
 
-              <exercise xml:id="may-2022-2" number="2">
+              <exercise xml:id="may-2022-2" number="2"><title>Problem 2</title>
                 <statement>
                   <p>
                     A non-abelian group of order <m>27</m>. 
@@ -19736,7 +20071,7 @@
               
               </exercise>
 
-              <exercise xml:id="may-2022-3" number="3">
+              <exercise xml:id="may-2022-3" number="3"><title>Problem 3</title>
                 <statement>
                   <p>
                     Let G be a group of order <m>2^5\cdot 7^3</m>. 
@@ -19761,7 +20096,7 @@
               
               </exercise>
 
-              <exercise xml:id="may-2022-4" number="4">
+              <exercise xml:id="may-2022-4" number="4"><title>Problem 4</title>
                 <statement>
                   <p>
                     Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
@@ -19873,7 +20208,7 @@
               
               </exercise>
     
-              <exercise xml:id="may-2022-6" number="6">
+              <exercise xml:id="may-2022-6" number="6"><title>Problem 6</title>
                 <statement>
                   <p>
                     Let <m>F</m> be a field and <m>n</m> a positive integer. 
@@ -20020,7 +20355,7 @@
                 </solution>
               </exercise>
     
-              <exercise xml:id="may-2022-7" number="7">
+              <exercise xml:id="may-2022-7" number="7"><title>Problem 7</title>
                 <statement>
                   <p>
                     Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>.
@@ -20137,7 +20472,7 @@
               
               </exercise>
     
-              <exercise xml:id="may-2022-8" number="8">
+              <exercise xml:id="may-2022-8" number="8"><title>Problem 8</title>
                 <statement>
                   <p>
                     Let <m>L</m> be the splitting field of <m>x^4-2022</m> over <m>\Q</m>. 
@@ -20203,7 +20538,7 @@
               
               </exercise>
     
-              <exercise xml:id="may-2022-9" number="9">
+              <exercise xml:id="may-2022-9" number="9"><title>Problem 9</title>
                 <statement>
                   <p>
                     Assume <m>F\subseteq L</m> is an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>. 

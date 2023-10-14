@@ -12,38 +12,8 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(L\)</span> be a field and let <span class="process-math">\(\sigma \in \operatorname{Aut}(L)\text{.}\)</span> Then the <a href="" class="xref" data-knowl="./knowl/thm-ump-polynomial-rings.html" title="Theorem 7.44: UMP for Polynomial Rings">Theorem 7.44</a> gives that there is an induced ring homomorphism <span class="process-math">\((-)^{\sigma}: L[x] \rightarrow L[x]\)</span> such that for each <span class="process-math">\(q=a_{n} x^{n}+\cdots+a_{0} \in K[x]\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-polynomial-rings.html">
-\begin{equation*}
-q^{\sigma}(x)=\sigma\left(a_{n}\right) x^{n}+\cdots+\sigma\left(a_{0}\right).
-\end{equation*}
-</div>
-<div class="para">If <span class="process-math">\(\sigma \in \operatorname{Aut}(L / K)\)</span> and <span class="process-math">\(q \in K[x]\text{,}\)</span> then <span class="process-math">\(q^{\sigma}=q\text{.}\)</span>
-</div>
-<ol class="decimal">
-<li><div class="para logical">
-<div class="para">By assumption, <span class="process-math">\(\sigma\)</span> is a homomorphism and it restricts to the identity on <span class="process-math">\(F\text{.}\)</span> Thus for any polynomial <span class="process-math">\(q=a_{n} x^{n}+\cdots+a_{0} \in F[x]\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sigma(q(c))=\sigma\left(a_{n} c^{n}+\cdots+a_{0}\right)=\sigma\left(a_{n}\right) \sigma(c)^{n}+\cdots+\sigma\left(a_{0}\right)=a_{n} \sigma(c)^{n}+\cdots+a_{0}=q(\sigma(c)).
-\end{equation*}
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">If <span class="process-math">\(\alpha\)</span> is a root of <span class="process-math">\(f\text{,}\)</span> then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-0=\sigma(0) &amp; =\sigma(q(\alpha)) \\
-&amp; =q(\sigma(\alpha)) \quad \text { by a })
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">showing that <span class="process-math">\(\sigma(\alpha)\)</span> is also a root of <span class="process-math">\(q\text{.}\)</span>
-</div>
-</div></li>
-</ol>
-</div></article><span class="incontext"><a href="sec-galext.html#proof-139" class="internal">in-context</a></span>
+<div class="para">For (1), suppose <span class="process-math">\(\a\)</span> is a root of <span class="process-math">\(f(x)\)</span> of multiplicity at least two. Then <span class="process-math">\(f(x) = (x-\a)^2g(x)\)</span> in <span class="process-math">\(\ov{F}[x]\)</span> and hence <span class="process-math">\(f'(x) = 2(x - \a) g(x) + (x-\a)^2 g(x)\text{,}\)</span> by the Product Rule. It follows that <span class="process-math">\(f'(\a) = 0\text{.}\)</span> Conversely, suppose <span class="process-math">\(f(\a) = f'(\a) =0\text{.}\)</span> Since <span class="process-math">\(f(\a) = 0\text{,}\)</span> we have <span class="process-math">\(f(x) = (x-\a)h(x)\)</span> and hence <span class="process-math">\(f'(x) = h(x) + (x-\a)h'(x)\text{.}\)</span> Since <span class="process-math">\(f'(\a) = 0\)</span> it follows <span class="process-math">\(h(\a) = 0\)</span> and thus <span class="process-math">\(\a\)</span> has multiplicity at least two.</div> <div class="para">For the second assertion, by (1), we have that <span class="process-math">\(f\)</span> is separable if and only if <span class="process-math">\(f\)</span> and <span class="process-math">\(f'\)</span> has no common roots in <span class="process-math">\(\ov{F}\text{.}\)</span> The result thus follows from the Lemma <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
+</div> <div class="para">For the final assertion, assume <span class="process-math">\(f(x)\)</span> is irreducible. Since the degree of <span class="process-math">\(f'(x)\)</span> is strictly less than the degree of <span class="process-math">\(f(x)\text{,}\)</span> we have that <span class="process-math">\(\gcd(f(x),f'(x)) \ne 1\)</span> if and only if <span class="process-math">\(f'(x) = 0\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-separable.html#proof-139" class="internal">in-context</a></span>
 </body>
 </html>

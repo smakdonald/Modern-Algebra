@@ -13,10 +13,20 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.31.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.33.1</span><span class="period">.</span>
 </h4>
-<div class="para">Let <span class="process-math">\(R = S ∘ T\)</span> be the composition of <span class="process-math">\(S\)</span> and <span class="process-math">\(T\text{,}\)</span> where <span class="process-math">\(∘\)</span> denotes composition. Let's take an arbitrary point <span class="process-math">\(P\)</span> on the object. When we apply the symmetry <span class="process-math">\(S\)</span> to <span class="process-math">\(P\text{,}\)</span> it is mapped to a new point, let's call it <span class="process-math">\(P1\text{.}\)</span> Since <span class="process-math">\(S\)</span> is a symmetry, <span class="process-math">\(P1\)</span> is still on the object. Next, when we apply the symmetry <span class="process-math">\(T\)</span> to <span class="process-math">\(P1\text{,}\)</span> it is mapped to a new point, let's call it <span class="process-math">\(P2\text{.}\)</span> Again, since <span class="process-math">\(T\)</span> is a symmetry, <span class="process-math">\(P2\)</span> is still on the object. Therefore, the composition <span class="process-math">\(R = S ∘ T\)</span> maps the point <span class="process-math">\(P\)</span> on the object to the point <span class="process-math">\(P2\text{,}\)</span> which is also on the object. Hence, the composition of symmetries is again a symmetry.</div>
+<div class="para logical">
+<div class="para">To count the number of permutations in <span class="process-math">\(S_n\text{,}\)</span> we can consider the process of constructing a permutation step by step.</div>
+<ul class="disc">
+<li><div class="para">For the first element, we have <span class="process-math">\(n\)</span> choices. We can choose any of the <span class="process-math">\(n\)</span> elements as the image of the first element.</div></li>
+<li><div class="para">For the second element, we have <span class="process-math">\((n-1)\)</span> choices. After choosing the image of the first element, we have <span class="process-math">\((n-1)\)</span> remaining elements to choose from for the image of the second element.</div></li>
+<li><div class="para">Continuing this process, for the third element, we have <span class="process-math">\((n-2)\)</span> choices, for the fourth element we have <span class="process-math">\((n-3)\)</span> choices, and so on.</div></li>
+<li><div class="para">Finally, for the last element, we have only one choice remaining.</div></li>
+</ul>
+<div class="para">The total number of permutations is obtained by multiplying the number of choices at each step. Hence, the total number of permutations in <span class="process-math">\(S_n\)</span> is given by <span class="process-math">\(n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1\text{,}\)</span> which is equal to <span class="process-math">\(n!\text{.}\)</span> Therefore, the order of the symmetric group <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n!\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-common-groups.html#solution-4" class="internal">in-context</a></span>
+</div>
+</div>
+<span class="incontext"><a href="sec-symmetric.html#solution-4" class="internal">in-context</a></span>
 </body>
 </html>

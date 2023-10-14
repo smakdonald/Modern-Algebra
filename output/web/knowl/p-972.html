@@ -13,13 +13,29 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G = S_n\)</span> and <span class="process-math">\(K = A_n\)</span> again, but this time take <span class="process-math">\(H' = \langle (1 \, 3) \rangle = (1 \,2 \, 3) \langle (1 \, 2) \rangle (1 \,2 \, 3)^{-1}\)</span> (assuming <span class="process-math">\(n \geq 3\)</span>). Then we get</div>
+<div class="para">Define a funtion</div>
 <div class="displaymath process-math">
 \begin{equation*}
-S_n \cong A_n \rtimes_{\rho'} C_2
+i: H \to H \rtimes_\rho K
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(C_2 = \langle x \rangle\)</span> is cyclic of order <span class="process-math">\(2\)</span> and the action <span class="process-math">\(\rho': C_2 \to \operatorname{Aut}(A_n)\)</span> sends <span class="process-math">\(x\)</span> to conjugation by <span class="process-math">\((1 \,3)\text{.}\)</span>
+<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
+\end{equation*}
+</div>
+<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
+\end{equation*}
+</div>
+<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="sec-spds.html#p-972" class="internal">in-context</a></span>
