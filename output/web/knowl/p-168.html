@@ -13,15 +13,13 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">To count the number of permutations in <span class="process-math">\(S_n\text{,}\)</span> we can consider the process of constructing a permutation step by step.</div>
-<ul class="disc">
-<li><div class="para">For the first element, we have <span class="process-math">\(n\)</span> choices. We can choose any of the <span class="process-math">\(n\)</span> elements as the image of the first element.</div></li>
-<li><div class="para">For the second element, we have <span class="process-math">\((n-1)\)</span> choices. After choosing the image of the first element, we have <span class="process-math">\((n-1)\)</span> remaining elements to choose from for the image of the second element.</div></li>
-<li><div class="para">Continuing this process, for the third element, we have <span class="process-math">\((n-2)\)</span> choices, for the fourth element we have <span class="process-math">\((n-3)\)</span> choices, and so on.</div></li>
-<li><div class="para">Finally, for the last element, we have only one choice remaining.</div></li>
-</ul>
-<div class="para">The total number of permutations is obtained by multiplying the number of choices at each step. Hence, the total number of permutations in <span class="process-math">\(S_n\)</span> is given by <span class="process-math">\(n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1\text{,}\)</span> which is equal to <span class="process-math">\(n!\text{.}\)</span> Therefore, the order of the symmetric group <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n!\text{.}\)</span>
+<div class="para">If <span class="process-math">\(i_1, \dots, i_m\)</span> are distinct integers between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\sigma=(i_1 \, i_2 \, \dots i_m)\)</span> denotes the element of <span class="process-math">\(S_n\)</span> that satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k
+\end{equation*}
 </div>
+<div class="para">for <span class="process-math">\(k\in[n] \setminus \{i_1, \dots, i_m\}\text{.}\)</span> Such a permutation is called a <em class="emphasis">cycle</em> or an <span class="process-math">\(m\)</span><em class="emphasis">-cycle</em> if we want to emphasize its length. A <span class="process-math">\(2\)</span>-cycle is often called a <em class="emphasis">transposition</em>. </div>
 </div>
 <span class="incontext"><a href="sec-symmetric.html#p-168" class="internal">in-context</a></span>
 </body>

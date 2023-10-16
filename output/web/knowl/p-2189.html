@@ -12,8 +12,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">
-<span class="process-math">\(E_1 E_2=L^{H_1\cap H_2}\)</span> and <span class="process-math">\(\Gal(L/E_1E_2)=H_1\cap H_2\text{.}\)</span>
+<div class="para logical">
+<div class="para">By definition of Galois extension, <span class="process-math">\([L: F]=|G|\text{.}\)</span> By Artin’s Theorem, for any subgroup <span class="process-math">\(H \leq G\)</span> the extension <span class="process-math">\(L^{H} \subseteq L\)</span> is also Galois, and thus by definition <span class="process-math">\(\left[L: L^{H}\right]=|H|\text{.}\)</span> Using the Degree Formula, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[L^{H}: F\right]=\frac{[L: F]}{\left[L: L^{H}\right]}=\frac{|G|}{|H|}=[G: H] .
+\end{equation*}
+</div>
+<div class="para">So if <span class="process-math">\(H=\Psi(E)=\operatorname{Gal}(E / F)\text{,}\)</span> then <span class="process-math">\(L^{H}=E\)</span> and the formula above can be rewritten as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[\operatorname{Gal}(L / F): \operatorname{Gal}(L / E)]=[E: F] .
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-ftgt.html#p-2189" class="internal">in-context</a></span>
 </body>

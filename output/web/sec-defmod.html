@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -895,62 +913,62 @@ window.MathJax = {
 <section class="subsection" id="subsec-modules"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Modules</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-54">
-<div class="para" id="p-1445">“Complexity that works is built up out of modules that work perfectly, layered one over the other.”</div> <cite class="attribution">―Kevin Kelly</cite>
+<blockquote class="blockquote" id="blockquote-53">
+<div class="para" id="p-1440">“Complexity that works is built up out of modules that work perfectly, layered one over the other.”</div> <cite class="attribution">―Kevin Kelly</cite>
 </blockquote>
 <article class="definition definition-like" id="def-module"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Module.</span>
-</h4> <div class="para logical" id="p-1446">
+</h4> <div class="para logical" id="p-1441">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring (with <span class="process-math">\(1\)</span>). A left <span class="process-math">\(R\)</span>-module is an abelian group <span class="process-math">\((M,+)\)</span> together with a pairing <span class="process-math">\(R \times M \to M\text{,}\)</span> written <span class="process-math">\((r,m) \mapsto rm\text{,}\)</span> such that for all <span class="process-math">\(r,s \in R\)</span> and <span class="process-math">\(m,n \in M\)</span>
 </div>
 <ol class="decimal">
-<li id="li-494"><div class="para" id="p-1447"><span class="process-math">\((r + s)m = rm + sm\text{,}\)</span></div></li>
-<li id="li-495"><div class="para" id="p-1448"><span class="process-math">\((rs)m = r(sm)\text{,}\)</span></div></li>
-<li id="li-496"><div class="para" id="p-1449">
+<li id="li-495"><div class="para" id="p-1442"><span class="process-math">\((r + s)m = rm + sm\text{,}\)</span></div></li>
+<li id="li-496"><div class="para" id="p-1443"><span class="process-math">\((rs)m = r(sm)\text{,}\)</span></div></li>
+<li id="li-497"><div class="para" id="p-1444">
 <span class="process-math">\(r(m + n) = rm + rn\text{,}\)</span> and</div></li>
-<li id="li-497"><div class="para" id="p-1450"><span class="process-math">\(1m = m\text{.}\)</span></div></li>
+<li id="li-498"><div class="para" id="p-1445"><span class="process-math">\(1m = m\text{.}\)</span></div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="exe-lr-modules"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-lr-modules"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Modules in Commutative Rings.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-lr-modules"><article class="exercise exercise-like"><div class="para" id="p-1451">If <span class="process-math">\(R\)</span> is a commutative ring, then any left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> may be regarded as a right <span class="process-math">\(R\)</span>-module by setting <span class="process-math">\(m r = r m\text{.}\)</span> Likewise, any right <span class="process-math">\(R\)</span>-module may be regarded as a left <span class="process-math">\(R\)</span>-module.</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-lr-modules"><article class="exercise exercise-like"><div class="para" id="p-1446">If <span class="process-math">\(R\)</span> is a commutative ring, then any left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> may be regarded as a right <span class="process-math">\(R\)</span>-module by setting <span class="process-math">\(m r = r m\text{.}\)</span> Likewise, any right <span class="process-math">\(R\)</span>-module may be regarded as a left <span class="process-math">\(R\)</span>-module.</div></article></div>
 <article class="remark remark-like" id="remark-44"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-1452">For non-commutative rings, left and right modules are not the same: trying to make a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> into a right one by setting <span class="process-math">\(mr = rm\)</span> fails to satisfy the second axiom, since <span class="process-math">\(m(rs) = (rs)m\)</span> and <span class="process-math">\((mr)s = (rm)s = s(rm) = (sr)m\text{,}\)</span> and, unless <span class="process-math">\(rs =sr\text{,}\)</span> we cannot conclude that <span class="process-math">\(m(rs) = (mr)s\text{.}\)</span>
+<div class="para" id="p-1447">For non-commutative rings, left and right modules are not the same: trying to make a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> into a right one by setting <span class="process-math">\(mr = rm\)</span> fails to satisfy the second axiom, since <span class="process-math">\(m(rs) = (rs)m\)</span> and <span class="process-math">\((mr)s = (rm)s = s(rm) = (sr)m\text{,}\)</span> and, unless <span class="process-math">\(rs =sr\text{,}\)</span> we cannot conclude that <span class="process-math">\(m(rs) = (mr)s\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exe-opposite-ring-module"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-opposite-ring-module"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Module and Opposite Ring.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-opposite-ring-module"><article class="exercise exercise-like"><div class="para" id="p-1453">For a ring <span class="process-math">\(R\text{,}\)</span> recall the opposite ring, <span class="process-math">\(R^{op}\text{,}\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/list-opposite-ring.html" title="Item 8.6.1: Opposite Day">Item 8.6.1</a>. Given a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> prove that <span class="process-math">\(M\)</span> is a right <span class="process-math">\(R^{op}\)</span>-module via the same rule for addition but with the rule for scaling on the right defined to be <span class="process-math">\(m r := rm\)</span> for any <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(m \in M\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-opposite-ring-module"><article class="exercise exercise-like"><div class="para" id="p-1448">For a ring <span class="process-math">\(R\text{,}\)</span> recall the opposite ring, <span class="process-math">\(R^{op}\text{,}\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/list-opposite-ring.html" title="Item 8.6.1: Opposite Day">Item 8.6.1</a>. Given a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> prove that <span class="process-math">\(M\)</span> is a right <span class="process-math">\(R^{op}\)</span>-module via the same rule for addition but with the rule for scaling on the right defined to be <span class="process-math">\(m r := rm\)</span> for any <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(m \in M\text{.}\)</span>
 </div></article></div>
 <article class="lemma theorem-like" id="lem-module-arithmetic"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic in Modules.</span>
 </h4>
-<div class="para logical" id="p-1454">
+<div class="para logical" id="p-1449">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(M\)</span> be a (left) <span class="process-math">\(R\)</span>-module. Then for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(m \in M\)</span> we have</div>
 <ol class="decimal">
-<li id="li-498"><div class="para" id="p-1455"><span class="process-math">\(0_Rm = 0_M\text{,}\)</span></div></li>
-<li id="li-499"><div class="para" id="p-1456"><span class="process-math">\(r 0_M = 0_M\text{,}\)</span></div></li>
-<li id="li-500"><div class="para" id="p-1457">
+<li id="li-499"><div class="para" id="p-1450"><span class="process-math">\(0_Rm = 0_M\text{,}\)</span></div></li>
+<li id="li-500"><div class="para" id="p-1451"><span class="process-math">\(r 0_M = 0_M\text{,}\)</span></div></li>
+<li id="li-501"><div class="para" id="p-1452">
 <span class="process-math">\((-1_R)m = -m\text{,}\)</span> and</div></li>
-<li id="li-501"><div class="para" id="p-1458"><span class="process-math">\((-r)m = -(rm)\text{.}\)</span></div></li>
+<li id="li-502"><div class="para" id="p-1453"><span class="process-math">\((-r)m = -(rm)\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-83"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-83"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-83"><article class="hiddenproof"><div class="para logical" id="p-1459"><ol class="decimal">
-<li id="li-502"><div class="para" id="p-derived-li-502">For the first, <span class="process-math">\(0m = (0+0)m = 0m + 0m\)</span> and hence <span class="process-math">\(0m = 0\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-83"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-83"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-83"><article class="hiddenproof"><div class="para logical" id="p-1454"><ol class="decimal">
+<li id="li-503"><div class="para" id="p-derived-li-503">For the first, <span class="process-math">\(0m = (0+0)m = 0m + 0m\)</span> and hence <span class="process-math">\(0m = 0\text{.}\)</span>
 </div></li>
-<li id="li-503"><div class="para" id="p-derived-li-503">For the second, <span class="process-math">\(0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm\)</span> and hence <span class="process-math">\(0_Rm = 0_M\)</span> since <span class="process-math">\(M\)</span> is an abelian group.</div></li>
-<li id="li-504"><div class="para" id="p-derived-li-504">For the third, <span class="process-math">\(m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M\)</span> (using the second) and hence <span class="process-math">\((-1)m\)</span> is the additive inverse of <span class="process-math">\(m\text{.}\)</span>
+<li id="li-504"><div class="para" id="p-derived-li-504">For the second, <span class="process-math">\(0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm\)</span> and hence <span class="process-math">\(0_Rm = 0_M\)</span> since <span class="process-math">\(M\)</span> is an abelian group.</div></li>
+<li id="li-505"><div class="para" id="p-derived-li-505">For the third, <span class="process-math">\(m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M\)</span> (using the second) and hence <span class="process-math">\((-1)m\)</span> is the additive inverse of <span class="process-math">\(m\text{.}\)</span>
 </div></li>
-<li id="li-505"><div class="para" id="p-derived-li-505">Finally, <span class="process-math">\((-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)\)</span> (using the fact that <span class="process-math">\((-1)r = -r\)</span> holds in any ring and the previous result).</div></li>
+<li id="li-506"><div class="para" id="p-derived-li-506">Finally, <span class="process-math">\((-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)\)</span> (using the fact that <span class="process-math">\((-1)r = -r\)</span> holds in any ring and the previous result).</div></li>
 </ol></div></article></div>
 <article class="example example-like" id="ex-modules"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span><span class="space"> </span><span class="title">Examples of Modules.</span>
-</h4> <div class="para logical" id="p-1460"><ol class="decimal">
-<li id="li-506"><div class="para" id="p-derived-li-506">For any ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">trivial module</em> is <span class="process-math">\(0=\{0\}\)</span> with <span class="process-math">\(r0=0\)</span> for any <span class="process-math">\(r\in R\text{.}\)</span> </div></li>
-<li id="li-507"><div class="para" id="p-derived-li-507">Every ring <span class="process-math">\(R\)</span> is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.</div></li>
-<li id="li-508"><div class="para" id="p-derived-li-508">More generally, if <span class="process-math">\(R\)</span> is any ring and <span class="process-math">\(I\)</span> is a left ideal, then <span class="process-math">\(I\)</span> is a left-<span class="process-math">\(R\)</span>-module.</div></li>
-<li id="li-509"><div class="para" id="p-derived-li-509">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = \Mat_{n \times n}(F)\)</span> (the ring of <span class="process-math">\(n \times n\)</span> matrices with entries in <span class="process-math">\(F\)</span>). Let <span class="process-math">\(M\)</span> be the collection of column vectors with entries in <span class="process-math">\(F\)</span> having <span class="process-math">\(n\)</span> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <span class="process-math">\(M\)</span> into a left <span class="process-math">\(R\)</span>-module. Likewise if <span class="process-math">\(N\)</span> is the collection of all row vector with <span class="process-math">\(n\)</span> entries in <span class="process-math">\(F\text{,}\)</span> the <span class="process-math">\(N\)</span> is a right <span class="process-math">\(R\)</span>-module via addition and matrix multiplication.</div></li>
+</h4> <div class="para logical" id="p-1455"><ol class="decimal">
+<li id="li-507"><div class="para" id="p-derived-li-507">For any ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">trivial module</em> is <span class="process-math">\(0=\{0\}\)</span> with <span class="process-math">\(r0=0\)</span> for any <span class="process-math">\(r\in R\text{.}\)</span> </div></li>
+<li id="li-508"><div class="para" id="p-derived-li-508">Every ring <span class="process-math">\(R\)</span> is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.</div></li>
+<li id="li-509"><div class="para" id="p-derived-li-509">More generally, if <span class="process-math">\(R\)</span> is any ring and <span class="process-math">\(I\)</span> is a left ideal, then <span class="process-math">\(I\)</span> is a left-<span class="process-math">\(R\)</span>-module.</div></li>
+<li id="li-510"><div class="para" id="p-derived-li-510">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = \Mat_{n \times n}(F)\)</span> (the ring of <span class="process-math">\(n \times n\)</span> matrices with entries in <span class="process-math">\(F\)</span>). Let <span class="process-math">\(M\)</span> be the collection of column vectors with entries in <span class="process-math">\(F\)</span> having <span class="process-math">\(n\)</span> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <span class="process-math">\(M\)</span> into a left <span class="process-math">\(R\)</span>-module. Likewise if <span class="process-math">\(N\)</span> is the collection of all row vector with <span class="process-math">\(n\)</span> entries in <span class="process-math">\(F\text{,}\)</span> the <span class="process-math">\(N\)</span> is a right <span class="process-math">\(R\)</span>-module via addition and matrix multiplication.</div></li>
 </ol></div></article><article class="example example-like" id="ex-standard-free-module"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Standard Free Module.</span>
-</h4> <div class="para logical" id="p-1461">
+</h4> <div class="para logical" id="p-1456">
 <div class="para">For a non-negative integer <span class="process-math">\(n\text{,}\)</span> the “standard" free (left) <span class="process-math">\(R\)</span>-module of rank <span class="process-math">\(n\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -964,13 +982,13 @@ R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq
 r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-1462">Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.</div>
+</div></article><div class="para" id="p-1457">Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.</div>
 <article class="definition definition-like" id="def-vector-space"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Vector Space.</span>
-</h4> <div class="para" id="p-1463">Let <span class="process-math">\(F\)</span> be a field. An <span class="process-math">\(F\)</span>-vector space is a (left) <span class="process-math">\(F\)</span>-module. </div></article><article class="theorem theorem-like" id="thm-abelian-groups-are-z-modules"><h4 class="heading">
+</h4> <div class="para" id="p-1458">Let <span class="process-math">\(F\)</span> be a field. An <span class="process-math">\(F\)</span>-vector space is a (left) <span class="process-math">\(F\)</span>-module. </div></article><article class="theorem theorem-like" id="thm-abelian-groups-are-z-modules"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules.</span>
 </h4>
-<div class="para logical" id="p-1464">
+<div class="para logical" id="p-1459">
 <div class="para">Let <span class="process-math">\(M\)</span> be an abelian group under <span class="process-math">\(+\text{.}\)</span> Then <span class="process-math">\(M\)</span> becomes a <span class="process-math">\(\Z\)</span>-module upon defining the rule for scaling to be <span class="process-math">\(nm :=\)</span>
 </div>
 <div class="displaymath process-math">
@@ -992,28 +1010,28 @@ r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\
 </div>
 </div></article><article class="exercise exercise-like" id="exe-zn-modules"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-zn-modules"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z/n\)</span> Modules.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-zn-modules"><article class="exercise exercise-like"><div class="para logical" id="p-1465">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-zn-modules"><article class="exercise exercise-like"><div class="para logical" id="p-1460">
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer and recall that <span class="process-math">\(\Z/n\)</span> denotes the ring of integers modulo <span class="process-math">\(n\)</span> (whose elements I will write as <span class="process-math">\(\ov{0}, \ov1, \cdots, \ov{n-1}\)</span>).</div>
 <ol class="decimal">
-<li id="li-510"><div class="para" id="p-1466">Show that if <span class="process-math">\(M\)</span> is any abelian group (under the operation <span class="process-math">\(+\)</span>) such that <span class="process-math">\(nx = 0\)</span> for all <span class="process-math">\(x \in M\)</span> (where <span class="process-math">\(nx := \overbrace{x + x + \cdots + x}^{\text{n times}}\)</span>), then the pairing <span class="process-math">\(\Z/n \times M \to M\)</span> given <span class="process-math">\((\ov{j}, m) \mapsto jm\)</span> makes <span class="process-math">\(M\)</span> into a <span class="process-math">\(\Z/n\)</span>-module. (Be sure to check this pairing is well-defined.)</div></li>
-<li id="li-511"><div class="para" id="p-1467">Conversely, show that if <span class="process-math">\(M\)</span> is a <span class="process-math">\(\Z/n\)</span>-module, then the underlying abelian group <span class="process-math">\((M, +)\)</span> has the property that <span class="process-math">\(nx = 0\)</span> for all <span class="process-math">\(x \in M\text{.}\)</span>
+<li id="li-511"><div class="para" id="p-1461">Show that if <span class="process-math">\(M\)</span> is any abelian group (under the operation <span class="process-math">\(+\)</span>) such that <span class="process-math">\(nx = 0\)</span> for all <span class="process-math">\(x \in M\)</span> (where <span class="process-math">\(nx := \overbrace{x + x + \cdots + x}^{\text{n times}}\)</span>), then the pairing <span class="process-math">\(\Z/n \times M \to M\)</span> given <span class="process-math">\((\ov{j}, m) \mapsto jm\)</span> makes <span class="process-math">\(M\)</span> into a <span class="process-math">\(\Z/n\)</span>-module. (Be sure to check this pairing is well-defined.)</div></li>
+<li id="li-512"><div class="para" id="p-1462">Conversely, show that if <span class="process-math">\(M\)</span> is a <span class="process-math">\(\Z/n\)</span>-module, then the underlying abelian group <span class="process-math">\((M, +)\)</span> has the property that <span class="process-math">\(nx = 0\)</span> for all <span class="process-math">\(x \in M\text{.}\)</span>
 </div></li>
 </ol>
 </div></article></div></section><section class="subsection" id="subsec-submod"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Submodules and Restriction of Scalars</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-55">
-<div class="para" id="p-1468">“Restrictions will set you free.”</div> <cite class="attribution">―W.A. Mathieu</cite>
+<blockquote class="blockquote" id="blockquote-54">
+<div class="para" id="p-1463">“Restrictions will set you free.”</div> <cite class="attribution">―W.A. Mathieu</cite>
 </blockquote>
-<div class="para" id="p-1469">For an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> the ring <span class="process-math">\(R\)</span> is often referred to as the “ring of scalars” for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.</div>
+<div class="para" id="p-1464">For an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> the ring <span class="process-math">\(R\)</span> is often referred to as the “ring of scalars” for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.</div>
 <article class="theorem theorem-like" id="thm-restriction-of-scalars"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Restriction of Scalars.</span>
 </h4>
-<div class="para logical" id="p-1470">
+<div class="para logical" id="p-1465">
 <div class="para">Let <span class="process-math">\(\phi: R \to S\)</span> be a ring homomorphism. Any left <span class="process-math">\(S\)</span>-module <span class="process-math">\(M\)</span> may be regarded via <em class="emphasis">restriction of scalars</em> as a left <span class="process-math">\(R\)</span>-module with the following structure:</div>
 <ul class="disc">
-<li id="li-512"><div class="para" id="p-1471">the rule for addition <span class="process-math">\(+\)</span> on <span class="process-math">\(M\)</span> is the same as in the original structure and</div></li>
-<li id="li-513"><div class="para logical" id="p-1472">
+<li id="li-513"><div class="para" id="p-1466">the rule for addition <span class="process-math">\(+\)</span> on <span class="process-math">\(M\)</span> is the same as in the original structure and</div></li>
+<li id="li-514"><div class="para logical" id="p-1467">
 <div class="para">the rule for scaling by elements of <span class="process-math">\(R\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1022,7 +1040,7 @@ r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
 </div>
 </div></li>
 </ul>
-</div></article><article class="hiddenproof" id="proof-84"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-84"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-84"><article class="hiddenproof"><div class="para logical" id="p-1473">
+</div></article><article class="hiddenproof" id="proof-84"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-84"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-84"><article class="hiddenproof"><div class="para logical" id="p-1468">
 <div class="para">Let <span class="process-math">\(x,y \in R\)</span> and <span class="process-math">\(m,n \in M\text{.}\)</span> One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1048,35 +1066,35 @@ x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
 \end{equation*}
 </div>
 </div></article></div>
-<div class="para" id="p-1474">As a special case of <a href="" class="xref" data-knowl="./knowl/thm-restriction-of-scalars.html" title="Theorem 12.11: Restriction of Scalars">Theorem 12.11</a>, if <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(S\text{,}\)</span> then every left <span class="process-math">\(S\)</span>-module becomes a left <span class="process-math">\(R\)</span>-module via restriction of scalars along the inclusion map of <span class="process-math">\(R\)</span> into <span class="process-math">\(S\text{.}\)</span> This explains the use of the phrase “restriction of scalars”.</div>
+<div class="para" id="p-1469">As a special case of <a href="" class="xref" data-knowl="./knowl/thm-restriction-of-scalars.html" title="Theorem 12.11: Restriction of Scalars">Theorem 12.11</a>, if <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(S\text{,}\)</span> then every left <span class="process-math">\(S\)</span>-module becomes a left <span class="process-math">\(R\)</span>-module via restriction of scalars along the inclusion map of <span class="process-math">\(R\)</span> into <span class="process-math">\(S\text{.}\)</span> This explains the use of the phrase “restriction of scalars”.</div>
 <article class="example example-like" id="ex-complex-vector-spaces-are-real-vector-spaces"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.12</span><span class="period">.</span><span class="space"> </span><span class="title">Complex Vector Spaces are Real.</span>
 </h4>
-<div class="para" id="p-1475">For example, since <span class="process-math">\(\R\)</span> is a subring of <span class="process-math">\(\C\text{,}\)</span> every complex vector space may be regarded as a real vector space, by restriction of scalars from <span class="process-math">\(\C\)</span> to <span class="process-math">\(\R\text{.}\)</span> Likewise, any real vector space may be regarded as a rational vector space, etc.</div></article><article class="example example-like" id="ex-homomorphisms-and-restriction-of-scalars"><h4 class="heading">
+<div class="para" id="p-1470">For example, since <span class="process-math">\(\R\)</span> is a subring of <span class="process-math">\(\C\text{,}\)</span> every complex vector space may be regarded as a real vector space, by restriction of scalars from <span class="process-math">\(\C\)</span> to <span class="process-math">\(\R\text{.}\)</span> Likewise, any real vector space may be regarded as a rational vector space, etc.</div></article><article class="example example-like" id="ex-homomorphisms-and-restriction-of-scalars"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.13</span><span class="period">.</span><span class="space"> </span><span class="title">Ring Maps and Restriction of Scalars.</span>
 </h4>
-<div class="para" id="p-1476">If <span class="process-math">\(S\)</span> and <span class="process-math">\(R\)</span> are rings and <span class="process-math">\(\phi: S \to R\)</span> is a ring homomorphism, then since <span class="process-math">\(S\)</span> is a left <span class="process-math">\(S\)</span>-module, it is also a left <span class="process-math">\(R\)</span>-module via restriction of scalars. Note that the rule for scaling given by <span class="process-math">\(r s := \phi(r) s\text{.}\)</span>
-</div> <div class="para" id="p-1477">As a special case of this, if <span class="process-math">\(S\)</span> is a subring of a ring <span class="process-math">\(R\)</span> then <span class="process-math">\(R\)</span> is an <span class="process-math">\(S\)</span>-module (restriction of scalars along the inclusion map).</div> <div class="para" id="p-1478">For instance, <span class="process-math">\(R[x_1,\ldots,x_n]\)</span> is a left <span class="process-math">\(R\)</span>-module for any <span class="process-math">\(n\geq 0\)</span> via the evident injective ring homomorphism <span class="process-math">\(R \into R[x_1, \ldots, x_n]\text{.}\)</span>
-</div> <div class="para" id="p-1479">Also, <span class="process-math">\(\Mat_{n \times n}(R)\)</span> is a left <span class="process-math">\(R\)</span>-module for <span class="process-math">\(n\geq 1\)</span> given by the ring map <span class="process-math">\(R \to \Mat_{n \times n}(R)\)</span> sending <span class="process-math">\(r\)</span> to <span class="process-math">\(r \cdot I_n\text{.}\)</span>
+<div class="para" id="p-1471">If <span class="process-math">\(S\)</span> and <span class="process-math">\(R\)</span> are rings and <span class="process-math">\(\phi: S \to R\)</span> is a ring homomorphism, then since <span class="process-math">\(S\)</span> is a left <span class="process-math">\(S\)</span>-module, it is also a left <span class="process-math">\(R\)</span>-module via restriction of scalars. Note that the rule for scaling given by <span class="process-math">\(r s := \phi(r) s\text{.}\)</span>
+</div> <div class="para" id="p-1472">As a special case of this, if <span class="process-math">\(S\)</span> is a subring of a ring <span class="process-math">\(R\)</span> then <span class="process-math">\(R\)</span> is an <span class="process-math">\(S\)</span>-module (restriction of scalars along the inclusion map).</div> <div class="para" id="p-1473">For instance, <span class="process-math">\(R[x_1,\ldots,x_n]\)</span> is a left <span class="process-math">\(R\)</span>-module for any <span class="process-math">\(n\geq 0\)</span> via the evident injective ring homomorphism <span class="process-math">\(R \into R[x_1, \ldots, x_n]\text{.}\)</span>
+</div> <div class="para" id="p-1474">Also, <span class="process-math">\(\Mat_{n \times n}(R)\)</span> is a left <span class="process-math">\(R\)</span>-module for <span class="process-math">\(n\geq 1\)</span> given by the ring map <span class="process-math">\(R \to \Mat_{n \times n}(R)\)</span> sending <span class="process-math">\(r\)</span> to <span class="process-math">\(r \cdot I_n\text{.}\)</span>
 </div></article><article class="example example-like" id="exe-ri-module-is-an-r-module"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.14</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(R/I\)</span> is an <span class="process-math">\(R\)</span>-module.</span>
-</h4> <div class="para" id="p-1480">If <span class="process-math">\(I\)</span> is a (two-sided) ideal of a ring <span class="process-math">\(R\)</span> then applying restriction of scalars along the quotient homomorphism <span class="process-math">\(q:R\to R/I\)</span> gives that any left <span class="process-math">\(R/I\)</span>-module is also a left <span class="process-math">\(R\)</span>-module.</div> <div class="para" id="p-1481">In particular, applying this to the <span class="process-math">\(R/I\)</span>-module <span class="process-math">\(R/I\)</span> gives that <span class="process-math">\(R/I\)</span> is a left <span class="process-math">\(R\)</span>-module. The rule for scaling is <span class="process-math">\(r \cdot (r' + I) = rr' + I\text{.}\)</span>
+</h4> <div class="para" id="p-1475">If <span class="process-math">\(I\)</span> is a (two-sided) ideal of a ring <span class="process-math">\(R\)</span> then applying restriction of scalars along the quotient homomorphism <span class="process-math">\(q:R\to R/I\)</span> gives that any left <span class="process-math">\(R/I\)</span>-module is also a left <span class="process-math">\(R\)</span>-module.</div> <div class="para" id="p-1476">In particular, applying this to the <span class="process-math">\(R/I\)</span>-module <span class="process-math">\(R/I\)</span> gives that <span class="process-math">\(R/I\)</span> is a left <span class="process-math">\(R\)</span>-module. The rule for scaling is <span class="process-math">\(r \cdot (r' + I) = rr' + I\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-submodule"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.15</span><span class="period">.</span><span class="space"> </span><span class="title">Submodule.</span>
-</h4> <div class="para logical" id="p-1482">
+</h4> <div class="para logical" id="p-1477">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(M\)</span> be a left <span class="process-math">\(R\)</span>-module. An <em class="emphasis"><span class="process-math">\(R\)</span>-submodule</em> of <span class="process-math">\(M\)</span> is a subset <span class="process-math">\(N \subseteq M\)</span> such that</div>
 <ol class="decimal">
-<li id="li-514"><div class="para" id="p-1483">
+<li id="li-515"><div class="para" id="p-1478">
 <span class="process-math">\(N\)</span> is a subgroup of <span class="process-math">\(M\)</span> under <span class="process-math">\(+\)</span> (so, we have <span class="process-math">\(0 \in N\text{,}\)</span> if <span class="process-math">\(n \in N\)</span> then <span class="process-math">\(-n \in N\text{,}\)</span> and if <span class="process-math">\(n_1, n_2 \in N\)</span> then <span class="process-math">\(n_1 + n_2 \in N\)</span>), and</div></li>
-<li id="li-515"><div class="para" id="p-1484">
+<li id="li-516"><div class="para" id="p-1479">
 <span class="process-math">\(rn \in N\)</span> for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(n \in N\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><div class="para" id="p-1485">We could equivalently define “submodule” to be a subset of <span class="process-math">\(M\)</span> that is an <span class="process-math">\(R\)</span>-module using the same operations of addition and scaling as in <span class="process-math">\(M\text{.}\)</span>
+</div></article><div class="para" id="p-1480">We could equivalently define “submodule” to be a subset of <span class="process-math">\(M\)</span> that is an <span class="process-math">\(R\)</span>-module using the same operations of addition and scaling as in <span class="process-math">\(M\text{.}\)</span>
 </div>
-<article class="exercise exercise-like" id="exercise-89"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-89"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-88"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-88"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.16</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-89"><article class="exercise exercise-like"><div class="para logical" id="p-1486">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-88"><article class="exercise exercise-like"><div class="para logical" id="p-1481">
 <div class="para">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module and <span class="process-math">\(I\)</span> be an ideal in <span class="process-math">\(R\text{.}\)</span> Show that the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1089,9 +1107,9 @@ N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
 <article class="theorem theorem-like" id="thm-submodules-are-ideals"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.17</span><span class="period">.</span><span class="space"> </span><span class="title">Submodules are Ideals.</span>
 </h4>
-<div class="para" id="p-1487">A subset <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a (left) submodule of <span class="process-math">\(R\)</span> if and only if it is a (left) ideal.</div></article><article class="exercise exercise-like" id="exercise-90"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-90"><h4 class="heading">
+<div class="para" id="p-1482">A subset <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a (left) submodule of <span class="process-math">\(R\)</span> if and only if it is a (left) ideal.</div></article><article class="exercise exercise-like" id="exercise-89"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-89"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.18</span><span class="period">.</span><span class="space"> </span><span class="title">Simple Modules.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-90"><article class="exercise exercise-like"><div class="para" id="p-1488">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{.}\)</span> An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if it has no nontrivial submodules. Show that <span class="process-math">\(M \neq 0\)</span> is simple if and only if there exists a maximal ideal <span class="process-math">\(\fm\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cong R/\fm\text{.}\)</span> </div></article></div></section></section></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-89"><article class="exercise exercise-like"><div class="para" id="p-1483">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{.}\)</span> An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if it has no nontrivial submodules. Show that <span class="process-math">\(M \neq 0\)</span> is simple if and only if there exists a maximal ideal <span class="process-math">\(\fm\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cong R/\fm\text{.}\)</span> </div></article></div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-mod.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-modhom.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

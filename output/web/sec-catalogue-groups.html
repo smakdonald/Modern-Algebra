@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -892,15 +910,15 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-catalogue-groups"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.1</span> <span class="title">A Catalogue of Groups</span>
 </h2>
-<div class="para logical" id="p-2349"><ol class="decimal">
-<li id="li-704"><div class="para" id="p-2350">
+<div class="para logical" id="p-2362"><ol class="decimal">
+<li id="li-710"><div class="para" id="p-2363">
 <span class="process-math">\(\Z\text{,}\)</span> <span class="process-math">\(\Q\)</span> <span class="process-math">\(\R\)</span> <span class="process-math">\(\C\)</span>
 </div></li>
-<li id="li-705"><div class="para" id="p-2351">
+<li id="li-711"><div class="para" id="p-2364">
 <span class="process-math">\(\Z^\times\text{,}\)</span> <span class="process-math">\(\Q^\times\)</span> <span class="process-math">\(\R^\times\)</span> <span class="process-math">\(\C^\times\)</span>
 </div></li>
-<li id="li-706"><div class="para" id="p-2352"><span class="process-math">\(\displaystyle \Z/n\)</span></div></li>
-<li id="li-707"><div class="para" id="p-2353">
+<li id="li-712"><div class="para" id="p-2365"><span class="process-math">\(\displaystyle \Z/n\)</span></div></li>
+<li id="li-713"><div class="para" id="p-2366">
 <span class="process-math">\(S_n\text{,}\)</span> <span class="process-math">\(A_n\)</span>
 </div></li>
 </ol></div>

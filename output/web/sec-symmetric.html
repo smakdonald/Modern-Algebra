@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -893,38 +911,38 @@ window.MathJax = {
 <section class="section" id="sec-symmetric"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Permutations and Symmetric Groups</span>
 </h2>
-<section class="introduction" id="introduction-1"><div class="para" id="p-162">We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 1 </sup></a>
+<section class="introduction" id="introduction-1"><div class="para" id="p-157">We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 1 </sup></a>
 </div></section><section class="subsection" id="subsec-symmetric"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Symmetric Groups</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-5">
-<div class="para" id="p-163">“Symmetry is overrated. Overrated is symmetry.”</div> <cite class="attribution">―Larry Wall</cite>
+<blockquote class="blockquote" id="blockquote-4">
+<div class="para" id="p-158">“Symmetry is overrated. Overrated is symmetry.”</div> <cite class="attribution">―Larry Wall</cite>
 </blockquote>
-<div class="para" id="p-164">Let's introduce another very important example: symmetric groups.</div>
+<div class="para" id="p-159">Let's introduce another very important example: symmetric groups.</div>
 <article class="definition definition-like" id="def-permutation"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations.</span>
-</h4> <div class="para" id="p-165">A <em class="emphasis">permutation</em> of a set <span class="process-math">\(S\)</span> is a bijective function <span class="process-math">\(\sigma:S\to S\text{.}\)</span> The set of all permutations of a set <span class="process-math">\(S\)</span> is denoted <span class="process-math">\(\Perm(S)\text{.}\)</span> </div></article><article class="definition definition-like" id="def-symmetric-group"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetric Group <span class="process-math">\(S_n\)</span>.</span>
-</h4> <div class="para" id="p-166">For any <span class="process-math">\(n\in\N\text{,}\)</span> the <em class="emphasis">symmetric group</em> is the set <span class="process-math">\(S_n=\Perm(\{1,\dots,n\})\)</span> equipped with the composition of functions as its binary operation. </div></article><article class="exercise exercise-like" id="exe-sn-order"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-sn-order"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span><span class="space"> </span><span class="title">Order of <span class="process-math">\(S_n\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sn-order"><article class="exercise exercise-like"><div class="para" id="p-167">Prove <span class="process-math">\(|S_n|=n!\text{.}\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span><span class="space"> </span><span class="title">Permutations.</span>
+</h4> <div class="para" id="p-160">A <em class="emphasis">permutation</em> of a set <span class="process-math">\(S\)</span> is a bijective function <span class="process-math">\(\sigma:S\to S\text{.}\)</span> The set of all permutations of a set <span class="process-math">\(S\)</span> is denoted <span class="process-math">\(\Perm(S)\text{.}\)</span> </div></article><article class="definition definition-like" id="def-symmetric-group"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetric Group <span class="process-math">\(S_n\)</span>.</span>
+</h4> <div class="para" id="p-161">For any <span class="process-math">\(n\in\N\text{,}\)</span> the <em class="emphasis">symmetric group</em> is the set <span class="process-math">\(S_n=\Perm(\{1,\dots,n\})\)</span> equipped with the composition of functions as its binary operation. </div></article><article class="exercise exercise-like" id="exe-sn-order"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-sn-order"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span><span class="space"> </span><span class="title">Order of <span class="process-math">\(S_n\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sn-order"><article class="exercise exercise-like"><div class="para" id="p-162">Prove <span class="process-math">\(|S_n|=n!\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><div class="para logical" id="p-168">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><div class="para logical" id="p-163">
 <div class="para">To count the number of permutations in <span class="process-math">\(S_n\text{,}\)</span> we can consider the process of constructing a permutation step by step.</div>
 <ul class="disc">
-<li id="li-79"><div class="para" id="p-169">For the first element, we have <span class="process-math">\(n\)</span> choices. We can choose any of the <span class="process-math">\(n\)</span> elements as the image of the first element.</div></li>
-<li id="li-80"><div class="para" id="p-170">For the second element, we have <span class="process-math">\((n-1)\)</span> choices. After choosing the image of the first element, we have <span class="process-math">\((n-1)\)</span> remaining elements to choose from for the image of the second element.</div></li>
-<li id="li-81"><div class="para" id="p-171">Continuing this process, for the third element, we have <span class="process-math">\((n-2)\)</span> choices, for the fourth element we have <span class="process-math">\((n-3)\)</span> choices, and so on.</div></li>
-<li id="li-82"><div class="para" id="p-172">Finally, for the last element, we have only one choice remaining.</div></li>
+<li id="li-80"><div class="para" id="p-164">For the first element, we have <span class="process-math">\(n\)</span> choices. We can choose any of the <span class="process-math">\(n\)</span> elements as the image of the first element.</div></li>
+<li id="li-81"><div class="para" id="p-165">For the second element, we have <span class="process-math">\((n-1)\)</span> choices. After choosing the image of the first element, we have <span class="process-math">\((n-1)\)</span> remaining elements to choose from for the image of the second element.</div></li>
+<li id="li-82"><div class="para" id="p-166">Continuing this process, for the third element, we have <span class="process-math">\((n-2)\)</span> choices, for the fourth element we have <span class="process-math">\((n-3)\)</span> choices, and so on.</div></li>
+<li id="li-83"><div class="para" id="p-167">Finally, for the last element, we have only one choice remaining.</div></li>
 </ul>
 <div class="para">The total number of permutations is obtained by multiplying the number of choices at each step. Hence, the total number of permutations in <span class="process-math">\(S_n\)</span> is given by <span class="process-math">\(n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1\text{,}\)</span> which is equal to <span class="process-math">\(n!\text{.}\)</span> Therefore, the order of the symmetric group <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n!\text{.}\)</span>
 </div>
 </div></div></div>
 </div></article></div>
 <article class="definition definition-like" id="def-cycle"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Cycles and Transpositions.</span>
-</h4> <div class="para logical" id="p-173">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span><span class="space"> </span><span class="title">Cycles and Transpositions.</span>
+</h4> <div class="para logical" id="p-168">
 <div class="para">If <span class="process-math">\(i_1, \dots, i_m\)</span> are distinct integers between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\sigma=(i_1 \, i_2 \, \dots i_m)\)</span> denotes the element of <span class="process-math">\(S_n\)</span> that satisfies</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -933,26 +951,26 @@ window.MathJax = {
 </div>
 <div class="para">for <span class="process-math">\(k\in[n] \setminus \{i_1, \dots, i_m\}\text{.}\)</span> Such a permutation is called a <em class="emphasis">cycle</em> or an <span class="process-math">\(m\)</span><em class="emphasis">-cycle</em> if we want to emphasize its length. A <span class="process-math">\(2\)</span>-cycle is often called a <em class="emphasis">transposition</em>. </div>
 </div></article><article class="example example-like" id="ex-cycle"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Cycle Example.</span>
-</h4> <div class="para" id="p-174">For example, <span class="process-math">\((1 \, 3 \, 7)\text{,}\)</span> regarded as an element of <span class="process-math">\(S_{13}\)</span> sends <span class="process-math">\(1\)</span> to <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(3\)</span> to <span class="process-math">\(7\)</span> and <span class="process-math">\(7\)</span> to <span class="process-math">\(1\text{,}\)</span> and it fixes <span class="process-math">\(2,4,5,7,8,9,10,11,12,13\text{.}\)</span> (Note that the value of <span class="process-math">\(n\)</span> in cycle notation is sometime ambiguous.)</div></article><article class="remark remark-like" id="remark-3"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span><span class="space"> </span><span class="title">Cycle.</span>
+</h4> <div class="para" id="p-169">When regarded as an element of <span class="process-math">\(S_{13}\text{,}\)</span> <span class="process-math">\((1 \, 3 \, 7)\)</span> sends <span class="process-math">\(1\)</span> to <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(3\)</span> to <span class="process-math">\(7\)</span> and <span class="process-math">\(7\)</span> to <span class="process-math">\(1\text{,}\)</span> and it fixes <span class="process-math">\(2,4,5,7,8,9,10,11,12,13\text{.}\)</span> (Note that the value of <span class="process-math">\(n\)</span> in cycle notation is sometimes ambiguous.)</div></article><article class="remark remark-like" id="remark-3"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-175">Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <span class="process-math">\((1 \, 2 \, 3) = (2 \, 3 \, 1)\text{.}\)</span> However, <span class="process-math">\((1 \, 2 \, 3) \neq (2 \, 1 \, 3)\text{.}\)</span>
-</div></article><div class="para" id="p-176">We compose cycles the same way we compose functions.</div>
+<div class="para" id="p-170">Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <span class="process-math">\((1 \, 2 \, 3) = (2 \, 3 \, 1)\text{.}\)</span> However, <span class="process-math">\((1 \, 2 \, 3) \neq (2 \, 1 \, 3)\text{.}\)</span>
+</div></article><div class="para" id="p-171">We compose cycles the same way we compose functions.</div>
 <article class="example example-like" id="exe-composing-cycles"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span><span class="space"> </span><span class="title">Composing Cycles.</span>
-</h4> <div class="para logical" id="p-177">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Composing Cycles.</span>
+</h4> <div class="para logical" id="p-172">
 <div class="para">Consider</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cycledecomp.html">
 \begin{equation*}
 (1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).
 \end{equation*}
 </div>
-<div class="para">This equation might lead you to the false belief that every element of <span class="process-math">\(S_n\)</span> is a cycle. This is not true — for example, the product <span class="process-math">\((1 \, 2) (3 \, 4)\)</span> cannot be written as a single cycle. What is true is that every element of <span class="process-math">\(S_n\)</span> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.40: Cycle Decompostion">Theorem 1.40</a>.</div>
+<div class="para">This equation might lead you to the false belief that every element of <span class="process-math">\(S_n\)</span> is a cycle. This is not true — for example, the product <span class="process-math">\((1 \, 2) (3 \, 4)\)</span> cannot be written as a single cycle. What is true is that every element of <span class="process-math">\(S_n\)</span> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.37: Cycle Decompostion">Theorem 1.37</a>.</div>
 </div></article><article class="proposition theorem-like" id="prop-disjoint-cycles-commute"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span><span class="space"> </span><span class="title">Disjoint Commutes.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Disjoint Commutes.</span>
 </h4>
-<div class="para logical" id="p-178">
+<div class="para logical" id="p-173">
 <div class="para">Disjoint cycles commute, that is, if <span class="process-math">\(i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -968,7 +986,7 @@ window.MathJax = {
 </div>
 <div class="para">then <span class="process-math">\(\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><div class="para logical" id="p-179">
+</div></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><div class="para logical" id="p-174">
 <div class="para">Let's consider two disjoint cycles, denoted as <span class="process-math">\((a1 a2 ... am)\)</span> and <span class="process-math">\((b1 b2 ... bn)\text{,}\)</span> where <span class="process-math">\(ai\)</span>'s and <span class="process-math">\(bi\)</span>'s are distinct elements. Let's analyze the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\text{:}\)</span> When we apply the composition to an element <span class="process-math">\(ai\text{,}\)</span> we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -994,62 +1012,62 @@ window.MathJax = {
 </div>
 <div class="para">Comparing these results with the previous composition, we see that the effects on <span class="process-math">\(ai\)</span> and <span class="process-math">\(am\)</span> are the same in both compositions. This implies that the compositions <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> and <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> are identical. Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.</div>
 </div></article></div>
-<div class="para" id="p-180">While sufficent, this is not a necessary condition.</div>
+<div class="para" id="p-175">While sufficent, this is not a necessary condition.</div>
 <article class="exercise exercise-like" id="exe-non-disjoint-commutes"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-non-disjoint-commutes"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span><span class="space"> </span><span class="title">Non-Disjoint Commutes.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-non-disjoint-commutes"><article class="exercise exercise-like"><div class="para" id="p-181">Find elements <span class="process-math">\(\s,\tau\in S_n\)</span> that commute but are not disjoint.</div></article></div>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span><span class="space"> </span><span class="title">Non-Disjoint Commutes.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-non-disjoint-commutes"><article class="exercise exercise-like"><div class="para" id="p-176">Find elements <span class="process-math">\(\s,\tau\in S_n\)</span> that commute but are not disjoint.</div></article></div>
 <article class="theorem theorem-like" id="thm-cycledecomp"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span><span class="space"> </span><span class="title">Cycle Decompostion.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span><span class="space"> </span><span class="title">Cycle Decompostion.</span>
 </h4>
-<div class="para logical" id="p-182"><ol class="decimal">
-<li id="li-83"><div class="para" id="p-183">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.</div></li>
-<li id="li-84"><div class="para" id="p-184">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written a product of transpositions.</div></li>
+<div class="para logical" id="p-177"><ol class="decimal">
+<li id="li-84"><div class="para" id="p-178">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.</div></li>
+<li id="li-85"><div class="para" id="p-179">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written a product of transpositions.</div></li>
 </ol></div></article><article class="remark remark-like" id="remark-4"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-185">For the uniqueness part of statement (1) in <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.40: Cycle Decompostion">Theorem 1.40</a> one needs to establish a convention regarding <span class="process-math">\(1\)</span>-cycles, that is one needs to stipulate either that the <span class="process-math">\(1\)</span>-cycles will not be recorded (which gives the shortest such factorization) or that all the <span class="process-math">\(1\)</span>-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <span class="process-math">\(n\)</span> is).</div></article><div class="para" id="p-186">Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.</div>
+<div class="para" id="p-180">For the uniqueness part of statement (1) in <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.37: Cycle Decompostion">Theorem 1.37</a> one needs to establish a convention regarding <span class="process-math">\(1\)</span>-cycles, that is one needs to stipulate either that the <span class="process-math">\(1\)</span>-cycles will not be recorded (which gives the shortest such factorization) or that all the <span class="process-math">\(1\)</span>-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <span class="process-math">\(n\)</span> is).</div></article><div class="para" id="p-181">Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.</div>
 <article class="proposition theorem-like" id="prop-permutation-order"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.42</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation Order.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation Order.</span>
 </h4>
-<div class="para" id="p-187">The order of a permutation is the least common multiple of the lengths of the cycles it is a product of. In particular, every transposition is its own inverse and the order of a <span class="process-math">\(k\)</span>-cycle in <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><div class="para" id="p-188">Coming soon!</div></article></div>
-<div class="para" id="p-189">We can also categorize elements of permutation groups by the number of transpositions it is a product of.</div>
+<div class="para" id="p-182">The order of a permutation is the least common multiple of the lengths of the cycles it is a product of. In particular, every transposition is its own inverse and the order of a <span class="process-math">\(k\)</span>-cycle in <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><div class="para" id="p-183">Coming soon!</div></article></div>
+<div class="para" id="p-184">We can also categorize elements of permutation groups by the number of transpositions it is a product of.</div>
 <article class="definition definition-like" id="def-even-odd-permutation"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.43</span><span class="period">.</span><span class="space"> </span><span class="title">Even and Odd Permutaitons.</span>
-</h4> <div class="para" id="p-190">A permutation <span class="process-math">\(\s\)</span> is <em class="emphasis">even</em> is if is the product of an even number of transpositions, otherwise it is <em class="emphasis">odd</em>.</div></article><article class="proposition theorem-like" id="prop-even-odd-properties"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.44</span><span class="period">.</span><span class="space"> </span><span class="title">Even and Odd Properties.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span><span class="space"> </span><span class="title">Even and Odd Permutaitons.</span>
+</h4> <div class="para" id="p-185">A permutation <span class="process-math">\(\s\)</span> is <em class="emphasis">even</em> is if is the product of an even number of transpositions, otherwise it is <em class="emphasis">odd</em>.</div></article><article class="proposition theorem-like" id="prop-even-odd-properties"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span><span class="space"> </span><span class="title">Even and Odd Properties.</span>
 </h4>
-<div class="para logical" id="p-191"><ol class="decimal">
-<li id="li-85"><div class="para" id="p-192">A <span class="process-math">\(k\)</span>-cycle is even if and only if <span class="process-math">\(k\)</span> is odd.</div></li>
-<li id="li-86"><div class="para" id="p-193">Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.</div></li>
-<li id="li-87"><div class="para" id="p-194">The identity permutation in <span class="process-math">\(S_n\)</span> is even, but not odd.</div></li>
-<li id="li-88"><div class="para" id="p-195">No permutation in <span class="process-math">\(S_n\)</span> is both even and odd.</div></li>
+<div class="para logical" id="p-186"><ol class="decimal">
+<li id="li-86"><div class="para" id="p-187">A <span class="process-math">\(k\)</span>-cycle is even if and only if <span class="process-math">\(k\)</span> is odd.</div></li>
+<li id="li-87"><div class="para" id="p-188">Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.</div></li>
+<li id="li-88"><div class="para" id="p-189">The identity permutation in <span class="process-math">\(S_n\)</span> is even, but not odd.</div></li>
+<li id="li-89"><div class="para" id="p-190">No permutation in <span class="process-math">\(S_n\)</span> is both even and odd.</div></li>
 </ol></div></article><article class="definition definition-like" id="def-alternating-group"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.45</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Group.</span>
-</h4> <div class="para" id="p-196">The <em class="emphasis">alternating group</em> <span class="process-math">\(A_n\)</span> is the subset of all even cycles of <span class="process-math">\(S_n\text{.}\)</span> </div></article><article class="exercise exercise-like" id="exe-an-order"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-an-order"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.46</span><span class="period">.</span><span class="space"> </span><span class="title">Order of <span class="process-math">\(A_n\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-an-order"><article class="exercise exercise-like"><div class="para" id="p-197">Prove <span class="process-math">\(|A_n|=\frac{n!}{2}\text{.}\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.42</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Group.</span>
+</h4> <div class="para" id="p-191">The <em class="emphasis">alternating group</em> <span class="process-math">\(A_n\)</span> is the subset of all even cycles of <span class="process-math">\(S_n\text{.}\)</span> </div></article><article class="exercise exercise-like" id="exe-an-order"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-an-order"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.43</span><span class="period">.</span><span class="space"> </span><span class="title">Order of <span class="process-math">\(A_n\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-an-order"><article class="exercise exercise-like"><div class="para" id="p-192">Prove <span class="process-math">\(|A_n|=\frac{n!}{2}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-198">For an element to be in <span class="process-math">\(A_n\text{,}\)</span> it must be an even permutation. This means it can be expressed as a product of an even number of transpositions. Each transposition in the product swaps two elements. There are <span class="process-math">\(n\)</span> choices for the first element, and after fixing the first element, there are <span class="process-math">\((n-1)\)</span> choices for the second element. This gives us <span class="process-math">\(n * (n-1)\)</span> choices for the first transposition. For the second transposition, there are <span class="process-math">\((n-2)\)</span> choices for the first element and <span class="process-math">\((n-3)\)</span> choices for the second element. Continuing this process, we have <span class="process-math">\((n-2) * (n-3) * ... * 2 * 1\)</span> choices for the remaining transpositions. In total, the number of even permutations (elements in <span class="process-math">\(A_n\)</span>) is given by <span class="process-math">\(n * (n-1) * (n-2) * ... * 2 * 1\text{,}\)</span> which is equal to <span class="process-math">\(n!\text{.}\)</span> However, we have counted each even permutation twice because we can write a given even permutation as a product in different orders. For example, <span class="process-math">\((1 2) * (3 4)\)</span> is the same as <span class="process-math">\((3 4) * (1 2)\text{.}\)</span> Therefore, we divide the total number of even permutations <span class="process-math">\((n!)\)</span> by <span class="process-math">\(2\)</span> to remove the duplicate counting. Hence, the order of the alternating group <span class="process-math">\(A_n\)</span> is <span class="process-math">\(n!/2\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-193">For an element to be in <span class="process-math">\(A_n\text{,}\)</span> it must be an even permutation. This means it can be expressed as a product of an even number of transpositions. Each transposition in the product swaps two elements. There are <span class="process-math">\(n\)</span> choices for the first element, and after fixing the first element, there are <span class="process-math">\((n-1)\)</span> choices for the second element. This gives us <span class="process-math">\(n * (n-1)\)</span> choices for the first transposition. For the second transposition, there are <span class="process-math">\((n-2)\)</span> choices for the first element and <span class="process-math">\((n-3)\)</span> choices for the second element. Continuing this process, we have <span class="process-math">\((n-2) * (n-3) * ... * 2 * 1\)</span> choices for the remaining transpositions. In total, the number of even permutations (elements in <span class="process-math">\(A_n\)</span>) is given by <span class="process-math">\(n * (n-1) * (n-2) * ... * 2 * 1\text{,}\)</span> which is equal to <span class="process-math">\(n!\text{.}\)</span> However, we have counted each even permutation twice because we can write a given even permutation as a product in different orders. For example, <span class="process-math">\((1 2) * (3 4)\)</span> is the same as <span class="process-math">\((3 4) * (1 2)\text{.}\)</span> Therefore, we divide the total number of even permutations <span class="process-math">\((n!)\)</span> by <span class="process-math">\(2\)</span> to remove the duplicate counting. Hence, the order of the alternating group <span class="process-math">\(A_n\)</span> is <span class="process-math">\(n!/2\text{.}\)</span>
 </div></div></div>
 </div></article></div></section><article class="outcomes goal-like" id="outcomes-3"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="li-89"><div class="para" id="p-199">The <a href="" class="xref" data-knowl="./knowl/def-d2n.html" title="Definition 1.50: Dihedral Group">Dihedral Group</a> is the group of reflections and rotations of a regular polygon. Every element in <span class="process-math">\(D_{2n}\)</span> can be written as a product of <em class="emphasis">rotations</em> and <em class="emphasis">reflections</em>. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 2 </sup></a>
+<li id="li-90"><div class="para" id="p-194">The <a href="" class="xref" data-knowl="./knowl/def-d2n.html" title="Definition 1.47: Dihedral Group">Dihedral Group</a> is the group of reflections and rotations of a regular polygon. Every element in <span class="process-math">\(D_{2n}\)</span> can be written as a product of <em class="emphasis">rotations</em> and <em class="emphasis">reflections</em>. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 2 </sup></a>
 </div></li>
-<li id="li-90"><div class="para" id="p-200">The <a href="" class="xref" data-knowl="./knowl/def-symmetric-group.html" title="Definition 1.32: Symmetric Group S_n">Definition 1.32</a> <span class="process-math">\(S_n\)</span> is set of all <a href="" class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 1.31: Permutations">Permutations</a> of a set with <span class="process-math">\(n\)</span> elements. The order of <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n!\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 3 </sup></a>
+<li id="li-91"><div class="para" id="p-195">The <a href="" class="xref" data-knowl="./knowl/def-symmetric-group.html" title="Definition 1.29: Symmetric Group S_n">Definition 1.29</a> <span class="process-math">\(S_n\)</span> is set of all <a href="" class="xref" data-knowl="./knowl/def-permutation.html" title="Definition 1.28: Permutations">Permutations</a> of a set with <span class="process-math">\(n\)</span> elements. The order of <span class="process-math">\(S_n\)</span> is <span class="process-math">\(n!\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 3 </sup></a>
 </div></li>
-<li id="li-91"><div class="para" id="p-201">Permutations are either even or odd; the <a href="" class="xref" data-knowl="./knowl/def-alternating-group.html" title="Definition 1.45: Alternating Group">Alternating Group</a> is the set of even permutations. The order of <span class="process-math">\(A_n\)</span> is <span class="process-math">\(\frac{n!}{2}\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 4 </sup></a>
+<li id="li-92"><div class="para" id="p-196">Permutations are either even or odd; the <a href="" class="xref" data-knowl="./knowl/def-alternating-group.html" title="Definition 1.42: Alternating Group">Alternating Group</a> is the set of even permutations. The order of <span class="process-math">\(A_n\)</span> is <span class="process-math">\(\frac{n!}{2}\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 4 </sup></a>
 </div></li>
-<li id="li-92"><div class="para" id="p-202">
-<a href="" class="xref" data-knowl="./knowl/def-cycle.html" title="Definition 1.34: Cycles and Transpositions">Cycles and Transpositions</a> are special permutations. Every cycle can be written as a product of transpositions. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 5 </sup></a>
+<li id="li-93"><div class="para" id="p-197">
+<a href="" class="xref" data-knowl="./knowl/def-cycle.html" title="Definition 1.31: Cycles and Transpositions">Cycles and Transpositions</a> are special permutations. Every cycle can be written as a product of transpositions. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 5 </sup></a>
 </div></li>
-<li id="li-93"><div class="para" id="p-203">The <a href="" class="xref" data-knowl="./knowl/def-quaternions.html" title="Definition 1.19: Quaternions">Quaternions</a> exist.</div></li>
+<li id="li-94"><div class="para" id="p-198">The <a href="" class="xref" data-knowl="./knowl/def-quaternions.html" title="Item 5"></a> exist.</div></li>
 </ul></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">The quaternions are also here.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/ex-d2n-elements.html" title="Example 1.51: Rotations and Reflections">Example 1.51</a> and <a href="" class="xref" data-knowl="./knowl/thm-d2n-order.html" title="Proposition 1.54: Order of D_{2n}">Proposition 1.54</a>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/exe-sn-order.html" title="Exercise 1.33: Order of S_n">Exercise 1.33</a>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/exe-an-order.html" title="Exercise 1.46: Order of A_n">Exercise 1.46</a>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.40: Cycle Decompostion">Theorem 1.40</a>, though we don't have the tools to prove this explicitly just yet.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/ex-d2n-elements.html" title="Example 1.48: Rotations and Reflections">Example 1.48</a> and <a href="" class="xref" data-knowl="./knowl/thm-d2n-order.html" title="Proposition 1.51: Order of D_{2n}">Proposition 1.51</a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/exe-sn-order.html" title="Exercise 1.30: Order of S_n">Exercise 1.30</a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/exe-an-order.html" title="Exercise 1.43: Order of A_n">Exercise 1.43</a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/thm-cycledecomp.html" title="Theorem 1.37: Cycle Decompostion">Theorem 1.37</a>, though we don't have the tools to prove this explicitly just yet.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-order-power.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-d2n.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

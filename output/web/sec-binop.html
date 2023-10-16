@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -177,7 +190,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="app-extras.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="app-extras.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-inf-pres.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="app-extras.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="app-extras.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-cayley-graphs.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -895,12 +913,14 @@ window.MathJax = {
 <section class="subsection" id="subsec-binop"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Binary Operations, Revisited</span>
 </h3>
-<div class="para" id="p-2346"></div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<div class="para" id="p-2341">As a little aside, we can also look at algebraic structures that are ~almost~ groups. For those who appreciate a snazzy visual, here is a handy little graphic.</div>
+<figure class="figure figure-like" id="figure-magma"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/magma.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">B.1<span class="period">.</span></span><span class="space"> </span>Relations between algebraic structures. <a class="external" href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" target="_blank">Quiver</a></figcaption></figure></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Algebraic Structures</span>
 </h3>
-<div class="para" id="p-2347"></div></section></section></div>
+<div class="para" id="p-2342"></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="app-extras.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-inf-pres.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="app-extras.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-cayley-graphs.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

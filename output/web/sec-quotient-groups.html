@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -896,12 +914,12 @@ window.MathJax = {
 <section class="subsection" id="subsec-quotients"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Quotient Groups</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-17">
-<div class="para" id="p-576">“Great things are done by a series of small things brought together.”</div> <cite class="attribution">―Vincent Van Gogh</cite>
+<blockquote class="blockquote" id="blockquote-16">
+<div class="para" id="p-571">“Great things are done by a series of small things brought together.”</div> <cite class="attribution">―Vincent Van Gogh</cite>
 </blockquote>
-<div class="para" id="p-577">We return now to the equivalence relation induced by the set of left (or right) cosets on a group <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-572">We return now to the equivalence relation induced by the set of left (or right) cosets on a group <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="para logical" id="p-578">
+<div class="para logical" id="p-573">
 <div class="para">Let us ask a question: When does <span class="process-math">\(G/\sim\)</span> aquire the structure of a group under the operation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -911,35 +929,35 @@ window.MathJax = {
 <div class="para">We need to be worried about whether this operation is independent of choice. That is, if <span class="process-math">\([x] = [x']\)</span> and <span class="process-math">\([y] = [y']\)</span> then must <span class="process-math">\([xy] = [x'y']\text{?}\)</span> In other words, if <span class="process-math">\(x\sim x'\)</span> and <span class="process-math">\(y \sim y'\text{,}\)</span> must <span class="process-math">\(xy \sim x'y'\text{?}\)</span>
 </div>
 </div>
-<div class="para" id="p-579">As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-44" id="fn-44"><sup> 1 </sup></a>
+<div class="para" id="p-574">As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-44" id="fn-44"><sup> 1 </sup></a>
 </div>
 <article class="theorem theorem-like" id="thm-quotient-iff-normal"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients and Normal Subgroups.</span>
 </h4>
-<div class="para" id="p-580">Let <span class="process-math">\(N\leq G\text{.}\)</span> The set of (left cosets) <span class="process-math">\(G/N\)</span> forms a group if and only if <span class="process-math">\(N\nsg G\text{.}\)</span>
+<div class="para" id="p-575">Let <span class="process-math">\(N\leq G\text{.}\)</span> The set of (left cosets) <span class="process-math">\(G/N\)</span> forms a group if and only if <span class="process-math">\(N\nsg G\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-quotient-group"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Group.</span>
-</h4> <div class="para" id="p-581">For any normal subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\text{,}\)</span> the <em class="emphasis">quotient group</em>, <span class="process-math">\(G/N\text{,}\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> </div></article><article class="example example-like" id="ex-old-friends"><h4 class="heading">
+</h4> <div class="para" id="p-576">For any normal subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\text{,}\)</span> the <em class="emphasis">quotient group</em>, <span class="process-math">\(G/N\text{,}\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> </div></article><article class="example example-like" id="ex-old-friends"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Old Friends.</span>
-</h4> <div class="para" id="p-582">Let <span class="process-math">\(H = \langle n \rangle\)</span> in <span class="process-math">\(G = (\mathbb{Z}, +)\text{.}\)</span> It is automatic that <span class="process-math">\(H\)</span> is normal since <span class="process-math">\(G\)</span> is abelian. The quotient group <span class="process-math">\(G/H\)</span> is our old friend <span class="process-math">\((\mathbb{Z}/n, +)\text{.}\)</span>
+</h4> <div class="para" id="p-577">Let <span class="process-math">\(H = \langle n \rangle\)</span> in <span class="process-math">\(G = (\mathbb{Z}, +)\text{.}\)</span> It is automatic that <span class="process-math">\(H\)</span> is normal since <span class="process-math">\(G\)</span> is abelian. The quotient group <span class="process-math">\(G/H\)</span> is our old friend <span class="process-math">\((\mathbb{Z}/n, +)\text{.}\)</span>
 </div></article><article class="remark remark-like" id="remark-18"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-583">Don't forget that the set <span class="process-math">\(G/H\)</span> exists for <em class="emphasis">any</em> subgroup <span class="process-math">\(H\leq G\text{.}\)</span> However, this set only satisfies the axioms of a group when the subgroup is normal.</div></article><article class="exploration project-like" id="exe-mod-n-iso"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exe-mod-n-iso"><h4 class="heading">
+<div class="para" id="p-578">Don't forget that the set <span class="process-math">\(G/H\)</span> exists for <em class="emphasis">any</em> subgroup <span class="process-math">\(H\leq G\text{.}\)</span> However, this set only satisfies the axioms of a group when the subgroup is normal.</div></article><article class="exploration project-like" id="exe-mod-n-iso"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exe-mod-n-iso"><h4 class="heading">
 <span class="type">Discussion</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Modular Integer? Barely Know 'Er!</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-mod-n-iso"><article class="exploration project-like"> <div class="para" id="p-584">Argue amongst yourselves what the 'best' notation for the integers <span class="process-math">\(\mod n\)</span> should be: <span class="process-math">\(\Z/n\)</span> <span class="process-math">\(\Z/n\Z\text{,}\)</span> <span class="process-math">\(\Z/n\text{,}\)</span> <span class="process-math">\(\Z_n\text{,}\)</span> <span class="process-math">\(\Z/\igen n\text{,}\)</span> <span class="process-math">\(\frac{\Z}{n}\text{,}\)</span> or whatever other horrors you can conjure.</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-mod-n-iso"><article class="exploration project-like"> <div class="para" id="p-579">Argue amongst yourselves what the 'best' notation for the integers <span class="process-math">\(\mod n\)</span> should be: <span class="process-math">\(\Z/n\)</span> <span class="process-math">\(\Z/n\Z\text{,}\)</span> <span class="process-math">\(\Z/n\text{,}\)</span> <span class="process-math">\(\Z_n\text{,}\)</span> <span class="process-math">\(\Z/\igen n\text{,}\)</span> <span class="process-math">\(\frac{\Z}{n}\text{,}\)</span> or whatever other horrors you can conjure.</div></article></div>
 <article class="example example-like" id="ex-dihedral-quotient"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Dihedral Quotient.</span>
-</h4> <div class="para" id="p-585">
+</h4> <div class="para" id="p-580">
 <span class="process-math">\(H = \langle r \rangle\)</span> is a normal subgroup of <span class="process-math">\(D_{2n}\text{.}\)</span> The quotient <span class="process-math">\(D_{2n}/H\)</span> has just two elements, <span class="process-math">\(H\)</span> and <span class="process-math">\(sH\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exe-commutator-quotient-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-commutator-quotient-abelian"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient of Commutator Subgroup.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-commutator-quotient-abelian"><article class="exercise exercise-like"><div class="para" id="p-586">Let <span class="process-math">\(G\)</span> be a group with commutator subgroup <span class="process-math">\(G'\text{.}\)</span> Prove <span class="process-math">\(G/G'\)</span> is abelian.</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-commutator-quotient-abelian"><article class="exercise exercise-like"><div class="para" id="p-581">Let <span class="process-math">\(G\)</span> be a group with commutator subgroup <span class="process-math">\(G'\text{.}\)</span> Prove <span class="process-math">\(G/G'\)</span> is abelian.</div></article></div>
 <article class="exercise exercise-like" id="exe-gl-sl-iso"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-gl-sl-iso"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span><span class="space"> </span><span class="title">Special Linear Quotients.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gl-sl-iso"><article class="exercise exercise-like"><div class="para" id="p-587"><span class="process-math">\(\GL_n(\R)/\SL_n(\R)\cong\R^\times\)</span></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gl-sl-iso"><article class="exercise exercise-like"><div class="para" id="p-582"><span class="process-math">\(\GL_n(\R)/\SL_n(\R)\cong\R^\times\)</span></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-588">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-583">
 <div class="para">Define a map <span class="process-math">\(f: F \setminus \{0\}\to G/H\)</span> as the composition of</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -950,18 +968,18 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 </div>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-589">Recalling <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 2.60: Lagrange's Theorem">Lagrange's Theorem</a>, we have yet another useful corollary:</div>
+<div class="para" id="p-584">Recalling <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 2.60: Lagrange's Theorem">Lagrange's Theorem</a>, we have yet another useful corollary:</div>
 <article class="corollary theorem-like" id="cor-order-of-quotient"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Order of Quotient Groups.</span>
 </h4>
-<div class="para" id="p-590">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{.}\)</span>
+<div class="para" id="p-585">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-quotient-map"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.21</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map.</span>
-</h4> <div class="para" id="p-591">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> the <em class="emphasis">quotient map</em> <span class="process-math">\(q:G \to G/N\)</span> is defined by <span class="process-math">\(q(g)=gN\text{.}\)</span> </div></article><article class="proposition theorem-like" id="prop-quotient-surj-hom"><h4 class="heading">
+</h4> <div class="para" id="p-586">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> the <em class="emphasis">quotient map</em> <span class="process-math">\(q:G \to G/N\)</span> is defined by <span class="process-math">\(q(g)=gN\text{.}\)</span> </div></article><article class="proposition theorem-like" id="prop-quotient-surj-hom"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map is Surjective Homomorphism.</span>
 </h4>
-<div class="para" id="p-592">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\text{,}\)</span> the map <span class="process-math">\(q:G \to G/N\)</span> defined by <span class="process-math">\(q(g)=gN\)</span> is a surjective group homomorphism with kernel <span class="process-math">\(\operatorname{ker}(q)=N\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para logical" id="p-593">
+<div class="para" id="p-587">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\text{,}\)</span> the map <span class="process-math">\(q:G \to G/N\)</span> defined by <span class="process-math">\(q(g)=gN\)</span> is a surjective group homomorphism with kernel <span class="process-math">\(\operatorname{ker}(q)=N\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para logical" id="p-588">
 <div class="para">Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <span class="process-math">\(\pi\)</span> and the rule for multiplying cosets in <span class="process-math">\(G/N\text{:}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-cosetfacts.html">
@@ -975,8 +993,8 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 <article class="theorem theorem-like" id="thm-norm-iff-ker"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.23</span><span class="period">.</span><span class="space"> </span><span class="title">Normal Subgroup iff Kernel.</span>
 </h4>
-<div class="para" id="p-594">A subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\)</span> is normal in <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(N\)</span> is the kernel of a homomorphism with domain <span class="process-math">\(G\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-595">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prop-quotient-surj-hom.html" title="Proposition 3.22: Quotient Map is Surjective Homomorphism">Proposition 3.22</a> this map is a homomorphism.</div> <div class="para logical" id="p-596">
+<div class="para" id="p-589">A subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\)</span> is normal in <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(N\)</span> is the kernel of a homomorphism with domain <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-590">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prop-quotient-surj-hom.html" title="Proposition 3.22: Quotient Map is Surjective Homomorphism">Proposition 3.22</a> this map is a homomorphism.</div> <div class="para logical" id="p-591">
 <div class="para">Next, suppose there exists a group <span class="process-math">\(H\)</span> and and a homomorphism <span class="process-math">\(\varphi : G\to H\)</span> such that <span class="process-math">\(K = \ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gKg\inv\text{.}\)</span> Observe</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -986,18 +1004,18 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 <div class="para">given that <span class="process-math">\(\ker(\varphi)=K\text{.}\)</span> Thus <span class="process-math">\(gKg\inv\subseteq K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(K\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></article></div>
-<section class="paragraphs" id="paragraphs-5"><h4 class="heading"><span class="title">Qual Watch.</span></h4> <div class="para" id="p-597">Proving <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 3.23: Normal Subgroup iff Kernel">Theorem 3.23</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/jan-2022-3.html" title="Exercise D.1.3: Problem 3">Problem 3</a> on the <a href="" class="xref" data-knowl="./knowl/jan-2022.html" title="Exercise Group D.1.3–4: January 2022">January 2022</a> qualifying exam.</div></section><article class="theorem theorem-like" id="thm-gz-cyclic"><h4 class="heading">
+<section class="paragraphs" id="paragraphs-5"><h4 class="heading"><span class="title">Qual Watch.</span></h4> <div class="para" id="p-592">Proving <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 3.23: Normal Subgroup iff Kernel">Theorem 3.23</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/jan-2022-3.html" title="Exercise D.1.3: Problem 3">Problem 3</a> on the <a href="" class="xref" data-knowl="./knowl/jan-2022.html" title="Exercise Group D.1.3–4: January 2022">January 2022</a> qualifying exam.</div></section><article class="theorem theorem-like" id="thm-gz-cyclic"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.24</span><span class="period">.</span><span class="space"> </span><span class="title">Cyclic Center Quotients.</span>
 </h4>
-<div class="para" id="p-598">Let <span class="process-math">\(G\)</span> be a group with center <span class="process-math">\(Z(G)\text{.}\)</span> If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian.</div></article></section><article class="outcomes goal-like" id="outcomes-10"><h3 class="heading"><span class="type">Summary</span></h3>
+<div class="para" id="p-593">Let <span class="process-math">\(G\)</span> be a group with center <span class="process-math">\(Z(G)\text{.}\)</span> If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian.</div></article></section><article class="outcomes goal-like" id="outcomes-10"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="li-227"><div class="para" id="p-599">Given <span class="process-math">\(N\nsg G\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/def-quotient-group.html" title="Definition 3.14: Quotient Group">Quotient Group</a> <span class="process-math">\(G/N\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> This is a well defined group if and only if <span class="process-math">\(N\)</span> is normal. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-45" id="fn-45"><sup> 2 </sup></a>
+<li id="li-228"><div class="para" id="p-594">Given <span class="process-math">\(N\nsg G\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/def-quotient-group.html" title="Definition 3.14: Quotient Group">Quotient Group</a> <span class="process-math">\(G/N\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> This is a well defined group if and only if <span class="process-math">\(N\)</span> is normal. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-45" id="fn-45"><sup> 2 </sup></a>
 </div></li>
-<li id="li-228"><div class="para" id="p-600">A subgroup is normal if and only if it is the kernel of a homomorphism. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 3 </sup></a>
+<li id="li-229"><div class="para" id="p-595">A subgroup is normal if and only if it is the kernel of a homomorphism. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 3 </sup></a>
 </div></li>
-<li id="li-229"><div class="para" id="p-601">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{,}\)</span> and the <a href="" class="xref" data-knowl="./knowl/def-quotient-map.html" title="Definition 3.21: Quotient Map">Quotient Map</a> is a surjective homomorphism. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-47" id="fn-47"><sup> 4 </sup></a>
+<li id="li-230"><div class="para" id="p-596">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{,}\)</span> and the <a href="" class="xref" data-knowl="./knowl/def-quotient-map.html" title="Definition 3.21: Quotient Map">Quotient Map</a> is a surjective homomorphism. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-47" id="fn-47"><sup> 4 </sup></a>
 </div></li>
-<li id="li-230"><div class="para" id="p-602">If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-48" id="fn-48"><sup> 5 </sup></a>
+<li id="li-231"><div class="para" id="p-597">If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-48" id="fn-48"><sup> 5 </sup></a>
 </div></li>
 </ul></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-44"><div class="fn">Get it?</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-45"><div class="fn">See: <a href="" class="xref" data-knowl="./knowl/thm-quotient-iff-normal.html" title="Theorem 3.13: Quotients and Normal Subgroups">Theorem 3.13</a>.</div></div>

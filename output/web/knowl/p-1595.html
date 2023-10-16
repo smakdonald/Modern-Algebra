@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(R\)</span> be a ring, let <span class="process-math">\(M\)</span> be a free <span class="process-math">\(R\)</span>-module with basis <span class="process-math">\(B\text{,}\)</span> let <span class="process-math">\(N\)</span> be an <span class="process-math">\(R\)</span>-module, and let <span class="process-math">\(j: B \to N\)</span> be any function. Then there is a unique <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(h: M \to N\)</span> such that <span class="process-math">\(h(b) = j(b)\)</span> for all <span class="process-math">\(b \in B\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(m) = \sum_b g(r_b (b))= \sum_b r_b g(b) =\sum_b r_b j(b) = f(m).
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-free-mod.html#p-1595" class="internal">in-context</a></span>
 </body>

@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -892,15 +910,15 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-rcf"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">15.1</span> <span class="title">Rational Canonical Form</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-67">
-<div class="para" id="p-1822">“If everything on Earth were rational, nothing would happen.”</div> <cite class="attribution">―Fyodor Dostoevsky</cite>
+<blockquote class="blockquote" id="blockquote-66">
+<div class="para" id="p-1817">“If everything on Earth were rational, nothing would happen.”</div> <cite class="attribution">―Fyodor Dostoevsky</cite>
 </blockquote>
 <article class="remark remark-like" id="remark-69"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1823">Suppose <span class="process-math">\(F\)</span> is a field and <span class="process-math">\(M\)</span> is a <span class="process-math">\(F[x]\)</span>-module. By restriction of scalars along the canonical ring map <span class="process-math">\(F \into F[x]\)</span> we may regard <span class="process-math">\(M\)</span> as a <span class="process-math">\(F\)</span>-vector space — let us write this vector space as <span class="process-math">\(M|_F\)</span> to be precise. Let <span class="process-math">\(\lx: M|_F \to M|_F\)</span> be the map given by <span class="process-math">\(\lx(m) = xm\text{.}\)</span> Then <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> So, to a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\)</span> we may associate the pair <span class="process-math">\((M|_F, \lx)\)</span> where <span class="process-math">\(M|_F\)</span> is an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> This process is reversible:</div></article><article class="definition definition-like" id="def-fx-module-vg"><h3 class="heading">
+<div class="para" id="p-1818">Suppose <span class="process-math">\(F\)</span> is a field and <span class="process-math">\(M\)</span> is a <span class="process-math">\(F[x]\)</span>-module. By restriction of scalars along the canonical ring map <span class="process-math">\(F \into F[x]\)</span> we may regard <span class="process-math">\(M\)</span> as a <span class="process-math">\(F\)</span>-vector space — let us write this vector space as <span class="process-math">\(M|_F\)</span> to be precise. Let <span class="process-math">\(\lx: M|_F \to M|_F\)</span> be the map given by <span class="process-math">\(\lx(m) = xm\text{.}\)</span> Then <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> So, to a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\)</span> we may associate the pair <span class="process-math">\((M|_F, \lx)\)</span> where <span class="process-math">\(M|_F\)</span> is an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> This process is reversible:</div></article><article class="definition definition-like" id="def-fx-module-vg"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(F[x]\)</span>-Module <span class="process-math">\(V_g\)</span>.</span>
-</h3> <div class="para logical" id="p-1824">
+</h3> <div class="para logical" id="p-1819">
 <div class="para">Let <span class="process-math">\(F\)</span> be a field, let <span class="process-math">\(V\)</span> be a finite dimensional vector space over <span class="process-math">\(F\text{,}\)</span> and let <span class="process-math">\(g: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator. The <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\)</span> is defined to be the abelian group <span class="process-math">\((V, +)\)</span> equipped with the rule for <span class="process-math">\(F[x]\)</span> scaling given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -912,9 +930,9 @@ window.MathJax = {
 </div></article><article class="proposition theorem-like" id="prop-vg-is-actually-a-fx-module"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(V_g\)</span> is Actually a <span class="process-math">\(F[x]\)</span>-Module.</span>
 </h3>
-<div class="para" id="p-1825">Given a pair <span class="process-math">\((V, g)\)</span> as in the definition, <span class="process-math">\(V_g\)</span> really is a <span class="process-math">\(F[x]\)</span>-module.</div></article><article class="example example-like" id="ex-special-case-of-v_g"><h3 class="heading">
+<div class="para" id="p-1820">Given a pair <span class="process-math">\((V, g)\)</span> as in the definition, <span class="process-math">\(V_g\)</span> really is a <span class="process-math">\(F[x]\)</span>-module.</div></article><article class="example example-like" id="ex-special-case-of-v_g"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span><span class="space"> </span><span class="title">Special Case of <span class="process-math">\(V_g\)</span>.</span>
-</h3> <div class="para" id="p-1826">We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):</div> <div class="para logical" id="p-1827">
+</h3> <div class="para" id="p-1821">We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):</div> <div class="para logical" id="p-1822">
 <div class="para">Given a matrix <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{,}\)</span> then <span class="process-math">\(F^n_A\)</span> is the <span class="process-math">\(F[x]\)</span>-module whose underlying abelian group is <span class="process-math">\(F^n\)</span> (column vectors) with the usual rule for addition and with the rule for <span class="process-math">\(F[x]\)</span> scaling given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -930,7 +948,7 @@ f(x) \cdot v = f(A) v
 <div class="para">for any polynomial <span class="process-math">\(f(x) \in k[x]\text{,}\)</span> where <span class="process-math">\(f(A)\)</span> is the matrix obtained by evaluating <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x = A\)</span> in the evident sense.</div>
 </div></article><article class="example example-like" id="ex-mat_2times-2q"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.5</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Mat_{2\times 2}(\Q)\)</span>.</span>
-</h3> <div class="para logical" id="p-1828">
+</h3> <div class="para logical" id="p-1823">
 <div class="para">Let <span class="process-math">\(A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)\)</span> and let <span class="process-math">\(M\)</span> be the <span class="process-math">\(\Q[x]\)</span>-module <span class="process-math">\(\Q^2_A\text{.}\)</span> So <span class="process-math">\(M = \Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space, and <span class="process-math">\(x\)</span> acts on <span class="process-math">\(M\)</span> by sending <span class="process-math">\(\vectwo{a}{b} \in M\)</span> to <span class="process-math">\(\vectwo{a+b}{b} \in M\text{.}\)</span> I claim there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -938,8 +956,8 @@ M \cong \Q[x]/(x-1)^2
 \end{equation*}
 </div>
 <div class="para">of <span class="process-math">\(\Q[x]\)</span>-modules.</div>
-</div> <div class="para" id="p-1829">Let <span class="process-math">\(v = \vectwo{0}{1} \in M\text{.}\)</span> Note that <span class="process-math">\(x \cdot v = \vectwo{1}{1}\)</span> and that <span class="process-math">\(v\)</span> and <span class="process-math">\(x \cdot v\)</span> span <span class="process-math">\(\Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space. It follows that <span class="process-math">\(v\)</span> generates <span class="process-math">\(M\)</span> as a <span class="process-math">\(\Q[x]\)</span>-module; in detail, for any <span class="process-math">\(\vectwo{a}{b} \in \Q^2\)</span> we have <span class="process-math">\((b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}\text{.}\)</span>
-</div> <div class="para logical" id="p-1830">
+</div> <div class="para" id="p-1824">Let <span class="process-math">\(v = \vectwo{0}{1} \in M\text{.}\)</span> Note that <span class="process-math">\(x \cdot v = \vectwo{1}{1}\)</span> and that <span class="process-math">\(v\)</span> and <span class="process-math">\(x \cdot v\)</span> span <span class="process-math">\(\Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space. It follows that <span class="process-math">\(v\)</span> generates <span class="process-math">\(M\)</span> as a <span class="process-math">\(\Q[x]\)</span>-module; in detail, for any <span class="process-math">\(\vectwo{a}{b} \in \Q^2\)</span> we have <span class="process-math">\((b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}\text{.}\)</span>
+</div> <div class="para logical" id="p-1825">
 <div class="para">Define a <span class="process-math">\(\Q[x]\)</span>-module homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -962,13 +980,13 @@ x^2 v = 2x v- v
 </div></article><article class="proposition theorem-like" id="prop-equality-of-fx-modules"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span><span class="space"> </span><span class="title">Equality of <span class="process-math">\(F[x]\)</span>-Modules.</span>
 </h3>
-<div class="para" id="p-1831">The two assignments <span class="process-math">\(M \mapsto (M|_F, \lx)\)</span> and <span class="process-math">\((V, g) \mapsto V_g\)</span> defined above are mutually inverse: Given a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\text{,}\)</span> there is an <em class="emphasis">equality</em> of <span class="process-math">\(F[x]\)</span>-modules <span class="process-math">\(M = (M|_F)_{\lx}\)</span> and given a pair <span class="process-math">\((V, g)\)</span> with <span class="process-math">\(V\)</span> an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(g\)</span> an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\)</span> we have an equality of pairs <span class="process-math">\(((V_g)|_F, \lx) = (V,g)\text{.}\)</span>
+<div class="para" id="p-1826">The two assignments <span class="process-math">\(M \mapsto (M|_F, \lx)\)</span> and <span class="process-math">\((V, g) \mapsto V_g\)</span> defined above are mutually inverse: Given a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\text{,}\)</span> there is an <em class="emphasis">equality</em> of <span class="process-math">\(F[x]\)</span>-modules <span class="process-math">\(M = (M|_F)_{\lx}\)</span> and given a pair <span class="process-math">\((V, g)\)</span> with <span class="process-math">\(V\)</span> an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(g\)</span> an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\)</span> we have an equality of pairs <span class="process-math">\(((V_g)|_F, \lx) = (V,g)\text{.}\)</span>
 </div></article><article class="remark remark-like" id="remark-70"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">15.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1832">In fact, these rules determine an “isomorphism of categories''.</div></article><article class="definition definition-like" id="def-block-diagonal-matrix"><h3 class="heading">
+<div class="para" id="p-1827">In fact, these rules determine an “isomorphism of categories''.</div></article><article class="definition definition-like" id="def-block-diagonal-matrix"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">15.8</span><span class="period">.</span><span class="space"> </span><span class="title">Block Diagonal Matrix.</span>
-</h3> <div class="para logical" id="p-1833">
+</h3> <div class="para logical" id="p-1828">
 <div class="para">Given square matrices <span class="process-math">\(A_1 \in \Mat_{n_1 \times n_1}(F), \dots, A_m \in \Mat_{n_m \times n_m}(F)\text{,}\)</span> we define <span class="process-math">\(A_1 \oplus \cdots \oplus A_m\)</span> to be the <em class="emphasis">block diagonal</em> matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -985,7 +1003,7 @@ A_1 &amp; 0 &amp; \cdots &amp; 0 \\
 </div></article><article class="theorem theorem-like" id="thm-rcf"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rational Canonical Form.</span>
 </h3>
-<div class="para logical" id="p-1834">
+<div class="para logical" id="p-1829">
 <div class="para">Given a finite dimensional <span class="process-math">\(F\)</span>-vector space <span class="process-math">\(V\)</span> and an <span class="process-math">\(F\)</span>-linear operator <span class="process-math">\(g: V \to V\text{,}\)</span> there is a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(V\)</span> such that the matrix representing <span class="process-math">\(g\)</span> relative to <span class="process-math">\(B\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -994,7 +1012,7 @@ A_1 &amp; 0 &amp; \cdots &amp; 0 \\
 </div>
 <div class="para">for monic polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> of degree at least one such that <span class="process-math">\(f_1 | f_2 | \cdots | f_s\text{.}\)</span> Moreover, this matrix is unique, and is known as the <em class="emphasis">rational canonical form</em> of the operator <span class="process-math">\(g\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-116"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-116"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-116"><article class="hiddenproof"><div class="para logical" id="p-1835">
+</div></article><article class="hiddenproof" id="proof-116"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-116"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-116"><article class="hiddenproof"><div class="para logical" id="p-1830">
 <div class="para">We know by the Fundamental Theorem of modules over <span class="process-math">\(F[x]\)</span> (i.e., Corollary ) that there is a <span class="process-math">\(F[x]\)</span>-module isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1009,16 +1027,16 @@ B = \{(b_1, 0, \dots, 0) \mid b_1 \in B_1\} \cup \{(0, b_2, 0, \dots, 0) \mid b_
 </div>
 <div class="para">(in that order). Then the matrix of <span class="process-math">\(\lx\)</span> on <span class="process-math">\(F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_k)\)</span> for <span class="process-math">\(B\)</span> is <span class="process-math">\(C(f_1) \oplus \cdots \oplus C(f_s)\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-1836">This gives existence. Uniqueness is a consequence of the uniqueness of the list <span class="process-math">\(f_1, \dots, f_s\text{,}\)</span> but I will omit the details.</div></article></div>
+</div> <div class="para" id="p-1831">This gives existence. Uniqueness is a consequence of the uniqueness of the list <span class="process-math">\(f_1, \dots, f_s\text{,}\)</span> but I will omit the details.</div></article></div>
 <article class="remark remark-like" id="remark-71"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">15.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1837">The matrix is unique, but the basis <span class="process-math">\(B\)</span> that realizes it is, in general, not unique. As an extreme example illustrating this: Take <span class="process-math">\(g\)</span> to be the identity operator on a finite dimensional vector space <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = I_n\)</span> holds for any basis <span class="process-math">\(B\text{.}\)</span> (Note that <span class="process-math">\(I_n\)</span> is indeed in rational canonical form: it is equal to <span class="process-math">\(C(x-1) \oplus \cdots \oplus C(x-1)\text{.}\)</span>)</div></article><article class="definition definition-like" id="def-invariant-factor-2"><h3 class="heading">
+<div class="para" id="p-1832">The matrix is unique, but the basis <span class="process-math">\(B\)</span> that realizes it is, in general, not unique. As an extreme example illustrating this: Take <span class="process-math">\(g\)</span> to be the identity operator on a finite dimensional vector space <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = I_n\)</span> holds for any basis <span class="process-math">\(B\text{.}\)</span> (Note that <span class="process-math">\(I_n\)</span> is indeed in rational canonical form: it is equal to <span class="process-math">\(C(x-1) \oplus \cdots \oplus C(x-1)\text{.}\)</span>)</div></article><article class="definition definition-like" id="def-invariant-factor-2"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">15.11</span><span class="period">.</span><span class="space"> </span><span class="title">Invariant Factor.</span>
-</h3> <div class="para" id="p-1838">In Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the numbers <span class="process-math">\(n_1,\ldots,n_t\)</span> are the <em class="emphasis">invariant factors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in part (1) is the <em class="emphasis">invariant factor decomposition</em> of <span class="process-math">\(G\text{.}\)</span>
+</h3> <div class="para" id="p-1833">In Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the numbers <span class="process-math">\(n_1,\ldots,n_t\)</span> are the <em class="emphasis">invariant factors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in part (1) is the <em class="emphasis">invariant factor decomposition</em> of <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="example example-like" id="exe-back-to-mat_2times-2q"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.12</span><span class="period">.</span><span class="space"> </span><span class="title">Back to <span class="process-math">\(\Mat_{2\times 2}(\Q)\)</span>.</span>
-</h3> <div class="para logical" id="p-1839">
+</h3> <div class="para logical" id="p-1834">
 <div class="para">Let us return to the example of <span class="process-math">\(A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)\)</span> to illustrate the Theorem and its proof. By the previous example we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1037,14 +1055,14 @@ C(x^2 - 2x + 1) =
 </div>
 <div class="para">This is the Rational Canonical Form of <span class="process-math">\(A\text{.}\)</span> <span class="process-math">\(A\)</span> has just one invariant factor, namely <span class="process-math">\(x^2 - 2x + 1\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-1840">By the way, tracking through the calculations that got us here, we see that the basis of <span class="process-math">\(\Q^2\)</span> that gives the RCF of <span class="process-math">\(A\)</span> if <span class="process-math">\(\vectwo01, \vectwo11\)</span> of <span class="process-math">\(\Q^2\text{.}\)</span>
+</div> <div class="para" id="p-1835">By the way, tracking through the calculations that got us here, we see that the basis of <span class="process-math">\(\Q^2\)</span> that gives the RCF of <span class="process-math">\(A\)</span> if <span class="process-math">\(\vectwo01, \vectwo11\)</span> of <span class="process-math">\(\Q^2\text{.}\)</span>
 </div></article><article class="corollary theorem-like" id="cor-every-matrix-similar-to-unique-rcf-matrix"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">15.13</span><span class="period">.</span><span class="space"> </span><span class="title">Every Matrix Similar to Unique RCF Matrix.</span>
 </h3>
-<div class="para" id="p-1841">Every matrix <span class="process-math">\(A\)</span> is similar to a unique matrix in RCF.</div></article><article class="example example-like" id="exe-similarity-classes-of-4times-4-matrices"><h3 class="heading">
+<div class="para" id="p-1836">Every matrix <span class="process-math">\(A\)</span> is similar to a unique matrix in RCF.</div></article><article class="example example-like" id="exe-similarity-classes-of-4times-4-matrices"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.14</span><span class="period">.</span><span class="space"> </span><span class="title">Similarity Classes of <span class="process-math">\(4\times 4\)</span> Matrices.</span>
-</h3> <div class="para" id="p-1842">Let <span class="process-math">\(F = \Z/p\)</span> be the field with <span class="process-math">\(p\)</span> elements for some prime <span class="process-math">\(p\text{.}\)</span> Up to similarity, how many <span class="process-math">\(4 \times 4\)</span> matrices are there with entries in <span class="process-math">\(F\text{?}\)</span>
-</div> <div class="para logical" id="p-1843">
+</h3> <div class="para" id="p-1837">Let <span class="process-math">\(F = \Z/p\)</span> be the field with <span class="process-math">\(p\)</span> elements for some prime <span class="process-math">\(p\text{.}\)</span> Up to similarity, how many <span class="process-math">\(4 \times 4\)</span> matrices are there with entries in <span class="process-math">\(F\text{?}\)</span>
+</div> <div class="para logical" id="p-1838">
 <div class="para">Each such matrix is similar to a unique one of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1060,18 +1078,18 @@ p^4 + p^2+ p^3 + p^3 + p.
 </div></article><article class="remark remark-like" id="remark-72"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">15.15</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1844">The proof of Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> makes clear the following fact:</div> <blockquote class="blockquote" id="blockquote-68"><div class="para" id="p-1845">For a field <span class="process-math">\(F\text{,}\)</span> finite dimensional vector space <span class="process-math">\(V\text{,}\)</span> and <span class="process-math">\(F\)</span>-linear operator <span class="process-math">\(g: V \to V\text{,}\)</span>the invariant factors of the operator <span class="process-math">\(g\)</span> are identical to the invariant factors of the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\text{.}\)</span>
-</div></blockquote> <div class="para" id="p-1846">The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):</div></article><article class="theorem theorem-like" id="thm-rcf-and-cokernels"><h3 class="heading">
+<div class="para" id="p-1839">The proof of Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> makes clear the following fact:</div> <blockquote class="blockquote" id="blockquote-67"><div class="para" id="p-1840">For a field <span class="process-math">\(F\text{,}\)</span> finite dimensional vector space <span class="process-math">\(V\text{,}\)</span> and <span class="process-math">\(F\)</span>-linear operator <span class="process-math">\(g: V \to V\text{,}\)</span>the invariant factors of the operator <span class="process-math">\(g\)</span> are identical to the invariant factors of the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\text{.}\)</span>
+</div></blockquote> <div class="para" id="p-1841">The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):</div></article><article class="theorem theorem-like" id="thm-rcf-and-cokernels"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.16</span><span class="period">.</span><span class="space"> </span><span class="title">RCF and Cokernels.</span>
 </h3>
-<div class="para logical" id="p-1847">
+<div class="para logical" id="p-1842">
 <div class="para">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{.}\)</span> The matrix <span class="process-math">\(xI_n - A \in \Mat_{n \times n}(F[x])\)</span> presents the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(F^n_A\text{;}\)</span> that is, there is an isomorphism of <span class="process-math">\(F[x]\)</span>-modules</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-117"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-117"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-117"><article class="hiddenproof"><div class="para logical" id="p-1848">
+</div></article><article class="hiddenproof" id="proof-117"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-117"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-117"><article class="hiddenproof"><div class="para logical" id="p-1843">
 <div class="para">For this proof it is useful to identity <span class="process-math">\(F[x]^n\)</span> with <span class="process-math">\(F^n[x]\)</span> where the latter refers to all expressions of the form <span class="process-math">\(\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m\)</span> with <span class="process-math">\(v_i \in F^n\text{.}\)</span> For instance, (when <span class="process-math">\(n = 2\)</span>) we identify <span class="process-math">\(\vectwo{x^2 -3x + 1}{x^7 +x + 5}\)</span> with <span class="process-math">\(\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7\text{.}\)</span> Using this identification we define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1080,7 +1098,7 @@ F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
 </div>
 <div class="para">by <span class="process-math">\(\phi(\sum_i v_i x^i) = \sum_i A^i v_i\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> is a <span class="process-math">\(F[x]\)</span>-module homomorphism — I leave it to you to verify this. <span class="process-math">\(\phi\)</span> is onto since, e.g., for any <span class="process-math">\(v \in F^n\)</span> we have <span class="process-math">\(\phi(vx^0) = v\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-1849">
+</div> <div class="para logical" id="p-1844">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1094,7 +1112,7 @@ F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
 \end{equation*}
 </div>
 <div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
-</div> <div class="para logical" id="p-1850">
+</div> <div class="para logical" id="p-1845">
 <div class="para">Since <span class="process-math">\(\overline{\phi}\)</span> is <span class="process-math">\(F[x]\)</span>-linear it is certainly <span class="process-math">\(F\)</span>-linear. Since <span class="process-math">\(\dim_F(F^n_A) = n\text{,}\)</span> to prove <span class="process-math">\(\overline{\phi}\)</span> is one-to-one, it suffices to prove <span class="process-math">\(\dim_F \frac{F^n[x]}{\im(xI_n - A)} \leq n\)</span> (by Rank-Nullity). I claim the images of the standard basis <span class="process-math">\(e_1, \dots, e_n\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> span it as an <span class="process-math">\(F\)</span>-vector space. To see this, note that <span class="process-math">\(x^je_i\text{,}\)</span> for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(j \geq 0\)</span> span <span class="process-math">\(F^n[x]\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence they span the quotient. It thus suffices to show <span class="process-math">\(\overline{x^j e_i}\)</span> lies in the span of <span class="process-math">\(\overline{e_1}, \dots, \overline{e_n}\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{.}\)</span> We have <span class="process-math">\(x^{j-1} \cdot (A - x) e_i \in \im(xI_n - A)\)</span> and thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1111,8 +1129,8 @@ F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
 <article class="corollary theorem-like" id="cor-invariant-factors-are-diagonal-snf-entries"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">15.17</span><span class="period">.</span><span class="space"> </span><span class="title">Invariant Factors are Diagonal SNF Entries.</span>
 </h3>
-<div class="para" id="p-1851">The invariant factors of a matrix <span class="process-math">\(A\)</span> are the non-zero, non-unit diagonal entries of the SNF of <span class="process-math">\(xI_n - A\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-118"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-118"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-118"><article class="hiddenproof"><div class="para logical" id="p-1852">
+<div class="para" id="p-1846">The invariant factors of a matrix <span class="process-math">\(A\)</span> are the non-zero, non-unit diagonal entries of the SNF of <span class="process-math">\(xI_n - A\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-118"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-118"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-118"><article class="hiddenproof"><div class="para logical" id="p-1847">
 <div class="para">Let <span class="process-math">\(S\)</span> be the Smith Normal Form of <span class="process-math">\(xI_n - A\)</span> and let <span class="process-math">\(d_1, \dots, d_n\)</span> be its diagonal entries. As proven before, the matrix <span class="process-math">\(xI_n - A\)</span> and <span class="process-math">\(S\)</span> present isomorphic <span class="process-math">\(F[x]\)</span>-modules, and thus the Theorem gives an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1130,7 +1148,7 @@ F^n_A \cong F[x]/(f_1) \oplus \cdots \oplus F[x]/(f_k)
 </div></article></div>
 <article class="example example-like" id="exe-once-more-to-back-to-mat_2times-2q"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.18</span><span class="period">.</span><span class="space"> </span><span class="title">Once More to Back to <span class="process-math">\(\Mat_{2\times 2}(\Q)\)</span>.</span>
-</h3> <div class="para" id="p-1853">Let's find the invariant factors of the matrix <span class="process-math">\(A= \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \M_{2 \times 2}(\Q)\)</span> we looked at before, but this time using the Theorem and its Corollary.</div> <div class="para logical" id="p-1854">
+</h3> <div class="para" id="p-1848">Let's find the invariant factors of the matrix <span class="process-math">\(A= \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \M_{2 \times 2}(\Q)\)</span> we looked at before, but this time using the Theorem and its Corollary.</div> <div class="para logical" id="p-1849">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1138,7 +1156,7 @@ xI_2-A= \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix}.
 \end{equation*}
 </div>
 <div class="para">To find the invariant factors of <span class="process-math">\(A\)</span> we just need to find the Smith Normal Form of <span class="process-math">\(xI_2-A\text{.}\)</span> I'll do this two ways:</div>
-</div> <div class="para logical" id="p-1855">
+</div> <div class="para logical" id="p-1850">
 <div class="para">Method I: Do row and column operations using the generalized Euclidean algorithm:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1149,10 +1167,10 @@ xI_2-A= \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix}.
 \end{equation*}
 </div>
 <div class="para">Tossing out the unit, we see that the only invariant factor is <span class="process-math">\((x-1)^2\text{,}\)</span> as before.</div>
-</div> <div class="para" id="p-1856">Method II: Call <span class="process-math">\(d_1, d_2\)</span> the entries on the diagonal of the SNF of <span class="process-math">\(xI_2-A\text{.}\)</span> Recall from Theorem  that <span class="process-math">\(d_1\)</span> is the gcd of the entries of <span class="process-math">\(xI_2-A\)</span> and <span class="process-math">\(d_1d_2=\det(xI_2-A)\text{.}\)</span> Thus <span class="process-math">\(d_1=1\)</span> and <span class="process-math">\(d_2=\det(xI_2-A)=(x-1)^2\text{.}\)</span> Therefore the only invariant factor of <span class="process-math">\(A\)</span> is <span class="process-math">\((x-1)^2\text{.}\)</span>
+</div> <div class="para" id="p-1851">Method II: Call <span class="process-math">\(d_1, d_2\)</span> the entries on the diagonal of the SNF of <span class="process-math">\(xI_2-A\text{.}\)</span> Recall from Theorem  that <span class="process-math">\(d_1\)</span> is the gcd of the entries of <span class="process-math">\(xI_2-A\)</span> and <span class="process-math">\(d_1d_2=\det(xI_2-A)\text{.}\)</span> Thus <span class="process-math">\(d_1=1\)</span> and <span class="process-math">\(d_2=\det(xI_2-A)=(x-1)^2\text{.}\)</span> Therefore the only invariant factor of <span class="process-math">\(A\)</span> is <span class="process-math">\((x-1)^2\text{.}\)</span>
 </div></article><article class="example example-like" id="exe-finding-ifs-and-rcf"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.19</span><span class="period">.</span><span class="space"> </span><span class="title">Finding IFs and RCF.</span>
-</h3> <div class="para logical" id="p-1857">
+</h3> <div class="para logical" id="p-1852">
 <div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1166,7 +1184,7 @@ A =
 </div>
 <div class="para">Let us find the invariant factors and Rational Canonical Form of <span class="process-math">\(A\)</span> by finding the Smith Normal Form of <span class="process-math">\(xI_3 - A\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-1858">
+</div> <div class="para logical" id="p-1853">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1199,7 +1217,7 @@ C(x-1) \oplus C(x^2-1) =
 \end{bmatrix}.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1859">
+</div> <div class="para logical" id="p-1854">
 <div class="para">For an alternative approach, we could use that the diagonal entries <span class="process-math">\(d_1, d_2, d_3\)</span> of the Smith Normal Form of <span class="process-math">\(xI_3 - A\)</span> satisfy <span class="process-math">\(d_1 = \gcd(xI_3 - A)\text{,}\)</span> <span class="process-math">\(d_1d_2\)</span> is the gcd of the <span class="process-math">\(2 \times 2\)</span> minors of <span class="process-math">\(xI_3 - A\text{,}\)</span> and <span class="process-math">\(d_1d_2d_3 = \det(xI_3 - A)\text{.}\)</span> It's clear that <span class="process-math">\(d_1 = 1\)</span> and an easy calculation gives that <span class="process-math">\(\det(xI_3 - A) = (x-1)(x^2 -1)\text{.}\)</span> There are nine <span class="process-math">\(2 \times 2\)</span> minors of <span class="process-math">\(xI_3 - A\text{,}\)</span> and a tedious check reveals that each of them is one of <span class="process-math">\(x^2 -1\text{,}\)</span> <span class="process-math">\(x(x-1)\text{,}\)</span> <span class="process-math">\(x-1\)</span> or <span class="process-math">\(0\)</span> (up to signs). So <span class="process-math">\(d_1d_2 = x-1\text{.}\)</span> We get that</div>
 <div class="displaymath process-math">
 \begin{equation*}

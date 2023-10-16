@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Modern Algebra">
 <meta property="book:author" content="Sam Macdonald">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -26,6 +26,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.98,
@@ -475,10 +488,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-order-power.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Order and Power</span></a></div>
@@ -870,7 +880,15 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-binop.html#subsec-" class="internal"><span class="title">Algebraic Structures</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-inf-pres.html" class="internal"><span class="codenumber">B.2</span> <span class="title">An Informal Introduction to Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cayley-graphs.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Cayley Graphs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-symmetric-2.html" class="internal"><span class="codenumber">B.3</span> <span class="title">More Fun with Symmetric Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-subgroups" class="internal"><span class="title">Subgroups of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsec-sn-conj" class="internal"><span class="title">Conjugacy Classes of <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-symmetric-2.html#subsection-83" class="internal"><span class="title">Sage Calculators</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -892,23 +910,23 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-eds"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.1</span> <span class="title">Euclidean Domains</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-48">
-<div class="para" id="p-1307">“Find your domain and serve it to the world.”</div> <cite class="attribution">―Myles Munroe</cite>
+<blockquote class="blockquote" id="blockquote-47">
+<div class="para" id="p-1302">“Find your domain and serve it to the world.”</div> <cite class="attribution">―Myles Munroe</cite>
 </blockquote>
 <article class="definition definition-like" id="def-ed"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span><span class="space"> </span><span class="title">Euclidean Domain.</span>
-</h3> <div class="para logical" id="p-1308">
+</h3> <div class="para logical" id="p-1303">
 <div class="para">A <em class="emphasis">Euclidean domain (ED)</em> is a domain <span class="process-math">\(R\)</span> together with a <em class="emphasis">norm</em> function <span class="process-math">\(N: R \to \Z_{\geq 0}\)</span> such that <span class="process-math">\(N(0) = 0\)</span> and the following property holds: for any two elements <span class="process-math">\(a, b \in R\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> there are elements <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> of <span class="process-math">\(R\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 \end{equation*}
 </div>
-</div></article><section class="paragraphs" id="paragraphs-13"><h3 class="heading"><span class="title">Qual Watch.</span></h3> <div class="para" id="p-1309">Stating <a href="" class="xref" data-knowl="./knowl/def-ed.html" title="Definition 10.1: Euclidean Domain">Definition 10.1</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/jan-2020-4.html" title="Exercise D.1.4: Problem 4">Problem 4</a> on the <a href="" class="xref" data-knowl="./knowl/jan-2020.html" title="Exercise Group D.1.1–4: January 2020">January 2020</a> qualifying exam.</div></section><div class="para" id="p-1310">In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the <a href="" class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem A.37: Division Algorithm">Division Algorithm</a> for integers, which is what makes Euclidean domains so useful in number theory and algebra.</div>
-<div class="para" id="p-1311">Lets take a look at some examples to deepen our understanding.</div>
+</div></article><section class="paragraphs" id="paragraphs-13"><h3 class="heading"><span class="title">Qual Watch.</span></h3> <div class="para" id="p-1304">Stating <a href="" class="xref" data-knowl="./knowl/def-ed.html" title="Definition 10.1: Euclidean Domain">Definition 10.1</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/jan-2020-4.html" title="Exercise D.1.4: Problem 4">Problem 4</a> on the <a href="" class="xref" data-knowl="./knowl/jan-2020.html" title="Exercise Group D.1.1–4: January 2020">January 2020</a> qualifying exam.</div></section><div class="para" id="p-1305">In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the <a href="" class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem A.37: Division Algorithm">Division Algorithm</a> for integers, which is what makes Euclidean domains so useful in number theory and algebra.</div>
+<div class="para" id="p-1306">Lets take a look at some examples to deepen our understanding.</div>
 <article class="example example-like" id="ex-trivial-norm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Trivial Norm.</span>
-</h3> <div class="para logical" id="p-1312">
+</h3> <div class="para logical" id="p-1307">
 <div class="para">A "degenerate example" is a field <span class="process-math">\(F\)</span> equipped with the trivial norm <span class="process-math">\(N(r) = 0\)</span> for all <span class="process-math">\(r\text{.}\)</span> Given <span class="process-math">\(a,b \in F\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> we have <span class="process-math">\(a =(ab^{-1})b + 0\text{.}\)</span> Note that in this example there is no need to include <span class="process-math">\(r=0\)</span> in the description of the <a href="" class="xref" data-knowl="./knowl/thm-division-algorithm.html" title="Theorem A.37: Division Algorithm">Division Algorithm</a>, since <span class="process-math">\(b \ne 0\)</span> implies <span class="process-math">\(|0| &lt; |b|\text{.}\)</span> This is not the case in other examples. Also observe that as we've defined remainders they are <em class="emphasis">not</em> unique. For example, in dividing <span class="process-math">\(13\)</span> by <span class="process-math">\(5\text{,}\)</span> both</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-division-algorithm.html">
 \begin{equation*}
@@ -918,9 +936,9 @@ a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 <div class="para">are considered valid. This calculation shows, more generally, that if <span class="process-math">\(b\)</span> is a unit, then for all <span class="process-math">\(a\)</span> there exists an equation <span class="process-math">\(a = bq + r\)</span> with <span class="process-math">\(r = 0\text{,}\)</span> not matter what norm <span class="process-math">\(N\)</span> is used. One could make remainders (and hence quotients) unique for <span class="process-math">\(\Z\)</span> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.</div>
 </div></article><article class="example example-like" id="ex-degree-and-norm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial Rings over Fields are Euclidean Domains.</span>
-</h3> <div class="para" id="p-1313">The next classical example is <span class="process-math">\(F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be polynomial degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in <a href="" class="xref" data-knowl="./knowl/thm-polynomial-division-algorithm.html" title="Theorem 8.48: Polynomial Division Algorithm">Theorem 8.48</a>.</div></article><article class="example example-like" id="ex-gaussian-integers-are-an-ed"><h3 class="heading">
+</h3> <div class="para" id="p-1308">The next classical example is <span class="process-math">\(F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be polynomial degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in <a href="" class="xref" data-knowl="./knowl/thm-polynomial-division-algorithm.html" title="Theorem 8.48: Polynomial Division Algorithm">Theorem 8.48</a>.</div></article><article class="example example-like" id="ex-gaussian-integers-are-an-ed"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Guassian Integers are a Euclidean Domain.</span>
-</h3> <div class="para logical" id="p-1314">
+</h3> <div class="para logical" id="p-1309">
 <div class="para">The ring <span class="process-math">\(R = \Z[i]\)</span> of Gaussian integers is a Euclidean domain with <span class="process-math">\(N\)</span> being the usual complex (Euclidean) square norm <span class="process-math">\(N(a+bi)=a^2+b^2\text{.}\)</span> Let <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(\beta\)</span> <span class="process-math">\(\in \Z[i]\)</span> and let <span class="process-math">\(\frac{\alpha}{\beta}=p+qi \in \Q(i)\)</span> (here we use that the fraction field of <span class="process-math">\(\Z[i]\)</span> is <span class="process-math">\(\Q(i)\)</span>). Now pick <span class="process-math">\(s,t\in\Z\)</span> so that <span class="process-math">\(|p-s|\leq 1/2\)</span> and <span class="process-math">\(|q-t|\leq 1/2\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -936,18 +954,18 @@ N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;
 <div class="para">Thus the norm function <span class="process-math">\(N\)</span> makes <span class="process-math">\(\Z[i]\)</span> into a Euclidean domain.</div>
 </div></article><article class="definition definition-like" id="def-ed-gcd"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">GCD.</span>
-</h3> <div class="para logical" id="p-1315">
+</h3> <div class="para logical" id="p-1310">
 <div class="para">Given elements <span class="process-math">\(a, b\text{,}\)</span> not both <span class="process-math">\(0\text{,}\)</span> of a Euclidean domain <span class="process-math">\(R\)</span> with Euclidean norm <span class="process-math">\(N\text{,}\)</span> a <span class="process-math">\(\gcd\)</span> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is an element <span class="process-math">\(g \in\R\)</span> such that:</div>
 <ol class="decimal">
-<li id="li-463"><div class="para" id="p-1316">
+<li id="li-464"><div class="para" id="p-1311">
 <span class="process-math">\(g | a\)</span> and <span class="process-math">\(g | b\text{;}\)</span> and</div></li>
-<li id="li-464"><div class="para" id="p-1317">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
+<li id="li-465"><div class="para" id="p-1312">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="remark remark-like" id="remark-40"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1318">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in\igen a\text{.}\)</span>
+<div class="para" id="p-1313">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in\igen a\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-domains.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-pids.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

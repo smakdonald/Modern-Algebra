@@ -743,7 +743,7 @@
             <definition xml:id="commutative-axiom"><title>Commutative Property</title>
               <statement>
                 <p>
-                  An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
+                  An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>.
                   <idx><h>commutative property</h></idx>
                 </p>
               </statement>
@@ -798,6 +798,22 @@
                       <p>
                         For any <m>n\in\N</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. 
                         Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                      </p>
+                    </li>
+
+                    <li xml:id="def-quaternions">
+                      <p>
+                        The <em>quaternion group</em><idx><h>quaternion group</h></idx> <m>Q_8</m> is a set with <m>8</m> elements 
+                        <me>
+                          Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
+                        </me> 
+                        satisfying the following relations: <m>1</m> is the identity element and 
+                        <me>
+                          i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
+                        </me> 
+                        <me>
+                          (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
+                        </me>
                       </p>
                     </li>
                   </ol>
@@ -1064,64 +1080,6 @@
               <fn>This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
             </p>
 
-            <p>
-              As a little aside, we can also look at algebraic structures that are ~almost~ groups. 
-              For those who appreciate a snazzy visual, here is a handy little graphic.
-            </p>
-
-            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
-              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
-              <image source="images/magma.png" width="80%"/>
-            </figure>
-
-          </subsection>
-
-          <subsection xml:id="subsec-quat"><title>The Quaternions</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.
-                </q>
-              </p>
-              <attribution>William Thomson</attribution>
-            </blockquote>
-
-            <definition xml:id="def-quaternions"><title>Quaternions</title>
-              <statement>
-                <p>
-                  The <em>quaternion group</em><idx><h>quaternion group</h></idx> <m>Q_8</m> is a set with <m>8</m> elements 
-                  <me>
-                    Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
-                  </me> 
-                  satisfying the following relations: <m>1</m> is the identity element and 
-                  <me>
-                    i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
-                  </me> 
-                  <me>
-                    (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
-                  </me>
-                </p>
-              </statement>
-            </definition>
-
-            <p>
-              The quaternion group arises in the study of rotations in three dimensions. 
-              It has important applications in computer graphics and computer vision, as well as in physics and algebra.
-            </p>
-
-            <exercise xml:id="exe-heinous-commutes"><title>Heinous Commutes</title>
-              <statement>
-                <p>
-                  Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups when <m>n&gt;2</m>.
-                </p>
-              </statement>
-            </exercise>
-      
-            <p>
-              There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up.
-            </p>
-      
           </subsection>
 
           <outcomes>
@@ -1634,10 +1592,10 @@
               </statement>
             </definition>
 
-            <example xml:id="ex-cycle"><title>Cycle Example</title>
+            <example xml:id="ex-cycle"><title>Cycle</title>
               <p>
-                For example, <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. 
-                (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
+                When regarded as an element of <m>S_{13}</m>, <m>(1 \, 3 \, 7)</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. 
+                (Note that the value of <m>n</m> in cycle notation is sometimes ambiguous.)
               </p>
             </example>
 
@@ -19754,7 +19712,15 @@
 
           <subsection xml:id="subsec-binop"><title>Binary Operations, Revisited</title>
 
-            <p></p>
+            <p>
+              As a little aside, we can also look at algebraic structures that are ~almost~ groups. 
+              For those who appreciate a snazzy visual, here is a handy little graphic.
+            </p>
+
+            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
+              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
+              <image source="images/magma.png" width="80%"/>
+            </figure>
             
           </subsection>
 
@@ -19769,6 +19735,214 @@
         <section xml:id="sec-cayley-graphs"><title>Cayley Graphs</title>
 
           <p></p>
+          
+        </section>
+
+        <section xml:id="sec-symmetric-2"><title>More Fun with Symmetric Groups</title>
+
+          <subsection xml:id="subsec-sn-subgroups"><title>Subgroups of <m>S_n</m></title>
+
+            <paragraphs><title>Subgroups of <m>S_4</m></title>
+
+              <tabular>
+                <row>
+                  <cell>Order</cell> <cell>Conjugates</cell> <cell>Group</cell> <cell>Transitive</cell> <cell>Normal</cell>
+                </row>
+                <row>
+                  <cell>12</cell> <cell>1</cell> <cell><m>A_4</m></cell> <cell>Yes</cell> <cell>Yes</cell>
+                </row>
+                <row>
+                  <cell>8</cell> <cell>3</cell> <cell><m>D_8</m></cell> <cell>Yes</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>6</cell> <cell>4</cell> <cell><m>S_3</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>4</cell> <cell>3</cell> <cell><m>\Z/4</m></cell> <cell>Yes</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>4</cell> <cell>1</cell> <cell><m>V_4</m></cell> <cell>Yes</cell> <cell>Yes</cell>
+                </row>
+                <row>
+                  <cell>4</cell> <cell>3</cell> <cell><m>V_4</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>3</cell> <cell>4</cell> <cell><m>\Z/3</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>2</cell> <cell>6</cell> <cell><m>\Z/2</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>2</cell> <cell>3</cell> <cell><m>\Z/2</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>1</cell> <cell>1</cell> <cell><m>\{e\}</m></cell> <cell>No</cell> <cell>No</cell>
+                </row>
+              </tabular>
+
+              <p></p>
+              
+            </paragraphs>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-sn-conj"><title>Conjugacy Classes of <m>S_n</m></title>
+            
+            <lemma xml:id="lem-sn-conj">
+              <statement>
+                <p>
+                  For <m>\sigma\in S_n</m> and distinct intgers <m>i_1, \dots, i_p</m> we have 
+                  <me>
+                    \sigma(i_1 \, i_2 \, \cdots i_p) \sigma^{-1} = (\sigma(i_1) \, \cdots \, \sigma(i_p)).
+                  </me> 
+                  (Note that the right-hand cycle is a cycle since <m>\sigma</m> is one-to-one.)
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  To prove this, evaluate both sides at <m>\sigma(i_t)</m> for any <m>t</m> and observe that one gets <m>\sigma(i_{t+1})</m> (with the supscript taken modulo <m>p</m>) both times. 
+                  This proves they agree on the set <m>\sigma(\{i_1, \dots, i_p\})</m>. 
+                  If <m>j</m> is not in this set, then <m>(i_1 \, i_2 \, \cdots i_p)</m> fixes <m>\sigma^{-1}(j)</m> so the left-hand side fixes <m>j</m>. 
+                  So does the right, since <m>\sigma^{-1}(j) \notin \{\sigma(i_1), \dots, \sigma(i_p)\}</m>. 
+                  Thus the two functions coincide on elements.
+                </p>
+              </proof>
+            </lemma>
+
+            <proposition xml:id="prop-sn-conj"><title>Conjugates in <m>S_n</m></title>
+              <statement>
+                <p>
+                  Two elements of <m>S_n</m> are conjugate if and only if they have the same cycle type.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If two elements of <m>S_n</m> are conjugate, say <m>\beta = \sigma\alpha \sigma^{-1}</m>, then they have the same cycle type, since we may write <m>\alpha</m> as a product of disjoint cycles <m>\alpha = \alpha_1 \cdots \alpha_m</m> and then apply <xref ref="lem-sn-conj"/>. 
+                  Indeed, <m>\sigma\alpha \sigma^{-1} = (\sigma\alpha_1 \sigma^{-1})  \cdots (\sigma\alpha_m \sigma^{-1})</m> and <xref ref="lem-sn-conj"/> shows that the right-side is a product of disjoint cycles.
+                </p>
+
+                <p>
+                  Conversely, suppose <m>\alpha = \alpha_1 \cdots \alpha_k</m> and <m>\beta = \beta_1 \cdots \beta_k</m> are decompositions into disjoint cycles and that <m>\alpha_i, \beta_i</m> both have length <m>p_i \geq 2</m> for all <m>i</m>. 
+                  We need to prove <m>\alpha</m> and <m>\beta</m> are conjugate. 
+                  Let’s start with the case <m>k = 1</m>: given two cycles of the same length 
+                  <me>
+                    \alpha = (i_1 \, \dots \, i_p) \text{ and } \beta = (j_1 \, \dots \, j_p).
+                  </me> 
+                  If <m>\sigma</m> is any permutation such that <m>\sigma(i_m) = j_m</m> for all <m>m = 1, \dots, p</m>, then <m>\sigma\alpha\sigma^{-1} = \beta</m> by <xref ref="lem-sn-conj"/>.
+                </p>
+
+                <p>
+                  Note that such <m>\sigma</m> is <q>allowed</q> to map <m>\{1, \dots, n\} \setminus \{i_1 \, \dots \, i_p\}</m> bijectively to <m>\{1, \dots, \} \setminus \{j_1 \, \dots \, j_p\}</m> in any way possible. 
+                  From this observation the general case follows: since the cycles are disjoint, we can find a single permutation <m>\sigma</m> such that <m>\sigma\alpha_i \sigma^{-1} = \beta_i</m> for all <m>i</m>.
+                </p>
+              </proof>
+            </proposition>
+
+            <example>
+              <p>
+                The conjugacy classes for <m>S_4</m> are
+                <ol>
+                  <li>
+                    <p>
+                      <m>\{e\}</m>,
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      all two cycles of which there are <m>{4 \choose 2} = 6</m>,
+                    </p>
+                </li>
+      
+                  <li>
+                    <p>
+                      all three cycles of which there are <m>4 \cdot 2 = 8</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      all four cycles of which there are <m>3! = 6</m>, and
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      all product of two disjoint two cycles of which there are <m>3</m>.
+                    </p>
+                  </li>
+                </ol>
+                This totals <m>24</m>, as we need, since the conjugacy classes partition <m>S_4</m>.
+              </p>
+            </example>
+
+            <p>
+              One thing we get from the previous example and lemma is a very short list of all possible sizes of normal subgroups of <m>S_4</m>.
+            </p>
+
+            <example>
+              <p>
+                An important, general observation is that, any group <m>G</m> and <m>N \unlhd G</m>, since <m>gNg^{-1} = N</m> for all <m>g</m>, it follows that <m>N</m> is necessarily a union of conjugacy classes. 
+                In other words, the action of <m>G</m> on itself by conjugation restricts to an action on <m>N</m> since <m>N</m> is normal, and thus <m>N</m> is a union of orbits of this action. 
+                Moreover, if <m>G</m> is finite then, by Lagrange, <m>|N| \mid |G|</m>. 
+                Finally, <m>N</m> certainly contains <m>e</m>. 
+                Putting these facts together we get than <m>|N|</m> must both divide <m>|G|</m> and be a sum of cardinalities of conjugacy classes, including the class <m>\{e\}</m>.
+              </p>
+
+              <p>
+                For example, if <m>N \unlhd S_4</m>, then <m>|N| \mid 24</m> and <m>|N|</m> must equal <m>1</m> plus the sum of some sub-list of <m>6, 8, 6, 3</m>. 
+                The only possibilities are 
+                <me>
+                  1, 1 + 3, 1 + 3 + 8, \and 1 + 6 + 8 + 6 + 3
+                </me>
+              </p>
+
+              <p>
+                Having determined the sizes, also determines what the corresponding set <m>N</m> is. 
+                Let me stress that just because the size of <m>N</m> satisfies the restrictions given by Lagrange’s theorem and Corollary <xref provisional="lemnormconj" /> it does not automatically follow that <m>N</m> really is a subgroup or that it is normal. 
+                (In other words these are just necessary conditions.) 
+                So we still need to check whether the candidate sets we found do indeed give normal subgroups.
+              </p>
+
+              <p>
+                The first and last case represent the boring normal subgroups: <m>\{e\}</m> and <m>G</m>. 
+                The case <m>1 + 3</m> also represents a normal subgroup, which consists of all the products of all product of two disjoint two cycles and the identity: 
+                <me>
+                  V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
+                </me> 
+                The last case also corresponds to a normal subgroup which is <m>A_4</m>.
+              </p>
+            </example>
+
+          </subsection>
+
+          <subsection><title>Sage Calculators</title>
+        
+            <sage>
+              <input>
+                Sn = SymmetricGroup(n)
+              </input>
+            </sage>
+
+            <sage>
+              <input>
+                Sn([1,2,3])*Sn([3,1,2])
+              </input>
+            </sage>
+
+            <sage>
+              <input>
+                Sn([3,1,2])^2
+              </input>
+            </sage>
+
+            <sage type="practice" />
+
+            
+
+          </subsection>
           
         </section>
 
