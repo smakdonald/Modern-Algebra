@@ -20165,7 +20165,7 @@
                     Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. 
                     In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. 
                     By <xref text="title" ref="thm-lagrange"/>, <m>[G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. 
-                    Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. 
+                    Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n}-1 \not\mid p^n</m>. 
                     Thus <m>Z(G)\neq\{e\}</m>.
                   </p>
     
