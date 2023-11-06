@@ -4486,6 +4486,15 @@
               </p>
             </example>
 
+            <theorem xml:id="thm-normal-subgroup-cps"><title>Closure Properties of Normal Subgroups</title>
+              <statement>
+                <p>
+                  Normalility is preserved under taking intersections and preimages.
+                </p>
+              </statement>
+            </theorem>
+            
+
             <exercise xml:id="exe-normality-not-transitive"><title>Normality is not Transitive</title>
               <statement>
                 <p>
