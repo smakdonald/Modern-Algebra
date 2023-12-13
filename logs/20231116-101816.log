@@ -1,0 +1,6 @@
+INFO    : PreTeXt project found in `/Users/smakdonald/Modern-Algebra`.
+CRITICAL: The file /Users/smakdonald/Modern-Algebra/source/main.ptx does not exist
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : While running pretext, the following errors occurred:
+

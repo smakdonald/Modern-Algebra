@@ -11,8 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">First, let <span class="process-math">\(\psi\in\Aut(H)\)</span> and <span class="process-math">\(\phi\in\Aut(K)\text{.}\)</span> Let <span class="process-math">\(\varphi:H\times K\to H\times K\)</span> be defined by <span class="process-math">\(\varphi(h,k)=(\psi(h),\phi(k))\text{.}\)</span> Let <span class="process-math">\((h,k)\in H\times K\text{.}\)</span> As <span class="process-math">\(\psi,\phi\)</span> automorphisms, there exist <span class="process-math">\(h',k'\)</span> such that <span class="process-math">\(\psi(h')=h\)</span> and <span class="process-math">\(\phi(k')=k\text{.}\)</span> Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus <span class="process-math">\(\varphi\)</span> is indeed an automorphism of <span class="process-math">\(H\times K\text{.}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-normal-union-of-conjugacy-classes.html" title="Theorem 5.23: Normal Subgroups are Unions of Conjugacy Classes">Theorem 5.23</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-normal-union-of-conjugacy-classes.html ./knowl/thm-lagrange.html">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(g_i)|.
+\end{equation*}
+</div>
+<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 2.60: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-qual.html#p-2380" class="internal">in-context</a></span>
 </body>

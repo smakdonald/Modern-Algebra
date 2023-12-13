@@ -11,8 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">We can use the map above to understand the notions of isometry and orientation-preserving a little more rigorously. Indeed, an invertible linear transformation, equivalently an element <span class="process-math">\(M\in \operatorname{GL}_n({\mathbb{R}})\)</span> is an isometry if and only if <span class="process-math">\(\det(M)=\pm 1\text{.}\)</span> An invertible linear transformation, equivalently an element <span class="process-math">\(M\in \operatorname{GL}_n({\mathbb{R}})\)</span> is orientation-preserving if and only if <span class="process-math">\(\det(M)&gt;0\text{.}\)</span> Thus the group of orientation-preserving isometries of <span class="process-math">\({\mathbb{R}}^n\)</span> can be identified with <span class="process-math">\(\operatorname{SL}_n({\mathbb{R}})\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">To find a groups homomorphism <span class="process-math">\(D_{2n}\to \operatorname{GL}_2({\mathbb{R}})\)</span> it suffices to find a map <span class="process-math">\(g:\{r,s\}\to \operatorname{GL}_2({\mathbb{R}})\text{,}\)</span> say <span class="process-math">\(r\mapsto R, s\mapsto S\)</span> and to verify that <span class="process-math">\(S^2=I_2,R^n=I_2, SRSR=I_2\text{.}\)</span> As you have shown on homework, this does hold for the matrices</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R=\begin{bmatrix} \cos\left(\frac{2\pi}{n}\right) &amp; -\sin\left(\frac{2\pi}{n}\right) \\ \sin\left(\frac{2\pi}{n}\right)&amp; \cos\left(\frac{2\pi}{n}\right)\end{bmatrix}, S=\begin{bmatrix}  0 &amp; 1 \\ 1&amp; 0\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">By the UMP of the presentation there is a group homomorphism <span class="process-math">\(f:D_{2n}\to \operatorname{GL}_2({\mathbb{R}})\)</span> that extends <span class="process-math">\(g\text{;}\)</span> that is <span class="process-math">\(f(r^is)=R^iS\)</span> for all <span class="process-math">\(0\leq i&lt;n\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-presentations.html#p-678" class="internal">in-context</a></span>
 </body>
