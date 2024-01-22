@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Principal Ideal Domains</title>
+<title>Principal Ideal Domains (PIDs)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -576,21 +576,26 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ch-rings.html" class="internal"><span class="codenumber">8</span> <span class="title">Intro to Rings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Ring Basics</span></a></div>
+<div class="toc-title-box"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Rings and Subrings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-subrings" class="internal"><span class="title">Subrings</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Subrings and Polynomial Rings</span></a></div>
+<div class="toc-title-box"><a href="sec-units.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Units, Zerodivisors, Domains</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#subsec-subrings" class="internal"><span class="title">Subrings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-units.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-units.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Homomorphisms and Polynomial Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#sec-ring-hom" class="internal"><span class="title">Homomorphisms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#subsec-polyrings" class="internal"><span class="title">Polynomial Rings</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Homomorphisms</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -604,7 +609,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Quotient Rings</span></a></div>
+<div class="toc-title-box"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Quotient Rings and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
@@ -622,18 +627,15 @@ window.MathJax = {
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-domains.html" class="internal"><span class="codenumber">10</span> <span class="title">Commutative Domains</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-eds.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Euclidean Domains</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-pids.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Principal Ideal Domains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-ufds.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-eds.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Euclidean Domains (EDs)</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-pids.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Principal Ideal Domains (PIDs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-ufds.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Unique Factorization Domains (UFDs)</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-noeth.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Noetherian Rings</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-fof-poly-ufd.html" class="internal"><span class="codenumber">11</span> <span class="title">Fields of Fractions and Polynomial UFDs</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Fields of Fractions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Irredicuble Polynomials</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="ch-fof-poly-ufd.html" class="internal"><span class="codenumber">11</span> <span class="title">Fields of Fractions and Localization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Fields of Fractions</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -717,8 +719,9 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-extensions.html" class="internal"><span class="codenumber">16</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Irredicuble Polynomials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="field-extension-basics.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Field Extension Basics</span></a></div>
+<div class="toc-title-box"><a href="field-extension-basics.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Field Extension Basics</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="field-extension-basics.html#subsec-field-extensions" class="internal"><span class="title">Welcome to Field Extensions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="field-extension-basics.html#subsec-field-ext-degree" class="internal"><span class="title">Degree of a Field Extension</span></a></div></li>
@@ -727,22 +730,22 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-algebraic.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Algebraic Extensions</span></a></div>
+<div class="toc-title-box"><a href="sec-algebraic.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Algebraic Extensions</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-algebraic.html#subsec-algebraic-elements" class="internal"><span class="title">Algebraic Elements</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-algebraic.html#subsec-algebraic-extension" class="internal"><span class="title">Algebraic Field Extensions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-closure.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Algebraic Closures</span></a></div>
+<div class="toc-title-box"><a href="sec-closure.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Algebraic Closures</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-closure.html#subsec-closures" class="internal"><span class="title">Clooooosing Time</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-splitting.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Splitting Fields</span></a></div>
+<div class="toc-title-box"><a href="sec-splitting.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Splitting Fields</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-splitting.html#subsec-splitting" class="internal"><span class="title">Split Up and Look For Clues</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-separable.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Separability</span></a></div>
+<div class="toc-title-box"><a href="sec-separable.html" class="internal"><span class="codenumber">16.6</span> <span class="title">Separability</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-separable.html#subsec-characteristic" class="internal"><span class="title">Ring Characteristic</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-separable.html#subsec-sep-poly" class="internal"><span class="title">Separable Polynomials</span></a></div></li>
@@ -852,7 +855,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-pids"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Principal Ideal Domains</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Principal Ideal Domains (PIDs)</span>
 </h2>
 <blockquote class="blockquote" id="sec-pids-2">
 <div class="para" id="sec-pids-2-1">“One chance is all you need.”</div> <cite class="attribution">―Jesse Owens</cite>

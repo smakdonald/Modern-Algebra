@@ -6550,7 +6550,7 @@
               </p>
             </remark>
 
-            <paragraphs> <title>Notation Check</title>
+            <paragraphs><title>Notation Check</title>
               <p>
                 There have been a lot of new sets introduced recently, all of whom seem to be flying around with reckless abandon. 
                 Here's a quick refresher:
@@ -22108,7 +22108,7 @@
                 </p>
   
                 <p>
-                  Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action <xref provisional="cite"/>, meaning there is exactly one orbit, <m>\Orb(sP)</m>, for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By <xref text="title" ref="cor-orbit-stabilizer"/>, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
+                  Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action <xref provisional="cite"/>, meaning there is exactly one orbit, <m>\Orb(sP)</m>, for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By <xref text="title" ref="thm-orbit-stabilizer"/>, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
                 </p>
   
                 <p>
@@ -22191,7 +22191,7 @@
                 </p>
   
                 <p>
-                  As <m>N\nsg G</m>, by <xref ref="cor-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
+                  As <m>N\nsg G</m>, by <xref ref="thm-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
                   Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. 
                   This yields 
                   <me>|N| = 1+ \sum_i^r |G : C_G(g_i)|.</me> 
@@ -22476,7 +22476,7 @@
                 <p>
                   Suppose by way of contradiction there existed some <m>s\in G</m> such that <m>S=C_s(G)</m>. 
                   Let <m>G</m> act on itself through conjugation, making <m>S=C_s(G)=\Orb(s)</m> by the definition of conjugacy class. 
-                  The <xref text="title" ref="cor-orbit-stabilizer"/> tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. 
+                  The <xref text="title" ref="thm-orbit-stabilizer"/> tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. 
                   However, <m>|G|=\frac{7!}{2}</m> and <m>|S|=6!</m>, so this is a contradiction. 
                   Thus <m>S</m> is not a conjugacy class of <m>G</m>.
                 </p>
@@ -22535,7 +22535,7 @@
                     <li>
                       <p>
                         The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. 
-                        Since <m>G</m> is finite, the <xref text="title" ref="cor-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. 
+                        Since <m>G</m> is finite, the <xref text="title" ref="thm-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. 
                         Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. 
                         Thus there cannot exist any fixed points.
                       </p>
@@ -22734,7 +22734,7 @@
                   </p>
   
                   <p>
-              By <xref text="title" ref="cor-orbit-stabilizer"/> we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
+              By <xref text="title" ref="thm-orbit-stabilizer"/> we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
             </p>
   
             <p>
@@ -22934,7 +22934,7 @@
             </p>
   
             <p>
-              Part (b) Suppose <m>Z(G)</m> is trivial, and let <m>G</m> act on <m>S</m> by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition <m>S</m>, so we have<me>|S|=\sum\limits_{x\in S}|\Orb_G(x)|</me>for distinct orbits. However, by <xref text="title" ref="cor-orbit-stabilizer"/> we also have <m>|G|=|\Orb(x)|\cdot |\Stab(x)|</m> for all <m>x\in S</m>. Now recall the <xref text="title" ref="thm-class-eq"/>: <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)]</me>With all that out of the way, let <m>x,y\in S</m>. Notice that <m>x^{p^{m}}=e=y^{p^{m}}</m>
+              Part (b) Suppose <m>Z(G)</m> is trivial, and let <m>G</m> act on <m>S</m> by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition <m>S</m>, so we have<me>|S|=\sum\limits_{x\in S}|\Orb_G(x)|</me>for distinct orbits. However, by <xref text="title" ref="thm-orbit-stabilizer"/> we also have <m>|G|=|\Orb(x)|\cdot |\Stab(x)|</m> for all <m>x\in S</m>. Now recall the <xref text="title" ref="thm-class-eq"/>: <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)]</me>With all that out of the way, let <m>x,y\in S</m>. Notice that <m>x^{p^{m}}=e=y^{p^{m}}</m>
             </p>
   
             <p>
@@ -23027,7 +23027,7 @@
   
               <solution>
                 <p>
-              Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the <xref text="title" ref="cor-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
+              Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the <xref text="title" ref="thm-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
             </p>
   
             <p>
@@ -23062,7 +23062,7 @@
               <solution>
                 <p>
               Let <m>p</m> be a prime and <m>H</m> a finite <m>p</m>-group. 
-              Part (a) Suppose <m>H</m> acts on the finite set <m>S</m>, and let <m>S_0</m> be the fixed points of the action. Let <m>x\in S_0</m>, and note that <m>\Stab_H(x)=H</m>. By <xref text="title" ref="cor-orbit-stabilizer"/>Stabilizer we see <m>|\Orb_H(x)|=1</m>.
+              Part (a) Suppose <m>H</m> acts on the finite set <m>S</m>, and let <m>S_0</m> be the fixed points of the action. Let <m>x\in S_0</m>, and note that <m>\Stab_H(x)=H</m>. By <xref text="title" ref="thm-orbit-stabilizer"/>Stabilizer we see <m>|\Orb_H(x)|=1</m>.
             </p>
   
             <p>
@@ -23313,7 +23313,7 @@
   
                       <p>
                         The conjugation action on Sylow subgroups is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>, and thus there is exactly one orbit under this action by <xref provisional="cite"/>. 
-                        By <xref text="title" ref="cor-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>, and thus <m>|\Stab(x)|=p+1</m> for every <m>x\in P</m>. 
+                        By <xref text="title" ref="thm-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>, and thus <m>|\Stab(x)|=p+1</m> for every <m>x\in P</m>. 
                         However, <m>p</m> of these elements are accounted for by <m>P</m> and the last element is the identity, thus the only elements of <m>N_G(P)</m> are those in <m>P</m>.
                       </p>
                     </li>
@@ -23676,8 +23676,6 @@
             </activity>
             
           </subsection>
-
-          
 
         </section>
 
