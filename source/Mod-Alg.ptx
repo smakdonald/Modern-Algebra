@@ -12226,7 +12226,7 @@
               <attribution>A.J. Sheppard</attribution>
             </blockquote>
 
-            <definition xml:id="def-module-homomorphism"><title>Module Homomorphism</title>
+            <definition xml:id="def-module-homomorphism"><title><m>R</m>-Module Homomorphism</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
@@ -12267,7 +12267,7 @@
 
             <remark>
               <p>
-                Unlike its group or ring counterparts, a module homomorphism does <em>not</em> need to map <m>1</m> to <m>1</m>.
+                Unlike ring homomorphisms, a <m>R</m>-module homomorphism does <em>not</em> need to map <m>1</m> to <m>1</m>.
               </p>
             </remark>
 
@@ -12306,7 +12306,7 @@
               </solution>
             </example>
 
-            <definition xml:id="def-module-isomorphism"><title>Module Isomorphism</title>
+            <definition xml:id="def-module-isomorphism"><title><m>R</m>-Module Isomorphism</title>
               <statement>
                 <p>
                   An <m>R</m>-module homomorphism <m>\varphi: M \to N</m> is an <m>R</m>-module <em>isomorphism</em> if there is another <m>R</m>-module homomorphism <m>\phi: N \to M</m> such that <m>\varphi \circ \phi = \id_M</m> and <m>\phi \circ \varphi = \id_N</m>.
@@ -12346,35 +12346,26 @@
               <statement>
                 <p>
                   Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
-                  Then the inclusion map <m>i : N → M</m> is an <m>R</m>-module homomorphism.
+                  Then the inclusion map <m>i : N \to M</m> is an <m>R</m>-module homomorphism.
                 </p>
               </statement>
             </exercise>
 
-            <definition xml:id="def-cokernel"><title>Cokernel</title>
-              <statement>
-                <p>
-                  The <term>cokernel</term> of an <m>R</m>-module homomorphism is the set 
-                  <idx><h>cokernel</h></idx>
-                </p>
-              </statement>
-            </definition>
-
             <theorem xml:id="thm-kernels-and-images-of-homomorphisms-are-submodule"><title>Kernels and Images are Submodules</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a ring and let <m>h: M \to M'</m> be an <m>R</m>-module homomorphism. 
+                  Let <m>R</m> be a ring and let <m>\varphi: M \to N</m> be an <m>R</m>-module homomorphism. 
                   Then 
                   <ol>
                     <li>
                       <p>
-                        <m>\ker(h) := \{m \in M \mid h(m) = 0_N\}</m> is an <m>R</m>-submodule of <m>M</m> and
+                        <m>\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}</m> is an <m>R</m>-submodule of <m>M</m> and
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>\im(h)</m> is an <m>R</m>-submodule of <m>M'</m>.
+                        <m>\im(\varphi)</m> is an <m>R</m>-submodule of <m>N</m>.
                       </p>
                     </li>
                   </ol>
@@ -12400,57 +12391,37 @@
                 <p>
                   Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
                   Then <m>\Hom_R(M, N )</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>, and <m>\End_R(M)</m> denotes the set <m>\Hom_R(M, M)</m>. 
-                  We call <m>\End(M)</m> the <term>endomorphism ring</term> of <m>M</m> , and elements of <m>\End(M)</m> are called <term>endomorphisms</term> of <m>M</m>.
-                  <idx><h><m>\End_R</m></h></idx>
                   <idx><h><m>\Hom_R</m></h></idx>
                   <idx><h>endomorphism</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <exercise>
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <m>\End(M)</m> is a ring. 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>HomR(M, N)</m> is <em>not</em> a ring.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </exercise>
-
-            <proposition xml:id="prop-hom-module">
+            <proposition xml:id="prop-hom-module"><title><m>\Hom_R(M,N)</m> is an <m>R</m>-module</title>
               <statement>
                 <p>
                   Let <m>M</m> and <m>N</m> be <m>R</m>-modules over a commutative ring <m>R</m>. 
                   Then <m>\Hom_R(M, N )</m> is an <m>R</m>-module using the following structure:
-                  Given <m>\varphi, \phi \in \Hom_R(M, N )</m>, <m>\varphi + \phi</m> is the map defined by
-                  <m>(\varphi + \phi)(m) := \varphi (m) + \phi(m)</m>,
-                  and given <m>r ∈ R</m> and <m>\varphi \in \Hom_R(M, N )</m>, <m>r \cdot \varphi</m> is the <m>R</m>-module homomorphism defined by
-                  <m>(r \cdot \varphi )(m) := r \cdot \varphi (m) = \varphi (rm).</m>
+                  <ol>
+                    <li><title>Rule for Addition</title>
+                      <p>
+                        Given <m>\varphi, \phi \in \Hom_R(M, N )</m>, <m>\varphi + \phi</m> is the map defined by <m>(\varphi + \phi)(m) := \varphi (m) + \phi(m)</m>,
+                      </p>
+                    </li>
+
+                    <li><title>Rule for Scaling</title>
+                      <p>
+                        Given <m>r ∈ R</m> and <m>\varphi \in \Hom_R(M, N )</m>, <m>r \cdot \varphi</m> is the <m>R</m>-module homomorphism defined by
+                        <m>(r \cdot \varphi )(m) := r \cdot \varphi (m) = \varphi (rm).</m>                      
+                      </p>
+                    </li>
+                  </ol>
                   The zero element of <m>\Hom_R(M, N )</m> is the zero map.
                 </p>
               </statement>
             </proposition>
 
-            <remark>
-              <p>
-                We will see later that for an <m>n</m>-dimensional vector space <m>V</m> over a field <m>F</m>, there is an isomorphism of vector spaces <m>EndF (V ) ∼= Mn(F )</m>. 
-                This says that every linear transformation <m>T : V → V</m> corresponds to some <m>n × n</m> matrix. 
-                However, the story for general <m>R</m>-modules is a lot more complicated.
-              </p>
-            </remark>
-
-            <theorem xml:id="thm-hom-iso">
+            <theorem xml:id="thm-hom-iso"><title><m>\Hom_R(R,M) \cong M</m></title>
               <statement>
                 <p>
                   For any commutative ring <m>R</m> with <m>1 \ne 0</m> and any <m>R</m>-module <m>M</m> there is an isomorphism of <m>R</m>-modules <m>\Hom_R(R, M ) \cong M</m>.
@@ -12502,11 +12473,20 @@
               <statement>
                 <p>
                   Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
-                  The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be 
-                  <me>
-                    r \cdot (m + N) = rm + N
-                  </me> 
-                  for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                  The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m>) using the following structure:
+                  <ol>
+                    <li><title>Rule for Addition</title>
+                      <p>
+                        Addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>
+                      </p>
+                    </li>
+
+                    <li><title>Rule for Scaling</title>
+                      <p>
+                        Scaling by <m>R</m> defined to by <m>r \cdot (m + N) = rm + N</m> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                      </p>
+                    </li>
+                  </ol>
                   <idx><h>quotient module</h></idx>
                 </p>
               </statement>
