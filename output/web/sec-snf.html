@@ -706,7 +706,13 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-canform.html" class="internal"><span class="codenumber">15</span> <span class="title">Canonical Forms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rcf.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Rational Canonical Form</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-rcf.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Rational Canonical Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-rcf.html#subsec-fx" class="internal"><span class="title">The <span class="process-math">\(F[x]\)</span>-Module <span class="process-math">\(V_g\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-rcf.html#subsec-rcf" class="internal"><span class="title">Rational Heads Prevail</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cayley-hamilton.html" class="internal"><span class="codenumber">15.2</span> <span class="title">The Cayley-Hamilton Theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-jcf.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Jordan Canonical Form</span></a></div></li>
 </ul>
@@ -976,7 +982,13 @@ d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_
 </div></article><details id="thm-smith-normal-form-is-unique-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="thm-smith-normal-form-is-unique-3-1">Recall that for a PID <span class="process-math">\(R\text{,}\)</span> the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma  implies that <span class="process-math">\(\gcd_k(A) = \gcd_k(S)\)</span> for all <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(S\)</span> is diagonal, the only non-zero minors of <span class="process-math">\(S\)</span> are those given by indices <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq m\)</span> and<span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq m\)</span> for which <span class="process-math">\(i_t = j_t\)</span> for all <span class="process-math">\(1 \leq t \leq k\text{,}\)</span> and moreover such a minor is equal to <span class="process-math">\(d_{i_1} \cdots d_{i_k}\text{.}\)</span> Since <span class="process-math">\(d_l \mid d_{l+1}\)</span> for all <span class="process-math">\(l\text{,}\)</span> it follows that <span class="process-math">\(d_{1} \cdots d_k\)</span> divides <span class="process-math">\(d_{i_1} \cdots d_{i_k}\)</span> for all <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq n\text{.}\)</span> Thus <span class="process-math">\(\gcd_k(S) = d_1 \cdots d_k\text{,}\)</span> for each <span class="process-math">\(k\text{,}\)</span> and hence <span class="process-math">\(d_k = \gcd_k(S)/\gcd_{k-1}(S)\)</span> as claimed.</div></article></details><article class="remark remark-like" id="sec-snf-13"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.23</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-snf-13-1">So, another way of finding the SNF of a matrix <span class="process-math">\(A\)</span> with entries in a Euclidean domain is to calculate <span class="process-math">\(\gcd_k(A)\)</span> for all <span class="process-math">\(k\text{.}\)</span> This is not practical except in very special cases.</div></article></section></div>
+<div class="para" id="sec-snf-13-1">So, another way of finding the SNF of a matrix <span class="process-math">\(A\)</span> with entries in a Euclidean domain is to calculate <span class="process-math">\(\gcd_k(A)\)</span> for all <span class="process-math">\(k\text{.}\)</span> This is not practical except in very special cases.</div></article><article class="outcomes goal-like" id="sec-snf-14"><h3 class="heading"><span class="type">Summary</span></h3>
+<ul class="disc">
+<li id="sec-snf-14-1-1"><div class="para" id="sec-snf-14-1-1-1"></div></li>
+<li id="sec-snf-14-1-2"><div class="para" id="sec-snf-14-1-2-1"></div></li>
+<li id="sec-snf-14-1-3"><div class="para" id="sec-snf-14-1-3-1"></div></li>
+<li id="sec-snf-14-1-4"><div class="para" id="sec-snf-14-1-4-1"></div></li>
+</ul></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-modpres.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-modclass.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
