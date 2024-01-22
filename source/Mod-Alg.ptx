@@ -12244,14 +12244,16 @@
                       </p>
                     </li>
                   </ol>
+                  When R is a field, we refer to <m>\varphi</m> as a <em>linear transformation</em>
                   <idx><h>module homomorphism</h></idx>
                   <idx><h><m>R</m>-module homomorphism</h></idx>
                   <idx><h><m>R</m>-map</h></idx>
+                  <idx><h>linear transformation</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <exercise>
+            <exercise><title><m>\varphi(0)=0</m></title>
               <statement>
                 <p>
                   <m>\varphi(0)=0</m>.
@@ -12261,6 +12263,7 @@
               <solution>
                 <p>
                   The condition <m>\varphi (m + n) = \varphi (m) + \varphi (n)</m> says that <m>\varphi</m> is a homomorphism of abelian groups. 
+                  Thus <m>\varphi(0)=0</m>. by <xref ref="thm-grphomom-preservations"/>.
                 </p>
               </solution>
             </exercise>
@@ -12271,36 +12274,22 @@
               </p>
             </remark>
 
-            <p>
-              When the ring of scalars is a field, special terminology is used:
-            </p>
-            
-            <definition xml:id="def-linear-transformation"><title>Linear Transformation</title>
-              <statement>
-                <p>
-                  Let <m>F</m> be a field and let <m>M</m> and <m>N</m> be vector spaces over <m>F</m>. 
-                  A <em>linear transformation</em> from <m>M</m> to <m>N</m> is an <m>F</m>-module homomorphism <m>h:M \to N</m>.
-                  <idx><h>linear transformation</h></idx>
-                </p>
-              </statement>
-            </definition>
-
-            <example>
+            <example><title>Multipication Map is <m>R</m>-Map</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring and <m>M</m> be an <m>R</m>-module. 
-                  For each <m>r ∈ R</m>, the multiplication map <m>μr : M → M</m> given by <m>μr(m) = rm</m> is a homomorphism of <m>R</m>-modules.
+                  For each <m>r \in R</m>, the multiplication map <m>\varphi_r : M \to M</m> given by <m>\varphi_r(m) = rm</m> is a homomorphism of <m>R</m>-modules.
                 </p>
               </statement>
               <solution>
                 <p>
-                  Indeed, by the definition of <m>R</m>-module we have
+                  By the definition of <m>R</m>-module we have
                   <me>
-                    μ_r(m + n) = r(m + n) = rm + rn = μ_r(m) + μ_r(n),
+                    \varphi_r(m + n) = r(m + n) = rm + rn = \varphi_r(m) + \varphi_r(n),
                   </me>
                   and
                   <me>
-                    μ_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = sμ_r(m).
+                    \varphi_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = s\varphi_r(m).
                   </me>
                 </p>
               </solution>
@@ -12375,7 +12364,7 @@
 
           </subsection>
 
-          <subsection xml:id="subsec-hom-end"><title><m>\Hom</m> and <m>\End</m></title>
+          <subsection xml:id="subsec-hom"><title><m>\Hom</m></title>
 
             <blockquote>
               <p>
@@ -12386,13 +12375,12 @@
               <attribution>Geoffrey Chaucer</attribution>
             </blockquote>
           
-            <definition xml:id="def-r-mod-hom"><title><m>\Hom</m> and <m>\End</m></title>
+            <definition xml:id="def-r-mod-hom"><title><m>\Hom</m></title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
                   Then <m>\Hom_R(M, N )</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>, and <m>\End_R(M)</m> denotes the set <m>\Hom_R(M, M)</m>. 
                   <idx><h><m>\Hom_R</m></h></idx>
-                  <idx><h>endomorphism</h></idx>
                 </p>
               </statement>
             </definition>
@@ -12442,19 +12430,6 @@
                 </p>
               </statement>
             </exercise>
-
-            <proposition>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring. 
-                  Given an <m>R</m>-module <m>M</m>, its annihilator is the ideal 
-                  <me>
-                    \ann(M) := \{ a \in R \mid am = 0 \textrm{ for all } m \in M \}.
-                  </me> 
-                  Show that if there is an isomorphism of <m>R</m>-modules <m>M \cong N</m>, then <m>\ann(M) = \ann(N)</m>.
-                </p>
-              </statement>
-            </proposition>
 
           </subsection>
 
@@ -12577,7 +12552,7 @@
                       <p>
                         Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. 
                         If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. 
-                        In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
+                        In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \pi = f</m> where <m>\pi</m> denotes the canonical surjection <m>M \onto M/N</m>. 
                         <idx><h>UMP for quotient modules</h></idx>
                       </p>
                     </li>
@@ -12630,53 +12605,67 @@
                 </p>
     
                 <p>
-                  For the UMP, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \can = f</m>. 
-                  It remains only to show <m>\ov{f}</m> preserves scaling: 
-                  This follows quickly from the definitions: 
-                  <me>
-                    \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
-                  </me> 
-                  where the third equation uses that <m>f</m> preserves scaling.
-                </p>
-    
-                <p>
-                  For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <m>+</m>, 
-                  <me>
-                    \ov{h}: M/\ker(h) \xra{\cong} \im(h),
-                  </me> 
-                  given by <m>\ov{h}(m + \ker(h)) = h(m)</m>, and it remains only to show this map preserves scaling. 
-                  This is a special case of what we proved in part (0).
-                </p>
-    
-                <p>
-                  For the second isomorphism theorem, we need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
-                  From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
-                  Now, we know from 817 that there is an isomorphism of abelian groups <m>h: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>h(a + (A\cap B)) = a + B</m>. 
-                  It remains only to show <m>h</m> preserves scaling: 
-                  <me>
-                    h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
-                  </me>
-                </p>
-    
-                <p>
-                  For the third, we already know (from 817) that <m>B/A</m> is a subgroup of <m>M/A</m> under <m>+</m>. 
-                  Given <m>r \in R</m> and <m>b +A \in B/A</m> we have <m>r(b+A) = rb + A</m> which belongs to <m>B/A</m> since <m>rb \in B</m>. 
-                  This proves <m>B/A</m> is a submodule of <m>M/A</m>. 
-                  Also from 817 we know there is an isomorphism of abelian groups <m>h: (M/A)/(B/A) \to M/B</m> given by <m>h((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
-                  <m>h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)</m>.
-                </p>
-    
-                <p>
-                  The Lattice Theorem is the most complicaed to gerenlize. 
-                  From 817 we know thre is a bijection between the set of subgroups of <m>M</m> and that contain <m>N</m> and subgroups of the quotient group <m>M/N</m>, and the maps are the same as given in the statment. 
-                  We just need to prove that these maps send submodules to submodules. 
-                  If <m>K</m> is a submodule of <m>M</m> containing <m>N</m>, then by part (3) we know <m>K/N</m> is a submodule of <m>M/N</m>.
-                </p>
-    
-                <p>
-                  If <m>T</m> is a submodule of <m>M/N</m>, then <m>\pi^{-1}(T)</m> is an abelian group. 
-                  For <m>r \in R</m> adn <m>m \in \pi^{-1}(T)</m> we have <m>\pi(m) \in T</m> and hence <m>\pi(rm) = r\pi(m) \in T</m> too, since <m>T</m> is a submodule. 
-                  This proves <m>\pi^{-1}(T)</m> is a submodule.
+                  <ol>
+                    <li>
+                      <p>
+                        For the UMP, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \pi = f</m>. 
+                        It remains only to show <m>\ov{f}</m> preserves scaling: 
+                        This follows quickly from the definitions: 
+                        <me>
+                          \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
+                        </me> 
+                        where the third equation uses that <m>f</m> preserves scaling.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <m>+</m>, 
+                        <me>
+                          \ov{h}: M/\ker(h) \xra{\cong} \im(h),
+                        </me> 
+                        given by <m>\ov{h}(m + \ker(h)) = h(m)</m>, and it remains only to show this map preserves scaling. 
+                        This is a special case of what we proved in part (0).
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For the second isomorphism theorem, we need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
+                        From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
+                        Now, we know from 817 that there is an isomorphism of abelian groups <m>h: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>h(a + (A\cap B)) = a + B</m>. 
+                        It remains only to show <m>h</m> preserves scaling: 
+                        <me>
+                          h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For the third, we already know (from 817) that <m>B/A</m> is a subgroup of <m>M/A</m> under <m>+</m>. 
+                        Given <m>r \in R</m> and <m>b +A \in B/A</m> we have <m>r(b+A) = rb + A</m> which belongs to <m>B/A</m> since <m>rb \in B</m>. 
+                        This proves <m>B/A</m> is a submodule of <m>M/A</m>. 
+                        Also from 817 we know there is an isomorphism of abelian groups <m>h: (M/A)/(B/A) \to M/B</m> given by <m>h((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
+                        <m>h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The Lattice Theorem is the most complicaed to gerenlize. 
+                        From 817 we know thre is a bijection between the set of subgroups of <m>M</m> and that contain <m>N</m> and subgroups of the quotient group <m>M/N</m>, and the maps are the same as given in the statment. 
+                        We just need to prove that these maps send submodules to submodules. 
+                        If <m>K</m> is a submodule of <m>M</m> containing <m>N</m>, then by part (3) we know <m>K/N</m> is a submodule of <m>M/N</m>.
+                      </p>
+          
+                      <p>
+                        If <m>T</m> is a submodule of <m>M/N</m>, then <m>\pi^{-1}(T)</m> is an abelian group. 
+                        For <m>r \in R</m> adn <m>m \in \pi^{-1}(T)</m> we have <m>\pi(m) \in T</m> and hence <m>\pi(rm) = r\pi(m) \in T</m> too, since <m>T</m> is a submodule. 
+                        This proves <m>\pi^{-1}(T)</m> is a submodule.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </proof>
             </theorem>
