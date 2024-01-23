@@ -11996,10 +11996,67 @@
                 </p>
               </statement>
             </exercise>
+
+            <definition xml:id="def-submodule"><title>Submodule</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. 
+                  An <em><m>R</m>-submodule</em> of <m>M</m> is a subset <m>N \subseteq M</m> such that 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>N</m> is a subgroup of <m>M</m> under <m>+</m> (so, we have <m>0 \in N</m>, if <m>n \in N</m> then <m>-n \in N</m>, and if <m>n_1, n_2 \in N</m> then <m>n_1 + n_2 \in N</m>), and 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>rn \in N</m> for all <m>r \in R</m> and <m>n \in N</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  <idx><h>submodule</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              We could equivalently define <q>submodule</q> to be a subset of <m>M</m> that is an <m>R</m>-module using the same operations of addition and scaling as in <m>M</m>.
+            </p>
+
+            <exercise>
+              <p>
+                Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. 
+                Show that the set 
+                <me>
+                  N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
+                </me> 
+                is an <m>R</m>-submodule of <m>M</m>.
+              </p>
+            </exercise>
+
+            <theorem xml:id="thm-submodules-are-ideals"><title>Submodules are Ideals</title>
+              <statement>
+                <p>
+                  A subset <m>I</m> of a ring <m>R</m> is a (left) submodule of <m>R</m> if and only if it is a (left) ideal.
+                </p>
+              </statement>
+            </theorem>
+
+            <exercise><title>Simple Modules</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
+                  An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
+                  Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
+                  <idx><h>simple module</h></idx>
+                </p>
+              </statement>
+            </exercise>
             
           </subsection>
 
-          <subsection xml:id="subsec-submod"><title>Submodules and Restriction of Scalars</title>
+          <subsection xml:id="subsec-restriction"><title>Restriction of Scalars</title>
 
             <blockquote>
               <p>
@@ -12098,10 +12155,6 @@
                     <li xml:id="exe-ri-module-is-an-r-module"><title><m>R/I</m> is an <m>R</m>-module</title>
                       <p>
                         If <m>I</m> is a (two-sided) ideal of a ring <m>R</m> then applying restriction of scalars along the quotient homomorphism <m>q:R\to R/I</m> gives that any left <m>R/I</m>-module is also a left <m>R</m>-module.
-                      </p>
-
-                      <p>
-                        In particular, applying this to the <m>R/I</m>-module <m>R/I</m> gives that <m>R/I</m> is a left <m>R</m>-module. 
                         The rule for scaling is <m>r \cdot (r' + I) = rr' + I</m>.
                       </p>
                     </li>
@@ -12109,76 +12162,6 @@
                 </p>
               </statement>
             </example>
-
-            <example xml:id="ex-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
-              <statement>
-                <p>
-                  If <m>S</m> and <m>R</m> are rings and <m>\phi: S \to R</m> is a ring homomorphism, then since <m>S</m> is a left <m>S</m>-module, it is also a left <m>R</m>-module via restriction of scalars. 
-                  Note that the rule for scaling given by <m>r s := \phi(r) s</m>.
-                </p>
-      
-                <p>
-                  As a special case of this, if <m>S</m> is a subring of a ring <m>R</m> then <m>R</m> is an <m>S</m>-module (restriction of scalars along the inclusion map).
-                </p>
-              </statement>
-            </example>
-
-            <definition xml:id="def-submodule"><title>Submodule</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. 
-                  An <em><m>R</m>-submodule</em> of <m>M</m> is a subset <m>N \subseteq M</m> such that 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>N</m> is a subgroup of <m>M</m> under <m>+</m> (so, we have <m>0 \in N</m>, if <m>n \in N</m> then <m>-n \in N</m>, and if <m>n_1, n_2 \in N</m> then <m>n_1 + n_2 \in N</m>), and 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>rn \in N</m> for all <m>r \in R</m> and <m>n \in N</m>.
-                      </p>
-                    </li>
-                  </ol>
-                  <idx><h>submodule</h></idx>
-                </p>
-              </statement>
-            </definition>
-
-            <p>
-              We could equivalently define <q>submodule</q> to be a subset of <m>M</m> that is an <m>R</m>-module using the same operations of addition and scaling as in <m>M</m>.
-            </p>
-
-            <exercise>
-              <p>
-                Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. 
-                Show that the set 
-                <me>
-                  N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
-                </me> 
-                is an <m>R</m>-submodule of <m>M</m>.
-              </p>
-            </exercise>
-
-            <theorem xml:id="thm-submodules-are-ideals"><title>Submodules are Ideals</title>
-              <statement>
-                <p>
-                  A subset <m>I</m> of a ring <m>R</m> is a (left) submodule of <m>R</m> if and only if it is a (left) ideal.
-                </p>
-              </statement>
-            </theorem>
-
-            <exercise><title>Simple Modules</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
-                  An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
-                  Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
-                  <idx><h>simple module</h></idx>
-                </p>
-              </statement>
-            </exercise>
 
           </subsection>
 
@@ -12244,7 +12227,7 @@
                       </p>
                     </li>
                   </ol>
-                  When R is a field, we refer to <m>\varphi</m> as a <em>linear transformation</em>
+                  When <m>R</m> is a field, we refer to <m>\varphi</m> as a <em>linear transformation</em>.
                   <idx><h>module homomorphism</h></idx>
                   <idx><h><m>R</m>-module homomorphism</h></idx>
                   <idx><h><m>R</m>-map</h></idx>
@@ -12295,6 +12278,15 @@
               </solution>
             </example>
 
+            <exercise><title>Inclusion Map is <m>R</m>-map</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
+                  Then the inclusion map <m>i : N \to M</m> is an <m>R</m>-module homomorphism.
+                </p>
+              </statement>
+            </exercise>
+
             <definition xml:id="def-module-isomorphism"><title><m>R</m>-Module Isomorphism</title>
               <statement>
                 <p>
@@ -12317,11 +12309,6 @@
               </statement>
             </theorem>
 
-            <p>
-              One can think of a module isomorphism as a relabelling of the names of the elements of the module. 
-              If two modules are isomorphic, that means that they are essentially the same, up to renaming the elements.
-            </p>
-
             <definition xml:id="def-r-map-ker"><title>Kernel</title>
               <statement>
                 <p>
@@ -12331,16 +12318,7 @@
               </statement>
             </definition>
 
-            <exercise><title>Inclusion Map is <m>R</m>-map</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
-                  Then the inclusion map <m>i : N \to M</m> is an <m>R</m>-module homomorphism.
-                </p>
-              </statement>
-            </exercise>
-
-            <theorem xml:id="thm-kernels-and-images-of-homomorphisms-are-submodule"><title>Kernels and Images are Submodules</title>
+            <proposition xml:id="prop-kernels-and-images-of-homomorphisms-are-submodule"><title>Kernels and Images are Submodules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>\varphi: M \to N</m> be an <m>R</m>-module homomorphism. 
@@ -12348,7 +12326,7 @@
                   <ol>
                     <li>
                       <p>
-                        <m>\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}</m> is an <m>R</m>-submodule of <m>M</m> and
+                        <m>\ker(\varphi)</m> is an <m>R</m>-submodule of <m>M</m> and
                       </p>
                     </li>
 
@@ -12360,7 +12338,7 @@
                   </ol>
                 </p>
               </statement>
-            </theorem>
+            </proposition>
 
           </subsection>
 
@@ -12727,13 +12705,13 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-generated-submodule">
+            <definition xml:id="def-generated-submodule"><title>Generated Submodule</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring with <m>1 \ne 0</m> and let <m>M</m> be an <m>R</m>-module. 
                   For a subset <m>A</m> of <m>M</m> , the submodule of <m>M</m> <term>generated</term> by <m>A</m> is 
                   <me>
-                    RA := {r_1a_1 + · · · + r_na_n | n ≥ 0, r_i ∈ R, a_i ∈ A}.
+                    RA := \{r_1a_1 + · · · + r_na_n | n ≥ 0, r_i \in R, a_i \in A\}.
                   </me>
                 </p>
 
@@ -12872,6 +12850,10 @@
                 </p>
               </proof>
             </lemma>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-lin-ind"><title>Linear Independence</title>
 
             <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
               <statement>

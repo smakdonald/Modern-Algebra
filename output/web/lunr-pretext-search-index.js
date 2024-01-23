@@ -4615,7 +4615,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Module Basics",
-  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module  -module Often, the elements of the ring are referred to as scalars , and the four rules for scaling given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An -vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         For the first, and hence .  For the second, and hence since is an abelian group.  For the third, (using the second) and hence is the additive inverse of .  Finally, (using the fact that holds in any ring and the previous result).      Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.      Prove that a module is the zero module if and only if the zero and identity maps on are equal.   Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module    Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .    Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .       Submodules and Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Actual Restriction of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module.  In particular, applying this to the -module gives that is a left -module. The rule for scaling is .       Ring Maps and Restriction of Scalars   If and are rings and is a ring homomorphism, then since is a left -module, it is also a left -module via restriction of scalars. Note that the rule for scaling given by .  As a special case of this, if is a subring of a ring then is an -module (restriction of scalars along the inclusion map).    Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Let be an -module and be an ideal in . Show that the set is an -submodule of .  Submodules are Ideals   A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Simple Modules  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module        A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , both and can be viewed as -modules. Additionally, keep an eye on the     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
+  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module  -module Often, the elements of the ring are referred to as scalars , and the four rules for scaling given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An -vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         For the first, and hence .  For the second, and hence since is an abelian group.  For the third, (using the second) and hence is the additive inverse of .  Finally, (using the fact that holds in any ring and the previous result).      Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.      Prove that a module is the zero module if and only if the zero and identity maps on are equal.   Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module    Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .    Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Let be an -module and be an ideal in . Show that the set is an -submodule of .  Submodules are Ideals   A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Simple Modules  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Actual Restriction of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , both and can be viewed as -modules. Additionally, keep an eye on the     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
 },
 {
   "id": "def-module",
@@ -4717,47 +4717,20 @@ var ptx_lunr_docs = [
   "body": "Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .     "
 },
 {
-  "id": "thm-restriction-of-scalars",
-  "level": "2",
-  "url": "sec-defmod.html#thm-restriction-of-scalars",
-  "type": "Theorem",
-  "number": "12.12",
-  "title": "Restriction of Scalars.",
-  "body": "Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:    "
-},
-{
-  "id": "subsec-submod-6",
-  "level": "2",
-  "url": "sec-defmod.html#subsec-submod-6",
-  "type": "Example",
-  "number": "12.13",
-  "title": "Actual Restriction of Scalars.",
-  "body": "Actual Restriction of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module.  In particular, applying this to the -module gives that is a left -module. The rule for scaling is .      "
-},
-{
-  "id": "ex-homomorphisms-and-restriction-of-scalars",
-  "level": "2",
-  "url": "sec-defmod.html#ex-homomorphisms-and-restriction-of-scalars",
-  "type": "Example",
-  "number": "12.14",
-  "title": "Ring Maps and Restriction of Scalars.",
-  "body": "Ring Maps and Restriction of Scalars   If and are rings and is a ring homomorphism, then since is a left -module, it is also a left -module via restriction of scalars. Note that the rule for scaling given by .  As a special case of this, if is a subring of a ring then is an -module (restriction of scalars along the inclusion map).   "
-},
-{
   "id": "def-submodule",
   "level": "2",
   "url": "sec-defmod.html#def-submodule",
   "type": "Definition",
-  "number": "12.15",
+  "number": "12.12",
   "title": "Submodule.",
   "body": "Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule    "
 },
 {
-  "id": "subsec-submod-10",
+  "id": "subsec-modules-18",
   "level": "2",
-  "url": "sec-defmod.html#subsec-submod-10",
+  "url": "sec-defmod.html#subsec-modules-18",
   "type": "Exercise",
-  "number": "12.16",
+  "number": "12.13",
   "title": "",
   "body": "Let be an -module and be an ideal in . Show that the set is an -submodule of . "
 },
@@ -4766,18 +4739,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defmod.html#thm-submodules-are-ideals",
   "type": "Theorem",
-  "number": "12.17",
+  "number": "12.14",
   "title": "Submodules are Ideals.",
   "body": "Submodules are Ideals   A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.   "
 },
 {
-  "id": "subsec-submod-12",
+  "id": "subsec-modules-20",
   "level": "2",
-  "url": "sec-defmod.html#subsec-submod-12",
+  "url": "sec-defmod.html#subsec-modules-20",
   "type": "Exercise",
-  "number": "12.18",
+  "number": "12.15",
   "title": "Simple Modules.",
   "body": "Simple Modules  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module   "
+},
+{
+  "id": "thm-restriction-of-scalars",
+  "level": "2",
+  "url": "sec-defmod.html#thm-restriction-of-scalars",
+  "type": "Theorem",
+  "number": "12.16",
+  "title": "Restriction of Scalars.",
+  "body": "Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:    "
+},
+{
+  "id": "subsec-restriction-6",
+  "level": "2",
+  "url": "sec-defmod.html#subsec-restriction-6",
+  "type": "Example",
+  "number": "12.17",
+  "title": "Actual Restriction of Scalars.",
+  "body": "Actual Restriction of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .      "
 },
 {
   "id": "sec-defmod-4",
@@ -4795,23 +4786,23 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.2",
   "title": "Module Homomorphisms",
-  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When R is a field, we refer to as a linear transformation  module homomorphism  -module homomorphism  -map  linear transformation       .   The condition says that is a homomorphism of abelian groups. Thus . by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map   Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    By the definition of -module we have and     -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    One can think of a module isomorphism as a relabelling of the names of the elements of the module. If two modules are isomorphic, that means that they are essentially the same, up to renaming the elements.  Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Inclusion Map is -map  Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.   Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:     For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.    For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).    For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:     For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .    The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.                            "
+  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation       .   The condition says that is a homomorphism of abelian groups. Thus . by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map   Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    By the definition of -module we have and     Inclusion Map is -map  Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.   -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:     For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.    For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).    For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:     For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .    The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.                            "
 },
 {
   "id": "def-module-homomorphism",
   "level": "2",
   "url": "sec-modhom.html#def-module-homomorphism",
   "type": "Definition",
-  "number": "12.19",
+  "number": "12.18",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-Module Homomorphism.",
-  "body": "-Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When R is a field, we refer to as a linear transformation  module homomorphism  -module homomorphism  -map  linear transformation    "
+  "body": "-Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation    "
 },
 {
   "id": "subsec-hom-iso-4",
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-4",
   "type": "Exercise",
-  "number": "12.20",
+  "number": "12.19",
   "title": "<span class=\"process-math\">\\(\\varphi(0)=0\\)<\/span>.",
   "body": "  .   The condition says that is a homomorphism of abelian groups. Thus . by .  "
 },
@@ -4820,7 +4811,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-5",
   "type": "Remark",
-  "number": "12.21",
+  "number": "12.20",
   "title": "",
   "body": " Unlike ring homomorphisms, a -module homomorphism does not need to map to .  "
 },
@@ -4829,9 +4820,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-6",
   "type": "Example",
-  "number": "12.22",
+  "number": "12.21",
   "title": "Multipication Map is <span class=\"process-math\">\\(R\\)<\/span>-Map.",
   "body": "Multipication Map is -Map   Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    By the definition of -module we have and    "
+},
+{
+  "id": "subsec-hom-iso-7",
+  "level": "2",
+  "url": "sec-modhom.html#subsec-hom-iso-7",
+  "type": "Exercise",
+  "number": "12.22",
+  "title": "Inclusion Map is <span class=\"process-math\">\\(R\\)<\/span>-map.",
+  "body": "Inclusion Map is -map  Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.  "
 },
 {
   "id": "def-module-isomorphism",
@@ -4861,20 +4861,11 @@ var ptx_lunr_docs = [
   "body": "Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)    "
 },
 {
-  "id": "subsec-hom-iso-12",
+  "id": "prop-kernels-and-images-of-homomorphisms-are-submodule",
   "level": "2",
-  "url": "sec-modhom.html#subsec-hom-iso-12",
-  "type": "Exercise",
+  "url": "sec-modhom.html#prop-kernels-and-images-of-homomorphisms-are-submodule",
+  "type": "Proposition",
   "number": "12.26",
-  "title": "Inclusion Map is <span class=\"process-math\">\\(R\\)<\/span>-map.",
-  "body": "Inclusion Map is -map  Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.  "
-},
-{
-  "id": "thm-kernels-and-images-of-homomorphisms-are-submodule",
-  "level": "2",
-  "url": "sec-modhom.html#thm-kernels-and-images-of-homomorphisms-are-submodule",
-  "type": "Theorem",
-  "number": "12.27",
   "title": "Kernels and Images are Submodules.",
   "body": "Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
@@ -4883,7 +4874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-r-mod-hom",
   "type": "Definition",
-  "number": "12.28",
+  "number": "12.27",
   "title": "<span class=\"process-math\">\\(\\Hom\\)<\/span>.",
   "body": "  Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .    "
 },
@@ -4892,7 +4883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#prop-hom-module",
   "type": "Proposition",
-  "number": "12.29",
+  "number": "12.28",
   "title": "<span class=\"process-math\">\\(\\Hom_R(M,N)\\)<\/span> is an <span class=\"process-math\">\\(R\\)<\/span>-module.",
   "body": "is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.   "
 },
@@ -4901,7 +4892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-hom-iso",
   "type": "Theorem",
-  "number": "12.30",
+  "number": "12.29",
   "title": "<span class=\"process-math\">\\(\\Hom_R(R,M) \\cong M\\)<\/span>.",
   "body": "  For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes   "
 },
@@ -4910,7 +4901,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-6",
   "type": "Exercise",
-  "number": "12.31",
+  "number": "12.30",
   "title": "",
   "body": " Show that for every nonzero integers and there is a -module isomorphism .  "
 },
@@ -4919,7 +4910,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-quotient-module",
   "type": "Definition",
-  "number": "12.32",
+  "number": "12.31",
   "title": "Quotient Module.",
   "body": "Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module    "
 },
@@ -4928,7 +4919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-quotient-module-well-defined",
   "type": "Theorem",
-  "number": "12.33",
+  "number": "12.32",
   "title": "Quotient Modules are Well Defined.",
   "body": "Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.   "
 },
@@ -4937,7 +4928,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-module-quotient-map",
   "type": "Definition",
-  "number": "12.34",
+  "number": "12.33",
   "title": "Module Quotient Map.",
   "body": "Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)    "
 },
@@ -4946,7 +4937,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#prop-quotient-map-is-r-module-homomorphism",
   "type": "Proposition",
-  "number": "12.35",
+  "number": "12.34",
   "title": "Quotient Map is an <span class=\"process-math\">\\(R\\)<\/span>-map.",
   "body": "Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .   "
 },
@@ -4955,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#exe-z-modules-and-quotients",
   "type": "Example",
-  "number": "12.36",
+  "number": "12.35",
   "title": "<span class=\"process-math\">\\(\\Z\\)<\/span>-modules and Quotients.",
   "body": "-modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.  "
 },
@@ -4964,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-module-isomorphism-thms",
   "type": "Theorem",
-  "number": "12.37",
+  "number": "12.36",
   "title": "Module Isomorphism Theorems.",
   "body": "Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:     For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.    For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).    For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:     For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .    The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.      "
 },
@@ -4984,14 +4975,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.3",
   "title": "Linear Independence and Generated Modules",
-  "body": "Linear Independence and Generated Modules  Generated Modules    You need to learn independence. You have to be independent - it builds character.   Mike Tyson   Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .) linear combination  -linear combination       Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module     Generated vs. Span  If is an -vector space, one usually uses the term spanned by instead of the term generated by by.   Smallest Submodule of Containing   For any subset of a -module , the subset is indeed a submodule of , and it is the smallest submodule of that contains as a subset. In fact, we have     Cyclic Module   If for some single element , we say that is cyclic . cyclic module     Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.   Cyclic Modules and Ideals  Show that the left -module is cyclic if and only if there exists a left ideal of such that .   Every Cyclic -module to for some  Every cyclic -module is isomorphic to for some left ideal .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module      For any -module , we have . This is because the empty sum is interpreted as giving .   Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .   Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .           Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent      The empty subset of any module is linearly independent (vacuously).   One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.   Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.                        "
+  "body": "Linear Independence and Generated Modules  Generated Modules    You need to learn independence. You have to be independent - it builds character.   Mike Tyson   Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .) linear combination  -linear combination     Generated Submodule   Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module     Generated vs. Span  If is an -vector space, one usually uses the term spanned by instead of the term generated by by.   Smallest Submodule of Containing   For any subset of a -module , the subset is indeed a submodule of , and it is the smallest submodule of that contains as a subset. In fact, we have     Cyclic Module   If for some single element , we say that is cyclic . cyclic module     Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.   Cyclic Modules and Ideals  Show that the left -module is cyclic if and only if there exists a left ideal of such that .   Every Cyclic -module to for some  Every cyclic -module is isomorphic to for some left ideal .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module      For any -module , we have . This is because the empty sum is interpreted as giving .   Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .   Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .            Linear Independence  Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent      The empty subset of any module is linearly independent (vacuously).   One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.   Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.                        "
 },
 {
   "id": "def-linear-combination",
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-linear-combination",
   "type": "Definition",
-  "number": "12.38",
+  "number": "12.37",
   "title": "Linear Combination.",
   "body": "Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .) linear combination  -linear combination    "
 },
@@ -5000,16 +4991,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-generated-submodule",
   "type": "Definition",
-  "number": "12.39",
-  "title": "",
-  "body": "  Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module    "
+  "number": "12.38",
+  "title": "Generated Submodule.",
+  "body": "Generated Submodule   Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module    "
 },
 {
   "id": "lem-rcdot-a-smallest-submodule-of-m-containing-a",
   "level": "2",
   "url": "sec-linear-ind-gen.html#lem-rcdot-a-smallest-submodule-of-m-containing-a",
   "type": "Lemma",
-  "number": "12.40",
+  "number": "12.39",
   "title": "<span class=\"process-math\">\\(R\\cdot A\\)<\/span> Smallest Submodule of <span class=\"process-math\">\\(M\\)<\/span> Containing <span class=\"process-math\">\\(A\\)<\/span>.",
   "body": "Smallest Submodule of Containing   For any subset of a -module , the subset is indeed a submodule of , and it is the smallest submodule of that contains as a subset. In fact, we have    "
 },
@@ -5018,7 +5009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-cyclic-module",
   "type": "Definition",
-  "number": "12.41",
+  "number": "12.40",
   "title": "Cyclic Module.",
   "body": "Cyclic Module   If for some single element , we say that is cyclic . cyclic module    "
 },
@@ -5027,7 +5018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#exe-cyclic-z-module",
   "type": "Example",
-  "number": "12.42",
+  "number": "12.41",
   "title": "Cyclic <span class=\"process-math\">\\(\\Z\\)<\/span>-module.",
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
@@ -5036,7 +5027,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#subsec-generated-modules-9",
   "type": "Exercise",
-  "number": "12.43",
+  "number": "12.42",
   "title": "Cyclic Modules and Ideals.",
   "body": "Cyclic Modules and Ideals  Show that the left -module is cyclic if and only if there exists a left ideal of such that .  "
 },
@@ -5045,7 +5036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#exe-every-cyclic-r-module-cong-to-ri-for-some-i",
   "type": "Exercise",
-  "number": "12.44",
+  "number": "12.43",
   "title": "Every Cyclic <span class=\"process-math\">\\(R\\)<\/span>-module <span class=\"process-math\">\\(\\cong\\)<\/span> to <span class=\"process-math\">\\(R\/I\\)<\/span> for some <span class=\"process-math\">\\(I\\)<\/span>.",
   "body": "Every Cyclic -module to for some  Every cyclic -module is isomorphic to for some left ideal .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .  "
 },
@@ -5054,7 +5045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-finitely-generated-module",
   "type": "Definition",
-  "number": "12.45",
+  "number": "12.44",
   "title": "Finitely Generated Module.",
   "body": "Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module    "
 },
@@ -5063,7 +5054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#subsec-generated-modules-12",
   "type": "Remark",
-  "number": "12.46",
+  "number": "12.45",
   "title": "",
   "body": " For any -module , we have . This is because the empty sum is interpreted as giving .  "
 },
@@ -5072,7 +5063,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#ex-standard-free-module-finitely-generated",
   "type": "Example",
-  "number": "12.47",
+  "number": "12.46",
   "title": "Standard Free Module Finitely Generated.",
   "body": "Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .  "
 },
@@ -5081,7 +5072,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#lem-fg-quotient-mod",
   "type": "Lemma",
-  "number": "12.48",
+  "number": "12.47",
   "title": "Finite Generation and Quotient Modules.",
   "body": "Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .          "
 },
@@ -5090,16 +5081,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-linearly-independent",
   "type": "Definition",
-  "number": "12.49",
+  "number": "12.48",
   "title": "Linearly Independent.",
   "body": "Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent    "
 },
 {
-  "id": "subsec-generated-modules-16",
+  "id": "subsec-lin-ind-3",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#subsec-generated-modules-16",
+  "url": "sec-linear-ind-gen.html#subsec-lin-ind-3",
   "type": "Remark",
-  "number": "12.50",
+  "number": "12.49",
   "title": "",
   "body": " The empty subset of any module is linearly independent (vacuously).  "
 },
@@ -5108,7 +5099,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#ex-one-element-subsets-of-r-mods",
   "type": "Example",
-  "number": "12.51",
+  "number": "12.50",
   "title": "One Element Subsets of <span class=\"process-math\">\\(R\\)<\/span>-Modules.",
   "body": "One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.  "
 },
@@ -5117,14 +5108,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#exe-3-linearly-independent-in-z",
   "type": "Example",
-  "number": "12.52",
+  "number": "12.51",
   "title": "<span class=\"process-math\">\\(\\{3\\}\\)<\/span> Linearly Independent in <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.  "
 },
 {
-  "id": "sec-linear-ind-gen-3",
+  "id": "sec-linear-ind-gen-4",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#sec-linear-ind-gen-3",
+  "url": "sec-linear-ind-gen.html#sec-linear-ind-gen-4",
   "type": "Summary",
   "number": "12.3",
   "title": "",
@@ -5144,7 +5135,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#def-basis-free-mod",
   "type": "Definition",
-  "number": "12.53",
+  "number": "12.52",
   "title": "Basis and Free Module.",
   "body": "Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module    "
 },
@@ -5153,7 +5144,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#def-rank-module",
   "type": "Definition",
-  "number": "12.54",
+  "number": "12.53",
   "title": "Module Rank.",
   "body": "Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)    "
 },
@@ -5162,7 +5153,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-free-modules",
   "type": "Example",
-  "number": "12.55",
+  "number": "12.54",
   "title": "Free Modules.",
   "body": "Free Modules     The zero module is free with as (its only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.     "
 },
@@ -5171,7 +5162,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-6",
   "type": "Exercise",
-  "number": "12.56",
+  "number": "12.55",
   "title": "",
   "body": " Direct sums of free modules are free.  "
 },
@@ -5180,7 +5171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-bases-are-not-unique",
   "type": "Example",
-  "number": "12.57",
+  "number": "12.56",
   "title": "Bases are not Unique.",
   "body": "Bases are not Unique  If is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
@@ -5189,7 +5180,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-9",
   "type": "Exercise",
-  "number": "12.58",
+  "number": "12.57",
   "title": "Every Module over a Field is Free.",
   "body": "Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.  "
 },
@@ -5198,7 +5189,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-10",
   "type": "Remark",
-  "number": "12.59",
+  "number": "12.58",
   "title": "",
   "body": " A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )  "
 },
@@ -5207,7 +5198,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-11",
   "type": "Exercise",
-  "number": "12.60",
+  "number": "12.59",
   "title": "",
   "body": " If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .  "
 },
@@ -5216,7 +5207,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-12",
   "type": "Remark",
-  "number": "12.61",
+  "number": "12.60",
   "title": "",
   "body": " Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities.  "
 },
@@ -5225,7 +5216,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#lem-elements-uniquely-expressible-in-free-modules",
   "type": "Lemma",
-  "number": "12.62",
+  "number": "12.61",
   "title": "Elements Uniquely Expressible in Free Modules.",
   "body": "Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Given , the fact that for at least one family of elements with for all but a finite number of 's is the definition of what it means for to generate .  Suppose is another such family with . Then Since is linearly independent, by definition for all .   "
 },
@@ -5234,7 +5225,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#exe-module-with-infinite-basis",
   "type": "Example",
-  "number": "12.63",
+  "number": "12.62",
   "title": "Module with Infinite Basis.",
   "body": "Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .  "
 },
@@ -5243,7 +5234,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-ump-for-free-modules",
   "type": "Theorem",
-  "number": "12.64",
+  "number": "12.63",
   "title": "UMP for Free <span class=\"process-math\">\\(R\\)<\/span>-Modules.",
   "body": "UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .   "
 },
@@ -5252,7 +5243,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-17",
   "type": "Remark",
-  "number": "12.65",
+  "number": "12.64",
   "title": "",
   "body": " The uniqueness only uses that generates as an -module.  "
 },
@@ -5261,7 +5252,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#cor-free-modules-with-equal-basis-elements-isomorphic",
   "type": "Corollary",
-  "number": "12.66",
+  "number": "12.65",
   "title": "Free Modules with Equal Basis Elements Isomorphic.",
   "body": "Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .   "
 },
@@ -5270,7 +5261,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-mcong-rn-as-r-modules",
   "type": "Example",
-  "number": "12.67",
+  "number": "12.66",
   "title": "<span class=\"process-math\">\\(M\\cong R^n\\)<\/span> as <span class=\"process-math\">\\(R\\)<\/span>-modules.",
   "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
 },
@@ -5279,7 +5270,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-20",
   "type": "Exercise",
-  "number": "12.68",
+  "number": "12.67",
   "title": "",
   "body": " Every finitely generated free -module is of the form   "
 },
@@ -5288,7 +5279,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-21",
   "type": "Remark",
-  "number": "12.69",
+  "number": "12.68",
   "title": "",
   "body": " Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .  "
 },
@@ -5297,7 +5288,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-uniqueness-of-rank-over-commutative-rings",
   "type": "Theorem",
-  "number": "12.70",
+  "number": "12.69",
   "title": "Uniqueness of Rank over Commutative Rings.",
   "body": "Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .   "
 },
@@ -5306,7 +5297,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#prop-r-bases",
   "type": "Exercise",
-  "number": "12.71",
+  "number": "12.70",
   "title": "Bases of <span class=\"process-math\">\\(R\\)<\/span>.",
   "body": "Bases of  Let be a non-zero, commutative ring. Prove that a subset of is a basis of as a module over itself if and only if for some unit of .  "
 },
@@ -5315,7 +5306,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#prop-bases-of-ideals-in-commutative-rings",
   "type": "Exercise",
-  "number": "12.72",
+  "number": "12.71",
   "title": "Bases of ideals in commutative rings.",
   "body": "Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.     "
 },
@@ -5324,7 +5315,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-free-quotient",
   "type": "Theorem",
-  "number": "12.73",
+  "number": "12.72",
   "title": "",
   "body": "  Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .   "
 },

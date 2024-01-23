@@ -652,7 +652,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defmod.html#subsec-modules" class="internal"><span class="title">Modules</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defmod.html#subsec-submod" class="internal"><span class="title">Submodules and Restriction of Scalars</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defmod.html#subsec-restriction" class="internal"><span class="title">Restriction of Scalars</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -665,7 +665,10 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-linear-ind-gen.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Linear Independence and Generated Modules</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-ind-gen.html#subsec-generated-modules" class="internal"><span class="title">Generated Modules</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-ind-gen.html#subsec-generated-modules" class="internal"><span class="title">Generated Modules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-ind-gen.html#subsec-lin-ind" class="internal"><span class="title">Linear Independence</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-free-mod.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Bases and Free Modules</span></a></div>
@@ -907,7 +910,7 @@ window.MathJax = {
 <span class="process-math">\(\GL\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/ex-group-examples-2-1-1-3.html" title="Item 3">Item</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(\Hom_R\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-r-mod-hom.html" title="Definition 12.28: \Hom">Definition</a></span>
+<span class="process-math">\(\Hom_R\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-r-mod-hom.html" title="Definition 12.27: \Hom">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(\Hom_{AB}(G,H)\)</span><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/exe-group-hom.html" title="Exploration 1.1: \Hom Sweet \Hom">Exploration</a></span>
@@ -1036,16 +1039,16 @@ window.MathJax = {
 <span class="process-math">\(p\)</span>-group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-p-group.html" title="Definition 6.1: p-group">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(R\)</span>-linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linear-combination.html" title="Definition 12.38: Linear Combination">Definition</a></span>
+<span class="process-math">\(R\)</span>-linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linear-combination.html" title="Definition 12.37: Linear Combination">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(R\)</span>-map<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.19: R-Module Homomorphism">Definition</a></span>
+<span class="process-math">\(R\)</span>-map<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.18: R-Module Homomorphism">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(R\)</span>-module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module.html" title="Definition 12.1: Module">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(R\)</span>-module homomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.19: R-Module Homomorphism">Definition</a></span>
+<span class="process-math">\(R\)</span>-module homomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.18: R-Module Homomorphism">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(R\)</span>-module isomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-isomorphism.html" title="Definition 12.23: R-Module Isomorphism">Definition</a></span>
@@ -1106,7 +1109,7 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-b">
-<div class="indexitem">basis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-basis-free-mod.html" title="Definition 12.53: Basis and Free Module">Definition</a></span>
+<div class="indexitem">basis<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-basis-free-mod.html" title="Definition 12.52: Basis and Free Module">Definition</a></span>
 </div>
 <div class="indexitem">bijective<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-jectivity-2-1-2-3.html" title="Item 3">Item</a></span>
 </div>
@@ -1190,7 +1193,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">cyclic group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-cyclic-group.html" title="Definition 2.37: Cylic Group">Definition</a></span>
 </div>
-<div class="indexitem">cyclic module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-cyclic-module.html" title="Definition 12.41: Cyclic Module">Definition</a></span>
+<div class="indexitem">cyclic module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-cyclic-module.html" title="Definition 12.40: Cyclic Module">Definition</a></span>
 </div>
 <div class="indexitem">cyclotomic polynomial<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/prop-cyclotomic-polynomial-irreducible.html" title="Proposition 16.11">Proposition</a></span>
 </div>
@@ -1302,7 +1305,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">finitely generated group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-fg-group.html" title="Definition 7.26: Finitely Generated">Definition</a></span>
 </div>
-<div class="indexitem">finitely generated module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-finitely-generated-module.html" title="Definition 12.45: Finitely Generated Module">Definition</a></span>
+<div class="indexitem">finitely generated module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-finitely-generated-module.html" title="Definition 12.44: Finitely Generated Module">Definition</a></span>
 </div>
 <div class="indexitem">first isomorphism theorem for groups<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-fit-group.html" title="Theorem 3.28: First Isomorphism Theorem">Theorem</a></span>
 </div>
@@ -1312,7 +1315,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">fraction field<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-field-of-fractions.html" title="Definition 11.3: Field of Fractions">Definition</a></span>
 </div>
-<div class="indexitem">free module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-basis-free-mod.html" title="Definition 12.53: Basis and Free Module">Definition</a></span>
+<div class="indexitem">free module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-basis-free-mod.html" title="Definition 12.52: Basis and Free Module">Definition</a></span>
 </div>
 <div class="indexitem">FTFGAG<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-ftfgag.html" title="Theorem 7.28: Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)">Theorem</a></span>
 </div>
@@ -1340,7 +1343,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">generated ideal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-generated-ideal.html" title="Definition 9.10: Generated Ideals">Definition</a></span>
 </div>
-<div class="indexitem">generated module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-generated-submodule.html" title="Definition 12.39">Definition</a></span>
+<div class="indexitem">generated module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-generated-submodule.html" title="Definition 12.38: Generated Submodule">Definition</a></span>
 </div>
 <div class="indexitem">generated normal subgroup<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/exe-generated-normal-subgroup-2-1-7-2.html" title="Item 3.10.2">Item</a></span>
 </div>
@@ -1448,13 +1451,13 @@ window.MathJax = {
 </div>
 <div class="indexitem">left regular action<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/ex-leftmult.html" title="Item: Left Regular Action">Item</a></span>
 </div>
-<div class="indexitem">linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linear-combination.html" title="Definition 12.38: Linear Combination">Definition</a></span>
+<div class="indexitem">linear combination<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linear-combination.html" title="Definition 12.37: Linear Combination">Definition</a></span>
 </div>
-<div class="indexitem">linear transformation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.19: R-Module Homomorphism">Definition</a></span>
+<div class="indexitem">linear transformation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.18: R-Module Homomorphism">Definition</a></span>
 </div>
-<div class="indexitem">linearly dependent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linearly-independent.html" title="Definition 12.49: Linearly Independent">Definition</a></span>
+<div class="indexitem">linearly dependent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linearly-independent.html" title="Definition 12.48: Linearly Independent">Definition</a></span>
 </div>
-<div class="indexitem">linearly independent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linearly-independent.html" title="Definition 12.49: Linearly Independent">Definition</a></span>
+<div class="indexitem">linearly independent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-linearly-independent.html" title="Definition 12.48: Linearly Independent">Definition</a></span>
 </div>
 <div class="indexitem">LOIS<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-LOIS.html" title="Theorem 5.30: The Length of the Orbit is the Index of the Stabilizer (LOIS)">Theorem</a></span>
 </div>
@@ -1472,7 +1475,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module.html" title="Definition 12.1: Module">Definition</a></span>
 </div>
-<div class="indexitem">module homomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.19: R-Module Homomorphism">Definition</a></span>
+<div class="indexitem">module homomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-homomorphism.html" title="Definition 12.18: R-Module Homomorphism">Definition</a></span>
 </div>
 <div class="indexitem">module isomorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-isomorphism.html" title="Definition 12.23: R-Module Isomorphism">Definition</a></span>
 </div>
@@ -1586,9 +1589,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">quotient map (groups)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-quotient-map.html" title="Definition 3.22: Quotient Map">Definition</a></span>
 </div>
-<div class="indexitem">quotient map (modules)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-quotient-map.html" title="Definition 12.34: Module Quotient Map">Definition</a></span>
+<div class="indexitem">quotient map (modules)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-module-quotient-map.html" title="Definition 12.33: Module Quotient Map">Definition</a></span>
 </div>
-<div class="indexitem">quotient module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-quotient-module.html" title="Definition 12.32: Quotient Module">Definition</a></span>
+<div class="indexitem">quotient module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-quotient-module.html" title="Definition 12.31: Quotient Module">Definition</a></span>
 </div>
 <div class="indexitem">quotient ring<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-quotient-ring.html" title="Definition 9.17: Quotient Ring">Definition</a></span>
 </div>
@@ -1596,7 +1599,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-r">
 <div class="indexitem">range of a function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-function.html" title="Definition A.14: Function">Definition</a></span>
 </div>
-<div class="indexitem">rank (modules)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-rank-module.html" title="Definition 12.54: Module Rank">Definition</a></span>
+<div class="indexitem">rank (modules)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-rank-module.html" title="Definition 12.53: Module Rank">Definition</a></span>
 </div>
 <div class="indexitem">rank-nullity theorem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-rank-nullity.html" title="Theorem 13.21: Rank-Nullity Theorem">Theorem</a></span>
 </div>
@@ -1620,7 +1623,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">restriction of a function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/ex-common-functions-2-1-4.html" title="Item: Restriction">Item</a></span>
 </div>
-<div class="indexitem">restriction of scalars<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-restriction-of-scalars.html" title="Theorem 12.12: Restriction of Scalars">Theorem</a></span>
+<div class="indexitem">restriction of scalars<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-restriction-of-scalars.html" title="Theorem 12.16: Restriction of Scalars">Theorem</a></span>
 </div>
 <div class="indexitem">right coset<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-coset.html" title="Definition 2.54: Cosets">Definition</a></span>
 </div>
@@ -1666,7 +1669,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">simple group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-simple-group.html" title="Definition 6.16: Simple Group">Definition</a></span>
 </div>
-<div class="indexitem">simple module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/subsec-submod-12.html" title="Exercise 12.18: Simple Modules">Exercise</a></span>
+<div class="indexitem">simple module<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/subsec-modules-20.html" title="Exercise 12.15: Simple Modules">Exercise</a></span>
 </div>
 <div class="indexitem">sine function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/ex-d2n-cos-sin.html" title="Example 2.35: D_{2n} Mapping Example">Example</a></span>
 </div>
@@ -1686,7 +1689,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">subgroup test<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-subgroup-test.html" title="Theorem 2.2: Subgroup Tests">Theorem</a></span>
 </div>
-<div class="indexitem">submodule<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-submodule.html" title="Definition 12.15: Submodule">Definition</a></span>
+<div class="indexitem">submodule<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-submodule.html" title="Definition 12.12: Submodule">Definition</a></span>
 </div>
 <div class="indexitem">subring<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/def-subring.html" title="Definition 8.8: Subring">Definition</a></span>
 </div>
@@ -1744,7 +1747,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">UMP for a cyclic group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/prop-ump-cyclic.html" title="Proposition 2.50: UMP for Cyclic Groups">Proposition</a></span>
 </div>
-<div class="indexitem">UMP for free <span class="process-math">\(R\)</span>-modules<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-ump-for-free-modules.html" title="Theorem 12.64: UMP for Free R-Modules">Theorem</a></span>
+<div class="indexitem">UMP for free <span class="process-math">\(R\)</span>-modules<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-ump-for-free-modules.html" title="Theorem 12.63: UMP for Free R-Modules">Theorem</a></span>
 </div>
 <div class="indexitem">UMP for polynomial rings<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/thm-ump-polynomial-rings.html" title="Theorem 8.52: UMP for Polynomial Rings">Theorem</a></span>
 </div>
