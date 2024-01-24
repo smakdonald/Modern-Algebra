@@ -12048,7 +12048,7 @@
               We could equivalently define <q>submodule</q> to be a subset of <m>M</m> that is an <m>R</m>-module using the same operations of addition and scaling as in <m>M</m>.
             </p>
 
-            <example>
+            <example><title>Submodules</title>
               <statement>
                 <p>
                   <ol>
