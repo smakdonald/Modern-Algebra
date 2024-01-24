@@ -12294,32 +12294,44 @@
             <example><title>Multipication Map is <m>R</m>-Map</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring and <m>M</m> be an <m>R</m>-module. 
-                  For each <m>r \in R</m>, the multiplication map <m>\varphi_r : M \to M</m> given by <m>\varphi_r(m) = rm</m> is a homomorphism of <m>R</m>-modules.
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>R</m> be a commutative ring and <m>M</m> be an <m>R</m>-module. 
+                        For each <m>r \in R</m>, the multiplication map <m>\varphi_r : M \to M</m> given by <m>\varphi_r(m) = rm</m> is a homomorphism of <m>R</m>-modules.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
+                        Then the inclusion map <m>i : N \to M</m> is an <m>R</m>-module homomorphism.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
               <solution>
                 <p>
-                  By the definition of <m>R</m>-module we have
-                  <me>
-                    \varphi_r(m + n) = r(m + n) = rm + rn = \varphi_r(m) + \varphi_r(n),
-                  </me>
-                  and
-                  <me>
-                    \varphi_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = s\varphi_r(m).
-                  </me>
+                  <ol>
+                    <li>
+                      <p>
+                        By the definition of <m>R</m>-module we have
+                        <me>\varphi_r(m + n) = r(m + n) = rm + rn = \varphi_r(m) + \varphi_r(n),</me>
+                        and
+                        <me>\varphi_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = s\varphi_r(m).</me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </solution>
             </example>
-
-            <exercise><title>Inclusion Map is <m>R</m>-map</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring with <m>1 \ne 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m>-submodule of <m>M</m>. 
-                  Then the inclusion map <m>i : N \to M</m> is an <m>R</m>-module homomorphism.
-                </p>
-              </statement>
-            </exercise>
 
             <definition xml:id="def-module-isomorphism"><title><m>R</m>-Module Isomorphism</title>
               <statement>
@@ -12346,7 +12358,7 @@
             <definition xml:id="def-r-map-ker"><title>Kernel</title>
               <statement>
                 <p>
-                  The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(h) := \{m \in M \mid h(m) = 0_N\}</m>
+                  The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}</m>
                   <idx><h>kernel (<m>R</m>-map)</h></idx>
                 </p>
               </statement>
@@ -12416,7 +12428,7 @@
                       </p>
                     </li>
                   </ol>
-                  The zero element of <m>\Hom_R(M, N )</m> is the zero map.
+                  The zero element of <m>\Hom_R(M, N)</m> is the zero map.
                 </p>
               </statement>
             </proposition>
@@ -12688,25 +12700,33 @@
             <ul>
               <li>
                 <p>
-
+                  An <xref text="title" ref="def-module-homomorphism"/> is a homomorphism of abelian groups, with the added structure that scaling must be preserved.
+                  When <m>R</m> is a field, this is called a <em>linear transformation</em>.
                 </p>
               </li>
 
               <li>
                 <p>
-
+                  The set <m>\Hom_R(M, N)</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>.
+                  <m>\Hom_R(M, N)</m> is is an <m>R</m>-module and <m>\Hom_R(R,M) \cong M</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-
+                  Quotient modules are obtained by taking the underlying quotient group structure.
                 </p>
               </li>
 
               <li>
                 <p>
-                  
+                  Multiplication maps, inclusion maps, and projection / quotient maps are all <m>R</m>-module homomorphisms.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The <xref text="title" ref="thm-module-isomorphism-thms"/> hold.
                 </p>
               </li>
             </ul>
