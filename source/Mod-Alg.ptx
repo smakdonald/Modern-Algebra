@@ -11991,6 +11991,12 @@
                   for any <m>n \in \Z</m> and <m>m \in M</m>.
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  
+                </p>
+              </proof>
             </theorem>
 
             <exercise xml:id="exe-zn-modules"><title><m>\Z/n</m> Modules</title>
@@ -12042,24 +12048,34 @@
               We could equivalently define <q>submodule</q> to be a subset of <m>M</m> that is an <m>R</m>-module using the same operations of addition and scaling as in <m>M</m>.
             </p>
 
-            <exercise>
-              <p>
-                Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. 
-                Show that the set 
-                <me>
-                  N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
-                </me> 
-                is an <m>R</m>-submodule of <m>M</m>.
-              </p>
-            </exercise>
-
-            <theorem xml:id="thm-submodules-are-ideals"><title>Submodules are Ideals</title>
+            <example>
               <statement>
                 <p>
-                  A subset <m>I</m> of a ring <m>R</m> is a (left) submodule of <m>R</m> if and only if it is a (left) ideal.
+                  <ol>
+                    <li>
+                      <p>
+                        A subset <m>I</m> of a ring <m>R</m> is a (left) submodule of <m>R</m> if and only if it is a (left) ideal.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>I</m> be an ideal of <m>R</m> and let <m>M</m> be an <m>R</m>-module. 
+                        Then <m>I M:=\left\{\sum_{k=1}^{n} j_{k} m_{k} \mid n \geq 0, j_{k} \in I, m_{k} \in M\right.</m> for <m>\left.1 \leq k \leq n\right\}</m> is a submodule of <m>M</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. 
+                        <me>N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}</me> 
+                        is an <m>R</m>-submodule of <m>M</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
-            </theorem>
+            </example>
 
             <exercise><title>Simple Modules</title>
               <statement>
