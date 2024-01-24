@@ -12583,8 +12583,8 @@
 
                     <li xml:id="fit-module"><title>First Isomorphism Theorem for Modules</title>
                       <p>
-                        Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. 
-                        Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
+                        Let <m>T</m> be an <m>R</m>-module and let <m>\varphi: M \to T</m> be an <m>R</m>-module homomorphism. 
+                        Then <m>\ker(\varphi)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(\varphi) \cong \im(\varphi)</m> given by <m>m + \ker(\varphi) \mapsto \varphi(m)</m>. 
                         <idx><h>first isomorphism theorem for modules</h></idx>
                       </p>
                     </li>
@@ -12630,52 +12630,54 @@
     
                 <p>
                   <ol>
-                    <li>
+                    <li><title>UMP</title>
                       <p>
-                        For the UMP, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \pi = f</m>. 
+                        From the <xref text="title" ref="thm-ump-quotient"/>, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \pi = f</m>. 
                         It remains only to show <m>\ov{f}</m> preserves scaling: 
-                        This follows quickly from the definitions: 
-                        <me>
-                          \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
-                        </me> 
+                        <me>\ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).</me> 
                         where the third equation uses that <m>f</m> preserves scaling.
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>First Isomorphism Theorem</title>
                       <p>
-                        For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <m>+</m>, 
-                        <me>
-                          \ov{h}: M/\ker(h) \xra{\cong} \im(h),
-                        </me> 
-                        given by <m>\ov{h}(m + \ker(h)) = h(m)</m>, and it remains only to show this map preserves scaling. 
+                        From <xref text="title" ref="thm-fit-group"/> we already know that there is an isomorphism of abelian groups under <m>+</m>, 
+                        <me>\ov{\varphi}: M/\ker(\varphi) \xra{\cong} \im(\varphi),</me> 
+                        given by <m>\ov{\varphi}(m + \ker(\varphi)) = \varphi(m)</m>, and it remains only to show this map preserves scaling. 
                         This is a special case of what we proved in part (0).
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Second Isomorphism Theorem</title>
                       <p>
-                        For the second isomorphism theorem, we need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
+                        We need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
                         From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
-                        Now, we know from 817 that there is an isomorphism of abelian groups <m>h: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>h(a + (A\cap B)) = a + B</m>. 
-                        It remains only to show <m>h</m> preserves scaling: 
-                        <me>
-                          h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+                        Now, we know from 817 that there is an isomorphism of abelian groups <m>\varphi: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>\varphi(a + (A\cap B)) = a + B</m>. 
+                        It remains only to show <m>\varphi</m> preserves scaling: 
+                        <me>\varphi(r(a+(A \cap B))) = \varphi(ra + A \cap B) = ra + B = r(a +B) = r\varphi(a + (A \cap B)).
                         </me>
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Third Isomorphism Theorem</title>
                       <p>
                         For the third, we already know (from 817) that <m>B/A</m> is a subgroup of <m>M/A</m> under <m>+</m>. 
                         Given <m>r \in R</m> and <m>b +A \in B/A</m> we have <m>r(b+A) = rb + A</m> which belongs to <m>B/A</m> since <m>rb \in B</m>. 
                         This proves <m>B/A</m> is a submodule of <m>M/A</m>. 
-                        Also from 817 we know there is an isomorphism of abelian groups <m>h: (M/A)/(B/A) \to M/B</m> given by <m>h((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
-                        <m>h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)</m>.
+                        Also from 817 we know there is an isomorphism of abelian groups <m>\varphi: (M/A)/(B/A) \to M/B</m> given by <m>\varphi((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
+                        <me>
+                          \begin{aligned}\varphi(r((m+A) + B/A)) 
+                            &amp;= \varphi(r(m+A) + B/A)\\
+                            &amp;=\varphi((rm + A) + B/A) \\
+                            &amp;=rm + B \\
+                            &amp;=r(m +B) \\
+                            &amp;=r \varphi((m+A) + B/A)
+                          \end{aligned}
+                        </me> 
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Lattice Isomorphism Theorem</title>
                       <p>
                         The Lattice Theorem is the most complicaed to gerenlize. 
                         From 817 we know thre is a bijection between the set of subgroups of <m>M</m> and that contain <m>N</m> and subgroups of the quotient group <m>M/N</m>, and the maps are the same as given in the statment. 
@@ -12708,13 +12710,13 @@
               <li>
                 <p>
                   The set <m>\Hom_R(M, N)</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>.
-                  <m>\Hom_R(M, N)</m> is is an <m>R</m>-module and <m>\Hom_R(R,M) \cong M</m>.
+                  <m>\Hom_R(M, N)</m> is an <m>R</m>-module and <m>\Hom_R(R,M) \cong M</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  Quotient modules are obtained by taking the underlying quotient group structure.
+                  A <xref text="title" ref="def-quotient-module"/> is obtained by taking the underlying quotient group structure.
                 </p>
               </li>
 
