@@ -23,62 +23,65 @@
     -->
 
     <macros>
-        <!-- Operators     -->
-        \def\ann{\operatorname{ann}}
-        \newcommand{\Ass}{\operatorname{Ass}}
-        \def\Aut{\operatorname{Aut}}
-        \def\can{{\mathrm {can}}}
-        \def\char{\operatorname{char}}
-        \def\cp{\operatorname{CharPoly}}
-        \def\codim{\operatorname{codim}} 
-        \def\coker{\operatorname{coker}}
-        \DeclareMathOperator*{\colim}{colim} 
-        \def\cont{\operatorname{cont}} 
-        \def\diam{\operatorname{diam}} 
-        \def\dm{\operatorname{dim}} 
+        <!-- Operators-->
+        \DeclareMathOperator{\ann}{ann}
+        \DeclareMathOperator{\Ass}{Ass}
+        \DeclareMathOperator{\Aut}{Aut}
+        \DeclareMathOperator{\can}{can}
+        \DeclareMathOperator{\Ch}{Ch}
+        \DeclareMathOperator{\char}{char}
+        \DeclareMathOperator{\cp}{CharPoly}
+        \DeclareMathOperator{\codim}{codim}
+        \DeclareMathOperator{\coker}{coker}
+        \DeclareMathOperator{\colim}{colim}
+        \DeclareMathOperator{\cone}{cone}
+        \DeclareMathOperator{\cont}{cont}
+        \DeclareMathOperator{\diam}{diam}
+        \DeclareMathOperator{\dim}{dim}
         \DeclareMathOperator{\edim}{embdim} 
-        \def\End{\operatorname{End}} 
-        \def\eval{\operatorname{eval}} 
-        \def\Ext{\operatorname{Ext}} 
-        \def\Frac{\operatorname{Frac}}
-        \def\Fun{\operatorname{Fun}}
-        \def\Gal{\operatorname{Gal}}
-        \def\gcd{\operatorname{gcd}}
-        \newcommand{\GL}{\operatorname{GL}} 
-        \newcommand{\ht}{\operatorname{height}} 
-        \def\Hom{\operatorname{Hom}} 
-        \def\id{\operatorname{id}} 
-        \def\im{\operatorname{im}} 
-        \def\Inn{\operatorname{Inn}}
-        \def\ker{\operatorname{ker}}
-        \def\lcm{\operatorname{lcm}} 
-        \def\Mat{\operatorname{Mat}}
-        \newcommand{\Min}{\operatorname{Min}}
-        \def\mp{\operatorname{MinPoly}}
-        \def\mSpec{\operatorname{mSpec}}
-        \def\MSpec{\operatorname{MSpec}}
-        \def\null{\operatorname{Nul}}
+        \DeclareMathOperator{\End}{End}
+        \DeclareMathOperator{\eval}{eval}
+        \DeclareMathOperator{\Ext}{Ext}
+        \DeclareMathOperator{\Frac}{Frac}
+        \DeclareMathOperator{\Fun}{Fun}
+        \DeclareMathOperator{\Gal}{Gal}
+        \DeclareMathOperator{\gcd}{gcd}
+        \DeclareMathOperator{\GL}{GL}
+        \DeclareMathOperator{\height}{height}
+        \DeclareMathOperator{\Hom}{Hom}
+        \DeclareMathOperator{\id}{id}
+        \DeclareMathOperator{\im}{im}
+        \DeclareMathOperator{\Inn}{Inn}
+        \DeclareMathOperator{\ker}{ker}
+        \DeclareMathOperator{\lcm}{lcm}
+        \DeclareMathOperator{\Mat}{Mat}
+        \DeclareMathOperator{\max}{max}
+        \DeclareMathOperator{\Min}{Min}
+        \DeclareMathOperator{\mp}{MinPoly}
+        \DeclareMathOperator{\mSpec}{mSpec}
+        \DeclareMathOperator{\Nul}{Nul}
         \DeclareMathOperator{\ns}{nullspace}
-        \newcommand{\opp}{\operatorname{opp}}
-        \def\Orb{\operatorname{Orb}} 
-        \def\Out{\operatorname{Out}}
-        \def\Perm{\operatorname{Perm}}
-        \def\ptstab{\operatorname{PtStab}} 
-        \def\rad{\operatorname{rad}}
+        \DeclareMathOperator{\opp}{opp}
+        \DeclareMathOperator{\Orb}{Orb}
+        \DeclareMathOperator{\Out}{Out}
+        \DeclareMathOperator{\pdim}{pdim}
+        \DeclareMathOperator{\Perm}{Perm}
+        \DeclareMathOperator{\PtStab}{pStab}
+        \DeclareMathOperator{\rad}{rad}
         \DeclareMathOperator{\range}{range}
-        \def\rank{\operatorname{rank}}
-        \def\res{\operatorname{res}}
-        \def\setstab{\operatorname{SetStab}}
-        \def\sign{{\operatorname{sign}}}
-        \newcommand{\SL}{\operatorname{SL}}
-        \def\Span{\operatorname{Span}}
-        \def\Spec{\operatorname{Spec}}
-        \def\Stab{\operatorname{Stab}} 
+        \DeclareMathOperator{\rank}{rank}
+        \DeclareMathOperator{\res}{res}
+        \DeclareMathOperator{\sStab}{SetStab}
+        \DeclareMathOperator{\sign}{sign}
+        \DeclareMathOperator{\SL}{SL}
+        \DeclareMathOperator{\Span}{Span}
+        \DeclareMathOperator{\Spec}{Spec}
+        \DeclareMathOperator{\Stab}{Stab}
         \DeclareMathOperator{\Supp}{Supp}
-        \def\Syl{\operatorname{Syl}}
-        \def\Tor{\operatorname{Tor}}
-        \def\trace{\operatorname{trace}}
-        \def\uSpec{\operatorname{\underline{Spec}}}
+        \DeclareMathOperator{\Syl}{Syl}
+        \DeclareMathOperator{\Tor}{Tor}
+        \DeclareMathOperator{\trace}{trace}
+        \DeclareMathOperator{\trdeg}{trdeg}
         <!-- Categories     -->
         \newcommand{\Ob}{\mathrm{Ob}}
         \newcommand{\Set}{\mathbf{Set}}
@@ -103,8 +106,7 @@
         \newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
         <!-- Greek     -->
         \def\l{\lambda}
-        \def\lx{\lambda_x}
-        \newcommand{\a}{\alpha}
+        \def\a{\alpha}
         \def\b{\beta}
         \def\d{\delta}
         \def\e{\varepsilon}
@@ -113,7 +115,9 @@
         \def\s{\sigma}
         \def\z{\zeta}
         \def\vp{\varphi}
-        <!-- Letters     -->
+
+        <!--       Letters     -->
+
         <!-- MathBB     -->
         \newcommand{\A}{\mathbb{A}}
         \newcommand{\B}{\mathbb{B}}
@@ -175,9 +179,27 @@
         \newcommand{\fc}{{\mathfrak c}} 
         \newcommand{\fd}{{\mathfrak d}} 
         \newcommand{\fe}{{\mathfrak e}}
+        \newcommand{\ff}{{\mathfrak f}}
+        \newcommand{\fg}{{\mathfrak g}}
+        \newcommand{\fh}{{\mathfrak h}}
+        \newcommand{\fi}{{\mathfrak i}}
+        \newcommand{\fj}{{\mathfrak j}}
+        \newcommand{\fk}{{\mathfrak k}}
+        \newcommand{\fl}{{\mathfrak l}}
         \newcommand{\fm}{{\mathfrak m}} 
+        \newcommand{\fn}{{\mathfrak n}}
+        \newcommand{\fo}{{\mathfrak o}}
         \newcommand{\fp}{{\mathfrak p}} 
         \newcommand{\fq}{{\mathfrak q}} 
+        \newcommand{\fr}{{\mathfrak r}}
+        \newcommand{\fs}{{\mathfrak s}}
+        \newcommand{\ft}{{\mathfrak t}}
+        \newcommand{\fu}{{\mathfrak u}}
+        \newcommand{\fv}{{\mathfrak v}}
+        \newcommand{\fw}{{\mathfrak w}}
+        \newcommand{\fx}{{\mathfrak x}}
+        \newcommand{\fy}{{\mathfrak y}}
+        \newcommand{\fz}{{\mathfrak z}}
         \newcommand{\fK}{{\mathfrak K}} 
         \newcommand{\fR}{{\mathfrak R}} 
         <!-- MathScr     -->
@@ -207,6 +229,18 @@
         \def\sX{\mathscr X}
         \def\sY{\mathscr Y}
         \def\sZ{\mathscr Z}
+
+        <!-- Dots     -->
+        \def\adots{a_1, \dots, a_n} 
+        \def\bdots{b_1, \dots, b_n} 
+        \def\cdots{c_1, \dots, c_n} 
+        \def\ddots{d_1, \dots, d_n} 
+        \def\edots{e_1, \dots, e_n} 
+        \def\fdots{f_1, \dots, f_n} 
+        \def\gdots{g_1, \dots, g_n} 
+        \def\udots{u_1, \dots, u_n} 
+        \def\xdots{x_1, \dots, x_n} 
+
         <!-- Tildes     -->
         \def\tS{\tilde{S}}
         <!-- Algebra     -->
@@ -232,10 +266,6 @@
         \newcommand{\es}{\emptyset} 
         \newcommand{\Zm}[1]{\Z/({#1})} 
         \def\ov#1{\overline{#1}} 
-        \def\xdots{x_1, \dots, x_n} 
-        \def\adots{a_1, \dots, a_n} 
-        \def\bdots{b_1, \dots, b_n} 
-        \def\udots{u_1, \dots, u_n} 
         \newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
         \def\th{^{th}} 
         \def\htpy{\simeq_{\mathrm{htpc}}} 
@@ -304,18 +334,17 @@
     <!-- tikz package and libraries for images -->
     <latex-image-preamble>
       \usepackage{tikz}
-      \usetikzlibrary{backgrounds}
-      \usetikzlibrary{snakes}
+      \usepackage{pgfplots}
       \usepackage{tkz-graph}
       \usepackage{tkz-euclide}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{snakes}
       \usetikzlibrary{patterns}
       \usetikzlibrary{positioning}
       \usetikzlibrary{matrix,arrows}
       \usetikzlibrary{calc}
       \usetikzlibrary{shapes}
       \usetikzlibrary{through,intersections,decorations,shadows,fadings}
-      
-      \usepackage{pgfplots}
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
@@ -11775,60 +11804,81 @@
               We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.
             </p>
 
+            
+
             <definition xml:id="def-module"><title>Module</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring (with <m>1</m>). 
-                  A <em>left</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>(r + s)m = rm + sm</m>, 
-                      </p>
-                    </li>
 
-                    <li>
-                      <p>
-                        <m>(rs)m = r(sm)</m>, 
-                      </p>
-                    </li>
+                  <sidebyside margins="6%">
+                    <p>
+                      A <em>left</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
+                      <ol>
+                        <li>
+                          <p>
+                            <m>(r + s)m = rm + sm</m>, 
+                          </p>
+                        </li>
+    
+                        <li>
+                          <p>
+                            <m>(rs)m = r(sm)</m>, 
+                          </p>
+                        </li>
+    
+                        <li>
+                          <p>
+                            <m>r(m + n) = rm + rn</m>, and 
+                          </p>
+                        </li>
+    
+                        <li>
+                          <p>
+                            <m>1m = m</m>.
+                          </p>
+                        </li>
+                      </ol>
+                    </p>
 
-                    <li>
-                      <p>
-                        <m>r(m + n) = rm + rn</m>, and 
-                      </p>
-                    </li>
+                    <p>
+                      A <em>right</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>M \times R \rightarrow M</m>, written <m>(m,r) \mapsto mr</m>, such that for all <m>r,s \in R</m> and <m>m, n \in M</m>
+                      <ol>
+                        <li>
+                          <p>
+                            <m>\mathrm{m}(\mathrm{r}+\mathrm{s})=\mathrm{mr}+\mathrm{ms}</m>,
+                          </p>
+                        </li>
+              
+                        <li>
+                          <p>
+                            <m>\mathrm{m}(\mathrm{rs})=(\mathrm{mr}) \mathrm{s}</m>,
+                          </p>
+                        </li>
+              
+                        <li>
+                          <p>
+                            <m>(\mathrm{m}+\mathrm{n}) \mathrm{r}=\mathrm{mr}+\mathrm{nr}</m>, and
+                          </p>
+                        </li>
+              
+                        <li>
+                          <p>
+                            <m>\mathrm{m} 1=\mathrm{m}</m>.
+                          </p>
+                        </li>
+                      </ol>
+                    </p>
+                  </sidebyside>
 
-                    <li>
-                      <p>
-                        <m>1m = m</m>.
-                      </p>
-                    </li>
-                  </ol>
+                 
+                 
                   <idx><h>module</h></idx>
                   <idx><h><m>R</m>-module</h></idx>
                   Often, the elements of the ring <m>R</m> are referred to as <em>scalars</em>, and the four rules given above are referred to as an <m>R</m>-<em>action</em>.
                 </p>
               </statement>
             </definition>
-
-            <tabular>
-              <row>
-                <cell>Left <m>R</m>-module</cell> <cell>Right <m>R</m>-module</cell>
-              </row>
-              <row>
-                <cell><m>(r + s)m = rm + sm</m></cell> <cell><m>m(r + s) = mr + ms</m></cell> 
-              </row>
-              <row>
-                <cell><m>(rs)m = r(sm)</m></cell> <cell><m>m(rs) = (mr)s</m></cell>               
-              </row>
-              <row>
-                <cell><m>r(m + n) = rm + rn</m></cell> <cell><m>(m + n)r = mr + nr</m></cell>               
-              </row>
-              <row>
-                <cell><m>1m = m</m></cell> <cell><m>m1 = m</m></cell>               
-              </row>
-            </tabular>
 
             <p>
               Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. 
@@ -11877,25 +11927,25 @@
                   Let <m>R</m> be a ring and let <m>M</m> be a (left) <m>R</m>-module. 
                   Then for all <m>r \in R</m> and <m>m \in M</m> we have 
                   <ol>
-                    <li>
+                    <li xml:id="lem-module-arithmetic-1">
                       <p>
                         <m>0_Rm = 0_M</m>, 
                       </p>
                     </li>
 
-                    <li>
+                    <li xml:id="lem-module-arithmetic-2">
                       <p>
                         <m>r 0_M = 0_M</m>, 
                       </p>
                     </li>
 
-                    <li>
+                    <li xml:id="lem-module-arithmetic-3">
                       <p>
                         <m>(-1_R)m = -m</m>, and 
                       </p>
                     </li>
 
-                    <li>
+                    <li xml:id="lem-module-arithmetic-4">
                       <p>
                         <m>(-r)m = -(rm)</m>.
                       </p>
@@ -11908,25 +11958,48 @@
                 <p>
                   <ol>
                     <li>
-                      For the first, <m>0m = (0+0)m = 0m + 0m</m> and hence <m>0m = 0</m>.
+                      First, note <m>0_Rm\in M</m>, which is an ableian group. 
+                      Observe
+                      <md>
+                        <mrow>0_Rm&amp;= (0_R+0_R)m &amp; <xref ref="def-binary-properties"/> (2)</mrow>
+                        <mrow>&amp;=0_Rm + 0_Rm &amp; <xref ref="def-module"/> (1)</mrow>
+                      </md>
+                      As <m>0_Rm = 0_Rm + 0_Rm</m> from above, we have <m>0_Rm=0_M</m> by <xref text="title" ref="list-cancellation"/>.
                     </li>
       
                     <li>
-                      For the second, <m>0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm</m> and hence <m>0_Rm = 0_M</m> since <m>M</m> is an abelian group.
+                      Observe
+                      <md>
+                        <mrow>r 0_M &amp;= r(0_M+0_M) &amp; <xref ref="def-binary-properties"/> (2)</mrow>
+                        <mrow>&amp;=r 0_M + r 0_M &amp; <xref ref="def-module"/> (3)</mrow>
+                      </md>
+                      As <m>r 0_M = r 0_M + r 0_M</m> from above, we have <m>r 0_M = 0_M</m> by <xref text="title" ref="list-cancellation"/>.
                     </li>
       
                     <li>
-                      For the third, <m>m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M</m> (using the second) and hence <m>(-1)m</m> is the additive inverse of <m>m</m>.
+                      Obersve 
+                      <md>
+                        <mrow>m + (-1_R)m &amp;= 1_Rm + (-1_R)m &amp; <xref ref="def-binary-properties"/> (2)</mrow>
+                        <mrow>&amp;= (1_R + (-1_R))m &amp; <xref ref="def-module"/> (1)</mrow>
+                        <mrow>&amp;= 0_Rm &amp; <xref ref="def-binary-properties"/> (3)</mrow>
+                        <mrow>&amp;= 0_M &amp; <xref ref="lem-module-arithmetic-1"/></mrow>
+                      </md>
+                      Since <m>-m</m> is also the additive inverse of <m>m</m>, we have <m>(-1_R)m = -m</m> by Part (2) of <xref ref="thm-properties-of-groups"/>.
                     </li>
       
                     <li>
-                      Finally, <m>(-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)</m> (using the fact that <m>(-1)r = -r</m> holds in any ring and the previous result).
+                      Finally, 
+                      <md>
+                        <mrow>(-r)m &amp;= ((-1_R)r)(m) &amp; <xref ref="prop-ring-arithmetic"/></mrow>
+                        <mrow>&amp;= (-1_R)(rm) &amp; <xref ref="def-module"/> (2)</mrow>
+                        <mrow>&amp;= -(rm) &amp; <xref ref="lem-module-arithmetic-3"/>.</mrow>
+                      </md>
                     </li>
                   </ol>
                 </p>
               </proof>
             </lemma>
-      
+
             <example xml:id="ex-modules"><title>Examples of Modules</title>
               <p>
                 <ol>
@@ -11976,6 +12049,20 @@
                 <idx><h>standard free module</h></idx>
               </p>
             </example>
+
+            <theorem xml:id="thm-mod-closure"><title>Closure Properties of Modules</title>
+              <statement>
+                <p>
+                  Given <m>R</m>-modules <m>M</m> and <m>N</m>, then <m>M+N</m> and <m>M\cap N</m> are both themselves <m>R</m>-modules.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
+                </p>
+              </proof>
+            </theorem>
 
             <theorem xml:id="thm-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
               <statement>
@@ -12163,7 +12250,7 @@
               That being said, in generality the phrase <q>translation of scalars</q> would be more appropriate. 
             </p>
 
-            <example><title>Actual Restriction of Scalars</title>
+            <example><title>Restrictions of Scalars</title>
               <statement>
                 <p>
                   <ol>
@@ -12650,12 +12737,17 @@
 
                     <li><title>Second Isomorphism Theorem</title>
                       <p>
-                        We need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
-                        From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
-                        Now, we know from 817 that there is an isomorphism of abelian groups <m>\varphi: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>\varphi(a + (A\cap B)) = a + B</m>. 
+                        First, note from <xref ref="thm-mod-closure"/> that <m>A+B</m> and <m>A \cap B</m> are indeed submodules. 
+                        The <xref text="title" ref="thm-sit-group"/> yields an isomorphism of abelian groups <m>\varphi: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>\varphi(a + (A\cap B)) = a + B</m>. 
                         It remains only to show <m>\varphi</m> preserves scaling: 
-                        <me>\varphi(r(a+(A \cap B))) = \varphi(ra + A \cap B) = ra + B = r(a +B) = r\varphi(a + (A \cap B)).
-                        </me>
+                        <me>
+                          \begin{aligned}\varphi(r(a+(A \cap B))) 
+                            &amp;= \varphi(ra + A \cap B)\\
+                            &amp;=ra + B \\
+                            &amp;=r(a +B) \\
+                            &amp;=r\varphi(a + (A \cap B))
+                          \end{aligned}
+                        </me> 
                       </p>
                     </li>
 
@@ -12741,13 +12833,17 @@
           <subsection xml:id="subsec-generated-modules"><title>Generated Modules</title>
 
             <blockquote>
-                <p>
-                  <q>
-                    You need to learn independence. You have to be independent - it builds character.
-                  </q>
-                </p>
-                <attribution>Mike Tyson</attribution>
-              </blockquote>
+              <p>
+                <q>
+                  You need to learn independence. You have to be independent - it builds character.
+                </q>
+              </p>
+              <attribution>Mike Tyson</attribution>
+            </blockquote>
+
+            <p>
+              When working with groups, we had the concept of a <xref ref="def-gensubgroup"/>
+            </p>
 
             <definition xml:id="def-linear-combination"><title>Linear Combination</title>
               <statement>
