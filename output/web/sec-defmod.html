@@ -474,31 +474,31 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gphoms.html#subsec-automorphisms" class="internal"><span class="title">Automorphism? I’m <em class="emphasis">Am</em> ’em!</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">Stuck in the Middle</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-subgroups.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Subgroups</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroups</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">Stuck in the Middle</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gp-generators.html#subsec-gp-gensub" class="internal"><span class="title">Generational Wealth</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
 </li>
 </ul>
@@ -698,7 +698,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-free-mod.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Bases and Free Modules</span></a></div>
+<div class="toc-title-box"><a href="sec-free-mod.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Free Modules</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-free-mod.html#subsec-bases" class="internal"><span class="title">Bases</span></a></div></li></ul>
 </li>
 </ul>
@@ -1009,11 +1009,18 @@ R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq
 r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
 \end{equation*}
 </div>
-</div></article><article class="theorem theorem-like" id="thm-mod-closure"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Closure Properties of Modules.</span>
+</div></article><article class="exercise exercise-like" id="thm-mod-closure"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Closure Properties of Modules.</span>
 </h4>
-<div class="para" id="thm-mod-closure-2-1">Given <span class="process-math">\(R\)</span>-modules <span class="process-math">\(M\)</span> and <span class="process-math">\(N\text{,}\)</span> then <span class="process-math">\(M+N\)</span> and <span class="process-math">\(M\cap N\)</span> are both themselves <span class="process-math">\(R\)</span>-modules.</div></article><details id="thm-mod-closure-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-mod-closure-3-1">From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span>
-</div></article></details><article class="theorem theorem-like" id="thm-abelian-groups-are-z-modules"><h4 class="heading">
+<div class="para logical" id="thm-mod-closure-2-1">
+<div class="para">Given <span class="process-math">\(R\)</span>-modules <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> and an ideal <span class="process-math">\(I\text{,}\)</span> the following are <span class="process-math">\(R\)</span>-modules:</div>
+<ol class="decimal">
+<li id="thm-mod-closure-2-1-6-1"><div class="para" id="thm-mod-closure-2-1-6-1-1"><span class="process-math">\(\displaystyle M+N\)</span></div></li>
+<li id="thm-mod-closure-2-1-6-2"><div class="para" id="thm-mod-closure-2-1-6-2-1"><span class="process-math">\(\displaystyle M\cap N\)</span></div></li>
+</ol>
+</div>
+<div class="solutions"><details id="thm-mod-closure-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="thm-mod-closure-3-1">From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span>
+</div></div></details></div></article><article class="theorem theorem-like" id="thm-abelian-groups-are-z-modules"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules.</span>
 </h4>
 <div class="para logical" id="thm-abelian-groups-are-z-modules-2-1">

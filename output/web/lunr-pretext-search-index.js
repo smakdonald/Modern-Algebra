@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": "Group Basics  Groups    Most great learning happens in groups.   Ken Robinson   A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      One of the nice things about binary operations is that they have properties.   Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Group   A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group       Though a group is a pair, we will usually refer to the group by only naming the underlying set, .    We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".    Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The inverse of an element is often written , for reasons we will see in the next section.   Additionally, a binary operation can be commutative . That's right, a secret additional property. Didn't see that coming, did you?   Commutative Property   An operation satisfies the commutative property if for all . commutative property     Lo and behold, this specific property yields a specific type of group!  Abelian Group   An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group     Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and         Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing. This is similar to general relativity, relatively speaking ('Relatively' meaning 'not very much at all' in this context).    Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
+  "body": "Group Basics  Groups    Most great learning happens in groups.   Ken Robinson   A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      One of the nice things about binary operations is that they have properties.   Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Group   A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group       Though a group is a pair, we will usually refer to the group by only naming the underlying set, .    We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".    Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The inverse of an element is often written , for reasons we will see in the next section.   Additionally, a binary operation can be commutative . That's right, a secret additional property. Didn't see that coming, did you?   Commutative Property   An operation satisfies the commutative property if for all . commutative property     Lo and behold, this specific property yields a specific type of group!  Abelian Group   An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group     Additive and Multiplicative Groups  When working with arbitrary groups, multiplicative notation is often used as the operation. Thus, groups are commonly written as and referred to as multiplicative groups . However, when working with abelian groups, it is customary to use additive notation, writing the group as .   Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and         Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.   Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
 },
 {
   "id": "subsec-groups-3-2",
@@ -127,18 +127,18 @@ var ptx_lunr_docs = [
   "body": "Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and        "
 },
 {
-  "id": "subsec-groups-19",
+  "id": "subsec-groups-20",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-19",
+  "url": "sec-group-basics.html#subsec-groups-20",
   "type": "Remark",
   "number": "1.9",
   "title": "Specific General Linear Groups.",
   "body": "Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .   "
 },
 {
-  "id": "subsec-groups-20",
+  "id": "subsec-groups-21",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-20",
+  "url": "sec-group-basics.html#subsec-groups-21",
   "type": "Exercise",
   "number": "1.10",
   "title": "Not Quite Groups.",
@@ -154,9 +154,9 @@ var ptx_lunr_docs = [
   "body": "Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .      "
 },
 {
-  "id": "subsec-groups-23",
+  "id": "subsec-groups-24",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-23",
+  "url": "sec-group-basics.html#subsec-groups-24",
   "type": "Remark",
   "number": "1.12",
   "title": "",
@@ -205,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.17",
   "title": "Generalized Associative Law.",
-  "body": "Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing. This is similar to general relativity, relatively speaking ('Relatively' meaning 'not very much at all' in this context).    Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.  "
+  "body": "Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.   Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.  "
 },
 {
   "id": "sec-group-basics-3",
@@ -223,7 +223,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
+  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. A more experienced reader may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of finite group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
 },
 {
   "id": "def-power",
@@ -842,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-subgroups.html",
   "type": "Section",
-  "number": "2.1",
+  "number": "1.6",
   "title": "Subgroups",
   "body": "Subgroups  Subgroups    I have this fear of falling in front of large groups...that's why I tend not to wear heels.  Taylor Swift  Taylor Swift   Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . (groups)  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  (groups)     Subgroup Tests  subgroup test     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .    Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of .  Subgroups of  The only subgroups of are the sets .   Whilst perusing , you may have noticed the following: If you didn't, don't worry. I won't tell anyeone ;)   Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .      Here are some slightly more involved properties.  Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!       No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.   Special Linear Group   The special linear group with complex entries is defined  special linear group        The special linear group is a subgroup of the general linear group .    Torsion Subgroups      Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup of . torision subgroup     Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.       Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of , defined as , is a subgroup of .   Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.       Cayley's Theorem  cayley's theorem   Every group is isomorphic to a subgroup of .     This is a nearly useless theorem.    Stuck in the Middle    Stay in the center, and you will be ready to move in any direction.   Alan Watts  Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,   center of a group     Center is a Subgroup            is abelian    If , then        Only Element of Order  Let be a group and . If is the only element of order in , then .   Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.        A is a subset of a group that is also a group under the same operation. The fastest way to show something is a subgroup is with one of the .    The is the subgroup of elements of a group that commute with every other element. See: .     The and image of a group homomorphism are subgroups. See:      "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-subgroup",
   "type": "Definition",
-  "number": "2.1",
+  "number": "1.79",
   "title": "Subgroup.",
   "body": "Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . (groups)  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  (groups)    "
 },
@@ -860,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-test",
   "type": "Theorem",
-  "number": "2.2",
+  "number": "1.80",
   "title": "Subgroup Tests.",
   "body": "Subgroup Tests  subgroup test     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .   "
 },
@@ -869,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-common-subgroups",
   "type": "Example",
-  "number": "2.3",
+  "number": "1.81",
   "title": "Common Subgroups.",
   "body": "Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .      "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroups-of-z",
   "type": "Exercise",
-  "number": "2.4",
+  "number": "1.82",
   "title": "Subgroups of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Subgroups of  The only subgroups of are the sets .  "
 },
@@ -887,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-preservations",
   "type": "Exercise",
-  "number": "2.5",
+  "number": "1.83",
   "title": "Subgroups Preservations.",
   "body": "Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .     "
 },
@@ -896,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-properties",
   "type": "Theorem",
-  "number": "2.6",
+  "number": "1.84",
   "title": "Properties of Subgroups.",
   "body": "Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!      "
 },
@@ -905,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-no-proper-unions",
   "type": "Exercise",
-  "number": "2.7",
+  "number": "1.85",
   "title": "No Proper Unions.",
   "body": "No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!  "
 },
@@ -914,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-not-symmetric",
   "type": "Exercise",
-  "number": "2.8",
+  "number": "1.86",
   "title": "Subgroups not Symmetric.",
   "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.  "
 },
@@ -923,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-special-linear-group",
   "type": "Definition",
-  "number": "2.9",
+  "number": "1.87",
   "title": "Special Linear Group.",
   "body": "Special Linear Group   The special linear group with complex entries is defined  special linear group     "
 },
@@ -932,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
-  "number": "2.10",
+  "number": "1.88",
   "title": "<span class=\"process-math\">\\(\\SL_n(\\C)\\leq\\GL_n(\\C)\\)<\/span>.",
   "body": "  The special linear group is a subgroup of the general linear group .   "
 },
@@ -941,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-torsion-subgroup",
   "type": "Exploration",
-  "number": "2.1",
+  "number": "1.2",
   "title": "Torsion Subgroups.",
   "body": "Torsion Subgroups      Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup of . torision subgroup     Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.      "
 },
@@ -950,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-properties-of-group-homoms",
   "type": "Theorem",
-  "number": "2.11",
+  "number": "1.89",
   "title": "Group Homomorphisms and Subgroups.",
   "body": "Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of , defined as , is a subgroup of .   Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.      "
 },
@@ -959,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-cayley",
   "type": "Theorem",
-  "number": "2.12",
+  "number": "1.90",
   "title": "Cayley’s Theorem.",
   "body": "Cayley's Theorem  cayley's theorem   Every group is isomorphic to a subgroup of .   "
 },
@@ -968,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#subsec-subgroup-basics-19",
   "type": "Remark",
-  "number": "2.13",
+  "number": "1.91",
   "title": "",
   "body": " This is a nearly useless theorem.  "
 },
@@ -977,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-group-center",
   "type": "Definition",
-  "number": "2.14",
+  "number": "1.92",
   "title": "Center of a Group.",
   "body": "Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,   center of a group    "
 },
@@ -986,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-center-is-subgroup",
   "type": "Proposition",
-  "number": "2.15",
+  "number": "1.93",
   "title": "Center is a Subgroup.",
   "body": "Center is a Subgroup            is abelian    If , then       "
 },
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-only-element-of-order-2",
   "type": "Exercise",
-  "number": "2.16",
+  "number": "1.94",
   "title": "Only Element of Order <span class=\"process-math\">\\(2\\)<\/span>.",
   "body": "Only Element of Order  Let be a group and . If is the only element of order in , then .  "
 },
@@ -1004,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-even-groups-order-2",
   "type": "Exercise",
-  "number": "2.17",
+  "number": "1.95",
   "title": "Even Order Groups.",
   "body": "Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.   "
 },
@@ -1013,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#sec-subgroups-4",
   "type": "Summary",
-  "number": "2.1",
+  "number": "1.6",
   "title": "",
   "body": "   A is a subset of a group that is also a group under the same operation. The fastest way to show something is a subgroup is with one of the .    The is the subgroup of elements of a group that commute with every other element. See: .     The and image of a group homomorphism are subgroups. See:     "
 },
@@ -1022,61 +1022,52 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-gp-generators.html",
   "type": "Section",
-  "number": "2.2",
+  "number": "2.1",
   "title": "Generated Subgroups",
-  "body": "Generated Subgroups  Generational Wealth    How often misused words generate misleading thoughts.   Herbert Spencer   Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  .   The elements of are known as generators , generator     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.     for every .    Generating      Algebraic Structures  Elements of generated by and . Quiver    Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,      Note that in we showed is generated by transpositions. However, there's more than one way to generate an egg.   We look now at generating ; the following lemma will be helpful.    For and distinct intgers we have (Note that the right-hand cycle is a cycle since is one-to-one.)    To prove this, evaluate both sides at for any and observe that one gets (with the supscript taken modulo ) both times. This proves they agree on the set . If is not in this set, then fixes so the left-hand side fixes . So does the right, since . Thus the two functions coincide on elements.    Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.  Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.   Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.     This is techincally an specific instance of the Universal Mapping Property for a Presentation, which is not covered here.   Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .       For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .     "
+  "body": "Generated Subgroups  Generational Wealth    How often misused words generate misleading thoughts.   Herbert Spencer   Generated Subgroup   Given a group and a subset of , the subgroup of generated by , written , is the smallest subgroup of containing . In symbols, The elements of are known as generators , and is called a generating set .  generated subgroup  generator  generating set     Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group     We can describe the elements of explicitly.  Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.  Generated Groups      If is a group, then is a generating set of .    The trivial group is generated by the empty set.    If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . generated cyclic subgroup       for every .          is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,        Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)    Note that in we showed is generated by transpositions. However, there's more than one way to generate an egg.   We look now at generating ; the following lemma will be helpful.    For and distinct intgers we have (Note that the right-hand cycle is a cycle since is one-to-one.)    To prove this, evaluate both sides at for any and observe that one gets (with the supscript taken modulo ) both times. This proves they agree on the set . If is not in this set, then fixes so the left-hand side fixes . So does the right, since . Thus the two functions coincide on elements.    Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.      For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .     "
 },
 {
   "id": "def-gensubgroup",
   "level": "2",
   "url": "sec-gp-generators.html#def-gensubgroup",
   "type": "Definition",
-  "number": "2.18",
+  "number": "2.1",
   "title": "Generated Subgroup.",
-  "body": "Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  .   The elements of are known as generators , generator    "
+  "body": "Generated Subgroup   Given a group and a subset of , the subgroup of generated by , written , is the smallest subgroup of containing . In symbols, The elements of are known as generators , and is called a generating set .  generated subgroup  generator  generating set    "
+},
+{
+  "id": "def-fg-group",
+  "level": "2",
+  "url": "sec-gp-generators.html#def-fg-group",
+  "type": "Definition",
+  "number": "2.2",
+  "title": "Finitely Generated.",
+  "body": "Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group    "
 },
 {
   "id": "lem-gensubgp",
   "level": "2",
   "url": "sec-gp-generators.html#lem-gensubgp",
   "type": "Lemma",
-  "number": "2.19",
-  "title": "Elements of <span class=\"process-math\">\\(\\igen S\\)<\/span>.",
+  "number": "2.3",
+  "title": "Elements of <span class=\"process-math\">\\(\\igen A\\)<\/span>.",
   "body": "Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .   "
 },
 {
-  "id": "ex-nz-generated",
+  "id": "ex-group-gen",
   "level": "2",
-  "url": "sec-gp-generators.html#ex-nz-generated",
+  "url": "sec-gp-generators.html#ex-group-gen",
   "type": "Example",
-  "number": "2.20",
-  "title": "<span class=\"process-math\">\\(n\\Z=\\igen n\\)<\/span>.",
-  "body": "   for every .   "
-},
-{
-  "id": "ex-d2n-rs",
-  "level": "2",
-  "url": "sec-gp-generators.html#ex-d2n-rs",
-  "type": "Example",
-  "number": "2.21",
-  "title": "Generating <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
-  "body": "Generating     "
-},
-{
-  "id": "figure-d4-pres",
-  "level": "2",
-  "url": "sec-gp-generators.html#figure-d4-pres",
-  "type": "Figure",
-  "number": "2.22",
-  "title": "Algebraic Structures",
-  "body": "Algebraic Structures  Elements of generated by and . Quiver   "
+  "number": "2.4",
+  "title": "Generated Groups.",
+  "body": "Generated Groups      If is a group, then is a generating set of .    The trivial group is generated by the empty set.    If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . generated cyclic subgroup       for every .          is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,       "
 },
 {
   "id": "exe-d2p",
   "level": "2",
   "url": "sec-gp-generators.html#exe-d2p",
   "type": "Exercise",
-  "number": "2.23",
+  "number": "2.5",
   "title": "Generating <span class=\"process-math\">\\(D_{2p}\\)<\/span>.",
   "body": "Generating  Let be prime and be any two distinct reflections in . Then .  "
 },
@@ -1085,25 +1076,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gp-generators.html#generating-gl",
   "type": "Exercise",
-  "number": "2.24",
+  "number": "2.6",
   "title": "Generating <span class=\"process-math\">\\(\\GL_n(\\R)\\)<\/span>.",
   "body": "Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)  "
 },
 {
-  "id": "prop-generating-an",
+  "id": "subsec-gp-gensub-11",
   "level": "2",
-  "url": "sec-gp-generators.html#prop-generating-an",
-  "type": "Proposition",
-  "number": "2.25",
-  "title": "Generating <span class=\"process-math\">\\(A_n\\)<\/span>.",
-  "body": "Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,    "
-},
-{
-  "id": "subsec-gp-gensub-12",
-  "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-12",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-11",
   "type": "Remark",
-  "number": "2.26",
+  "number": "2.7",
   "title": "",
   "body": " Note that in we showed is generated by transpositions. However, there's more than one way to generate an egg.  "
 },
@@ -1112,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gp-generators.html#lem-generating-sn",
   "type": "Lemma",
-  "number": "2.27",
+  "number": "2.8",
   "title": "",
   "body": "  For and distinct intgers we have (Note that the right-hand cycle is a cycle since is one-to-one.)    To prove this, evaluate both sides at for any and observe that one gets (with the supscript taken modulo ) both times. This proves they agree on the set . If is not in this set, then fixes so the left-hand side fixes . So does the right, since . Thus the two functions coincide on elements.   "
 },
@@ -1121,16 +1103,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gp-generators.html#thm-generating-sn",
   "type": "Theorem",
-  "number": "2.28",
+  "number": "2.9",
   "title": "Generating <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Generating   For prove that is generated by and the -cycle .   "
 },
 {
-  "id": "subsec-gp-gensub-16",
+  "id": "subsec-gp-gensub-15",
   "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-16",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-15",
   "type": "Remark",
-  "number": "2.29",
+  "number": "2.10",
   "title": "",
   "body": " This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.  "
 },
@@ -1139,16 +1121,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gp-generators.html#ex-commutator-subgroup",
   "type": "Example",
-  "number": "2.30",
+  "number": "2.11",
   "title": "Commutator Subgroup.",
   "body": "Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .   "
 },
 {
-  "id": "subsec-gp-gensub-19",
+  "id": "subsec-gp-gensub-18",
   "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-19",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-18",
   "type": "Remark",
-  "number": "2.31",
+  "number": "2.12",
   "title": "",
   "body": " Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .  "
 },
@@ -1157,52 +1139,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gp-generators.html#prop-generators-of-subgroup",
   "type": "Proposition",
-  "number": "2.32",
+  "number": "2.13",
   "title": "Generators of Subgroups.",
   "body": "Generators of Subgroups   If is a subgroup of that contains , then .   "
-},
-{
-  "id": "prop-d2n-mapping",
-  "level": "2",
-  "url": "sec-gp-generators.html#prop-d2n-mapping",
-  "type": "Proposition",
-  "number": "2.33",
-  "title": "<span class=\"process-math\">\\(D_{2n}\\)<\/span> Generators and Unique Homomorphism.",
-  "body": "Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.   "
-},
-{
-  "id": "subsec-gp-gensub-25",
-  "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-25",
-  "type": "Remark",
-  "number": "2.34",
-  "title": "",
-  "body": " This is techincally an specific instance of the Universal Mapping Property for a Presentation, which is not covered here.  "
-},
-{
-  "id": "ex-d2n-cos-sin",
-  "level": "2",
-  "url": "sec-gp-generators.html#ex-d2n-cos-sin",
-  "type": "Example",
-  "number": "2.35",
-  "title": "<span class=\"process-math\">\\(D_{2n}\\)<\/span> Mapping Example.",
-  "body": "Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .  "
-},
-{
-  "id": "exe-d12-d6",
-  "level": "2",
-  "url": "sec-gp-generators.html#exe-d12-d6",
-  "type": "Exercise",
-  "number": "2.36",
-  "title": "Another <span class=\"process-math\">\\(D_{2n}\\)<\/span> Mapping.",
-  "body": "Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .  "
 },
 {
   "id": "sec-gp-generators-3",
   "level": "2",
   "url": "sec-gp-generators.html#sec-gp-generators-3",
   "type": "Summary",
-  "number": "2.2",
+  "number": "2.1",
   "title": "",
   "body": "   For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .    "
 },
@@ -1211,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-cyclic.html",
   "type": "Section",
-  "number": "2.3",
+  "number": "2.2",
   "title": "Cyclic Groups",
   "body": "Cyclic Groups  Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche   We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group     Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that     Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.       Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.      Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the  for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups    There is no way to be in cyclic existence without creating the causes of suffering.   Jetsunma Ahkon Lhamo   UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . UMP for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .     This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .   Classification Theorem for Cyclic Groups  classification of cyclic groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .     Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group .         A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .      "
 },
@@ -1220,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#def-cyclic-group",
   "type": "Definition",
-  "number": "2.37",
+  "number": "2.14",
   "title": "Cylic Group.",
   "body": "Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group . cyclic group    "
 },
@@ -1229,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#cor-cyclic-subgroup",
   "type": "Corollary",
-  "number": "2.38",
+  "number": "2.15",
   "title": "Elements of <span class=\"process-math\">\\(\\igen x\\)<\/span>.",
   "body": "Elements of   For an element of , the elements of can be described as: .    By , the group has the following elements . We show that    by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .      "
 },
@@ -1238,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#prop-cyclic-equivalencies",
   "type": "Proposition",
-  "number": "2.39",
+  "number": "2.16",
   "title": "Cyclic iff Element of Order <span class=\"process-math\">\\(|G|\\)<\/span>.",
   "body": "Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that    "
 },
@@ -1247,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#ex-cyclic-examples",
   "type": "Example",
-  "number": "2.40",
+  "number": "2.17",
   "title": "Cyclic Groups.",
   "body": "Cyclic Groups       is a cyclic group.     is a cyclic group.           , for example.     , for example.      "
 },
@@ -1256,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#exe-not-cyclic",
   "type": "Exercise",
-  "number": "2.41",
+  "number": "2.18",
   "title": "Not Quite Cyclic Groups.",
   "body": "Not Quite Cyclic Groups     Prove that is not a cyclic group.    Prove that is not cyclic.     "
 },
@@ -1265,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#exe-non-unique-cyclic-generators",
   "type": "Exercise",
-  "number": "2.42",
+  "number": "2.19",
   "title": "Cyclic Generators are not Unique.",
   "body": "Cyclic Generators are not Unique  Let be a cyclic group. Then .  "
 },
@@ -1274,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#thm-cyclic-criteria",
   "type": "Theorem",
-  "number": "2.43",
+  "number": "2.20",
   "title": "Criteria for Cyclic Generators.",
   "body": "Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .   "
 },
@@ -1283,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#thm-cyclic-abelian",
   "type": "Theorem",
-  "number": "2.44",
+  "number": "2.21",
   "title": "Cyclic Groups are Abelian.",
   "body": "Cyclic Groups are Abelian   Every cyclic group is abelian.   "
 },
@@ -1292,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#ex-group-of-unity",
   "type": "Example",
-  "number": "2.45",
+  "number": "2.22",
   "title": "Roots of Unity.",
   "body": "Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .  "
 },
@@ -1301,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#thm-cyclic-divisors-and-subgroups",
   "type": "Theorem",
-  "number": "2.46",
+  "number": "2.23",
   "title": "Subgroups of Cyclic Groups.",
   "body": "Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the  for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have .   Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and . It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.      "
 },
@@ -1310,7 +1256,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#exe-small-cyclic",
   "type": "Exercise",
-  "number": "2.47",
+  "number": "2.24",
   "title": "Cyclic Groups of Small Order.",
   "body": "Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.     "
 },
@@ -1319,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#thm-aut-cn",
   "type": "Theorem",
-  "number": "2.48",
+  "number": "2.25",
   "title": "<span class=\"process-math\">\\(\\Aut(C_n)\\)<\/span>.",
   "body": "  The automorphism group of is isomorphic to the multiplicative group of units of via the map where .   "
 },
@@ -1328,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#cor-aut-cp",
   "type": "Corollary",
-  "number": "2.49",
+  "number": "2.26",
   "title": "<span class=\"process-math\">\\(\\Aut(C_p)\\)<\/span>.",
   "body": "  If is prime the automorphism group of is cyclic, namely .   "
 },
@@ -1337,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#prop-ump-cyclic",
   "type": "Proposition",
-  "number": "2.50",
+  "number": "2.27",
   "title": "UMP for Cyclic Groups.",
   "body": "UMP for Cyclic Groups   Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any . UMP for a cyclic group     Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , using or the definition for order we have Thus, if then .  The homomorphism property is immediate: .   "
 },
@@ -1346,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#subsec-cyclic-uniqueness-4",
   "type": "Remark",
-  "number": "2.51",
+  "number": "2.28",
   "title": "",
   "body": " This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by or .  "
 },
@@ -1355,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#thm-cyclic-classification",
   "type": "Theorem",
-  "number": "2.52",
+  "number": "2.29",
   "title": "Classification Theorem for Cyclic Groups.",
   "body": "Classification Theorem for Cyclic Groups  classification of cyclic groups   Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to . classification of cyclic groups     Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphism of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .   "
 },
@@ -1364,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#subsec-cyclic-uniqueness-6",
   "type": "Convention",
-  "number": "2.53",
+  "number": "2.30",
   "title": "",
   "body": " Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group .    "
 },
@@ -1373,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#sec-cyclic-4",
   "type": "Summary",
-  "number": "2.3",
+  "number": "2.2",
   "title": "",
   "body": "   A is a group generated by one element. Thus . See:     An element generates a cyclic group if its order is equal to or relatively prime to the order of the group. See: . A finite group is cyclic if there exists an element with the same order as the group. See: .      ; all subgroups of a cyclic group are cyclic and there is a unique subgroup of each order. See:     Every infinite cyclic group is isomorphic to , and every cyclic group of order is isomorphic to . This is known as the .     ; in particular, . See: and .     "
 },
@@ -1382,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-cosets.html",
   "type": "Section",
-  "number": "2.4",
+  "number": "2.3",
   "title": "Cosets and Lagrange’s Theorem",
   "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem    If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).       For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.     "
 },
@@ -1391,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#def-coset",
   "type": "Definition",
-  "number": "2.54",
+  "number": "2.31",
   "title": "Cosets.",
   "body": "Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset    "
 },
@@ -1400,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-abelian-cosets",
   "type": "Exercise",
-  "number": "2.55",
+  "number": "2.32",
   "title": "Abelian Cosets.",
   "body": "Abelian Cosets  If is an abelian then for all .  "
 },
@@ -1409,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#prop-coset-properties",
   "type": "Proposition",
-  "number": "2.56",
+  "number": "2.33",
   "title": "Basic Coset Properties.",
   "body": "Basic Coset Properties   Let and          if and only if            "
 },
@@ -1418,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#lem-cosetfacts",
   "type": "Lemma",
-  "number": "2.57",
+  "number": "2.34",
   "title": "Coset Equivalencies.",
   "body": "Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.   "
 },
@@ -1427,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-coset-equivalence-relation",
   "type": "Theorem",
-  "number": "2.58",
+  "number": "2.35",
   "title": "",
   "body": "  For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .   "
 },
@@ -1436,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-cosetpartition",
   "type": "Corollary",
-  "number": "2.59",
+  "number": "2.36",
   "title": "Cosets Partition a Group.",
   "body": "Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.   "
 },
@@ -1445,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-lagrange",
   "type": "Theorem",
-  "number": "2.60",
+  "number": "2.37",
   "title": "Lagrange’s Theorem.",
   "body": "Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .   "
 },
@@ -1454,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-index-cor",
   "type": "Corollary",
-  "number": "2.61",
+  "number": "2.38",
   "title": "Equal Number of Left and Right Cosets.",
   "body": "Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .   "
 },
@@ -1463,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#def-index",
   "type": "Definition",
-  "number": "2.62",
+  "number": "2.39",
   "title": "Index.",
   "body": "Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index    "
 },
@@ -1472,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#ex-d2n-cosets",
   "type": "Example",
-  "number": "2.63",
+  "number": "2.40",
   "title": "Cosets in <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": "Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .  "
 },
@@ -1481,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-lagrange",
   "type": "Corollary",
-  "number": "2.64",
+  "number": "2.41",
   "title": "Corollaries to Lagrange’s Theorem.",
   "body": "Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all       "
 },
@@ -1490,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#ex-z-cosets",
   "type": "Example",
-  "number": "2.65",
+  "number": "2.42",
   "title": "Finite Index in Infinite Group.",
   "body": "Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )  "
 },
@@ -1499,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-left-right-cosets",
   "type": "Exercise",
-  "number": "2.66",
+  "number": "2.43",
   "title": "Number of Left and Right Cosets (Ininite Version).",
   "body": "Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?  "
 },
@@ -1508,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-index-tower",
   "type": "Theorem",
-  "number": "2.67",
+  "number": "2.44",
   "title": "The Index Tower.",
   "body": "The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .   "
 },
@@ -1517,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-nontrivial-subgroup",
   "type": "Exercise",
-  "number": "2.68",
+  "number": "2.45",
   "title": "",
   "body": " Let be a group of composite order. Then contains a non-trivial proper subgroup.  "
 },
@@ -1526,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-fermat",
   "type": "Exercise",
-  "number": "2.69",
+  "number": "2.46",
   "title": "Fermat’s Little Theorem.",
   "body": "Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem   "
 },
@@ -1535,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#sec-cosets-3",
   "type": "Summary",
-  "number": "2.4",
+  "number": "2.3",
   "title": "",
   "body": "   For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.    "
 },
@@ -2041,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Presentations",
-  "body": "Presentations    Megamind: Oh, you're a villain, alright, just not a super one.    Tighten: Yeah? What's the difference?    Megamind: Presentation!   Megamind (2010)   Generated Normal Subgroup   Let be a group and let be a set. The normal subgroup of generated by , denoted , is the set of all products of conjugates of elements of and inverses of elements of . In symbols,     Presentation   Let be a set and let be a subset of the free group . The group with presentation  is defined to be the quotient group .     For , we obtain the cyclic group of order :     For , we obtain the usual presentation for :    UMP of a Presentation   Let be a set, let be the free group on , let be a subset of , let be a group, and let be a function satisfying the property that whenever , with each and , then . Then there is a unique homomorphism satisfying for all .    By the UMP of the free group there is a unique group homomorphism such that for all . Then for , we have , showing that . Since and is the smallest normal subgroup containing , it follows that . By the UMP of the quotient, induces a group homomorphism . Moreover, for each we have .     The UMP of the presentation says that one can build a homomorphism from a group with a given presentation to any other group as long as one is able to send the generators (elements of ) via some function to some elements of that satisfy the same relations in as those given in the presentation.    To find a groups homomorphism it suffices to find a map , say and to verify that . As you have shown on homework, this does hold for the matrices By the UMP of the presentation there is a group homomorphism that extends ; that is for all .   We can use the map above to understand the notions of isometry and orientation-preserving a little more rigorously. Indeed, an invertible linear transformation, equivalently an element is an isometry if and only if . An invertible linear transformation, equivalently an element is orientation-preserving if and only if . Thus the group of orientation-preserving isometries of can be identified with .  "
+  "body": "Presentations    Megamind: Oh, you're a villain, alright, just not a super one.  Tighten: Yeah? What's the difference?  Megamind: Presentation!   Megamind (2010)   Generated Normal Subgroup   Let be a group and let be a set. The normal subgroup of generated by , denoted , is the set of all products of conjugates of elements of and inverses of elements of . In symbols,     Presentation   Let be a set and let be a subset of the free group . The group with presentation  is defined to be the quotient group .     For , we obtain the cyclic group of order :     For , we obtain the usual presentation for :    UMP of a Presentation   Let be a set, let be the free group on , let be a subset of , let be a group, and let be a function satisfying the property that whenever , with each and , then . Then there is a unique homomorphism satisfying for all .    By the UMP of the free group there is a unique group homomorphism such that for all . Then for , we have , showing that . Since and is the smallest normal subgroup containing , it follows that . By the UMP of the quotient, induces a group homomorphism . Moreover, for each we have .     The UMP of the presentation says that one can build a homomorphism from a group with a given presentation to any other group as long as one is able to send the generators (elements of ) via some function to some elements of that satisfy the same relations in as those given in the presentation.    To find a groups homomorphism it suffices to find a map , say and to verify that . As you have shown on homework, this does hold for the matrices By the UMP of the presentation there is a group homomorphism that extends ; that is for all .   We can use the map above to understand the notions of isometry and orientation-preserving a little more rigorously. Indeed, an invertible linear transformation, equivalently an element is an isometry if and only if . An invertible linear transformation, equivalently an element is orientation-preserving if and only if . Thus the group of orientation-preserving isometries of can be identified with .  "
 },
 {
   "id": "def-gen-normal-subgroup",
@@ -3121,7 +3067,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.3",
   "title": "Finitely Generated Abelian Groups",
-  "body": "Finitely Generated Abelian Groups    The classification of the constituents of a chaos, nothing less is here essayed.   Herman Melville   In this section we see that we can classify finitely generated abelian groups into isomorphism classes.  Sunzi's Remainder Theorem   Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in . Sunzi's remainder theorem for groups     Using , we let be the unique homomorhism that sends to . Then We see and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .     This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem    Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group      Any finite group is finitely generated (take ), but a finitely generated group need not be finite.   The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.  Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)  fundamental theorem of finitely generated abelian groups  FTFGAG   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.    FTFGAG in Action  For we have , .   Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . elementary divisors (groups)  elementary divisor form (groups) The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of . invariant factors (groups)  invariant factor form (groups)     Elementary Divisor Form to Invariant Factor Form  Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .   Invariant Factor Form to Elementary Divisor Form  Suppose now I tell you Then by  given the elementary divisor form.   The makes classification of finite abelian groups a very quick matter.  Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.       allows us to decompose cyclic groups into direct products of their prime factors.    If is an abelian , then it is isomorphic to a direct product of cyclic groups. This is known as the .    The has two forms, each using either invariant factors or elementary divisors of a group, though it is possible to move from one to the other. See: and .      "
+  "body": "Finitely Generated Abelian Groups    The classification of the constituents of a chaos, nothing less is here essayed.   Herman Melville   In this section we see that we can classify finitely generated abelian groups into isomorphism classes.  Sunzi's Remainder Theorem   Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in . Sunzi's remainder theorem for groups     Using , we let be the unique homomorhism that sends to . Then We see and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .     This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem    The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.  Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)  fundamental theorem of finitely generated abelian groups  FTFGAG   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.    FTFGAG in Action  For we have , .   Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . elementary divisors (groups)  elementary divisor form (groups) The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of . invariant factors (groups)  invariant factor form (groups)     Elementary Divisor Form to Invariant Factor Form  Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .   Invariant Factor Form to Elementary Divisor Form  Suppose now I tell you Then by  given the elementary divisor form.   The makes classification of finite abelian groups a very quick matter.  Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.       allows us to decompose cyclic groups into direct products of their prime factors.    If is an abelian , then it is isomorphic to a direct product of cyclic groups. This is known as the .    The has two forms, each using either invariant factors or elementary divisors of a group, though it is possible to move from one to the other. See: and .      "
 },
 {
   "id": "thm-sunzi",
@@ -3142,38 +3088,20 @@ var ptx_lunr_docs = [
   "body": " This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. Chinese Remainder Theorem   "
 },
 {
-  "id": "def-fg-group",
-  "level": "2",
-  "url": "sec-ftfgag.html#def-fg-group",
-  "type": "Definition",
-  "number": "7.26",
-  "title": "Finitely Generated.",
-  "body": "Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group    "
-},
-{
-  "id": "sec-ftfgag-7",
-  "level": "2",
-  "url": "sec-ftfgag.html#sec-ftfgag-7",
-  "type": "Remark",
-  "number": "7.27",
-  "title": "",
-  "body": " Any finite group is finitely generated (take ), but a finitely generated group need not be finite.  "
-},
-{
   "id": "thm-ftfgag",
   "level": "2",
   "url": "sec-ftfgag.html#thm-ftfgag",
   "type": "Theorem",
-  "number": "7.28",
+  "number": "7.26",
   "title": "Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG).",
   "body": "Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)  fundamental theorem of finitely generated abelian groups  FTFGAG   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply to each to find its elementary divisor form.   "
 },
 {
-  "id": "sec-ftfgag-10",
+  "id": "sec-ftfgag-8",
   "level": "2",
-  "url": "sec-ftfgag.html#sec-ftfgag-10",
+  "url": "sec-ftfgag.html#sec-ftfgag-8",
   "type": "Example",
-  "number": "7.29",
+  "number": "7.27",
   "title": "FTFGAG in Action.",
   "body": "FTFGAG in Action  For we have , .  "
 },
@@ -3182,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#def-eds-and-ifs",
   "type": "Definition",
-  "number": "7.30",
+  "number": "7.28",
   "title": "Rank, Invariant Factors, Elementary Divisors.",
   "body": "Rank, Invariant Factors, Elementary Divisors   In , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . elementary divisors (groups)  elementary divisor form (groups) The decomposition in part (1) is also called a primary decomposition .  In , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of . invariant factors (groups)  invariant factor form (groups)    "
 },
@@ -3191,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#ex-if-to-ed",
   "type": "Example",
-  "number": "7.31",
+  "number": "7.29",
   "title": "Elementary Divisor Form to Invariant Factor Form.",
   "body": "Elementary Divisor Form to Invariant Factor Form  Say I tell you  gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .  "
 },
@@ -3200,23 +3128,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftfgag.html#ex-ed-to-if",
   "type": "Example",
-  "number": "7.32",
+  "number": "7.30",
   "title": "Invariant Factor Form to Elementary Divisor Form.",
   "body": "Invariant Factor Form to Elementary Divisor Form  Suppose now I tell you Then by  given the elementary divisor form.  "
 },
 {
-  "id": "sec-ftfgag-15",
+  "id": "sec-ftfgag-13",
   "level": "2",
-  "url": "sec-ftfgag.html#sec-ftfgag-15",
+  "url": "sec-ftfgag.html#sec-ftfgag-13",
   "type": "Example",
-  "number": "7.33",
+  "number": "7.31",
   "title": "Abelian Groups of Order <span class=\"process-math\">\\(75\\)<\/span>.",
   "body": "Abelian Groups of Order  We classify the abelian groups of order up to isomorphism.  Let be an abelian group of order . Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.  "
 },
 {
-  "id": "sec-ftfgag-16",
+  "id": "sec-ftfgag-14",
   "level": "2",
-  "url": "sec-ftfgag.html#sec-ftfgag-16",
+  "url": "sec-ftfgag.html#sec-ftfgag-14",
   "type": "Summary",
   "number": "7.3",
   "title": "",
@@ -4615,7 +4543,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Module Basics",
-  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An -vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.      Prove that a module is the zero module if and only if the zero and identity maps on are equal.   Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module    Closure Properties of Modules   Given -modules and , then and are both themselves -modules.    From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .    Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Simple Modules  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , both and can be viewed as -modules. Additionally, keep an eye on the     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
+  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An -vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.      Prove that a module is the zero module if and only if the zero and identity maps on are equal.   Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module    Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Simple Modules  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.    The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , both and can be viewed as -modules. Additionally, keep an eye on the     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
 },
 {
   "id": "def-module",
@@ -4702,10 +4630,10 @@ var ptx_lunr_docs = [
   "id": "thm-mod-closure",
   "level": "2",
   "url": "sec-defmod.html#thm-mod-closure",
-  "type": "Theorem",
+  "type": "Exercise",
   "number": "12.10",
   "title": "Closure Properties of Modules.",
-  "body": "Closure Properties of Modules   Given -modules and , then and are both themselves -modules.    From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   "
+  "body": "Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .  "
 },
 {
   "id": "thm-abelian-groups-are-z-modules",
@@ -4786,7 +4714,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.2",
   "title": "Module Homomorphisms",
-  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation       .   The condition says that is a homomorphism of abelian groups. Thus . by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and            -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.           An is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When is a field, this is called a linear transformation .    The set denotes the set of all -module homomorphisms from to . is an -module and .    A is obtained by taking the underlying quotient group structure.    Multiplication maps, inclusion maps, and projection \/ quotient maps are all -module homomorphisms.    The hold.     "
+  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have  Preserves Addition   , i.e. is an additive group homomorphism, and   Preserves Scaling   .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation      Let be an -module homomorphism. Then .   By definition, is a homomorphism of abelian groups. Thus by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and thus preserves addition. Also, we have and thus preserves scaling as well, making an -module homomorphism.           -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Notice that if is an -module homomorphism then it is a group homomophism as well. Thus yields the result.    Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.           An is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When is a field, this is called a linear transformation .    The set denotes the set of all -module homomorphisms from to . is an -module and .    A is obtained by taking the underlying quotient group structure.    Multiplication maps, inclusion maps, and projection \/ quotient maps are all -module homomorphisms.    The hold.     "
 },
 {
   "id": "def-module-homomorphism",
@@ -4795,7 +4723,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "12.18",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-Module Homomorphism.",
-  "body": "-Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation    "
+  "body": "-Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have  Preserves Addition   , i.e. is an additive group homomorphism, and   Preserves Scaling   .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation    "
 },
 {
   "id": "subsec-hom-iso-4",
@@ -4804,7 +4732,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "12.19",
   "title": "<span class=\"process-math\">\\(\\varphi(0)=0\\)<\/span>.",
-  "body": "  .   The condition says that is a homomorphism of abelian groups. Thus . by .  "
+  "body": " Let be an -module homomorphism. Then .   By definition, is a homomorphism of abelian groups. Thus by .  "
 },
 {
   "id": "subsec-hom-iso-5",
@@ -4822,7 +4750,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "12.21",
   "title": "Multipication Map is <span class=\"process-math\">\\(R\\)<\/span>-Map.",
-  "body": "Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and           "
+  "body": "Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and thus preserves addition. Also, we have and thus preserves scaling as well, making an -module homomorphism.          "
 },
 {
   "id": "def-module-isomorphism",
@@ -4834,13 +4762,13 @@ var ptx_lunr_docs = [
   "body": "-Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism    "
 },
 {
-  "id": "thm-module-isomorphisms-and-bijections",
+  "id": "cor-module-isomorphisms-and-bijections",
   "level": "2",
-  "url": "sec-modhom.html#thm-module-isomorphisms-and-bijections",
-  "type": "Theorem",
+  "url": "sec-modhom.html#cor-module-isomorphisms-and-bijections",
+  "type": "Corollary",
   "number": "12.23",
   "title": "Module Isomorphisms and Bijections.",
-  "body": "Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.   "
+  "body": "Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Notice that if is an -module homomorphism then it is a group homomophism as well. Thus yields the result.   "
 },
 {
   "id": "def-r-map-ker",
@@ -4966,7 +4894,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.3",
   "title": "Linear Independence and Generated Modules",
-  "body": "Linear Independence and Generated Modules  Generated Modules    You need to learn independence. You have to be independent - it builds character.   Mike Tyson   When working with groups, we had the concept of a   Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .) linear combination  -linear combination     Generated Submodule   Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module     Generated vs. Span  If is an -vector space, one usually uses the term spanned by instead of the term generated by by.   To use the language of , an -module is generated by if every element in can be written as a linear combination of elements in .  Smallest Submodule of Containing   For any subset of a -module , the subset is indeed a submodule of , and it is the smallest submodule of that contains as a subset. In fact, we have     Cyclic Module   If for some single element , we say that is cyclic . cyclic module     Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.   Cyclic Modules and Ideals  Show that the left -module is cyclic if and only if there exists a left ideal of such that .   Every Cyclic -module to for some  Every cyclic -module is isomorphic to for some left ideal .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module      For any -module , we have . This is because the empty sum is interpreted as giving .   Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .   Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .            Linear Independence  Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent      The empty subset of any module is linearly independent (vacuously).   One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.   Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.                        "
+  "body": "Linear Independence and Generated Modules  Generated Modules    You need to learn independence. You have to be independent - it builds character.   Mike Tyson   When working with groups, we had the concept of a   Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .) linear combination  -linear combination     Generated Submodule   Let be a ring with and let be an -module. For a subset of , the submodule of  generated by is   We say is generated by if . generated module     Generated vs. Span  If is an -vector space, one usually uses the term spanned by instead of the term generated by by.   To use the language of , an -module is generated by if every element in can be written as a linear combination of elements in .  Smallest Submodule of Containing   For any subset of a -module , the subset is indeed a submodule of , and it is the smallest submodule of that contains as a subset. In fact, we have     Cyclic Module   If for some single element , we say that is cyclic . cyclic module     Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.   Cyclic Modules and Ideals  A left -module is cyclic if and only if there exists a left ideal of such that .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the , there is an isomorphism sending to .   Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module      For any -module , we have . This is because the empty sum is interpreted as giving .   Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .   Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .            Linear Independence  Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent      The empty subset of any module is linearly independent (vacuously).   One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.   Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.       An -module is generated by a set if every element of can be written as an - of elements of . The module is finitely generated if the set is finite.                 "
 },
 {
   "id": "def-linear-combination",
@@ -5014,38 +4942,29 @@ var ptx_lunr_docs = [
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "subsec-generated-modules-11",
-  "level": "2",
-  "url": "sec-linear-ind-gen.html#subsec-generated-modules-11",
-  "type": "Exercise",
-  "number": "12.41",
-  "title": "Cyclic Modules and Ideals.",
-  "body": "Cyclic Modules and Ideals  Show that the left -module is cyclic if and only if there exists a left ideal of such that .  "
-},
-{
   "id": "exe-every-cyclic-r-module-cong-to-ri-for-some-i",
   "level": "2",
   "url": "sec-linear-ind-gen.html#exe-every-cyclic-r-module-cong-to-ri-for-some-i",
   "type": "Exercise",
-  "number": "12.42",
-  "title": "Every Cyclic <span class=\"process-math\">\\(R\\)<\/span>-module <span class=\"process-math\">\\(\\cong\\)<\/span> to <span class=\"process-math\">\\(R\/I\\)<\/span> for some <span class=\"process-math\">\\(I\\)<\/span>.",
-  "body": "Every Cyclic -module to for some  Every cyclic -module is isomorphic to for some left ideal .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .  "
+  "number": "12.41",
+  "title": "Cyclic Modules and Ideals.",
+  "body": "Cyclic Modules and Ideals  A left -module is cyclic if and only if there exists a left ideal of such that .   Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the , there is an isomorphism sending to .  "
 },
 {
   "id": "def-finitely-generated-module",
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-finitely-generated-module",
   "type": "Definition",
-  "number": "12.43",
+  "number": "12.42",
   "title": "Finitely Generated Module.",
   "body": "Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that . finitely generated module    "
 },
 {
-  "id": "subsec-generated-modules-14",
+  "id": "subsec-generated-modules-13",
   "level": "2",
-  "url": "sec-linear-ind-gen.html#subsec-generated-modules-14",
+  "url": "sec-linear-ind-gen.html#subsec-generated-modules-13",
   "type": "Remark",
-  "number": "12.44",
+  "number": "12.43",
   "title": "",
   "body": " For any -module , we have . This is because the empty sum is interpreted as giving .  "
 },
@@ -5054,7 +4973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#ex-standard-free-module-finitely-generated",
   "type": "Example",
-  "number": "12.45",
+  "number": "12.44",
   "title": "Standard Free Module Finitely Generated.",
   "body": "Standard Free Module Finitely Generated  Let be a ring. The standard free -module of rank , , is finitely generated, since it is generated by where , with a in the -th position. This holds since given any element of we have .  In particular, taking , is cyclic as a module over itself, since . More generally, for any (two sided) ideal , is a cyclic left -module, generated by .  "
 },
@@ -5063,7 +4982,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#lem-fg-quotient-mod",
   "type": "Lemma",
-  "number": "12.46",
+  "number": "12.45",
   "title": "Finite Generation and Quotient Modules.",
   "body": "Finite Generation and Quotient Modules   Let be a ring with , let be an -module, and let be an submodule of .   If is finitely generated as an -module, then so is .    If and are finitely generated as -modules, then so is .          Note that if then , where .          "
 },
@@ -5072,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#def-linearly-independent",
   "type": "Definition",
-  "number": "12.47",
+  "number": "12.46",
   "title": "Linearly Independent.",
   "body": "Linearly Independent   Let be an -module and let be a subset of . The set is linearly independent if whenever and are distinct elements of satisfying , then . Otherwise is linearly dependent . linearly independent  linearly dependent    "
 },
@@ -5081,7 +5000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#subsec-lin-ind-3",
   "type": "Remark",
-  "number": "12.48",
+  "number": "12.47",
   "title": "",
   "body": " The empty subset of any module is linearly independent (vacuously).  "
 },
@@ -5090,7 +5009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#ex-one-element-subsets-of-r-mods",
   "type": "Example",
-  "number": "12.49",
+  "number": "12.48",
   "title": "One Element Subsets of <span class=\"process-math\">\\(R\\)<\/span>-Modules.",
   "body": "One Element Subsets of -Modules  A one element subset of an -module is linearly independent if and only if whenever , we have .  But it is possible for one elements subsets to be linearly dependent: For example, let be any ring and and (two-sided) ideal such that . Then I claim that every non-empty subset of is linearly dependent. For say is a such a nonempty subset. For any , pick any such that . Then (since for some and hence ) and this shows is linearly dependent. In particular, even a one-element subset of is linearly dependent.  "
 },
@@ -5099,7 +5018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-linear-ind-gen.html#exe-3-linearly-independent-in-z",
   "type": "Example",
-  "number": "12.50",
+  "number": "12.49",
   "title": "<span class=\"process-math\">\\(\\{3\\}\\)<\/span> Linearly Independent in <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.  "
 },
@@ -5110,7 +5029,7 @@ var ptx_lunr_docs = [
   "type": "Summary",
   "number": "12.3",
   "title": "",
-  "body": "                   "
+  "body": "   An -module is generated by a set if every element of can be written as an - of elements of . The module is finitely generated if the set is finite.                "
 },
 {
   "id": "sec-free-mod",
@@ -5118,15 +5037,15 @@ var ptx_lunr_docs = [
   "url": "sec-free-mod.html",
   "type": "Section",
   "number": "12.4",
-  "title": "Bases and Free Modules",
-  "body": "Bases and Free Modules  Bases    The basis of all good human behavior is kindness.   Eleanor Roosevelt   Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module     Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)     Free Modules     The zero module is free with as (its only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.       Direct sums of free modules are free.   Bases of free modules are rarely unique.  Bases are not Unique  If is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .   Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.    A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )    If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .    Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities.   Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Given , the fact that for at least one family of elements with for all but a finite number of 's is the definition of what it means for to generate .  Suppose is another such family with . Then Since is linearly independent, by definition for all .    I have not yet given an example of a module with an infinite basis; here is one.  Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .   UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .     The uniqueness only uses that generates as an -module.   Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .    as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .    Every finitely generated free -module is of the form     Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .   Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .    Bases of  Let be a non-zero, commutative ring. Prove that a subset of is a basis of as a module over itself if and only if for some unit of .   Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.        Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .                         "
+  "title": "Free Modules",
+  "body": "Free Modules  Bases    The basis of all good human behavior is kindness.   Eleanor Roosevelt   Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module     Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)     Free Modules     The zero module is free with as its (only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.       Direct sums of free modules are free.   Bases of free modules are rarely unique.  Bases are not Unique  If is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .   Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.    A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )    If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .    Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities.   Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Given , the fact that for at least one family of elements with for all but a finite number of 's is the definition of what it means for to generate .  Suppose is another such family with . Then Since is linearly independent, by definition for all .    I have not yet given an example of a module with an infinite basis; here is one.  Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .   UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .     The uniqueness only uses that generates as an -module.   Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .    as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .    Every finitely generated free -module is of the form     Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .   Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .    Bases of  Let be a non-zero, commutative ring. Prove that a subset of is a basis of as a module over itself if and only if for some unit of .   Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.        Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .                         "
 },
 {
   "id": "def-basis-free-mod",
   "level": "2",
   "url": "sec-free-mod.html#def-basis-free-mod",
   "type": "Definition",
-  "number": "12.51",
+  "number": "12.50",
   "title": "Basis and Free Module.",
   "body": "Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module    "
 },
@@ -5135,7 +5054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#def-rank-module",
   "type": "Definition",
-  "number": "12.52",
+  "number": "12.51",
   "title": "Module Rank.",
   "body": "Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)    "
 },
@@ -5144,16 +5063,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-free-modules",
   "type": "Example",
-  "number": "12.53",
+  "number": "12.52",
   "title": "Free Modules.",
-  "body": "Free Modules     The zero module is free with as (its only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.     "
+  "body": "Free Modules     The zero module is free with as its (only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.     "
 },
 {
   "id": "subsec-bases-6",
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-6",
   "type": "Exercise",
-  "number": "12.54",
+  "number": "12.53",
   "title": "",
   "body": " Direct sums of free modules are free.  "
 },
@@ -5162,7 +5081,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-bases-are-not-unique",
   "type": "Example",
-  "number": "12.55",
+  "number": "12.54",
   "title": "Bases are not Unique.",
   "body": "Bases are not Unique  If is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
@@ -5171,7 +5090,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-9",
   "type": "Exercise",
-  "number": "12.56",
+  "number": "12.55",
   "title": "Every Module over a Field is Free.",
   "body": "Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.  "
 },
@@ -5180,7 +5099,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-10",
   "type": "Remark",
-  "number": "12.57",
+  "number": "12.56",
   "title": "",
   "body": " A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )  "
 },
@@ -5189,7 +5108,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-11",
   "type": "Exercise",
-  "number": "12.58",
+  "number": "12.57",
   "title": "",
   "body": " If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .  "
 },
@@ -5198,7 +5117,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-12",
   "type": "Remark",
-  "number": "12.59",
+  "number": "12.58",
   "title": "",
   "body": " Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities.  "
 },
@@ -5207,7 +5126,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#lem-elements-uniquely-expressible-in-free-modules",
   "type": "Lemma",
-  "number": "12.60",
+  "number": "12.59",
   "title": "Elements Uniquely Expressible in Free Modules.",
   "body": "Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Given , the fact that for at least one family of elements with for all but a finite number of 's is the definition of what it means for to generate .  Suppose is another such family with . Then Since is linearly independent, by definition for all .   "
 },
@@ -5216,7 +5135,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#exe-module-with-infinite-basis",
   "type": "Example",
-  "number": "12.61",
+  "number": "12.60",
   "title": "Module with Infinite Basis.",
   "body": "Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .  "
 },
@@ -5225,7 +5144,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-ump-for-free-modules",
   "type": "Theorem",
-  "number": "12.62",
+  "number": "12.61",
   "title": "UMP for Free <span class=\"process-math\">\\(R\\)<\/span>-Modules.",
   "body": "UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .   "
 },
@@ -5234,7 +5153,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-17",
   "type": "Remark",
-  "number": "12.63",
+  "number": "12.62",
   "title": "",
   "body": " The uniqueness only uses that generates as an -module.  "
 },
@@ -5243,7 +5162,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#cor-free-modules-with-equal-basis-elements-isomorphic",
   "type": "Corollary",
-  "number": "12.64",
+  "number": "12.63",
   "title": "Free Modules with Equal Basis Elements Isomorphic.",
   "body": "Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .   "
 },
@@ -5252,7 +5171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#ex-mcong-rn-as-r-modules",
   "type": "Example",
-  "number": "12.65",
+  "number": "12.64",
   "title": "<span class=\"process-math\">\\(M\\cong R^n\\)<\/span> as <span class=\"process-math\">\\(R\\)<\/span>-modules.",
   "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
 },
@@ -5261,7 +5180,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-20",
   "type": "Exercise",
-  "number": "12.66",
+  "number": "12.65",
   "title": "",
   "body": " Every finitely generated free -module is of the form   "
 },
@@ -5270,7 +5189,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#subsec-bases-21",
   "type": "Remark",
-  "number": "12.67",
+  "number": "12.66",
   "title": "",
   "body": " Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .  "
 },
@@ -5279,7 +5198,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-uniqueness-of-rank-over-commutative-rings",
   "type": "Theorem",
-  "number": "12.68",
+  "number": "12.67",
   "title": "Uniqueness of Rank over Commutative Rings.",
   "body": "Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .   "
 },
@@ -5288,7 +5207,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#prop-r-bases",
   "type": "Exercise",
-  "number": "12.69",
+  "number": "12.68",
   "title": "Bases of <span class=\"process-math\">\\(R\\)<\/span>.",
   "body": "Bases of  Let be a non-zero, commutative ring. Prove that a subset of is a basis of as a module over itself if and only if for some unit of .  "
 },
@@ -5297,7 +5216,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#prop-bases-of-ideals-in-commutative-rings",
   "type": "Exercise",
-  "number": "12.70",
+  "number": "12.69",
   "title": "Bases of ideals in commutative rings.",
   "body": "Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.     "
 },
@@ -5306,7 +5225,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-free-mod.html#thm-free-quotient",
   "type": "Theorem",
-  "number": "12.71",
+  "number": "12.70",
   "title": "",
   "body": "  Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .   "
 },
