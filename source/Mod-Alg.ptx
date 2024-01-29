@@ -11733,8 +11733,6 @@
               We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.
             </p>
 
-            
-
             <definition xml:id="def-module"><title>Module</title>
               <statement>
                 <p>
@@ -11799,9 +11797,6 @@
                       </ol>
                     </p>
                   </sidebyside>
-
-                 
-                 
                   <idx><h>module</h></idx>
                   <idx><h><m>R</m>-module</h></idx>
                   Often, the elements of the ring <m>R</m> are referred to as <em>scalars</em>, and the four rules given above are referred to as an <m>R</m>-<em>action</em>.
@@ -11890,8 +11885,8 @@
                       First, note <m>0_Rm\in M</m>, which is an ableian group. 
                       Observe
                       <md>
-                        <mrow>0_Rm&amp;= (0_R+0_R)m &amp; <xref ref="def-binary-properties"/> (2)</mrow>
-                        <mrow>&amp;=0_Rm + 0_Rm &amp; <xref ref="def-module"/> (1)</mrow>
+                        <mrow>0_Rm &amp;= (0_R+0_R)m &amp; <xref ref="def-binary-properties"/> (2)</mrow>
+                        <mrow> &amp;=0_Rm + 0_Rm &amp; <xref ref="def-module"/> (1)</mrow>
                       </md>
                       As <m>0_Rm = 0_Rm + 0_Rm</m> from above, we have <m>0_Rm=0_M</m> by <xref text="title" ref="list-cancellation"/>.
                     </li>
@@ -12104,13 +12099,51 @@
               </statement>
             </example>
 
-            <exploration><title>Simple Modules</title>
+            <exploration xml:id="exe-simple-modules"><title>Simple Modules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
                   An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
                   Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
                   <idx><h>simple module</h></idx>
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. 
+                  Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. 
+                  By the 
+                  [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. 
+                  By the Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
+                </p>
+              </solution>
+            </exploration>
+
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="exe-simple-modules"/> was <xref text="title" ref="may-2018-5"/> on the <xref text="title" ref="may-2018"/> qualifying exam.
+              </p>
+            </paragraphs>
+
+            <exploration><title></title>
+              <statement>
+                <p>
+                  Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. 
+                  Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>N\cap N' = (0)</m>, and 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>N''\cap(N + N')\neq(0)</m> for every non-zero submodule <m>N''</m> of <m>M</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
             </exploration>
@@ -12391,6 +12424,20 @@
                 </p>
               </proof>
             </corollary>
+
+            <exercise>
+              <statement>
+                <p>
+                  If <m>R</m> is the zero ring, then there is (up to isomorphism) only one <m>R</m>-module, the zero module.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  If <m>M</m> is any module over the <m>0</m> ring, then for each <m>m \in M</m> we have <m>m = 1_R \cdot m = 0_R \cdot m = 0_M</m>.
+                </p>
+              </solution>
+            </exercise>
 
             <definition xml:id="def-r-map-ker"><title>Kernel</title>
               <statement>
@@ -12778,7 +12825,11 @@
           
         </section>
 
-        <section xml:id="sec-linear-ind-gen"><title>Linear Independence and Generated Modules</title>
+      </chapter>
+
+      <chapter xml:id="ch-bases"><title>Bases, Free Modules, Vector Spaces</title>
+
+        <section xml:id="sec-linear-ind-gen"><title>Generated Modules and Linear Independence</title>
 
           <subsection xml:id="subsec-generated-modules"><title>Generated Modules</title>
 
@@ -12791,30 +12842,34 @@
               <attribution>Mike Tyson</attribution>
             </blockquote>
 
-            <p>
-              In <xref ref="ch-presentations"/>, we learned about free groups and presentations, ways of representing groups in more digestible ways.
-              Recall that a free groups are essentially ways of creating generic groups from specific sets. 
-              These sets were the generators of the free group, which was called free due to the lack of relations, or combinations of elements that canceled out to the identity.
-            </p>
+            <paragraphs><title>Where We Came From and Where We're Going</title>
+              
+              <p>
+                In <xref ref="ch-presentations"/>, we learned about free groups and presentations, ways of representing groups in more digestible ways.
+                Recall that a <xref text="title" ref="def-free-group"/> is essentially a way of creating a generic group from a specific set. 
+                These sets were the <em>generators</em> of the free group, which was called <em>free</em> due to the lack of relations, or combinations of elements that canceled out to the identity.
+              </p>
 
-            <p>
-              In the realm of modules, there are many similarites, such as the notion of a free module. 
-              Free modules are, essentially, ways of creating generic modules from specific sets.
-              These sets are called the generators of the free module,
-              <fn>Though, in the world of linear algebra and vector spaces, such sets are referred to as <em>spanning sets</em>.</fn>
-              which is called free due to the lack of relations, or <em>linear</em> combinations of elements that cancle out to zero.
-            </p>
+              <p>
+                In the realm of modules, there are many similarites, such as the notion of a <em>free module</em>. 
+                Free modules are, essentially, ways of creating generic modules from specific sets.
+                These sets are called the <em>generators</em> of the free module,
+                <fn>Though, in the world of linear algebra and vector spaces, such sets are referred to as <em>spanning sets</em>.</fn>
+                which is called <em>free</em> due to the lack of relations, or <em>linear</em> combinations of elements that cancel out to zero.
+              </p>
 
-            <p>
-              Every group has a presentation, a set of generators and relations that express the structure of the group.
-              This presentation can be obtained by starting with a free group and taking quotients corresponding to the relations between the generators.
-              Thus, every group can be expressed as the quotient of a free group.
-            </p>
+              <p>
+                Every group has a <xref text="title" ref="def-presentation"/>, a set of generators and relations that express the structure of the group.
+                This presentation can be obtained by starting with a free group and taking quotients corresponding to the relations between the generators.
+                Thus, every group can be expressed as the quotient of a free group.
+              </p>
 
-            <p>
-              Similarly, we shall see that every module can be expressed as the quotient of a free module.
-              Additionally, the concept of a presentation for a module exists as well, which we will explore in greater depth in <xref ref="ch-modgen"/>.
-            </p>
+              <p>
+                Similarly, we shall see that every module can be expressed as the quotient of a free module.
+                Additionally, the concept of a presentation for a module exists as well, which we will explore in greater depth in <xref ref="ch-modgen"/>.
+              </p>
+
+            </paragraphs>
 
             <definition xml:id="def-linear-combination"><title>Linear Combination</title>
               <statement>
@@ -13050,19 +13105,13 @@
 
               <li>
                 <p>
-                  
+                  Every ring <m>R</m> can viewed as a cyclic <m>R</m>-module generated by <m>\{1\}</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  
+                  A set <m>A</m> is <xref text="title" ref="def-linearly-independent"/> if there are no <m>R</m>-linear combinations of elements in <m>A</m> that equal <m>0</m>.
                 </p>
               </li>
             </ul>
@@ -13094,16 +13143,6 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-rank-module"><title>Module Rank</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
-                  The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
-                  <idx><h>rank (modules)</h></idx>
-                </p>
-              </statement>
-            </definition>
-
             <example xml:id="ex-free-modules"><title>Free Modules</title>
               <p>
                 <ol>
@@ -13120,7 +13159,7 @@
                       It generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
                     </p>
                   </li>
-
+                  
                   <li>
                     <p>
                       More generally, <m>R^n</m> is free since <m>e_1, \dots, e_n</m> is a basis. 
@@ -13158,12 +13197,23 @@
 
             <example xml:id="ex-bases-are-not-unique"><title>Bases are not Unique</title>
               <p>
-                If <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
-                For another example, for any ring <m>R</m> and any fixed element <m>r \in R</m>, the set 
-                <me>
-                  \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}
-                </me> 
-                forms a basis for the free <m>R</m>-module <m>R^2</m>.
+                <ol>
+                  <li>
+                    <p>
+                      If <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For any ring <m>R</m> and any fixed element <m>r \in R</m>, the set 
+                      <me>
+                        \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}
+                      </me> 
+                      forms a basis for the free <m>R</m>-module <m>R^2</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </example>
 
@@ -13190,27 +13240,6 @@
     
               <p>
                 (Note that <m>\Z</m> has precisely two bases as a module over itself: <m>\{1\}</m> and <m>\{-1\}</m>. )
-              </p>
-            </remark>
-            
-            <exercise>
-              <statement>
-                <p>
-                  If <m>R</m> is the zero ring, then there is (up to isomorphism) only one <m>R</m>-module, the zero module.
-                </p>
-              </statement>
-
-              <solution>
-                <p>
-                  If <m>M</m> is any module over the <m>0</m> ring, then for each <m>m \in M</m> we have <m>m = 1_R \cdot m = 0_R \cdot m = 0_M</m>.
-                </p>
-              </solution>
-            </exercise>
-
-            <remark>
-              <p>
-                Checking the definition carefully, we see that both the empty set and the set <m>\{0\}</m> form bases for the zero module over the <m>0</m> ring. 
-                This gives an example of a module with two bases of different cardinalities. 
               </p>
             </remark>
     
@@ -13241,19 +13270,6 @@
                 </p>
               </proof>
             </lemma>
-
-            <p>
-              I have not yet given an example of a module with an infinite basis; here is one.
-            </p>
-
-            <example xml:id="exe-module-with-infinite-basis"><title>Module with Infinite Basis</title>
-              <p>
-                Let <m>R</m> be any ring and <m>M = R[x]</m> (which, recall, is an <m>R</m>-module due to the evident ring map <m>R \to R[x]</m>). 
-                Then the countably infinite set <m>\{1,x,x^2,\dots, x^n,\dots\}</m> is a basis. 
-                The fact that this set is a basis is essentially part of the definition of <m>R[x]</m>. 
-                <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> says that every polynomial is uniquely expressible as an <m>R</m>-linear combination of (a finite subset of) <m>1,x,x^2,\dots</m>.
-              </p>
-            </example>
 
             <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
               <idx><h>UMP for free <m>R</m>-modules</h></idx>
@@ -13315,7 +13331,50 @@
                 The uniqueness only uses that <m>B</m> generates <m>M</m> as an <m>R</m>-module.
               </p>
             </remark>
+
+            <theorem xml:id="thm-free-quotient"><title>Every <m>R</m>-module is the Quotient of a Free Module.</title>
+              <statement>
+                <p>
+                  Every <m>R</m>-module is the quotient of a free module.
+                  Thus for every <m>R</m>-module <m>M</m> there exists a free module <m>F</m> that surjects onto <m>M</m>.
+                </p>
+              </statement>
+            </theorem>
             
+          </subsection>
+
+          <subsection xml:id="subsec-rank"><title>Rank</title>
+
+            <definition xml:id="def-rank-module"><title>Module Rank</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
+                  The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
+                  <idx><h>rank (modules)</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <example><title>Rank of <m>R^n</m></title>
+              <p>
+                The <m>R</m>-module <m>R</m>^n has rank <m>n</m>.
+                Thus <m>R</m> has rank <m>1</m> as a module over itself, as this is the case when <m>n=1</m>.
+              </p>
+            </example>
+
+            <p>
+              I have not yet given an example of a module with an infinite basis; here is one.
+            </p>
+
+            <example xml:id="ex-module-with-infinite-basis"><title>Module with Infinite Basis</title>
+              <p>
+                Let <m>R</m> be any ring and <m>M = R[x]</m> (which, recall, is an <m>R</m>-module due to the evident ring map <m>R \to R[x]</m>). 
+                Then the countably infinite set <m>\{1,x,x^2,\dots, x^n,\dots\}</m> is a basis. 
+                The fact that this set is a basis is essentially part of the definition of <m>R[x]</m>. 
+                <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> says that every polynomial is uniquely expressible as an <m>R</m>-linear combination of (a finite subset of) <m>1,x,x^2,\dots</m>.
+              </p>
+            </example>
+
             <corollary xml:id="cor-free-modules-with-equal-basis-elements-isomorphic"><title>Free Modules with Equal Basis Elements Isomorphic</title>
               <statement>
                 <p>
@@ -13348,14 +13407,6 @@
                 More precisely, as the proof makes clear, if <m>B = \{x_1, \dots, x_n\}</m> is an (ordered) basis of <m>M</m>, there is an isomorphism <m>\phi_B: R^n \cong M</m> that sends <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> to <m>\sum_i r_i x_i</m>.
               </p>
             </example>
-
-            <exercise>
-              <statement>
-                <p>
-                  Every finitely generated free <m>R</m>-module is of the form <m>R^m</m>
-                </p>
-              </statement>
-            </exercise>
 
             <remark>
               <p>
@@ -13425,14 +13476,12 @@
               </proof>
             </theorem>
 
-            <exercise xml:id="prop-r-bases"><title>Bases of <m>R</m></title>          
-              <statement>
-                <p>
-                  Let <m>R</m> be a non-zero, commutative ring. 
-                  Prove that a subset <m>A</m> of <m>R</m> is a basis of <m>R</m> as a module over itself if and only if <m>A =\{u\}</m> for some unit <m>u</m> of <m>R</m>. 
-                </p>
-              </statement>
-            </exercise>
+            <remark>
+              <p>
+                Checking the definition carefully, we see that both the empty set and the set <m>\{0\}</m> form bases for the zero module over the <m>0</m> ring. 
+                This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that 1\ne 0 was used in <xref ref="thm-uniqueness-of-rank-over-commutative-rings"/>.
+              </p>
+            </remark>
 
             <exercise xml:id="prop-bases-of-ideals-in-commutative-rings"><title>Bases of ideals in commutative rings</title>
               <statement>
@@ -13457,15 +13506,6 @@
                 </p>
               </statement>
             </exercise>
-
-            <theorem xml:id="thm-free-quotient">
-              <statement>
-                <p>
-                  Every <m>R</m>-module is the quotient of a free module.
-                  Thus for every <m>R</m>-module <m>M</m> there exists a free module <m>F</m> that surjects onto <m>M</m>.
-                </p>
-              </statement>
-            </theorem>
             
           </subsection>
 
@@ -13473,25 +13513,32 @@
             <ul>
               <li>
                 <p>
-
+                  An <m>R</m>-module <m>M</m> is free if it is generated by a linearly independent set, which is called a basis of <m>M</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-
+                  Given a free module <m>M</m>, the number of elements in a basis is called the rank of <m>M</m>, as any two bases of <m>M</m> must have the same rank.
+                  Specifically, any free <m>R</m>-module of rank <m>n</m> is isomorphic to <m>R^n</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-
+                  In a free module <m>M</m> with basis <m>A</m>, every element of <m>M</m> can be expressed uniquely as an <m>R</m>-linear combination of elements in <m>A</m>. 
                 </p>
               </li>
 
               <li>
                 <p>
-                  
+                  If <m>M</m> is a free module, the <xref ref="thm-ump-for-free-modules"/> tells us that a function from a basis of <m>M</m> to some <m>R</m>-module <m>N</m> can be extended to a homomorphism from <m>M</m> to <m>N</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Every <m>R</m>-module is the quotient of a free module. 
                 </p>
               </li>
             </ul>
@@ -13499,13 +13546,9 @@
 
         </section>
 
-      </chapter>
+        <section xml:id="sec-vecbasis"><title>Vector Spaces</title>
 
-      <chapter xml:id="ch-vector"><title>Vector Spaces and Linear Transformations</title>
-
-        <section xml:id="sec-vecbasis"><title>Dimension</title>
-
-          <subsection xml:id="subsec-span-dimension"><title><m>\Span</m> and the Dimension Theorem</title>
+          <subsection xml:id="subsec-vector-basis"><title>Every Vector Space has a Basis</title>
 
             <blockquote>
               <p>
@@ -13516,6 +13559,27 @@
               <attribution>E.B. White</attribution>
             </blockquote>
 
+            <table>
+              <title>Modules vs. Vector Spaces</title>
+              <tabular>
+                <row>
+                  <cell>Module</cell><cell>Vector Space</cell>
+                </row>
+                <row>
+                  <cell>Arbitrary <m>R</m>-module <m>M</m></cell><cell>Arbitrary <m>F</m>-Vector Space <m>V</m></cell>
+                </row>
+                <row>
+                  <cell><m>R</m>-module homomorphism</cell><cell><m>F</m>-linear transformation</cell>
+                </row>
+                <row>
+                  <cell>Submodule Generated by <m>A</m></cell><cell><m>\Span(A)</m></cell>
+                </row>
+                <row>
+                  <cell>Rank</cell><cell>Dimension</cell>
+                </row>
+              </tabular>
+            </table>
+
             <definition xml:id="def-span"><title>Span</title>
               <statement>
                 <p>
@@ -13524,28 +13588,45 @@
                   <me>
                     \Span(A)=\left\{\sum_{i=1}^n c_ia_i \mid n\geq 0, c_i\in F, a_{i\in}A\right\}.
                   </me>
-                  As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+                  When <m>\Span(A)=F</m>, we say that <m>A</m> <em>spans</em> <m>F</m>.
                   <idx><h>span</h></idx>
                 </p>
               </statement>
             </definition>
 
+            <p>
+              As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+            </p>
+
             <lemma xml:id="lem-linear-independence-and-span"><title>Linear Independence and Span</title>
               <statement>
                 <p>
                   Suppose <m>I</m> is a linearly independent subset of an <m>F</m>-vector space <m>V</m> and <m>v \in V \setminus \Span(I)</m>, then <m>I \cup \{v\}</m> is also linearly independent.
+                  <fn>Stated in terms of modules: Let <m>R</m> be a field. Suppose <m>A</m> is a linearly independent subset of an <m>R</m>-module <m>M</m> and <m>m \in M \setminus RA</m>, then <m>A \cup \{m\}</m> is also linearly independent.</fn>
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  We need to prove that every finite subset of <m>I \cup \{v\}</m> is linearly independent. 
-                  Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose <m>\sum_i c_i w_i = 0</m> for some <m>c_i \in F</m>. 
-                  If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m> since <m>I</m> is linearly independent. 
-                  Without loss, say <m>w_1 = v</m>. 
-                  If <m>c_1 \ne 0</m>, then <m>v = \sum_{i \geq 2} c_1^{-1} c_i w_i \in \Span(I)</m>, contrary to the assumption. 
-                  So we must have <m>c_1 =0</m>. 
-                  But then <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case.
+                  Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose 
+                  <me>c_1w_1+\cdots+c_nw_n=0</me>
+                  for some <m>c_i \in F</m>. 
+                  If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m>, since <m>I</m> is linearly independent. 
+                  Thus <m>v=w_i</m> for some <m>i\leq n</m>.
+                  Without loss of generality, say <m>w_1 = v</m>.
+                  If <m>c_1 \ne 0</m>, then we may write
+                  <md>
+                    <mrow> 0 &amp;= c_1w_1+\cdots+c_nw_n </mrow>
+                    <mrow> 0 &amp;= c_1v+\cdots+c_nw_n </mrow>
+                    <mrow> -c_1v &amp;= c_1v+\cdots+c_nw_n </mrow>
+                    <mrow> v &amp;= (-c_1)\inv(c_1v+\cdots+c_nw_n) </mrow>
+                    <mrow> v &amp;= (-c_1)\inv c_1v+\cdots+(-c_1)\inv c_nw_n,</mrow>
+                  </md> 
+                  placing <m>v\in\Span(I)</m>, contrary to the assumption. 
+                  So we must have <m>c_1 = 0</m>, yielding 
+                  <me>c_2w_2+\cdots+c_nw_n=0.</me>
+                  But then <m>v \ne w_i</m> for all <m>i</m>, and thus we have <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case (since <m>I</m> is linearly independent).
+                  Thus <m>A \cup \{m\}</m> is linearly independent.
                 </p>
               </proof>
             </lemma>
@@ -13573,21 +13654,17 @@
                 <p>
                   Let <m>\cP</m> denote the collection of all subsets <m>X</m> of <m>V</m> such that <m>I\subseteq X \subseteq S</m> and <m>X</m> is linearly independent. 
                   We make <m>\cP</m> into a poset by the order relation <m>\subseteq</m>, set containment.
-                </p>
-    
-                <p>
-                  We note that <m>I \in \cP</m>.
+                  Note that <m>I \in \cP</m>.
                 </p>
     
                 <p>
                   Let <m>\cT</m> be any totally ordered subset of <m>\cP</m>. 
                   If <m>\cT</m> is empty, then <m>\cT</m> is (vacuously) bounded above by <m>I</m>.
+                  Assume <m>\cT</m> is non-empty. 
+                  Let <m>Z = \bigcup_{Y \in \cT} Y</m>. 
                 </p>
     
                 <p>
-                  Assume <m>\cT</m> is non-empty.
-                  Let <m>Z = \bigcup_{Y \in \cT} Y</m>. 
-                  I claim <m>Z \in \cP</m>. 
                   Given <m>z_1, \dots, z_m \in Z</m>, for each <m>i</m> we have <m>z_i \in Y_i</m> for some <m>Y_{i} \in \cT</m>. 
                   Since <m>\cT</m> is totally ordered, one of <m>Y_1, \dots, Y_m</m> contains all the others and hence it contains all the <m>z_i</m>'s. 
                   Since each <m>Y_i</m> is linearly independent, this shows <m>z_1, \dots, z_m</m> are linearly independent. 
@@ -13595,19 +13672,21 @@
                   Since <m>\cT</m> is non-empty, <m>Z \supseteq I</m>. 
                   Since each member of <m>\cT</m> is contained in <m>S</m>, <m>Z \subseteq S</m>. 
                   Thus, <m>Z \in \cP</m>, and it is an upper bound for <m>\cT</m>.
+                  We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. 
                 </p>
     
                 <p>
-                  We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. 
-                  I claim <m>B</m> is a basis of <m>V</m>. 
                   Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. 
-                  We need to show that it spans <m>V</m>. 
-                  Suppose not. 
+                  Suppose by way of contradiction that <m>B</m> does not span <m>V</m>.
                   Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. 
-                  (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) 
+                  <fn>For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.</fn>
                   Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. 
-                  Set <m>X := B \cup \{v\}</m>. Then <m>I \subset X \subseteq S</m> and, by <xref ref="lem-linear-independence-and-span"/>, <m>X</m> is linearly independent. 
-                  This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. 
+                </p>
+
+                <p>
+                  Consider <m>B \cup \{v\}</m>. 
+                  Then <m>I \subset B \cup \{v\} \subseteq S</m> and, by <xref ref="lem-linear-independence-and-span"/>, <m>B \cup \{v\}</m> is linearly independent. 
+                  This shows that <m>B \cup \{v\}</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. 
                   So, <m>B</m> must span <m>V</m> and hence it is a basis.
                 </p>
               </proof>
@@ -13616,15 +13695,49 @@
             <corollary xml:id="cor-every-vector-space-has-a-basis"><title>Every Vector Space has a Basis</title>
               <statement>
                 <p>
-                  Every <m>F</m>-vector space <m>V</m> has a basis. 
-                  Moreover, every linearly independent subset of <m>V</m> is contained in some basis, and every set of vectors that spans <m>V</m> contains some basis.
+                  <ol>
+                    <li>
+                      <p>
+                        Every <m>F</m>-vector space <m>V</m> has a basis. 
+                      </p>
+                    </li>
+
+                    <li xml:id="cor-every-vector-space-has-a-basis-2">
+                      <p>
+                        Every linearly independent subset of <m>V</m> is contained in some basis
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Every set of vectors that spans <m>V</m> contains some basis.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. 
-                  For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
+                  <ol>
+                    <li>
+                      <p>
+                        Apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I</m> arbitrary and <m>S = V</m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S</m> arbitrary.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </proof>
             </corollary>
@@ -13633,14 +13746,20 @@
               In particular, this says that every module over a field is free!
             </p>
 
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="cor-every-vector-space-has-a-basis-2"/> of <xref ref="cor-every-vector-space-has-a-basis"/> was <xref text="title"  ref="june-2010-6"/> on the <xref text="title" ref="june-2010"/> qualifying exam.
+              </p>
+            </paragraphs>
+
             <example>
               <p>
-                <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
+                <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
                 Just don't ask me what it looks like.
               </p>
             </example>
 
-            <corollary xml:id="cor-basis-of-subspaces-extent"><title>Basis of Subspaces Extent</title>
+            <corollary xml:id="cor-basis-of-subspaces-extend"><title>Basis of Subspaces Extend</title>
               <statement>
                 <p>
                   Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. 
@@ -13658,10 +13777,14 @@
 
             <remark>
               <p>
-                It is <em>not</em> true that, with the notation of <xref ref="cor-basis-of-subspaces-extent"/>, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. 
+                It is <em>not</em> true that, with the notation of <xref ref="cor-basis-of-subspaces-extend"/>, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. 
                 For instance, take <m>F = \R</m>, <m>V = \R^2</m>, <m>\tilde{B} = \{(1,0), (0,1)\}</m> and <m>W</m> the subspace spanned by <m>(1,1)</m>.
               </p>
             </remark>
+
+          </subsection>
+
+          <subsection xml:id="subsec-vector-dimension"><title>Every Basis of a Vector Space has the Same Dimension</title>
 
             <p>
               In the language of modules, a finite dimensional vector space is just a finitely generated <m>F</m>-module.
@@ -13683,7 +13806,7 @@
               <proof>
                 <p>
                   Let <m>C = \{w_1, \dots, w_m\}</m>. 
-                  As noted, the sublemma establishes the case <m>w = 1</m> of the Exchange Lemma. 
+                  <xref ref="lem-linear-independence-and-span"/> proves the case when <m>m = 1</m>. 
                   The general case proceeds recursively:
                 </p>
     
@@ -13692,14 +13815,14 @@
                 </p>
     
                 <p>
-                  Since <m>B''</m> is a basis, there is a (unique) equation of the form 
+                  Since <m>B''</m> is a basis, there is a (unique <fn>By <xref ref="lem-elements-uniquely-expressible-in-free-modules"/></fn>) equation of the form 
                   <me>
                     w_{k+1} = \sum_{i=1}^n a_i u_i
                   </me> 
                   with <m>u_i \in B''</m> and <m>a_i \ne 0</m>. 
                   Now, there must be at least one <m>u_i</m> that is not in <m>\{w_1, \dots, w_k\}</m>, for otherwise we would have <m>w_{k+1} \in \Span( w_1, \dots, w_k)</m>, contrary to <m>C</m> being linearly independent. 
                   Let <m>v_{k+1} = u_i</m> for such an <m>i</m>. 
-                  Then by the sublemma
+                  Then by <xref ref="lem-linear-independence-and-span"/>
                   <me>
                     (B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
                   </me> 
@@ -13717,7 +13840,7 @@
             <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
               <statement>
                 <p>
-                  The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases.
+                  The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m>, is the cardinality of any of its bases.
                   A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
                   <idx><h>dimension (vector space)</h></idx>
                   <idx><h>finite dimensional (vector space)</h></idx>
@@ -13751,10 +13874,9 @@
                 <p>
                   Suppose <m>F</m> is a field and <m>V</m> is a finite dimensional <m>F</m>-vector space. 
                   Then it has a finite basis <m>B</m>.
-                  Let <m>B'</m> be any other basis.
-                  (Note that we cannot assume <m>B'</m> is necessarily finite.) 
+                  Let <m>B'</m> be any other basis, not necessarily finite.
                   For any non-negative integer <m>m</m>, suppose <m>C</m> is any <m>m</m>-element subset of <m>B'</m>. 
-                  Then <m>C</m> is linearly independent and so, by the Exchange Lemma, there is an <m>m</m>-element subset <m>D</m> of <m>B</m> such that <m>(B \setminus D) \cup C</m> is also a basis of <m>V</m>. 
+                  Then <m>C</m> is linearly independent and so, by the <xref text="title" ref="lem-exchange-lemma"/>, there is an <m>m</m>-element subset <m>D</m> of <m>B</m> such that <m>(B \setminus D) \cup C</m> is also a basis of <m>V</m>. 
                   In particular, <m>m \leq |B|</m>.
                   Since this holds for all <m>m</m>, we conclude <m>|B|' \leq |B|</m>. 
                   By symmetry, <m>|B| \leq |B|'</m> and hence <m>|B|= |B'|</m>.
@@ -13796,7 +13918,7 @@
               </p>
 
             </example>
-
+            
           </subsection>
 
           <subsection xml:id="subsec-rank-nullity"><title>Classification Theorem and Rank-Nullity</title>
@@ -13810,7 +13932,7 @@
               <attribution>William Shakespeare</attribution>
             </blockquote>
 
-            <theorem xml:id="thm-fg-vs-classification"><title>Classification Theorem</title>
+            <theorem xml:id="thm-fg-vs-classification"><title>Classification of Finite Dimensional Vector Spaces</title>
               <idx><h>classification of finitely generated vector spaces</h></idx>
               <statement>
                 <p>
@@ -13818,7 +13940,7 @@
                   <ol>
                     <li>
                       <p>
-                        Every finitely generated vector space over <m>F</m> is isomorphic to <m>F^{n}</m> for <m>n=\operatorname{dim}_{F}(V)</m>.
+                        Every finite dimensional vector space <m>V</m> over <m>F</m> is isomorphic to <m>F^{n}</m> for <m>n=\operatorname{dim}_{F}(V)</m>.
                       </p>
                     </li>
 
@@ -14037,7 +14159,7 @@
           
         </section>
 
-        <section xml:id="sec-cob"><title>Linear Transformations and Change of Basis</title>
+        <section xml:id="sec-cob"><title>Change of Basis</title>
 
           <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
@@ -21610,6 +21732,29 @@
 
             </exercisegroup>
 
+            <exercisegroup xml:id="may-2018"><title>May 2018</title>
+
+              <introduction>
+                <p></p>
+              </introduction>
+
+              <exercise xml:id="may-2018-5" number="5"><title>Problem 5</title>
+                <statement>
+                  <p>
+                    Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. 
+                    Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal <m>I</m> of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    This is <xref ref="exe-simple-modules"/>.
+                  </p>
+                </solution>
+              </exercise>
+
+            </exercisegroup>
+
             <exercisegroup xml:id="may-2017"><title>May 2017</title>
 
               <introduction>
@@ -21795,6 +21940,29 @@
                 <solution>
                   <p>
                     This is <xref ref="thm-smallest-prime-normal"/>.
+                  </p>
+                </solution>
+              </exercise>
+
+            </exercisegroup>
+
+            <exercisegroup xml:id="june-2010"><title>June 2010</title>
+
+              <introduction>
+                <p></p>
+              </introduction>
+
+              <exercise xml:id="june-2010-6" number="6"><title>Problem 6</title>
+                <statement>
+                  <p>
+                    Let <m>F</m> be a field and <m>V</m> a vector space (not necessarily finite-dimensional) over <m>F</m>. 
+                    Prove that every linearly independent subset of <m>V</m> is contained in a basis for <m>V</m>.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    This is <xref ref="cor-every-vector-space-has-a-basis-2"/> of <xref ref="cor-every-vector-space-has-a-basis"/>.
                   </p>
                 </solution>
               </exercise>
@@ -25930,20 +26098,21 @@
           <activity><title>Problem 5</title>
             <statement>
               <p>
-          Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal <m>I</m> of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
-        </p>
+                Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. 
+                Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal <m>I</m> of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
+              </p>
             </statement>
 
             <solution>
               <p>
-            Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module such that <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>.
-          </p>
+                Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module such that <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>.
+              </p>
 
-          <p>
-            As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. By the 
-            [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. By the 
-            Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
-          </p>
+              <p>
+                As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. By the 
+                [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. By the 
+                Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
+              </p>
             </solution>
           
           </activity>
@@ -25996,8 +26165,8 @@
           <activity><title>Problem 5</title>
             <statement>
               <p>
-            Let <m>F</m> be a field and <m>f(x) \in F[x]</m> a monic polynomial of degree <m>n</m>. Prove: all matrices in <m>M_{n\times n}(F)</m> having characteristic polynomial <m>f (x)</m> are similar if and only if the irreducible factorization of <m>f(x)</m> has no repeated factors.
-          </p>
+                Let <m>F</m> be a field and <m>f(x) \in F[x]</m> a monic polynomial of degree <m>n</m>. Prove: all matrices in <m>M_{n\times n}(F)</m> having characteristic polynomial <m>f (x)</m> are similar if and only if the irreducible factorization of <m>f(x)</m> has no repeated factors.
+              </p>
             </statement>
 
             <solution>
@@ -26173,22 +26342,22 @@
           <activity><title>Problem 9</title>
             <statement>
               <p>
-            Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group <m>\GL_2(\F_3)</m>, where <m>\F_3</m> is the field with three elements.
-          </p>
+                Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group <m>\GL_2(\F_3)</m>, where <m>\F_3</m> is the field with three elements.
+              </p>
             </statement>
 
             <solution>
               <p>
-            Let <m>\F_3</m> denote the field with three elements, and consider the group <m>\GL_2(\F_3)</m>.
-          </p>
+                Let <m>\F_3</m> denote the field with three elements, and consider the group <m>\GL_2(\F_3)</m>.
+              </p>
 
-          <p>
-            Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.
-          </p>
+              <p>
+                Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.
+              </p>
 
-          <p>
-            Let <m>A\in\GL_2(\F_3)</m>. All characteristic polynomials are monic, and as <m>A</m> is invertible we see the <m>a_0</m> term in the <m>\cp_A(x)\neq0</m>, and thus <m>a_0</m> is either <m>1</m> or <m>2</m>, the only other elements in <m>\F_3</m>. There are only so many monic polynomials of degree <m>2</m> with coefficients in <m>\F_3</m>; hence the only possible characteristic polynomials of <m>A</m> are the following: 1. <m>f(x)=x^2+x+1</m>, 2. <m>g(x)=x^2+x+2</m>, 3. <m>h(x)=x^2+1</m>, 4. <m>j(x)=x^2+2</m>. 5. <m>k(x)=x^2+2x+1</m>. 6. <m>\ell(x)=x^2+2x+2</m> Note that since <m>a_0\neq0</m>, 0 cannot be a root of any of these polynomials. Thus all that remains is to check <m>1</m> and <m>2</m>.
-          </p>
+              <p>
+                Let <m>A\in\GL_2(\F_3)</m>. All characteristic polynomials are monic, and as <m>A</m> is invertible we see the <m>a_0</m> term in the <m>\cp_A(x)\neq0</m>, and thus <m>a_0</m> is either <m>1</m> or <m>2</m>, the only other elements in <m>\F_3</m>. There are only so many monic polynomials of degree <m>2</m> with coefficients in <m>\F_3</m>; hence the only possible characteristic polynomials of <m>A</m> are the following: 1. <m>f(x)=x^2+x+1</m>, 2. <m>g(x)=x^2+x+2</m>, 3. <m>h(x)=x^2+1</m>, 4. <m>j(x)=x^2+2</m>. 5. <m>k(x)=x^2+2x+1</m>. 6. <m>\ell(x)=x^2+2x+2</m> Note that since <m>a_0\neq0</m>, 0 cannot be a root of any of these polynomials. Thus all that remains is to check <m>1</m> and <m>2</m>.
+              </p>
             </solution>
           
           </activity>
@@ -26418,34 +26587,72 @@
 
           <activity><title>Problem 5</title>
             <statement>
-            <p>
-            Let <m>R</m> be a commutative integral domain and <m>M</m> an <m>R</m>-module. Recall that a subset <m>S</m> of <m>M</m> is called a <em>maximal linearly independent</em> set of <m>M</m> if <m>S</m> is linearly independent and any subset of <m>M</m> properly containing <m>S</m> is linearly dependent.
-          </p>
+              <p>
+                Let <m>R</m> be a commutative integral domain and <m>M</m> an <m>R</m>-module. 
+                Recall that a subset <m>S</m> of <m>M</m> is called a <em>maximal linearly independent</em> set of <m>M</m> if <m>S</m> is linearly independent and any subset of <m>M</m> properly containing <m>S</m> is linearly dependent.
+              </p>
 
-          <p><ol>
-            <li>
-            Let <m>T</m> be a linearly independent subset of <m>M</m>. Prove that <m>T</m> is contained in some maximal linearly independent subset of <m>M</m>.
-            </li>
+              <p>
+                <ol>
+                  <li>
+                    Let <m>T</m> be a linearly independent subset of <m>M</m>. 
+                    Prove that <m>T</m> is contained in some maximal linearly independent subset of <m>M</m>.
+                  </li>
 
-            <li>
-            Let <m>T</m> be a linearly independent subset of <m>M</m> and <m>N</m> the <m>R</m>-submodule of <m>M</m> generated by <m>T</m>. Prove that <m>T</m> is a maximal linearly independent subset if and only if <m>M/N</m> is torsion. (Recall that an <m>R</m>-module <m>P</m> is called “torsion'' if for each <m>p \in P</m>, there is a <m>r \in R</m> such that <m>r \ne 0</m> and <m>rp = 0</m>.)
-            </li>
-
-          </ol></p>
+                  <li>
+                    Let <m>T</m> be a linearly independent subset of <m>M</m> and <m>N</m> the <m>R</m>-submodule of <m>M</m> generated by <m>T</m>. 
+                    Prove that <m>T</m> is a maximal linearly independent subset if and only if <m>M/N</m> is torsion. 
+                    (Recall that an <m>R</m>-module <m>P</m> is called “torsion'' if for each <m>p \in P</m>, there is a <m>r \in R</m> such that <m>r \ne 0</m> and <m>rp = 0</m>.)
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-              Part (a) Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. Thus by <xref text="title" ref="lem-zorn"/> there exists a maximal element of <m>A</m>, which we denote <m>S</m>. Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
-            </p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. 
+                      We can order <m>A</m> with respect to inclusion. 
+                      Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. 
+                      Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. 
+                      As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. 
+                      However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. 
+                      Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. 
+                      As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. 
+                      Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. 
+                      Thus by <xref text="title" ref="lem-zorn"/> there exists a maximal element of <m>A</m>, which we denote <m>S</m>. 
+                      Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
+                    </p>
+                  </li>
 
-            <p>
-              Part (b) <m>(\Rightarrow)</m> Suppose <m>T</m> is maximal linearly independent, and suppose by way of contradiction that <m>M/N</m> is not torsion. Thus there exists some <m>xN\in M/N</m> such that for all <m>r\in R</m>, we see that <m>rx\neq0</m>. However, as <m>x\neq 0</m> and <m>x\not\in N</m>, this means that <m>x\not\in T</m>. Consider <m>T\cup\{x\}</m>. This set is linearly independent, contradicting the assumption that <m>T</m> was maximal.
-            </p>
+                  <li>
+                    <p>
+                      <m>(\Rightarrow)</m> 
+                      Suppose <m>T</m> is maximal linearly independent, and suppose by way of contradiction that <m>M/N</m> is not torsion. 
+                      Thus there exists some <m>xN\in M/N</m> such that for all <m>r\in R</m>, we see that <m>rx\neq0</m>. 
+                      However, as <m>x\neq 0</m> and <m>x\not\in N</m>, this means that <m>x\not\in T</m>. 
+                      Consider <m>T\cup\{x\}</m>. 
+                      This set is linearly independent, contradicting the assumption that <m>T</m> was maximal.
+                    </p>
 
-            <p>
-              <m>(\Leftarrow)</m> Suppose <m>M/N</m> is torsion. Let <m>x\neq0\in M</m> and consider <m>T\cup\{x\}</m>. Consider <m>x+N\in M/N</m>. As <m>M/N</m> is torsion, there exists an <m>r\neq0\in R</m> such that <m>rxN=0</m>. Thus <m>rx\in N</m>. (Note, if <m>x\in N</m>, then <m>r=1</m>). As <m>rx\in N</m> and <m>N</m> is generated by <m>T</m> (<m>N=RT</m>), <m>rx=\sum r_it_i</m>. Subtracting over we see that <m>rx-\sum r_it_i=0</m>. But as <m>r\neq 0</m>, we see that each <m>t_i</m> and <m>x</m> are in <m>T\cup\{x\}</m>, but the sum is 0. Thus <m>T\cup\{x\}</m> is linearly dependent.
-            </p>
+                    <p>
+                      <m>(\Leftarrow)</m> 
+                      Suppose <m>M/N</m> is torsion. 
+                      Let <m>x\neq0\in M</m> and consider <m>T\cup\{x\}</m>. 
+                      Consider <m>x+N\in M/N</m>. 
+                      As <m>M/N</m> is torsion, there exists an <m>r\neq0\in R</m> such that <m>rxN=0</m>.
+                      Thus <m>rx\in N</m>. 
+                      (Note, if <m>x\in N</m>, then <m>r=1</m>). 
+                      As <m>rx\in N</m> and <m>N</m> is generated by <m>T</m> (<m>N=RT</m>), <m>rx=\sum r_it_i</m>. 
+                      Subtracting over we see that <m>rx-\sum r_it_i=0</m>. 
+                      But as <m>r\neq 0</m>, we see that each <m>t_i</m> and <m>x</m> are in <m>T\cup\{x\}</m>, but the sum is <m>0</m>. 
+                      Thus <m>T\cup\{x\}</m> is linearly dependent.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
           
           </activity>
@@ -26484,7 +26691,8 @@
 
           <activity><title>Problem 8 (*)</title>
             <statement>
-              <p>Let N be a submodule of an R-module M. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule N' such that 
+              <p>Let N be a submodule of an R-module M. 
+                Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule N' such that 
                 <ol>
                   <li>
                     <p>
@@ -26638,18 +26846,27 @@
           <activity><title>Problem 11</title>
             <statement>
               <p>
-            Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>f : R^m\to R^n</m> be a surjective homomorphism of free <m>R</m>-modules. Prove that <m>m \leq n</m>.
-          </p>
+                Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>f : R^m\to R^n</m> be a surjective homomorphism of free <m>R</m>-modules. Prove that <m>m \leq n</m>.
+              </p>
             </statement>
 
             <solution>
               <p>
-            Let <m>I</m> be a maximal ideal in <m>R</m>. Thus <m>R/I</m> is a field. Lemma 1.58 tells us that <m>M/IM</m> and <m>N/IN</m> are <m>R/I</m>-vector spaces. Additionally, this gives rise to <m>\overline{p}:M/IM\to N/IN</m>, which is a surjective <m>R/I</m>-module linear transformation.
-          </p>
+                Let <m>I</m> be a maximal ideal in <m>R</m>. 
+                Thus <m>R/I</m> is a field. 
+                Lemma 1.58 tells us that <m>M/IM</m> and <m>N/IN</m> are <m>R/I</m>-vector spaces. 
+                Additionally, this gives rise to <m>\overline{p}:M/IM\to N/IN</m>, which is a surjective <m>R/I</m>-module linear transformation.
+              </p>
 
-          <p>
-            Note that <m>M</m> is generated by <m>e_i+IM</m> for <m>i\leq m</m>. Let <m>a_i\in R</m> and consider <m>\sum a_ie_i=0</m>. For this to be <m>0</m> we need it to be in <m>IM</m>, and thus all <m>a_i\in I</m>. So the set of <m>e_i</m> is a basis for <m>M/IM</m> with <m>m</m> elements. Likewise <m>N/IN</m> has a basis with <m>n</m> elements. As we are surjective, Rank<m>=n</m>, <m>\dim=m</m>. So by Rank-Nullity <m>\dim(\ker)=m-n</m> which is only positive with <m>m\geq n</m>.
-          </p>
+              <p>
+                Note that <m>M</m> is generated by <m>e_i+IM</m> for <m>i\leq m</m>. 
+                Let <m>a_i\in R</m> and consider <m>\sum a_ie_i=0</m>. 
+                For this to be <m>0</m> we need it to be in <m>IM</m>, and thus all <m>a_i\in I</m>. 
+                So the set of <m>e_i</m> is a basis for <m>M/IM</m> with <m>m</m> elements. 
+                Likewise <m>N/IN</m> has a basis with <m>n</m> elements. 
+                As we are surjective, Rank<m>=n</m>, <m>\dim=m</m>. 
+                So by Rank-Nullity <m>\dim(\ker)=m-n</m> which is only positive with <m>m\geq n</m>.
+              </p>
             </solution>
           
           </activity>

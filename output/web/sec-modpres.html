@@ -694,31 +694,35 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modhom.html#subsec-quotient-modules" class="internal"><span class="title">Quotient Modules</span></a></div></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-bases.html" class="internal"><span class="codenumber">13</span> <span class="title">Bases, Free Modules, Vector Spaces</span></a></div>
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-linear-ind-gen.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Linear Independence and Generated Modules</span></a></div>
+<div class="toc-title-box"><a href="sec-linear-ind-gen.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Generated Modules and Linear Independence</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-ind-gen.html#subsec-generated-modules" class="internal"><span class="title">Generated Modules</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-ind-gen.html#subsec-lin-ind" class="internal"><span class="title">Linear Independence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-free-mod.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Free Modules</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-free-mod.html#subsec-bases" class="internal"><span class="title">Bases</span></a></div></li></ul>
-</li>
+<div class="toc-title-box"><a href="sec-free-mod.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Free Modules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-free-mod.html#subsec-bases" class="internal"><span class="title">Bases</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-free-mod.html#subsec-rank" class="internal"><span class="title">Rank</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-vector.html" class="internal"><span class="codenumber">13</span> <span class="title">Vector Spaces and Linear Transformations</span></a></div>
-<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Dimension</span></a></div>
+<div class="toc-title-box"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Vector Spaces</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecbasis.html#subsec-span-dimension" class="internal"><span class="title"><span class="process-math">\(\Span\)</span> and the Dimension Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecbasis.html#subsec-vector-basis" class="internal"><span class="title">Every Vector Space has a Basis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecbasis.html#subsec-vector-dimension" class="internal"><span class="title">Every Basis of a Vector Space has the Same Dimension</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecbasis.html#subsec-rank-nullity" class="internal"><span class="title">Classification Theorem and Rank-Nullity</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cob.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Linear Transformations and Change of Basis</span></a></div>
+<div class="toc-title-box"><a href="sec-cob.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Change of Basis</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#sec-transforms" class="internal"><span class="title">Matrices of Linear Transformations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#subsec-cob" class="internal"><span class="title">Change of Basis</span></a></div></li>
@@ -945,7 +949,7 @@ A=\left[\begin{array}{ccc}
 \end{array}\right]
 \end{equation*}
 </div>
-<div class="para">What <span class="process-math">\(\mathbb{Z}\)</span>-module <span class="process-math">\(M\)</span> is presented by <span class="process-math">\(A\text{?}\)</span> Formally, <span class="process-math">\(M\)</span> is the quotient module <span class="process-math">\(M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)\text{,}\)</span> where <span class="process-math">\(t_{A}: \mathbb{Z}^{3} \rightarrow \mathbb{Z}^{4}\)</span> is defined by <span class="process-math">\(t_{A}(v)=A v\text{.}\)</span> Since <span class="process-math">\(\mathbb{Z}^{4}\)</span> is generated by its standard basis elements <span class="process-math">\(\left\{e_{1}, e_{2}, e_{3}, e_{4}\right\}\text{,}\)</span> we deduce as in <a href="" class="xref" data-knowl="./knowl/xref/lem-fg-quotient-mod.html" title="Lemma 12.43: Finite Generation and Quotient Modules">Lemma 12.43</a> that <span class="process-math">\(M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)\)</span> is generated by the cosets of the <span class="process-math">\(e_{i}\text{.}\)</span> To keep the notation short, we set <span class="process-math">\(m_{i}=e_{i}+\operatorname{im}\left(t_{A}\right)\text{.}\)</span>
+<div class="para">What <span class="process-math">\(\mathbb{Z}\)</span>-module <span class="process-math">\(M\)</span> is presented by <span class="process-math">\(A\text{?}\)</span> Formally, <span class="process-math">\(M\)</span> is the quotient module <span class="process-math">\(M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)\text{,}\)</span> where <span class="process-math">\(t_{A}: \mathbb{Z}^{3} \rightarrow \mathbb{Z}^{4}\)</span> is defined by <span class="process-math">\(t_{A}(v)=A v\text{.}\)</span> Since <span class="process-math">\(\mathbb{Z}^{4}\)</span> is generated by its standard basis elements <span class="process-math">\(\left\{e_{1}, e_{2}, e_{3}, e_{4}\right\}\text{,}\)</span> we deduce as in <a href="" class="xref" data-knowl="./knowl/xref/lem-fg-quotient-mod.html" title="Lemma 13.10: Finite Generation and Quotient Modules">Lemma 13.10</a> that <span class="process-math">\(M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)\)</span> is generated by the cosets of the <span class="process-math">\(e_{i}\text{.}\)</span> To keep the notation short, we set <span class="process-math">\(m_{i}=e_{i}+\operatorname{im}\left(t_{A}\right)\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="exe-z-module-presentation-3">
 <div class="para">Let <span class="process-math">\(N=\operatorname{im}\left(t_{A}\right)\)</span> and note that <span class="process-math">\(N\)</span> is the submodule of <span class="process-math">\(\mathbb{Z}^{4}\)</span> generated by the columns of <span class="process-math">\(A\text{:}\)</span>
