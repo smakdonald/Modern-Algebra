@@ -994,13 +994,8 @@ m + (-1_R)m &amp;= 1_Rm + (-1_R)m &amp; \knowl{./knowl/xref/def-binary-propertie
 <li id="ex-modules-2-1-2"><div class="para" id="p-derived-ex-modules-2-1-2">Every ring <span class="process-math">\(R\)</span> is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.</div></li>
 <li id="ex-modules-2-1-3"><div class="para" id="p-derived-ex-modules-2-1-3">More generally, if <span class="process-math">\(R\)</span> is any ring and <span class="process-math">\(I\)</span> is a left ideal, then <span class="process-math">\(I\)</span> is a left-<span class="process-math">\(R\)</span>-module.</div></li>
 <li id="ex-modules-2-1-4"><div class="para" id="p-derived-ex-modules-2-1-4">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = \Mat_{n \times n}(F)\)</span> (the ring of <span class="process-math">\(n \times n\)</span> matrices with entries in <span class="process-math">\(F\)</span>). Let <span class="process-math">\(M\)</span> be the collection of column vectors with entries in <span class="process-math">\(F\)</span> having <span class="process-math">\(n\)</span> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <span class="process-math">\(M\)</span> into a left <span class="process-math">\(R\)</span>-module. Likewise if <span class="process-math">\(N\)</span> is the collection of all row vector with <span class="process-math">\(n\)</span> entries in <span class="process-math">\(F\text{,}\)</span> the <span class="process-math">\(N\)</span> is a right <span class="process-math">\(R\)</span>-module via addition and matrix multiplication.</div></li>
-</ol></div></article><article class="exercise exercise-like" id="subsec-modules-12"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span>
-</h4>
-<div class="para" id="subsec-modules-12-1-1">Prove that a module <span class="process-math">\(M\)</span> is the zero module if and only if the zero and identity maps on <span class="process-math">\(M\)</span> are equal.</div></article><article class="example example-like" id="ex-standard-free-module"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Standard Free Module.</span>
-</h4> <div class="para logical" id="ex-standard-free-module-2">
-<div class="para">For a non-negative integer <span class="process-math">\(n\text{,}\)</span> the “standard" free (left) <span class="process-math">\(R\)</span>-module of rank <span class="process-math">\(n\)</span> is the set</div>
+<li id="ex-standard-free-module"><div class="para logical" id="ex-standard-free-module-1">
+<div class="para">For a non-negative integer <span class="process-math">\(n\text{,}\)</span> the <dfn class="terminology">“standard" free (left) <span class="process-math">\(R\)</span>-module</dfn> of rank <span class="process-math">\(n\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
 R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}
@@ -1013,8 +1008,12 @@ R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq
 r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="thm-mod-closure"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Closure Properties of Modules.</span>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="subsec-modules-12"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-modules-12-1-1">Prove that an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is the zero module if and only if the zero and identity maps on <span class="process-math">\(M\)</span> are equal.</div></article><article class="exercise exercise-like" id="thm-mod-closure"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Closure Properties of Modules.</span>
 </h4>
 <div class="para logical" id="thm-mod-closure-2-1">
 <div class="para">Given <span class="process-math">\(R\)</span>-modules <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> and an ideal <span class="process-math">\(I\text{,}\)</span> the following are <span class="process-math">\(R\)</span>-modules:</div>
@@ -1025,7 +1024,7 @@ r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\
 </div>
 <div class="solutions"><details id="thm-mod-closure-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="thm-mod-closure-3-1">From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span>
 </div></div></details></div></article><article class="theorem theorem-like" id="thm-abelian-groups-are-z-modules"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules.</span>
 </h4>
 <div class="para logical" id="thm-abelian-groups-are-z-modules-2-1">
 <div class="para">Let <span class="process-math">\(M\)</span> be an abelian group under <span class="process-math">\(+\text{.}\)</span> Then <span class="process-math">\(M\)</span> becomes a <span class="process-math">\(\Z\)</span>-module upon defining the rule for scaling to be <span class="process-math">\(nm :=\)</span>
@@ -1048,7 +1047,7 @@ r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\
 <div class="para">for any <span class="process-math">\(n \in \Z\)</span> and <span class="process-math">\(m \in M\text{.}\)</span>
 </div>
 </div></article><details id="thm-abelian-groups-are-z-modules-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-abelian-groups-are-z-modules-3-1"></div></article></details><article class="exercise exercise-like" id="exe-zn-modules"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.12</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z/n\)</span> Modules.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z/n\)</span> Modules.</span>
 </h4>
 <div class="para logical" id="exe-zn-modules-2-1">
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer and recall that <span class="process-math">\(\Z/n\)</span> denotes the ring of integers modulo <span class="process-math">\(n\)</span> (whose elements I will write as <span class="process-math">\(\ov{0}, \ov1, \cdots, \ov{n-1}\)</span>).</div>
@@ -1058,7 +1057,7 @@ r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\
 </div></li>
 </ol>
 </div></article><article class="definition definition-like" id="def-submodule"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.13</span><span class="period">.</span><span class="space"> </span><span class="title">Submodule.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.12</span><span class="period">.</span><span class="space"> </span><span class="title">Submodule.</span>
 </h4> <div class="para logical" id="def-submodule-2-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(M\)</span> be a left <span class="process-math">\(R\)</span>-module. An <em class="emphasis"><span class="process-math">\(R\)</span>-submodule</em> of <span class="process-math">\(M\)</span> is a subset <span class="process-math">\(N \subseteq M\)</span> such that</div>
 <ol class="decimal">
@@ -1068,16 +1067,16 @@ r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\
 <span class="process-math">\(rn \in N\)</span> for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(n \in N\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><div class="para" id="subsec-modules-18">We could equivalently define “submodule” to be a subset of <span class="process-math">\(M\)</span> that is an <span class="process-math">\(R\)</span>-module using the same operations of addition and scaling as in <span class="process-math">\(M\text{.}\)</span>
+</div></article><div class="para" id="subsec-modules-17">We could equivalently define “submodule” to be a subset of <span class="process-math">\(M\)</span> that is an <span class="process-math">\(R\)</span>-module using the same operations of addition and scaling as in <span class="process-math">\(M\text{.}\)</span>
 </div>
-<article class="example example-like" id="subsec-modules-19"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.14</span><span class="period">.</span><span class="space"> </span><span class="title">Submodules.</span>
+<article class="example example-like" id="subsec-modules-18"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.13</span><span class="period">.</span><span class="space"> </span><span class="title">Submodules.</span>
 </h4>
-<div class="para logical" id="subsec-modules-19-2-1"><ol class="decimal">
-<li id="subsec-modules-19-2-1-1-1"><div class="para" id="subsec-modules-19-2-1-1-1-1">A subset <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a (left) submodule of <span class="process-math">\(R\)</span> if and only if it is a (left) ideal.</div></li>
-<li id="subsec-modules-19-2-1-1-2"><div class="para" id="subsec-modules-19-2-1-1-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{,}\)</span> let <span class="process-math">\(I\)</span> be an ideal of <span class="process-math">\(R\)</span> and let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. Then <span class="process-math">\(I M:=\left\{\sum_{k=1}^{n} j_{k} m_{k} \mid n \geq 0, j_{k} \in I, m_{k} \in M\right.\)</span> for <span class="process-math">\(\left.1 \leq k \leq n\right\}\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span>
+<div class="para logical" id="subsec-modules-18-2-1"><ol class="decimal">
+<li id="subsec-modules-18-2-1-1-1"><div class="para" id="subsec-modules-18-2-1-1-1-1">A subset <span class="process-math">\(I\)</span> of a ring <span class="process-math">\(R\)</span> is a (left) submodule of <span class="process-math">\(R\)</span> if and only if it is a (left) ideal.</div></li>
+<li id="subsec-modules-18-2-1-1-2"><div class="para" id="subsec-modules-18-2-1-1-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{,}\)</span> let <span class="process-math">\(I\)</span> be an ideal of <span class="process-math">\(R\)</span> and let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. Then <span class="process-math">\(I M:=\left\{\sum_{k=1}^{n} j_{k} m_{k} \mid n \geq 0, j_{k} \in I, m_{k} \in M\right.\)</span> for <span class="process-math">\(\left.1 \leq k \leq n\right\}\)</span> is a submodule of <span class="process-math">\(M\text{.}\)</span>
 </div></li>
-<li id="subsec-modules-19-2-1-1-3"><div class="para logical" id="subsec-modules-19-2-1-1-3-1">
+<li id="subsec-modules-18-2-1-1-3"><div class="para logical" id="subsec-modules-18-2-1-1-3-1">
 <div class="para">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module and <span class="process-math">\(I\)</span> be an ideal in <span class="process-math">\(R\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1088,10 +1087,9 @@ N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
 <div class="para">is an <span class="process-math">\(R\)</span>-submodule of <span class="process-math">\(M\text{.}\)</span>
 </div>
 </div></li>
-</ol></div></article><article class="exercise exercise-like" id="subsec-modules-20"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12.15</span><span class="period">.</span><span class="space"> </span><span class="title">Simple Modules.</span>
-</h4>
-<div class="para" id="subsec-modules-20-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{.}\)</span> An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if it has no nontrivial submodules. Show that <span class="process-math">\(M \neq 0\)</span> is simple if and only if there exists a maximal ideal <span class="process-math">\(\fm\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cong R/\fm\text{.}\)</span> </div></article></section><section class="subsection" id="subsec-restriction"><h3 class="heading hide-type">
+</ol></div></article><details id="subsec-modules-19" class="exploration project-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">Discussion</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Simple Modules.</span>
+</h4></summary><article class="exploration project-like"><div class="para" id="subsec-modules-19-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{.}\)</span> An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if it has no nontrivial submodules. Show that <span class="process-math">\(M \neq 0\)</span> is simple if and only if there exists a maximal ideal <span class="process-math">\(\fm\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cong R/\fm\text{.}\)</span> </div></article></details></section><section class="subsection" id="subsec-restriction"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Restriction of Scalars</span>
 </h3>
 <blockquote class="blockquote" id="subsec-restriction-2">
@@ -1099,7 +1097,7 @@ N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}
 </blockquote>
 <div class="para" id="subsec-restriction-3">For an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> the ring <span class="process-math">\(R\)</span> is often referred to as the “ring of scalars” for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.</div>
 <article class="theorem theorem-like" id="thm-restriction-of-scalars"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.16</span><span class="period">.</span><span class="space"> </span><span class="title">Restriction of Scalars.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.14</span><span class="period">.</span><span class="space"> </span><span class="title">Restriction of Scalars.</span>
 </h4>
 <div class="para logical" id="thm-restriction-of-scalars-2-1">
 <div class="para">Let <span class="process-math">\(\phi: R \to S\)</span> be a ring homomorphism. Any left <span class="process-math">\(S\)</span>-module <span class="process-math">\(M\)</span> may be regarded via <em class="emphasis">restriction of scalars</em> as a left <span class="process-math">\(R\)</span>-module with the following structure:</div>
@@ -1139,16 +1137,18 @@ x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
 x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
 \end{equation*}
 </div>
-</div></article></details><div class="para" id="subsec-restriction-5">As a special case of <a href="" class="xref" data-knowl="./knowl/xref/thm-restriction-of-scalars.html" title="Theorem 12.16: Restriction of Scalars">Theorem 12.16</a>, if <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(S\text{,}\)</span> then every left <span class="process-math">\(S\)</span>-module becomes a left <span class="process-math">\(R\)</span>-module via restriction of scalars along the inclusion map of <span class="process-math">\(R\)</span> into <span class="process-math">\(S\text{.}\)</span> This explains the use of the phrase “restriction of scalars”. That being said, in generality the phrase “translation of scalars” would be more appropriate.</div>
+</div></article></details><div class="para" id="subsec-restriction-5">As a special case of <a href="" class="xref" data-knowl="./knowl/xref/thm-restriction-of-scalars.html" title="Theorem 12.14: Restriction of Scalars">Theorem 12.14</a>, if <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(S\text{,}\)</span> then every left <span class="process-math">\(S\)</span>-module becomes a left <span class="process-math">\(R\)</span>-module via restriction of scalars along the inclusion map of <span class="process-math">\(R\)</span> into <span class="process-math">\(S\text{.}\)</span> This explains the use of the phrase “restriction of scalars”. That being said, in generality the phrase “translation of scalars” would be more appropriate.</div>
 <article class="example example-like" id="subsec-restriction-6"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.17</span><span class="period">.</span><span class="space"> </span><span class="title">Restrictions of Scalars.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.15</span><span class="period">.</span><span class="space"> </span><span class="title">Restrictions of Scalars.</span>
 </h4>
 <div class="para logical" id="subsec-restriction-6-2-1"><ol class="decimal">
 <li id="ex-complex-vector-spaces-are-real-vector-spaces">
 <span class="heading"><span class="title">Complex Vector Spaces are Real.</span></span><div class="para" id="ex-complex-vector-spaces-are-real-vector-spaces-2">Since <span class="process-math">\(\R\)</span> is a subring of <span class="process-math">\(\C\text{,}\)</span> every complex vector space may be regarded as a real vector space, by restriction of scalars from <span class="process-math">\(\C\)</span> to <span class="process-math">\(\R\text{.}\)</span> Likewise, any real vector space may be regarded as a rational vector space, etc.</div>
 </li>
-<li id="subsec-restriction-6-2-1-1-2"><div class="para" id="subsec-restriction-6-2-1-1-2-1">The polynomial ring <span class="process-math">\(R[x_1,\ldots,x_n]\)</span> is a left <span class="process-math">\(R\)</span>-module for any <span class="process-math">\(n\geq 0\)</span> via the evident injective ring homomorphism <span class="process-math">\(R \into R[x_1, \ldots, x_n]\text{.}\)</span>
-</div></li>
+<li id="subsec-restriction-6-2-1-1-2">
+<span class="heading"><span class="title">Polynomial Rings are Modules.</span></span><div class="para" id="subsec-restriction-6-2-1-1-2-2">The polynomial ring <span class="process-math">\(R[x_1,\ldots,x_n]\)</span> is a left <span class="process-math">\(R\)</span>-module for any <span class="process-math">\(n\geq 0\)</span> via the evident injective ring homomorphism <span class="process-math">\(R \into R[x_1, \ldots, x_n]\text{.}\)</span>
+</div>
+</li>
 <li id="subsec-restriction-6-2-1-1-3"><div class="para" id="subsec-restriction-6-2-1-1-3-1">
 <span class="process-math">\(\Mat_{n \times n}(R)\)</span> is a left <span class="process-math">\(R\)</span>-module for <span class="process-math">\(n\geq 1\)</span> given by the ring map <span class="process-math">\(R \to \Mat_{n \times n}(R)\)</span> sending <span class="process-math">\(r\)</span> to <span class="process-math">\(r \cdot I_n\text{.}\)</span>
 </div></li>
@@ -1159,9 +1159,9 @@ x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
 </ol></div></article></section><article class="outcomes goal-like" id="sec-defmod-4"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
 <li id="sec-defmod-4-1-1"><div class="para" id="sec-defmod-4-1-1-1">A <a href="" class="xref" data-knowl="./knowl/xref/def-module.html" title="Definition 12.1: Module">Module</a> is a generalization of the concept of a vector space to any ring of scalars.</div></li>
-<li id="sec-defmod-4-1-2"><div class="para" id="sec-defmod-4-1-2-1">Given a ring <span class="process-math">\(R\)</span> and an ideal <span class="process-math">\(I\text{,}\)</span> both <span class="process-math">\(R\)</span> and <span class="process-math">\(I\)</span> can be viewed as <span class="process-math">\(R\)</span>-modules. Additionally, keep an eye on the</div></li>
+<li id="sec-defmod-4-1-2"><div class="para" id="sec-defmod-4-1-2-1">Given a ring <span class="process-math">\(R\)</span> and an ideal <span class="process-math">\(I\text{,}\)</span> each of <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(R/I\)</span> can be viewed as <span class="process-math">\(R\)</span>-modules.</div></li>
 <li id="sec-defmod-4-1-3"><div class="para" id="sec-defmod-4-1-3-1">
-<a href="" class="xref" data-knowl="./knowl/xref/thm-abelian-groups-are-z-modules.html" title="Theorem 12.11: Abelian Groups are \Z-modules">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules</a>. This comes up quite often.</div></li>
+<a href="" class="xref" data-knowl="./knowl/xref/thm-abelian-groups-are-z-modules.html" title="Theorem 12.10: Abelian Groups are \Z-modules">Abelian Groups are <span class="process-math">\(\Z\)</span>-modules</a>. This comes up quite often.</div></li>
 <li id="sec-defmod-4-1-4"><div class="para" id="sec-defmod-4-1-4-1">If a homomorphism exists between two rings, <span class="process-math">\(R\)</span> and <span class="process-math">\(S\text{,}\)</span> we can translate (or restrict) the scalars from one module to the next.</div></li>
 </ul></article></section></div>
 <div class="ptx-content-footer">

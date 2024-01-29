@@ -11952,6 +11952,19 @@
                     The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <m>M</m> into a left <m>R</m>-module. 
                     Likewise if <m>N</m> is the collection of all row vector with <m>n</m> entries in <m>F</m>, the <m>N</m> is a right <m>R</m>-module via addition and matrix multiplication.
                   </li>
+
+                  <li xml:id="ex-standard-free-module">
+                    <p>
+                      For a non-negative integer <m>n</m>, the <term>“standard" free (left) <m>R</m>-module</term> of rank <m>n</m> is the set 
+                      <me>R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}</me> 
+                      equipped with the operations 
+                      <me>
+                        \begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
+                        r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
+                      </me>
+                      <idx><h>standard free module</h></idx>
+                    </p>
+                  </li>
                 </ol>
               </p>
             </example>
@@ -11959,25 +11972,10 @@
             <exercise>
               <statement>
                 <p>
-                  Prove that a module <m>M</m> is the zero module if and only if the zero and identity maps on <m>M</m> are equal.
+                  Prove that an <m>R</m>-module <m>M</m> is the zero module if and only if the zero and identity maps on <m>M</m> are equal.
                 </p>
               </statement>
             </exercise>
-      
-            <example xml:id="ex-standard-free-module"><title>Standard Free Module</title>
-              <p>
-                For a non-negative integer <m>n</m>, the “standard" free (left) <m>R</m>-module of rank <m>n</m> is the set 
-                <me>
-                  R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}
-                </me> 
-                  equipped with the operations 
-                <me>
-                  \begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
-                  r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
-                </me>
-                <idx><h>standard free module</h></idx>
-              </p>
-            </example>
 
             <exercise xml:id="thm-mod-closure"><title>Closure Properties of Modules</title>
               <statement>
@@ -12106,7 +12104,7 @@
               </statement>
             </example>
 
-            <exercise><title>Simple Modules</title>
+            <exploration><title>Simple Modules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
@@ -12115,7 +12113,7 @@
                   <idx><h>simple module</h></idx>
                 </p>
               </statement>
-            </exercise>
+            </exploration>
             
           </subsection>
 
@@ -12203,7 +12201,7 @@
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Polynomial Rings are Modules</title>
                       <p>
                         The polynomial ring <m>R[x_1,\ldots,x_n]</m> is a left <m>R</m>-module for any <m>n\geq 0</m> via the evident injective ring homomorphism <m>R \into R[x_1, \ldots, x_n]</m>.
                       </p>
@@ -12238,14 +12236,14 @@
 
               <li>
                 <p>
-                  Given a ring <m>R</m> and an ideal <m>I</m>, both <m>R</m> and <m>I</m> can be viewed as <m>R</m>-modules.
-                  Additionally, keep an eye on the
+                  Given a ring <m>R</m> and an ideal <m>I</m>, each of <m>R</m>, <m>I</m>, and <m>R/I</m> can be viewed as <m>R</m>-modules.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <xref text="title" ref="thm-abelian-groups-are-z-modules"/>. This comes up quite often. 
+                  <xref text="title" ref="thm-abelian-groups-are-z-modules"/>. 
+                  This comes up quite often. 
                 </p>
               </li>
 
@@ -12794,14 +12792,31 @@
             </blockquote>
 
             <p>
-              When working with groups, we had the concept of a <xref ref="def-gensubgroup"/>
+              In Group Theory, we learned about free groups and presentations, ways of representing groups in more digestible ways.
+              Every group has a presentation, a set of generators and relations that express the structure of the group.
+              This presentation can be obtained by starting with a free group and taking quotients corresponding to the relations between the generators.
+              Thus, every group can be expressed as the quotient of a free group.
+            </p>
+
+            <p>
+              Recall that a free groups are essentially ways of creating generic groups from specific sets. 
+              These sets were the generators of the free group, which was called free due to the lack of relations, or combinations of elements that canceled out to the identity.
+            </p>
+
+            <p>
+              In the realm of modules, there are many similarites, such as the notion of a free module. 
+              Free modules are, essentially, ways of creating generic modules from specific sets.
+              These sets are called the generators of the free module,
+              <fn>Though, in the world of linear algebra and vector spaces, such sets are referred to as <em>spanning sets</em>.</fn>
+              which is called free due to the lack of relations, or <em>linear</em> combinations of elements that cancle out to zero.
             </p>
 
             <definition xml:id="def-linear-combination"><title>Linear Combination</title>
               <statement>
                 <p>
                   Let <m>M</m> be an <m>R</m>-module and <m>m_1, \dots, m_n \in M</m>. 
-                  An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>. 
+                  An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>.
+                  <fn>Notice that there are no exponents here, hence the use of the term <q>linear</q>.</fn>
                   (If <m>n = 0</m>, this gives the empty sum which is interpreted to give <m>0_M</m>.)
                   <idx><h>linear combination</h></idx>
                   <idx><h><m>R</m>-linear combination</h></idx>
@@ -12857,11 +12872,29 @@
               </statement>
             </definition>
 
-            <example xml:id="exe-cyclic-z-module"><title>Cyclic <m>\Z</m>-module</title>
-              <p>
-                If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
-              </p>
+            <example xml:id="ex-cyclic-modules"><title>Cyclic Modules</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>R</m> is cyclic as a module over itself, since <m>R = R \cdot 1</m>. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
             </example>
+
+            <p>
+              More generally, cylic modules are those that can be expressed as a quotient of <m>R</m> by some ideal.
+            </p>
 
             <exercise xml:id="exe-every-cyclic-r-module-cong-to-ri-for-some-i"><title>Cyclic Modules and Ideals</title>
               <statement>
