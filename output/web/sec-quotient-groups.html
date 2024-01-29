@@ -506,17 +506,16 @@ window.MathJax = {
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-modular-integers.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Motivation and Contructing <span class="process-math">\(\Z/n\)</span></span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -527,9 +526,14 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-presentations.html" class="internal"><span class="codenumber">4</span> <span class="title">Presentations and Free Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-motivation-d2n.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Motivation and <span class="process-math">\(D_{2n}\)</span></span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-presentation-intro.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Free Groups</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-presentations.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Presentations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-free-groups.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Free Groups</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-presentations.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Presentations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-presentations.html#subsec-presentations" class="internal"><span class="title">What is a Presentation?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-presentations.html#subsec-pres-quotient" class="internal"><span class="title">Every Group is a Quotient of a Free Group</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -894,7 +898,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-quotient-groups"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Quotient Groups</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Quotient Groups</span>
 </h2>
 <section class="subsection" id="subsec-quotients"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Quotient Groups</span>
@@ -914,7 +918,7 @@ window.MathJax = {
 <div class="para">We need to be worried about whether this operation is independent of choice. That is, if <span class="process-math">\([x] = [x']\)</span> and <span class="process-math">\([y] = [y']\)</span> then must <span class="process-math">\([xy] = [x'y']\text{?}\)</span> In other words, if <span class="process-math">\(x\sim x'\)</span> and <span class="process-math">\(y \sim y'\text{,}\)</span> must <span class="process-math">\(xy \sim x'y'\text{?}\)</span>
 </div>
 </div>
-<div class="para" id="subsec-quotients-5">As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... <a class="xref" id="subsec-quotients-5-1" href="" data-knowl="./knowl/fn/subsec-quotients-5-1.html" title="Footnote 3.3.1"><sup> 1 </sup></a>
+<div class="para" id="subsec-quotients-5">As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... <a class="xref" id="subsec-quotients-5-1" href="" data-knowl="./knowl/fn/subsec-quotients-5-1.html" title="Footnote 3.2.1"><sup> 1 </sup></a>
 </div>
 <article class="theorem theorem-like" id="thm-quotient-iff-normal"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients and Normal Subgroups.</span>
@@ -989,13 +993,13 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 </h4>
 <div class="para" id="thm-gz-cyclic-2-1">Let <span class="process-math">\(G\)</span> be a group with center <span class="process-math">\(Z(G)\text{.}\)</span> If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian.</div></article></section><article class="outcomes goal-like" id="sec-quotient-groups-3"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="sec-quotient-groups-3-1-1"><div class="para" id="sec-quotient-groups-3-1-1-1">Given <span class="process-math">\(N\nsg G\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-group.html" title="Definition 3.15: Quotient Group">Quotient Group</a> <span class="process-math">\(G/N\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> This is a well defined group if and only if <span class="process-math">\(N\)</span> is normal. <a class="xref" id="sec-quotient-groups-3-1-1-1-8" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-1-1-8.html" title="Footnote 3.3.2"><sup> 2 </sup></a>
+<li id="sec-quotient-groups-3-1-1"><div class="para" id="sec-quotient-groups-3-1-1-1">Given <span class="process-math">\(N\nsg G\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-group.html" title="Definition 3.15: Quotient Group">Quotient Group</a> <span class="process-math">\(G/N\)</span> is the set of left cosets of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> with multiplication given by <span class="process-math">\(xN\cdot yN=(xy)N\text{.}\)</span> This is a well defined group if and only if <span class="process-math">\(N\)</span> is normal. <a class="xref" id="sec-quotient-groups-3-1-1-1-8" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-1-1-8.html" title="Footnote 3.2.2"><sup> 2 </sup></a>
 </div></li>
-<li id="sec-quotient-groups-3-1-2"><div class="para" id="sec-quotient-groups-3-1-2-1">A subgroup is normal if and only if it is the kernel of a homomorphism. <a class="xref" id="sec-quotient-groups-3-1-2-1-1" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-2-1-1.html" title="Footnote 3.3.3"><sup> 3 </sup></a>
+<li id="sec-quotient-groups-3-1-2"><div class="para" id="sec-quotient-groups-3-1-2-1">A subgroup is normal if and only if it is the kernel of a homomorphism. <a class="xref" id="sec-quotient-groups-3-1-2-1-1" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-2-1-1.html" title="Footnote 3.2.3"><sup> 3 </sup></a>
 </div></li>
-<li id="sec-quotient-groups-3-1-3"><div class="para" id="sec-quotient-groups-3-1-3-1">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{,}\)</span> and the <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-map.html" title="Definition 3.22: Quotient Map">Quotient Map</a> is a surjective homomorphism. <a class="xref" id="sec-quotient-groups-3-1-3-1-4" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-3-1-4.html" title="Footnote 3.3.4"><sup> 4 </sup></a>
+<li id="sec-quotient-groups-3-1-3"><div class="para" id="sec-quotient-groups-3-1-3-1">If <span class="process-math">\(G\)</span> is finite we have <span class="process-math">\(\left | G/N\right |=\frac{|G|}{|N|}\text{,}\)</span> and the <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-map.html" title="Definition 3.22: Quotient Map">Quotient Map</a> is a surjective homomorphism. <a class="xref" id="sec-quotient-groups-3-1-3-1-4" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-3-1-4.html" title="Footnote 3.2.4"><sup> 4 </sup></a>
 </div></li>
-<li id="sec-quotient-groups-3-1-4"><div class="para" id="sec-quotient-groups-3-1-4-1">If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian. <a class="xref" id="sec-quotient-groups-3-1-4-1-3" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-4-1-3.html" title="Footnote 3.3.5"><sup> 5 </sup></a>
+<li id="sec-quotient-groups-3-1-4"><div class="para" id="sec-quotient-groups-3-1-4-1">If <span class="process-math">\(G/Z(G)\)</span> is cyclic, then <span class="process-math">\(G\)</span> is abelian. <a class="xref" id="sec-quotient-groups-3-1-4-1-3" href="" data-knowl="./knowl/fn/sec-quotient-groups-3-1-4-1-3.html" title="Footnote 3.2.5"><sup> 5 </sup></a>
 </div></li>
 </ul></article></section></div>
 <div class="ptx-content-footer">
