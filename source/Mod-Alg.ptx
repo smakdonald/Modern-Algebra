@@ -12099,7 +12099,7 @@
               </statement>
             </example>
 
-            <exploration xml:id="exe-simple-modules"><title>Simple Modules</title>
+            <investigation xml:id="exe-simple-modules"><title>Simple Modules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
@@ -12118,7 +12118,7 @@
                   By the Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
                 </p>
               </solution>
-            </exploration>
+            </investigation>
 
             <paragraphs><title>Qual Watch</title>
               <p>
@@ -12126,7 +12126,7 @@
               </p>
             </paragraphs>
 
-            <exploration><title></title>
+            <investigation xml:id="exe-submod-zorn"><title>Submodules and Zorn's Lemma</title>
               <statement>
                 <p>
                   Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. 
@@ -12146,7 +12146,13 @@
                   </ol>
                 </p>
               </statement>
-            </exploration>
+            </investigation>
+
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="exe-submod-zorn"/> was <xref text="title" ref="jan-2012-8"/> on the <xref text="title" ref="jan-2012"/> qualifying exam.
+              </p>
+            </paragraphs>
             
           </subsection>
 
@@ -21940,6 +21946,42 @@
                 <solution>
                   <p>
                     This is <xref ref="thm-smallest-prime-normal"/>.
+                  </p>
+                </solution>
+              </exercise>
+
+            </exercisegroup>
+
+            <exercisegroup xml:id="jan-2012"><title>January 2012</title>
+
+              <introduction>
+                <p></p>
+              </introduction>
+
+              <exercise xml:id="jan-2012-8" number="8"><title>Problem 6</title>
+                <statement>
+                  <p>
+                    Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. 
+                    Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
+                    <ol>
+                      <li>
+                        <p>
+                          <m>N\cap N' = (0)</m>, and 
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          <m>N''\cap(N + N')\neq(0)</m> for every non-zero submodule <m>N''</m> of <m>M</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    This is <xref ref="exe-submod-zorn"/>.
                   </p>
                 </solution>
               </exercise>
