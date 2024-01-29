@@ -12792,13 +12792,7 @@
             </blockquote>
 
             <p>
-              In Group Theory, we learned about free groups and presentations, ways of representing groups in more digestible ways.
-              Every group has a presentation, a set of generators and relations that express the structure of the group.
-              This presentation can be obtained by starting with a free group and taking quotients corresponding to the relations between the generators.
-              Thus, every group can be expressed as the quotient of a free group.
-            </p>
-
-            <p>
+              In <xref ref="ch-presentations"/>, we learned about free groups and presentations, ways of representing groups in more digestible ways.
               Recall that a free groups are essentially ways of creating generic groups from specific sets. 
               These sets were the generators of the free group, which was called free due to the lack of relations, or combinations of elements that canceled out to the identity.
             </p>
@@ -12809,6 +12803,17 @@
               These sets are called the generators of the free module,
               <fn>Though, in the world of linear algebra and vector spaces, such sets are referred to as <em>spanning sets</em>.</fn>
               which is called free due to the lack of relations, or <em>linear</em> combinations of elements that cancle out to zero.
+            </p>
+
+            <p>
+              Every group has a presentation, a set of generators and relations that express the structure of the group.
+              This presentation can be obtained by starting with a free group and taking quotients corresponding to the relations between the generators.
+              Thus, every group can be expressed as the quotient of a free group.
+            </p>
+
+            <p>
+              Similarly, we shall see that every module can be expressed as the quotient of a free module.
+              Additionally, the concept of a presentation for a module exists as well, which we will explore in greater depth in <xref ref="ch-modgen"/>.
             </p>
 
             <definition xml:id="def-linear-combination"><title>Linear Combination</title>
