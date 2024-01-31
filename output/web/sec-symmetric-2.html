@@ -142,7 +142,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-cayley-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="app-extras.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\ann}{ann}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-cayley-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="app-extras.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-catalogue-groups.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\ann}{ann}
 \DeclareMathOperator{\Ass}{Ass}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\can}{can}
@@ -351,7 +351,6 @@ sagecell.makeSagecell({
 
 \def\adots{a_1, \dots, a_n} 
 \def\bdots{b_1, \dots, b_n} 
-\def\cdots{c_1, \dots, c_n} 
 \def\ddots{d_1, \dots, d_n} 
 \def\edots{e_1, \dots, e_n} 
 \def\fdots{f_1, \dots, f_n} 
@@ -745,6 +744,7 @@ sagecell.makeSagecell({
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#sec-transforms" class="internal"><span class="title">Matrices of Linear Transformations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#subsec-cob" class="internal"><span class="title">Change of Basis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#subsec-elementary-basis-change" class="internal"><span class="title">Elementary Basis Operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -755,8 +755,8 @@ sagecell.makeSagecell({
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modpres.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Finitely Presented Modules</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-fp-modules" class="internal"><span class="title">Finitely Presented Modules</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">Modules in Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-fp-modules" class="internal"><span class="title">Module Presentations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">When Modules are Finitely Presented: Noetherian Rings</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div></li>
@@ -889,34 +889,38 @@ sagecell.makeSagecell({
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-symmetric-2.html#sec-symmetric-2-4" class="internal"><span class="title">Sage Calculators</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-catalogue-groups.html" class="internal"><span class="codenumber">B.4</span> <span class="title">A Catalogue of Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-first-groups" class="internal"><span class="title">Classic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-groups-of-units" class="internal"><span class="title">Groups of Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-small-order" class="internal"><span class="title">Groups of Small Order</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Catalogues</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-catalogue-groups.html" class="internal"><span class="codenumber">C.1</span> <span class="title">A Catalogue of Groups</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Qualifying Exams</span></a></div>
+<div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-qual.html" class="internal"><span class="codenumber">D.1</span> <span class="title">Syllabus and Selected Problems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-qual.html#exercises-qual" class="internal"><span class="codenumber">D.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-qual.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Syllabus and Selected Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-qual.html#exercises-qual" class="internal"><span class="codenumber">C.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gtp.html" class="internal"><span class="codenumber">D.2</span> <span class="title">Group Theory Problems</span></a></div>
+<div class="toc-title-box"><a href="sec-gtp.html" class="internal"><span class="codenumber">C.2</span> <span class="title">Group Theory Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-2" class="internal"><span class="title">Simplicity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-3" class="internal"><span class="title">Classifications and Abelian-ness</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-4" class="internal"><span class="title">holding</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rtp.html" class="internal"><span class="codenumber">D.3</span> <span class="title">Ring Theory Problems</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mtp.html" class="internal"><span class="codenumber">D.4</span> <span class="title">Module Theory Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-gtp2.html" class="internal"><span class="codenumber">D.5</span> <span class="title">Field Theory Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rtp.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Ring Theory Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mtp.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Module Theory Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-gtp2.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Field Theory Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="index.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -1081,7 +1085,7 @@ V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
 <pre id="sec-symmetric-2-4-5" class="ptx-sagecell sagecell-practice"><script type="text/x-sage"># Practice area (not linked for Sage Cell use)
 </script></pre></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-cayley-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-cayley-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-catalogue-groups.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

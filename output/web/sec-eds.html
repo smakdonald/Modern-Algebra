@@ -332,7 +332,6 @@ window.MathJax = {
 
 \def\adots{a_1, \dots, a_n} 
 \def\bdots{b_1, \dots, b_n} 
-\def\cdots{c_1, \dots, c_n} 
 \def\ddots{d_1, \dots, d_n} 
 \def\edots{e_1, \dots, e_n} 
 \def\fdots{f_1, \dots, f_n} 
@@ -726,6 +725,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#sec-transforms" class="internal"><span class="title">Matrices of Linear Transformations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#subsec-cob" class="internal"><span class="title">Change of Basis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cob.html#subsec-elementary-basis-change" class="internal"><span class="title">Elementary Basis Operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -736,8 +736,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modpres.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Finitely Presented Modules</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-fp-modules" class="internal"><span class="title">Finitely Presented Modules</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">Modules in Noetherian Rings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-fp-modules" class="internal"><span class="title">Module Presentations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">When Modules are Finitely Presented: Noetherian Rings</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div></li>
@@ -870,34 +870,38 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-symmetric-2.html#sec-symmetric-2-4" class="internal"><span class="title">Sage Calculators</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-catalogue-groups.html" class="internal"><span class="codenumber">B.4</span> <span class="title">A Catalogue of Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-first-groups" class="internal"><span class="title">Classic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-groups-of-units" class="internal"><span class="title">Groups of Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-catalogue-groups.html#subsec-small-order" class="internal"><span class="title">Groups of Small Order</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Catalogues</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-catalogue-groups.html" class="internal"><span class="codenumber">C.1</span> <span class="title">A Catalogue of Groups</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Qualifying Exams</span></a></div>
+<div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-qual.html" class="internal"><span class="codenumber">D.1</span> <span class="title">Syllabus and Selected Problems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-qual.html#exercises-qual" class="internal"><span class="codenumber">D.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-qual.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Syllabus and Selected Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-qual.html#exercises-qual" class="internal"><span class="codenumber">C.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gtp.html" class="internal"><span class="codenumber">D.2</span> <span class="title">Group Theory Problems</span></a></div>
+<div class="toc-title-box"><a href="sec-gtp.html" class="internal"><span class="codenumber">C.2</span> <span class="title">Group Theory Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-2" class="internal"><span class="title">Simplicity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-3" class="internal"><span class="title">Classifications and Abelian-ness</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gtp.html#sec-gtp-4" class="internal"><span class="title">holding</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rtp.html" class="internal"><span class="codenumber">D.3</span> <span class="title">Ring Theory Problems</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mtp.html" class="internal"><span class="codenumber">D.4</span> <span class="title">Module Theory Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-gtp2.html" class="internal"><span class="codenumber">D.5</span> <span class="title">Field Theory Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rtp.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Ring Theory Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mtp.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Module Theory Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-gtp2.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Field Theory Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="index.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -916,7 +920,7 @@ window.MathJax = {
 a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 \end{equation*}
 </div>
-</div></article><section class="paragraphs" id="sec-eds-4"><h3 class="heading"><span class="title">Qual Watch.</span></h3> <div class="para" id="sec-eds-4-2">Stating <a href="" class="xref" data-knowl="./knowl/xref/def-ed.html" title="Definition 10.1: Euclidean Domain">Definition 10.1</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/xref/jan-2020-4.html" title="Exercise D.1.4: Problem 4">Problem 4</a> on the <a href="" class="xref" data-knowl="./knowl/xref/jan-2020.html" title="Exercise Group D.1.1–4: January 2020">January 2020</a> qualifying exam.</div></section><div class="para" id="sec-eds-5">In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the <a href="" class="xref" data-knowl="./knowl/xref/thm-division-algorithm.html" title="Theorem A.37: Division Algorithm">Division Algorithm</a> for integers, which is what makes Euclidean domains so useful in number theory and algebra.</div>
+</div></article><section class="paragraphs" id="sec-eds-4"><h3 class="heading"><span class="title">Qual Watch.</span></h3> <div class="para" id="sec-eds-4-2">Stating <a href="" class="xref" data-knowl="./knowl/xref/def-ed.html" title="Definition 10.1: Euclidean Domain">Definition 10.1</a> was Part (a) of <a href="" class="xref" data-knowl="./knowl/xref/jan-2020-4.html" title="Exercise C.1.4: Problem 4">Problem 4</a> on the <a href="" class="xref" data-knowl="./knowl/xref/jan-2020.html" title="Exercise Group C.1.1–4: January 2020">January 2020</a> qualifying exam.</div></section><div class="para" id="sec-eds-5">In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the <a href="" class="xref" data-knowl="./knowl/xref/thm-division-algorithm.html" title="Theorem A.37: Division Algorithm">Division Algorithm</a> for integers, which is what makes Euclidean domains so useful in number theory and algebra.</div>
 <div class="para" id="sec-eds-6">Lets take a look at some examples to deepen our understanding.</div>
 <article class="example example-like" id="ex-trivial-norm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Trivial Norm.</span>
