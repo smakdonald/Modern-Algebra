@@ -5038,7 +5038,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "13.2",
   "title": "Free Modules",
-  "body": "Free Modules  Bases    The basis of all good human behavior is kindness.   Eleanor Roosevelt   Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module     Free Modules     The zero module is free with as its (only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.       Direct sums of free modules are free.   Bases of free modules are rarely unique.  Bases are not Unique     If is any ring, then any single unit forms a basis for as a module over itself.    For any ring and any fixed element , the set forms a basis for the free -module .      Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.    A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )   Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Let . As is a basis of it generates as an -module, and thus there exists and such that .  Suppose there also exists such that . Then Since is a basis of it is linearly independent, and thus for all .    UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .     The uniqueness only uses that generates as an -module.    Another way of stating is that there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)   What tells us is that to create a map between and any other module, all we must do is specify where the basis elements are sent.  Every -module is the Quotient of a Free Module.   Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .     Rank  Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)     Rank of  The -module ^n has rank . Thus has rank as a module over itself, as this is the case when .   Bases need not be finite.  Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .   Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .    as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .    Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .   Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .     Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that 1\\ne 0 was used in .   Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.          An -module is free if it is generated by a linearly independent set, which is called a basis of .    Given a free module , the number of elements in a basis is called the rank of , as any two bases of must have the same rank. Specifically, any free -module of rank is isomorphic to .    In a free module with basis , every element of can be expressed uniquely as an -linear combination of elements in .    If is a free module, the tells us that a function from a basis of to some -module can be extended to a homomorphism from to .    Every -module is the quotient of a free module.     "
+  "body": "Free Modules  Bases    The basis of all good human behavior is kindness.   Eleanor Roosevelt   Basis and Free Module   A subset of an -module is a basis of , if the set generates and is linearly independent. An -module M is a free  -module if admits at least one a basis. basis  free module     Free Modules     The zero module is free with as its (only) basis. This holds since the empty set is vacuously linearly independent and it generates .     is free since is a basis for . It generates and if then , so it is linearly independent.    More generally, is free since is a basis. This is called the standard basis of . We've already seen that generates as an -module. Suppose . Then and hence for all .    For any ring , if is a (two-sided) ideal such that and , then is not free. Since , is not the zero module and hence the empty set isn't a basis. Let be any non-empty subset. Then since , as shown above is linearly dependent. We conclude that no subset of is a basis.       Direct sums of free modules are free.   Bases of free modules are rarely unique.  Bases are not Unique     If is any ring, then any single unit forms a basis for as a module over itself.    For any ring and any fixed element , the set forms a basis for the free -module .      Every Module over a Field is Free  Let be a commutative ring with . Show that if every -module is free then is a field.    A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )   Elements Uniquely Expressible in Free Modules   Suppose is a free -module and is a basis of . Then every element of is uniquely expressible as an -linear combination of elements of .  More precisely, for each there is unique family of elements , with for all , such that for all but a finite number of indices and .    Let . As is a basis of it generates as an -module, and thus there exists and such that .  Suppose there also exists such that . Then Since is a basis of it is linearly independent, and thus for all .    UMP for Free -Modules  UMP for free -modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .    Given a function , define as follows: Given , by  can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  Let be another -module homomorphism such that for each . Given we have and hence and hence .     The uniqueness only uses that generates as an -module.    Another way of stating is that there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)   What tells us is that to create a map between and any other module, all we must do is specify where the basis elements are sent.  Every -module is the Quotient of a Free Module.   Every -module is the quotient of a free module. Thus for every -module there exists a free module that surjects onto .     Rank  Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)     But what about if two bases have different ranks? As it turns out, any two bases of the same free module will have the same cardinality, as we will prove in . Mostly. The rest is proved in .   Rank of  The -module has rank . Thus has rank as a module over itself, as this is the case when .   Bases need not be finite.  Module with Infinite Basis  Let be any ring and (which, recall, is an -module due to the evident ring map ). Then the countably infinite set is a basis. The fact that this set is a basis is essentially part of the definition of . says that every polynomial is uniquely expressible as an -linear combination of (a finite subset of) .   Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.     Let be a basis of and be a basis of such that . Thus there exists a bijection with inverse . We invoke the to build -module homomorphisms and such that for all and for all .  We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .    as -modules  If is a free -module that has a basis of cardinality , then as -modules. This is because is a free module of rank , and thus by .     Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .     Let be a commutative ring with . For any ideal of , as -modules.    https:\/\/eloisagrifo.github.io\/Teaching\/818\/PSet3solutions.pdf    Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and , with ranks and , respectively. Since and are finite, by we have and .  I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later in .)  Since is not the zero ring, it contains at least one maximal ideal by . Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the , it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .     Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that was used in .   Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.          An -module is free if it is generated by a linearly independent set, which is called a basis of .    Given a free module , the number of elements in a basis is called the rank of , as any two bases of must have the same rank. Specifically, any free -module of rank is isomorphic to .    In a free module with basis , every element of can be expressed uniquely as an -linear combination of elements in .    If is a free module, the tells us that a function from a basis of to some -module can be extended to a homomorphism from to .    Every -module is the quotient of a free module.     "
 },
 {
   "id": "def-basis-free-mod",
@@ -5149,13 +5149,13 @@ var ptx_lunr_docs = [
   "body": "Module Rank   Let be a non-zero commutative ring and let be a free -module. The cardinality of any basis of is called the rank of . rank (modules)    "
 },
 {
-  "id": "subsec-rank-3",
+  "id": "subsec-rank-4",
   "level": "2",
-  "url": "sec-free-mod.html#subsec-rank-3",
+  "url": "sec-free-mod.html#subsec-rank-4",
   "type": "Example",
   "number": "13.27",
   "title": "Rank of <span class=\"process-math\">\\(R^n\\)<\/span>.",
-  "body": "Rank of  The -module ^n has rank . Thus has rank as a module over itself, as this is the case when .  "
+  "body": "Rank of  The -module has rank . Thus has rank as a module over itself, as this is the case when .  "
 },
 {
   "id": "ex-module-with-infinite-basis",
@@ -5173,7 +5173,7 @@ var ptx_lunr_docs = [
   "type": "Corollary",
   "number": "13.29",
   "title": "Free Modules with Equal Basis Elements Isomorphic.",
-  "body": "Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.  More precisely, if is a basis of and is a basis of and is a bijection of sets, then there is a unique -module isomorphism such that .    Let and be the -module homomorphisms induced by the bijection and its inverse , respectively, using . We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .   "
+  "body": "Free Modules with Equal Basis Elements Isomorphic   If and are free -modules having bases of the same cardinality, then and are isomorphic -modules.     Let be a basis of and be a basis of such that . Thus there exists a bijection with inverse . We invoke the to build -module homomorphisms and such that for all and for all .  We'll show that and are mutual inverses. For this note that is an -module homomorphism and for every . Since the identity map is also an -module homomorphism such that for every , by the uniqueness clause in the , we have . Similarly .   "
 },
 {
   "id": "ex-mcong-rn-as-r-modules",
@@ -5182,41 +5182,50 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "13.30",
   "title": "<span class=\"process-math\">\\(M\\cong R^n\\)<\/span> as <span class=\"process-math\">\\(R\\)<\/span>-modules.",
-  "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
+  "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This is because is a free module of rank , and thus by .   "
 },
 {
-  "id": "subsec-rank-8",
+  "id": "subsec-rank-9",
   "level": "2",
-  "url": "sec-free-mod.html#subsec-rank-8",
+  "url": "sec-free-mod.html#subsec-rank-9",
   "type": "Remark",
   "number": "13.31",
   "title": "",
   "body": " Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! There exist rings such that and are isomorphic -modules for all positive integers and .  "
 },
 {
+  "id": "lem-ri-mod-isos",
+  "level": "2",
+  "url": "sec-free-mod.html#lem-ri-mod-isos",
+  "type": "Lemma",
+  "number": "13.32",
+  "title": "<span class=\"process-math\">\\(R^n\/IR^n\\cong(R\/I)^n\\)<\/span>.",
+  "body": "  Let be a commutative ring with . For any ideal of , as -modules.    https:\/\/eloisagrifo.github.io\/Teaching\/818\/PSet3solutions.pdf   "
+},
+{
   "id": "thm-uniqueness-of-rank-over-commutative-rings",
   "level": "2",
   "url": "sec-free-mod.html#thm-uniqueness-of-rank-over-commutative-rings",
   "type": "Theorem",
-  "number": "13.32",
+  "number": "13.33",
   "title": "Uniqueness of Rank over Commutative Rings.",
-  "body": "Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and . We need to show and have the same cardinality. Since and are finite, by Example the assertion is equivalent to the following statement: \\begin{quote} For a non-zero commutative ring $R$, if there is an isomorphism $R^n \\cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$. \\end{quote}   I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later.)   Since is not the zero ring, it contains at least one maximal ideal . (This is proven using .) Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the First Isomorphism Theorem, it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .   "
+  "body": "Uniqueness of Rank over Commutative Rings   Let be a commutative ring such that and let be a free -module with bases and . Then and have the same rank, i.e. there exists a (non unique) bijection of sets joining them.    Let be a non-zero commutative ring and let be a free -module with two bases, and , with ranks and , respectively. Since and are finite, by we have and .  I will prove this statement by taking it as already known that it holds in the special case when is a field. (We will prove it for fields later in .)  Since is not the zero ring, it contains at least one maximal ideal by . Recall that is a field by   Given an isomorphism of -modules, by Lemma we have an induced homomorphism of -module . Likewise, the inverse map induces a map . Also by that Lemma we have and similarly is the identity. That is, we have an isomorphism of -modules.  Next, I claim that there is an isomorphism of -modules. Define in the evident way (modding out by entry-wise). It is a surjective map of -modules with kernel and thus, by the , it induces an isomorphism given by (where denotes taking the transpose). Now, what we have said so far only shows that is isomorphism of -modules, but it is easy to see that is in fact -linear (I'll leave that to you) and thus it is an isomorphism of -modules.  Putting the results proven so far together, we conclude that and are isomorphic as -modules. Since is a field and since we are assuming the result holds for fields, we deduce that .   "
 },
 {
-  "id": "subsec-rank-10",
+  "id": "subsec-rank-12",
   "level": "2",
-  "url": "sec-free-mod.html#subsec-rank-10",
+  "url": "sec-free-mod.html#subsec-rank-12",
   "type": "Remark",
-  "number": "13.33",
+  "number": "13.34",
   "title": "",
-  "body": " Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that 1\\ne 0 was used in .  "
+  "body": " Checking the definition carefully, we see that both the empty set and the set form bases for the zero module over the ring. This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that was used in .  "
 },
 {
   "id": "prop-bases-of-ideals-in-commutative-rings",
   "level": "2",
   "url": "sec-free-mod.html#prop-bases-of-ideals-in-commutative-rings",
   "type": "Exercise",
-  "number": "13.34",
+  "number": "13.35",
   "title": "Bases of ideals in commutative rings.",
   "body": "Bases of ideals in commutative rings     Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.     "
 },
@@ -5243,7 +5252,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#mod-vs-vs",
   "type": "Table",
-  "number": "13.35",
+  "number": "13.36",
   "title": "Modules vs. Vector Spaces",
   "body": " Modules vs. Vector Spaces    Module Vector Space    Arbitrary -module Arbitrary -Vector Space    -module homomorphism -linear transformation    Submodule Generated by    Rank Dimension    "
 },
@@ -5252,7 +5261,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#def-span",
   "type": "Definition",
-  "number": "13.36",
+  "number": "13.37",
   "title": "Span.",
   "body": "Span   In keeping with standard convention, we use the term span instead of submodule generated by , but they mean exactly the same thing: for a subset of an -vector space , the span of is When , we say that  spans  . span    "
 },
@@ -5261,7 +5270,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#lem-linear-independence-and-span",
   "type": "Lemma",
-  "number": "13.37",
+  "number": "13.38",
   "title": "Linear Independence and Span.",
   "body": "Linear Independence and Span   Suppose is a linearly independent subset of an -vector space and , then is also linearly independent. Stated in terms of modules: Let be a field. Suppose is a linearly independent subset of an -module and , then is also linearly independent.     Let be a list of distinct elements of and suppose for some . If for all , then for all , since is linearly independent. Thus for some . Without loss of generality, say . If , then we may write placing , contrary to the assumption. So we must have , yielding But then for all , and thus we have for all by the same reasoning as in the first case (since is linearly independent). Thus is linearly independent.   "
 },
@@ -5270,7 +5279,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-vector-basis-7",
   "type": "Remark",
-  "number": "13.38",
+  "number": "13.39",
   "title": "",
   "body": " The only place where the fact that the ring of scalars is a field is to know that has a multiplicative inverse when . In particular, holds when is a division ring too.  "
 },
@@ -5279,7 +5288,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#thm-finding-intermediate-bases",
   "type": "Theorem",
-  "number": "13.39",
+  "number": "13.40",
   "title": "Finding Intermediate Bases.",
   "body": "Finding Intermediate Bases   Let be an -vector space and assume are subsets such that is linearly independent and spans . Then there is a subset such that and is a basis of     Let denote the collection of all subsets of such that and is linearly independent. We make into a poset by the order relation , set containment. Note that .  Let be any totally ordered subset of . If is empty, then is (vacuously) bounded above by . Assume is non-empty. Let .  Given , for each we have for some . Since is totally ordered, one of contains all the others and hence it contains all the 's. Since each is linearly independent, this shows are linearly independent. We have shown that every finite subset of is linearly independent, and hence is linearly independent. Since is non-empty, . Since each member of is contained in , . Thus, , and it is an upper bound for . We may thus apply to conclude that has at least one maximal element, .  Note that is linearly independent and by construction. Suppose by way of contradiction that does not span . Since spans , if , then would have to be all of . For note that if and , then for any we may write for and with and hence , which implies . Since we are assuming , there must be at least one such that .  Consider . Then and, by , is linearly independent. This shows that is an element of that is strictly bigger than , contrary to the maximality of . So, must span and hence it is a basis.   "
 },
@@ -5288,7 +5297,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#cor-every-vector-space-has-a-basis",
   "type": "Corollary",
-  "number": "13.40",
+  "number": "13.41",
   "title": "Every Vector Space has a Basis.",
   "body": "Every Vector Space has a Basis      Every -vector space has a basis.    Every linearly independent subset of is contained in some basis    Every set of vectors that spans contains some basis.          Apply the with and .    Apply the with arbitrary and     Apply the with and arbitrary.      "
 },
@@ -5297,7 +5306,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-vector-basis-13",
   "type": "Example",
-  "number": "13.41",
+  "number": "13.42",
   "title": "",
   "body": "  has a basis as a -vector space. Just don't ask me what it looks like.  "
 },
@@ -5306,7 +5315,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#cor-basis-of-subspaces-extend",
   "type": "Corollary",
-  "number": "13.42",
+  "number": "13.43",
   "title": "Basis of Subspaces Extend.",
   "body": "Basis of Subspaces Extend   Suppose is a field an is a subspace (i.e., submodule) of the -vector space (i.e., -module) . Then every basis of extends to a basis of - that is, if is a basis of then there exists a basis of such that is a subset of .    Apply with and . (Since is a basis of , it is linearly independent, and observe that remains linearly independent when regarded as a subset of .)   "
 },
@@ -5315,7 +5324,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-vector-basis-15",
   "type": "Remark",
-  "number": "13.43",
+  "number": "13.44",
   "title": "",
   "body": " It is not true that, with the notation of , if is a basis of then there exists a basis of such that is a subset of . For instance, take , , and the subspace spanned by .  "
 },
@@ -5324,7 +5333,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#lem-exchange-lemma",
   "type": "Lemma",
-  "number": "13.44",
+  "number": "13.45",
   "title": "Exchange Lemma.",
   "body": "Exchange Lemma  exchange lemma   Let be a field, let be a basis of an -vector space , and let be any finite set of linearly independent vectors in . Then there are distinct vectors in , such that is also a basis .    Let . proves the case when . The general case proceeds recursively:  Suppose that for some , we have found such that is a basis for some . We need to show we can “swap out one more''; that is, we need to prove there is a such that is also a basis.  Since is a basis, there is a (unique By ) equation of the form with and . Now, there must be at least one that is not in , for otherwise we would have , contrary to being linearly independent. Let for such an . Then by  is a basis of .   "
 },
@@ -5333,7 +5342,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-vector-dimension-5",
   "type": "Remark",
-  "number": "13.45",
+  "number": "13.46",
   "title": "",
   "body": " The also holds for any division ring (using the exact same proof).  "
 },
@@ -5342,7 +5351,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#def-dimension-vector-space",
   "type": "Definition",
-  "number": "13.46",
+  "number": "13.47",
   "title": "Dimension.",
   "body": "Dimension   The dimension of a vector space , denoted , is the cardinality of any of its bases. A vector space is finite dimensional if there is spanned by a finite subset. dimension (vector space)  finite dimensional (vector space)    "
 },
@@ -5351,7 +5360,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-vector-dimension-7",
   "type": "Remark",
-  "number": "13.47",
+  "number": "13.48",
   "title": "",
   "body": " This is the same as the rank of as an -module.  "
 },
@@ -5360,7 +5369,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#thm-dimension",
   "type": "Theorem",
-  "number": "13.48",
+  "number": "13.49",
   "title": "Dimension Theorem.",
   "body": "Dimension Theorem  dimension theorem   Any two bases of the same vector space have the same dimension.    We will only prove this in the case of finite dimensional vector spaces, but it is indeed true in general.  Suppose is a field and is a finite dimensional -vector space. Then it has a finite basis . Let be any other basis, not necessarily finite. For any non-negative integer , suppose is any -element subset of . Then is linearly independent and so, by the , there is an -element subset of such that is also a basis of . In particular, . Since this holds for all , we conclude . By symmetry, and hence .   "
 },
@@ -5369,7 +5378,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#ex-dimension-of-fn-in-f",
   "type": "Example",
-  "number": "13.49",
+  "number": "13.50",
   "title": "Dimension of <span class=\"process-math\">\\(F^n\\)<\/span> in <span class=\"process-math\">\\(F\\)<\/span>.",
   "body": "Dimension of in     "
 },
@@ -5378,7 +5387,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#exe-rn",
   "type": "Example",
-  "number": "13.50",
+  "number": "13.51",
   "title": "<span class=\"process-math\">\\(\\R^\\N\\)<\/span>.",
   "body": " Consider , and define rules for addition and scaling degree-wise in the evident way.  It is not hard to see is a -vector space. It can be identified with the collection of all sequences of real numbers. One might be interested in a basis for this vector space. At first glance the most obvious choice would be , where is the sequence with a in the -th position and 's everywhere else.  However, this set does not span as can not be represented as a finite linear combination of these elements. (It turns out that is the basis for the direct sum , which may be identified with all sequences having only a finite number of non-zero terms.)  Now, since we know since is not in , we have that is a linearly independent set. However, this does not span either as is not in the span of this set. We know that has a basis, but it can be shown that no countable collection of vectors forms a basis for this space, in fact . An explicit basis of this vector space is impossible to describe.  "
 },
@@ -5387,7 +5396,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#thm-fg-vs-classification",
   "type": "Theorem",
-  "number": "13.51",
+  "number": "13.52",
   "title": "Classification of Finite Dimensional Vector Spaces.",
   "body": "Classification of Finite Dimensional Vector Spaces  classification of finitely generated vector spaces   Let be a field.   Every finite dimensional vector space over is isomorphic to for .    For any if and only if .          Let be a finite dimensional -vector space. Then has a finite spanning set and by there is a basis for . Notice that is necessarily finite and . Set and . By the , there is a linear transformation such that as well as a linear transformation such that . Then both and are linear transformation which agree with the identity map on a basis. Hence by the uniqueness part of we have and . Therefore, these maps are the desired isomorphisms.    Let be a vector space isomorphism and let be a basis of . We claim that is a basis for . Indeed, if since is injective. But is linearly independent, so we must have for all . If , then since spans we have for some . Thus which shows spans . By the , we have       "
 },
@@ -5396,7 +5405,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#cor-dim-iff-iso",
   "type": "Corollary",
-  "number": "13.52",
+  "number": "13.53",
   "title": "Finite Dimensional Vector Spaces over the same Field.",
   "body": "Finite Dimensional Vector Spaces over the same Field   Two finite dimensional vector spaces and over the same field are isomorphic if and only if .    By the , and are both of the form and , while if and only if .   "
 },
@@ -5405,7 +5414,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#thm-dimension-and-subspaces",
   "type": "Theorem",
-  "number": "13.53",
+  "number": "13.54",
   "title": "Dimension and Subspaces.",
   "body": "Dimension and Subspaces   Let be a field and let be a subspace of a finite dimensional -vector space . Then     Pick a basis of . Regarded as a subset of , remains linearly independent and thus it may be extended to a basis of by Corollary . Let us write this basis of as with .  Let . I claim that is a basis of .  Given we have for some and scalars . Since for all , we have . This proves spans. Say for some . Then and hence , whence . Since is linearly independent, and for all . This proves is linearly independent.  We have with the second equality holding since and are disjoint.   "
 },
@@ -5414,7 +5423,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-rank-nullity-8",
   "type": "Remark",
-  "number": "13.54",
+  "number": "13.55",
   "title": "",
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
@@ -5423,7 +5432,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#def-nullspace",
   "type": "Definition",
-  "number": "13.55",
+  "number": "13.56",
   "title": "Nullspace.",
   "body": "Nullspace   Let be a linear transformation. The nullspace of is . The nullity of is . nullspace  nullity    "
 },
@@ -5432,7 +5441,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#thm-rank-nullity",
   "type": "Theorem",
-  "number": "13.56",
+  "number": "13.57",
   "title": "Rank-Nullity Theorem.",
   "body": "Rank-Nullity Theorem  rank-nullity theorem   Let be a field and an -linear transformation between -vector spaces and , and assume is finite dimensional. Then or equivalently     By the we have , thus . By we have    "
 },
@@ -5441,7 +5450,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecbasis.html#subsec-rank-nullity-12",
   "type": "Remark",
-  "number": "13.57",
+  "number": "13.58",
   "title": "",
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
@@ -5477,7 +5486,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-matrix-of-free-module-homomorphism",
   "type": "Definition",
-  "number": "13.58",
+  "number": "13.59",
   "title": "Matrix of Free Module Homomorphism.",
   "body": "Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. Let and be ordered bases of and . Given an -module homomorphism , we define elements for and by the formulas The matrix is said to represent the homomorphism with respect to the bases and . In the case that and are -vector spaces, the matrix is called the matrix of the linear transformation  with respect to the bases and . matrix of a linear transformation  matrix of a free module homomorphism    "
 },
@@ -5486,7 +5495,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#sec-transforms-4",
   "type": "Remark",
-  "number": "13.59",
+  "number": "13.60",
   "title": "",
   "body": " The notion that a homomorphism between finitely generated free modules can be represented as a matrix is extremely important! It allows us to translate information we know about matrices into information we know about homomorophisms and linear transformations, and vice versa.  "
 },
@@ -5495,7 +5504,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#ex-identity-automorphism-of-free-r-module",
   "type": "Example",
-  "number": "13.60",
+  "number": "13.61",
   "title": "Identity Automorphism of Free <span class=\"process-math\">\\(R\\)<\/span>-Module.",
   "body": "Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence   "
 },
@@ -5504,7 +5513,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#ex-r-vector-space-of-polynomials-p_n",
   "type": "Example",
-  "number": "13.61",
+  "number": "13.62",
   "title": "Matrix Representing the Derivative Operator.",
   "body": "Matrix Representing the Derivative Operator  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by taking the derivative . Let . Then   "
 },
@@ -5513,7 +5522,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-change-of-basis-matrix",
   "type": "Definition",
-  "number": "13.62",
+  "number": "13.63",
   "title": "Change of Basis Matrix.",
   "body": "Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to . change of basis matrix    "
 },
@@ -5522,7 +5531,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#subsec-cob-5",
   "type": "Remark",
-  "number": "13.63",
+  "number": "13.64",
   "title": "",
   "body": " In we will show that is invertible with inverse .  "
 },
@@ -5531,7 +5540,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#ex-cob-and-p_n",
   "type": "Example",
-  "number": "13.64",
+  "number": "13.65",
   "title": "CoB and <span class=\"process-math\">\\(P_n\\)<\/span>.",
   "body": "CoB and  Consider , Where P_2 is as defined in . let and be bases of . We calculate the change of basis matrix. We have Thus, the change of basis matrix is given by   "
 },
@@ -5540,7 +5549,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#lem-cob-and-identity",
   "type": "Lemma",
-  "number": "13.65",
+  "number": "13.66",
   "title": "CoB and Identity.",
   "body": "CoB and Identity   If are finitely generated free -modules spaces with ordered bases , , and , and if and are -module homomorphisms, then     Given , we have so .   "
 },
@@ -5549,7 +5558,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-similar-matrices",
   "type": "Definition",
-  "number": "13.66",
+  "number": "13.67",
   "title": "Similar Matrices.",
   "body": "Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is an -module isomorphism such that . similar -module homomorphisms   Two matrices and with entries in are similar if there is an invertible matrix such that . similar matrices    "
 },
@@ -5558,7 +5567,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#subsec-cob-10",
   "type": "Remark",
-  "number": "13.67",
+  "number": "13.68",
   "title": "",
   "body": " For elements , the notions of similar and conjugate are the same.  "
 },
@@ -5567,7 +5576,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#thm-similar-cob",
   "type": "Theorem",
-  "number": "13.68",
+  "number": "13.69",
   "title": "Similar CoB Matrices.",
   "body": "Similar CoB Matrices   Let be finitely generated free modules over a commutative ring , let and be bases of , let and be bases of , and let be a homomorphism. Then In particular, if is an -module homomorphism, then and are similar.    Since , by we have Setting , and we have . Notice that is the identity matrix, so the previous formula says that Setting , we notice that the previous identity gives .  Now set and to obtain    "
 },
@@ -5576,7 +5585,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-basis-change-operations",
   "type": "Definition",
-  "number": "13.69",
+  "number": "13.70",
   "title": "Elementary Basis Change Operations.",
   "body": "Elementary Basis Change Operations   Let be a commutative ring with , let be a free -module of finite rank , and let be an ordered basis for . An elementary basis change operation on the basis is one of the following three types of operations:   (Type I) Replacing by for some and some .    (Type II) Replacing by for some and some unit of ,    (Type III) Swapping the positions of and for some .    elementary basis change operation    "
 },
@@ -5585,7 +5594,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-row-operations",
   "type": "Definition",
-  "number": "13.70",
+  "number": "13.71",
   "title": "Elementary Row Operations.",
   "body": "Elementary Row Operations   Let be a commutative ring with . An elementary row (column) operation on a matrix is one of the following three types of operations: elementary row operation  elementary column operation   Type I  Adding an element of times a row (column) of to a different row column of .   Type II  Multiplying a row (column) of by a unit of .   Type III  Interchanging two rows (columns) of .      "
 },
@@ -5594,7 +5603,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-matrix",
   "type": "Definition",
-  "number": "13.71",
+  "number": "13.72",
   "title": "Elementary Matrix.",
   "body": "Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: elementary matrix   Type I  For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.   Type II  For and let be the type II elementary matrix with entry , entry for all , and everywhere else.   Type III  For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.      "
 },

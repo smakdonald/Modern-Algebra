@@ -13438,9 +13438,15 @@
               </statement>
             </definition>
 
+            <p>
+              But what about if two bases have different ranks?
+              As it turns out, any two bases of the same free module will have the same cardinality, as we will prove in <xref ref="thm-uniqueness-of-rank-over-commutative-rings"/>.
+              <fn>Mostly. The rest is proved in <xref ref="thm-dimension"/>.</fn>
+            </p>
+
             <example><title>Rank of <m>R^n</m></title>
               <p>
-                The <m>R</m>-module <m>R</m>^n has rank <m>n</m>.
+                The <m>R</m>-module <m>R^n</m> has rank <m>n</m>.
                 Thus <m>R</m> has rank <m>1</m> as a module over itself, as this is the case when <m>n=1</m>.
               </p>
             </example>
@@ -13463,19 +13469,25 @@
                 <p>
                   If <m>M</m> and <m>N</m> are free <m>R</m>-modules having bases of the same cardinality, then <m>M</m> and <m>N</m> are isomorphic <m>R</m>-modules.
                 </p>
-      
+                <!--
                 <p>
                   More precisely, if <m>A</m> is a basis of <m>M</m> and <m>B</m> is a basis of <m>N</m> and <m>j:A\to B</m> is a bijection of sets, then there is a unique <m>R</m>-module isomorphism <m>h: M \xra{\cong} N</m> such that <m>h|_A = j</m>.
                 </p>
+                -->
               </statement>
 
               <proof>
                 <p>
-                  Let <m>h:M\to N</m> and <m>h':N\to M</m> be the <m>R</m>-module homomorphisms induced by the bijection <m>j:A\to B</m> and its inverse <m>j^{-1}:B\to A</m>, respectively, using <xref text='title' ref="thm-ump-for-free-modules"/>. 
-                  We'll show that <m>h</m> and <m>h'</m> are mutual inverses. 
-                  For this note that <m>h'\circ h:N\to N</m> is an <m>R</m>-module homomorphism and <m>(h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b</m> for every <m>b\in B</m>. 
-                  Since the identity map <m>\id_N</m> is also an <m>R</m>-module homomorphism such that <m>id_N(b)=b</m> for every <m>b\in B</m>, by the uniqueness clause in the <xref text='title' ref="thm-ump-for-free-modules"/>, we have <m>h'\circ h=\id_n</m>. 
-                  Similarly <m>h\circ h'=\id_M</m>.
+                  Let <m>A</m> be a basis of <m>M</m> and <m>B</m> be a basis of <m>N</m> such that <m>|A|=|B|</m>.
+                  Thus there exists a bijection <m>j:M\to N</m> with inverse <m>j\inv:N\to M</m>. 
+                  We invoke the <xref text='title' ref="thm-ump-for-free-modules"/> to build <m>R</m>-module homomorphisms <m>\varphi:M\to N</m> and <m>\phi:N\to M</m> such that <m>\varphi = j(a)</m> for all <m>a\in A</m> and <m>\phi = j\inv(b)</m> for all <m>b\in B</m>.
+                </p>
+
+                <p>
+                  We'll show that <m>\varphi</m> and <m>\phi</m> are mutual inverses. 
+                  For this note that <m>\phi\circ \varphi:N\to N</m> is an <m>R</m>-module homomorphism and <m>(\phi\circ \varphi)(b)=\phi(j(b))=j^{-1}(j(b))=b</m> for every <m>b\in B</m>. 
+                  Since the identity map <m>\id_N</m> is also an <m>R</m>-module homomorphism such that <m>id_N(b)=b</m> for every <m>b\in B</m>, by the uniqueness clause in the <xref text='title' ref="thm-ump-for-free-modules"/>, we have <m>\phi\circ \varphi=\id_n</m>. 
+                  Similarly <m>\varphi\circ \phi=\id_M</m>.
                 </p>
               </proof>
             </corollary>
@@ -13483,12 +13495,13 @@
             <example xml:id="ex-mcong-rn-as-r-modules"><title><m>M\cong R^n</m> as <m>R</m>-modules</title>
               <p>
                 If <m>M</m> is a free <m>R</m>-module that has a basis of cardinality <m>n</m>, then <m>M \cong R^n</m> as <m>R</m>-modules. 
-                This holds since, as seen above, <m>R^n</m> has a basis of cardinality <m>n</m>, namely the standard basis <m>e_1, \dots, e_n</m>.
+                This is because <m>R^n</m> is a free <m>R</m> module of rank <m>n</m>, and thus <m>M \cong R^n</m> by <xref ref="cor-free-modules-with-equal-basis-elements-isomorphic"/>.
               </p>
-    
-              <p>
-                More precisely, as the proof makes clear, if <m>B = \{x_1, \dots, x_n\}</m> is an (ordered) basis of <m>M</m>, there is an isomorphism <m>\phi_B: R^n \cong M</m> that sends <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> to <m>\sum_i r_i x_i</m>.
-              </p>
+              <!--
+                <p>
+                  More precisely, as the proof makes clear, if <m>B = \{x_1, \dots, x_n\}</m> is an (ordered) basis of <m>M</m>, there is an isomorphism <m>\phi_B: R^n \cong M</m> that sends <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> to <m>\sum_i r_i x_i</m>.
+                </p>
+               -->
             </example>
 
             <remark>
@@ -13497,6 +13510,21 @@
                 There exist rings <m>S</m> such that <m>S^n</m> and <m>S^m</m> are isomorphic <m>S</m>-modules for all positive integers <m>n</m> and <m>m</m>.
               </p>
             </remark>
+
+            <lemma xml:id="lem-ri-mod-isos"><title><m>R^n/IR^n\cong(R/I)^n</m></title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1\ne 0</m>. 
+                  For any ideal <m>I</m> of <m>R</m>, <m>R^n/IR^n\cong(R/I)^n</m> as <m>R/I</m>-modules.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  https://eloisagrifo.github.io/Teaching/818/PSet3solutions.pdf
+                </p>
+              </proof>
+            </lemma>
 
             <theorem xml:id="thm-uniqueness-of-rank-over-commutative-rings"><title>Uniqueness of Rank over Commutative Rings</title>
               <statement>
@@ -13508,26 +13536,18 @@
 
               <proof>
                 <p>
-                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module with two bases, <m>A</m> and <m>B</m>. 
-                  We need to show <m>A</m> and <m>B</m> have the same cardinality. 
-                  Since <m>A</m> and <m>B</m> are finite, by Example <xref provisional="cite"/> the assertion is equivalent to the following statement:
-    
-                  <cd>
-                  \begin{quote} For a non-zero commutative ring $R$,
-                  if there is an isomorphism $R^n \cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$.
-                  \end{quote}
-                  </cd>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module with two bases, <m>A</m> and <m>B</m>, with ranks <m>m</m> and <m>n</m>, respectively.
+                  Since <m>A</m> and <m>B</m> are finite, by <xref ref="ex-mcong-rn-as-r-modules"/> we have <m>A\cong R^m</m> and <m>B\cong R^n</m>.
                 </p>
 
                 <p>
                   I will prove this statement by taking it as already known that it holds in the special case when <m>R</m> is a field. 
-                  (We will prove it for fields later.) <xref provisional="cite"/>
+                  (We will prove it for fields later in <xref ref="thm-dimension"/>.)
                 </p>
     
                 <p>
-                  Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>I</m>. 
-                  (This is proven using <xref text="title" ref="lem-zorn"/>.) 
-                  Recall that <m>R/I</m> is a field by <xref provisional="cite"/>
+                  Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>\fm</m> by <xref ref="thm-all-ideals-contained-in-maximal-ideal"/>. 
+                  Recall that <m>R/\fm</m> is a field by <xref ref="thm-maximal-iff-field"/>
                 </p>
     
                 <p>
@@ -13539,15 +13559,11 @@
     
                 <p>
                   Next, I claim that there is an isomorphism 
-                  <me>
-                    R^n/IR^n \cong (R/I)^n
-                  </me> 
+                  <me>R^n/IR^n \cong (R/I)^n</me> 
                   of <m>R/I</m>-modules. 
                   Define <m>R^n \to (R/I)^n</m> in the evident way (modding out by <m>I</m> entry-wise). 
-                  It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the First Isomorphism Theorem, <xref provisional="cite"/> it induces an isomorphism 
-                  <me>
-                    g: R^n/I R^n \xra{\cong} (R/I)^n
-                  </me> 
+                  It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the <xref ref="fit-module"/>, it induces an isomorphism
+                  <me>g: R^n/I R^n \xra{\cong} (R/I)^n</me> 
                   given by <m>g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau</m> (where <m>\tau</m> denotes taking the transpose). 
                   Now, what we have said so far only shows that <m>g</m> is isomorphism of <m>R</m>-modules, but it is easy to see that <m>g</m> is in fact <m>R/I</m>-linear (I'll leave that to you) and thus it is an isomorphism of <m>R/I</m>-modules.
                 </p>
@@ -13562,7 +13578,7 @@
             <remark>
               <p>
                 Checking the definition carefully, we see that both the empty set and the set <m>\{0\}</m> form bases for the zero module over the <m>0</m> ring. 
-                This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that 1\ne 0 was used in <xref ref="thm-uniqueness-of-rank-over-commutative-rings"/>.
+                This gives an example of a module with two bases of different cardinalities, justifying why the suppostion that <m>1\ne 0</m> was used in <xref ref="thm-uniqueness-of-rank-over-commutative-rings"/>.
               </p>
             </remark>
 
