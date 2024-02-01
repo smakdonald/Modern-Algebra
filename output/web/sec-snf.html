@@ -740,7 +740,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">When Modules are Finitely Presented: Noetherian Rings</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-snf-statement" class="internal"><span class="title">Stating and Finding the Smith Normal Form of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-proving-snl" class="internal"><span class="title">Proof and Uniqueness of Smith Normal Form</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-modclass.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Classifications</span></a></div></li>
 </ul>
 </li>
@@ -908,10 +914,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-snf"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">Smith Normal Form</span>
 </h2>
-<div class="para" id="sec-snf-2">The Smith normal form provides a way to understand the structure of matrices over a PID and is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.</div>
-<article class="theorem theorem-like" id="thm-snf"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.13</span><span class="period">.</span><span class="space"> </span><span class="title">Smith Normal Form.</span>
+<article class="objectives goal-like" id="sec-snf-2"><h3 class="heading"><span class="type">Reminders and Recollections</span></h3>
+<ul class="disc"><li id="sec-snf-2-1-1"><div class="para" id="p-derived-sec-snf-2-1-1"></div></li></ul></article><section class="subsection" id="subsec-snf-statement"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Stating and Finding the Smith Normal Form of a Matrix</span>
 </h3>
+<div class="para" id="subsec-snf-statement-2">The Smith normal form provides a way to understand the structure of matrices over a PID and is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.</div>
+<article class="theorem theorem-like" id="thm-snf"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.14</span><span class="period">.</span><span class="space"> </span><span class="title">Smith Normal Form.</span>
+</h4>
 <div class="para logical" id="thm-snf-2-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a Euclidean domain and let <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{.}\)</span> Then there is a sequence of elementary column and column operations that transform <span class="process-math">\(A\)</span> into a matrix <span class="process-math">\(S = [s_{i,j}]\)</span> such that all non-diagonal entries of <span class="process-math">\(S\)</span> are <span class="process-math">\(0\)</span> and the diagonal entries of <span class="process-math">\(S\)</span> satisfy</div>
 <div class="displaymath process-math">
@@ -919,77 +929,87 @@ window.MathJax = {
 s_{1,1} \mid s_{2,2} \mid s_{3,3} \mid \cdots.
 \end{equation*}
 </div>
-</div></article><details id="thm-snf-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="thm-snf-3-1">The main point of the proof is to establish:</div> <div class="para logical" id="thm-snf-3-2">
-<div class="para">
-<em class="emphasis">Claim</em>: There is a sequence of row and column operations that transforms <span class="process-math">\(A\)</span> to</div>
-<div class="displaymath process-math">
+</div></article><details id="thm-snf-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-snf-3-1">Before we begin, note that we will apply a sequence of steps that correspond to multiplication by an invertible matrix on the left or right, and by <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html" title="Lemma 14.21: Matrix GCDs in PIDs">Lemma 14.21</a>, none of these steps will change the gcd.</div> <div class="para logical" id="thm-snf-3-2">
+<div class="para">To prove existence of such a matrix <span class="process-math">\(M\text{,}\)</span> we claim we can multiply <span class="process-math">\(A\)</span> on the right and the left by invertible matrices to transform it into a matrix of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html">
 \begin{equation*}
-A' = \begin{bmatrix}
-g &amp; 0 \\
-0 &amp; B \\
-\end{bmatrix}
+\left[\begin{array}{ll} g &amp; 0 \\ 0 &amp; B \end{array}\right] 
 \end{equation*}
 </div>
-<div class="para">for some <span class="process-math">\((n-1) \times (m-1)\)</span> matrix <span class="process-math">\(B\)</span> and where <span class="process-math">\(g = \gcd(A)\text{.}\)</span> (We adopt the convention that if <span class="process-math">\(A\)</span> is the matrix of all <span class="process-math">\(0\)</span>’s, then <span class="process-math">\(g = 0\text{.}\)</span>) Note that, by Lemma , we have <span class="process-math">\(\gcd(A) = \gcd(A')\)</span> and thus <span class="process-math">\(g \mid \gcd(B)\text{.}\)</span>
+<div class="para">for some <span class="process-math">\((n-1) \times(m-1)\)</span> matrix <span class="process-math">\(B\text{,}\)</span> where <span class="process-math">\(g=\operatorname{gcd}(A)\text{.}\)</span> If our claim holds, then we are done: notice that <span class="process-math">\(g\)</span> divides every entry of <span class="process-math">\(B\text{,}\)</span> since <span class="process-math">\(\operatorname{gcd}(A)=\operatorname{gcd}(g, B)\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html" title="Lemma 14.21: Matrix GCDs in PIDs">Lemma 14.21</a>, and so by applying this fact to <span class="process-math">\(B\text{,}\)</span> and then over and over again, we arrive at a matrix of the desired form <span class="process-math">\(M\text{.}\)</span> Notice moreover that if <span class="process-math">\(C\)</span> is an invertible matrix, then so is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html">
+\begin{equation*}
+\left[\begin{array}{ll} 1 &amp; 0 \\ 0 &amp; C \end{array}\right] 
+\end{equation*}
 </div>
 </div> <div class="para logical" id="thm-snf-3-3">
-<div class="para">Granting this claim, by applying it again to <span class="process-math">\(B\)</span> we arrive at a matrix of the form</div>
-<div class="displaymath process-math">
+<div class="para">To construct a matrix in the form above, let <span class="process-math">\(a\)</span> be the upper left <span class="process-math">\((1,1)\)</span> entry of <span class="process-math">\(A\text{.}\)</span> First, we are going to show that we can turn <span class="process-math">\(A\)</span> into a matrix of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-two-by-two.html">
 \begin{equation*}
-A'' = \begin{bmatrix}
-g &amp; 0 &amp; 0\\
-0 &amp; g' &amp; 0 \\
-0 &amp; 0 &amp; C
-\end{bmatrix}
+\left[\begin{array}{ll} * &amp; 0 \\ 0 &amp; B \end{array}\right] 
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(g' = \gcd(B)\)</span> and <span class="process-math">\(g \mid g'\)</span> and <span class="process-math">\(g' \mid \gcd(C)\text{.}\)</span> (Observe that the row and column operations on <span class="process-math">\(B\)</span> will not affect the first row and column of <span class="process-math">\(A'\text{.}\)</span>) Continuing in this fashion, we arrive at the matrix <span class="process-math">\(S\)</span> in the statement.</div>
-</div> <div class="para" id="thm-snf-3-4">To prove the claim, let <span class="process-math">\(a\)</span> be the upper-left entry of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para" id="thm-snf-3-5">Suppose <span class="process-math">\(a\)</span> happens to be <span class="process-math">\(g = \gcd(A)\text{.}\)</span> Then, in particular, it divides every entry of the first row and column of <span class="process-math">\(A\text{,}\)</span> and so by doing row and column operations of type I, we may <span class="process-math">\(0\)</span> out these entries to arrive at a matrix of the desired form directly.</div> <div class="para" id="thm-snf-3-6">In general, let <span class="process-math">\(l\)</span> to be the number of prime factors in a prime factorization of of <span class="process-math">\(a/\gcd(A)\text{,}\)</span> and proceed by induction on <span class="process-math">\(l\text{.}\)</span>
-</div> <div class="para" id="thm-snf-3-7">If <span class="process-math">\(l = 0\text{,}\)</span> then <span class="process-math">\(a = \gcd(A)\)</span> (up to associates), and we already did this case.</div> <div class="para" id="thm-snf-3-8">Assume <span class="process-math">\(l &gt; 0\text{.}\)</span> Then there is at least one entry <span class="process-math">\(b = a_{i,j}\)</span> such that <span class="process-math">\(a \nmid b\text{.}\)</span>
-</div> <div class="para" id="thm-snf-3-9">Case I: There is such a <span class="process-math">\(b\)</span> belonging to the first row of <span class="process-math">\(A\text{.}\)</span> In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace <span class="process-math">\(a\)</span> by <span class="process-math">\(\gcd(a,b)\)</span> and <span class="process-math">\(b\)</span> by <span class="process-math">\(0\text{,}\)</span> as in the example above. Since <span class="process-math">\(a \nmid b\text{,}\)</span> <span class="process-math">\(\gcd(a,b)\)</span> is a proper divisor of <span class="process-math">\(a\text{,}\)</span> and it follows that the number of factors in a prime factorization of <span class="process-math">\(\gcd(a,b)/g\)</span> is smaller than <span class="process-math">\(l\text{,}\)</span> and we are done by induction.</div> <div class="para" id="thm-snf-3-10">Case II: There is such a <span class="process-math">\(b\)</span> in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.</div> <div class="para logical" id="thm-snf-3-11">
-<div class="para">Case III: <span class="process-math">\(a\)</span> divides every entry of the first row and first column. In this case, suitable row and column operations transform <span class="process-math">\(A\)</span> to</div>
-<div class="displaymath process-math">
+<div class="para">with the same gcd as <span class="process-math">\(A\text{.}\)</span> If a happens to divide all the entries on the first row and column, then we can simply apply elementary row and column operations to get to the desired form. Suppose there exists <span class="process-math">\(b\)</span> on the first column such that <span class="process-math">\(a \nmid b\text{.}\)</span> Then we may apply an elementary row operation switching rows so that <span class="process-math">\(b=a_{2,1}\)</span> is on the first column, second row. By <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-two-by-two.html" title="Lemma 14.22: Matrix GCD of Ring Elements">Lemma 14.22</a>, we can now find an invertible matrix <span class="process-math">\(C \in \mathrm{M}_{2}(R)\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-two-by-two.html">
 \begin{equation*}
-D = 
-\begin{bmatrix}
-a &amp; 0 \\
-0 &amp; E \\
-\end{bmatrix}.
+C\left[\begin{array}{l} a \\ b \end{array}\right] =\left[\begin{array}{c} \operatorname{gcd}(a, b) \\ 0 \end{array}\right] . 
 \end{equation*}
 </div>
-<div class="para">By Lemma  we have <span class="process-math">\(\gcd(D) = \gcd(A)\text{,}\)</span> and thus there is some element <span class="process-math">\(e\)</span> of <span class="process-math">\(E\)</span> such that <span class="process-math">\(a \nmid e\)</span> (since we are assuming <span class="process-math">\(a\)</span> is not the gcd of <span class="process-math">\(A\)</span>). A suitable row operation puts <span class="process-math">\(e\)</span> into row one without affecting <span class="process-math">\(a\text{,}\)</span> and we are back to the previously solved Case I.</div>
-</div></article></details><article class="remark remark-like" id="sec-snf-4"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.14</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-snf-4-1">Note that some of the diagonal entries could be <span class="process-math">\(0\text{.}\)</span> Recall <span class="process-math">\(s \mid 0\)</span> for all <span class="process-math">\(s \in R\)</span> (including <span class="process-math">\(s = 0\)</span>), and <span class="process-math">\(0\)</span> is the only element that divides <span class="process-math">\(0\text{.}\)</span> So, the “tail’’ end of the sequence could be all <span class="process-math">\(0\)</span>’s, and indeed if <span class="process-math">\(s_{i,i} = 0\)</span> for some <span class="process-math">\(i\)</span> then all subsequent diagonal entries must be <span class="process-math">\(0\text{.}\)</span>
-</div></article><article class="corollary theorem-like" id="cor-ftfpmed-first-version"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">14.15</span><span class="period">.</span><span class="space"> </span><span class="title">FTFPMED: First Version.</span>
-</h3>
-<div class="para logical" id="cor-ftfpmed-first-version-2-1">
-<div class="para">If <span class="process-math">\(R\)</span> is a Euclidean domain and <span class="process-math">\(M\)</span> is a finitely presented <span class="process-math">\(R\)</span>-module, then <span class="process-math">\(M\)</span> is isomorphic to a direct sum of cyclic modules:</div>
-<div class="displaymath process-math">
+</div> <div class="para logical" id="thm-snf-3-4">
+<div class="para">Consider the <span class="process-math">\(m \times m\)</span> matrix</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html">
 \begin{equation*}
-M \cong R/d_1 \oplus \cdots \oplus R/d_l \oplus R^a
+P:=\left[\begin{array}{cc} C &amp; 0 \\ 0 &amp; I_{m-2} \end{array}\right] . 
 \end{equation*}
 </div>
-<div class="para">for some <span class="process-math">\(a \geq 0\)</span> and some non-zero, non-invertible elements <span class="process-math">\(d_1, \dots, d_l \in R\)</span> such that <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_l\text{.}\)</span>
+<div class="para">Note that <span class="process-math">\(P A\)</span> has <span class="process-math">\((P A)_{1,1}=\operatorname{gcd}(a, b)\)</span> and <span class="process-math">\((P A)_{2,1}=0\text{,}\)</span> so this step replaces <span class="process-math">\(a\)</span> by <span class="process-math">\(\operatorname{gcd}(a, b)\)</span> and <span class="process-math">\(b\)</span> by 0 . By <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html" title="Lemma 14.21: Matrix GCDs in PIDs">Lemma 14.21</a>, <span class="process-math">\(\operatorname{gcd}(P A)=\operatorname{gcd}(A)\text{.}\)</span> We can keep repeating this until the top left corner entry divides every entry on the first column, and this process must stop after at most <span class="process-math">\(m-1\)</span> steps, since there are only <span class="process-math">\(m\)</span> elements on the first column.</div>
+</div> <div class="para logical" id="thm-snf-3-5">
+<div class="para">Similarly, if there exists <span class="process-math">\(b\)</span> on the first row that <span class="process-math">\(a\)</span> does not divide, we can repeat this process by instead multiplying <span class="process-math">\(A\)</span> on the left by an invertible matrix, until we zero out all the remaining entries on the first row and column. Finally, we arrive at a matrix of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{ll} a &amp; 0 \\ 0 &amp; B \end{array}\right] 
+\end{equation*}
 </div>
-</div></article><details id="cor-ftfpmed-first-version-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="cor-ftfpmed-first-version-3-1">This is an immediate consequence of the SNF Theorem, Theorem  parts (1) and (2), and Lemma .</div></article></details><article class="example example-like" id="exe-special-case-of-snf"><h3 class="heading">
+</div> <div class="para" id="thm-snf-3-6">If <span class="process-math">\(a=\operatorname{gcd}(A)\text{,}\)</span> we are done. If not, then we can find some entry <span class="process-math">\(b=a_{i, j}\)</span> such that <span class="process-math">\(a \nmid b\text{.}\)</span> We can then add the <span class="process-math">\(j\)</span> th column to the first column, which puts <span class="process-math">\(b\)</span> into the first column without affecting <span class="process-math">\(a\text{,}\)</span> since the remainder of the top row is zero. But this brings us back to the previous situation, and we have already shown that we can replace the top left corner by <span class="process-math">\(\operatorname{gcd}(a, b)\text{.}\)</span>
+</div> <div class="para logical" id="thm-snf-3-7">
+<div class="para">At each step, we replace <span class="process-math">\(a\)</span> by some <span class="process-math">\(c\)</span> with is both a divisor of <span class="process-math">\(a\)</span> and a multiple of <span class="process-math">\(\operatorname{gcd}(A)\text{.}\)</span> Our ring <span class="process-math">\(R\)</span> is a UFD, so there are finitely many factors of <span class="process-math">\(a / \operatorname{gcd}(A)\text{,}\)</span> and this process must stop. This shows that we can eventually replace <span class="process-math">\(A\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{cc} \operatorname{gcd}(A) &amp; 0 \\ 0 &amp; B \end{array}\right] . 
+\end{equation*}
+</div>
+</div> <div class="para" id="thm-snf-3-8">Now it remains to show the uniqueness portion of the theorem. For any <span class="process-math">\(i\)</span> and any matrix <span class="process-math">\(B\text{,}\)</span> let <span class="process-math">\(\operatorname{gcd}_{i}(B)\)</span> denote the gcd of all the <span class="process-math">\(i \times i\)</span> minors of <span class="process-math">\(B\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/lem-ideals-generated-by-minors.html" title="Lemma 14.24: Ideals Generated by Minors">Lemma 14.24</a>, <span class="process-math">\(\operatorname{gcd}_{i}\)</span> is unchanged by row and column operations, so <span class="process-math">\(\gcd_i(A) = \gcd_i(M )\text{.}\)</span>
+</div> <div class="para logical" id="thm-snf-3-9">
+<div class="para">For a matrix of the form <span class="process-math">\(M\text{,}\)</span> the only minors that are nonzero are those where the choices of columns and rows are the same, and hence the only nonzero <span class="process-math">\(i \times i\)</span> minors of <span class="process-math">\(M\)</span> are <span class="process-math">\(g_{s_{1}} \cdots g_{s_{i}}\)</span> for some <span class="process-math">\(s_{1}&lt;\cdots&lt;s_{i}\text{.}\)</span> Since <span class="process-math">\(g_{s_{1}} \cdots g_{s_{i}}\)</span> divide each other, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{gcd}_{i}(A)=\operatorname{gcd}_{i}(M)=g_{1} \cdots g_{i} .
+\end{equation*}
+</div>
+</div> <div class="para logical" id="thm-snf-3-10">
+<div class="para">In particular, the largest value of <span class="process-math">\(i\)</span> such that some <span class="process-math">\(i \times i\)</span> minor of <span class="process-math">\(A\)</span> is nonzero is <span class="process-math">\(\ell\text{.}\)</span> Also, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g_{i}=\frac{\operatorname{gcd}_{i}(A)}{\operatorname{gcd}_{i-1}(A)} .
+\end{equation*}
+</div>
+</div> <div class="para" id="thm-snf-3-11">This proves uniqueness, for it shows that <span class="process-math">\(\ell, g_{1}, \ldots, g_{\ell}\)</span> are all defined from <span class="process-math">\(A\)</span> directly, without any choices.</div></article></details><article class="remark remark-like" id="subsec-snf-statement-4"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-snf-statement-4-1">Note that some of the diagonal entries could be <span class="process-math">\(0\text{.}\)</span> Recall <span class="process-math">\(s \mid 0\)</span> for all <span class="process-math">\(s \in R\)</span> (including <span class="process-math">\(s = 0\)</span>), and <span class="process-math">\(0\)</span> is the only element that divides <span class="process-math">\(0\text{.}\)</span> So, the “tail’’ end of the sequence could be all <span class="process-math">\(0\)</span>’s, and indeed if <span class="process-math">\(s_{i,i} = 0\)</span> for some <span class="process-math">\(i\)</span> then all subsequent diagonal entries must be <span class="process-math">\(0\text{.}\)</span>
+</div></article><div class="para" id="subsec-snf-statement-5">Elementary row and column operations correspond to multiplication by elementary matrices, which are invertible, and that the composition of invertible matrices is invertible. So whenever we apply elementary row and column operations, we can translate it into multiplication by an invertible matrix on the left or the right, respectively.</div>
+<div class="para" id="subsec-snf-statement-6">To transform a matrix <span class="process-math">\(A\)</span> into its Smith Normal Form, we will use a sequence of steps that all correspond to multiplication by invertible matrices. Many of those steps will actually be elementary row and column operations, which correspond to multiplication by an elementary matrix. Elementary matrices are invertible, and a product of invertible matrices is invertible, and so any finite sequence of elementary row and column operations can be described by multiplication by an invertible matrix. However, in general not every invertible matrix can be obtained as a product of elementary matrices. In fact, there are examples of PIDs <span class="process-math">\(R\)</span> and matrices <span class="process-math">\(A\)</span> for which the Smith Normal Form cannot be obtained by simply taking a sequence of elementary row and column operations. However, it is not easy to give such an example, in part because when our PID <span class="process-math">\(R\)</span> is nice enough, the Smith Normal Form can in fact be obtained by simply taking a sequence of elementary row and column operations. This is the case for Euclidean domains: over such rings, the Euclidean Algorithm for finding the gcd of two elements works, and it’s the key step we will need to find a Smith Normal Form. When <span class="process-math">\(R\)</span> is a general PID, however, we need to work a little harder.</div>
+<article class="example example-like" id="ex-special-case-of-snf"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.16</span><span class="period">.</span><span class="space"> </span><span class="title">Special Case of SNF.</span>
-</h3> <div class="para" id="exe-special-case-of-snf-2">Suppose <span class="process-math">\(R\)</span> is a Euclidean domain and <span class="process-math">\(A = (x_1, \dots, x_n)\)</span> is a <span class="process-math">\(1 \times n\)</span> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <span class="process-math">\((g_1, 0, x_3, \dots, x_n)\)</span> where <span class="process-math">\(g_1 = \gcd(x_1, x_2)\text{.}\)</span> Repeat this for columns <span class="process-math">\(1\)</span> and <span class="process-math">\(3\)</span> to arrive at <span class="process-math">\((g_2, 0, 0, x_4, \dots, x_n)\)</span> where <span class="process-math">\(g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)\text{.}\)</span> Continuing in this fashion we arrive at <span class="process-math">\((g, 0, \dots, 0)\)</span> where <span class="process-math">\(g = \gcd(x_1, \dots, x_n)\text{.}\)</span>
-</div> <div class="para" id="exe-special-case-of-snf-3">The proof of the SNF Theorem in general amounts to an extended version of the idea used in this special case.</div></article><article class="example example-like" id="exe-finding-snf"><h3 class="heading">
+</h4> <div class="para" id="ex-special-case-of-snf-2">Suppose <span class="process-math">\(R\)</span> is a Euclidean domain and <span class="process-math">\(A = (x_1, \dots, x_n)\)</span> is a <span class="process-math">\(1 \times n\)</span> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <span class="process-math">\((g_1, 0, x_3, \dots, x_n)\)</span> where <span class="process-math">\(g_1 = \gcd(x_1, x_2)\text{.}\)</span> Repeat this for columns <span class="process-math">\(1\)</span> and <span class="process-math">\(3\)</span> to arrive at <span class="process-math">\((g_2, 0, 0, x_4, \dots, x_n)\)</span> where <span class="process-math">\(g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)\text{.}\)</span> Continuing in this fashion we arrive at <span class="process-math">\((g, 0, \dots, 0)\)</span> where <span class="process-math">\(g = \gcd(x_1, \dots, x_n)\text{.}\)</span>
+</div> <div class="para" id="ex-special-case-of-snf-3">The proof of the SNF Theorem in general amounts to an extended version of the idea used in this special case.</div></article><article class="example example-like" id="ex-finding-snf"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.17</span><span class="period">.</span><span class="space"> </span><span class="title">Finding SNF.</span>
-</h3> <div class="para logical" id="exe-finding-snf-2">
+</h4> <div class="para logical" id="ex-finding-snf-2">
 <div class="para">Consider the matrix with entries in <span class="process-math">\(\Z\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-A=\begin{bmatrix}
-1 &amp; 6 &amp; 5 &amp; 2 \\
-2 &amp; 1 &amp; -1 &amp; 0 \\
-3 &amp; 0 &amp; 3 &amp; 0
-\end{bmatrix}.
+A=\begin{bmatrix} 1 &amp; 6 &amp; 5 &amp; 2 \\ 2 &amp; 1 &amp; -1 &amp; 0 \\ 3 &amp; 0 &amp; 3 &amp; 0 \end{bmatrix}. 
 \end{equation*}
 </div>
 <div class="para">Do row and column operations to put <span class="process-math">\(A\)</span> into its Smith Normal Form:</div>
@@ -1000,22 +1020,127 @@ S=\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 &amp; 0 \\0 &amp;
 </div>
 <div class="para">Conclude that the module presented by <span class="process-math">\(A\)</span> is isomorphic to <span class="process-math">\(\Z/6\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="sec-snf-8"><h3 class="heading">
+</div></article><article class="remark remark-like" id="subsec-snf-statement-9"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-snf-statement-9-1">A version of the SNF Theorem and its Corollary are valid for PIDs: If <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{,}\)</span> there there exist invertible matrices <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> such that <span class="process-math">\(PAQ\)</span> has the form <span class="process-math">\(S\)</span> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.</div> <div class="para" id="subsec-snf-statement-9-2">For Euclidean domains, <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.</div></article></section><section class="subsection" id="subsec-proving-snl"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Proof and Uniqueness of Smith Normal Form</span>
 </h3>
-<div class="para" id="sec-snf-8-1">A version of the SNF Theorem and its Corollary are valid for PIDs: If <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{,}\)</span> there there exist invertible matrices <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> such that <span class="process-math">\(PAQ\)</span> has the form <span class="process-math">\(S\)</span> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.</div> <div class="para" id="sec-snf-8-2">For Euclidean domains, <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.</div></article><article class="lemma theorem-like" id="lem-gcd-of-a-matrix-in-pid"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix GCDs in PIDs.</span>
-</h3>
-<div class="para" id="lem-gcd-of-a-matrix-in-pid-2-1">Suppose <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A\)</span> is a matrix with entries in <span class="process-math">\(R\)</span> and <span class="process-math">\(B\)</span> is a matrix obtained from <span class="process-math">\(A\)</span> via elementary column and column operations. Then <span class="process-math">\(\gcd(A) = \gcd(B)\)</span> where the gcd of a matrix is defined to be the gcd of all of its entries.</div></article><article class="definition definition-like" id="def-minor"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.20</span><span class="period">.</span><span class="space"> </span><span class="title">Minor.</span>
-</h3> <div class="para" id="def-minor-2-1">A <span class="process-math">\(k \times k\)</span> <em class="emphasis">minor</em> of <span class="process-math">\(A\)</span> is the determinant of a <span class="process-math">\(k \times k\)</span> submatrix of <span class="process-math">\(A\text{;}\)</span> more formally, if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix, a <span class="process-math">\(k\times k\)</span> minor of <span class="process-math">\(A\)</span> is any element of <span class="process-math">\(R\)</span> given as follows: Choose <span class="process-math">\(1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m\)</span> and <span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq n\text{,}\)</span> let <span class="process-math">\(B = (b_{p,q})\)</span> be the <span class="process-math">\(k \times k\)</span> matrix with <span class="process-math">\(b_{p,q} = a_{i_p, j_q}\text{.}\)</span> Then <span class="process-math">\(\det(B)\)</span> is a minor of <span class="process-math">\(A\text{.}\)</span>
-</div></article><article class="lemma theorem-like" id="lem-ideals-generated-by-minors"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.21</span><span class="period">.</span><span class="space"> </span><span class="title">Ideals Generated by Minors.</span>
-</h3>
+<article class="definition definition-like" id="def-gcd-matrix"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span>
+</h4>
+<div class="para" id="def-gcd-matrix-1-1">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(a_{1}, \ldots, a_{n} \in R\text{.}\)</span> The <em class="emphasis">greatest common divisor</em> or <em class="emphasis">gcd</em> of <span class="process-math">\(a_{1}, \ldots, a_{n}\text{,}\)</span> denoted <span class="process-math">\(\operatorname{gcd}\left(a_{1}, \ldots, a_{n}\right)\text{,}\)</span> is a generator for the principal ideal <span class="process-math">\(\left(a_{1}, \ldots, a_{n}\right)\text{.}\)</span> Given a matrix <span class="process-math">\(A \in \mathrm{M}_{m, n}(R), \operatorname{gcd}(A)\)</span> is the gcd of the entries of <span class="process-math">\(A\text{.}\)</span> We adopt the convention that <span class="process-math">\(\operatorname{gcd}(0,0)=0\)</span> and thus if <span class="process-math">\(A\)</span> is the matrix of all zeroes, then <span class="process-math">\(\operatorname{gcd}(A)=0\text{.}\)</span>
+</div></article><article class="remark remark-like" id="subsec-proving-snl-3"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.20</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-proving-snl-3-1">Notice that the greatest common divisor is only defined up to multiplication by a unit.</div></article><article class="lemma theorem-like" id="lem-gcd-of-a-matrix-in-pid"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.21</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix GCDs in PIDs.</span>
+</h4>
+<div class="para" id="lem-gcd-of-a-matrix-in-pid-2-1">Let <span class="process-math">\(R\)</span> is a PID. Let <span class="process-math">\(A \in \mathrm{M}_{m, n}(R)\)</span> be any matrix and let <span class="process-math">\(P \in \mathrm{M}_{m}(R)\)</span> and <span class="process-math">\(Q \in \mathrm{M}_{n}(R)\)</span> be invertible matrices. Then <span class="process-math">\(\operatorname{gcd}(A)=\operatorname{gcd}(P A)=\operatorname{gcd}(Q A)\text{.}\)</span> In particular, if <span class="process-math">\(B \in \mathrm{M}_{m, n}(R)\)</span> and <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> by a finite sequence of elementary row and column operations, then <span class="process-math">\(\operatorname{gcd}(A)=\operatorname{gcd}(B)\text{.}\)</span>
+</div></article><details id="lem-gcd-of-a-matrix-in-pid-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="lem-gcd-of-a-matrix-in-pid-3-1">
+<div class="para">First, suppose that <span class="process-math">\(n=1\text{,}\)</span> meaning that <span class="process-math">\(A\)</span> is a column, say</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\left[\begin{array}{c} a_{1} \\ \vdots \\ a_{m} \end{array}\right] 
+\text { and let } 
+P A=\left[\begin{array}{c} b_{1} \\ \vdots \\ b_{m} \end{array}\right]
+\end{equation*}
+</div>
+<div class="para">We need to show that <span class="process-math">\(\left(a_{1}, \ldots, a_{m}\right)=\left(b_{1}, \ldots, b_{m}\right)\text{.}\)</span> On the one hand, each <span class="process-math">\(b_{i}\)</span> is a linear combination of the <span class="process-math">\(a_{j}\text{,}\)</span> so <span class="process-math">\(\left(b_{1}, \ldots, b_{m}\right) \subseteq\left(a_{1}, \ldots, a_{m}\right)\text{.}\)</span> On the other hand,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{c} a_{1} \\ \vdots \\ a_{m} \end{array}\right]
+=P^{-1}(P A)=P^{-1}
+\left[\begin{array}{c} b_{1} \\ \vdots \\ b_{m} \end{array}\right]
+\end{equation*}
+</div>
+<div class="para">so each <span class="process-math">\(a_{j}\)</span> is a combination of the <span class="process-math">\(b_{i}\text{,}\)</span> and <span class="process-math">\(a_{j} \in\left(b_{1}, \ldots, b_{m}\right)\text{.}\)</span> We conclude that we have an equality of ideals <span class="process-math">\(\left(a_{1}, \ldots, a_{m}\right)=\left(b_{1}, \ldots, b_{m}\right)\text{,}\)</span> and thus multiplying a column vector by an invertible matrix does not change the greatest common divisor of the entries.</div>
+</div> <div class="para logical" id="lem-gcd-of-a-matrix-in-pid-3-2">
+<div class="para">Now given <span class="process-math">\(A \in \mathrm{M}_{m, n}(R)\text{,}\)</span> if we denote the <span class="process-math">\(i\)</span> th column of <span class="process-math">\(A\)</span> by <span class="process-math">\(A_{i}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P A=\left[\begin{array}{lll}
+P A_{1} &amp; \cdots &amp; P A_{m}
+\end{array}\right] .
+\end{equation*}
+</div>
+<div class="para">Since the gcd of each column remains the same, the gcd of all the entries does not change.</div>
+</div> <div class="para logical" id="lem-gcd-of-a-matrix-in-pid-3-3">
+<div class="para">To show that <span class="process-math">\(\operatorname{gcd}(A Q)=\operatorname{gcd}(A)\text{,}\)</span> note that transposing a matrix does not change its gcd nor the fact that its invertible, so we can apply what we have already shown:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{gcd}(A Q)=\operatorname{gcd}\left((A Q)^{T}\right)=\operatorname{gcd}\left(Q^{T} A^{T}\right)=\operatorname{gcd}\left(A^{T}\right)=\operatorname{gcd}(A)
+\end{equation*}
+</div>
+</div> <div class="para" id="lem-gcd-of-a-matrix-in-pid-3-4">Finally, applying elementary row and column operations corresponds to multiplying by an elementary matrix on the left or right, and elementary matrices are invertible.</div></article></details><article class="lemma theorem-like" id="lem-gcd-two-by-two"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.22</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix GCD of Ring Elements.</span>
+</h4>
+<div class="para logical" id="lem-gcd-two-by-two-2-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a PID and <span class="process-math">\(x, y \in R\text{.}\)</span> There exists an invertible <span class="process-math">\(2 \times 2\)</span> matrix <span class="process-math">\(P \in \mathrm{M}_{2}(R)\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P\left[\begin{array}{l}
+x \\
+y
+\end{array}\right]=\left[\begin{array}{c}
+\operatorname{gcd}(x, y) \\
+0
+\end{array}\right] .
+\end{equation*}
+</div>
+</div></article><details id="lem-gcd-two-by-two-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="lem-gcd-two-by-two-3-1">
+<div class="para">By definition of greatest common divisor, <span class="process-math">\((x, y)=(\operatorname{gcd}(x, y))\text{,}\)</span> so there exist <span class="process-math">\(a, b \in R\)</span> such that <span class="process-math">\(a x+b y=\operatorname{gcd}(x, y)\text{.}\)</span> Write <span class="process-math">\(g:=\operatorname{gcd}(x, y)\)</span> and <span class="process-math">\(h=\operatorname{gcd}(a, b)\text{.}\)</span> Then <span class="process-math">\(a x+b y\)</span> is a multiple of <span class="process-math">\(g h\text{,}\)</span> but since <span class="process-math">\(a x+b y=g\)</span> and <span class="process-math">\(R\)</span> is a domain, we conclude that <span class="process-math">\(h\)</span> must be a unit, and <span class="process-math">\((a, b)=(h)=(1)\text{.}\)</span> In particular, we can find <span class="process-math">\(c, d \in R\)</span> such that <span class="process-math">\(a d-b c=1\text{.}\)</span> Finally, <span class="process-math">\(b x+c y \in(x, y)=(g)\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{ll} a &amp; b \\ c &amp; d \end{array}\right]
+\left[\begin{array}{l} x \\ y \end{array}\right]
+=\left[\begin{array}{c} g \\ e g \end{array}\right]
+\end{equation*}
+</div>
+</div> <div class="para logical" id="lem-gcd-two-by-two-3-2">
+<div class="para">Now we can apply the row operation that adds <span class="process-math">\(-e\)</span> times the first row to the second row: by setting</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P:=
+\left[\begin{array}{cc} 1 &amp; 0 \\ -e &amp; 1 \end{array}\right]
+\left[\begin{array}{ll} a &amp; b \\ c &amp; d \end{array}\right]
+=\left[\begin{array}{cc} a &amp; b \\ c-e a &amp; b-d e \end{array}\right] .
+\end{equation*}
+</div>
+<div class="para">we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P\left[\begin{array}{l} x \\ y \end{array}\right]
+=\left[\begin{array}{l} g \\ 0 \end{array}\right]
+\end{equation*}
+</div>
+</div> <div class="para logical" id="lem-gcd-two-by-two-3-3">
+<div class="para">Finally, one can easily check that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P^{-1}=\left[\begin{array}{cc} d &amp; -b \\ -c &amp; a \end{array}\right]
+\left[\begin{array}{ll} 1 &amp; 0 \\ e &amp; 1 \end{array}\right]
+\end{equation*}
+</div>
+</div></article></details><div class="para logical" id="subsec-proving-snl-6">
+<div class="para">By transposing the matrices in <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-two-by-two.html" title="Lemma 14.22: Matrix GCD of Ring Elements">Lemma 14.22</a>, we can show that there exists an invertible <span class="process-math">\(2 \times 2\)</span> matrix <span class="process-math">\(Q\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-two-by-two.html">
+\begin{equation*}
+\left[\begin{array}{ll} x &amp; y \end{array}\right] 
+Q=[\operatorname{gcd}(x, y) \quad 0]
+\end{equation*}
+</div>
+</div>
+<article class="definition definition-like" id="def-minor"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.23</span><span class="period">.</span><span class="space"> </span><span class="title">Minor.</span>
+</h4> <div class="para" id="def-minor-2-1">A <span class="process-math">\(k \times k\)</span> <em class="emphasis">minor</em> of <span class="process-math">\(A\)</span> is the determinant of a <span class="process-math">\(k \times k\)</span> submatrix of <span class="process-math">\(A\text{;}\)</span> more formally, if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix, a <span class="process-math">\(k\times k\)</span> minor of <span class="process-math">\(A\)</span> is any element of <span class="process-math">\(R\)</span> given as follows: Choose <span class="process-math">\(1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m\)</span> and <span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq n\text{,}\)</span> let <span class="process-math">\(B = (b_{p,q})\)</span> be the <span class="process-math">\(k \times k\)</span> matrix with <span class="process-math">\(b_{p,q} = a_{i_p, j_q}\text{.}\)</span> Then <span class="process-math">\(\det(B)\)</span> is a minor of <span class="process-math">\(A\text{.}\)</span>
+</div></article><article class="lemma theorem-like" id="lem-ideals-generated-by-minors"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.24</span><span class="period">.</span><span class="space"> </span><span class="title">Ideals Generated by Minors.</span>
+</h4>
 <div class="para" id="lem-ideals-generated-by-minors-2-1">For any commutative ring <span class="process-math">\(R\)</span> and matrix <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{,}\)</span> if <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> via an elementary column or column operation, then the ideal of <span class="process-math">\(R\)</span> generated by all the <span class="process-math">\(k \times k\)</span> minors of <span class="process-math">\(B\)</span> equals the ideal of <span class="process-math">\(R\)</span> generated by all the <span class="process-math">\(k \times k\)</span> minors of <span class="process-math">\(A\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="thm-smith-normal-form-is-unique"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.22</span><span class="period">.</span><span class="space"> </span><span class="title">Smith Normal Form is Unique.</span>
-</h3>
+</div></article><article class="theorem theorem-like" id="thm-smith-normal-form-is-unique"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.25</span><span class="period">.</span><span class="space"> </span><span class="title">Smith Normal Form is Unique.</span>
+</h4>
 <div class="para logical" id="thm-smith-normal-form-is-unique-2-1">
 <div class="para">Assume <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{.}\)</span> Suppose <span class="process-math">\(S \in \Mat_{m \times n}(R)\)</span> can be obtained from <span class="process-math">\(A\)</span> via a sequence of elementary column and column operations and that <span class="process-math">\(S\)</span> is diagonal with diagonal entries <span class="process-math">\(d_1, d_2, \dots\)</span> such that <span class="process-math">\(d_1 \mid d_2 \mid \cdots\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
@@ -1024,15 +1149,15 @@ d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_
 \end{equation*}
 </div>
 <div class="para">In particular, the SNF of a matrix is unique up to associates.</div>
-</div></article><details id="thm-smith-normal-form-is-unique-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="thm-smith-normal-form-is-unique-3-1">Recall that for a PID <span class="process-math">\(R\text{,}\)</span> the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma  implies that <span class="process-math">\(\gcd_k(A) = \gcd_k(S)\)</span> for all <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(S\)</span> is diagonal, the only non-zero minors of <span class="process-math">\(S\)</span> are those given by indices <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq m\)</span> and<span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq m\)</span> for which <span class="process-math">\(i_t = j_t\)</span> for all <span class="process-math">\(1 \leq t \leq k\text{,}\)</span> and moreover such a minor is equal to <span class="process-math">\(d_{i_1} \cdots d_{i_k}\text{.}\)</span> Since <span class="process-math">\(d_l \mid d_{l+1}\)</span> for all <span class="process-math">\(l\text{,}\)</span> it follows that <span class="process-math">\(d_{1} \cdots d_k\)</span> divides <span class="process-math">\(d_{i_1} \cdots d_{i_k}\)</span> for all <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq n\text{.}\)</span> Thus <span class="process-math">\(\gcd_k(S) = d_1 \cdots d_k\text{,}\)</span> for each <span class="process-math">\(k\text{,}\)</span> and hence <span class="process-math">\(d_k = \gcd_k(S)/\gcd_{k-1}(S)\)</span> as claimed.</div></article></details><article class="remark remark-like" id="sec-snf-13"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.23</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-snf-13-1">So, another way of finding the SNF of a matrix <span class="process-math">\(A\)</span> with entries in a Euclidean domain is to calculate <span class="process-math">\(\gcd_k(A)\)</span> for all <span class="process-math">\(k\text{.}\)</span> This is not practical except in very special cases.</div></article><article class="outcomes goal-like" id="sec-snf-14"><h3 class="heading"><span class="type">Summary</span></h3>
+</div></article><details id="thm-smith-normal-form-is-unique-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-smith-normal-form-is-unique-3-1">Recall that for a PID <span class="process-math">\(R\text{,}\)</span> the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-of-a-matrix-in-pid.html" title="Lemma 14.21: Matrix GCDs in PIDs">Lemma 14.21</a> implies that <span class="process-math">\(\gcd_k(A) = \gcd_k(S)\)</span> for all <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(S\)</span> is diagonal, the only non-zero minors of <span class="process-math">\(S\)</span> are those given by indices <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq m\)</span> and<span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq m\)</span> for which <span class="process-math">\(i_t = j_t\)</span> for all <span class="process-math">\(1 \leq t \leq k\text{,}\)</span> and moreover such a minor is equal to <span class="process-math">\(d_{i_1} \cdots d_{i_k}\text{.}\)</span> Since <span class="process-math">\(d_l \mid d_{l+1}\)</span> for all <span class="process-math">\(l\text{,}\)</span> it follows that <span class="process-math">\(d_{1} \cdots d_k\)</span> divides <span class="process-math">\(d_{i_1} \cdots d_{i_k}\)</span> for all <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq n\text{.}\)</span> Thus <span class="process-math">\(\gcd_k(S) = d_1 \cdots d_k\text{,}\)</span> for each <span class="process-math">\(k\text{,}\)</span> and hence <span class="process-math">\(d_k = \gcd_k(S)/\gcd_{k-1}(S)\)</span> as claimed.</div></article></details><article class="remark remark-like" id="subsec-proving-snl-10"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">14.26</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-proving-snl-10-1">So, another way of finding the SNF of a matrix <span class="process-math">\(A\)</span> with entries in a Euclidean domain is to calculate <span class="process-math">\(\gcd_k(A)\)</span> for all <span class="process-math">\(k\text{.}\)</span> This is not practical except in very special cases.</div></article></section><article class="outcomes goal-like" id="sec-snf-5"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="sec-snf-14-1-1"><div class="para" id="sec-snf-14-1-1-1"></div></li>
-<li id="sec-snf-14-1-2"><div class="para" id="sec-snf-14-1-2-1"></div></li>
-<li id="sec-snf-14-1-3"><div class="para" id="sec-snf-14-1-3-1"></div></li>
-<li id="sec-snf-14-1-4"><div class="para" id="sec-snf-14-1-4-1"></div></li>
+<li id="sec-snf-5-1-1"><div class="para" id="sec-snf-5-1-1-1">The Smith Normal Form of a matrix is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.</div></li>
+<li id="sec-snf-5-1-2"><div class="para" id="sec-snf-5-1-2-1">The Smith Normal Form of a matrix is unique, up to associates.</div></li>
+<li id="sec-snf-5-1-3"><div class="para" id="sec-snf-5-1-3-1"></div></li>
+<li id="sec-snf-5-1-4"><div class="para" id="sec-snf-5-1-4-1"></div></li>
 </ul></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-modpres.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-modclass.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

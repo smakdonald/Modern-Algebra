@@ -740,7 +740,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">When Modules are Finitely Presented: Noetherian Rings</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-snf-statement" class="internal"><span class="title">Stating and Finding the Smith Normal Form of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-proving-snl" class="internal"><span class="title">Proof and Uniqueness of Smith Normal Form</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-modclass.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Classifications</span></a></div></li>
 </ul>
 </li>
@@ -908,13 +914,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cayley-hamilton"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">15.2</span><span class="space"> </span><span class="title">The Cayley-Hamilton Theorem</span>
 </h2>
-<blockquote class="blockquote" id="sec-cayley-hamilton-2">
-<div class="para" id="sec-cayley-hamilton-2-1">“If you stand for nothing, Burr, what will you fall for?”</div> <cite class="attribution">―Hamilton</cite>
+<article class="objectives goal-like" id="sec-cayley-hamilton-2"><h3 class="heading"><span class="type">Reminders and Recollections</span></h3>
+<ul class="disc"><li id="sec-cayley-hamilton-2-1-1"><div class="para" id="p-derived-sec-cayley-hamilton-2-1-1"></div></li></ul></article><blockquote class="blockquote" id="sec-cayley-hamilton-3">
+<div class="para" id="sec-cayley-hamilton-3-1">“If you stand for nothing, Burr, what will you fall for?”</div> <cite class="attribution">―Hamilton</cite>
 </blockquote>
-<article class="remark remark-like" id="sec-cayley-hamilton-3"><h3 class="heading">
+<article class="remark remark-like" id="sec-cayley-hamilton-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">15.20</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-cayley-hamilton-3-1">Given a square matrix <span class="process-math">\(A\)</span> and polynomial <span class="process-math">\(g(x) = \sum_i a_i x^i\text{,}\)</span> recall that <span class="process-math">\(g(A)\)</span> refers to the square matrix <span class="process-math">\(\sum_i a_i A^i\text{.}\)</span>
+<div class="para" id="sec-cayley-hamilton-4-1">Given a square matrix <span class="process-math">\(A\)</span> and polynomial <span class="process-math">\(g(x) = \sum_i a_i x^i\text{,}\)</span> recall that <span class="process-math">\(g(A)\)</span> refers to the square matrix <span class="process-math">\(\sum_i a_i A^i\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-ideals-and-gx"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">15.21</span><span class="period">.</span><span class="space"> </span><span class="title">Ideals and <span class="process-math">\(g(x)\)</span>.</span>
 </h3>
@@ -1029,12 +1036,12 @@ V_g \cong F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x)).
 </div>
 <div class="para">As in the previous example, <span class="process-math">\(\cp_A(x) = (x-1)^4\)</span> and so by the Cayley-Hamilton Theorem <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> This time we notice that <span class="process-math">\((A-I_4)^2 = 0\)</span> and so, since <span class="process-math">\((A-I_4) \ne 0\text{,}\)</span> <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^2\text{.}\)</span>
 </div>
-</div></article><article class="outcomes goal-like" id="sec-cayley-hamilton-11"><h3 class="heading"><span class="type">Summary</span></h3>
+</div></article><article class="outcomes goal-like" id="sec-cayley-hamilton-12"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="sec-cayley-hamilton-11-1-1"><div class="para" id="sec-cayley-hamilton-11-1-1-1"></div></li>
-<li id="sec-cayley-hamilton-11-1-2"><div class="para" id="sec-cayley-hamilton-11-1-2-1"></div></li>
-<li id="sec-cayley-hamilton-11-1-3"><div class="para" id="sec-cayley-hamilton-11-1-3-1"></div></li>
-<li id="sec-cayley-hamilton-11-1-4"><div class="para" id="sec-cayley-hamilton-11-1-4-1"></div></li>
+<li id="sec-cayley-hamilton-12-1-1"><div class="para" id="sec-cayley-hamilton-12-1-1-1"></div></li>
+<li id="sec-cayley-hamilton-12-1-2"><div class="para" id="sec-cayley-hamilton-12-1-2-1"></div></li>
+<li id="sec-cayley-hamilton-12-1-3"><div class="para" id="sec-cayley-hamilton-12-1-3-1"></div></li>
+<li id="sec-cayley-hamilton-12-1-4"><div class="para" id="sec-cayley-hamilton-12-1-4-1"></div></li>
 </ul></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-rcf.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-jcf.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

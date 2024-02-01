@@ -353,6 +353,8 @@
     <rename element="heuristic">Vague Definition</rename>
     <rename element="outcomes">Summary</rename>
     <rename element="exercises">Qualifying Exam Problems</rename>
+    <rename element="objectives">Reminders and Recollections</rename>
+
 
   </docinfo>
   
@@ -11717,6 +11719,14 @@
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
+
           <subsection xml:id="subsec-modules"><title>Modules</title>
 
             <blockquote>
@@ -12300,6 +12310,14 @@
 
         <section xml:id="sec-modhom"><title>Module Homomorphisms</title>
 
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
+
           <subsection xml:id="subsec-hom-iso"><title>Homomorphisms and Isomorphisms</title>
 
             <blockquote>
@@ -12447,7 +12465,7 @@
               </solution>
             </exercise>
 
-            <definition xml:id="def-r-map-ker"><title>Kernel</title>
+            <definition xml:id="def-kernel-mod"><title>Kernel</title>
               <statement>
                 <p>
                   The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}</m>
@@ -12659,6 +12677,17 @@
               </p>
             </example>
 
+            <definition xml:id="def-cokernel"><title>Cokernel</title>
+              <statement>
+                <p>
+                  The cokernel of a map of <m>R</m>-modules <m>M \stackrel{\varphi}{\rightarrow} N</m> is the module
+                  <me>
+                    \text { coker } \varphi:=B / \operatorname{im}(\varphi).
+                  </me>
+                </p>
+              </statement>
+            </definition>
+
             <theorem xml:id="thm-module-isomorphism-thms"><title>Module Isomorphism Theorems</title>
               <statement>
                 <p>
@@ -12838,6 +12867,14 @@
       <chapter xml:id="ch-bases"><title>Bases, Free Modules, Vector Spaces</title>
 
         <section xml:id="sec-linear-ind-gen"><title>Generated Modules and Linear Independence</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
           <subsection xml:id="subsec-generated-modules"><title>Generated Modules</title>
 
@@ -13205,6 +13242,14 @@
         </section>
 
         <section xml:id="sec-free-mod"><title>Free Modules</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
           
           <subsection xml:id="subsec-bases"><title>Bases</title>
 
@@ -13245,7 +13290,7 @@
                     </p>
                   </li>
                   
-                  <li>
+                  <li xml:id="ex-rn-free">
                     <p>
                       More generally, <m>R^n</m> is free since <m>e_1, \dots, e_n</m> is a basis. 
                       This is called the <term>standard basis</term> of <m>R^n</m>. 
@@ -13415,13 +13460,39 @@
               What <xref ref="thm-ump-for-free-modules"/> tells us is that to create a map between <m>M</m> and any other module, all we must do is specify where the basis elements are sent.
             </p>
 
-            <theorem xml:id="thm-free-quotient"><title>Every <m>R</m>-module is the Quotient of a Free Module.</title>
+            <theorem xml:id="thm-free-quotient"><title>Every <m>R</m>-module is the Quotient of a Free Module</title>
               <statement>
                 <p>
                   Every <m>R</m>-module is the quotient of a free module.
                   Thus for every <m>R</m>-module <m>M</m> there exists a free module <m>F</m> that surjects onto <m>M</m>.
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  Given a module <m>M</m>, first take a generating set for <m>M</m>, say <m>\Gamma=\left\{m_{i}\right\}_{i \in \Lambda}</m>.
+                  Notice that a generating set always exists: for example, we can take <m>\Gamma=M</m>, though of course that is a bit of an overkill, since it’s quite likely that some elements can be obtained from linear combinations of others. 
+                  Next, we construct a free module on the set <m>\Lambda</m>; more precisely, we take a free module on as many generators as generators for <m>M</m> that we picked. 
+                  Now the map
+                  <me>
+                    \begin{aligned}
+                    &amp; \bigoplus_{i \in \Lambda} R \stackrel{\pi}{\longrightarrow} M \\
+                    &amp; \left(r_{i}\right) \longmapsto \sum_{i \in \Lambda} r_{i} m_{i} .
+                    \end{aligned}
+                  </me>
+                </p>
+          
+                <p>
+                  Notice this map actually makes sense: the tuples <m>\left(r_{i}\right)</m> have only finitely many nonzero entries, and thus <m>\sum_{i \in \Lambda} r_{i} m_{i}</m> is a (finite) linear combination of our chosen generators. 
+                  Moreover, since we chose the <m>m_{i}</m> to be generators for <m>M</m>, this map <m>\pi</m> is surjective. 
+                  It is also easy to check that it is an <m>R</m>-module homomorphism: in fact, this is the <m>R</m>-module homomorphism we would get from the <xref text="title" ref="thm-ump-for-free-modules"/> by setting <m>e_{i} \mapsto m_{i}</m>.
+                </p>
+          
+                <p>
+                  By the <xref text="title" ref="fit-module"/>,
+                  <me>M \cong \bigoplus_{i \in \Lambda} R / \operatorname{ker} \pi</me>
+                </p>
+              </proof>
             </theorem>
             
           </subsection>
@@ -13562,7 +13633,7 @@
                   <me>R^n/IR^n \cong (R/I)^n</me> 
                   of <m>R/I</m>-modules. 
                   Define <m>R^n \to (R/I)^n</m> in the evident way (modding out by <m>I</m> entry-wise). 
-                  It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the <xref ref="fit-module"/>, it induces an isomorphism
+                  It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the <xref text = "title" ref="fit-module"/>, it induces an isomorphism
                   <me>g: R^n/I R^n \xra{\cong} (R/I)^n</me> 
                   given by <m>g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau</m> (where <m>\tau</m> denotes taking the transpose). 
                   Now, what we have said so far only shows that <m>g</m> is isomorphism of <m>R</m>-modules, but it is easy to see that <m>g</m> is in fact <m>R/I</m>-linear (I'll leave that to you) and thus it is an isomorphism of <m>R/I</m>-modules.
@@ -13646,6 +13717,14 @@
         </section>
 
         <section xml:id="sec-vecbasis"><title>Vector Spaces</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
           <subsection xml:id="subsec-vector-basis"><title>Every Vector Space has a Basis</title>
 
@@ -14290,6 +14369,14 @@
 
         <section xml:id="sec-cob"><title>Change of Basis</title>
 
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
+
           <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
             <blockquote>
@@ -14630,7 +14717,40 @@
       <chapter xml:id="ch-modgen"><title>Finitely Generated Modules over PIDs</title>
 
         <section xml:id="sec-modpres"><title>Finitely Presented Modules</title>
-          
+
+          <introduction><title>Previously on Modern Algebra...</title>
+            <p>
+              When working with groups, we had the notion of the presentation of a group.
+              We proved that every group was the quotient of a free group, where the presentation of the group was obtained by taking quotients corresponding to the relations of the presentation.
+            </p>
+
+            <p>
+              In the realm of modules, we have shown that <xref text="title" ref="thm-free-quotient"/>.
+              We also know that every free module of rank <m>n</m> is isomorphic to <m>R^n</m>.
+              Thus, we can obtain a <em>presentation</em> for a module by taking quotients of <m>R^n</m> corresponding to our relations, which are given in the form of a matrix (or equivalently by a homomorphism between a pair of free modules.)
+            </p>
+
+            <table><title>Notation</title>
+              <tabular>
+                <row>
+                  <cell><m>\Mat_{m,n}(R)</m></cell><cell>The collection of all <m>m\times n</m> matrices with coefficients in <m>R</m></cell>
+                </row>
+                <row>
+                  <cell><m>T_A</m></cell><cell></cell>
+                </row>
+                <row>
+                  <cell><m>\ker</m>, <m>\coker</m>, <m>\im</m></cell><cell>The <xref text="title" ref="def-kernel-mod"/>, <xref text="title" ref="def-cokernel"/>, and image of an <m>R</m>-module homomorphism.</cell>
+                </row>
+                <row>
+                  <cell><m>M\oplus N</m>, <m>R^n</m></cell><cell></cell>
+                </row>
+                <row>
+                  <cell><m>Ra</m></cell><cell></cell>
+                </row>
+              </tabular>
+            </table>
+          </introduction>
+            
           <subsection xml:id="subsec-fp-modules"><title>Module Presentations</title>
 
             <blockquote>
@@ -14642,17 +14762,6 @@
               <attribution>Lily Walters</attribution>
             </blockquote>
 
-            <p>
-              When working with groups, we had the notion of the presentation of a group.
-              We proved that every group was the quotient of a free group, where the presentation of the group was obtained by taking quotients corresponding to the relations of the presentation.
-            </p>
-
-            <p>
-              In the realm of modules, we have shown that every module is the quotient of a free module.
-              We also know that every free module of rank <m>n</m> is isomorphic to <m>R^n</m>.
-              Thus, we can obtain a presentation for a module by taking quotients of <m>R^n</m> corresponding to our relations, which are given in the form of a matrix (or linear transformation)
-            </p>
-
             <definition xml:id="def-module-presentation"><title><m>R</m>-Module Presentation</title>
               <statement>
                 <p>
@@ -14663,9 +14772,7 @@
       
                 <p>
                   Equivalently, the module presented by <m>A</m> is 
-                  <me>
-                    \frac{R^m}{R v_1 + \cdots + R v_n}
-                  </me> 
+                  <me>\frac{R^m}{R v_1 + \cdots + R v_n}</me> 
                   where <m>v_1, \dots, v_n</m> are the columns of <m>A</m>.
                 </p>
               </statement>
@@ -15194,214 +15301,357 @@
 
         <section xml:id="sec-snf"><title>Smith Normal Form</title>
 
-          <p>
-            The Smith normal form provides a way to understand the structure of matrices over a PID and is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.
-          </p>
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
-          <theorem xml:id="thm-snf"><title>Smith Normal Form</title>
+          <subsection xml:id="subsec-snf-statement"><title>Stating and Finding the Smith Normal Form of a Matrix</title>
 
-            <statement>
-              <p>
-                Let <m>R</m> be a Euclidean domain and let <m>A \in \Mat_{m \times n}(R)</m>. Then there is a sequence of elementary column and column operations that transform <m>A</m> into a matrix <m>S = [s_{i,j}]</m> such that all non-diagonal entries of <m>S</m> are <m>0</m> and the diagonal entries of <m>S</m> satisfy <me>
-                  s_{1,1} \mid s_{2,2} \mid s_{3,3} \mid \cdots.</me> 
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                The main point of the proof is to establish:
-              </p>
-
-              <p>
-                <em>Claim</em>: There is a sequence of row and column operations that transforms <m>A</m> to 
-                <me>
-                  A' = \begin{bmatrix}
-                  g &amp; 0 \\
-                  0 &amp; B \\
-                  \end{bmatrix}
-                </me> 
-                for some <m>(n-1) \times (m-1)</m> matrix <m>B</m> and where <m>g = \gcd(A)</m>. 
-                (We adopt the convention that if <m>A</m> is the matrix of all <m>0</m>'s, then <m>g = 0</m>.) Note that, by Lemma , we have <m>\gcd(A) = \gcd(A')</m> and thus <m>g \mid \gcd(B)</m>.
-              </p>
-      
-              <p>
-                Granting this claim, by applying it again to <m>B</m> we arrive at a matrix of the form 
-                <me>
-                A'' = \begin{bmatrix}
-                g &amp; 0 &amp; 0\\
-                0 &amp; g' &amp; 0 \\
-                0 &amp; 0 &amp; C
-                \end{bmatrix}
-                </me> 
-                where <m>g' = \gcd(B)</m> and <m>g \mid g'</m> and <m>g' \mid \gcd(C)</m>. 
-                (Observe that the row and column operations on <m>B</m> will not affect the first row and column of <m>A'</m>.) 
-                Continuing in this fashion, we arrive at the matrix <m>S</m> in the statement.
-              </p>
-      
-              <p>
-                To prove the claim, let <m>a</m> be the upper-left entry of <m>A</m>.
-              </p>
-      
-              <p>
-                Suppose <m>a</m> happens to be <m>g = \gcd(A)</m>. 
-                Then, in particular, it divides every entry of the first row and column of <m>A</m>, and so by doing row and column operations of type I, we may <m>0</m> out these entries to arrive at a matrix of the desired form directly.
-              </p>
-      
-              <p>
-                In general, let <m>l</m> to be the number of prime factors in a prime factorization of of <m>a/\gcd(A)</m>, and proceed by induction on <m>l</m>.
-              </p>
-      
-              <p>
-                If <m>l = 0</m>, then <m>a = \gcd(A)</m> (up to associates), and we already did this case.
-              </p>
-      
-              <p>
-                Assume <m>l &gt; 0</m>. 
-                Then there is at least one entry <m>b = a_{i,j}</m> such that <m>a \nmid b</m>.
-              </p>
-      
-              <p>
-                Case I: There is such a <m>b</m> belonging to the first row of <m>A</m>. 
-                In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace <m>a</m> by <m>\gcd(a,b)</m> and <m>b</m> by <m>0</m>, as in the example above. 
-                Since <m>a \nmid b</m>, <m>\gcd(a,b)</m> is a proper divisor of <m>a</m>, and it follows that the number of factors in a prime factorization of <m>\gcd(a,b)/g</m> is smaller than <m>l</m>, and we are done by induction.
-              </p>
-      
-              <p>
-                Case II: There is such a <m>b</m> in the first column. 
-                Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.
-              </p>
-      
-              <p>
-                Case III: <m>a</m> divides every entry of the first row and first column. 
-                In this case, suitable row and column operations transform <m>A</m> to 
-                <me>
-                  D = 
-                  \begin{bmatrix}
-                  a &amp; 0 \\
-                  0 &amp; E \\
-                  \end{bmatrix}.
-                </me> 
-                By Lemma  we have <m>\gcd(D) = \gcd(A)</m>, and thus there is some element <m>e</m> of <m>E</m> such that <m>a \nmid e</m> (since we are assuming <m>a</m> is not the gcd of <m>A</m>). 
-                A suitable row operation puts <m>e</m> into row one without affecting <m>a</m>, and we are back to the previously solved Case I.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
             <p>
-              Note that some of the diagonal entries could be <m>0</m>. Recall <m>s \mid 0</m> for all <m>s \in R</m> (including <m>s = 0</m>), and <m>0</m> is the only element that divides <m>0</m>. So, the “tail'' end of the sequence could be all <m>0</m>'s, and indeed if <m>s_{i,i} = 0</m> for some <m>i</m> then all subsequent diagonal entries must be <m>0</m>.
-            </p>
-          </remark>
-
-          <corollary xml:id="cor-ftfpmed-first-version"><title>FTFPMED: First Version</title>
-            <statement>
-              <p>
-                If <m>R</m> is a Euclidean domain and <m>M</m> is a finitely presented <m>R</m>-module, then <m>M</m> is isomorphic to a direct sum of cyclic modules: <me>M \cong R/d_1 \oplus \cdots \oplus R/d_l \oplus R^a</me>for some <m>a \geq 0</m> and some non-zero, non-invertible elements <m>d_1, \dots, d_l \in R</m> such that <m>d_1 \mid d_2 \mid \cdots \mid d_l</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                This is an immediate consequence of the SNF Theorem, Theorem  parts (1) and (2), and Lemma .
-              </p>
-            </proof>
-          </corollary>
-
-          <example xml:id="exe-special-case-of-snf"><title>Special Case of SNF</title>
-            <p>
-              Suppose <m>R</m> is a Euclidean domain and <m>A = (x_1, \dots, x_n)</m> is a <m>1 \times n</m> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <m>(g_1, 0, x_3, \dots, x_n)</m> where <m>g_1 = \gcd(x_1, x_2)</m>. Repeat this for columns <m>1</m> and <m>3</m> to arrive at <m>(g_2, 0, 0, x_4, \dots, x_n)</m> where <m>g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)</m>. Continuing in this fashion we arrive at <m>(g, 0, \dots, 0)</m> where <m>g = \gcd(x_1, \dots, x_n)</m>.
+              The Smith normal form provides a way to understand the structure of matrices over a PID and is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.
             </p>
   
-            <p>
-              The proof of the SNF Theorem in general amounts to an extended version of the idea used in this special case.
-            </p>
-          </example>
+            <theorem xml:id="thm-snf"><title>Smith Normal Form</title>
+  
+              <statement>
+                <p>
+                  Let <m>R</m> be a Euclidean domain and let <m>A \in \Mat_{m \times n}(R)</m>. 
+                  Then there is a sequence of elementary column and column operations that transform <m>A</m> into a matrix <m>S = [s_{i,j}]</m> such that all non-diagonal entries of <m>S</m> are <m>0</m> and the diagonal entries of <m>S</m> satisfy 
+                  <me>s_{1,1} \mid s_{2,2} \mid s_{3,3} \mid \cdots.</me> 
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Before we begin, note that we will apply a sequence of steps that correspond to multiplication by an invertible matrix on the left or right, and by <xref ref="lem-gcd-of-a-matrix-in-pid"/>, none of these steps will change the gcd.
+                </p>
+          
+                <p>
+                  To prove existence of such a matrix <m>M</m>, we claim we can multiply <m>A</m> on the right and the left by invertible matrices to transform it into a matrix of the form
+                  <me> \left[\begin{array}{ll} g &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                  for some <m>(n-1) \times(m-1)</m> matrix <m>B</m>, where <m>g=\operatorname{gcd}(A)</m>. 
+                  If our claim holds, then we are done: notice that <m>g</m> divides every entry of <m>B</m>, since <m>\operatorname{gcd}(A)=\operatorname{gcd}(g, B)</m> by <xref ref="lem-gcd-of-a-matrix-in-pid"/>, and so by applying this fact to <m>B</m>, and then over and over again, we arrive at a matrix of the desired form <m>M</m>. 
+                  Notice moreover that if <m>C</m> is an invertible matrix, then so is
+                  <me> \left[\begin{array}{ll} 1 &amp; 0 \\ 0 &amp; C \end{array}\right] </me>
+                </p>
+          
+                <p>
+                  To construct a matrix in the form above, let <m>a</m> be the upper left <m>(1,1)</m> entry of <m>A</m>. 
+                  First, we are going to show that we can turn <m>A</m> into a matrix of the form
+                  <me> \left[\begin{array}{ll} * &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                  with the same gcd as <m>A</m>. 
+                  If a happens to divide all the entries on the first row and column, then we can simply apply elementary row and column operations to get to the desired form. 
+                  Suppose there exists <m>b</m> on the first column such that <m>a \nmid b</m>. 
+                  Then we may apply an elementary row operation switching rows so that <m>b=a_{2,1}</m> is on the first column, second row. 
+                  By <xref ref="lem-gcd-two-by-two"/>, we can now find an invertible matrix <m>C \in \mathrm{M}_{2}(R)</m> such that
+                  <me> C\left[\begin{array}{l} a \\ b \end{array}\right] =\left[\begin{array}{c} \operatorname{gcd}(a, b) \\ 0 \end{array}\right] . </me>
+                </p>
+          
+                <p>
+                  Consider the <m>m \times m</m> matrix
+                  <me> P:=\left[\begin{array}{cc} C &amp; 0 \\ 0 &amp; I_{m-2} \end{array}\right] . </me>
+                  Note that <m>P A</m> has <m>(P A)_{1,1}=\operatorname{gcd}(a, b)</m> and <m>(P A)_{2,1}=0</m>, so this step replaces <m>a</m> by <m>\operatorname{gcd}(a, b)</m> and <m>b</m> by 0 . 
+                  By <xref ref="lem-gcd-of-a-matrix-in-pid"/>, <m>\operatorname{gcd}(P A)=\operatorname{gcd}(A)</m>. 
+                  We can keep repeating this until the top left corner entry divides every entry on the first column, and this process must stop after at most <m>m-1</m> steps, since there are only <m>m</m> elements on the first column.
+                </p>
+          
+                <p>
+                  Similarly, if there exists <m>b</m> on the first row that <m>a</m> does not divide, we can repeat this process by instead multiplying <m>A</m> on the left by an invertible matrix, until we zero out all the remaining entries on the first row and column. 
+                  Finally, we arrive at a matrix of the form
+                  <me> \left[\begin{array}{ll} a &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                </p>
+          
+                <p>
+                  If <m>a=\operatorname{gcd}(A)</m>, we are done. 
+                  If not, then we can find some entry <m>b=a_{i, j}</m> such that <m>a \nmid b</m>. 
+                  We can then add the <m>j</m> th column to the first column, which puts <m>b</m> into the first column without affecting <m>a</m>, since the remainder of the top row is zero. 
+                  But this brings us back to the previous situation, and we have already shown that we can replace the top left corner by <m>\operatorname{gcd}(a, b)</m>.
+                </p>
+          
+                <p>
+                  At each step, we replace <m>a</m> by some <m>c</m> with is both a divisor of <m>a</m> and a multiple of <m>\operatorname{gcd}(A)</m>. 
+                  Our ring <m>R</m> is a UFD, so there are finitely many factors of <m>a / \operatorname{gcd}(A)</m>, and this process must stop. 
+                  This shows that we can eventually replace <m>A</m> by
+                  <me> \left[\begin{array}{cc} \operatorname{gcd}(A) &amp; 0 \\ 0 &amp; B \end{array}\right] . </me>
+                </p>
+          
+                <p>
+                  Now it remains to show the uniqueness portion of the theorem. 
+                  For any <m>i</m> and any matrix <m>B</m>, let <m>\operatorname{gcd}_{i}(B)</m> denote the gcd of all the <m>i \times i</m> minors of <m>B</m>. 
+                  By <xref ref="lem-ideals-generated-by-minors"/>, <m>\operatorname{gcd}_{i}</m> is unchanged by row and column operations, so <m>\gcd_i(A) = \gcd_i(M )</m>.
+                </p>
+  
+                <p>
+                  For a matrix of the form <m>M</m>, the only minors that are nonzero are those where the choices of columns and rows are the same, and hence the only nonzero <m>i \times i</m> minors of <m>M</m> are <m>g_{s_{1}} \cdots g_{s_{i}}</m> for some <m>s_{1}&lt;\cdots&lt;s_{i}</m>. 
+                  Since <m>g_{s_{1}} \cdots g_{s_{i}}</m> divide each other, it follows that
+                  <me>\operatorname{gcd}_{i}(A)=\operatorname{gcd}_{i}(M)=g_{1} \cdots g_{i} .</me>
+                </p>
+          
+                <p>
+                  In particular, the largest value of <m>i</m> such that some <m>i \times i</m> minor of <m>A</m> is nonzero is <m>\ell</m>. 
+                  Also, we have
+                  <me>g_{i}=\frac{\operatorname{gcd}_{i}(A)}{\operatorname{gcd}_{i-1}(A)} .</me>
+                </p>
+          
+                <p>
+                  This proves uniqueness, for it shows that <m>\ell, g_{1}, \ldots, g_{\ell}</m> are all defined from <m>A</m> directly, without any choices.
+                </p>
+              </proof>
+            </theorem>
+  
+            <remark>
+              <p>
+                Note that some of the diagonal entries could be <m>0</m>. 
+                Recall <m>s \mid 0</m> for all <m>s \in R</m> (including <m>s = 0</m>), and <m>0</m> is the only element that divides <m>0</m>. 
+                So, the “tail'' end of the sequence could be all <m>0</m>'s, and indeed if <m>s_{i,i} = 0</m> for some <m>i</m> then all subsequent diagonal entries must be <m>0</m>.
+              </p>
+            </remark>
 
-          <example xml:id="exe-finding-snf"><title>Finding SNF</title>
             <p>
-              Consider the matrix with entries in <m>\Z</m> 
+              Elementary row and column operations correspond to multiplication by elementary matrices, which are invertible, and that the composition of invertible matrices is invertible. 
+              So whenever we apply elementary row and column operations, we can translate it into multiplication by an invertible matrix on the left or the right, respectively.
+            </p>
+
+            <p>
+              To transform a matrix <m>A</m> into its Smith Normal Form, we will use a sequence of steps that all correspond to multiplication by invertible matrices. 
+              Many of those steps will actually be elementary row and column operations, which correspond to multiplication by an elementary matrix. 
+              Elementary matrices are invertible, and a product of invertible matrices is invertible, and so any finite sequence of elementary row and column operations can be described by multiplication by an invertible matrix. 
+              However, in general not every invertible matrix can be obtained as a product of elementary matrices. 
+              In fact, there are examples of PIDs <m>R</m> and matrices <m>A</m> for which the Smith Normal Form cannot be obtained by simply taking a sequence of elementary row and column operations. 
+              However, it is not easy to give such an example, in part because when our PID <m>R</m> is nice enough, the Smith Normal Form can in fact be obtained by simply taking a sequence of elementary row and column operations. 
+              This is the case for Euclidean domains: over such rings, the Euclidean Algorithm for finding the gcd of two elements works, and it’s the key step we will need to find a Smith Normal Form. 
+              When <m>R</m> is a general PID, however, we need to work a little harder.
+            </p>
+
+            <example xml:id="ex-special-case-of-snf"><title>Special Case of SNF</title>
+              <p>
+                Suppose <m>R</m> is a Euclidean domain and <m>A = (x_1, \dots, x_n)</m> is a <m>1 \times n</m> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <m>(g_1, 0, x_3, \dots, x_n)</m> where <m>g_1 = \gcd(x_1, x_2)</m>. Repeat this for columns <m>1</m> and <m>3</m> to arrive at <m>(g_2, 0, 0, x_4, \dots, x_n)</m> where <m>g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)</m>. Continuing in this fashion we arrive at <m>(g, 0, \dots, 0)</m> where <m>g = \gcd(x_1, \dots, x_n)</m>.
+              </p>
+    
+              <p>
+                The proof of the SNF Theorem in general amounts to an extended version of the idea used in this special case.
+              </p>
+            </example>
+  
+            <example xml:id="ex-finding-snf"><title>Finding SNF</title>
+              <p>
+                Consider the matrix with entries in <m>\Z</m> 
+                <me> A=\begin{bmatrix} 1 &amp; 6 &amp; 5 &amp; 2 \\ 2 &amp; 1 &amp; -1 &amp; 0 \\ 3 &amp; 0 &amp; 3 &amp; 0 \end{bmatrix}. </me> 
+                Do row and column operations to put <m>A</m> into its Smith Normal Form: 
+                <me>
+                  S=\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 6 &amp; 0 \\\end{bmatrix}.
+                </me>
+                Conclude that the module presented by <m>A</m> is isomorphic to <m>\Z/6</m>.
+              </p>
+  
+            </example>
+  
+            <remark>
+              <p>
+                A version of the SNF Theorem and its Corollary are valid for PIDs: If <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>, there there exist invertible matrices <m>P</m> and <m>Q</m> such that <m>PAQ</m> has the form <m>S</m> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.
+              </p>
+    
+              <p>
+                For Euclidean domains, <m>P</m> and <m>Q</m> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.
+              </p>
+            </remark>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-proving-snl"><title>Proof and Uniqueness of Smith Normal Form</title>
+
+            <definition xml:id="def-gcd-matrix">
+              <statement>
+                <p>
+                  Let <m>R</m> be a PID and let <m>a_{1}, \ldots, a_{n} \in R</m>. 
+                  The <em>greatest common divisor</em> or <em>gcd</em> of <m>a_{1}, \ldots, a_{n}</m>, denoted <m>\operatorname{gcd}\left(a_{1}, \ldots, a_{n}\right)</m>, is a generator for the principal ideal <m>\left(a_{1}, \ldots, a_{n}\right)</m>. 
+                  Given a matrix <m>A \in \mathrm{M}_{m, n}(R), \operatorname{gcd}(A)</m> is the gcd of the entries of <m>A</m>. 
+                  We adopt the convention that <m>\operatorname{gcd}(0,0)=0</m> and thus if <m>A</m> is the matrix of all zeroes, then <m>\operatorname{gcd}(A)=0</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                Notice that the greatest common divisor is only defined up to multiplication by a unit.
+              </p>
+            </remark>
+
+            <lemma xml:id="lem-gcd-of-a-matrix-in-pid"><title>Matrix GCDs in PIDs</title>
+              <statement>
+                <p>
+                  Let <m>R</m> is a PID. 
+                  Let <m>A \in \mathrm{M}_{m, n}(R)</m> be any matrix and let <m>P \in \mathrm{M}_{m}(R)</m> and <m>Q \in \mathrm{M}_{n}(R)</m> be invertible matrices. 
+                  Then <m>\operatorname{gcd}(A)=\operatorname{gcd}(P A)=\operatorname{gcd}(Q A)</m>. 
+                  In particular, if <m>B \in \mathrm{M}_{m, n}(R)</m> and <m>B</m> is obtained from <m>A</m> by a finite sequence of elementary row and column operations, then <m>\operatorname{gcd}(A)=\operatorname{gcd}(B)</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  First, suppose that <m>n=1</m>, meaning that <m>A</m> is a column, say
+                  <me>
+                    A=\left[\begin{array}{c} a_{1} \\ \vdots \\ a_{m} \end{array}\right] 
+                    \text { and let } 
+                    P A=\left[\begin{array}{c} b_{1} \\ \vdots \\ b_{m} \end{array}\right]
+                    </me>
+                  We need to show that <m>\left(a_{1}, \ldots, a_{m}\right)=\left(b_{1}, \ldots, b_{m}\right)</m>. 
+                  On the one hand, each <m>b_{i}</m> is a linear combination of the <m>a_{j}</m>, so <m>\left(b_{1}, \ldots, b_{m}\right) \subseteq\left(a_{1}, \ldots, a_{m}\right)</m>. 
+                  On the other hand,
+                  <me>
+                    \left[\begin{array}{c} a_{1} \\ \vdots \\ a_{m} \end{array}\right]
+                    =P^{-1}(P A)=P^{-1}
+                    \left[\begin{array}{c} b_{1} \\ \vdots \\ b_{m} \end{array}\right]
+                  </me>
+                  so each <m>a_{j}</m> is a combination of the <m>b_{i}</m>, and <m>a_{j} \in\left(b_{1}, \ldots, b_{m}\right)</m>. 
+                  We conclude that we have an equality of ideals <m>\left(a_{1}, \ldots, a_{m}\right)=\left(b_{1}, \ldots, b_{m}\right)</m>, and thus multiplying a column vector by an invertible matrix does not change the greatest common divisor of the entries.
+                </p>
+          
+                <p>
+                  Now given <m>A \in \mathrm{M}_{m, n}(R)</m>, if we denote the <m>i</m> th column of <m>A</m> by <m>A_{i}</m>, we have
+                  <me>
+                    P A=\left[\begin{array}{lll}
+                    P A_{1} &amp; \cdots &amp; P A_{m}
+                    \end{array}\right] .
+                  </me>
+                  Since the gcd of each column remains the same, the gcd of all the entries does not change.
+                </p>
+          
+                <p>
+                  To show that <m>\operatorname{gcd}(A Q)=\operatorname{gcd}(A)</m>, note that transposing a matrix does not change its gcd nor the fact that its invertible, so we can apply what we have already shown:
+                  <me>\operatorname{gcd}(A Q)=\operatorname{gcd}\left((A Q)^{T}\right)=\operatorname{gcd}\left(Q^{T} A^{T}\right)=\operatorname{gcd}\left(A^{T}\right)=\operatorname{gcd}(A)</me>
+                </p>
+          
+                <p>
+                  Finally, applying elementary row and column operations corresponds to multiplying by an elementary matrix on the left or right, and elementary matrices are invertible.
+                </p>
+              </proof>
+            </lemma>
+
+            <lemma xml:id="lem-gcd-two-by-two"><title>Matrix GCD of Ring Elements</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a PID and <m>x, y \in R</m>. There exists an invertible <m>2 \times 2</m> matrix <m>P \in \mathrm{M}_{2}(R)</m> such that
+                  <me>
+                    P\left[\begin{array}{l}
+                    x \\
+                    y
+                    \end{array}\right]=\left[\begin{array}{c}
+                    \operatorname{gcd}(x, y) \\
+                    0
+                    \end{array}\right] .
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  By definition of greatest common divisor, <m>(x, y)=(\operatorname{gcd}(x, y))</m>, so there exist <m>a, b \in R</m> such that <m>a x+b y=\operatorname{gcd}(x, y)</m>. 
+                  Write <m>g:=\operatorname{gcd}(x, y)</m> and <m>h=\operatorname{gcd}(a, b)</m>. 
+                  Then <m>a x+b y</m> is a multiple of <m>g h</m>, but since <m>a x+b y=g</m> and <m>R</m> is a domain, we conclude that <m>h</m> must be a unit, and <m>(a, b)=(h)=(1)</m>. 
+                  In particular, we can find <m>c, d \in R</m> such that <m>a d-b c=1</m>. Finally, <m>b x+c y \in(x, y)=(g)</m>, so
+                  <me>
+                    \left[\begin{array}{ll} a &amp; b \\ c &amp; d \end{array}\right]
+                    \left[\begin{array}{l} x \\ y \end{array}\right]
+                    =\left[\begin{array}{c} g \\ e g \end{array}\right]
+                  </me>
+                </p>
+
+                <p>
+                  Now we can apply the row operation that adds <m>-e</m> times the first row to the second row: by setting
+                  <me>
+                    P:=
+                    \left[\begin{array}{cc} 1 &amp; 0 \\ -e &amp; 1 \end{array}\right]
+                    \left[\begin{array}{ll} a &amp; b \\ c &amp; d \end{array}\right]
+                    =\left[\begin{array}{cc} a &amp; b \\ c-e a &amp; b-d e \end{array}\right] .
+                  </me>
+                  we get
+                  <me>
+                    P\left[\begin{array}{l} x \\ y \end{array}\right]
+                    =\left[\begin{array}{l} g \\ 0 \end{array}\right]
+                  </me>
+                </p>
+
+                <p>
+                  Finally, one can easily check that
+                  <me>
+                    P^{-1}=\left[\begin{array}{cc} d &amp; -b \\ -c &amp; a \end{array}\right]
+                    \left[\begin{array}{ll} 1 &amp; 0 \\ e &amp; 1 \end{array}\right]
+                  </me>
+                </p>
+              </proof>
+            </lemma>
+
+            <p>
+              By transposing the matrices in <xref ref="lem-gcd-two-by-two"/>, we can show that there exists an invertible <m>2 \times 2</m> matrix <m>Q</m> such that
               <me>
-                A=\begin{bmatrix}
-                1 &amp; 6 &amp; 5 &amp; 2 \\
-                2 &amp; 1 &amp; -1 &amp; 0 \\
-                3 &amp; 0 &amp; 3 &amp; 0
-                \end{bmatrix}.
-              </me> 
-              Do row and column operations to put <m>A</m> into its Smith Normal Form: 
-              <me>
-                S=\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 6 &amp; 0 \\\end{bmatrix}.
+                \left[\begin{array}{ll} x &amp; y \end{array}\right] 
+                Q=[\operatorname{gcd}(x, y) \quad 0]
               </me>
-              Conclude that the module presented by <m>A</m> is isomorphic to <m>\Z/6</m>.
             </p>
 
-          </example>
+            <definition xml:id="def-minor"><title>Minor</title>
+              <statement>
+                <p>
+                  A <m>k \times k</m> <em>minor</em> of <m>A</m> is the determinant of a <m>k \times k</m> submatrix of <m>A</m>; more formally, if <m>A</m> is an <m>m \times n</m> matrix, a <m>k\times k</m> minor of <m>A</m> is any element of <m>R</m> given as follows: Choose <m>1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m</m> and <m>1 \leq j_1 &lt; \cdots &lt; j_k \leq n</m>, let <m>B = (b_{p,q})</m> be the <m>k \times k</m> matrix with <m>b_{p,q} = a_{i_p, j_q}</m>. Then <m>\det(B)</m> is a minor of <m>A</m>.
+                </p>
+              </statement>
+            </definition>
 
-          <remark>
-            <p>
-              A version of the SNF Theorem and its Corollary are valid for PIDs: If <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>, there there exist invertible matrices <m>P</m> and <m>Q</m> such that <m>PAQ</m> has the form <m>S</m> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.
-            </p>
-  
-            <p>
-              For Euclidean domains, <m>P</m> and <m>Q</m> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.
-            </p>
-          </remark>
+            <lemma xml:id="lem-ideals-generated-by-minors"><title>Ideals Generated by Minors</title>
+              <statement>
+                <p>
+                  For any commutative ring <m>R</m> and matrix <m>A \in \Mat_{m \times n}(R)</m>, if <m>B</m> is obtained from <m>A</m> via an elementary column or column operation, then the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>B</m> equals the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>A</m>.
+                </p>
+              </statement>
+            </lemma>
 
-          <lemma xml:id="lem-gcd-of-a-matrix-in-pid"><title>Matrix GCDs in PIDs</title>
-            <statement>
+            <theorem xml:id="thm-smith-normal-form-is-unique"><title>Smith Normal Form is Unique</title>
+              <statement>
+                <p>
+                  Assume <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>. 
+                  Suppose <m>S \in \Mat_{m \times n}(R)</m> can be obtained from <m>A</m> via a sequence of elementary column and column operations and that <m>S</m> is diagonal with diagonal entries <m>d_1, d_2, \dots</m> such that <m>d_1 \mid d_2 \mid \cdots</m>. 
+                  Then 
+                  <me>d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_2(A)}, \cdots.</me>
+                  In particular, the SNF of a matrix is unique up to associates.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Recall that for a PID <m>R</m>, the gcd of any set of elements is defined to be a generatpr of the ideal they generate. 
+                  So, <xref ref="lem-gcd-of-a-matrix-in-pid"/> implies that <m>\gcd_k(A) = \gcd_k(S)</m> for all <m>k</m>. 
+                  Since <m>S</m> is diagonal, the only non-zero minors of <m>S</m> are those given by indices <m>1 \leq i_1 &lt; \cdots &lt; i_k \leq m</m> and<m>1 \leq j_1 &lt; \cdots &lt; j_k \leq m</m> for which <m>i_t = j_t</m> for all <m>1 \leq t \leq k</m>, and moreover such a minor is equal to <m>d_{i_1} \cdots d_{i_k}</m>. 
+                  Since <m>d_l \mid d_{l+1}</m> for all <m>l</m>, it follows that <m>d_{1} \cdots d_k</m> divides <m>d_{i_1} \cdots d_{i_k}</m> for all <m>1 \leq i_1 &lt; \cdots &lt; i_k \leq n</m>. 
+                  Thus <m>\gcd_k(S) = d_1 \cdots d_k</m>, for each <m>k</m>, and hence <m>d_k = \gcd_k(S)/\gcd_{k-1}(S)</m> as claimed.
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
               <p>
-                Suppose <m>R</m> is a PID and <m>A</m> is a matrix with entries in <m>R</m> and <m>B</m> is a matrix obtained from <m>A</m> via elementary column and column operations. Then <m>\gcd(A) = \gcd(B)</m> where the gcd of a matrix is defined to be the gcd of all of its entries.
+                So, another way of finding the SNF of a matrix <m>A</m> with entries in a Euclidean domain is to calculate <m>\gcd_k(A)</m> for all <m>k</m>. 
+                This is not practical except in very special cases.
               </p>
-            </statement>
-          </lemma>
+            </remark>
 
-          <definition xml:id="def-minor"><title>Minor</title>
-
-            <statement>
-              <p>
-                A <m>k \times k</m> <em>minor</em> of <m>A</m> is the determinant of a <m>k \times k</m> submatrix of <m>A</m>; more formally, if <m>A</m> is an <m>m \times n</m> matrix, a <m>k\times k</m> minor of <m>A</m> is any element of <m>R</m> given as follows: Choose <m>1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m</m> and <m>1 \leq j_1 &lt; \cdots &lt; j_k \leq n</m>, let <m>B = (b_{p,q})</m> be the <m>k \times k</m> matrix with <m>b_{p,q} = a_{i_p, j_q}</m>. Then <m>\det(B)</m> is a minor of <m>A</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <lemma xml:id="lem-ideals-generated-by-minors"><title>Ideals Generated by Minors</title>
-            <statement>
-              <p>
-                For any commutative ring <m>R</m> and matrix <m>A \in \Mat_{m \times n}(R)</m>, if <m>B</m> is obtained from <m>A</m> via an elementary column or column operation, then the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>B</m> equals the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>A</m>.
-              </p>
-            </statement>
-          </lemma>
-
-          <theorem xml:id="thm-smith-normal-form-is-unique"><title>Smith Normal Form is Unique</title>
-            <statement>
-              <p>
-                Assume <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>. Suppose <m>S \in \Mat_{m \times n}(R)</m> can be obtained from <m>A</m> via a sequence of elementary column and column operations and that <m>S</m> is diagonal with diagonal entries <m>d_1, d_2, \dots</m> such that <m>d_1 \mid d_2 \mid \cdots</m>. Then <me>d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_2(A)}, \cdots.</me>In particular, the SNF of a matrix is unique up to associates.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Recall that for a PID <m>R</m>, the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma  implies that <m>\gcd_k(A) = \gcd_k(S)</m> for all <m>k</m>. Since <m>S</m> is diagonal, the only non-zero minors of <m>S</m> are those given by indices <m>1 \leq i_1 &lt; \cdots &lt; i_k \leq m</m> and<m>1 \leq j_1 &lt; \cdots &lt; j_k \leq m</m> for which <m>i_t = j_t</m> for all <m>1 \leq t \leq k</m>, and moreover such a minor is equal to <m>d_{i_1} \cdots d_{i_k}</m>. Since <m>d_l \mid d_{l+1}</m> for all <m>l</m>, it follows that <m>d_{1} \cdots d_k</m> divides <m>d_{i_1} \cdots d_{i_k}</m> for all <m>1 \leq i_1 &lt; \cdots &lt; i_k \leq n</m>. Thus <m>\gcd_k(S) = d_1 \cdots d_k</m>, for each <m>k</m>, and hence <m>d_k = \gcd_k(S)/\gcd_{k-1}(S)</m> as claimed.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              So, another way of finding the SNF of a matrix <m>A</m> with entries in a Euclidean domain is to calculate <m>\gcd_k(A)</m> for all <m>k</m>. This is not practical except in very special cases.
-            </p>
-          </remark>
+          </subsection>
 
           <outcomes>
             <ul>
               <li>
                 <p>
-
+                  The Smith Normal Form of a matrix is analogous to the row-echelon form and reduced row-echelon form in the case of matrices over a field.
                 </p>
               </li>
 
               <li>
                 <p>
-
+                  The Smith Normal Form of a matrix is unique, up to associates.
                 </p>
               </li>
 
@@ -15422,6 +15672,14 @@
         </section>
 
         <section xml:id="sec-modclass"><title>Classifications</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
           <theorem xml:id="thm-ftfgmopidiff"><title>Fundamental Theorem of Finitely Generated Modules over a PID, Invariant Factors Form</title>
             <statement>
@@ -15643,6 +15901,14 @@
       <chapter xml:id="ch-canform"><title>Canonical Forms</title>
 
         <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
           <subsection xml:id="subsec-fx"><title>The <m>F[x]</m>-Module <m>V_g</m></title>
           
@@ -16029,6 +16295,14 @@
 
         <section xml:id="sec-cayley-hamilton"><title>The Cayley-Hamilton Theorem</title>
 
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
+
           <blockquote>
               <p>
                 <q>
@@ -16204,6 +16478,14 @@
         </section>
 
         <section xml:id="sec-jcf"><title>Jordan Canonical Form</title>
+
+          <objectives>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          </objectives>
 
           <blockquote>
               <p>

@@ -740,7 +740,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modpres.html#subsec-noetherian-module" class="internal"><span class="title">When Modules are Finitely Presented: Noetherian Rings</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-snf.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Smith Normal Form</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-snf-statement" class="internal"><span class="title">Stating and Finding the Smith Normal Form of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-snf.html#subsec-proving-snl" class="internal"><span class="title">Proof and Uniqueness of Smith Normal Form</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-modclass.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Classifications</span></a></div></li>
 </ul>
 </li>
@@ -908,7 +914,8 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-modhom"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">12.2</span><span class="space"> </span><span class="title">Module Homomorphisms</span>
 </h2>
-<section class="subsection" id="subsec-hom-iso"><h3 class="heading hide-type">
+<article class="objectives goal-like" id="sec-modhom-2"><h3 class="heading"><span class="type">Reminders and Recollections</span></h3>
+<ul class="disc"><li id="sec-modhom-2-1-1"><div class="para" id="p-derived-sec-modhom-2-1-1"></div></li></ul></article><section class="subsection" id="subsec-hom-iso"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Homomorphisms and Isomorphisms</span>
 </h3>
 <blockquote class="blockquote" id="subsec-hom-iso-2">
@@ -972,9 +979,9 @@ window.MathJax = {
 </h4>
 <div class="para" id="subsec-hom-iso-10-1-1">If <span class="process-math">\(R\)</span> is the zero ring, then there is (up to isomorphism) only one <span class="process-math">\(R\)</span>-module, the zero module.</div>
 <div class="solutions"><details id="subsec-hom-iso-10-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="subsec-hom-iso-10-2-1">If <span class="process-math">\(M\)</span> is any module over the <span class="process-math">\(0\)</span> ring, then for each <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = 1_R \cdot m = 0_R \cdot m = 0_M\text{.}\)</span>
-</div></div></details></div></article><article class="definition definition-like" id="def-r-map-ker"><h4 class="heading">
+</div></div></details></div></article><article class="definition definition-like" id="def-kernel-mod"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.23</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel.</span>
-</h4> <div class="para" id="def-r-map-ker-2-1">The <dfn class="terminology">kernel</dfn> of an <span class="process-math">\(R\)</span>-module homomorphism is the set <span class="process-math">\(\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}\)</span> </div></article><article class="proposition theorem-like" id="prop-kernels-and-images-of-homomorphisms-are-submodule"><h4 class="heading">
+</h4> <div class="para" id="def-kernel-mod-2-1">The <dfn class="terminology">kernel</dfn> of an <span class="process-math">\(R\)</span>-module homomorphism is the set <span class="process-math">\(\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}\)</span> </div></article><article class="proposition theorem-like" id="prop-kernels-and-images-of-homomorphisms-are-submodule"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">12.24</span><span class="period">.</span><span class="space"> </span><span class="title">Kernels and Images are Submodules.</span>
 </h4>
 <div class="para logical" id="prop-kernels-and-images-of-homomorphisms-are-submodule-2-1">
@@ -1065,8 +1072,17 @@ r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) 
 </div> <div class="para" id="prop-quotient-map-is-r-module-homomorphism-3-4">The fact that <span class="process-math">\(\pi\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism is also straightforward. Its kernel is <span class="process-math">\(\{m \in M \mid m + N = N\}\text{,}\)</span> which is equal to <span class="process-math">\(N\text{.}\)</span>
 </div></article></details><article class="example example-like" id="exe-z-modules-and-quotients"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.33</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z\)</span>-modules and Quotients.</span>
-</h4> <div class="para" id="exe-z-modules-and-quotients-2">Recall that <span class="process-math">\(\Z\)</span>-modules are the same as abelian groups by <a href="" class="xref" data-knowl="./knowl/xref/thm-abelian-groups-are-z-modules.html" title="Theorem 12.10: Abelian Groups are \Z-modules">Theorem 12.10</a>. Submodules and quotient <span class="process-math">\(\Z\)</span>-modules are the same things as subgroups and quotients of abelian groups.</div></article><article class="theorem theorem-like" id="thm-module-isomorphism-thms"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.34</span><span class="period">.</span><span class="space"> </span><span class="title">Module Isomorphism Theorems.</span>
+</h4> <div class="para" id="exe-z-modules-and-quotients-2">Recall that <span class="process-math">\(\Z\)</span>-modules are the same as abelian groups by <a href="" class="xref" data-knowl="./knowl/xref/thm-abelian-groups-are-z-modules.html" title="Theorem 12.10: Abelian Groups are \Z-modules">Theorem 12.10</a>. Submodules and quotient <span class="process-math">\(\Z\)</span>-modules are the same things as subgroups and quotients of abelian groups.</div></article><article class="definition definition-like" id="def-cokernel"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.34</span><span class="period">.</span><span class="space"> </span><span class="title">Cokernel.</span>
+</h4> <div class="para logical" id="def-cokernel-2-1">
+<div class="para">The cokernel of a map of <span class="process-math">\(R\)</span>-modules <span class="process-math">\(M \stackrel{\varphi}{\rightarrow} N\)</span> is the module</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text { coker } \varphi:=B / \operatorname{im}(\varphi).
+\end{equation*}
+</div>
+</div></article><article class="theorem theorem-like" id="thm-module-isomorphism-thms"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.35</span><span class="period">.</span><span class="space"> </span><span class="title">Module Isomorphism Theorems.</span>
 </h4>
 <div class="para logical" id="thm-module-isomorphism-thms-2-1">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(M\)</span> be a <span class="process-math">\(R\)</span>-module.</div>
@@ -1155,14 +1171,14 @@ r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) 
 </div>
 <div class="para" id="thm-module-isomorphism-thms-3-2-1-5-3">If <span class="process-math">\(T\)</span> is a submodule of <span class="process-math">\(M/N\text{,}\)</span> then <span class="process-math">\(\pi^{-1}(T)\)</span> is an abelian group. For <span class="process-math">\(r \in R\)</span> adn <span class="process-math">\(m \in \pi^{-1}(T)\)</span> we have <span class="process-math">\(\pi(m) \in T\)</span> and hence <span class="process-math">\(\pi(rm) = r\pi(m) \in T\)</span> too, since <span class="process-math">\(T\)</span> is a submodule. This proves <span class="process-math">\(\pi^{-1}(T)\)</span> is a submodule.</div>
 </li>
-</ol></div></article></details></section><article class="outcomes goal-like" id="sec-modhom-5"><h3 class="heading"><span class="type">Summary</span></h3>
+</ol></div></article></details></section><article class="outcomes goal-like" id="sec-modhom-6"><h3 class="heading"><span class="type">Summary</span></h3>
 <ul class="disc">
-<li id="sec-modhom-5-1-1"><div class="para" id="sec-modhom-5-1-1-1">An <a href="" class="xref" data-knowl="./knowl/xref/def-module-homomorphism.html" title="Definition 12.16: R-Module Homomorphism"><span class="process-math">\(R\)</span>-Module Homomorphism</a> is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When <span class="process-math">\(R\)</span> is a field, this is called a <em class="emphasis">linear transformation</em>.</div></li>
-<li id="sec-modhom-5-1-2"><div class="para" id="sec-modhom-5-1-2-1">The set <span class="process-math">\(\Hom_R(M, N)\)</span> denotes the set of all <span class="process-math">\(R\)</span>-module homomorphisms from <span class="process-math">\(M\)</span> to <span class="process-math">\(N\text{.}\)</span> <span class="process-math">\(\Hom_R(M, N)\)</span> is an <span class="process-math">\(R\)</span>-module and <span class="process-math">\(\Hom_R(R,M) \cong M\text{.}\)</span>
+<li id="sec-modhom-6-1-1"><div class="para" id="sec-modhom-6-1-1-1">An <a href="" class="xref" data-knowl="./knowl/xref/def-module-homomorphism.html" title="Definition 12.16: R-Module Homomorphism"><span class="process-math">\(R\)</span>-Module Homomorphism</a> is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When <span class="process-math">\(R\)</span> is a field, this is called a <em class="emphasis">linear transformation</em>.</div></li>
+<li id="sec-modhom-6-1-2"><div class="para" id="sec-modhom-6-1-2-1">The set <span class="process-math">\(\Hom_R(M, N)\)</span> denotes the set of all <span class="process-math">\(R\)</span>-module homomorphisms from <span class="process-math">\(M\)</span> to <span class="process-math">\(N\text{.}\)</span> <span class="process-math">\(\Hom_R(M, N)\)</span> is an <span class="process-math">\(R\)</span>-module and <span class="process-math">\(\Hom_R(R,M) \cong M\text{.}\)</span>
 </div></li>
-<li id="sec-modhom-5-1-3"><div class="para" id="sec-modhom-5-1-3-1">A <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-module.html" title="Definition 12.29: Quotient Module">Quotient Module</a> is obtained by taking the underlying quotient group structure.</div></li>
-<li id="sec-modhom-5-1-4"><div class="para" id="sec-modhom-5-1-4-1">Multiplication maps, inclusion maps, and projection / quotient maps are all <span class="process-math">\(R\)</span>-module homomorphisms.</div></li>
-<li id="sec-modhom-5-1-5"><div class="para" id="sec-modhom-5-1-5-1">The <a href="" class="xref" data-knowl="./knowl/xref/thm-module-isomorphism-thms.html" title="Theorem 12.34: Module Isomorphism Theorems">Module Isomorphism Theorems</a> hold.</div></li>
+<li id="sec-modhom-6-1-3"><div class="para" id="sec-modhom-6-1-3-1">A <a href="" class="xref" data-knowl="./knowl/xref/def-quotient-module.html" title="Definition 12.29: Quotient Module">Quotient Module</a> is obtained by taking the underlying quotient group structure.</div></li>
+<li id="sec-modhom-6-1-4"><div class="para" id="sec-modhom-6-1-4-1">Multiplication maps, inclusion maps, and projection / quotient maps are all <span class="process-math">\(R\)</span>-module homomorphisms.</div></li>
+<li id="sec-modhom-6-1-5"><div class="para" id="sec-modhom-6-1-5-1">The <a href="" class="xref" data-knowl="./knowl/xref/thm-module-isomorphism-thms.html" title="Theorem 12.35: Module Isomorphism Theorems">Module Isomorphism Theorems</a> hold.</div></li>
 </ul></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-defmod.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-bases.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
