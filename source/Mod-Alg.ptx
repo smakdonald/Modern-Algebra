@@ -11719,14 +11719,6 @@
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
           <subsection xml:id="subsec-modules"><title>Modules</title>
 
             <blockquote>
@@ -12310,14 +12302,6 @@
 
         <section xml:id="sec-modhom"><title>Module Homomorphisms</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
           <subsection xml:id="subsec-hom-iso"><title>Homomorphisms and Isomorphisms</title>
 
             <blockquote>
@@ -12868,14 +12852,6 @@
 
         <section xml:id="sec-linear-ind-gen"><title>Generated Modules and Linear Independence</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
           <subsection xml:id="subsec-generated-modules"><title>Generated Modules</title>
 
             <blockquote>
@@ -13242,14 +13218,6 @@
         </section>
 
         <section xml:id="sec-free-mod"><title>Free Modules</title>
-
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
           
           <subsection xml:id="subsec-bases"><title>Bases</title>
 
@@ -13717,14 +13685,6 @@
         </section>
 
         <section xml:id="sec-vecbasis"><title>Vector Spaces</title>
-
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
 
           <subsection xml:id="subsec-vector-basis"><title>Every Vector Space has a Basis</title>
 
@@ -14368,14 +14328,6 @@
         </section>
 
         <section xml:id="sec-cob"><title>Change of Basis</title>
-
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
 
           <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
@@ -15301,14 +15253,6 @@
 
         <section xml:id="sec-snf"><title>Smith Normal Form</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
           <subsection xml:id="subsec-snf-statement"><title>Stating and Finding the Smith Normal Form of a Matrix</title>
 
             <p>
@@ -15447,19 +15391,8 @@
                 </me>
                 Conclude that the module presented by <m>A</m> is isomorphic to <m>\Z/6</m>.
               </p>
-  
             </example>
   
-            <remark>
-              <p>
-                A version of the SNF Theorem and its Corollary are valid for PIDs: If <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>, there there exist invertible matrices <m>P</m> and <m>Q</m> such that <m>PAQ</m> has the form <m>S</m> as in the theorem. It follows that every finitely presented module over a PID is direct sum of cyclic ones.
-              </p>
-    
-              <p>
-                For Euclidean domains, <m>P</m> and <m>Q</m> may be taken to be products of elementary matrices, and the Smith normal form can be found algorithmically.
-              </p>
-            </remark>
-            
           </subsection>
 
           <subsection xml:id="subsec-proving-snl"><title>Proof and Uniqueness of Smith Normal Form</title>
@@ -15673,198 +15606,249 @@
 
         <section xml:id="sec-modclass"><title>Classifications</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
-          <theorem xml:id="thm-ftfgmopidiff"><title>Fundamental Theorem of Finitely Generated Modules over a PID, Invariant Factors Form</title>
-            <statement>
-              <p>
-                 Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. Then there exist integers <m>r \geq 0, k \geq 0</m>, and non-zero, non-unit elements <m>d_1,\ldots, d_k</m> of <m>R</m> satisfying <m>d_1 \mid d_2 \mid \dots \mid d_k</m> such that <me>M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k).</me> Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the <m>d_i</m>'s are unique up to associates.
-              </p>
-            </statement>
-          </theorem>
-
-          <definition xml:id="def-invariant-factors"><title>Invariant Factors</title>
-            <statement>
-              <p>
-                The polynomials <m>f_1, \dots, f_s</m> occurring in the Theorem are called the <em>invariant factors</em> of the operator <m>g</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <corollary xml:id="cor-ftfgmopriff"><title>FTFGMOPRIFF</title>
-            <statement>
-              <p>
-                Let <m>k</m> be a field and <m>k[x]</m> be the ring of polynomials with coefficients in <m>k</m> in one variable <m>x</m>. If <m>M</m> a finitely generated <m>k[x]</m>-module then <me>M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))</me>for some <m>r \geq 0</m>, <m>s \geq 0</m> and non-constant monic polynomials <m>f_1, \dots, f_s</m> such that <m>f_1 \mid f_2 \mid \cdots \mid f_s.</m> Moreover, <m>r</m>, <m>s</m> and <m>f_1, \dots, f_s</m> are unique.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                This follows from the Theorem since <m>k[x]</m> is a Euclidean domain and every non-zero polynomial is associate to a unique monic one.
-              </p>
-            </proof>
-          </corollary>
-
-          <example xml:id="exe-kx-modules-of-dimension-4"><title><m>k[x]</m>-Modules of Dimension <m>4</m></title>
+          <subsection xml:id="subsec-invariant-factors"><title>Invariant Factors</title>
 
             <p>
-              Let <m>k</m> be a field and <m>M</m> a <m>k[x]</m>-module such that the dimension of <m>M</m> as a <m>k</m>-vector space is <m>4.</m> What are the possibilities for <m>M</m> up to isomorphism?
+              Let’s see how to classify modules over PIDs using the Smith Normal Form for their presentation matrix. 
+              First, we need a lemma on how to interpret the module presented by a matrix in Smith Normal Form.
             </p>
-  
-            <p>
-              We have <me>M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))</me>with <m>r, s, f_1, \dots, f_s</m> as in the Corollary. But <m>r</m> must be <m>0</m> since <m>k[x]</m> is infinite dimensional as a <m>k</m>-vector space. Moreover, <m>\dim_F k[x]/g = \deg(g)</m> for any non-zero polynomial <m>g</m>. So we must have <m>\sum_i \deg(f_i) = 4</m>. There are five possibilities: 
-              <ol>
-                <li>
-                  <p>
-                    <m>s = 1</m> and <m>f_1</m> is monic of degree <m>4</m>. 
-                  </p>
-                </li>
 
-                <li>
-                  <p>
-                    <m>s = 2</m>, <m>f_1</m> is linear, <m>f_2</m> is cubic and <m>f_1 \mid f_2</m>. (So if <m>f_1 = x-a</m>, then <m>a</m> must be a root of <m>f_2</m>). 
-                  </p>
-                </li>
+            <lemma xml:id="lem-snf-pres"><title>Module Presented in Smith Normal Form</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>m \geqslant n</m>, let <m>A=\left[a_{i j}\right] \in \mathrm{M}_{m, n}(R)</m> be a matrix such that all nondiagonal entries of <m>A</m> are 0 , and let <m>M</m> be the <m>R</m>-module presented by <m>A</m>. 
+                  Then <m>M \cong R^{m-n} \oplus R /\left(a_{11}\right) \oplus \cdots \oplus R /\left(a_{n n}\right)</m>.
+                </p>
+              </statement>
+            </lemma>
 
-                <li>
-                  <p>
-                    <m>s = 2</m>, <m>f_1 = f_2</m> is quadratic. 
-                  </p>
-                </li>
+            <theorem xml:id="thm-ftfgmopidiff"><title>Classification of Finitely Generated Modules over a PID using Invariant Factors</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. 
+                  Then there exist <m>r \geqslant 0</m>, <m>k \geqslant 0</m>, and nonzero nonunit elements <m>d_{1}, \ldots, d_{k}</m> of <m>R</m> satisfying <m>d_{1}\left|d_{2}\right| \cdots \mid d_{k}</m> such that
+                  <me>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right) .</me>
+                  Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the <m>d_{i}</m> are unique up to associates.
+                </p>              
+              </statement>
 
-                <li>
-                  <p>
-                    <m>s = 3</m>, <m>f_1 = f_2</m> is linear and <m>f_3</m> is quadratic with <m>f_1 \mid f_3</m>. 
-                  </p>
-                </li>
+              <proof>
+                <p>
+                  By <xref ref="cor-fg-modules-finitely-presented-when-noetherian"/>, <m>M</m> has a presentation matrix <m>A</m>. 
+                  By <xref ref="thm-snf"/>, <m>A</m> can be put into Smith Normal Form <m>B</m>, where the diagonal entries of <m>B</m> are <m>b_{1}, \ldots, b_{\ell}</m> and satisfy <m>b_{1}\left|b_{2}\right| \cdots \mid b_{k}</m>. 
+                  Moreover, <m>k</m> is unique and the <m>d_{i}</m> are uniquely determined up to associates (ie, up to multiplication by units) by <m>A</m>, hence by <m>B</m>. 
+                  By <xref ref="cor-fg-modules-finitely-presented-when-noetherian"/>, <m>M</m> is isomorphic to the module presented by <m>B</m>. 
+                  By <xref ref="lem-snf-pres"/>, this is isomorphic to
+                  <me>M \cong R^{r} \oplus R /\left(b_{1}\right) \oplus \cdots \oplus R /\left(b_{\ell}\right)</me>
+                </p>
+          
+                <p>
+                  Finally, some of these <m>b_{i}</m> might be units; 
+                  let <m>d_{1}|\cdots| d_{k}</m> be the nonunits among the <m>b_{i}</m>, and note that if <m>u</m> is a unit, then <m>R /(u) \cong(0)</m>. 
+                  We conclude that
+                  <me>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right),</me>
+                  as desired
+                </p>
+              </proof>
+            </theorem>
 
-                <li>
-                  <p>
-                    <m>s = 4</m>, <m>f_1 = f_2 = f_3 = f_4</m> is linear. 
-                  </p>
-                </li>
-              </ol>
-              Now suppose <m>k = \Z/p</m>. What is the total number of possibilities? For case <m>1</m>, there are <m>p^4</m> monic polynomial of degree <m>4</m>. For case <m>2</m>, there are <m>p</m> choices for <m>f_1</m> and <m>p^2</m> choices for <m>f_2</m> since <m>f_2 = f_1 \cdot q</m> for a unique quadratic <m>q</m>, for a total of <m>p^3</m> possibilities. For case <m>3</m> there are <m>p^2</m> choices. For case <m>4</m> there are <m>p^2</m> choices since there are <m>p</m> choices for <m>f_1 = f_2</m> and <m>f_3 = f_1 \cdot l</m> for a unique linear <m>l</m>. For case <m>5</m>, there are <m>p</m> choices for <m>f_1</m>. In total there are <m>2p + 2p^2 + p^4</m> such modules up to isomorphism.
-            </p>
-          </example>
+            <definition xml:id="def-invariant-factors"><title>Invariant Factors</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a PID, let <m>r \geqslant 0, k \geqslant 0</m>, and let <m>d_{1}, \ldots, d_{k}</m> be nonzero nonunit elements of <m>R</m> satisfying <m>d_{1}\left|d_{2}\right| \cdots \mid d_{k}</m>. 
+                  Let <m>M</m> be any <m>R</m>-module such that
+                  <me>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right) .</me>
+                  We say <m>M</m> has <em>free rank</em> <m>r</m> and <em>invariant factors</em> <m>d_{1}, \ldots, d_{k}</m>.              
+                </p>
+              </statement>
+            </definition>
 
-          <theorem xml:id="thm-sunzis-remainder-theorem-rings"><title>Sunzi's Remainder Theorem (Rings)</title>
-            <statement>
+            <remark>
               <p>
-                Suppose <m>I</m> and <m>J</m> are ideals in a commutative ring <m>R</m> such that <m>I + J = R</m>. Then <m>I \cap J = I \cdot J</m> (where <m>I \cdot J</m> is defined as the set of all sums of products of the form <m>ab</m> with <m>a \in I</m> and <m>b \in J</m>) and there is an isomorphism of <m>R</m>-modules <me>R/(I J) \cong R/I \oplus R/J.</me> In particular, if <m>R</m> is a UFD and <m>x</m> and <m>y</m> are relatively prime elements of <m>R</m>, then <me>R/(xy) \cong R/x \oplus R/y</me>
+                The classification theorem can be interpreted as saying that <m>M</m> decomposes into a free submodule <m>R^{r}</m> and a torsion submodule <m>\operatorname{Tor}(M)=R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right)</m>.
               </p>
-            </statement>
+            </remark>
 
-            <proof>
-              <p>
-                Note that <m>I \cdot J \subseteq I \cap J</m> holds in general for any pair of ideals. If <m>I + J = R</m> then <m>a + b = 1</m> for some <m>a \in I</m> and <m>b \in J</m>. Given <m>x \in I \cap J</m> we have <m>xa + xb = x</m> with <m>xa \in I \cdot J</m> and <m>xb \in I \cdot J</m>, which proves <m>x \in I \cdot J</m>.
-              </p>
-  
-              <p>
-                For the second assertion define <m>g: R \to R/I \oplus R/J</m> to be the <m>R</m>-module homomorphism <m>g(r) = (r +I, r + J)</m>. Note that the kernel of <m>g</m> is <m>I \cap J</m> which equals <m>I\cdot J</m> by the first assertion. I claim <m>g</m> is onto: Pick <m>(x + I, y +J) \in R/I \oplus R/J</m>. With <m>a,b</m> chosen as above, we have <me> g(xb + ya) = (xb + ya + I, xb + ya + J) = (xb + I, ya + J) = (x + I, y +J).</me>The last equation holds since <m>xa + xb = x</m> and thus <m>xb + I = xb + xa + I = x + I</m> and similarly <m>ya + J = y + J</m>.
-              </p>
-  
-              <p>
-                For the final assertion, recall that when <m>R</m> is a UFD, two principle ideals <m>Rx</m> and <m>Ry</m> satisfy <m>Rx + Ry = R</m> if and only if <m>x</m> and <m>y</m> are relatively prime. Also, for <m>I = Rx</m> and <m>J = Ry</m>, we have <m>I\cdot J = R(xy)</m>.
-              </p>
-            </proof>
-          </theorem>
+            <example xml:id="exe-kx-modules-of-dimension-4"><title><m>k[x]</m>-Modules of Dimension <m>4</m></title>
 
-          <theorem xml:id="thm-ftfgmopidedf"><title>FTFGMOPIDEDF</title>
-            <statement>
               <p>
-                Let <m>R</m> be a PID and let <m>M</m> be a finitely generated <m>R</m>-module. Then there exist integers <m>r \geq 0, k \geq 0</m>, prime elements <m>p_1,\ldots,p_s</m> of <m>R</m> (not necessarily distinct), and integers <m>e_1,\ldots ,e_s \geq 1</m>, such that <me>M \cong R^r \oplus R/(p_1^{e_1}) \oplus \cdots \oplus R/(p_s^{e_s}).</me>Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the list <m>p_1^{e_1},\ldots, p_s^{e_s}</m> is unique up to associates and reordering.
+                Let <m>k</m> be a field and <m>M</m> a <m>k[x]</m>-module such that the dimension of <m>M</m> as a <m>k</m>-vector space is <m>4.</m> 
+                What are the possibilities for <m>M</m> up to isomorphism?
               </p>
-            </statement>
+    
+              <p>
+                We have 
+                <me>M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))</me>
+                with <m>r, s, f_1, \dots, f_s</m> as in the Corollary. 
+                But <m>r</m> must be <m>0</m> since <m>k[x]</m> is infinite dimensional as a <m>k</m>-vector space. 
+                Moreover, <m>\dim_F k[x]/g = \deg(g)</m> for any non-zero polynomial <m>g</m>. 
+                So we must have <m>\sum_i \deg(f_i) = 4</m>. 
+                There are five possibilities: 
+                <ol>
+                  <li>
+                    <p>
+                      <m>s = 1</m> and <m>f_1</m> is monic of degree <m>4</m>. 
+                    </p>
+                  </li>
 
-            <proof>
-              <p>
-                First write <m>M</m> in invariant factor form <m>M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)</m>. For any non-zero, non-unit element <m>d</m> of <m>R</m>, we have <m>d = p_1^{e_1} \cdots p_m^{e_m}</m> for some distinct (non-associate) prime elements <m>p_j</m> and integers <m>e_j \geq 1</m>. By the Chinese remainder theorem (applied over and over again) we have <me>R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})</me> Doing this for each fact <m>R/(d_i)</m> in the invariant factor form of <m>M</m> we obtain the existence of an elementary divisor form of <m>M</m>.
-              </p>
-  
-              <p>
-                Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of the <m>d_i</m>'s.
-              </p>
-            </proof>
-          </theorem>
+                  <li>
+                    <p>
+                      <m>s = 2</m>, <m>f_1</m> is linear, <m>f_2</m> is cubic and <m>f_1 \mid f_2</m>. 
+                      (So if <m>f_1 = x-a</m>, then <m>a</m> must be a root of <m>f_2</m>). 
+                    </p>
+                  </li>
 
-          <definition xml:id="def-elementary-divisor-module"><title>Elementary Divisor (Module)</title>
-            <statement>
-              <p>
-                With the notation in the Theorem above, the elements <m>p_1^{e_1},\ldots, p_s^{e_s}</m> of <m>R</m> are the elementary divisors of <m>M</m>.
-              </p>
-            </statement>
-          </definition>
+                  <li>
+                    <p>
+                      <m>s = 2</m>, <m>f_1 = f_2</m> is quadratic. 
+                    </p>
+                  </li>
 
-          <example xml:id="exe-z90"><title><m>\Z/90</m></title>
+                  <li>
+                    <p>
+                      <m>s = 3</m>, <m>f_1 = f_2</m> is linear and <m>f_3</m> is quadratic with <m>f_1 \mid f_3</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>s = 4</m>, <m>f_1 = f_2 = f_3 = f_4</m> is linear. 
+                    </p>
+                  </li>
+                </ol>
+                Now suppose <m>k = \Z/p</m>. What is the total number of possibilities? 
+                For case <m>1</m>, there are <m>p^4</m> monic polynomial of degree <m>4</m>. 
+                For case <m>2</m>, there are <m>p</m> choices for <m>f_1</m> and <m>p^2</m> choices for <m>f_2</m> since <m>f_2 = f_1 \cdot q</m> for a unique quadratic <m>q</m>, for a total of <m>p^3</m> possibilities. 
+                For case <m>3</m> there are <m>p^2</m> choices. 
+                For case <m>4</m> there are <m>p^2</m> choices since there are <m>p</m> choices for <m>f_1 = f_2</m> and <m>f_3 = f_1 \cdot l</m> for a unique linear <m>l</m>. 
+                For case <m>5</m>, there are <m>p</m> choices for <m>f_1</m>. 
+                In total there are <m>2p + 2p^2 + p^4</m> such modules up to isomorphism.
+              </p>
+            </example>
             
-            <p>
-              Since <m>\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5</m>, so the elementary divisors of <m>\Z/90</m> are <m>9</m>, <m>2</m> and <m>3</m>. The only invariant factor of <m>\Z/90</m> is <m>90</m>.
-            </p>
-          </example>
+          </subsection>
 
-          <example><title>Direct Sums and <m>\Z</m></title>
+          <subsection xml:id="subsec-elementary-divisors"><title>Elementary Divisors</title>
 
             <p>
-              Consider the group <m>G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4</m>. This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have <me>G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3 \oplus \Z/4,</me> and this gives the EDF. The elementary divisors of <m>G</m> are <m>9,2,5,9,2,3,3,4</m> (ordering does not matter).
-            </p>
-  
-            <p>
-              To find the IFF we start by finding the largest prime power order for each prime in the list of orders of the summands. These are <m>9, 5, 4</m>. The CRT gives <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/2 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3.</me> Then we find the highest prime power orders for each prime among the left-over summands: <m>9, 2.</m> By the CRT we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/2 \oplus \Z/3 \oplus \Z/3.</me> The highest orders of the prime power order not yet used are <m>2</m> and <m>3</m>, and we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/(2 \cdot 3)  \oplus \Z/3.</me> which can be rearranged to give <me>G \cong \Z/3 \oplus \Z/6 \oplus \Z/18 \oplus \Z/180.</me> This is the IFF, and the invariant factors of <m>G</m> are <m>3,6,18,180</m>.
+              Here is a spinoff of the classification theorem.
             </p>
             
-          </example>
+            <theorem xml:id="thm-ftfgmopriff"><title>Classification of Finitely Generated Modules over a PID using Elementary Divisors</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. 
+                  Then there exist <m>r \geqslant 0</m>, <m>s \geqslant 0</m>, prime elements <m>p_{1}, \ldots, p_{s}</m> of <m>R</m> (not necessarily distinct), and <m>e_{1}, \ldots, e_{s} \geqslant 1</m> such that
+                  <me>M \cong R^{r} \oplus R /\left(p_{1}^{e_{1}}\right) \oplus \cdots \oplus R /\left(p_{s}^{e_{s}}\right) .</me>
+                  Moreover, <m>r</m> and <m>s</m> are uniquely determined by <m>M</m>, and the list <m>p_{1}^{e_{1}}, \ldots, p_{s}^{e_{s}}</m> is unique up to associates and reordering.                
+                </p>
+              </statement>
 
-          <corollary xml:id="cor-ftfgagedf"><title>FTFGAGEDF</title>
+              <proof>
+                <p>
+                  First, using <xref ref="thm-ftfgmopidiff"/> write <m>M</m> in invariant factor form <m>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right)</m>. 
+                  Then write each invariant factor as a product of prime powers
+                  <me>d_{i}:=\prod_{j=n_{i}}^{n_{i+1}} p_{j}^{e_{j}},</me>
+                  and recall that by the CRT we have
+                  <me>R /\left(d_{i}\right) \cong R /\left(p_{n_{i}}^{e_{n_{i}}}\right) \oplus \cdots \oplus R /\left(p_{n_{i+1}}^{e_{n_{i+1}}}\right) .</me>
+                </p>
+          
+                <p>
+                  Substituting into the invariant factor form gives the desired result. 
+                  Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of each <m>d_{i}</m>.                
+                </p>
+              </proof>
+            </theorem>
 
-            <statement>
+            <theorem xml:id="thm-sunzis-remainder-theorem-rings"><title>Sunzi's Remainder Theorem (Rings)</title>
+              <statement>
+                <p>
+                  Suppose <m>I</m> and <m>J</m> are ideals in a commutative ring <m>R</m> such that <m>I + J = R</m>. 
+                  Then <m>I \cap J = I \cdot J</m> (where <m>I \cdot J</m> is defined as the set of all sums of products of the form <m>ab</m> with <m>a \in I</m> and <m>b \in J</m>) and there is an isomorphism of <m>R</m>-modules 
+                  <me>R/(I J) \cong R/I \oplus R/J.</me> 
+                  In particular, if <m>R</m> is a UFD and <m>x</m> and <m>y</m> are relatively prime elements of <m>R</m>, then 
+                  <me>R/(xy) \cong R/x \oplus R/y.</me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Note that <m>I \cdot J \subseteq I \cap J</m> holds in general for any pair of ideals. 
+                  If <m>I + J = R</m> then <m>a + b = 1</m> for some <m>a \in I</m> and <m>b \in J</m>. 
+                  Given <m>x \in I \cap J</m> we have <m>xa + xb = x</m> with <m>xa \in I \cdot J</m> and <m>xb \in I \cdot J</m>, which proves <m>x \in I \cdot J</m>.
+                </p>
+    
+                <p>
+                  For the second assertion define <m>g: R \to R/I \oplus R/J</m> to be the <m>R</m>-module homomorphism <m>g(r) = (r +I, r + J)</m>. 
+                  Note that the kernel of <m>g</m> is <m>I \cap J</m> which equals <m>I\cdot J</m> by the first assertion. 
+                  I claim <m>g</m> is onto: 
+                  Pick <m>(x + I, y +J) \in R/I \oplus R/J</m>. 
+                  With <m>a,b</m> chosen as above, we have 
+                  <me> g(xb + ya) = (xb + ya + I, xb + ya + J) = (xb + I, ya + J) = (x + I, y +J).</me>
+                  The last equation holds since <m>xa + xb = x</m> and thus <m>xb + I = xb + xa + I = x + I</m> and similarly <m>ya + J = y + J</m>.
+                </p>
+    
+                <p>
+                  For the final assertion, recall that when <m>R</m> is a UFD, two principle ideals <m>Rx</m> and <m>Ry</m> satisfy <m>Rx + Ry = R</m> if and only if <m>x</m> and <m>y</m> are relatively prime. 
+                  Also, for <m>I = Rx</m> and <m>J = Ry</m>, we have <m>I\cdot J = R(xy)</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <definition xml:id="def-elementary-divisor-module"><title>Elementary Divisor (Module)</title>
+              <statement>
+                <p>
+                  With the notation in the Theorem above, the elements <m>p_1^{e_1},\ldots, p_s^{e_s}</m> of <m>R</m> are the elementary divisors of <m>M</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="exe-z90"><title><m>\Z/90</m></title>
+              
               <p>
-                Let <m>G</m> be a finitely generated abelian group. Then there exist integers <m>r,s \geq 0</m>, positive prime integers <m>p_1, \ldots, p_s</m>, and strictly positive integers <m>e_i \geq 1</m> such that <me>G \cong \Z^r\oplus\Z/p_1^{e_1} \oplus \dots \oplus \Z/p_s^{e_s}.</me>Moreover, the <m>r,p_i</m>'s, and <m>e_i</m>'s are uniquely determined by <m>G</m> (up to ordering).
+                Since <m>\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5</m>, so the elementary divisors of <m>\Z/90</m> are <m>9</m>, <m>2</m> and <m>3</m>. The only invariant factor of <m>\Z/90</m> is <m>90</m>.
               </p>
-            </statement>
-          </corollary>
+            </example>
 
-          <corollary xml:id="cor-ftfgmopredf"><title>FTFGMOPREDF</title>
+            <example><title>Direct Sums and <m>\Z</m></title>
 
-            <statement>
               <p>
-                Let <m>k</m> be a field and <m>k[x]</m> be the ring of polynomials with coefficients in <m>k</m> in one variable <m>x</m>. If <m>M</m> a finitely generated <m>k[x]</m>-module then <me>
-                M \cong k[x]^r \oplus k[x]/(p_1^{e_1}) \oplus \cdots \oplus k[x]/(p_s^{e_s})</me>for some <m>r \geq 0</m>, <m>s \geq 0</m>, non-constant monic, irreducible polynomials <m>p_1, \dots, p_s</m> and integers <m>e_1, \dots, e_s</m> with <m>e_i \geq 1</m>, and these are unique up to ordering.
+                Consider the group <m>G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4</m>. This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have <me>G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3 \oplus \Z/4,</me> and this gives the EDF. The elementary divisors of <m>G</m> are <m>9,2,5,9,2,3,3,4</m> (ordering does not matter).
               </p>
-            </statement>
-          </corollary>
+    
+              <p>
+                To find the IFF we start by finding the largest prime power order for each prime in the list of orders of the summands. These are <m>9, 5, 4</m>. The CRT gives <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/2 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3.</me> Then we find the highest prime power orders for each prime among the left-over summands: <m>9, 2.</m> By the CRT we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/2 \oplus \Z/3 \oplus \Z/3.</me> The highest orders of the prime power order not yet used are <m>2</m> and <m>3</m>, and we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/(2 \cdot 3)  \oplus \Z/3.</me> which can be rearranged to give <me>G \cong \Z/3 \oplus \Z/6 \oplus \Z/18 \oplus \Z/180.</me> This is the IFF, and the invariant factors of <m>G</m> are <m>3,6,18,180</m>.
+              </p>
+              
+            </example>
 
-          <example xml:id="exe-finding-ifs-and-eds"><title>Finding IFs and EDs</title>
-            
-            <p>
-              Find the invariant factor form and the elementary divisor form of the <m>k[x]</m>-module <me>M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x + 1)</me> first when 
-              <ol>
-                <li>
-                  <p>
-                    <m>k = \Z/2</m>, 
-                  </p>
-                </li>
+            <example xml:id="exe-finding-ifs-and-eds"><title>Finding IFs and EDs</title>
+              
+              <p>
+                Find the invariant factor form and the elementary divisor form of the <m>k[x]</m>-module <me>M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x + 1)</me> first when 
+                <ol>
+                  <li>
+                    <p>
+                      <m>k = \Z/2</m>, 
+                    </p>
+                  </li>
 
-                <li>
-                  <p>
-                    <m>k = \R</m> and 
-                  </p>
-                </li>
+                  <li>
+                    <p>
+                      <m>k = \R</m> and 
+                    </p>
+                  </li>
 
-                <li>
-                  <p>
-                    <m>k = \C</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
+                  <li>
+                    <p>
+                      <m>k = \C</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+          </subsection>
 
           <outcomes>
             <ul>
@@ -15901,14 +15885,6 @@
       <chapter xml:id="ch-canform"><title>Canonical Forms</title>
 
         <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
-
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
 
           <subsection xml:id="subsec-fx"><title>The <m>F[x]</m>-Module <m>V_g</m></title>
           
@@ -16295,14 +16271,6 @@
 
         <section xml:id="sec-cayley-hamilton"><title>The Cayley-Hamilton Theorem</title>
 
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
-
           <blockquote>
               <p>
                 <q>
@@ -16478,14 +16446,6 @@
         </section>
 
         <section xml:id="sec-jcf"><title>Jordan Canonical Form</title>
-
-          <objectives>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </objectives>
 
           <blockquote>
               <p>
