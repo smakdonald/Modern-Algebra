@@ -16059,9 +16059,9 @@
               <p>
                 Suppose <m>F</m> is a field and <m>M</m> is a <m>F[x]</m>-module. 
                 By restriction of scalars along the canonical ring map <m>F \into F[x]</m> we may regard <m>M</m> as a <m>F</m>-vector space — let us write this vector space as <m>M|_F</m> to be precise. 
-                Let <m>\lx: M|_F \to M|_F</m> be the map given by <m>\lx(m) = xm</m>. 
-                Then <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. 
-                So, to a <m>F[x]</m>-module <m>M</m> we may associate the pair <m>(M|_F, \lx)</m> where <m>M|_F</m> is an <m>F</m>-vector space and <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. 
+                Let <m>\l_x: M|_F \to M|_F</m> be the map given by <m>\l_x(m) = xm</m>. 
+                Then <m>\l_x</m> is an <m>F</m>-linear operator on <m>M|_F</m>. 
+                So, to a <m>F[x]</m>-module <m>M</m> we may associate the pair <m>(M|_F, \l_x)</m> where <m>M|_F</m> is an <m>F</m>-vector space and <m>\l_x</m> is an <m>F</m>-linear operator on <m>M|_F</m>. 
                 This process is reversible:
               </p>
             </remark>
@@ -16105,38 +16105,37 @@
             </example>
 
             <example xml:id="ex-mat_2times-2q"><title><m>\Mat_{2\times 2}(\Q)</m></title>
-              <p>
-                Let <m>A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)</m> and let <m>M</m> be the <m>\Q[x]</m>-module <m>\Q^2_A</m>. 
-                So <m>M = \Q^2</m> as a <m>\Q</m>-vector space, and <m>x</m> acts on <m>M</m> by sending <m>\vectwo{a}{b} \in M</m> to <m>\vectwo{a+b}{b} \in M</m>. 
-                I claim there is an isomorphism 
-                <me>
-                  M \cong \Q[x]/(x-1)^2
-                </me> of <m>\Q[x]</m>-modules.
-              </p>
-    
-              <p>
-                Let <m>v = \vectwo{0}{1} \in M</m>. 
-                Note that <m>x \cdot v = \vectwo{1}{1}</m> and that <m>v</m> and <m>x \cdot v</m> span <m>\Q^2</m> as a <m>\Q</m>-vector space. 
-                It follows that <m>v</m> generates <m>M</m> as a <m>\Q[x]</m>-module; in detail, for any <m>\vectwo{a}{b} \in \Q^2</m> we have <m>(b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}</m>.
-              </p>
-    
-              <p>
-                Define a <m>\Q[x]</m>-module homomorphism <me>\pi: \Q[x] \onto M</me> by sending <m>1</m> to <m>v \in M</m> and hence <m>p(x)</m> to <m>p(x) \cdot v</m>. 
-                It is onto since <m>v</m> generates <m>M</m> as a <m>\Q[x]</m>-module. 
-                The kernel will be a (necessarily principle) ideal of <m>\Q[x]</m>; we just need to find it. 
-                Note that <m>x^2 v = \vectwo21</m>, <m>xv</m> and <m>v</m> are linearly dependent and in fact we have 
-                <me>
-                  x^2 v = 2x v- v
-                </me>
-                and hence <m>(x^2 -2x + 1)v =0</m>.
-                This gives that <m>x^2 -2x + 1</m> is in the kernel of <m>\pi</m> and hence, by the <m>0</m>-th Isomorphism Theorem we have an induced homomorphism of <m>\Q[x]</m>-modules 
-                <me>
-                  \ov{\pi}: \Q[x]/(x^2 - 2x + 1) \onto M
-                </me>
-                induced by <m>\pi</m>. 
-                The map <m>\ov{\pi}</m> is onto since <m>\pi</m> is onto. 
-                Since the source and target both have dimension two as <m>\Q</m>-vector spaces, <m>\ov{\pi}</m> is <m>\Q</m>-linear, and <m>\ov{\pi}</m> is onto, it must in fact be an isomorphism of <m>\Q[x]</m>-modules (by the Rank-Nullity Theorem).
-              </p>
+              <statement>
+                <p>
+                  Let <m>A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)</m> and let <m>M</m> be the <m>\Q[x]</m>-module <m>\Q^2_A</m>. 
+                  So <m>M = \Q^2</m> as a <m>\Q</m>-vector space, and <m>x</m> acts on <m>M</m> by sending <m>\vectwo{a}{b} \in M</m> to <m>\vectwo{a+b}{b} \in M</m>. 
+                  I claim there is an isomorphism 
+                  <me>M \cong \Q[x]/(x-1)^2</me> of <m>\Q[x]</m>-modules.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Let <m>v = \vectwo{0}{1} \in M</m>. 
+                  Note that <m>x \cdot v = \vectwo{1}{1}</m> and that <m>v</m> and <m>x \cdot v</m> span <m>\Q^2</m> as a <m>\Q</m>-vector space. 
+                  It follows that <m>v</m> generates <m>M</m> as a <m>\Q[x]</m>-module; in detail, for any <m>\vectwo{a}{b} \in \Q^2</m> we have <m>(b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}</m>.
+                </p>
+      
+                <p>
+                  Define a <m>\Q[x]</m>-module homomorphism <me>\pi: \Q[x] \onto M</me> by sending <m>1</m> to <m>v \in M</m> and hence <m>p(x)</m> to <m>p(x) \cdot v</m>. 
+                  It is onto since <m>v</m> generates <m>M</m> as a <m>\Q[x]</m>-module. 
+                  The kernel will be a (necessarily principle) ideal of <m>\Q[x]</m>; we just need to find it. 
+                  Note that <m>x^2 v = \vectwo21</m>, <m>xv</m> and <m>v</m> are linearly dependent and in fact we have 
+                  <me>x^2 v = 2x v- v</me>
+                  and hence <m>(x^2 -2x + 1)v =0</m>.
+                  This gives that <m>x^2 -2x + 1</m> is in the kernel of <m>\pi</m> and hence, by the <m>0</m>-th Isomorphism Theorem we have an induced homomorphism of <m>\Q[x]</m>-modules 
+                  <me>\ov{\pi}: \Q[x]/(x^2 - 2x + 1) \onto M</me>
+                  induced by <m>\pi</m>. 
+                  The map <m>\ov{\pi}</m> is onto since <m>\pi</m> is onto. 
+                  Since the source and target both have dimension two as <m>\Q</m>-vector spaces, <m>\ov{\pi}</m> is <m>\Q</m>-linear, and <m>\ov{\pi}</m> is onto, it must in fact be an isomorphism of <m>\Q[x]</m>-modules (by the Rank-Nullity Theorem).
+                </p>
+              </solution>
+              
             </example>
 
             <proposition xml:id="prop-equality-of-fx-modules"><title>Equality of <m>F[x]</m>-Modules</title>
