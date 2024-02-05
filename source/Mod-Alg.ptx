@@ -12103,33 +12103,6 @@
               </statement>
             </example>
 
-            <investigation xml:id="exe-simple-modules"><title>Simple Modules</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
-                  An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
-                  Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
-                  <idx><h>simple module</h></idx>
-                </p>
-              </statement>
-
-              <solution>
-                <p>
-                  As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. 
-                  Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. 
-                  By the 
-                  [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. 
-                  By the Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
-                </p>
-              </solution>
-            </investigation>
-
-            <paragraphs><title>Qual Watch</title>
-              <p>
-                Proving <xref ref="exe-simple-modules"/> was <xref text="title" ref="may-2018-5"/> on the <xref text="title" ref="may-2018"/> qualifying exam.
-              </p>
-            </paragraphs>
-
             <investigation xml:id="exe-submod-zorn"><title>Submodules and Zorn's Lemma</title>
               <statement>
                 <p>
@@ -12805,6 +12778,33 @@
                 </p>
               </proof>
             </theorem>
+
+            <investigation xml:id="exe-simple-modules"><title>Simple Modules</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
+                  An <m>R</m>-module <m>M</m> is <em>simple</em> if it has no nontrivial submodules. 
+                  Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
+                  <idx><h>simple module</h></idx>
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. 
+                  Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. 
+                  Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. 
+                  By the <xref text="title" ref="fit-module"/> we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. 
+                  By the <xref text="title" ref="thm-ring-lit"/> the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field by <xref ref="prop-proper-ideals"/> and <m>I</m> a maximal ideal in <m>R</m> by <xref ref="thm-maximal-iff-field"/>.
+                </p>
+              </solution>
+            </investigation>
+
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="exe-simple-modules"/> was <xref text="title" ref="may-2018-5"/> on the <xref text="title" ref="may-2018"/> qualifying exam.
+              </p>
+            </paragraphs>
 
           </subsection>
 
@@ -14327,7 +14327,7 @@
           
         </section>
 
-        <section xml:id="sec-cob"><title>Change of Basis</title>
+        <section xml:id="sec-cob"><title>Matrices and Change of Basis</title>
 
           <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
@@ -14396,6 +14396,92 @@
                 </me>
               </p>
             </example>
+
+            <lemma xml:id="lem-vs-matrix-mult"><title>Linear Transformation between Vector Spaces is Matrix Multiplication</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and consider a linear transformation <m>f: V \rightarrow W</m>, where <m>V=F^{n}</m> and <m>W=F^{m}</m>. 
+                  Consider also the standard ordered bases <m>B</m> and <m>C</m>, i.e. <m>b_{i}=e_{i} \in V</m> and <m>c_{i}=e_{i} \in W</m>. 
+                  Then for any
+                  <me>v=\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=\sum_{i} l_{i} b_{i}</me>
+                  in <m>V</m> we have
+                  <me>f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)</me>
+                </p>
+
+                <p>
+                  Each <m>f\left(b_{i}\right)</m> can be written uniquely as a linear combination of the <m>c_{j}</m>’s as in (2.2.1):
+                  <me>f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j}</me>
+                  Then we get
+                  <me>f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j} .</me>
+                </p>
+
+                <p>
+                  In other words, we have
+                  <me>f(v)=\left[\begin{array}{c} \sum_{i} a_{1, i} l_{i} \\ \vdots \\ \sum_{i} a_{m, i} l_{i} \end{array}\right]
+                    =\left[\begin{array}{cccc} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n} \end{array}\right] 
+                    \cdot\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=[f]_{B}^{C} \cdot v</me>
+                </p>
+
+                <p>
+                  Then for any
+                  <me>v=\sum_{i} l_{i} b_{i}</me>
+                  in <m>V</m> we have
+                  <me>f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)</me>
+                </p>
+
+                <p>
+                  Each <m>f\left(b_{i}\right)</m> is uniquely expressible as a linear combination of the <m>c_{j}</m> ’s, say
+                  <me>f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j} .</me>
+                  Then we get
+                  <me>f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j} .</me>
+                </p>
+
+                <p>
+                  In other words, we have
+                  <me>f(v)=[f]_{B}^{C} \cdot v</me>
+                  where
+                  <me>[f]_{B}^{C}= \left[\begin{array}{cccc} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n} \end{array}\right]</me>
+                  and <m>[f]_{B}^{C} \cdot v</m> denote the usual rule for matrix multiplication.
+                </p>
+
+                <p>
+                  This says that any linear transformation <m>f: F^{n} \rightarrow F^{m}</m> is given by multiplication by a matrix, since we noticed above that <m>f(v)=[f]_{B}^{C} \cdot v</m>. 
+                  The same type of statement holds for free modules over commutative rings, and we will show it below in Theorem 2.32.
+                </p>
+              </statement>
+            </lemma>
+
+            <theorem xml:id="thm-r-map-matrix-mult"><title><m>R</m>-map Bewteen Free Modules is Matrix Multiplication</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
+                  Let <m>V</m> and <m>W</m> be finitely generated free <m>R</m>-modules of ranks <m>n</m> and <m>m</m> respectively. 
+                  Fixing ordered bases <m>B</m> for <m>V</m> and <m>C</m> for <m>W</m> gives an isomorphism of <m>R</m>-modules
+                  <me>\operatorname{Hom}_{R}(V, W) \cong \mathrm{M}_{m, n}(R) \quad f \mapsto[f]_{B}^{C}</me>
+                  If <m>V=W</m>, so that in particular <m>m=n</m>, and <m>B=C</m>, then the above map is an <m>R</m>-algebra isomorphism <m>\operatorname{End}_{R}(V) \cong \mathrm{M}_{n}(R)</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>\varphi: \operatorname{Hom}_{R}(V, W) \rightarrow \mathrm{M}_{m, n}(R)</m> be defined by <m>\varphi(f)=[f]_{B}^{C}</m>. 
+                  We need to check that <m>\varphi</m> is a homomorphism of <m>R</m>-modules, which translates into <m>[f+g]_{B}^{C}=[f]_{B}^{C}+[g]_{B}^{C}</m> and <m>[\lambda f]_{B}^{C}=\lambda[f]_{B}^{C}</m> for any <m>f, g \in \operatorname{Hom}_{R}(V, W)</m> and <m>\lambda \in R</m>. 
+                  Let <m>A=[f]_{B}^{C}</m> and <m>A^{\prime}=[g]_{B}^{C}</m>. 
+                  Then
+                  <me>(f+g)\left(b_{i}\right)=f\left(b_{i}\right)+g\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j}+\sum_{j} a_{j, i}^{\prime} c_{j}=\sum_{j}\left(a_{j, i}+a_{i, j}^{\prime}\right) c_{j}</me>
+                  gives <m>[f+g]_{B}^{C}=A+A^{\prime}</m> and
+                  <me>(\lambda f)\left(b_{i}\right)=\lambda\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\lambda a_{j, i}\right) c_{j}</me>
+                  gives <m>[\lambda f]_{B}^{C}=\lambda A</m>. 
+                </p>
+          
+                <p>
+                  Finally, the argument described in Example 2.31 also works for any ring <m>R</m>, and it can be adapted for any two chosen basis <m>B</m> and <m>C</m>, showing that <m>\varphi</m> is a bijection.
+                </p>
+              </proof>
+            </theorem>
+            
+
+            
 
           </subsection>
 
@@ -15886,7 +15972,7 @@
 
         <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
 
-          <subsection xml:id="subsec-fx"><title>The <m>F[x]</m>-Module <m>V_g</m></title>
+          <subsection xml:id="subsec-fx"><title>Making Transformations into Modules </title>
           
             <blockquote>
                 <p>
@@ -15896,6 +15982,78 @@
                 </p>
                 <attribution>Fyodor Dostoevsky</attribution>
               </blockquote>
+
+            <p>
+              Given a vector space over a field, we can finagle it into an F[x] module instead.
+              As F is a field, F[x] is a PID, and thus we can use the Fundamental Theorem to decompose it into a quotient by a direct sum of polynomials.
+              These polynomials are the invariant factors of the module.
+              We define a companion matrix for each polynomial, and 
+            </p>
+
+            <definition xml:id="def-endomorphism"><title>Endomorphisms and Linear Operators</title>
+              <statement>
+                <p>
+                  Let <m>M</m> be an <m>R</m>-module. 
+                  An <m>R</m>-module homomorphism <m>\varphi</m> from <m>M</m> to itself is known as an <em>endomorphism</em>. 
+                  In the case where <m>R</m> is a field and <m>M</m> a vector space, <m>\varphi</m> is known as a <em>linear operator</em>.
+                  The set of all endomorphisms of <m>M</m> is denoted <m>\End_R(M)</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                Equivalently, <m>\End_R(M)=\Hom_R(M,M)</m>.
+              </p>
+            </remark>
+
+            <proposition xml:id="prop-fx-modules"><title><m>F[x]</m>-modules</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field. 
+                  There is a bijection
+                  <me>\{V \text { an } F[x] \text {-module }\} \longleftrightarrow\left\{V \text { an } F \text {-vector space and } T \in \operatorname{End}_{F}(V)\right\} \text {. }</me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>V</m> is an <m>F[x]</m> module then <m>V</m> is an <m>F</m>-vector space by restriction of scalars along the inclusion <m>F \hookrightarrow F[x]</m>. 
+                  Let <m>T: V \rightarrow V</m> be defined by <m>T(v)=x v</m>. 
+                  It can be shown that <m>T \in \operatorname{End}_{F}(V)</m> since <m>T\left(v_{1}+v_{2}\right)=x\left(v_{1}+v_{2}\right)=x v_{1}+x v_{2}=T\left(v_{1}\right)+T\left(v_{2}\right)</m> and <m>T(c v)=x(c v)=c(x v)</m> for any <m>c \in F, v, v_{1}, v_{2} \in V</m> by the axioms of the <m>F[x]</m>-module.
+                </p>
+
+                <p>
+                  Conversely, let <m>V</m> be an <m>F</m>-vector space and <m>T \in \operatorname{End}_{F}(V)</m>. 
+                  Consider the evaluation homomorphism <m>\varphi: F[x] \rightarrow \operatorname{End}_{F}(V), \quad \varphi(f(x))=f(T)</m>. 
+                  (For example, if <m>f(x)=x^{2}+5</m> then <m>\varphi(f(x))=T \circ T+5 \cdot \mathrm{id}_{V}</m>.) 
+                  Since <m>V</m> is an <m>\operatorname{End}_{F}(V)</m>-module by Remark 3.17, then <m>V</m> is also an <m>F[x]</m>-module by restriction of scalars along <m>\phi</m>. 
+                  Concretely, this action is given by
+                  <me>f(x) v=(f(T))(v) .</me>
+                  (For example, if <m>f(x)=x^{2}+5</m>, then <m>f(x) v=T(T(v))+5 v</m>.)
+                </p>
+              </proof>
+            </proposition>
+
+            <p>
+              Recall <xref ref="thm-r-map-matrix-mult"/>.
+            </p>
+
+            <corollary xml:id="cor-end-matrix"><title>Endomorphisms Given by Matrix Multiplication</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m> and <m>V</m> be a finitely generated free <m>R</m>-module with basis <m>B</m>. 
+                  Then
+                  <me>\operatorname{End}_{R}(V) \cong \mathrm{M}_{n}(R) \quad f \mapsto[f]_{B}^{B}</me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We leave the proof that for <m>f, g \in \operatorname{End}_{R}(V)</m> we have <m>[f \circ g]_{B}^{B}=[f]_{B}^{B}[g]_{B}^{B}</m> as an exercise.
+                </p>
+              </proof>
+            </corollary>
 
             <remark>
               <p>

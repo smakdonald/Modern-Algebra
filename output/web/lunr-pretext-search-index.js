@@ -4525,7 +4525,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Module Basics",
-  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Simple Modules   Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     As , there exists a non-zero element . Let be defined by . Since and , we have . By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the Lattice Isomorphism Theorem the only two ideals of are and , making a field, and a maximal ideal in .    Qual Watch  Proving was on the qualifying exam.   Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
+  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
 },
 {
   "id": "def-module",
@@ -4645,20 +4645,11 @@ var ptx_lunr_docs = [
   "body": "Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .      "
 },
 {
-  "id": "exe-simple-modules",
-  "level": "2",
-  "url": "sec-defmod.html#exe-simple-modules",
-  "type": "Exploration",
-  "number": "12.1",
-  "title": "Simple Modules.",
-  "body": "Simple Modules   Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     As , there exists a non-zero element . Let be defined by . Since and , we have . By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the Lattice Isomorphism Theorem the only two ideals of are and , making a field, and a maximal ideal in .   "
-},
-{
   "id": "exe-submod-zorn",
   "level": "2",
   "url": "sec-defmod.html#exe-submod-zorn",
   "type": "Exploration",
-  "number": "12.2",
+  "number": "12.1",
   "title": "Submodules and Zorn’s Lemma.",
   "body": "Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .      "
 },
@@ -4696,7 +4687,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.2",
   "title": "Module Homomorphisms",
-  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have  Preserves Addition   , i.e. is an additive group homomorphism, and   Preserves Scaling   .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation      Let be an -module homomorphism. Then .   By definition, is a homomorphism of abelian groups. Thus by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and thus preserves addition. Also, we have and thus preserves scaling as well, making an -module homomorphism.           -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Notice that if is an -module homomorphism then it is a group homomophism as well. Thus yields the result.     If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .   Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Cokernel   The cokernel of a map of -modules is the module     Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.           An is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When is a field, this is called a linear transformation .    The set denotes the set of all -module homomorphisms from to . is an -module and .    A is obtained by taking the underlying quotient group structure.    Multiplication maps, inclusion maps, and projection \/ quotient maps are all -module homomorphisms.    The hold.     "
+  "body": "Module Homomorphisms  Homomorphisms and Isomorphisms    Transformation rarely happens accidentally.   A.J. Sheppard   -Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have  Preserves Addition   , i.e. is an additive group homomorphism, and   Preserves Scaling   .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation      Let be an -module homomorphism. Then .   By definition, is a homomorphism of abelian groups. Thus by .    Unlike ring homomorphisms, a -module homomorphism does not need to map to .   Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and thus preserves addition. Also, we have and thus preserves scaling as well, making an -module homomorphism.           -Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism     To check that an -module homomorphism is an isomorphism, it is sufficient to check that it is bijective.  Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Notice that if is an -module homomorphism then it is a group homomophism as well. Thus yields the result.     If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .   Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)     Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .           All good things must come to an    Geoffrey Chaucer     Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .     is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.      For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes     Show that for every nonzero integers and there is a -module isomorphism .    Quotient Modules    The best way to solve a problem is to remove its cause.   Martin Luther King Jr.   Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module     Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.    Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)     Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .    -modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.   Cokernel   The cokernel of a map of -modules is the module     Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.       Simple Modules   Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     As , there exists a non-zero element . Let be defined by . Since and , we have . By the we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the the only two ideals of are and , making a field by and a maximal ideal in by .    Qual Watch  Proving was on the qualifying exam.       An is a homomorphism of abelian groups, with the added structure that scaling must be preserved. When is a field, this is called a linear transformation .    The set denotes the set of all -module homomorphisms from to . is an -module and .    A is obtained by taking the underlying quotient group structure.    Multiplication maps, inclusion maps, and projection \/ quotient maps are all -module homomorphisms.    The hold.     "
 },
 {
   "id": "def-module-homomorphism",
@@ -4877,6 +4868,15 @@ var ptx_lunr_docs = [
   "number": "12.35",
   "title": "Module Isomorphism Theorems.",
   "body": "Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.      "
+},
+{
+  "id": "exe-simple-modules",
+  "level": "2",
+  "url": "sec-modhom.html#exe-simple-modules",
+  "type": "Exploration",
+  "number": "12.2",
+  "title": "Simple Modules.",
+  "body": "Simple Modules   Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that . simple module     As , there exists a non-zero element . Let be defined by . Since and , we have . By the we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the the only two ideals of are and , making a field by and a maximal ideal in by .   "
 },
 {
   "id": "sec-modhom-5",
@@ -5487,8 +5487,8 @@ var ptx_lunr_docs = [
   "url": "sec-cob.html",
   "type": "Section",
   "number": "13.4",
-  "title": "Change of Basis",
-  "body": "Change of Basis  Matrices of Linear Transformations    No one can be told what the matrix is. You have to see it for yourself.   Morpheus   Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. Let and be ordered bases of and . Given an -module homomorphism , we define elements for and by the formulas The matrix is said to represent the homomorphism with respect to the bases and . In the case that and are -vector spaces, the matrix is called the matrix of the linear transformation  with respect to the bases and . matrix of a linear transformation  matrix of a free module homomorphism      The notion that a homomorphism between finitely generated free modules can be represented as a matrix is extremely important! It allows us to translate information we know about matrices into information we know about homomorophisms and linear transformations, and vice versa.   Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence    Matrix Representing the Derivative Operator  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by taking the derivative . Let . Then     Change of Basis    Change brings opportunity.   Nido R. Qubein   As we noted in , bases of free modules are rarely unique. Each basis provides its own individual langauge of constucting elements of the module. Different bases may lend themselves to different situations and mathematicians, and thus being able to translate between these langauges is extremely important.  Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to . change of basis matrix      In we will show that is invertible with inverse .   CoB and  Consider , Where P_2 is as defined in . let and be bases of . We calculate the change of basis matrix. We have Thus, the change of basis matrix is given by    CoB and Identity   If are finitely generated free -modules spaces with ordered bases , , and , and if and are -module homomorphisms, then     Given , we have so .    Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is an -module isomorphism such that . similar -module homomorphisms   Two matrices and with entries in are similar if there is an invertible matrix such that . similar matrices     The notion of similar matrices aligns with the idea of moving between bases. Translate your data into the language using your new basis (using ), perform the desired transformations (using ), and then translate this new data back into the original basis (using )   For elements , the notions of similar and conjugate are the same.   Similar CoB Matrices   Let be finitely generated free modules over a commutative ring , let and be bases of , let and be bases of , and let be a homomorphism. Then In particular, if is an -module homomorphism, then and are similar.    Since , by we have Setting , and we have . Notice that is the identity matrix, so the previous formula says that Setting , we notice that the previous identity gives .  Now set and to obtain      Elementary Basis Operations  We now come to certain special changes of basis and their matrices:  Elementary Basis Change Operations   Let be a commutative ring with , let be a free -module of finite rank , and let be an ordered basis for . An elementary basis change operation on the basis is one of the following three types of operations:   (Type I) Replacing by for some and some .    (Type II) Replacing by for some and some unit of ,    (Type III) Swapping the positions of and for some .    elementary basis change operation     Elementary Row Operations   Let be a commutative ring with . An elementary row (column) operation on a matrix is one of the following three types of operations: elementary row operation  elementary column operation   Type I  Adding an element of times a row (column) of to a different row column of .   Type II  Multiplying a row (column) of by a unit of .   Type III  Interchanging two rows (columns) of .       Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: elementary matrix   Type I  For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.   Type II  For and let be the type II elementary matrix with entry , entry for all , and everywhere else.   Type III  For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.                            "
+  "title": "Matrices and Change of Basis",
+  "body": "Matrices and Change of Basis  Matrices of Linear Transformations    No one can be told what the matrix is. You have to see it for yourself.   Morpheus   Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. Let and be ordered bases of and . Given an -module homomorphism , we define elements for and by the formulas The matrix is said to represent the homomorphism with respect to the bases and . In the case that and are -vector spaces, the matrix is called the matrix of the linear transformation  with respect to the bases and . matrix of a linear transformation  matrix of a free module homomorphism      The notion that a homomorphism between finitely generated free modules can be represented as a matrix is extremely important! It allows us to translate information we know about matrices into information we know about homomorophisms and linear transformations, and vice versa.   Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence    Matrix Representing the Derivative Operator  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by taking the derivative . Let . Then    Linear Transformation between Vector Spaces is Matrix Multiplication   Let be a field and consider a linear transformation , where and . Consider also the standard ordered bases and , i.e. and . Then for any in we have   Each can be written uniquely as a linear combination of the ’s as in (2.2.1): Then we get   In other words, we have   Then for any in we have   Each is uniquely expressible as a linear combination of the ’s, say Then we get   In other words, we have where and denote the usual rule for matrix multiplication.  This says that any linear transformation is given by multiplication by a matrix, since we noticed above that . The same type of statement holds for free modules over commutative rings, and we will show it below in Theorem 2.32.    -map Bewteen Free Modules is Matrix Multiplication   Let be a commutative ring with . Let and be finitely generated free -modules of ranks and respectively. Fixing ordered bases for and for gives an isomorphism of -modules If , so that in particular , and , then the above map is an -algebra isomorphism .    Let be defined by . We need to check that is a homomorphism of -modules, which translates into and for any and . Let and . Then gives and gives .  Finally, the argument described in Example 2.31 also works for any ring , and it can be adapted for any two chosen basis and , showing that is a bijection.     Change of Basis    Change brings opportunity.   Nido R. Qubein   As we noted in , bases of free modules are rarely unique. Each basis provides its own individual langauge of constucting elements of the module. Different bases may lend themselves to different situations and mathematicians, and thus being able to translate between these langauges is extremely important.  Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to . change of basis matrix      In we will show that is invertible with inverse .   CoB and  Consider , Where P_2 is as defined in . let and be bases of . We calculate the change of basis matrix. We have Thus, the change of basis matrix is given by    CoB and Identity   If are finitely generated free -modules spaces with ordered bases , , and , and if and are -module homomorphisms, then     Given , we have so .    Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is an -module isomorphism such that . similar -module homomorphisms   Two matrices and with entries in are similar if there is an invertible matrix such that . similar matrices     The notion of similar matrices aligns with the idea of moving between bases. Translate your data into the language using your new basis (using ), perform the desired transformations (using ), and then translate this new data back into the original basis (using )   For elements , the notions of similar and conjugate are the same.   Similar CoB Matrices   Let be finitely generated free modules over a commutative ring , let and be bases of , let and be bases of , and let be a homomorphism. Then In particular, if is an -module homomorphism, then and are similar.    Since , by we have Setting , and we have . Notice that is the identity matrix, so the previous formula says that Setting , we notice that the previous identity gives .  Now set and to obtain      Elementary Basis Operations  We now come to certain special changes of basis and their matrices:  Elementary Basis Change Operations   Let be a commutative ring with , let be a free -module of finite rank , and let be an ordered basis for . An elementary basis change operation on the basis is one of the following three types of operations:   (Type I) Replacing by for some and some .    (Type II) Replacing by for some and some unit of ,    (Type III) Swapping the positions of and for some .    elementary basis change operation     Elementary Row Operations   Let be a commutative ring with . An elementary row (column) operation on a matrix is one of the following three types of operations: elementary row operation  elementary column operation   Type I  Adding an element of times a row (column) of to a different row column of .   Type II  Multiplying a row (column) of by a unit of .   Type III  Interchanging two rows (columns) of .       Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: elementary matrix   Type I  For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.   Type II  For and let be the type II elementary matrix with entry , entry for all , and everywhere else.   Type III  For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.                            "
 },
 {
   "id": "def-matrix-of-free-module-homomorphism",
@@ -5527,11 +5527,29 @@ var ptx_lunr_docs = [
   "body": "Matrix Representing the Derivative Operator  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by taking the derivative . Let . Then   "
 },
 {
+  "id": "lem-vs-matrix-mult",
+  "level": "2",
+  "url": "sec-cob.html#lem-vs-matrix-mult",
+  "type": "Lemma",
+  "number": "13.63",
+  "title": "Linear Transformation between Vector Spaces is Matrix Multiplication.",
+  "body": "Linear Transformation between Vector Spaces is Matrix Multiplication   Let be a field and consider a linear transformation , where and . Consider also the standard ordered bases and , i.e. and . Then for any in we have   Each can be written uniquely as a linear combination of the ’s as in (2.2.1): Then we get   In other words, we have   Then for any in we have   Each is uniquely expressible as a linear combination of the ’s, say Then we get   In other words, we have where and denote the usual rule for matrix multiplication.  This says that any linear transformation is given by multiplication by a matrix, since we noticed above that . The same type of statement holds for free modules over commutative rings, and we will show it below in Theorem 2.32.   "
+},
+{
+  "id": "thm-r-map-matrix-mult",
+  "level": "2",
+  "url": "sec-cob.html#thm-r-map-matrix-mult",
+  "type": "Theorem",
+  "number": "13.64",
+  "title": "<span class=\"process-math\">\\(R\\)<\/span>-map Bewteen Free Modules is Matrix Multiplication.",
+  "body": "-map Bewteen Free Modules is Matrix Multiplication   Let be a commutative ring with . Let and be finitely generated free -modules of ranks and respectively. Fixing ordered bases for and for gives an isomorphism of -modules If , so that in particular , and , then the above map is an -algebra isomorphism .    Let be defined by . We need to check that is a homomorphism of -modules, which translates into and for any and . Let and . Then gives and gives .  Finally, the argument described in Example 2.31 also works for any ring , and it can be adapted for any two chosen basis and , showing that is a bijection.   "
+},
+{
   "id": "def-change-of-basis-matrix",
   "level": "2",
   "url": "sec-cob.html#def-change-of-basis-matrix",
   "type": "Definition",
-  "number": "13.63",
+  "number": "13.65",
   "title": "Change of Basis Matrix.",
   "body": "Change of Basis Matrix   Let be a finitely generated free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is a matrix called the change of basis matrix from to . change of basis matrix    "
 },
@@ -5540,7 +5558,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#subsec-cob-5",
   "type": "Remark",
-  "number": "13.64",
+  "number": "13.66",
   "title": "",
   "body": " In we will show that is invertible with inverse .  "
 },
@@ -5549,7 +5567,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#ex-cob-and-p_n",
   "type": "Example",
-  "number": "13.65",
+  "number": "13.67",
   "title": "CoB and <span class=\"process-math\">\\(P_n\\)<\/span>.",
   "body": "CoB and  Consider , Where P_2 is as defined in . let and be bases of . We calculate the change of basis matrix. We have Thus, the change of basis matrix is given by   "
 },
@@ -5558,7 +5576,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#lem-cob-and-identity",
   "type": "Lemma",
-  "number": "13.66",
+  "number": "13.68",
   "title": "CoB and Identity.",
   "body": "CoB and Identity   If are finitely generated free -modules spaces with ordered bases , , and , and if and are -module homomorphisms, then     Given , we have so .   "
 },
@@ -5567,7 +5585,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-similar-matrices",
   "type": "Definition",
-  "number": "13.67",
+  "number": "13.69",
   "title": "Similar Matrices.",
   "body": "Similar Matrices   Let be a finitely generated free module over a commutative ring . Two -module homomorphisms are similar if there is an -module isomorphism such that . similar -module homomorphisms   Two matrices and with entries in are similar if there is an invertible matrix such that . similar matrices    "
 },
@@ -5576,7 +5594,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#subsec-cob-10",
   "type": "Remark",
-  "number": "13.68",
+  "number": "13.70",
   "title": "",
   "body": " For elements , the notions of similar and conjugate are the same.  "
 },
@@ -5585,7 +5603,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#thm-similar-cob",
   "type": "Theorem",
-  "number": "13.69",
+  "number": "13.71",
   "title": "Similar CoB Matrices.",
   "body": "Similar CoB Matrices   Let be finitely generated free modules over a commutative ring , let and be bases of , let and be bases of , and let be a homomorphism. Then In particular, if is an -module homomorphism, then and are similar.    Since , by we have Setting , and we have . Notice that is the identity matrix, so the previous formula says that Setting , we notice that the previous identity gives .  Now set and to obtain    "
 },
@@ -5594,7 +5612,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-basis-change-operations",
   "type": "Definition",
-  "number": "13.70",
+  "number": "13.72",
   "title": "Elementary Basis Change Operations.",
   "body": "Elementary Basis Change Operations   Let be a commutative ring with , let be a free -module of finite rank , and let be an ordered basis for . An elementary basis change operation on the basis is one of the following three types of operations:   (Type I) Replacing by for some and some .    (Type II) Replacing by for some and some unit of ,    (Type III) Swapping the positions of and for some .    elementary basis change operation    "
 },
@@ -5603,7 +5621,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-row-operations",
   "type": "Definition",
-  "number": "13.71",
+  "number": "13.73",
   "title": "Elementary Row Operations.",
   "body": "Elementary Row Operations   Let be a commutative ring with . An elementary row (column) operation on a matrix is one of the following three types of operations: elementary row operation  elementary column operation   Type I  Adding an element of times a row (column) of to a different row column of .   Type II  Multiplying a row (column) of by a unit of .   Type III  Interchanging two rows (columns) of .      "
 },
@@ -5612,7 +5630,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cob.html#def-elementary-matrix",
   "type": "Definition",
-  "number": "13.72",
+  "number": "13.74",
   "title": "Elementary Matrix.",
   "body": "Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: elementary matrix   Type I  For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.   Type II  For and let be the type II elementary matrix with entry , entry for all , and everywhere else.   Type III  For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.      "
 },
@@ -6010,14 +6028,50 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "15.1",
   "title": "Rational Canonical Form",
-  "body": "Rational Canonical Form  The -Module    If everything on Earth were rational, nothing would happen.   Fyodor Dostoevsky    Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:   -Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .    is Actually a -Module   Given a pair as in the definition, really is a -module.    Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.    Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).   Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .     In fact, these rules determine an “isomorphism of categories''.    Rational Heads Prevail  Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .    Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.     The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)   Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .    Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .   Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.    Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is     The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):   RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have     Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .    Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .   Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.                        "
+  "body": "Rational Canonical Form  Making Transformations into Modules    If everything on Earth were rational, nothing would happen.   Fyodor Dostoevsky   Given a vector space over a field, we can finagle it into an F[x] module instead. As F is a field, F[x] is a PID, and thus we can use the Fundamental Theorem to decompose it into a quotient by a direct sum of polynomials. These polynomials are the invariant factors of the module. We define a companion matrix for each polynomial, and  Endomorphisms and Linear Operators   Let be an -module. An -module homomorphism from to itself is known as an endomorphism . In the case where is a field and a vector space, is known as a linear operator . The set of all endomorphisms of is denoted .     Equivalently, .   -modules   Let be a field. There is a bijection     If is an module then is an -vector space by restriction of scalars along the inclusion . Let be defined by . It can be shown that since and for any by the axioms of the -module.  Conversely, let be an -vector space and . Consider the evaluation homomorphism . (For example, if then .) Since is an -module by Remark 3.17, then is also an -module by restriction of scalars along . Concretely, this action is given by (For example, if , then .)    Recall .  Endomorphisms Given by Matrix Multiplication   Let be a commutative ring with and be a finitely generated free -module with basis . Then     We leave the proof that for we have as an exercise.     Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:   -Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .    is Actually a -Module   Given a pair as in the definition, really is a -module.    Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.    Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).   Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .     In fact, these rules determine an “isomorphism of categories''.    Rational Heads Prevail  Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .    Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.     The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)   Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .    Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .   Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.    Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is     The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):   RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have     Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .    Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .   Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.                        "
 },
 {
-  "id": "subsec-fx-3",
+  "id": "def-endomorphism",
   "level": "2",
-  "url": "sec-rcf.html#subsec-fx-3",
-  "type": "Remark",
+  "url": "sec-rcf.html#def-endomorphism",
+  "type": "Definition",
   "number": "15.1",
+  "title": "Endomorphisms and Linear Operators.",
+  "body": "Endomorphisms and Linear Operators   Let be an -module. An -module homomorphism from to itself is known as an endomorphism . In the case where is a field and a vector space, is known as a linear operator . The set of all endomorphisms of is denoted .   "
+},
+{
+  "id": "subsec-fx-5",
+  "level": "2",
+  "url": "sec-rcf.html#subsec-fx-5",
+  "type": "Remark",
+  "number": "15.2",
+  "title": "",
+  "body": " Equivalently, .  "
+},
+{
+  "id": "prop-fx-modules",
+  "level": "2",
+  "url": "sec-rcf.html#prop-fx-modules",
+  "type": "Proposition",
+  "number": "15.3",
+  "title": "<span class=\"process-math\">\\(F[x]\\)<\/span>-modules.",
+  "body": "-modules   Let be a field. There is a bijection     If is an module then is an -vector space by restriction of scalars along the inclusion . Let be defined by . It can be shown that since and for any by the axioms of the -module.  Conversely, let be an -vector space and . Consider the evaluation homomorphism . (For example, if then .) Since is an -module by Remark 3.17, then is also an -module by restriction of scalars along . Concretely, this action is given by (For example, if , then .)   "
+},
+{
+  "id": "cor-end-matrix",
+  "level": "2",
+  "url": "sec-rcf.html#cor-end-matrix",
+  "type": "Corollary",
+  "number": "15.4",
+  "title": "Endomorphisms Given by Matrix Multiplication.",
+  "body": "Endomorphisms Given by Matrix Multiplication   Let be a commutative ring with and be a finitely generated free -module with basis . Then     We leave the proof that for we have as an exercise.   "
+},
+{
+  "id": "subsec-fx-9",
+  "level": "2",
+  "url": "sec-rcf.html#subsec-fx-9",
+  "type": "Remark",
+  "number": "15.5",
   "title": "",
   "body": " Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:  "
 },
@@ -6026,7 +6080,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#def-fx-module-vg",
   "type": "Definition",
-  "number": "15.2",
+  "number": "15.6",
   "title": "<span class=\"process-math\">\\(F[x]\\)<\/span>-Module <span class=\"process-math\">\\(V_g\\)<\/span>.",
   "body": "-Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .   "
 },
@@ -6035,7 +6089,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#prop-vg-is-actually-a-fx-module",
   "type": "Proposition",
-  "number": "15.3",
+  "number": "15.7",
   "title": "<span class=\"process-math\">\\(V_g\\)<\/span> is Actually a <span class=\"process-math\">\\(F[x]\\)<\/span>-Module.",
   "body": "is Actually a -Module   Given a pair as in the definition, really is a -module.   "
 },
@@ -6044,7 +6098,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#ex-special-case-of-v_g",
   "type": "Example",
-  "number": "15.4",
+  "number": "15.8",
   "title": "Special Case of <span class=\"process-math\">\\(V_g\\)<\/span>.",
   "body": "Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.  "
 },
@@ -6053,7 +6107,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#ex-mat_2times-2q",
   "type": "Example",
-  "number": "15.5",
+  "number": "15.9",
   "title": "<span class=\"process-math\">\\(\\Mat_{2\\times 2}(\\Q)\\)<\/span>.",
   "body": " Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).  "
 },
@@ -6062,16 +6116,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#prop-equality-of-fx-modules",
   "type": "Proposition",
-  "number": "15.6",
+  "number": "15.10",
   "title": "Equality of <span class=\"process-math\">\\(F[x]\\)<\/span>-Modules.",
   "body": "Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .   "
 },
 {
-  "id": "subsec-fx-9",
+  "id": "subsec-fx-15",
   "level": "2",
-  "url": "sec-rcf.html#subsec-fx-9",
+  "url": "sec-rcf.html#subsec-fx-15",
   "type": "Remark",
-  "number": "15.7",
+  "number": "15.11",
   "title": "",
   "body": " In fact, these rules determine an “isomorphism of categories''.  "
 },
@@ -6080,7 +6134,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#def-block-diagonal-matrix",
   "type": "Definition",
-  "number": "15.8",
+  "number": "15.12",
   "title": "Block Diagonal Matrix.",
   "body": "Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .   "
 },
@@ -6089,7 +6143,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#thm-rcf",
   "type": "Theorem",
-  "number": "15.9",
+  "number": "15.13",
   "title": "Rational Canonical Form.",
   "body": "Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.   "
 },
@@ -6098,7 +6152,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#subsec-rcf-4",
   "type": "Remark",
-  "number": "15.10",
+  "number": "15.14",
   "title": "",
   "body": " The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)  "
 },
@@ -6107,7 +6161,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#def-invariant-factor-2",
   "type": "Definition",
-  "number": "15.11",
+  "number": "15.15",
   "title": "Invariant Factor.",
   "body": "Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .   "
 },
@@ -6116,7 +6170,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#exe-back-to-mat_2times-2q",
   "type": "Example",
-  "number": "15.12",
+  "number": "15.16",
   "title": "Back to <span class=\"process-math\">\\(\\Mat_{2\\times 2}(\\Q)\\)<\/span>.",
   "body": "Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .  "
 },
@@ -6125,7 +6179,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#cor-every-matrix-similar-to-unique-rcf-matrix",
   "type": "Corollary",
-  "number": "15.13",
+  "number": "15.17",
   "title": "Every Matrix Similar to Unique RCF Matrix.",
   "body": "Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.   "
 },
@@ -6134,7 +6188,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#exe-similarity-classes-of-4times-4-matrices",
   "type": "Example",
-  "number": "15.14",
+  "number": "15.18",
   "title": "Similarity Classes of <span class=\"process-math\">\\(4\\times 4\\)<\/span> Matrices.",
   "body": "Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is   "
 },
@@ -6143,7 +6197,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#subsec-rcf-9",
   "type": "Remark",
-  "number": "15.15",
+  "number": "15.19",
   "title": "",
   "body": " The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):  "
 },
@@ -6152,7 +6206,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#thm-rcf-and-cokernels",
   "type": "Theorem",
-  "number": "15.16",
+  "number": "15.20",
   "title": "RCF and Cokernels.",
   "body": "RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have    "
 },
@@ -6161,7 +6215,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#cor-invariant-factors-are-diagonal-snf-entries",
   "type": "Corollary",
-  "number": "15.17",
+  "number": "15.21",
   "title": "Invariant Factors are Diagonal SNF Entries.",
   "body": "Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .   "
 },
@@ -6170,7 +6224,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#exe-once-more-to-back-to-mat_2times-2q",
   "type": "Example",
-  "number": "15.18",
+  "number": "15.22",
   "title": "Once More to Back to <span class=\"process-math\">\\(\\Mat_{2\\times 2}(\\Q)\\)<\/span>.",
   "body": "Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .  "
 },
@@ -6179,7 +6233,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-rcf.html#exe-finding-ifs-and-rcf",
   "type": "Example",
-  "number": "15.19",
+  "number": "15.23",
   "title": "Finding IFs and RCF.",
   "body": "Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.  "
 },
@@ -6206,7 +6260,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#sec-cayley-hamilton-3",
   "type": "Remark",
-  "number": "15.20",
+  "number": "15.24",
   "title": "",
   "body": "Given a square matrix and polynomial , recall that refers to the square matrix . "
 },
@@ -6215,7 +6269,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#prop-ideals-and-gx",
   "type": "Proposition",
-  "number": "15.21",
+  "number": "15.25",
   "title": "Ideals and <span class=\"process-math\">\\(g(x)\\)<\/span>.",
   "body": "Ideals and   Given a matrix with entries in a field , the set forms a non-zero ideal of .     is an ideal since the result of evaluating the sum of two polynomials at is . the result of evaluating the product at is .  To show it is non-zero, consider the matrices . This is a collection of matrices in the dimensional -vector space , and hence the must be linearly dependent: there are , not all of which are , such that . This proves .   "
 },
@@ -6224,7 +6278,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#def-min-poly-matrix",
   "type": "Definition",
-  "number": "15.22",
+  "number": "15.26",
   "title": "Minimum Polynomial of a Matrix.",
   "body": "Minimum Polynomial of a Matrix   Let be a field and let . The minimum polynomial of , denoted , is the unique monic generator of the ideal . Equivalently, is the monic polynomial of least degree such that .   "
 },
@@ -6233,7 +6287,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#prop-ga0-iff-gx-annihilates-fn_a",
   "type": "Proposition",
-  "number": "15.23",
+  "number": "15.27",
   "title": "<span class=\"process-math\">\\(g(A)=0\\)<\/span> iff <span class=\"process-math\">\\(g(x)\\)<\/span> Annihilates <span class=\"process-math\">\\(F^n_A\\)<\/span>.",
   "body": "iff Annihilates   Given an matrix and polynomial , we have if and only if annihilates the -module .  In particular, is the unique monic generator of the annihilator ideal     If , then for each , by definition of the action of on we have and so annihilates . Conversely, if annihilates , then for all . Taking for each , this says that each column of is and hence is the zero matrix.   "
 },
@@ -6242,7 +6296,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#def-minimum-polynomial-linear-transformation",
   "type": "Definition",
-  "number": "15.24",
+  "number": "15.28",
   "title": "Minimum Polynomial.",
   "body": "Minimum Polynomial   More generally, let be an -vector space of dimension , and let be a linear transformation. The minimum polynomial of , denoted , is the unique monic polynomial generating the ideal or, equivalently, the annihilator ideal .   "
 },
@@ -6251,7 +6305,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#thm-cayley-hamilton-thm",
   "type": "Theorem",
-  "number": "15.25",
+  "number": "15.29",
   "title": "Theorem - Cayley-Hamilton <span class=\"process-math\">\\(\\thm\\)<\/span>.",
   "body": "Theorem - Cayley-Hamilton   Let be a field, a finite dimensional -vector space, and an -linear operator. Let be the invariant factors of .   The product of the invariant factors of equals the characteristic polynomial of :     The largest invariant factor of is equal to the minimum polynomial of :     (The Cayley-Hamilton Theorem) The minimum polynomial of divides its characteristic polynomial. In particular, satisfies its characteristic polynomial:        The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of is equal to the determinant of . (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)  For the second, we use the isomorphism of -modules Note that a polynomial annihilates if and only if divides . Since , the annihilator of the -module is generated by . Thus the annihilator of is also generated by , and by the Proposition is the minimum polynomial of .  The third assertion is an immediate consequence of the first two.   "
 },
@@ -6260,7 +6314,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#exe-finding-minimum-polynomial",
   "type": "Example",
-  "number": "15.26",
+  "number": "15.30",
   "title": "Finding Minimum Polynomial.",
   "body": "Finding Minimum Polynomial  Let's find the minimum polynomial of   We apply the Cayley-Hamilton Theorem: . The polynomial is easy to compute since this matrix is upper-triangular: So for some . By brute-force, we verify that and thus it must be the case that .  "
 },
@@ -6269,7 +6323,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cayley-hamilton.html#exe-finding-minimum-polynomial-2",
   "type": "Example",
-  "number": "15.27",
+  "number": "15.31",
   "title": "Finding Minimum Polynomial (2).",
   "body": "Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .  "
 },
@@ -6296,7 +6350,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#compantion-matrix-and-jordan-blocks",
   "type": "Example",
-  "number": "15.28",
+  "number": "15.32",
   "title": "Companion Matrix and Jordan Blocks.",
   "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix as: But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block .  "
 },
@@ -6305,7 +6359,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#sec-jcf-5",
   "type": "Remark",
-  "number": "15.29",
+  "number": "15.33",
   "title": "",
   "body": " In this example, if we used the basis instead we would have gotten the transpose of .  "
 },
@@ -6314,7 +6368,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#def-jordan-block",
   "type": "Definition",
-  "number": "15.30",
+  "number": "15.34",
   "title": "Jordan Block.",
   "body": "Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)   "
 },
@@ -6323,7 +6377,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#sec-jcf-7",
   "type": "Remark",
-  "number": "15.31",
+  "number": "15.35",
   "title": "",
   "body": " Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.  "
 },
@@ -6332,7 +6386,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#thm-jcf",
   "type": "Theorem",
-  "number": "15.32",
+  "number": "15.36",
   "title": "Jordan Canonical Form.",
   "body": "Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks.    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.   "
 },
@@ -6341,7 +6395,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#def-jcf",
   "type": "Definition",
-  "number": "15.33",
+  "number": "15.37",
   "title": "Jordan Canonical Form.",
   "body": "Jordan Canonical Form   Let be a field, be a finite dimensional vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely into linear factors and has elementary divisors . The matrix is a Jordan canonical form (JCF) of .   "
 },
@@ -6350,7 +6404,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#sec-jcf-10",
   "type": "Warning",
-  "number": "15.34",
+  "number": "15.38",
   "title": "",
   "body": " Not every operator has a Jordan Canonical Form: only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF.  "
 },
@@ -6359,7 +6413,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#sec-jcf-11",
   "type": "Remark",
-  "number": "15.35",
+  "number": "15.39",
   "title": "",
   "body": " If we flip the order of each in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.  "
 },
@@ -6368,7 +6422,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#cor-jcf-exists-if-charpoly-factors-linearly",
   "type": "Corollary",
-  "number": "15.36",
+  "number": "15.40",
   "title": "JCF Exists if CharPoly Factors Linearly.",
   "body": "JCF Exists if CharPoly Factors Linearly   If is an matrix with entries in a field and factors completely into linear factors, then is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.   "
 },
@@ -6377,7 +6431,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#exe-finding-jcf",
   "type": "Example",
-  "number": "15.37",
+  "number": "15.41",
   "title": "Finding JCF.",
   "body": "Finding JCF  Let us find the Jordan Canonical Form of   We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of -module. By the Sunzi Remainder Theorem and thus the elementary divisors of are . By this shows that the JCF of is   "
 },
@@ -6386,7 +6440,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#def-diagonalizable",
   "type": "Definition",
-  "number": "15.38",
+  "number": "15.42",
   "title": "Diagonalizable.",
   "body": "Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.   "
 },
@@ -6395,7 +6449,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#thm-diagonalizable-thm",
   "type": "Theorem",
-  "number": "15.39",
+  "number": "15.43",
   "title": "Diagonalizable Characterization.",
   "body": "Diagonalizable Characterization   Let be a field, let be a finite dimensional vector space, and consider a linear transformation . The following are equivalent:    is diagonalizable.     has a Jordan canonical form and is a diagonal matrix.     has a Jordan canonical form and all elementary divisors are of the form with .    Each invariant factor of is a product of linear polynomials with no repeated linear factors.    The minimal polynomial of is a product of linear polynomials with no repeated linear factors.       Note that a diagonal matrix is an example of a matrix in JCF. By the uniqueness of the JCF, (1) holds if and only if (2) holds. Moreover, the equivalence of (2) and (3) follows by definition. A matrix has a JCF if and only if its invariant factors factor completely. In this case, the elementary divisors are constructed by decomposing each invariant factor into powers of distinct linear polynomials. This gives that (3) holds if and only if (4) holds. Finally, since the minimal polynomial is one of the invariant factors and every other invariant factor divides it, we get the equivalence between (4) and (5).   "
 },
