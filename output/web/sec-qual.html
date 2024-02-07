@@ -623,7 +623,14 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Homomorphisms and Polynomial Rings</span></a></div>
+<div class="toc-title-box"><a href="sec-poly.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Group Rings and Polynomial Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-poly.html#subsec-group-ring" class="internal"><span class="title">What is a Group Ring?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-poly.html#subsec-polynomial-rings" class="internal"><span class="title">What is a Polynomial Ring?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Homomorphisms and Polynomial Rings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#sec-ring-hom" class="internal"><span class="title">Homomorphisms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#subsec-polyrings" class="internal"><span class="title">Polynomial Rings</span></a></div></li>
@@ -1261,7 +1268,7 @@ F\subseteq L\subseteq L(\a),
 <li id="jan-2021-4-2-2-1-2"><div class="para" id="p-derived-jan-2021-4-2-2-1-2">Assume <span class="process-math">\(R\)</span> is a finite ring. Prove that every prime ideal is a maximal ideal.</div></li>
 </ol></div>
 <div class="solutions"><details id="jan-2021-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="jan-2021-4-3-1"><ol class="lower-alpha">
-<li id="jan-2021-4-3-1-1-1"><div class="para" id="jan-2021-4-3-1-1-1-1">See: <a href="" class="xref" data-knowl="./knowl/xref/cor-maximal-prime.html" title="Corollary 9.37: Maximal Ideals are Prime">Corollary 9.37</a>.</div></li>
+<li id="jan-2021-4-3-1-1-1"><div class="para" id="jan-2021-4-3-1-1-1-1">See: <a href="" class="xref" data-knowl="./knowl/xref/cor-maximal-prime.html" title="Corollary 9.38: Maximal Ideals are Prime">Corollary 9.38</a>.</div></li>
 <li id="jan-2021-4-3-1-1-2"><div class="para" id="jan-2021-4-3-1-1-2-1">Let <span class="process-math">\(R\)</span> be a finite ring, and let <span class="process-math">\(P\)</span> be a prime ideal in <span class="process-math">\(R\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-iff-domain.html" title="Theorem 9.31: Prime iff Quotient is Domain">Theorem 9.31</a> <span class="process-math">\(R/P\)</span> is a finite integral domain. We show <span class="process-math">\(R/P\)</span> is a field. Let <span class="process-math">\(a\not\in P\text{,}\)</span> and consider <span class="process-math">\(a^n\)</span> for all <span class="process-math">\(n\in\N\text{.}\)</span> As <span class="process-math">\(R/P\)</span> is finite, there exists some <span class="process-math">\(k&lt;m\in N\)</span> such that <span class="process-math">\(a^k=a^m\text{.}\)</span> Then <span class="process-math">\(a^{m-k}\cdot a^k=a^m=a^k\text{,}\)</span> meaning that <span class="process-math">\(a^{m-k}=e\text{.}\)</span> Thus <span class="process-math">\(a\)</span> has inverse <span class="process-math">\(a^{m-k-1}\text{,}\)</span> making <span class="process-math">\(a\)</span> a unit. Thus <span class="process-math">\(R/P\)</span> is a field, making <span class="process-math">\(P\)</span> a maximal ideal by <a href="" class="xref" data-knowl="./knowl/xref/thm-maximal-iff-field.html" title="Theorem 9.36: Maximal Ideal iff Quotient is a Field">Theorem 9.36</a>.</div></li>
 </ol></div></div></details></div></article></details></div>
 </div>
@@ -1423,7 +1430,7 @@ N=\bigcap_{g\in G}gKg\inv
 <div class="exercisegroup-exercises"><details id="jan-2012-8" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 6.</span>
 </h4></summary><article class="exercise exercise-like"><div class="para logical" id="jan-2012-8-2-1">
-<div class="para">Let <span class="process-math">\(N\)</span> be a submodule of an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/lem-zorn.html" title="Lemma 9.38: Zorn’s Lemma">Zorn’s Lemma</a>, prove that there is a submodule <span class="process-math">\(N'\)</span> such that</div>
+<div class="para">Let <span class="process-math">\(N\)</span> be a submodule of an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/lem-zorn.html" title="Lemma 9.39: Zorn’s Lemma">Zorn’s Lemma</a>, prove that there is a submodule <span class="process-math">\(N'\)</span> such that</div>
 <ol class="lower-alpha">
 <li id="jan-2012-8-2-1-6-1"><div class="para" id="jan-2012-8-2-1-6-1-1">
 <span class="process-math">\(N\cap N' = (0)\text{,}\)</span> and</div></li>
