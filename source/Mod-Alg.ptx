@@ -21379,28 +21379,40 @@
           </subsection>
 
           <subsection><title>Sage Calculators</title>
-        
-            <sage>
-              <input>
-                Sn = SymmetricGroup(n)
-              </input>
-            </sage>
 
-            <sage>
-              <input>
-                Sn([1,2,3])*Sn([3,1,2])
-              </input>
-            </sage>
+            <pre>
+              CyclicGroup(3);
+              SymmetricGroup(3);
+              DihedralGroup(4); 
+              QuaternionGroup(8);
+              FreeGroup("a", "b", "c");
+            </pre>
 
-            <sage>
-              <input>
-                Sn([3,1,2])^2
-              </input>
-            </sage>
+            <pre>
+              Size(G);
+              Elements(G);
+              Subgroups(G);
+              NormalSubgroups(G);
+              GeneratorsOfGroup(G);
+            </pre>
+
+            <pre>
+              DirectProduct(G1, G2);
+              QuotientGroup(G, N);
+              
+              IsCyclic(G);
+              IsAbelian(G);
+              IsSolvable(G);
+              IsSimple(G);
+
+              IsSubgroup(G,H);
+              IsNormal(G,H);
+              IsCharacteristicSubgroup(G, N);
+            </pre>
 
             <sage language="gap">
               <input>
-                h
+                (1,2,3,4)^2
               </input>
             </sage>
 
