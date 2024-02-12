@@ -11022,7 +11022,7 @@
     
       </chapter>
 
-      <chapter xml:id="ch-domains"><title>Commutative Domains</title>
+      <chapter xml:id="ch-domains"><title>Domains</title>
     
         <section xml:id="sec-eds"><title>Euclidean Domains (EDs)</title>
 
@@ -14084,6 +14084,7 @@
               <p>
                 <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
                 Just don't ask me what it looks like.
+                <fn>This being one of those instances when the destination is more important than the journey</fn>
               </p>
             </example>
 
@@ -21413,6 +21414,12 @@
             <sage language="gap">
               <input>
                 (1,2,3,4)^2
+              </input>
+            </sage>
+
+            <sage language="macaulay2">
+              <input>
+                R = ZZ/101[x,y]
               </input>
             </sage>
 
