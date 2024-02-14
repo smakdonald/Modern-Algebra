@@ -74,7 +74,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -91,7 +91,8 @@ window.MathJax = {
 sagecell.makeSagecell({
   "inputLocation": "pre.sagecell-practice",
   "linked": true,
-  "evalButtonText": "Evaluate"
+  "evalButtonText": "Evaluate",
+  "languages": sagecell.allLanguages
 });
 </script><script>// Make *any* pre with class 'sagecell-gap' an executable Sage cell
 // Their results will be linked, only within language type
@@ -105,8 +106,20 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (GAP)"
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* pre with class 'sagecell-macaulay2' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-macaulay2",
+  "linked": true,
+  "linkKey": "linked-macaulay2",
+  "autoeval": false,
+  "languages": [
+    "macaulay2"
+  ],
+  "evalButtonText": "Evaluate (Macaulay2)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -114,16 +127,16 @@ sagecell.makeSagecell({
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_bluegreen_grey.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_bluegreen_grey.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -1044,14 +1057,14 @@ sagecell.makeSagecell({
 </div></article><details id="lem-sn-conj-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="lem-sn-conj-2-1">To prove this, evaluate both sides at <span class="process-math">\(\sigma(i_t)\)</span> for any <span class="process-math">\(t\)</span> and observe that one gets <span class="process-math">\(\sigma(i_{t+1})\)</span> (with the supscript taken modulo <span class="process-math">\(p\)</span>) both times. This proves they agree on the set <span class="process-math">\(\sigma(\{i_1, \dots, i_p\})\text{.}\)</span> If <span class="process-math">\(j\)</span> is not in this set, then <span class="process-math">\((i_1 \, i_2 \, \cdots i_p)\)</span> fixes <span class="process-math">\(\sigma^{-1}(j)\)</span> so the left-hand side fixes <span class="process-math">\(j\text{.}\)</span> So does the right, since <span class="process-math">\(\sigma^{-1}(j) \notin \{\sigma(i_1), \dots, \sigma(i_p)\}\text{.}\)</span> Thus the two functions coincide on elements.</div></article></details><article class="proposition theorem-like" id="prop-sn-conj"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">B.3</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugates in <span class="process-math">\(S_n\)</span>.</span>
 </h3>
-<div class="para" id="prop-sn-conj-2-1">Two elements of <span class="process-math">\(S_n\)</span> are conjugate if and only if they have the same cycle type.</div></article><details id="prop-sn-conj-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="prop-sn-conj-3-1">If two elements of <span class="process-math">\(S_n\)</span> are conjugate, say <span class="process-math">\(\beta = \sigma\alpha \sigma^{-1}\text{,}\)</span> then they have the same cycle type, since we may write <span class="process-math">\(\alpha\)</span> as a product of disjoint cycles <span class="process-math">\(\alpha = \alpha_1 \cdots \alpha_m\)</span> and then apply <a href="" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" title="Lemma B.2">Lemma B.2</a>. Indeed, <span class="process-math">\(\sigma\alpha \sigma^{-1} = (\sigma\alpha_1 \sigma^{-1})  \cdots (\sigma\alpha_m \sigma^{-1})\)</span> and <a href="" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" title="Lemma B.2">Lemma B.2</a> shows that the right-side is a product of disjoint cycles.</div> <div class="para logical" id="prop-sn-conj-3-2">
+<div class="para" id="prop-sn-conj-2-1">Two elements of <span class="process-math">\(S_n\)</span> are conjugate if and only if they have the same cycle type.</div></article><details id="prop-sn-conj-3" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="prop-sn-conj-3-1">If two elements of <span class="process-math">\(S_n\)</span> are conjugate, say <span class="process-math">\(\beta = \sigma\alpha \sigma^{-1}\text{,}\)</span> then they have the same cycle type, since we may write <span class="process-math">\(\alpha\)</span> as a product of disjoint cycles <span class="process-math">\(\alpha = \alpha_1 \cdots \alpha_m\)</span> and then apply <a href="sec-symmetric-2.html#lem-sn-conj" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma B.2">Lemma B.2</a>. Indeed, <span class="process-math">\(\sigma\alpha \sigma^{-1} = (\sigma\alpha_1 \sigma^{-1})  \cdots (\sigma\alpha_m \sigma^{-1})\)</span> and <a href="sec-symmetric-2.html#lem-sn-conj" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma B.2">Lemma B.2</a> shows that the right-side is a product of disjoint cycles.</div> <div class="para logical" id="prop-sn-conj-3-2">
 <div class="para">Conversely, suppose <span class="process-math">\(\alpha = \alpha_1 \cdots \alpha_k\)</span> and <span class="process-math">\(\beta = \beta_1 \cdots \beta_k\)</span> are decompositions into disjoint cycles and that <span class="process-math">\(\alpha_i, \beta_i\)</span> both have length <span class="process-math">\(p_i \geq 2\)</span> for all <span class="process-math">\(i\text{.}\)</span> We need to prove <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are conjugate. Let’s start with the case <span class="process-math">\(k = 1\text{:}\)</span> given two cycles of the same length</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-sn-conj.html">
 \begin{equation*}
 \alpha = (i_1 \, \dots \, i_p) \text{ and } \beta = (j_1 \, \dots \, j_p).
 \end{equation*}
 </div>
-<div class="para">If <span class="process-math">\(\sigma\)</span> is any permutation such that <span class="process-math">\(\sigma(i_m) = j_m\)</span> for all <span class="process-math">\(m = 1, \dots, p\text{,}\)</span> then <span class="process-math">\(\sigma\alpha\sigma^{-1} = \beta\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" title="Lemma B.2">Lemma B.2</a>.</div>
+<div class="para">If <span class="process-math">\(\sigma\)</span> is any permutation such that <span class="process-math">\(\sigma(i_m) = j_m\)</span> for all <span class="process-math">\(m = 1, \dots, p\text{,}\)</span> then <span class="process-math">\(\sigma\alpha\sigma^{-1} = \beta\)</span> by <a href="sec-symmetric-2.html#lem-sn-conj" class="xref" data-knowl="./knowl/xref/lem-sn-conj.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma B.2">Lemma B.2</a>.</div>
 </div> <div class="para" id="prop-sn-conj-3-3">Note that such <span class="process-math">\(\sigma\)</span> is “allowed” to map <span class="process-math">\(\{1, \dots, n\} \setminus \{i_1 \, \dots \, i_p\}\)</span> bijectively to <span class="process-math">\(\{1, \dots, \} \setminus \{j_1 \, \dots \, j_p\}\)</span> in any way possible. From this observation the general case follows: since the cycles are disjoint, we can find a single permutation <span class="process-math">\(\sigma\)</span> such that <span class="process-math">\(\sigma\alpha_i \sigma^{-1} = \beta_i\)</span> for all <span class="process-math">\(i\text{.}\)</span>
 </div></article></details><article class="example example-like" id="subsec-sn-conj-4"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">B.4</span><span class="period">.</span>
