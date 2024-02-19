@@ -21473,7 +21473,15 @@
 
         <section xml:id="sec-gap"><title>GAP</title>
 
-          <subsection><title>Sage Calculators</title>
+          <subsection xml:id="subsec-what-gap"><title>What is GAP?</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-gap-commands"><title>Commands in HAP</title>
 
             <pre>
               CyclicGroup(3);
@@ -21520,8 +21528,6 @@
             <sage type="practice" />
 
           </subsection>
-
-          
 
         </section>
 
