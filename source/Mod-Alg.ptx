@@ -355,7 +355,6 @@
     <rename element="exercises">Qualifying Exam Problems</rename>
     <rename element="objectives">Reminders and Recollections</rename>
 
-
   </docinfo>
   
   <book xml:id="modern-algebra"><title>Modern Algebra</title> <subtitle>Groups, Rings, Modules, Fields</subtitle>
@@ -8709,331 +8708,331 @@
     
           <subsection xml:id="subsec-rings"><title>From Rings to Fields</title>
               
-              <blockquote>
-                <p>
-                  <q>
-                    I made a lot of mistakes out of the ring, but I never made any in it.
-                  </q>
-                </p>
-                <attribution>Jack Johnson</attribution>
-              </blockquote>
-  
-              <definition xml:id="def-ring"><title>Ring</title>
-                <statement>
-                  <p>
-                    A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
-                    <idx><h>ring</h></idx>
-                  </p>
-  
-                  <p>
-                    <ul>
-                      <li> 
-                        <p>
-                          <m>(R,+)</m> is an abelian group with identity element denoted <m>0</m>,
-                        </p>
-                      </li>
-
-                      <li><title>Associative Multiplication</title>
-                        <p>
-                          <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a monoid)
-                        </p>
-                      </li>
-
-                      <li><title>Distributive Property</title>
-                        <p>
-                          <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
-                          <idx><h>distributive property</h></idx>
-                        </p>
-                      </li>
-                    </ul>
-                  </p>
-
-                  <p>
-                    <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if, in addition to (1), (2), (3)
-                    <idx><h>unital ring</h></idx>
-                    <idx><h>ring with unity</h></idx>
-                    <idx><h>ring with identity</h></idx>
-                  </p>
-          
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          there is a multiplicative identity element written as <m>1</m> such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-          
-                  <p>
-                    <m>R</m> is <em>commutative</em> if in addition to (1)–(3)
-                    <idx><h>commutative ring</h></idx>
-                  </p>
-          
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-          
-                  <p>
-                    <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m>, (1)–(4) and (6) hold
-                    <idx><h>division ring</h></idx>
-                  </p>
-          
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>(R \sm \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-
-                  <p xml:id="def-field">
-                    <m>R</m> is a <em>field</em> if <m>1\neq 0</m> and (1)–(6) hold (i.e. a field is a commutative division ring).
-                    <idx><h>field</h></idx>
-                  </p>
-                </statement>
-              </definition>
-
-              <aside>
-                <p>
-                  Around these parts most of us generally include <m>1</m> in our definition of a ring, referring to a ring without an identity as a <em>rng</em>
-                  <fn>Get it?</fn>. 
-                  However, we'll stick with the more classical definition for now.
-                </p>
-              </aside>
-
-              <exploration>
-                <p>
-                  One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. 
-                  Discuss.
-                </p>
-              </exploration>
-
+            <blockquote>
               <p>
-                Here are some basic consequences of the axioms.
+                <q>
+                  I made a lot of mistakes out of the ring, but I never made any in it.
+                </q>
               </p>
-  
-              <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
-                <idx><h>ring arithmetic</h></idx>
-                <statement>
-                  <p>
-                    For any ring <m>R</m> and all <m>a,b \in R</m> we have:
-                  </p>
+              <attribution>Jack Johnson</attribution>
+            </blockquote>
 
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>a \cdot 0 = 0 = 0 \cdot a</m>,
-                        </p>
-                      </li>
-          
-                      <li>
-                        <p>
-                          <m>(-a)b = -(ab) = a(-b)</m>,
-                        </p>
-                      </li>
-          
-                      <li>
-                        <p>
-                          <m>(-a)(-b) = ab</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>    
+            <definition xml:id="def-ring"><title>Ring</title>
+              <statement>
+                <p>
+                  A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
+                  <idx><h>ring</h></idx>
+                </p>
 
-                  <p>
-                    For a unital ring <m>R</m> and all <m>a\in R</m> we have:
-                  </p>
+                <p>
+                  <ul>
+                    <li> 
+                      <p>
+                        <m>(R,+)</m> is an abelian group with identity element denoted <m>0</m>,
+                      </p>
+                    </li>
 
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>1</m> is unique, and
-                        </p>
-                      </li>
-          
-                      <li>
-                        <p>
-                          <m>(-1)a = -a</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
+                    <li><title>Associative Multiplication</title>
+                      <p>
+                        <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a monoid)
+                      </p>
+                    </li>
 
-                <proof>
-                  <p>
-                    Let <m>R</m> be a ring with identity.
+                    <li><title>Distributive Property</title>
+                      <p>
+                        <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
+                        <idx><h>distributive property</h></idx>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
 
-                    <ol>
-                      <li>
-                        <p>
-                          Let <m>a\in R</m>. 
-                          Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. 
-                          Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. 
-                          A similar argument shows that <m>0=a0</m>.
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          Let <m>a\in R</m>. 
-                          Note that <m>-a+a=0</m>. 
-                          Consider <m>(-1)a+a</m>. 
-                          Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. 
-                          Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </proof>
-              </proposition>
-
-              <p>
-                Phew.
-                Let's take a breather and see some examples.
-              </p>
-  
-              <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
+                <p>
+                  <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if, in addition to (1), (2), (3)
+                  <idx><h>unital ring</h></idx>
+                  <idx><h>ring with unity</h></idx>
+                  <idx><h>ring with identity</h></idx>
+                </p>
+        
                 <p>
                   <ol>
                     <li>
                       <p>
-                        <m>R=\{0\}</m> is called the <em>trivial ring</em>, or <em>zero ring</em>.
-                        <fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
-                        <idx><h>trivial ring</h></idx>
-                        <idx><h>zero ring</h></idx>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>\mathbb{Z}</m> is a commutative ring.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>\mathbb{Z}/n</m> is a commutative ring under addition and multiplication modulo <m>n</m>.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        The familiar sets <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
-                      </p>
-                    </li>
-
-                    <li xml:id="def-gaussian-integers">
-                      <p>
-                        The set <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> is a commutative ring known as the <em>Gaussian integers</em>.
-                        <idx><h>Gaussian integers</h></idx>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        If <m>R</m> is any ring (not necessarily commutative), so is <m>\operatorname{M}_{n}(R)</m> for any natural number <m>n</m>, using the usual rules for addition and multiplication of square matrices.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
-                        <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
+                        there is a multiplicative identity element written as <m>1</m> such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
-              </example>
-
-              <exercise xml:id="exe-1-is-0"><title><m>1=0</m></title>
-                <statement>
-                  <p>
-                    Let <m>R</m> be a ring. 
-                    Prove that <m>R=\{0\}</m> if and only if <m>1=0</m>.
-                  </p>
-                </statement>
-                <solution>
-                  <p>
-                    Notice that in the trivial ring <m>0=1</m>. 
-                    Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.
-                  </p>
-                </solution>
-              </exercise>
-
-              <exercise><title>Direct Product Preservations</title>
+        
                 <p>
-                  Let <m>R</m> and <m>S</m> be rings. 
-                  The Cartesian product <m>R\times S</m> is commutative if and only if <m>R</m> and <m>S</m> are commutative. 
-                  Similarly, <m>R\times S</m> has identity if and only if both <m>R</m> and <m>S</m> do as well.
+                  <m>R</m> is <em>commutative</em> if in addition to (1)–(3)
+                  <idx><h>commutative ring</h></idx>
                 </p>
-              </exercise>
-
-              <exercise><title>Less Relevant Rings</title>
+        
                 <p>
                   <ol>
-                    <li xml:id="list-opposite-ring"><title>Opposite Day</title>
+                    <li>
                       <p>
-                        Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. 
-                        This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). 
-                        Then <m>R^{op}</m> is also a ring
-                        <idx><h>opposite ring</h></idx>
-                        <idx><h><m>R^{op}</m></h></idx>
-                      </p>
-                    </li>
-
-                    <li><title>Function Ring</title>
-                      <p>
-                        If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. 
-                        Then <m>\operatorname{Fun}(X,R)</m> is a ring.
-                         If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
-                         <idx><h><m>\operatorname{Fun}(X,R)</m></h></idx>
-                      </p>
-                    </li>
-                    
-                    <li> <title>Endomorphism Ring</title>
-                      <p>
-                        If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
-                        <idx><h>endomorphism ring</h></idx>
-                        <idx><h><m>\End(A)</m></h></idx>
-                      </p>
-
-                      <p>
-                        Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. 
-                        This is almost always a non-commutative ring.
+                        <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
-              </exercise>
+        
+                <p>
+                  <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m>, (1)–(4) and (6) hold
+                  <idx><h>division ring</h></idx>
+                </p>
+        
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>(R \sm \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
+                      </p>
+                    </li>
+                  </ol>
+                </p>
 
+                <p xml:id="def-field">
+                  <m>R</m> is a <em>field</em> if <m>1\neq 0</m> and (1)–(6) hold (i.e. a field is a commutative division ring).
+                  <idx><h>field</h></idx>
+                </p>
+              </statement>
+            </definition>
+
+            <aside>
               <p>
-                Here is a nice generalization that will prove usful quite a few times down the road.
+                Around these parts most of us generally include <m>1</m> in our definition of a ring, referring to a ring without an identity as a <em>rng</em>
+                <fn>Get it?</fn>. 
+                However, we'll stick with the more classical definition for now.
               </p>
+            </aside>
 
-              <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
-                <idx><h>binomial theorem (commutative rings)</h></idx>
-                <statement>
-                  <p>
-                    For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
-                    <me>
-                      (a+b)^n = \sum_{i=0}^n {n\choose i} a^{n-i}b^i
-                    </me>
-                    where <m>{n\choose i}</m> is the binomial coefficient, defined as: <m>{n\choose i} = \frac{n!}{i!(n-i)!}</m> with integers <m>n</m> and <m>i</m> such that <m>0\le i\le n</m>.
-                  </p>
-                </statement>
-              </theorem>         
+            <exploration>
+              <p>
+                One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. 
+                Discuss.
+              </p>
+            </exploration>
+
+            <p>
+              Here are some basic consequences of the axioms.
+            </p>
+
+            <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
+              <idx><h>ring arithmetic</h></idx>
+              <statement>
+                <p>
+                  For any ring <m>R</m> and all <m>a,b \in R</m> we have:
+                </p>
+
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>a \cdot 0 = 0 = 0 \cdot a</m>,
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>(-a)b = -(ab) = a(-b)</m>,
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>(-a)(-b) = ab</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>    
+
+                <p>
+                  For a unital ring <m>R</m> and all <m>a\in R</m> we have:
+                </p>
+
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>1</m> is unique, and
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>(-1)a = -a</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>R</m> be a ring with identity.
+
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>a\in R</m>. 
+                        Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. 
+                        Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. 
+                        A similar argument shows that <m>0=a0</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>a\in R</m>. 
+                        Note that <m>-a+a=0</m>. 
+                        Consider <m>(-1)a+a</m>. 
+                        Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. 
+                        Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </proposition>
+
+            <p>
+              Phew.
+              Let's take a breather and see some examples.
+            </p>
+
+            <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>R=\{0\}</m> is called the <em>trivial ring</em>, or <em>zero ring</em>.
+                      <fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
+                      <idx><h>trivial ring</h></idx>
+                      <idx><h>zero ring</h></idx>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\mathbb{Z}</m> is a commutative ring.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\mathbb{Z}/n</m> is a commutative ring under addition and multiplication modulo <m>n</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The familiar sets <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
+                    </p>
+                  </li>
+
+                  <li xml:id="def-gaussian-integers">
+                    <p>
+                      The set <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> is a commutative ring known as the <em>Gaussian integers</em>.
+                      <idx><h>Gaussian integers</h></idx>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>R</m> is any ring (not necessarily commutative), so is <m>\operatorname{M}_{n}(R)</m> for any natural number <m>n</m>, using the usual rules for addition and multiplication of square matrices.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
+                      <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+            <exercise xml:id="exe-1-is-0"><title><m>1=0</m></title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring. 
+                  Prove that <m>R=\{0\}</m> if and only if <m>1=0</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Notice that in the trivial ring <m>0=1</m>. 
+                  Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.
+                </p>
+              </solution>
+            </exercise>
+
+            <exercise><title>Direct Product Preservations</title>
+              <p>
+                Let <m>R</m> and <m>S</m> be rings. 
+                The Cartesian product <m>R\times S</m> is commutative if and only if <m>R</m> and <m>S</m> are commutative. 
+                Similarly, <m>R\times S</m> has identity if and only if both <m>R</m> and <m>S</m> do as well.
+              </p>
+            </exercise>
+
+            <exercise><title>Less Relevant Rings</title>
+              <p>
+                <ol>
+                  <li xml:id="list-opposite-ring"><title>Opposite Day</title>
+                    <p>
+                      Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. 
+                      This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). 
+                      Then <m>R^{op}</m> is also a ring
+                      <idx><h>opposite ring</h></idx>
+                      <idx><h><m>R^{op}</m></h></idx>
+                    </p>
+                  </li>
+
+                  <li><title>Function Ring</title>
+                    <p>
+                      If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. 
+                      Then <m>\operatorname{Fun}(X,R)</m> is a ring.
+                        If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
+                        <idx><h><m>\operatorname{Fun}(X,R)</m></h></idx>
+                    </p>
+                  </li>
+                  
+                  <li> <title>Endomorphism Ring</title>
+                    <p>
+                      If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
+                      <idx><h>endomorphism ring</h></idx>
+                      <idx><h><m>\End(A)</m></h></idx>
+                    </p>
+
+                    <p>
+                      Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. 
+                      This is almost always a non-commutative ring.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </exercise>
+
+            <p>
+              Here is a nice generalization that will prove usful quite a few times down the road.
+            </p>
+
+            <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
+              <idx><h>binomial theorem (commutative rings)</h></idx>
+              <statement>
+                <p>
+                  For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
+                  <me>
+                    (a+b)^n = \sum_{i=0}^n {n\choose i} a^{n-i}b^i
+                  </me>
+                  where <m>{n\choose i}</m> is the binomial coefficient, defined as: <m>{n\choose i} = \frac{n!}{i!(n-i)!}</m> with integers <m>n</m> and <m>i</m> such that <m>0\le i\le n</m>.
+                </p>
+              </statement>
+            </theorem>         
   
           </subsection>  
 
@@ -14424,7 +14423,7 @@
                   Let <m>F</m> be a field and <m>f: V \to W</m> an <m>F</m>-linear transformation between <m>F</m>-vector spaces <m>V</m> and <m>W</m>, and assume <m>V</m> is finite dimensional. 
                   Then 
                   <me>
-                    \dim(V) = \rank(f) + \null(f)
+                    \dim(V) = \rank(f) + \ns(f)
                   </me> 
                   or equivalently 
                   <me>
@@ -16659,7 +16658,11 @@
               <attribution>Hamilton</attribution>
             </blockquote>
 
-          <remark><p>Given a square matrix <m>A</m> and polynomial <m>g(x) = \sum_i a_i x^i</m>, recall that <m>g(A)</m> refers to the square matrix <m>\sum_i a_i A^i</m>.</p></remark>
+          <remark>
+            <p>
+              Given a square matrix <m>A</m> and polynomial <m>g(x) = \sum_i a_i x^i</m>, recall that <m>g(A)</m> refers to the square matrix <m>\sum_i a_i A^i</m>.
+            </p>
+          </remark>
     
           <proposition xml:id="prop-ideals-and-gx"><title>Ideals and <m>g(x)</m></title>
             <statement>
@@ -16674,7 +16677,9 @@
               </p>
   
               <p>
-                To show it is non-zero, consider the matrices <m>I_n, A, A^2, \dots, A^{n^2}</m>. This is a collection of <m>n^2 + 1</m> matrices in the <m>n^2</m> dimensional <m>F</m>-vector space <m>\Mat_{n \times n}(F)</m>, and hence the must be linearly dependent: there are <m>a_0, \dots, a_{n^2+1} \in F</m>, not all of which are <m>0</m>, such that <m>\sum_i a_i A^i = 0</m>. This proves <m>\sum_i a_i x^i \in I</m>.
+                To show it is non-zero, consider the matrices <m>I_n, A, A^2, \dots, A^{n^2}</m>. 
+                This is a collection of <m>n^2 + 1</m> matrices in the <m>n^2</m> dimensional <m>F</m>-vector space <m>\Mat_{n \times n}(F)</m>, and hence the must be linearly dependent: there are <m>a_0, \dots, a_{n^2+1} \in F</m>, not all of which are <m>0</m>, such that <m>\sum_i a_i A^i = 0</m>. 
+                This proves <m>\sum_i a_i x^i \in I</m>.
               </p>
             </proof>
           </proposition>
@@ -16682,7 +16687,9 @@
           <definition xml:id="def-min-poly-matrix"><title>Minimum Polynomial of a Matrix</title>
             <statement>
               <p>
-                Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. The <em>minimum polynomial</em> of <m>A</m>, denoted <m>\mp_A(x)</m>, is the unique monic generator of the ideal <m>\{g(x) \in F[x] \, \mid \, g(A) = 0\}</m>. Equivalently, <m>\mp_A(x)</m> is the monic polynomial of least degree such that <m>\mp_A(A) = 0</m>.
+                Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. 
+                The <em>minimum polynomial</em> of <m>A</m>, denoted <m>\mp_A(x)</m>, is the unique monic generator of the ideal <m>\{g(x) \in F[x] \, \mid \, g(A) = 0\}</m>. 
+                Equivalently, <m>\mp_A(x)</m> is the monic polynomial of least degree such that <m>\mp_A(A) = 0</m>.
               </p>
             </statement>
           </definition>
@@ -16713,16 +16720,17 @@
           <definition xml:id="def-minimum-polynomial-linear-transformation"><title>Minimum Polynomial</title>
             <statement>
               <p>
-                More generally, let <m>V</m> be an <m>F</m>-vector space of dimension <m>n</m>, and let <m>g: V \to V</m> be a linear transformation. The <em>minimum polynomial</em> of <m>g</m>, denoted <m>\mp_g(x)</m>, is the unique monic polynomial generating the ideal <m>\{f(x) \in F[x] \mid f(g) = 0\}</m> or, equivalently, the annihilator ideal <m>{\ann}_{F[x]}(V_g)</m>.
+                More generally, let <m>V</m> be an <m>F</m>-vector space of dimension <m>n</m>, and let <m>g: V \to V</m> be a linear transformation. 
+                The <em>minimum polynomial</em> of <m>g</m>, denoted <m>\mp_g(x)</m>, is the unique monic polynomial generating the ideal <m>\{f(x) \in F[x] \mid f(g) = 0\}</m> or, equivalently, the annihilator ideal <m>{\ann}_{F[x]}(V_g)</m>.
               </p>
             </statement>
           </definition>
 
           <theorem xml:id="thm-cayley-hamilton"><title>Theorem - Cayley-Hamilton <m>\thm</m></title>
-
             <statement>
               <p>
-                Let <m>F</m> be a field, <m>V</m> a finite dimensional <m>F</m>-vector space, and <m>g: V \to V</m> an <m>F</m>-linear operator. Let <m>f_1(x), \dots, f_s(x)</m> be the invariant factors of <m>g</m>. 
+                Let <m>F</m> be a field, <m>V</m> a finite dimensional <m>F</m>-vector space, and <m>g: V \to V</m> an <m>F</m>-linear operator. 
+                Let <m>f_1(x), \dots, f_s(x)</m> be the invariant factors of <m>g</m>. 
                 <ol>
                   <li>
                     <p>
@@ -16740,7 +16748,9 @@
 
                   <li>
                     <p>
-                      (The Cayley-Hamilton Theorem) The minimum polynomial of <m>g</m> divides its characteristic polynomial. In particular, <m>g</m> satisfies its characteristic polynomial: 
+                      (The Cayley-Hamilton Theorem) 
+                      The minimum polynomial of <m>g</m> divides its characteristic polynomial. 
+                      In particular, <m>g</m> satisfies its characteristic polynomial: 
                       <me>\cp_g(g) = 0.</me> 
                     </p>
                   </li>
@@ -21165,39 +21175,9 @@
           
         </section>
 
-      </appendix> 
+      </appendix>
 
       <appendix xml:id="app-extras"><title>Extras</title>
-
-        <section xml:id="sec-binop"><title>Binary Operations and Algebraic Structures</title>
-
-          <subsection xml:id="subsec-binop"><title>Binary Operations, Revisited</title>
-
-            <p>
-              As a little aside, we can also look at algebraic structures that are ~almost~ groups. 
-              For those who appreciate a snazzy visual, here is a handy little graphic.
-            </p>
-
-            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
-              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
-              <image source="images/magma.png" width="80%"/>
-            </figure>
-            
-          </subsection>
-
-          <subsection xml:id="subsec-"><title>Algebraic Structures</title>
-
-            <p></p>
-            
-          </subsection>
-          
-        </section>
-
-        <section xml:id="sec-cayley-graphs"><title>Cayley Graphs</title>
-
-          <p></p>
-          
-        </section>
 
         <section xml:id="sec-symmetric-2"><title>More Fun with Symmetric Groups</title>
 
@@ -21378,6 +21358,120 @@
             </example>
 
           </subsection>
+          
+        </section>
+
+        <section xml:id="sec-ring-extras"><title>Ring Theory Extras</title>
+
+          <subsection xml:id="subsec-nilradical"><title>The Nilradical and Jacobson Radical</title>
+
+            <proposition xml:id="prop-1.7"><!-- -->
+              <statement>
+                <p>
+                  The set <m>\mathfrak{N}</m> of all nilpotent elements in a ring <m>A</m> is an ideal, and <m>A / \mathfrak{R}</m> has no nilpotent element <m>\neq 0</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>x \in \mathfrak{R}</m>, clearly <m>a x \in \mathfrak{R}</m> for all <m>a \in A</m>. 
+                  Let <m>x, y \in \mathfrak{N}</m> : say <m>x^{m}=0, y^{n}=0</m>. 
+                  By the binomial theorem (which is valid in any commutative ring), <m>(x+y)^{m+n-1}</m> is a sum of integer multiples of products <m>x^{r} y^{s}</m>, where <m>r+s=m+n-1</m>; 
+                  we cannot have both <m>r&lt;m</m> and <m>s&lt;n</m>, hence each of these products vanishes and therefore <m>(x+y)^{m+n-1}=0</m>. 
+                  Hence <m>x+y \in \mathfrak{R}</m> and therefore <m>\mathfrak{N}</m> is an ideal.
+                </p>
+              </proof>
+            </proposition>
+        
+            <p>
+              Let <m>\bar{x} \in A / \mathfrak{R}</m> be represented by <m>x \in A</m>. 
+              Then <m>\bar{x}^{n}</m> is represented by <m>x^{n}</m>, so that <m>\bar{x}^{n}=0 \Rightarrow x^{n} \in \mathfrak{R} \Rightarrow\left(x^{n}\right)^{k}=0</m> for some <m>k&gt;0 \Rightarrow x \in \mathfrak{R} \Rightarrow \bar{x}=0</m>.
+            </p>
+        
+            <p>
+              The ideal <m>\mathfrak{R}</m> is called the nilradical of <m>A</m>. 
+              The following proposition gives an alternative definition of <m>\mathfrak{R}</m> :
+            </p>
+
+            <proposition xml:id="prop-1.8"><!-- -->
+              <statement>
+                <p>
+                  The nilradical of <m>A</m> is the intersection of all the prime ideals of <m>A</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Proof. 
+                  Let <m>\mathfrak{N}^{\prime}</m> denote the intersection of all the prime ideals of <m>A</m>. 
+                  If <m>f \in A</m> is nilpotent and if <m>\mathfrak{p}</m> is a prime ideal, then <m>f^{n}=0 \in \mathfrak{p}</m> for some <m>n&gt;0</m>, hence <m>f \in \mathfrak{p}</m> (because <m>\mathfrak{p}</m> is prime). 
+                  Hence <m>f \in \mathfrak{N}^{\prime}</m>.
+                </p>
+            
+                <p>
+                  Conversely, suppose that <m>f</m> is not nilpotent. 
+                  Let <m>\Sigma</m> be the set of ideals a with the property
+                  <me>n&gt;0 \Rightarrow f^{n} \notin \mathfrak{a} .</me>
+                </p>
+            
+                <p>
+                  Then <m>\Sigma</m> is not empty because <m>0 \in \Sigma</m>. 
+                  As in (1.3) Zorn’s lemma can be applied to the set <m>\Sigma</m>, ordered by inclusion, and therefore <m>\Sigma</m> has a maximal element. 
+                  Let <m>\mathfrak{p}</m> be a maximal element of <m>\Sigma</m>. 
+                  We shall show that <m>\mathfrak{p}</m> is a prime ideal. 
+                  Let <m>x, y \notin \mathfrak{p}</m>. 
+                  Then the ideals <m>\mathfrak{p}+(x), \mathfrak{p}+(y)</m> strictly contain <m>\mathfrak{p}</m> and therefore do not belong to <m>\Sigma</m>; hence
+                  <me>f^{m} \in \mathfrak{p}+(x), \quad f^{n} \in \mathfrak{p}+(y)</me>
+                  for some <m>m, n</m>. 
+                  It follows that <m>f^{m+n} \in \mathfrak{p}+(x y)</m>, hence the ideal <m>\mathfrak{p}+(x y)</m> is not in <m>\Sigma</m> and therefore <m>x y \notin \mathfrak{p}</m>. 
+                  Hence we have a prime ideal <m>\mathfrak{p}</m> such that <m>f \notin \mathfrak{p}</m>, so that <m>f \notin \mathfrak{N}^{\prime}</m>.
+                </p>
+              </proof>
+            </proposition>
+  
+            <p>
+              The Jacobson radical <m>\Re</m> of <m>A</m> is defined to be the intersection of all the maximal ideals of <m>A</m>. 
+              It can be characterized as follows:
+            </p>
+
+            <proposition xml:id="prop-1.9"><!-- -->
+              <statement>
+                <p>
+                  <m>x \in \Re \Leftrightarrow 1-x y</m> is a unit in <m>A</m> for all <m>y \in A</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <m>\Rightarrow</m> : 
+                  Suppose <m>1-x y</m> is not a unit. 
+                  By (1.5) it belongs to some maximal ideal <m>\mathfrak{m}</m>; but <m>x \in \mathfrak{R} \subseteq \mathfrak{m}</m>, hence <m>x y \in \mathfrak{m}</m> and therefore <m>1 \in \mathfrak{m}</m>, which is absurd.
+                </p>
+            
+                <p>
+                  <m>\Leftarrow</m> : 
+                  Suppose <m>x \notin \mathfrak{m}</m> for some maximal ideal <m>\mathfrak{m}</m>. 
+                  Then <m>\mathfrak{m}</m> and <m>x</m> generate the unit ideal (1), so that we have <m>u+x y=1</m> for some <m>u \in \mathrm{m}</m> and some <m>y \in A</m>. 
+                  Hence <m>1-x y \in \mathfrak{m}</m> and is therefore not a unit.
+                </p>
+              </proof>
+            </proposition>
+                    
+          </subsection>
+          
+        </section>
+
+      </appendix>
+
+      <appendix xml:id="app-computation"><title>Computational Tools</title>
+
+        <section xml:id="sec-sage"><title>Sage</title>
+
+          <p></p>
+
+        </section>
+
+        <section xml:id="sec-gap"><title>GAP</title>
 
           <subsection><title>Sage Calculators</title>
 
@@ -21425,129 +21519,20 @@
 
             <sage type="practice" />
 
-            
-
           </subsection>
+
           
+
         </section>
 
-        <section xml:id="sec-catalogue-groups"><title>A Catalogue of Groups</title>
+        <section xml:id="sec-macaulay2"><title>Macaulay2</title>
 
-          <subsection xml:id="subsec-first-groups"><title>Classic Groups</title>
 
-            <p>
-              Numeric Groups, Symmetric Groups, Dihedral Groups, Quaternions
-            </p>
-
-            <p>
-              Free groups, matrix groups,
-            </p>
-            
-          </subsection>
-
-          <subsection xml:id="subsec-groups-of-units"><title>Groups of Units</title>
-
-            <table><title>Groups of Units up to Isomorphism</title>
-              <tabular>
-                <row>
-                  <cell><m>\Z_3^\times</m></cell> <cell><m>\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_4^\times</m></cell> <cell><m>\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_5^\times</m></cell> <cell><m>\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_6^\times</m></cell> <cell><m>\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_7^\times</m></cell> <cell><m>\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_8^\times</m></cell> <cell><m>\Z_2\times\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_9^\times</m></cell> <cell><m>\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{10}^\times</m></cell> <cell><m>\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{11}^\times</m></cell> <cell><m>\Z_{10}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{12}^\times</m></cell> <cell><m>\Z_2\times\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{13}^\times</m></cell> <cell><m>\Z_{12}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{14}^\times</m></cell> <cell><m>\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{15}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{16}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{17}^\times</m></cell> <cell><m>\Z_{16}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{18}^\times</m></cell> <cell><m>\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{19}^\times</m></cell> <cell><m>\Z_{18}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{20}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{21}^\times</m></cell> <cell><m>\Z_2\times\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{22}^\times</m></cell> <cell><m>\Z_{10}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{23}^\times</m></cell> <cell><m>\Z_{22}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{24}^\times</m></cell> <cell><m>\Z_2\times\Z_2\times\Z_2</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{25}^\times</m></cell> <cell><m>\Z_{20}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{26}^\times</m></cell> <cell><m>\Z_{12}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{27}^\times</m></cell> <cell><m>\Z_{18}</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{28}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{29}^\times</m></cell> <cell><m>\Z_2\times\Z_6</m></cell>
-                </row>
-                <row>
-                  <cell><m>\Z_{30}^\times</m></cell> <cell><m>\Z_2\times\Z_4</m></cell>
-                </row>
-              </tabular>
-            </table>
-            
-          </subsection>
-
-          <subsection xml:id="subsec-small-order"><title>Groups of Small Order</title>
-
-            <p>
-
-            </p>
-            
-          </subsection>
+          <p></p>
+          
           
         </section>
-
+        
       </appendix>
 
       <appendix><title>Qualifying Exams</title>
