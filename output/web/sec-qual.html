@@ -438,6 +438,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part">
@@ -483,7 +484,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -496,25 +497,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -892,9 +893,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix contains-active">
@@ -964,7 +974,7 @@ window.MathJax = {
 |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
 \end{equation*}
 </div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="sec-orbit-stab-class-eq.html#thm-conjugacy-divides-order" class="xref" data-knowl="./knowl/xref/thm-conjugacy-divides-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.42: Size of Conjugacy Class Divides |G|">Theorem 5.42</a>. By <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n}-1 \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="sec-orbit-stab-class-eq.html#thm-conjugacy-divides-order" class="xref" data-knowl="./knowl/xref/thm-conjugacy-divides-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.42: Size of Conjugacy Class Divides |G|">Theorem 5.42</a>. By <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n}-1 \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="may-2022-1-3-3">
 <div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="sec-left-mult-conjugation.html#thm-normal-union-of-conjugacy-classes" class="xref" data-knowl="./knowl/xref/thm-normal-union-of-conjugacy-classes.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.23: Normal Subgroups are Unions of Conjugacy Classes">Theorem 5.23</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
@@ -973,7 +983,7 @@ window.MathJax = {
 |N| = 1+ \sum_i^r |G : C_G(g_i)|.
 \end{equation*}
 </div>
-<div class="para">However, by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+<div class="para">However, by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
 </div>
 </div>
 </div></details></div></article></details><details id="may-2022-2" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
@@ -1008,7 +1018,7 @@ window.MathJax = {
 </h4></summary><article class="exercise exercise-like"><div class="para" id="may-2022-3-2-1">Let G be a group of order <span class="process-math">\(2^5\cdot 7^3\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div>
 <div class="solutions"><details id="may-2022-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para" id="may-2022-3-3-1">By <a href="sec-p-groups.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.12: Sylow’s Theorems">Sylow’s Theorems</a> we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
-</div> <div class="para" id="may-2022-3-3-2">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho: G \to S_8\)</span> via the <a href="graction.html#thm-permrep" class="xref" data-knowl="./knowl/xref/thm-permrep.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.5: Permutation Representation">Permutation Representation</a>. This map is non-trivial from part (2) of <a href="sec-p-groups.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.12: Sylow’s Theorems">Sylow’s Theorems</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <a href="sec-quotient-groups.html#thm-norm-iff-ker" class="xref" data-knowl="./knowl/xref/thm-norm-iff-ker.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.24: Normal Subgroup iff Kernel">Theorem 3.24</a>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
+</div> <div class="para" id="may-2022-3-3-2">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho: G \to S_8\)</span> via the <a href="graction.html#thm-permrep" class="xref" data-knowl="./knowl/xref/thm-permrep.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.5: Permutation Representation">Permutation Representation</a>. This map is non-trivial from part (2) of <a href="sec-p-groups.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.12: Sylow’s Theorems">Sylow’s Theorems</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <a href="sec-quotient-groups.html#thm-norm-iff-ker" class="xref" data-knowl="./knowl/xref/thm-norm-iff-ker.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.40: Normal Subgroup iff Kernel">Theorem 3.40</a>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
 </div></details></div></article></details><details id="may-2022-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 4.</span>
 </h4></summary><article class="exercise exercise-like"><div class="para" id="may-2022-4-2-1">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
@@ -1278,7 +1288,7 @@ F\subseteq L\subseteq L(\a),
 </h4></summary><article class="exercise exercise-like"><div class="para logical" id="june-2020-1-2-1">
 <div class="para">Let <span class="process-math">\(p\)</span> be a prime.</div>
 <ol class="lower-alpha">
-<li id="june-2020-1-2-1-2-1"><div class="para" id="june-2020-1-2-1-2-1-1">Prove that every group of order <span class="process-math">\(p^2\)</span> is abelian. (Provide as many details as you can, but you may use main theorems - such as <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a> or the <a href="sec-orbit-stab-class-eq.html#thm-class-eq" class="xref" data-knowl="./knowl/xref/thm-class-eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.43: Class Equation">Class Equation</a> - without proof.)</div></li>
+<li id="june-2020-1-2-1-2-1"><div class="para" id="june-2020-1-2-1-2-1-1">Prove that every group of order <span class="process-math">\(p^2\)</span> is abelian. (Provide as many details as you can, but you may use main theorems - such as <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a> or the <a href="sec-orbit-stab-class-eq.html#thm-class-eq" class="xref" data-knowl="./knowl/xref/thm-class-eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.43: Class Equation">Class Equation</a> - without proof.)</div></li>
 <li id="june-2020-1-2-1-2-2"><div class="para" id="june-2020-1-2-1-2-2-1">Prove that there exists a non-abelian group of order <span class="process-math">\(p^3\)</span> for any prime <span class="process-math">\(p\text{.}\)</span> (You may use facts about automorphism groups here without proof, although they should be clearly stated.)</div></li>
 </ol>
 </div>
@@ -1306,7 +1316,7 @@ F\subseteq L\subseteq L(\a),
 <div class="para" id="jan-2020-1-3-1">Let <span class="process-math">\(G\)</span> be a finite group.</div> <div class="para logical" id="jan-2020-1-3-2"><ol class="lower-alpha">
 <li id="jan-2020-1-3-2-1-1"><div class="para" id="jan-2020-1-3-2-1-1-1">Suppose every subgroup of <span class="process-math">\(G\)</span> is normal. Let <span class="process-math">\(d\)</span> be a positive divisor of <span class="process-math">\(|G|\text{.}\)</span> For every prime <span class="process-math">\(p\)</span> dividing the order of <span class="process-math">\(G\)</span> there is exactly one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\text{,}\)</span> given that Sylow <span class="process-math">\(p\)</span>-subgroups are normal if and only if they are unique. Thus <span class="process-math">\(G\)</span> can be written as a direct product of its Sylow <span class="process-math">\(p\)</span>-subgroups. Given the prime factorization of <span class="process-math">\(d\text{,}\)</span> the direct product of the Sylow <span class="process-math">\(p\)</span>-subgroups such that <span class="process-math">\(p|d\)</span> is 1. A subgroup of <span class="process-math">\(G\)</span> as each Sylow <span class="process-math">\(p\)</span>-subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order <span class="process-math">\(d\text{.}\)</span> The subgroup generated by this element is a subgroup of <span class="process-math">\(G\)</span> of order <span class="process-math">\(d\text{.}\)</span>
 </div></li>
-<li id="jan-2020-1-3-2-1-2"><div class="para" id="jan-2020-1-3-2-1-2-1">See: <a href="sec-normal-subgroups.html#exe-lagrange-converse-false" class="xref" data-knowl="./knowl/xref/exe-lagrange-converse-false.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.13: Converse to Lagrange’s Theorem is False">Exercise 3.13</a>
+<li id="jan-2020-1-3-2-1-2"><div class="para" id="jan-2020-1-3-2-1-2-1">See: <a href="sec-normal-subgroups.html#exe-lagrange-converse-false" class="xref" data-knowl="./knowl/xref/exe-lagrange-converse-false.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.29: Converse to Lagrange’s Theorem is False">Exercise 3.29</a>
 </div></li>
 </ol></div>
 </div></details></div></article></details><details id="jan-2020-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
@@ -1403,7 +1413,7 @@ N=\bigcap_{g\in G}gKg\inv
 <div class="para" id="june-2016-1-3-1-1-1-1">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\)</span> by left multiplication, yielding the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> Let <span class="process-math">\(N\)</span> conspicuously denote the kernel of this function.</div>
 <div class="para" id="june-2016-1-3-1-1-1-2">Let <span class="process-math">\(x\in N\text{.}\)</span> Then <span class="process-math">\(\rho(n)\text{,}\)</span> the automorphism <span class="process-math">\(\s:G/K\to G/K\)</span> defined by <span class="process-math">\(\s(gK)=xgK\)</span> is precisely the identity permutation. Thus <span class="process-math">\(xgK=gK\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(g\inv xgK=K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> so <span class="process-math">\(x\in\text{.}\)</span> This means the elements of <span class="process-math">\(N\)</span> are precisely those that are in the conjugacy class of <span class="process-math">\(gKg\inv\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> There cannot exist a larger normal subgroup of <span class="process-math">\(G\)</span> contained in <span class="process-math">\(K\text{,}\)</span> as it would contain an element that was not in some conjugacy class for <span class="process-math">\(G\text{,}\)</span> negating the definition of a normal subgroup.</div>
 </li>
-<li id="june-2016-1-3-1-1-2"><div class="para" id="june-2016-1-3-1-1-2-1">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.28: First Isomorphism Theorem">First Isomorphism Theorem</a> tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
+<li id="june-2016-1-3-1-1-2"><div class="para" id="june-2016-1-3-1-1-2-1">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem">First Isomorphism Theorem</a> tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
 </div></li>
 </ol></div></div></details></div></article></details><details id="june-2016-8" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 8.</span>

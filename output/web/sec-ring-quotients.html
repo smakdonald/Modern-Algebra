@@ -438,6 +438,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part">
@@ -483,7 +484,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -496,25 +497,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -892,9 +893,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
@@ -948,7 +958,7 @@ window.MathJax = {
 <article class="exercise exercise-like" id="quotient-map-is-surjective-homomorphism"><h4 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">9.20</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map is Surjective Ring Map.</span>
 </h4>
-<div class="para" id="quotient-map-is-surjective-homomorphism-2">Prove that the canonical quotient map <span class="process-math">\(q:R\to R/I\)</span> is a surjective ring homomorphism.</div></article><div class="para" id="subsec-quotient-rings-11">Last but certainly not least, we have an analogue of <a href="sec-quotient-groups.html#thm-norm-iff-ker" class="xref" data-knowl="./knowl/xref/thm-norm-iff-ker.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.24: Normal Subgroup iff Kernel">Theorem 3.24</a> for ideals. <details class="ptx-footnote" aria-live="polite" id="subsec-quotient-rings-11-2"><summary class="ptx-footnote__number" title="Footnote 9.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-quotient-rings-11-2">Once again, I would like to suggest that “ideal subgroup” is a far better name for a normal subgroup.</div></details>
+<div class="para" id="quotient-map-is-surjective-homomorphism-2">Prove that the canonical quotient map <span class="process-math">\(q:R\to R/I\)</span> is a surjective ring homomorphism.</div></article><div class="para" id="subsec-quotient-rings-11">Last but certainly not least, we have an analogue of <a href="sec-quotient-groups.html#thm-norm-iff-ker" class="xref" data-knowl="./knowl/xref/thm-norm-iff-ker.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.40: Normal Subgroup iff Kernel">Theorem 3.40</a> for ideals. <details class="ptx-footnote" aria-live="polite" id="subsec-quotient-rings-11-2"><summary class="ptx-footnote__number" title="Footnote 9.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-quotient-rings-11-2">Once again, I would like to suggest that “ideal subgroup” is a far better name for a normal subgroup.</div></details>
 </div>
 <article class="theorem theorem-like" id="thm-ideal-iff-kernel-of-ring-map"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.21</span><span class="period">.</span><span class="space"> </span><span class="title">Ideal iff Kernel of Ring Map.</span>
@@ -977,7 +987,7 @@ window.MathJax = {
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.23</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem for Rings.</span>
 </h4>
 <div class="para" id="thm-ring-fit-3-1">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism, then <span class="process-math">\(R/\ker(f)\cong \im(f)\)</span> via the map <span class="process-math">\(\overline{f}\)</span> given by <span class="process-math">\(\ov{f}(r + \ker(f)) = f(r)\text{.}\)</span>
-</div></article><details id="thm-ring-fit-4" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-ring-fit-4-1">The map <span class="process-math">\(\overline{f}\)</span> is a well-defined ring homomorphism by <a href="sec-ring-quotients.html#thm-ump-for-quotient-rings" class="xref" data-knowl="./knowl/xref/thm-ump-for-quotient-rings.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.22: UMP for Quotient Rings">Theorem 9.22</a>. By the <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.28: First Isomorphism Theorem">First Isomorphism Theorem</a> for groups, the map <span class="process-math">\(\ov{f}\)</span> is bijective, finishing the proof.</div></article></details><article class="theorem theorem-like" id="thm-ring-sit"><h4 class="heading">
+</div></article><details id="thm-ring-fit-4" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-ring-fit-4-1">The map <span class="process-math">\(\overline{f}\)</span> is a well-defined ring homomorphism by <a href="sec-ring-quotients.html#thm-ump-for-quotient-rings" class="xref" data-knowl="./knowl/xref/thm-ump-for-quotient-rings.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.22: UMP for Quotient Rings">Theorem 9.22</a>. By the <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem">First Isomorphism Theorem</a> for groups, the map <span class="process-math">\(\ov{f}\)</span> is bijective, finishing the proof.</div></article></details><article class="theorem theorem-like" id="thm-ring-sit"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span><span class="space"> </span><span class="title">Second Isomorphism Theorem for Rings.</span>
 </h4>
 <div class="para logical" id="thm-ring-sit-3-1">

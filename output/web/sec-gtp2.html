@@ -438,6 +438,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part">
@@ -483,7 +484,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -496,25 +497,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -892,9 +893,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix contains-active">
@@ -1057,7 +1067,7 @@ F\subseteq L\subseteq L(\a),
 </ul>
 <div class="para">Using <a href="sec-irrpoly.html#thm-eisensteins-criterion" class="xref" data-knowl="./knowl/xref/thm-eisensteins-criterion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 16.9: Eisenstein’s Criterion">Eisenstein’s Criterion</a> with <span class="process-math">\(p=2\)</span> we see that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> As <span class="process-math">\(f\)</span> is monic and irreducible it is the minimum polynomial of <span class="process-math">\(\sqrt[3]2\in\Q[x]\)</span> and <span class="process-math">\([\Q(\sqrt[3]2):\Q]=3\text{.}\)</span> Thus, by the <a href="sec-ftgt.html#thm-ftgt" class="xref" data-knowl="./knowl/xref/thm-ftgt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 17.24: Fundamental Theorem of Galois Theory">Fundamental Theorem of Galois Theory</a> we know there exists an element of order <span class="process-math">\(3\)</span> in <span class="process-math">\(\Gal(F:\Q)\text{.}\)</span>
 </div>
-</div> <div class="para" id="sec-gtp2-6-3-2">Notice now that <span class="process-math">\(f\)</span> has exactly two complex roots, making complex conjugation correspond to a transposition in <span class="process-math">\(S_3\text{.}\)</span> Thus we have an element of order <span class="process-math">\(2\)</span> and an element of order <span class="process-math">\(3\text{,}\)</span> so the order of <span class="process-math">\(\Gal(F:\Q)\)</span> must be at least <span class="process-math">\(6\)</span> by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a>.</div> <div class="para" id="sec-gtp2-6-3-3">As <span class="process-math">\(\deg f=3\)</span> we know <span class="process-math">\(\Gal(F:\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\)</span> (See: [[Proposition – Automorphisms and Permutations (Fields)|Proposition]]), which has order <span class="process-math">\(6\text{.}\)</span> Thus <span class="process-math">\(\Gal(F : \Q)\)</span> is isomorphic to <span class="process-math">\(S_3\text{.}\)</span>
+</div> <div class="para" id="sec-gtp2-6-3-2">Notice now that <span class="process-math">\(f\)</span> has exactly two complex roots, making complex conjugation correspond to a transposition in <span class="process-math">\(S_3\text{.}\)</span> Thus we have an element of order <span class="process-math">\(2\)</span> and an element of order <span class="process-math">\(3\text{,}\)</span> so the order of <span class="process-math">\(\Gal(F:\Q)\)</span> must be at least <span class="process-math">\(6\)</span> by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a>.</div> <div class="para" id="sec-gtp2-6-3-3">As <span class="process-math">\(\deg f=3\)</span> we know <span class="process-math">\(\Gal(F:\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\)</span> (See: [[Proposition – Automorphisms and Permutations (Fields)|Proposition]]), which has order <span class="process-math">\(6\text{.}\)</span> Thus <span class="process-math">\(\Gal(F : \Q)\)</span> is isomorphic to <span class="process-math">\(S_3\text{.}\)</span>
 </div>
 </div></details></div></article></details><details id="sec-gtp2-7" class="activity project-like born-hidden-knowl"><summary><h2 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">D.140</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 9.</span>
@@ -1589,7 +1599,7 @@ f(x)&amp;=(x+\sqrt2 + \sqrt5)(x+\sqrt2 - \sqrt5)(x-\sqrt2 + \sqrt5)(x-\sqrt2 - \
 </ol></div>
 <div class="solutions"><details id="sec-gtp2-40-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <div class="para" id="sec-gtp2-40-3-1">Part (a) Let <span class="process-math">\(G\)</span> be a finite subgroup of <span class="process-math">\(F^*\text{.}\)</span> Let <span class="process-math">\(|G|=n\text{.}\)</span>
-</div> <div class="para" id="sec-gtp2-40-3-2">Let <span class="process-math">\(k\)</span> be the LCM of all orders of elements in <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(g^k=1\)</span> and thus <span class="process-math">\(g\)</span> is a root of the polynomial <span class="process-math">\(x^k-1\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> By <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a> every element divides <span class="process-math">\(n\text{,}\)</span> and so we have <span class="process-math">\(k\leq n\text{.}\)</span> However, by the Factor Theorem the polynomial <span class="process-math">\(x^k-1\)</span> can have at most <span class="process-math">\(k\)</span> roots, and we have <span class="process-math">\(n\)</span> distinct elements, and thus we have <span class="process-math">\(k=n\text{.}\)</span> Thus there must exist an element of order <span class="process-math">\(n\)</span> in <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(G\)</span> cyclic, as desired.</div> <div class="para" id="sec-gtp2-40-3-3">Part (b) Let <span class="process-math">\(n\in\N\)</span> and suppose that <span class="process-math">\(F\)</span> has characteristic <span class="process-math">\(p&gt;0\)</span> and is algebraically closed.</div> <div class="para" id="sec-gtp2-40-3-4">First, suppose by way of contradiction that <span class="process-math">\(F^*\)</span> has a subgroup of order <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(p|n\text{.}\)</span> From Part (a) <span class="process-math">\(G\)</span> is cyclic and generated by some <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|=n\text{.}\)</span> However, as <span class="process-math">\(p|n\)</span> we see that <span class="process-math">\(x^p=0\text{,}\)</span> given that we are in an additive group. This contradicts the fact that <span class="process-math">\(n\)</span> is the smallest number such that <span class="process-math">\(x^n=0\text{.}\)</span>
+</div> <div class="para" id="sec-gtp2-40-3-2">Let <span class="process-math">\(k\)</span> be the LCM of all orders of elements in <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(g^k=1\)</span> and thus <span class="process-math">\(g\)</span> is a root of the polynomial <span class="process-math">\(x^k-1\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> By <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a> every element divides <span class="process-math">\(n\text{,}\)</span> and so we have <span class="process-math">\(k\leq n\text{.}\)</span> However, by the Factor Theorem the polynomial <span class="process-math">\(x^k-1\)</span> can have at most <span class="process-math">\(k\)</span> roots, and we have <span class="process-math">\(n\)</span> distinct elements, and thus we have <span class="process-math">\(k=n\text{.}\)</span> Thus there must exist an element of order <span class="process-math">\(n\)</span> in <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(G\)</span> cyclic, as desired.</div> <div class="para" id="sec-gtp2-40-3-3">Part (b) Let <span class="process-math">\(n\in\N\)</span> and suppose that <span class="process-math">\(F\)</span> has characteristic <span class="process-math">\(p&gt;0\)</span> and is algebraically closed.</div> <div class="para" id="sec-gtp2-40-3-4">First, suppose by way of contradiction that <span class="process-math">\(F^*\)</span> has a subgroup of order <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(p|n\text{.}\)</span> From Part (a) <span class="process-math">\(G\)</span> is cyclic and generated by some <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|=n\text{.}\)</span> However, as <span class="process-math">\(p|n\)</span> we see that <span class="process-math">\(x^p=0\text{,}\)</span> given that we are in an additive group. This contradicts the fact that <span class="process-math">\(n\)</span> is the smallest number such that <span class="process-math">\(x^n=0\text{.}\)</span>
 </div> <div class="para" id="sec-gtp2-40-3-5">Now we proceed via the contrapositive. Suppose <span class="process-math">\(F^*\)</span> does not have a subgroup of order <span class="process-math">\(n\text{.}\)</span> Then there cannot exist a unit <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|=n\text{.}\)</span> Consider the polynomial <span class="process-math">\(x^n-1\text{.}\)</span> As <span class="process-math">\(F\)</span> is algebraically closed there exists some root <span class="process-math">\(r\in F\text{.}\)</span> (how do we know this isn’t 1???) Notice that this means <span class="process-math">\(r^n=1\)</span> and so <span class="process-math">\(r\)</span> is a unit in <span class="process-math">\(F\text{.}\)</span> As <span class="process-math">\(r\)</span> cannot have order <span class="process-math">\(n\text{,}\)</span> it must have an order that divides <span class="process-math">\(n\text{.}\)</span> We also know that <span class="process-math">\(r^p=1\)</span> as we are in a field of characteristic <span class="process-math">\(p\text{.}\)</span> Thus <span class="process-math">\(|r|\)</span> either divides <span class="process-math">\(p\)</span> or is <span class="process-math">\(p\text{.}\)</span> Either there is a non-identity root of <span class="process-math">\(x^n-1=(x-1)^n\text{.}\)</span> Note that in this case <span class="process-math">\(n&gt;p\)</span> as we are</div>
 </div></details></div></article></details><details id="sec-gtp2-41" class="activity project-like born-hidden-knowl"><summary><h2 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">D.174</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 5.</span>

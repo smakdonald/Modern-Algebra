@@ -441,6 +441,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part">
@@ -486,7 +487,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -499,25 +500,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -895,9 +896,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
@@ -936,10 +946,10 @@ window.MathJax = {
 <span class="process-math">\(*\)</span><span class="indexknowl">, <a href="sec-group-basics.html#def-binop" class="xref" data-knowl="./knowl/index/def-binop.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1: Binary Operation">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(&lt;\)</span> (groups)<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.79: Subgroup">Definition</a></span>
+<span class="process-math">\(&lt;\)</span> (groups)<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.80: Subgroup">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\([G:H]\)</span><span class="indexknowl">, <a href="sec-cosets.html#def-index" class="xref" data-knowl="./knowl/index/def-index.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.39: Index">Definition</a></span>
+<span class="process-math">\([G:H]\)</span><span class="indexknowl">, <a href="sec-cosets.html#def-index" class="xref" data-knowl="./knowl/index/def-index.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.9: Index">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(\Aut(G)\)</span><span class="indexknowl">, <a href="sec-gphoms.html#def-gp-aut" class="xref" data-knowl="./knowl/index/def-gp-aut.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.71: Automorphism Group">Definition</a></span>
@@ -987,13 +997,13 @@ window.MathJax = {
 <span class="process-math">\(\langle x \rangle\)</span><span class="indexknowl">, <a href="sec-gp-generators.html#ex-group-gen-2-1-1-3" class="xref" data-knowl="./knowl/index/ex-group-gen-2-1-1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3">Item</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(\leq\)</span> (groups)<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.79: Subgroup">Definition</a></span>
+<span class="process-math">\(\leq\)</span> (groups)<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.80: Subgroup">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(\N\)</span><span class="indexknowl">, <a href="sec-sets-functions.html#def-natural-numbers" class="xref" data-knowl="./knowl/index/def-natural-numbers.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Natural Numbers">Item</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(\nsg\)</span><span class="indexknowl">, <a href="sec-normal-subgroups.html#def-normal-subgroup" class="xref" data-knowl="./knowl/index/def-normal-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Normal Subgroup">Definition</a></span>
+<span class="process-math">\(\nsg\)</span><span class="indexknowl">, <a href="sec-normal-subgroups.html#def-normal-subgroup" class="xref" data-knowl="./knowl/index/def-normal-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.17: Normal Subgroup">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(\O\)</span><span class="indexknowl">, <a href="sec-group-basics.html#ex-even-odd-groups" class="xref" data-knowl="./knowl/index/ex-even-odd-groups.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Evening the Odds">Item</a></span>
@@ -1023,7 +1033,7 @@ window.MathJax = {
 <span class="process-math">\(\sigma\)</span><span class="indexknowl">, <a href="sec-symmetric.html#def-permutation" class="xref" data-knowl="./knowl/index/def-permutation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.28: Permutations">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(\SL\)</span><span class="indexknowl">, <a href="sec-subgroups.html#def-special-linear-group" class="xref" data-knowl="./knowl/index/def-special-linear-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.87: Special Linear Group">Definition</a></span>
+<span class="process-math">\(\SL\)</span><span class="indexknowl">, <a href="sec-subgroups.html#def-special-linear-group" class="xref" data-knowl="./knowl/index/def-special-linear-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.88: Special Linear Group">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(\sse\)</span><span class="indexknowl">, <a href="sec-sets-functions.html#def-subset-2-1-3-1" class="xref" data-knowl="./knowl/index/def-subset-2-1-3-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 1">Item</a></span>
@@ -1080,7 +1090,7 @@ window.MathJax = {
 <span class="process-math">\(G^{op}\)</span><span class="indexknowl">, <a href="sec-group-basics.html#exe-opposite-group" class="xref" data-knowl="./knowl/index/exe-opposite-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Opposite Group">Item</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(HK\)</span><span class="indexknowl">, <a href="sec-products-iso-thms.html#def-HK" class="xref" data-knowl="./knowl/index/def-HK.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.32: Group Product (HK)">Definition</a></span>
+<span class="process-math">\(HK\)</span><span class="indexknowl">, <a href="sec-products-iso-thms.html#def-HK" class="xref" data-knowl="./knowl/index/def-HK.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.48: Group Product (HK)">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(IJ\)</span><span class="indexknowl">, <a href="sec-ideals.html#thm-properties-of-ideals-2-1-4-3" class="xref" data-knowl="./knowl/index/thm-properties-of-ideals-2-1-4-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3">Item</a></span>
@@ -1122,7 +1132,7 @@ window.MathJax = {
 <span class="process-math">\(S_n\)</span><span class="indexknowl">, <a href="sec-symmetric.html#def-symmetric-group" class="xref" data-knowl="./knowl/index/def-symmetric-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.29: Symmetric Group S_n">Definition</a></span>
 </div>
 <div class="indexitem">
-<span class="process-math">\(Z(G)\)</span><span class="indexknowl">, <a href="sec-subgroups.html#def-group-center" class="xref" data-knowl="./knowl/index/def-group-center.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.92: Center of a Group">Definition</a></span>
+<span class="process-math">\(Z(G)\)</span><span class="indexknowl">, <a href="sec-subgroups.html#def-group-center" class="xref" data-knowl="./knowl/index/def-group-center.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.93: Center of a Group">Definition</a></span>
 </div>
 <div class="indexitem">
 <span class="process-math">\(Z_G(g)\)</span><span class="indexknowl">, <a href="sec-orbit-stab-class-eq.html#def-centralizer" class="xref" data-knowl="./knowl/index/def-centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.37: Centralizer">Definition</a></span>
@@ -1137,7 +1147,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-a">
 <div class="indexitem">abelian group<span class="indexknowl">, <a href="sec-group-basics.html#def-abelian" class="xref" data-knowl="./knowl/index/def-abelian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.7: Abelian Group">Definition</a></span>
 </div>
-<div class="indexitem">abelianization<span class="indexknowl">, <a href="sec-gp-generators.html#subsec-gp-gensub-18" class="xref" data-knowl="./knowl/index/subsec-gp-gensub-18.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.12">Remark</a> <a href="sec-products-iso-thms.html#ex-abelianization" class="xref" data-knowl="./knowl/index/ex-abelianization.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.27: Abelianization">Example</a></span>
+<div class="indexitem">abelianization<span class="indexknowl">, <a href="sec-gp-generators.html#subsec-gp-gensub-18" class="xref" data-knowl="./knowl/index/subsec-gp-gensub-18.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.12">Remark</a> <a href="sec-products-iso-thms.html#ex-abelianization" class="xref" data-knowl="./knowl/index/ex-abelianization.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.43: Abelianization">Example</a></span>
 </div>
 <div class="indexitem">absorption<span class="indexknowl">, <a href="sec-ideals.html#def-ideal-2-1-6-2" class="xref" data-knowl="./knowl/index/def-ideal-2-1-6-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">Item</a></span>
 </div>
@@ -1195,11 +1205,11 @@ window.MathJax = {
 </div>
 <div class="indexitem">Cauchy’s theorem<span class="indexknowl">, <a href="sec-p-groups.html#thm-cauchy" class="xref" data-knowl="./knowl/index/thm-cauchy.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.4: Cauchy’s Theorem">Theorem</a></span>
 </div>
-<div class="indexitem">cayley’s theorem<span class="indexknowl">, <a href="sec-subgroups.html#thm-cayley" class="xref" data-knowl="./knowl/index/thm-cayley.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.90: Cayley’s Theorem">Theorem</a></span>
+<div class="indexitem">cayley’s theorem<span class="indexknowl">, <a href="sec-subgroups.html#thm-cayley" class="xref" data-knowl="./knowl/index/thm-cayley.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.91: Cayley’s Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">center (of a ring)<span class="indexknowl">, <a href="sec-defn-ex.html#def-center-ring" class="xref" data-knowl="./knowl/index/def-center-ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.13: Center of a Ring">Definition</a></span>
 </div>
-<div class="indexitem">center of a group<span class="indexknowl">, <a href="sec-subgroups.html#def-group-center" class="xref" data-knowl="./knowl/index/def-group-center.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.92: Center of a Group">Definition</a></span>
+<div class="indexitem">center of a group<span class="indexknowl">, <a href="sec-subgroups.html#def-group-center" class="xref" data-knowl="./knowl/index/def-group-center.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.93: Center of a Group">Definition</a></span>
 </div>
 <div class="indexitem">centralizer<span class="indexknowl">, <a href="sec-orbit-stab-class-eq.html#def-centralizer" class="xref" data-knowl="./knowl/index/def-centralizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.37: Centralizer">Definition</a></span>
 </div>
@@ -1239,9 +1249,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">content<span class="indexknowl">, <a href="sec-irrpoly.html#def-content" class="xref" data-knowl="./knowl/index/def-content.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 16.5">Definition</a></span>
 </div>
-<div class="indexitem">converse to Lagrange’s theorem<span class="indexknowl">, <a href="sec-normal-subgroups.html#exe-lagrange-converse-false" class="xref" data-knowl="./knowl/index/exe-lagrange-converse-false.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.13: Converse to Lagrange’s Theorem is False">Exercise</a></span>
+<div class="indexitem">converse to Lagrange’s theorem<span class="indexknowl">, <a href="sec-normal-subgroups.html#exe-lagrange-converse-false" class="xref" data-knowl="./knowl/index/exe-lagrange-converse-false.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.29: Converse to Lagrange’s Theorem is False">Exercise</a></span>
 </div>
-<div class="indexitem">coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.31: Cosets">Definition</a></span>
+<div class="indexitem">coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Cosets">Definition</a></span>
 </div>
 <div class="indexitem">countably infinite set<span class="indexknowl">, <a href="sec-numbers-and-cardinality.html#def-cardinality" class="xref" data-knowl="./knowl/index/def-cardinality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition A.40: Cardinality">Definition</a></span>
 </div>
@@ -1349,7 +1359,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">family of sets<span class="indexknowl">, <a href="sec-sets-functions.html#def-family-of-sets" class="xref" data-knowl="./knowl/index/def-family-of-sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition A.8: Family of Sets">Definition</a></span>
 </div>
-<div class="indexitem">Fermat’s little theorem<span class="indexknowl">, <a href="sec-cosets.html#exe-fermat" class="xref" data-knowl="./knowl/index/exe-fermat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.46: Fermat’s Little Theorem">Exercise</a></span>
+<div class="indexitem">Fermat’s little theorem<span class="indexknowl">, <a href="sec-cosets.html#exe-fermat" class="xref" data-knowl="./knowl/index/exe-fermat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.16: Fermat’s Little Theorem">Exercise</a></span>
 </div>
 <div class="indexitem">field<span class="indexknowl">, <a href="sec-defn-ex.html#def-ring" class="xref" data-knowl="./knowl/index/def-ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.1: Ring">Definition</a></span>
 </div>
@@ -1367,7 +1377,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">finitely generated module<span class="indexknowl">, <a href="sec-linear-ind-gen.html#def-finitely-generated-module" class="xref" data-knowl="./knowl/index/def-finitely-generated-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 13.7: Finitely Generated Module">Definition</a></span>
 </div>
-<div class="indexitem">first isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/index/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.28: First Isomorphism Theorem">Theorem</a></span>
+<div class="indexitem">first isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/index/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">first isomorphism theorem for modules<span class="indexknowl">, <a href="sec-modhom.html#fit-module" class="xref" data-knowl="./knowl/index/fit-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2: First Isomorphism Theorem for Modules">Item</a></span>
 </div>
@@ -1405,7 +1415,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">generated module<span class="indexknowl">, <a href="sec-linear-ind-gen.html#def-generated-submodule" class="xref" data-knowl="./knowl/index/def-generated-submodule.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 13.2: Generated Submodule">Definition</a></span>
 </div>
-<div class="indexitem">generated normal subgroup<span class="indexknowl">, <a href="sec-normal-subgroups.html#exe-generated-normal-subgroup-2-1-7-2" class="xref" data-knowl="./knowl/index/exe-generated-normal-subgroup-2-1-7-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.10.2">Item</a></span>
+<div class="indexitem">generated normal subgroup<span class="indexknowl">, <a href="sec-normal-subgroups.html#exe-generated-normal-subgroup-2-1-7-2" class="xref" data-knowl="./knowl/index/exe-generated-normal-subgroup-2-1-7-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3.26.2">Item</a></span>
 </div>
 <div class="indexitem">generated subfield<span class="indexknowl">, <a href="field-extension-basics.html#def-generated-subfield" class="xref" data-knowl="./knowl/index/def-generated-subfield.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 16.34: Generated Subfield">Definition</a></span>
 </div>
@@ -1443,9 +1453,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">inclusion map<span class="indexknowl">, <a href="sec-sets-functions.html#ex-inclusion-map" class="xref" data-knowl="./knowl/index/ex-inclusion-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Inclusion Map">Item</a></span>
 </div>
-<div class="indexitem">index<span class="indexknowl">, <a href="sec-cosets.html#def-index" class="xref" data-knowl="./knowl/index/def-index.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.39: Index">Definition</a></span>
+<div class="indexitem">index<span class="indexknowl">, <a href="sec-cosets.html#def-index" class="xref" data-knowl="./knowl/index/def-index.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.9: Index">Definition</a></span>
 </div>
-<div class="indexitem">index tower<span class="indexknowl">, <a href="sec-cosets.html#thm-index-tower" class="xref" data-knowl="./knowl/index/thm-index-tower.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.44: The Index Tower">Theorem</a></span>
+<div class="indexitem">index tower<span class="indexknowl">, <a href="sec-cosets.html#thm-index-tower" class="xref" data-knowl="./knowl/index/thm-index-tower.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.14: The Index Tower">Theorem</a></span>
 </div>
 <div class="indexitem">indexed family of sets<span class="indexknowl">, <a href="sec-sets-functions.html#def-family-of-sets" class="xref" data-knowl="./knowl/index/def-family-of-sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition A.8: Family of Sets">Definition</a></span>
 </div>
@@ -1499,15 +1509,15 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-l">
-<div class="indexitem">Lagrange’s theorem<span class="indexknowl">, <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/index/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Theorem</a></span>
+<div class="indexitem">Lagrange’s theorem<span class="indexknowl">, <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/index/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Theorem</a></span>
 </div>
-<div class="indexitem">lattice isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-lit-group" class="xref" data-knowl="./knowl/index/thm-lit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.41: Lattice Isomorphism Theorem">Theorem</a></span>
+<div class="indexitem">lattice isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-lit-group" class="xref" data-knowl="./knowl/index/thm-lit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.57: Lattice Isomorphism Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">lattice isomorphism theorem for modules<span class="indexknowl">, <a href="sec-modhom.html#lit-module" class="xref" data-knowl="./knowl/index/lit-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 5: Lattice Isomorphism Theorem for Modules">Item</a></span>
 </div>
 <div class="indexitem">lattice isomorphism theorem for rings<span class="indexknowl">, <a href="sec-ring-quotients.html#thm-ring-lit" class="xref" data-knowl="./knowl/index/thm-ring-lit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.26: Lattice Isomorphism Theorem for Rings">Theorem</a></span>
 </div>
-<div class="indexitem">left coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.31: Cosets">Definition</a></span>
+<div class="indexitem">left coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Cosets">Definition</a></span>
 </div>
 <div class="indexitem">left multiplication action<span class="indexknowl">, <a href="graction.html#ex-left-mult" class="xref" data-knowl="./knowl/index/ex-left-mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2: Left Multiplication">Item</a></span>
 </div>
@@ -1563,7 +1573,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">norm function<span class="indexknowl">, <a href="sec-eds.html#def-ed" class="xref" data-knowl="./knowl/index/def-ed.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.1: Euclidean Domain">Definition</a></span>
 </div>
-<div class="indexitem">normal subgroup<span class="indexknowl">, <a href="sec-normal-subgroups.html#def-normal-subgroup" class="xref" data-knowl="./knowl/index/def-normal-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Normal Subgroup">Definition</a></span>
+<div class="indexitem">normal subgroup<span class="indexknowl">, <a href="sec-normal-subgroups.html#def-normal-subgroup" class="xref" data-knowl="./knowl/index/def-normal-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.17: Normal Subgroup">Definition</a></span>
 </div>
 <div class="indexitem">normalizer<span class="indexknowl">, <a href="sec-orbit-stab-class-eq.html#def-normalizer" class="xref" data-knowl="./knowl/index/def-normalizer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.39: Normalizer">Definition</a></span>
 </div>
@@ -1627,7 +1637,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">principal ideal domain<span class="indexknowl">, <a href="sec-pids.html#def-pid" class="xref" data-knowl="./knowl/index/def-pid.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.10: PID">Definition</a></span>
 </div>
-<div class="indexitem">product (groups)<span class="indexknowl">, <a href="sec-products-iso-thms.html#def-HK" class="xref" data-knowl="./knowl/index/def-HK.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.32: Group Product (HK)">Definition</a></span>
+<div class="indexitem">product (groups)<span class="indexknowl">, <a href="sec-products-iso-thms.html#def-HK" class="xref" data-knowl="./knowl/index/def-HK.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.48: Group Product (HK)">Definition</a></span>
 </div>
 <div class="indexitem">product inclusion map<span class="indexknowl">, <a href="sec-sets-functions.html#def-product-inclusion" class="xref" data-knowl="./knowl/index/def-product-inclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition A.28: Product Inclusion Map">Definition</a></span>
 </div>
@@ -1635,7 +1645,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">proper ideal<span class="indexknowl">, <a href="sec-ideals.html#def-ideal" class="xref" data-knowl="./knowl/index/def-ideal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.1: Ideal">Definition</a></span>
 </div>
-<div class="indexitem">proper subgroup<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.79: Subgroup">Definition</a></span>
+<div class="indexitem">proper subgroup<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.80: Subgroup">Definition</a></span>
 </div>
 <div class="indexitem">proper subset<span class="indexknowl">, <a href="sec-sets-functions.html#def-subset-2-1-3-3" class="xref" data-knowl="./knowl/index/def-subset-2-1-3-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3">Item</a></span>
 </div>
@@ -1645,11 +1655,11 @@ window.MathJax = {
 </div>
 <div class="indexitem">quaternion group<span class="indexknowl">, <a href="sec-group-basics.html#def-quaternions" class="xref" data-knowl="./knowl/index/def-quaternions.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 5">Item</a></span>
 </div>
-<div class="indexitem">quotient group<span class="indexknowl">, <a href="sec-quotient-groups.html#def-quotient-group" class="xref" data-knowl="./knowl/index/def-quotient-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.15: Quotient Group">Definition</a></span>
+<div class="indexitem">quotient group<span class="indexknowl">, <a href="sec-quotient-groups.html#def-quotient-group" class="xref" data-knowl="./knowl/index/def-quotient-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.31: Quotient Group">Definition</a></span>
 </div>
 <div class="indexitem">quotient map<span class="indexknowl">, <a href="sec-sets-functions.html#def-equivalence-relation" class="xref" data-knowl="./knowl/index/def-equivalence-relation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition A.30: Equivalence Relation">Definition</a></span>
 </div>
-<div class="indexitem">quotient map (groups)<span class="indexknowl">, <a href="sec-quotient-groups.html#def-quotient-map" class="xref" data-knowl="./knowl/index/def-quotient-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.22: Quotient Map">Definition</a></span>
+<div class="indexitem">quotient map (groups)<span class="indexknowl">, <a href="sec-quotient-groups.html#def-quotient-map" class="xref" data-knowl="./knowl/index/def-quotient-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.38: Quotient Map">Definition</a></span>
 </div>
 <div class="indexitem">quotient map (modules)<span class="indexknowl">, <a href="sec-modhom.html#def-module-quotient-map" class="xref" data-knowl="./knowl/index/def-module-quotient-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 12.31: Module Quotient Map">Definition</a></span>
 </div>
@@ -1689,7 +1699,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">restriction of scalars<span class="indexknowl">, <a href="sec-defmod.html#thm-restriction-of-scalars" class="xref" data-knowl="./knowl/index/thm-restriction-of-scalars.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.14: Restriction of Scalars">Theorem</a></span>
 </div>
-<div class="indexitem">right coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.31: Cosets">Definition</a></span>
+<div class="indexitem">right coset<span class="indexknowl">, <a href="sec-cosets.html#def-coset" class="xref" data-knowl="./knowl/index/def-coset.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Cosets">Definition</a></span>
 </div>
 <div class="indexitem">ring<span class="indexknowl">, <a href="sec-defn-ex.html#def-ring" class="xref" data-knowl="./knowl/index/def-ring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.1: Ring">Definition</a></span>
 </div>
@@ -1707,7 +1717,7 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-s">
-<div class="indexitem">second isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-sit-group" class="xref" data-knowl="./knowl/index/thm-sit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.39: Second Isomorphism Theorem">Theorem</a></span>
+<div class="indexitem">second isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-sit-group" class="xref" data-knowl="./knowl/index/thm-sit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.55: Second Isomorphism Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">second isomorphism theorem for modules<span class="indexknowl">, <a href="sec-modhom.html#sit-module" class="xref" data-knowl="./knowl/index/sit-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3: Second Isomorphism Theorem for Modules">Item</a></span>
 </div>
@@ -1737,7 +1747,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">span<span class="indexknowl">, <a href="sec-vecbasis.html#def-span" class="xref" data-knowl="./knowl/index/def-span.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 13.37: Span">Definition</a></span>
 </div>
-<div class="indexitem">special linear group<span class="indexknowl">, <a href="sec-subgroups.html#def-special-linear-group" class="xref" data-knowl="./knowl/index/def-special-linear-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.87: Special Linear Group">Definition</a></span>
+<div class="indexitem">special linear group<span class="indexknowl">, <a href="sec-subgroups.html#def-special-linear-group" class="xref" data-knowl="./knowl/index/def-special-linear-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.88: Special Linear Group">Definition</a></span>
 </div>
 <div class="indexitem">splitting field<span class="indexknowl">, <a href="sec-splitting.html#def-splitting-field" class="xref" data-knowl="./knowl/index/def-splitting-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 16.69: Splitting Field">Definition</a></span>
 </div>
@@ -1747,9 +1757,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">subfield<span class="indexknowl">, <a href="sec-defn-ex.html#def-subring" class="xref" data-knowl="./knowl/index/def-subring.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.8: Subring">Definition</a></span>
 </div>
-<div class="indexitem">subgroup<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.79: Subgroup">Definition</a></span>
+<div class="indexitem">subgroup<span class="indexknowl">, <a href="sec-subgroups.html#def-subgroup" class="xref" data-knowl="./knowl/index/def-subgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.80: Subgroup">Definition</a></span>
 </div>
-<div class="indexitem">subgroup test<span class="indexknowl">, <a href="sec-subgroups.html#thm-subgroup-test" class="xref" data-knowl="./knowl/index/thm-subgroup-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.80: Subgroup Tests">Theorem</a></span>
+<div class="indexitem">subgroup test<span class="indexknowl">, <a href="sec-subgroups.html#thm-subgroup-test" class="xref" data-knowl="./knowl/index/thm-subgroup-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.81: Subgroup Tests">Theorem</a></span>
 </div>
 <div class="indexitem">submodule<span class="indexknowl">, <a href="sec-defmod.html#def-submodule" class="xref" data-knowl="./knowl/index/def-submodule.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 12.12: Submodule">Definition</a></span>
 </div>
@@ -1779,7 +1789,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-t">
 <div class="indexitem">Taylor Swift<span class="indexknowl">, <a href="sec-subgroups.html#subsec-subgroup-basics-2" class="xref" data-knowl="./knowl/index/subsec-subgroup-basics-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Quotation">Quotation</a></span>
 </div>
-<div class="indexitem">third isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-tit-group" class="xref" data-knowl="./knowl/index/thm-tit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.40: Third Isomorphism Theorem">Theorem</a></span>
+<div class="indexitem">third isomorphism theorem for groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-tit-group" class="xref" data-knowl="./knowl/index/thm-tit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.56: Third Isomorphism Theorem">Theorem</a></span>
 </div>
 <div class="indexitem">third isomorphism theorem for modules<span class="indexknowl">, <a href="sec-modhom.html#tit-module" class="xref" data-knowl="./knowl/index/tit-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 4: Third Isomorphism Theorem for Modules">Item</a></span>
 </div>
@@ -1813,7 +1823,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">UMP for polynomial rings<span class="indexknowl">, <a href="sec-sub-poly.html#thm-ump-polynomial-rings" class="xref" data-knowl="./knowl/index/thm-ump-polynomial-rings.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.59: UMP for Polynomial Rings">Theorem</a></span>
 </div>
-<div class="indexitem">UMP for quotient groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-ump-quotient" class="xref" data-knowl="./knowl/index/thm-ump-quotient.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.26: UMP for Quotient Groups">Theorem</a></span>
+<div class="indexitem">UMP for quotient groups<span class="indexknowl">, <a href="sec-products-iso-thms.html#thm-ump-quotient" class="xref" data-knowl="./knowl/index/thm-ump-quotient.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.42: UMP for Quotient Groups">Theorem</a></span>
 </div>
 <div class="indexitem">UMP for quotient modules<span class="indexknowl">, <a href="sec-modhom.html#ump-quotient-module" class="xref" data-knowl="./knowl/index/ump-quotient-module.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 1: UMP for Quotient Modules">Item</a></span>
 </div>

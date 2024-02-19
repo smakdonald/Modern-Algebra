@@ -569,6 +569,49 @@
 
       </preface>
 
+      <preface><title>The Structure of this Text</title>
+        
+        <paragraphs><title>Additions</title>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  Solvable Groups:
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Group Rings:
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Noetherian Rings:
+                  Better to include in the ring section, since we'll need them when we classify finitely generated modules in PIDs anyway.
+                  Since much of commutative algebra is based in noetherian rings, the earlier the exposure the better.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Localization: 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Algebras:
+                </p>
+              </li>
+
+            </ul>
+          </p>
+        </paragraphs>
+
+      </preface>
+
     </frontmatter>
 
     <part xml:id="part-group"><title>Group Theory</title>
@@ -587,6 +630,10 @@
               </p>
               <attribution>Ken Robinson</attribution>
             </blockquote>
+
+            <p>
+              <xref text="custom" ref="def-binop"/>
+            </p>
            
             <aside><title>A Brief Notational Aside</title>
               <p>
@@ -2649,6 +2696,33 @@
               </p>
             </remark>
 
+            <table>
+              <title>Group Morphisms</title>
+              <tabular>
+                <row>
+                  <cell>Name</cell> <cell>Injective</cell> <cell>Surjective</cell> <cell>From Set to Itself</cell>
+                </row>
+                <row>
+                  <cell>Homomorphism</cell> <cell>No</cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>Monomorphism</cell> <cell>Yes</cell> <cell>No</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>Epimorphism</cell> <cell>No</cell> <cell>Yes</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>Isomorphism</cell> <cell>Yes</cell> <cell>Yes</cell> <cell>No</cell>
+                </row>
+                <row>
+                  <cell>Endomorphism</cell> <cell>No</cell> <cell>No</cell> <cell>Yes</cell>
+                </row>
+                <row>
+                  <cell>Automorphism</cell> <cell>Yes</cell> <cell>Yes</cell> <cell>Yes</cell>
+                </row>
+              </tabular>
+            </table>
+
           </subsection>
 
           <outcomes>
@@ -3140,7 +3214,7 @@
       
       </chapter> 
 
-      <chapter xml:id="ch-subgroup-cyclic"><title>Subgroups and Cyclic Groups</title>
+      <chapter xml:id="ch-cyclic"><title>Generators and Cyclic Groups</title>
 
         <section xml:id="sec-gp-generators"><title>Generated Subgroups</title>
 
@@ -3891,6 +3965,10 @@
           
         </section>
 
+      </chapter>
+                                                                              
+      <chapter xml:id="ch-normal-quotient"><title>Quotient Groups</title>
+
         <section xml:id="sec-cosets"><title>Cosets and Lagrange's Theorem</title>
 
           <subsection xml:id="subsec-cosets"><title>Cosets</title>
@@ -4279,10 +4357,6 @@
           </outcomes> 
     
         </section>
-
-      </chapter>
-                                                                              
-      <chapter xml:id="ch-normal-quotient"><title>Quotient Groups</title>
     
         <section xml:id="sec-normal-subgroups"><title>Normal Subgroups</title>
 
@@ -5588,10 +5662,6 @@
               
             </p>
           </subsection>
-
-         
-
-          
           
         </section>
         
@@ -7594,7 +7664,9 @@
         </section>
 
         <section xml:id="sec-solvable"><title>Solvable Groups</title>
-          <p></p>
+          <p>
+
+          </p>
         </section>
     
       </chapter>
@@ -11930,68 +12002,71 @@
               <statement>
                 <p>
                   Let <m>R</m> be a ring (with <m>1</m>). 
+                </p>
 
-                  <sidebyside margins="6%">
-                    <p>
-                      A <em>left</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
-                      <ol>
-                        <li>
-                          <p>
-                            <m>(r + s)m = rm + sm</m>, 
-                          </p>
-                        </li>
-    
-                        <li>
-                          <p>
-                            <m>(rs)m = r(sm)</m>, 
-                          </p>
-                        </li>
-    
-                        <li>
-                          <p>
-                            <m>r(m + n) = rm + rn</m>, and 
-                          </p>
-                        </li>
-    
-                        <li>
-                          <p>
-                            <m>1m = m</m>.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
+                <sidebyside margins="6%">
+                  <p>
+                    A <em>left</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
+                    <ol>
+                      <li>
+                        <p>
+                          <m>(r + s)m = rm + sm</m>, 
+                        </p>
+                      </li>
+  
+                      <li>
+                        <p>
+                          <m>(rs)m = r(sm)</m>, 
+                        </p>
+                      </li>
+  
+                      <li>
+                        <p>
+                          <m>r(m + n) = rm + rn</m>, and 
+                        </p>
+                      </li>
+  
+                      <li>
+                        <p>
+                          <m>1m = m</m>.
+                        </p>
+                      </li>
+                    </ol>
+                    <idx><h>module</h></idx>
+                  </p>
 
-                    <p>
-                      A <em>right</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>M \times R \rightarrow M</m>, written <m>(m,r) \mapsto mr</m>, such that for all <m>r,s \in R</m> and <m>m, n \in M</m>
-                      <ol>
-                        <li>
-                          <p>
-                            <m>\mathrm{m}(\mathrm{r}+\mathrm{s})=\mathrm{mr}+\mathrm{ms}</m>,
-                          </p>
-                        </li>
-              
-                        <li>
-                          <p>
-                            <m>\mathrm{m}(\mathrm{rs})=(\mathrm{mr}) \mathrm{s}</m>,
-                          </p>
-                        </li>
-              
-                        <li>
-                          <p>
-                            <m>(\mathrm{m}+\mathrm{n}) \mathrm{r}=\mathrm{mr}+\mathrm{nr}</m>, and
-                          </p>
-                        </li>
-              
-                        <li>
-                          <p>
-                            <m>\mathrm{m} 1=\mathrm{m}</m>.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </sidebyside>
-                  <idx><h>module</h></idx>
-                  <idx><h><m>R</m>-module</h></idx>
+                  <p>
+                    A <em>right</em> <m>R</m>-<em>module</em> is an abelian group <m>(M,+)</m> together with a pairing <m>M \times R \rightarrow M</m>, written <m>(m,r) \mapsto mr</m>, such that for all <m>r,s \in R</m> and <m>m, n \in M</m>
+                    <ol>
+                      <li>
+                        <p>
+                          <m>\mathrm{m}(\mathrm{r}+\mathrm{s})=\mathrm{mr}+\mathrm{ms}</m>,
+                        </p>
+                      </li>
+            
+                      <li>
+                        <p>
+                          <m>\mathrm{m}(\mathrm{rs})=(\mathrm{mr}) \mathrm{s}</m>,
+                        </p>
+                      </li>
+            
+                      <li>
+                        <p>
+                          <m>(\mathrm{m}+\mathrm{n}) \mathrm{r}=\mathrm{mr}+\mathrm{nr}</m>, and
+                        </p>
+                      </li>
+            
+                      <li>
+                        <p>
+                          <m>\mathrm{m} 1=\mathrm{m}</m>.
+                        </p>
+                      </li>
+                    </ol>
+                    <idx><h><m>R</m>-module</h></idx>
+                  </p>
+                </sidebyside>
+                 
+                <p>
                   Often, the elements of the ring <m>R</m> are referred to as <em>scalars</em>, and the four rules given above are referred to as an <m>R</m>-<em>action</em>.
                 </p>
               </statement>
@@ -21481,7 +21556,7 @@
             
           </subsection>
 
-          <subsection xml:id="subsec-gap-commands"><title>Commands in HAP</title>
+          <subsection xml:id="subsec-gap-commands"><title>Commands in GAP</title>
 
             <pre>
               CyclicGroup(3);
@@ -21533,9 +21608,310 @@
 
         <section xml:id="sec-macaulay2"><title>Macaulay2</title>
 
+          <subsection xml:id="subsec-what-mac2"><title>What is Macaulay2?</title>
 
-          <p></p>
-          
+            <p>
+              There are several computer algebra systems dedicated to algebraic geometry and commutative algebra computations, such as 
+              <ul>
+                <li>
+                  <p>
+                    <url href="https://www.singular.uni-kl.de/" visual="https://www.singular.uni-kl.de/"> Singular</url> (more popular among algebraic geometers), 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <url href="https://cocoa.dima.unige.it/cocoa/" visual="https://cocoa.dima.unige.it/cocoa/"> CoCoA</url> (which is more popular with european commutative algebraists, having originated in Genova, Italy), and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <url href="https://faculty.math.illinois.edu/Macaulay2/" visual="https://faculty.math.illinois.edu/Macaulay2/"> Macaulay2</url>. 
+                  </p>
+                </li>
+              </ul>
+              There are many computations you could run on any of these systems (and others), but we will focus on Macaulay2 since it's the most popular computer algebra system among US based commutative algebraists.
+            </p>
+  
+            <p>
+              Macaulay2, as the name suggests, is a successor of a previous computer algebra system named Macaulay. 
+              Macaulay was first developed in 1983 by Dave Bayer and Mike Stillman, and while some still use it today, the system has not been updated since its final release in 2000. 
+              In 1993, Daniel Grayson and Mike Stillman released the first version of Macaulay2, and the current stable version of Macaulay2 1.16.
+            </p>
+  
+            <p>
+              Macaulay2, or M2 for short, is an open-source project, with many contributors writing packages that are then released with the newest Macaulay2 version. 
+              Journals like the Journal of Software for Algebra and Geometry publish peer-refereed short articles that describe and explain the functionality of new packages, with the package source code being peer reviewed as well.
+            </p>
+  
+            <p>
+              The National Science Foundation has funded Macaulay2 since 1992. 
+              Besides funding the project through direct grants, the NSF has also funded several Macaulay2 workshops — conferences where Macaulay2 package developers gather to work on new packages, and to share updates to the Macaulay2 core code and recent packages.
+            </p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-mac2-commands"><title>Commands in Macaulay2</title>
+
+            <p>
+              A Macaulay2 session often starts with defining some ambient ring we will be doing computations over. 
+              Common rings such as the rationals and the integers can be defined using the commands <c>QQ</c> and <c>ZZ</c>; 
+              one can easily take quotients or build polynomial rings (in finitely many variables) over these. 
+              For example,
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                R = ZZ/101[x,y]
+              </input>
+            </sage>
+            
+            <p>
+              and
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                k = ZZ/101;
+                R = k[x,y];
+              </input>
+            </sage>
+  
+            <p>
+              both store the ring <m>\Z/(101)</m> as <m>R</m>, with the small difference that in the second example Macaulay2 has named the coefficient field <m>k</m>. 
+              One quirk that might make a difference later is that if we use the first option and later set <m>k</m> to be the field <m>\Z/(101)</m>, our ring <m>R</m> is not a polynomial ring over <m>k</m>. 
+              Also, in the second example we ended each line with a <c>;</c>, which tells Macaulay2 to run the command but not display the result of the computation — which is in this case was simply an assignment, so the result is not relevant.
+            </p>
+  
+            <p>
+              We can now do all sorts of computations over our ring <m>R</m>. 
+              For example, we can define an ideal in <m>R</m> as follows:
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                k = ZZ/101;
+                R = k[x,y];
+                I = ideal(x^2,y^2,x*y)
+              </input>
+            </sage>
+  
+            <p>
+              Above we have set <m>I</m> to be the ideal in <m>R</m> that is generated by <m>x^2, y^2, xy</m>. 
+              The notation <c>ideal( )</c> requires the usage of <c>^</c> for powers and <c>*</c> for products; 
+              alternatively, we can define the exact same ideal with the notation <c>ideal" "</c>, as follows:
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                k = ZZ/101;
+                R = k[x,y];
+                I = ideal"x2,y2,xy"
+              </input>
+            </sage>
+  
+            <p>
+              Now we can use this ideal <m>I</m> to either define a quotient ring <m>S=R/I</m> or the <m>R</m>-module <m>M=R/I</m>, as follows:
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                k = ZZ/101;
+                R = k[x,y];
+                I = ideal"x2,y2,xy";
+                M = R^1/I
+                S = R/I
+              </input>
+            </sage>
+  
+            <p>
+              It's important to note that while <m>R</m> is a ring, <m>R^1</m> is the <m>R</m>-module <m>R</m> — this is a very important difference for Macaulay2, since these two objects have different types. 
+              So <m>S</m> defined above is a ring, while <m>M</m> is a module. 
+              Notice that Macaulay2 stored the module <m>M</m> as the cokernel of the map 
+              <me>R^3\xrightarrow {[x^2\;\;y^2\;\;xy]} R.</me>
+            </p>  
+  
+            <p>
+              When you make a new definition in Macaulay2, you might want to pay attention to
+              what ring your new object is defined over. For example, now that we defined this ring <m>S</m>,
+              Macaulay2 has automatically taken <m>S</m> to be our current ambient ring, and any calculation
+              or definition we run next will be considered over <m>S</m> and not <m>R</m>. If you want to return to the
+              original ring <m>R</m>, you must first run the command <c>use R</c>
+            </p>  
+  
+            <p>
+              If you want to work over a finitely generated algebra over one of the basic rings you
+              can define in Macaulay2, and your ring is not a quotient of a polynomial ring, you want
+              to rewrite this algebra as a quotient of a polynomial ring. For example, suppose you want
+              to work over the second Veronese in <m>2</m> variables over our field <m>k</m> from before, meaning the
+              algebra <m>k[x^2, xy, y^2]</m>. We need <m>3</m> algebra generators, which we will call <m>a, b, c,</m> corresponding
+              to <m>x^2, x^y,</m> and <m>y^2</m>:
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                k = ZZ/101;
+                R = k[x,y];
+                I = ideal"x2,y2,xy";
+                M = R^1/I;
+                S = R/I;
+                U = k[a,b,c]
+                f = map(R,U,{x^2,x*y,y^2})
+                J = ker f
+                T = U/J
+              </input>
+            </sage>
+  
+            <p>
+              Our ring <m>T</m> at the end is isomorphic to the 2nd Veronese of <m>R</m>, which is the ring we
+              wanted. Note the syntax order in <c>map</c>: first target, then source, then a list with the images
+              of each algebra generator.
+            </p>
+
+            <p>
+              As you're learning how to use Macaulay2, you will often find yourself needing some help.
+              Luckily, Macaulay2 can help you directly! For example, suppose you know the name of a
+              command, but do not remember the syntax to use it. You can ask <c>?command</c>, and Macaulay2
+              will show you the different usages of the command you want to know about.
+            </p>    
+
+            <sage language="macaulay2">
+              <input>
+                ?primaryDecomposition
+              </input>
+            </sage>
+  
+            <p>
+              If instead you'd rather read the complete Macaulay2 documentation on the command
+              you are interested in, you can use the <c>viewHelp</c> command, which will open an html page
+              with the documentation you asked for. So running
+            </p>
+
+            <sage language="macaulay2">
+              <input>
+                viewHelp "primaryDecomposition"
+              </input>
+            </sage>
+  
+            <p>
+              will open an html page dedicate to the method primaryDecomposition, which includes
+              examples and links to related methods.
+            </p>
+
+            <p>
+              Many Macaulay2 commands are easy to guess, and named exactly what you would expect
+              them to be named. Often, googling “Macaulay2” followed by a few descriptive words will
+              easily land you on the documentation for whatever you are trying to do.
+            </p>
+  
+            <p>
+              Here are some basic commands you will likely use:
+              <ul>
+                <li>
+                  <p>
+                    <c>ideal (f_1, \dots , f_n)</c> will return the ideal generated by <m>f_1, \dots , f_n</m>. Here products should
+                    be indicated by <c>*</c>, and powers with <c>^</c>. If you'd rather not use <c>^</c> (this might be nice if
+                    you have lots of powers), you can write <c>ideal (f_1, \dots , f_n)</c> instead.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <c>map S, R, (f_1, \dots , f_n)</c> gives a ring map <m>R \to S</m> if <m>R</m> and <m>S</m> are rings, and <m>R</m> is a quotient
+                    of <m>k[x_1, \dots , x_n]</m>. The resulting ring map will send <m>x_i \mapsto f_i</m>. There are many variations
+                    of <c>map</c> — for example, you can use it to define <m>R</m>-module homomorphisms — but you
+                    should carefully input the information in the required format. Try <c>viewHelp</c> map in
+                    Macaulay2 for more details.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <c>ker</c><m>(f)</m> returns the kernel of the map <m>f</m> .
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <c>I + J</c> and <c>I*J</c> return the sum and product of the ideals <m>I</m> and <m>J</m>, respectively.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <c>A = matrix\{\{a_1,1, \dots , a_1,n}, \dots , {a_m,1, \dots , a_m,n\}\}</c> returns the matrix 
+  
+                    <me>A=
+                      \begin{pmatrix}
+                        a_{1,1} &amp; \dots &amp; a_{1,n} \\
+                        &amp; \ddots &amp; \\
+                        a_{m,1} &amp; \dots &amp; a_{m,n}
+                      \end{pmatrix}
+                    </me>
+                  </p>
+                </li>
+              </ul>
+            </p>
+  
+            <p>
+              As in most programming languages, Macaulay2 follows the convention that the first
+              position in a list is the <m>0</m>th position.
+            </p>    
+  
+            <p>
+              The method <c>primaryDecomposition</c> returns a list of primary ideals whose intersection
+              is the input ideal, and <c>associatedPrimes</c> returns the list of associated primes of the given
+              ideal or module. Operations on lists are often intuitive. For example, let's say we want to
+              find the primary component of an ideal with a particular radical.
+            </p>  
+
+            <sage language="macaulay2">
+              <input>
+                R = QQ[x,y];
+                I = ideal"x2,xy";
+                prim = primaryDecomposition I
+                L = select(prim, Q -&gt; radical(Q) == ideal"x,y")
+              </input>
+            </sage>
+
+            <pre>
+              i1 : R = QQ[x,y];
+  
+              i2 : I = ideal"x2,xy";
+  
+              o2 : Ideal of R
+  
+              i3 : prim = primaryDecomposition I
+                                        2
+              o3 = {ideal x, ideal (y, x )}
+  
+              o3 : List
+  
+              i4 : L = select(prim, Q -&gt; radical(Q) == ideal"x,y")
+                                2
+              o4 = {ideal (y, x )}
+  
+              o4 : List
+            </pre>
+           
+            <p>
+              The method <c>select</c> returns a list of all the elements in our list with the required properties. 
+              In this case, if we actually want the primary ideal we just selected, as opposed to a
+              list containing it, we need to extract the first component of our list <m>L</m>.
+            </p>  
+  
+            <pre>
+              i5 : L_0
+                              2
+              o5 = ideal (y, x )
+  
+              o5 : Ideal of R
+            </pre>
+
+            <sage language="macaulay2" type="practice" />
+
+          </subsection>
           
         </section>
         

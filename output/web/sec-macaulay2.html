@@ -86,7 +86,27 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-practice' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-practice",
+  "linked": true,
+  "evalButtonText": "Evaluate",
+  "languages": sagecell.allLanguages
+});
+</script><script>// Make *any* pre with class 'sagecell-macaulay2' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-macaulay2",
+  "linked": true,
+  "linkKey": "linked-macaulay2",
+  "autoeval": false,
+  "languages": [
+    "macaulay2"
+  ],
+  "evalButtonText": "Evaluate (Macaulay2)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -438,6 +458,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part">
@@ -483,7 +504,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -496,25 +517,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -892,9 +913,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
@@ -925,7 +955,144 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-macaulay2"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">C.3</span><span class="space"> </span><span class="title">Macaulay2</span>
 </h2>
-<div class="para" id="sec-macaulay2-2"></div></section></div>
+<section class="subsection" id="subsec-what-mac2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">What is Macaulay2?</span>
+</h3>
+<div class="para logical" id="subsec-what-mac2-2">
+<div class="para">There are several computer algebra systems dedicated to algebraic geometry and commutative algebra computations, such as</div>
+<ul class="disc">
+<li id="subsec-what-mac2-2-1-1"><div class="para" id="subsec-what-mac2-2-1-1-1">
+<a class="external" href="https://www.singular.uni-kl.de/" target="_blank">Singular</a><details class="ptx-footnote" aria-live="polite" id="subsec-what-mac2-2-1-1-1-2"><summary class="ptx-footnote__number" title="Footnote C.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-what-mac2-2-1-1-1-2"><code class="code-inline tex2jax_ignore">https://www.singular.uni-kl.de/</code></div></details> (more popular among algebraic geometers),</div></li>
+<li id="subsec-what-mac2-2-1-2"><div class="para" id="subsec-what-mac2-2-1-2-1">
+<a class="external" href="https://cocoa.dima.unige.it/cocoa/" target="_blank">CoCoA</a><details class="ptx-footnote" aria-live="polite" id="subsec-what-mac2-2-1-2-1-2"><summary class="ptx-footnote__number" title="Footnote C.3.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-what-mac2-2-1-2-1-2"><code class="code-inline tex2jax_ignore">https://cocoa.dima.unige.it/cocoa/</code></div></details> (which is more popular with european commutative algebraists, having originated in Genova, Italy), and</div></li>
+<li id="subsec-what-mac2-2-1-3"><div class="para" id="subsec-what-mac2-2-1-3-1">
+<a class="external" href="https://faculty.math.illinois.edu/Macaulay2/" target="_blank">Macaulay2</a><details class="ptx-footnote" aria-live="polite" id="subsec-what-mac2-2-1-3-1-2"><summary class="ptx-footnote__number" title="Footnote C.3.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="subsec-what-mac2-2-1-3-1-2"><code class="code-inline tex2jax_ignore">https://faculty.math.illinois.edu/Macaulay2/</code></div></details>.</div></li>
+</ul>
+<div class="para">There are many computations you could run on any of these systems (and others), but we will focus on Macaulay2 since it’s the most popular computer algebra system among US based commutative algebraists.</div>
+</div>
+<div class="para" id="subsec-what-mac2-3">Macaulay2, as the name suggests, is a successor of a previous computer algebra system named Macaulay. Macaulay was first developed in 1983 by Dave Bayer and Mike Stillman, and while some still use it today, the system has not been updated since its final release in 2000. In 1993, Daniel Grayson and Mike Stillman released the first version of Macaulay2, and the current stable version of Macaulay2 1.16.</div>
+<div class="para" id="subsec-what-mac2-4">Macaulay2, or M2 for short, is an open-source project, with many contributors writing packages that are then released with the newest Macaulay2 version. Journals like the Journal of Software for Algebra and Geometry publish peer-refereed short articles that describe and explain the functionality of new packages, with the package source code being peer reviewed as well.</div>
+<div class="para" id="subsec-what-mac2-5">The National Science Foundation has funded Macaulay2 since 1992. Besides funding the project through direct grants, the NSF has also funded several Macaulay2 workshops — conferences where Macaulay2 package developers gather to work on new packages, and to share updates to the Macaulay2 core code and recent packages.</div></section><section class="subsection" id="subsec-mac2-commands"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Commands in Macaulay2</span>
+</h3>
+<div class="para" id="subsec-mac2-commands-2">A Macaulay2 session often starts with defining some ambient ring we will be doing computations over. Common rings such as the rationals and the integers can be defined using the commands <code class="code-inline tex2jax_ignore">QQ</code> and <code class="code-inline tex2jax_ignore">ZZ</code>; one can easily take quotients or build polynomial rings (in finitely many variables) over these. For example,</div>
+<pre id="subsec-mac2-commands-3" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">R = ZZ/101[x,y]
+</script></pre>
+<div class="para" id="subsec-mac2-commands-4">and</div>
+<pre id="subsec-mac2-commands-5" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">k = ZZ/101;
+R = k[x,y];
+</script></pre>
+<div class="para" id="subsec-mac2-commands-6">both store the ring <span class="process-math">\(\Z/(101)\)</span> as <span class="process-math">\(R\text{,}\)</span> with the small difference that in the second example Macaulay2 has named the coefficient field <span class="process-math">\(k\text{.}\)</span> One quirk that might make a difference later is that if we use the first option and later set <span class="process-math">\(k\)</span> to be the field <span class="process-math">\(\Z/(101)\text{,}\)</span> our ring <span class="process-math">\(R\)</span> is not a polynomial ring over <span class="process-math">\(k\text{.}\)</span> Also, in the second example we ended each line with a <code class="code-inline tex2jax_ignore">;</code>, which tells Macaulay2 to run the command but not display the result of the computation — which is in this case was simply an assignment, so the result is not relevant.</div>
+<div class="para" id="subsec-mac2-commands-7">We can now do all sorts of computations over our ring <span class="process-math">\(R\text{.}\)</span> For example, we can define an ideal in <span class="process-math">\(R\)</span> as follows:</div>
+<pre id="subsec-mac2-commands-8" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">k = ZZ/101;
+R = k[x,y];
+I = ideal(x^2,y^2,x*y)
+</script></pre>
+<div class="para" id="subsec-mac2-commands-9">Above we have set <span class="process-math">\(I\)</span> to be the ideal in <span class="process-math">\(R\)</span> that is generated by <span class="process-math">\(x^2, y^2, xy\text{.}\)</span> The notation <code class="code-inline tex2jax_ignore">ideal( )</code> requires the usage of <code class="code-inline tex2jax_ignore">^</code> for powers and <code class="code-inline tex2jax_ignore">*</code> for products; alternatively, we can define the exact same ideal with the notation <code class="code-inline tex2jax_ignore">ideal" "</code>, as follows:</div>
+<pre id="subsec-mac2-commands-10" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">k = ZZ/101;
+R = k[x,y];
+I = ideal"x2,y2,xy"
+</script></pre>
+<div class="para" id="subsec-mac2-commands-11">Now we can use this ideal <span class="process-math">\(I\)</span> to either define a quotient ring <span class="process-math">\(S=R/I\)</span> or the <span class="process-math">\(R\)</span>-module <span class="process-math">\(M=R/I\text{,}\)</span> as follows:</div>
+<pre id="subsec-mac2-commands-12" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">k = ZZ/101;
+R = k[x,y];
+I = ideal"x2,y2,xy";
+M = R^1/I
+S = R/I
+</script></pre>
+<div class="para logical" id="subsec-mac2-commands-13">
+<div class="para">It’s important to note that while <span class="process-math">\(R\)</span> is a ring, <span class="process-math">\(R^1\)</span> is the <span class="process-math">\(R\)</span>-module <span class="process-math">\(R\)</span> — this is a very important difference for Macaulay2, since these two objects have different types. So <span class="process-math">\(S\)</span> defined above is a ring, while <span class="process-math">\(M\)</span> is a module. Notice that Macaulay2 stored the module <span class="process-math">\(M\)</span> as the cokernel of the map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R^3\xrightarrow {[x^2\;\;y^2\;\;xy]} R.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="subsec-mac2-commands-14">When you make a new definition in Macaulay2, you might want to pay attention to what ring your new object is defined over. For example, now that we defined this ring <span class="process-math">\(S\text{,}\)</span> Macaulay2 has automatically taken <span class="process-math">\(S\)</span> to be our current ambient ring, and any calculation or definition we run next will be considered over <span class="process-math">\(S\)</span> and not <span class="process-math">\(R\text{.}\)</span> If you want to return to the original ring <span class="process-math">\(R\text{,}\)</span> you must first run the command <code class="code-inline tex2jax_ignore">use R</code>
+</div>
+<div class="para" id="subsec-mac2-commands-15">If you want to work over a finitely generated algebra over one of the basic rings you can define in Macaulay2, and your ring is not a quotient of a polynomial ring, you want to rewrite this algebra as a quotient of a polynomial ring. For example, suppose you want to work over the second Veronese in <span class="process-math">\(2\)</span> variables over our field <span class="process-math">\(k\)</span> from before, meaning the algebra <span class="process-math">\(k[x^2, xy, y^2]\text{.}\)</span> We need <span class="process-math">\(3\)</span> algebra generators, which we will call <span class="process-math">\(a, b, c,\)</span> corresponding to <span class="process-math">\(x^2, x^y,\)</span> and <span class="process-math">\(y^2\text{:}\)</span>
+</div>
+<pre id="subsec-mac2-commands-16" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">k = ZZ/101;
+R = k[x,y];
+I = ideal"x2,y2,xy";
+M = R^1/I;
+S = R/I;
+U = k[a,b,c]
+f = map(R,U,{x^2,x*y,y^2})
+J = ker f
+T = U/J
+</script></pre>
+<div class="para" id="subsec-mac2-commands-17">Our ring <span class="process-math">\(T\)</span> at the end is isomorphic to the 2nd Veronese of <span class="process-math">\(R\text{,}\)</span> which is the ring we wanted. Note the syntax order in <code class="code-inline tex2jax_ignore">map</code>: first target, then source, then a list with the images of each algebra generator.</div>
+<div class="para" id="subsec-mac2-commands-18">As you’re learning how to use Macaulay2, you will often find yourself needing some help. Luckily, Macaulay2 can help you directly! For example, suppose you know the name of a command, but do not remember the syntax to use it. You can ask <code class="code-inline tex2jax_ignore">?command</code>, and Macaulay2 will show you the different usages of the command you want to know about.</div>
+<pre id="subsec-mac2-commands-19" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">?primaryDecomposition
+</script></pre>
+<div class="para" id="subsec-mac2-commands-20">If instead you’d rather read the complete Macaulay2 documentation on the command you are interested in, you can use the <code class="code-inline tex2jax_ignore">viewHelp</code> command, which will open an html page with the documentation you asked for. So running</div>
+<pre id="subsec-mac2-commands-21" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">viewHelp "primaryDecomposition"
+</script></pre>
+<div class="para" id="subsec-mac2-commands-22">will open an html page dedicate to the method primaryDecomposition, which includes examples and links to related methods.</div>
+<div class="para" id="subsec-mac2-commands-23">Many Macaulay2 commands are easy to guess, and named exactly what you would expect them to be named. Often, googling “Macaulay2” followed by a few descriptive words will easily land you on the documentation for whatever you are trying to do.</div>
+<div class="para logical" id="subsec-mac2-commands-24">
+<div class="para">Here are some basic commands you will likely use:</div>
+<ul class="disc">
+<li id="subsec-mac2-commands-24-1-1"><div class="para" id="subsec-mac2-commands-24-1-1-1">
+<code class="code-inline tex2jax_ignore">ideal (f_1, \dots , f_n)</code> will return the ideal generated by <span class="process-math">\(f_1, \dots , f_n\text{.}\)</span> Here products should be indicated by <code class="code-inline tex2jax_ignore">*</code>, and powers with <code class="code-inline tex2jax_ignore">^</code>. If you’d rather not use <code class="code-inline tex2jax_ignore">^</code> (this might be nice if you have lots of powers), you can write <code class="code-inline tex2jax_ignore">ideal (f_1, \dots , f_n)</code> instead.</div></li>
+<li id="subsec-mac2-commands-24-1-2"><div class="para" id="subsec-mac2-commands-24-1-2-1">
+<code class="code-inline tex2jax_ignore">map S, R, (f_1, \dots , f_n)</code> gives a ring map <span class="process-math">\(R \to S\)</span> if <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are rings, and <span class="process-math">\(R\)</span> is a quotient of <span class="process-math">\(k[x_1, \dots , x_n]\text{.}\)</span> The resulting ring map will send <span class="process-math">\(x_i \mapsto f_i\text{.}\)</span> There are many variations of <code class="code-inline tex2jax_ignore">map</code> — for example, you can use it to define <span class="process-math">\(R\)</span>-module homomorphisms — but you should carefully input the information in the required format. Try <code class="code-inline tex2jax_ignore">viewHelp</code> map in Macaulay2 for more details.</div></li>
+<li id="subsec-mac2-commands-24-1-3"><div class="para" id="subsec-mac2-commands-24-1-3-1">
+<code class="code-inline tex2jax_ignore">ker</code><span class="process-math">\((f)\)</span> returns the kernel of the map <span class="process-math">\(f\)</span> .</div></li>
+<li id="subsec-mac2-commands-24-1-4"><div class="para" id="subsec-mac2-commands-24-1-4-1">
+<code class="code-inline tex2jax_ignore">I + J</code> and <code class="code-inline tex2jax_ignore">I*J</code> return the sum and product of the ideals <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span> respectively.</div></li>
+<li id="subsec-mac2-commands-24-1-5"><div class="para logical" id="subsec-mac2-commands-24-1-5-1">
+<div class="para">
+<code class="code-inline tex2jax_ignore">A = matrix\{\{a_1,1, \dots , a_1,n}, \dots , {a_m,1, \dots , a_m,n\}\}</code> returns the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=
+\begin{pmatrix}
+a_{1,1} &amp; \dots &amp; a_{1,n} \\
+&amp; \ddots &amp; \\
+a_{m,1} &amp; \dots &amp; a_{m,n}
+\end{pmatrix}
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div>
+<div class="para" id="subsec-mac2-commands-25">As in most programming languages, Macaulay2 follows the convention that the first position in a list is the <span class="process-math">\(0\)</span>th position.</div>
+<div class="para" id="subsec-mac2-commands-26">The method <code class="code-inline tex2jax_ignore">primaryDecomposition</code> returns a list of primary ideals whose intersection is the input ideal, and <code class="code-inline tex2jax_ignore">associatedPrimes</code> returns the list of associated primes of the given ideal or module. Operations on lists are often intuitive. For example, let’s say we want to find the primary component of an ideal with a particular radical.</div>
+<pre id="subsec-mac2-commands-27" class="ptx-sagecell sagecell-macaulay2"><script type="text/x-sage">R = QQ[x,y];
+I = ideal"x2,xy";
+prim = primaryDecomposition I
+L = select(prim, Q -> radical(Q) == ideal"x,y")
+</script></pre>
+<pre class="code-block tex2jax_ignore">            i1 : R = QQ[x,y];
+
+            i2 : I = ideal"x2,xy";
+
+            o2 : Ideal of R
+
+            i3 : prim = primaryDecomposition I
+                                      2
+            o3 = {ideal x, ideal (y, x )}
+
+            o3 : List
+
+            i4 : L = select(prim, Q -&gt; radical(Q) == ideal"x,y")
+                              2
+            o4 = {ideal (y, x )}
+
+            o4 : List
+</pre>
+<div class="para" id="subsec-mac2-commands-29">The method <code class="code-inline tex2jax_ignore">select</code> returns a list of all the elements in our list with the required properties. In this case, if we actually want the primary ideal we just selected, as opposed to a list containing it, we need to extract the first component of our list <span class="process-math">\(L\text{.}\)</span>
+</div>
+<pre class="code-block tex2jax_ignore">            i5 : L_0
+                            2
+            o5 = ideal (y, x )
+
+            o5 : Ideal of R
+</pre>
+<pre id="subsec-mac2-commands-31" class="ptx-sagecell sagecell-practice"><script type="text/x-sage"># Practice area (not linked for Sage Cell use)
+</script></pre></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-gap.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

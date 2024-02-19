@@ -438,6 +438,7 @@ window.MathJax = {
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">How to Use This Book</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">The Structure of this Text</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
@@ -483,7 +484,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subgroup-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Subgroups and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -496,25 +497,25 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Normal Subgroups</span></a></div>
+<div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-normal-subgroups.html#subsec-normal" class="internal"><span class="title">The New Normal</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
@@ -892,9 +893,18 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Sage</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">C.2</span> <span class="title">GAP</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#sec-gap-2" class="internal"><span class="title">Sage Calculators</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-what-gap" class="internal"><span class="title">What is GAP?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gap.html#subsec-gap-commands" class="internal"><span class="title">Commands in GAP</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-macaulay2.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Macaulay2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-what-mac2" class="internal"><span class="title">What is Macaulay2?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-macaulay2.html#subsec-mac2-commands" class="internal"><span class="title">Commands in Macaulay2</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
@@ -999,7 +1009,7 @@ g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \for
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.17</span><span class="period">.</span><span class="space"> </span><span class="title">Smallest Prime Index is Normal.</span>
 </h4>
 <div class="para" id="thm-smallest-prime-normal-2-1">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> of index <span class="process-math">\(p\text{,}\)</span> where <span class="process-math">\(p\)</span> is the smallest prime divisor of the order of <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
-</div></article><details id="thm-smallest-prime-normal-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-smallest-prime-normal-3-1">Let <span class="process-math">\(S=G/H\)</span> and note that <span class="process-math">\(|S|=p\text{.}\)</span> Let <span class="process-math">\(K\)</span> denote the kernel of the permutation representation generated by <span class="process-math">\(G\)</span> acting on <span class="process-math">\(S\)</span> by left multiplication.</div> <div class="para" id="thm-smallest-prime-normal-3-2">The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.28: First Isomorphism Theorem">First Isomorphism Theorem</a> tells us that <span class="process-math">\(G/K\cong\im(\rho)\leq S_p\text{.}\)</span> Thus <span class="process-math">\(|K|\big|p!\)</span> by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.37: Lagrange’s Theorem">Lagrange’s Theorem</a>. Let <span class="process-math">\(k\in K\text{.}\)</span> Then <span class="process-math">\(kgH=gH\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(k\in gHg\inv\)</span> for all <span class="process-math">\(g\in G,\)</span> including <span class="process-math">\(e\text{.}\)</span> Thus <span class="process-math">\(K\nsg H\text{.}\)</span>
+</div></article><details id="thm-smallest-prime-normal-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-smallest-prime-normal-3-1">Let <span class="process-math">\(S=G/H\)</span> and note that <span class="process-math">\(|S|=p\text{.}\)</span> Let <span class="process-math">\(K\)</span> denote the kernel of the permutation representation generated by <span class="process-math">\(G\)</span> acting on <span class="process-math">\(S\)</span> by left multiplication.</div> <div class="para" id="thm-smallest-prime-normal-3-2">The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem">First Isomorphism Theorem</a> tells us that <span class="process-math">\(G/K\cong\im(\rho)\leq S_p\text{.}\)</span> Thus <span class="process-math">\(|K|\big|p!\)</span> by <a href="sec-cosets.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a>. Let <span class="process-math">\(k\in K\text{.}\)</span> Then <span class="process-math">\(kgH=gH\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(k\in gHg\inv\)</span> for all <span class="process-math">\(g\in G,\)</span> including <span class="process-math">\(e\text{.}\)</span> Thus <span class="process-math">\(K\nsg H\text{.}\)</span>
 </div> <div class="para" id="thm-smallest-prime-normal-3-3">This yields <span class="process-math">\([G:K]=[G:H][H:K]\text{.}\)</span> Let <span class="process-math">\(h=[H:K]\text{,}\)</span> giving us <span class="process-math">\([G:K]=ph\text{.}\)</span> As <span class="process-math">\(|K|\big|p!\)</span> we have <span class="process-math">\(h|(p-1)!\text{,}\)</span> so <span class="process-math">\(h&lt;p\text{.}\)</span> But <span class="process-math">\(p\)</span> is the smallest prime dividing the order of <span class="process-math">\(G\text{,}\)</span> and thus <span class="process-math">\(h=1\text{,}\)</span> making <span class="process-math">\(H=K\)</span> and <span class="process-math">\(H\nsg G\text{.}\)</span>
 </div></article></details><section class="paragraphs" id="subsec-self-action-12"><h4 class="heading"><span class="title">Qual Watch.</span></h4> <div class="para" id="subsec-self-action-12-2">Proving <a href="sec-left-mult-conjugation.html#thm-smallest-prime-normal" class="xref" data-knowl="./knowl/xref/thm-smallest-prime-normal.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.17: Smallest Prime Index is Normal">Theorem 5.17</a> was <a href="sec-qual.html#jan-2023-1" class="xref" data-knowl="./knowl/xref/jan-2023-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise D.1.1: Problem 1">Problem 1</a> on the <a href="sec-qual.html#jan-2023" class="xref" data-knowl="./knowl/xref/jan-2023.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise Group D.1.1–7: January 2023">January 2023</a> qualifying exam and <a href="sec-qual.html#jan-2015-1" class="xref" data-knowl="./knowl/xref/jan-2015-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise D.1.1: Problem 1">Problem 1</a> on the <a href="sec-qual.html#jan-2015" class="xref" data-knowl="./knowl/xref/jan-2015.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise Group D.1.1–1: January 2015">January 2015</a> qualifying exam.</div></section></section><section class="subsection" id="subsec-conjugacy"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Conjugacy</span>

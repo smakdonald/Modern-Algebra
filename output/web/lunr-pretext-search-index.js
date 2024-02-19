@@ -37,18 +37,27 @@ var ptx_lunr_docs = [
   "body": "Definition Examples Theorem Lemma Corollary Proposition Exercise Problem Remark Discussion Footnotes "
 },
 {
+  "id": "frontmatter-5",
+  "level": "1",
+  "url": "frontmatter-5.html",
+  "type": "Preface",
+  "number": "",
+  "title": "The Structure of this Text",
+  "body": "The Structure of this Text  Additions     Solvable Groups:    Group Rings:    Noetherian Rings: Better to include in the ring section, since we'll need them when we classify finitely generated modules in PIDs anyway. Since much of commutative algebra is based in noetherian rings, the earlier the exposure the better.    Localization:    Algebras:      "
+},
+{
   "id": "sec-group-basics",
   "level": "1",
   "url": "sec-group-basics.html",
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": "Group Basics  Groups    Most great learning happens in groups.   Ken Robinson   A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      One of the nice things about binary operations is that they have properties.   Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Group   A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group       Though a group is a pair, we will usually refer to the group by only naming the underlying set, .    We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".    Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The inverse of an element is often written , for reasons we will see in the next section.   Additionally, a binary operation can be commutative . That's right, a secret additional property. Didn't see that coming, did you?   Commutative Property   An operation satisfies the commutative property if for all . commutative property     Lo and behold, this specific property yields a specific type of group!  Abelian Group   An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group     Additive and Multiplicative Groups  When working with arbitrary groups, multiplicative notation is often used as the operation. Thus, groups are commonly written as and referred to as multiplicative groups . However, when working with abelian groups, it is customary to use additive notation, writing the group as .   Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and         Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.   Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
+  "body": "Group Basics  Groups    Most great learning happens in groups.   Ken Robinson      A Brief Notational Aside  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.). In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation on a set is a   binary operation      One of the nice things about binary operations is that they have properties.   Binary Properties   Let be a binary operation on a set .   An operation satisfies the associative property if for all we have . associative property     An operation satisfies the identity property if there exists such that for all . Such an element is called an identity element .  identity property     An operation satisfies the inverse property if for each , there is an element such that , where is an identity element of . Such an element is called an inverse of the element . inverse property        Group   A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group       Though a group is a pair, we will usually refer to the group by only naming the underlying set, .    We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".    Properties of Groups   Let be a group.  Unique Identity  The element satisfying of is unique, and we thus refer to it as the identity element of . identity element    Unique Inverses  For each , the element satisfying of is unique, and we thus refer to it as the inverse of . inverse element    Cancellation  Suppose . If then . Similarly, if we have  cancellation (groups)           Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe         The inverse of an element is often written , for reasons we will see in the next section.   Additionally, a binary operation can be commutative . That's right, a secret additional property. Didn't see that coming, did you?   Commutative Property   An operation satisfies the commutative property if for all . commutative property     Lo and behold, this specific property yields a specific type of group!  Abelian Group   An abelian group is a pair where is a set and is a binary operation on satisfying the associative, identity, inverse, and commutative properties. abelian group     Additive and Multiplicative Groups  When working with arbitrary groups, multiplicative notation is often used as the operation. Thus, groups are commonly written as and referred to as multiplicative groups . However, when working with abelian groups, it is customary to use additive notation, writing the group as .   Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and         Identity Theft  In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.   Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .    Not Quite Groups     The natural numbers do not form a group with respect to addition.    The rational numbers do not form a group with respect to multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in the aptly named .  Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .         will be integral to our constructions of semidirect products in and our classifications of certain groups up to isomorphism (whatever that means). Though not strictly required for this text, knowing the structure of for various can prove helpful in many qualifying exam problems.    Some texts use the notation to denote groups of units. For example, would be written .    Prove that .   Some Extra Groups    Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Then is a group. Opposite groups are used in category theory to describe something called duality between algebraic structures.  opposite group     Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.           Since is a group and its operation is associative, we have for any elements , , in . This implies that for any elements in . Thus, associativity is satisfied in .  Let be the identity element of . In , the identity element is still because for any element in , we have , where denotes the operation in . Therefore, the identity element property is satisfied in .  Let be an element in . Since is also in , being a group implies that there exists an inverse element in such that , where is the identity element of . This implies that in as well. Therefore, every element in has an inverse in , satisfying the inverse element property.    Integer addition is associative, which means that for any three integers , and , the expression is equal to . Thus, associativity is satisfied for .  The identity element for addition is . For any even integer , adding to it does not change its parity (evenness). Hence, the identity element property is satisfied for .  For every even integer , there exists an inverse element denoted as such that . The negative of an even integer is also an even integer. Adding an even integer to its negative results in , which is the identity element. Therefore, the inverse element property is satisfied for .  The identity element for addition is . However, is not an odd integer, so the identity element property is not satisfied for .      Properties of Inverses   If is a group and , then    and               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   Generalized Associative Law generalized associative law  If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.   Certainly we may assume that . If is an element constructed from in the prescribed manner, we can write where and are constructed from and respectively . If , the result follows by induction on . Otherwise we can write and : once again the result follows by induction on n.   As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line. This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, oodles is the best word to go here and no, I will not be changing it.       A is a set equipped with a that satisfies the properties given in . An abelian group is a group that also satisfies the .    The identity and inverse elements described in are unique. See: For inverses, we have and . See:      and are all additive abelian groups, and form multiplicative abelian groups.     "
 },
 {
-  "id": "subsec-groups-3-2",
+  "id": "subsec-groups-4-2",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-3-2",
+  "url": "sec-group-basics.html#subsec-groups-4-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -82,9 +91,9 @@ var ptx_lunr_docs = [
   "body": "Group   A group is a pair where is a set and is a binary operation on satisfying the associative, identity, and inverse properties. For specifics, see: .  group     "
 },
 {
-  "id": "subsec-groups-10",
+  "id": "subsec-groups-11",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-10",
+  "url": "sec-group-basics.html#subsec-groups-11",
   "type": "Mark",
   "number": "1.4",
   "title": "",
@@ -127,18 +136,18 @@ var ptx_lunr_docs = [
   "body": "Group Examples      The trivial group is the group with a single element . trivial group       and each form an abelian group, where denotes traditional addition. The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. Thus all four groups are abelian.    For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group . general linear group      For any , let denote the . Then forms an abelian group where denotes addition modulo .    The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and        "
 },
 {
-  "id": "subsec-groups-20",
+  "id": "subsec-groups-21",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-20",
+  "url": "sec-group-basics.html#subsec-groups-21",
   "type": "Remark",
   "number": "1.9",
   "title": "Specific General Linear Groups.",
   "body": "Specific General Linear Groups  In general, is a group for any field (whatever those are). To jump ahead and discover what those are, see: .   "
 },
 {
-  "id": "subsec-groups-21",
+  "id": "subsec-groups-22",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-21",
+  "url": "sec-group-basics.html#subsec-groups-22",
   "type": "Exercise",
   "number": "1.10",
   "title": "Not Quite Groups.",
@@ -154,9 +163,9 @@ var ptx_lunr_docs = [
   "body": "Groups of Units  group of units    Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .      "
 },
 {
-  "id": "subsec-groups-24",
+  "id": "subsec-groups-25",
   "level": "2",
-  "url": "sec-group-basics.html#subsec-groups-24",
+  "url": "sec-group-basics.html#subsec-groups-25",
   "type": "Remark",
   "number": "1.12",
   "title": "",
@@ -574,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Group Homomorphisms",
-  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry   Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms      We use to denote an arbitrary homomorphism instead of to differentiate between homormorphisms and ordinary functions.  Some folk use for homomorphisms as well as functions that are not homomorphisms. They should be avoided and probably smell weird.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The is a group homomorphism for any group , this is known as the trivial homomorphism . trivial homomorphism     The zero map See: is a group homomorphism for any group .    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism. sign homomorphism     The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer , the map determinant map determinant map  is a group homomorphism.      Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet   Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.     Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  (groups)     Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.        Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    Isomorphism? I Know 'em!    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald   Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic     Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    We start by recalling that a function between two sets is bijective if and only if there is a function such that and .  The is thus immediate. For the direction, if is bijective homomorphism, then it certainly has a set-theoretic two-sided inverse . But we need to show is actually a homomorphism: for we have . Since is one-to-one, .     Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where is as defined in .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Opposite Day  Let be a group and the of . Then .   Coming soon!   Isomorphism Invariants   Let and be groups. If is an isomorphism, then the following hold: isomorphism invariant            for all and for all      is abelian if and only if is abelian            Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      Coming soon!   There Can Only Be One...  All trivial groups are (canonically) isomorphic.    Hence, we usually speak of the trivial group.   Isomorphisms form Equivalence Relation           If , then     If and , then        Coming soon!     The quotation marks in the title of this result are importnat. Equivalenve relations as we know them are only defined on sets , but there is no set of groups. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being. The time being what, you ask? Great question; haven't the foggiest.     Automorphism? I'm Am 'em!    Self preservation is the first law of nature.   Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism  automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism.   Automorphism Group   The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .     Let's verify that this group is indeed what it claims to be. The more pedantic reader might object to a group claiming anything, as it is an abstract concept. However, the more sassy author would politely tell them to keep it to themselves.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition.    Coming soon!    Complex Conjugation Automorphism  Prove that the function given by is an automorphism.   Coming soon!        Coming soon!    Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)   Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .     Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  Conjugation Automorphism   Let be a group and . Then for all .    Notice , proving that is a homomorhism from to itself.  Observe that for any , we have since . Also, , which is obvious. It follows that and . This proves has a two-sided inveerse and hence is an isomorphism. In fact, it shows that .     There is indeed a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.       A is a function between groups that preserves certain algebraic structures, such as the operation, identites, and inverses. For the first, see: . For the second and third, see: The set of elements mapped to the identity by a homomorphism is known as its .    A is a bijective homomorphism, and a is an isomorphism from a group to itself. The structures preserved by an isomorphism are known as .    The set of automorphisms of a group forms a group itself: the of the group. See: Specifically, the will prove very important later.    Compositions of homomorphisms, isomorphisms, and automophisms are again homomorphisms, isomorphisms, and automophisms, respectively.     "
+  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry   Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms      We use to denote an arbitrary homomorphism instead of to differentiate between homormorphisms and ordinary functions.  Some folk use for homomorphisms as well as functions that are not homomorphisms. They should be avoided and probably smell weird.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The is a group homomorphism for any group , this is known as the trivial homomorphism . trivial homomorphism     The zero map See: is a group homomorphism for any group .    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism. sign homomorphism     The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer , the map determinant map determinant map  is a group homomorphism.      Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet   Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.     Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  (groups)     Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.        Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    Isomorphism? I Know 'em!    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald   Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic     Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    We start by recalling that a function between two sets is bijective if and only if there is a function such that and .  The is thus immediate. For the direction, if is bijective homomorphism, then it certainly has a set-theoretic two-sided inverse . But we need to show is actually a homomorphism: for we have . Since is one-to-one, .     Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where is as defined in .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Opposite Day  Let be a group and the of . Then .   Coming soon!   Isomorphism Invariants   Let and be groups. If is an isomorphism, then the following hold: isomorphism invariant            for all and for all      is abelian if and only if is abelian            Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      Coming soon!   There Can Only Be One...  All trivial groups are (canonically) isomorphic.    Hence, we usually speak of the trivial group.   Isomorphisms form Equivalence Relation           If , then     If and , then        Coming soon!     The quotation marks in the title of this result are importnat. Equivalenve relations as we know them are only defined on sets , but there is no set of groups. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being. The time being what, you ask? Great question; haven't the foggiest.     Automorphism? I'm Am 'em!    Self preservation is the first law of nature.   Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism  automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism.   Automorphism Group   The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .     Let's verify that this group is indeed what it claims to be. The more pedantic reader might object to a group claiming anything, as it is an abstract concept. However, the more sassy author would politely tell them to keep it to themselves.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition.    Coming soon!    Complex Conjugation Automorphism  Prove that the function given by is an automorphism.   Coming soon!        Coming soon!    Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)   Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .     Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  Conjugation Automorphism   Let be a group and . Then for all .    Notice , proving that is a homomorhism from to itself.  Observe that for any , we have since . Also, , which is obvious. It follows that and . This proves has a two-sided inveerse and hence is an isomorphism. In fact, it shows that .     There is indeed a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.    Group Morphisms    Name  Injective  Surjective  From Set to Itself    Homomorphism  No  No  No    Monomorphism  Yes  No  No    Epimorphism  No  Yes  No    Isomorphism  Yes  Yes  No    Endomorphism  No  No  Yes    Automorphism  Yes  Yes  Yes         A is a function between groups that preserves certain algebraic structures, such as the operation, identites, and inverses. For the first, see: . For the second and third, see: The set of elements mapped to the identity by a homomorphism is known as its .    A is a bijective homomorphism, and a is an isomorphism from a group to itself. The structures preserved by an isomorphism are known as .    The set of automorphisms of a group forms a group itself: the of the group. See: Specifically, the will prove very important later.    Compositions of homomorphisms, isomorphisms, and automophisms are again homomorphisms, isomorphisms, and automophisms, respectively.     "
 },
 {
   "id": "def-ghom",
@@ -829,6 +838,15 @@ var ptx_lunr_docs = [
   "body": " There is indeed a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.  "
 },
 {
+  "id": "subsec-automorphisms-15",
+  "level": "2",
+  "url": "sec-gphoms.html#subsec-automorphisms-15",
+  "type": "Table",
+  "number": "1.79",
+  "title": "Group Morphisms",
+  "body": " Group Morphisms    Name  Injective  Surjective  From Set to Itself    Homomorphism  No  No  No    Monomorphism  Yes  No  No    Epimorphism  No  Yes  No    Isomorphism  Yes  Yes  No    Endomorphism  No  No  Yes    Automorphism  Yes  Yes  Yes    "
+},
+{
   "id": "sec-gphoms-5",
   "level": "2",
   "url": "sec-gphoms.html#sec-gphoms-5",
@@ -851,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-subgroup",
   "type": "Definition",
-  "number": "1.79",
+  "number": "1.80",
   "title": "Subgroup.",
   "body": "Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . (groups)  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  (groups)    "
 },
@@ -860,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-test",
   "type": "Theorem",
-  "number": "1.80",
+  "number": "1.81",
   "title": "Subgroup Tests.",
   "body": "Subgroup Tests  subgroup test     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .   "
 },
@@ -869,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-common-subgroups",
   "type": "Example",
-  "number": "1.81",
+  "number": "1.82",
   "title": "Common Subgroups.",
   "body": "Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .      "
 },
@@ -878,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroups-of-z",
   "type": "Exercise",
-  "number": "1.82",
+  "number": "1.83",
   "title": "Subgroups of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Subgroups of  The only subgroups of are the sets .  "
 },
@@ -887,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-preservations",
   "type": "Exercise",
-  "number": "1.83",
+  "number": "1.84",
   "title": "Subgroups Preservations.",
   "body": "Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .     "
 },
@@ -896,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-properties",
   "type": "Theorem",
-  "number": "1.84",
+  "number": "1.85",
   "title": "Properties of Subgroups.",
   "body": "Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!      "
 },
@@ -905,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-no-proper-unions",
   "type": "Exercise",
-  "number": "1.85",
+  "number": "1.86",
   "title": "No Proper Unions.",
   "body": "No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!  "
 },
@@ -914,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-not-symmetric",
   "type": "Exercise",
-  "number": "1.86",
+  "number": "1.87",
   "title": "Subgroups not Symmetric.",
   "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.  "
 },
@@ -923,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-special-linear-group",
   "type": "Definition",
-  "number": "1.87",
+  "number": "1.88",
   "title": "Special Linear Group.",
   "body": "Special Linear Group   The special linear group with complex entries is defined  special linear group     "
 },
@@ -932,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
-  "number": "1.88",
+  "number": "1.89",
   "title": "<span class=\"process-math\">\\(\\SL_n(\\C)\\leq\\GL_n(\\C)\\)<\/span>.",
   "body": "  The special linear group is a subgroup of the general linear group .   "
 },
@@ -950,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-properties-of-group-homoms",
   "type": "Theorem",
-  "number": "1.89",
+  "number": "1.90",
   "title": "Group Homomorphisms and Subgroups.",
   "body": "Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of , defined as , is a subgroup of .   Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.      "
 },
@@ -959,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-cayley",
   "type": "Theorem",
-  "number": "1.90",
+  "number": "1.91",
   "title": "Cayley’s Theorem.",
   "body": "Cayley's Theorem  cayley's theorem   Every group is isomorphic to a subgroup of .   "
 },
@@ -968,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#subsec-subgroup-basics-19",
   "type": "Remark",
-  "number": "1.91",
+  "number": "1.92",
   "title": "",
   "body": " This is a nearly useless theorem.  "
 },
@@ -977,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-group-center",
   "type": "Definition",
-  "number": "1.92",
+  "number": "1.93",
   "title": "Center of a Group.",
   "body": "Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,   center of a group    "
 },
@@ -986,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-center-is-subgroup",
   "type": "Proposition",
-  "number": "1.93",
+  "number": "1.94",
   "title": "Center is a Subgroup.",
   "body": "Center is a Subgroup            is abelian    If , then       "
 },
@@ -995,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-only-element-of-order-2",
   "type": "Exercise",
-  "number": "1.94",
+  "number": "1.95",
   "title": "Only Element of Order <span class=\"process-math\">\\(2\\)<\/span>.",
   "body": "Only Element of Order  Let be a group and . If is the only element of order in , then .  "
 },
@@ -1004,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-even-groups-order-2",
   "type": "Exercise",
-  "number": "1.95",
+  "number": "1.96",
   "title": "Even Order Groups.",
   "body": "Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.   "
 },
@@ -1328,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-cosets.html",
   "type": "Section",
-  "number": "2.3",
+  "number": "3.1",
   "title": "Cosets and Lagrange’s Theorem",
   "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem    If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).       For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.     "
 },
@@ -1337,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#def-coset",
   "type": "Definition",
-  "number": "2.31",
+  "number": "3.1",
   "title": "Cosets.",
   "body": "Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset    "
 },
@@ -1346,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-abelian-cosets",
   "type": "Exercise",
-  "number": "2.32",
+  "number": "3.2",
   "title": "Abelian Cosets.",
   "body": "Abelian Cosets  If is an abelian then for all .  "
 },
@@ -1355,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#prop-coset-properties",
   "type": "Proposition",
-  "number": "2.33",
+  "number": "3.3",
   "title": "Basic Coset Properties.",
   "body": "Basic Coset Properties   Let and          if and only if            "
 },
@@ -1364,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#lem-cosetfacts",
   "type": "Lemma",
-  "number": "2.34",
+  "number": "3.4",
   "title": "Coset Equivalencies.",
   "body": "Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.   "
 },
@@ -1373,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-coset-equivalence-relation",
   "type": "Theorem",
-  "number": "2.35",
+  "number": "3.5",
   "title": "",
   "body": "  For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .   "
 },
@@ -1382,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-cosetpartition",
   "type": "Corollary",
-  "number": "2.36",
+  "number": "3.6",
   "title": "Cosets Partition a Group.",
   "body": "Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.   "
 },
@@ -1391,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-lagrange",
   "type": "Theorem",
-  "number": "2.37",
+  "number": "3.7",
   "title": "Lagrange’s Theorem.",
   "body": "Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .   "
 },
@@ -1400,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-index-cor",
   "type": "Corollary",
-  "number": "2.38",
+  "number": "3.8",
   "title": "Equal Number of Left and Right Cosets.",
   "body": "Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .   "
 },
@@ -1409,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#def-index",
   "type": "Definition",
-  "number": "2.39",
+  "number": "3.9",
   "title": "Index.",
   "body": "Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index    "
 },
@@ -1418,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#ex-d2n-cosets",
   "type": "Example",
-  "number": "2.40",
+  "number": "3.10",
   "title": "Cosets in <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": "Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .  "
 },
@@ -1427,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#cor-lagrange",
   "type": "Corollary",
-  "number": "2.41",
+  "number": "3.11",
   "title": "Corollaries to Lagrange’s Theorem.",
   "body": "Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all       "
 },
@@ -1436,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#ex-z-cosets",
   "type": "Example",
-  "number": "2.42",
+  "number": "3.12",
   "title": "Finite Index in Infinite Group.",
   "body": "Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )  "
 },
@@ -1445,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-left-right-cosets",
   "type": "Exercise",
-  "number": "2.43",
+  "number": "3.13",
   "title": "Number of Left and Right Cosets (Ininite Version).",
   "body": "Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?  "
 },
@@ -1454,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#thm-index-tower",
   "type": "Theorem",
-  "number": "2.44",
+  "number": "3.14",
   "title": "The Index Tower.",
   "body": "The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .   "
 },
@@ -1463,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-nontrivial-subgroup",
   "type": "Exercise",
-  "number": "2.45",
+  "number": "3.15",
   "title": "",
   "body": " Let be a group of composite order. Then contains a non-trivial proper subgroup.  "
 },
@@ -1472,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#exe-fermat",
   "type": "Exercise",
-  "number": "2.46",
+  "number": "3.16",
   "title": "Fermat’s Little Theorem.",
   "body": "Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem   "
 },
@@ -1481,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cosets.html#sec-cosets-3",
   "type": "Summary",
-  "number": "2.3",
+  "number": "3.1",
   "title": "",
   "body": "   For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.    "
 },
@@ -1490,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-normal-subgroups.html",
   "type": "Section",
-  "number": "3.1",
+  "number": "3.2",
   "title": "Normal Subgroups",
   "body": "Normal Subgroups  The New Normal    If you are always trying to be normal, you will never know how amazing you can be.   Maya Angelou   Sometimes it is convenient to ignore a certain subobject of a given object and to focus on the remaining properties. Formally, this is done by taking quotients . In contrast to the theory of vector spaces, where the quotient of any vector space by any subspace again naturally forms a vector space, we have to be a little bit more careful in the world of groups. Only special subgroups lead to quotient groups :  Normal Subgroup   A subgroup of a group is normal in , written , if for all . normal subgroup      Anything but Normal   Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.    Here are some options the author has recently become partial to:    Semiabelian : Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris.     Ideal subgroup : Look, its shorter! Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.       However, there are many ways to characterize normal subgroups.  Equivalent Normal Characterizations   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.       Arguably, the most important and \/ or intuitive characterization of normal subgroups comes from their relation to homomorphisms. Indeed, though we currenly lack the tools to prove it, tells us that a subgroup is normal if and only if it is the kernel of some homomorphism. Thus, in addition to its necessity in the definition of quotients, a normal subgroup is a simple and unique way to characterize any homomorphism.  Normal Subgroups     The trivial subgroups , of a group are normal subgroups of .    Any subgroup of an abelian group is a normal subgroup.    For any group , .     for all .     .     .     .    The commutator subgroup from is normal in .    The set is normal in .      Closure Properties of Normal Subgroups   Normalility is preserved under taking intersections and preimages.    Normality is not Transitive  Show that being a normal subgroup is not a transitive relation. In other words, find groups such that and , but .    is a good place to start routing around in.   Consider From we have . The group has order , making it ableian from . Thus every subgroup of is normal in by .  Now consider the subgroup . But is not normal in , since for example    Normal Preimages   If is a group homomorphism and then the preimage of , , is a normal subgroup of .    Images not Normal in General  Show that if is a group homomorphism and then need not be a normal subgroup of .   Here is a theorem that will prove exceedingly useful all the way down in .  Unique Order Subgroup is Normal   Let be the only subgroup of order . Then is normal.    We also have some criteria for when a generated subgroup is normal.  Normality and Generated Subgroups  Let be a group and a subset of . Suppose . Prove if and only if for every and .   Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can generate a normal subgroup explicitely.  Generated Normal Subgroup  Let be a group and let be a set. The normal subgroup generated by , denoted , is the intersection of all the normal subgroups of that contain .   Show that is a normal subgroup of .    Show that the elements of can be described as  generated normal subgroup       We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.  Subgroup of Index is Normal   Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.    Coming soon to an OER near you!     This is a specific case of , a much more powerful theorem that we will prove later on, but we can tackle this smaller piece with the tools we have now.   Converse to Lagrange's Theorem is False converse to Lagrange's theorem  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .     Qual Watch  Providing such an example as in was Part (b) of on the qualifying exam.       A subgroup is a if for all , though there are several .    Abelian subgroups are always normal; in particular, the center of a group is always normal.    If a is the only subgroup of order , then . See: .     The .     "
 },
@@ -1499,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#def-normal-subgroup",
   "type": "Definition",
-  "number": "3.1",
+  "number": "3.17",
   "title": "Normal Subgroup.",
   "body": "Normal Subgroup   A subgroup of a group is normal in , written , if for all . normal subgroup     "
 },
@@ -1517,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#thm-equivdef-normal",
   "type": "Theorem",
-  "number": "3.2",
+  "number": "3.18",
   "title": "Equivalent Normal Characterizations.",
   "body": "Equivalent Normal Characterizations   Let be a subgroup of a group . The following are equivalent:         for all .     for all .    The equivalence relations on determined by the left and right cosets of coincide.      "
 },
@@ -1526,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#ex-normal-examples",
   "type": "Example",
-  "number": "3.3",
+  "number": "3.19",
   "title": "Normal Subgroups.",
   "body": "Normal Subgroups     The trivial subgroups , of a group are normal subgroups of .    Any subgroup of an abelian group is a normal subgroup.    For any group , .     for all .     .     .     .    The commutator subgroup from is normal in .    The set is normal in .     "
 },
@@ -1535,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#thm-normal-subgroup-cps",
   "type": "Theorem",
-  "number": "3.4",
+  "number": "3.20",
   "title": "Closure Properties of Normal Subgroups.",
   "body": "Closure Properties of Normal Subgroups   Normalility is preserved under taking intersections and preimages.   "
 },
@@ -1544,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-normality-not-transitive",
   "type": "Exercise",
-  "number": "3.5",
+  "number": "3.21",
   "title": "Normality is not Transitive.",
   "body": "Normality is not Transitive  Show that being a normal subgroup is not a transitive relation. In other words, find groups such that and , but .    is a good place to start routing around in.   Consider From we have . The group has order , making it ableian from . Thus every subgroup of is normal in by .  Now consider the subgroup . But is not normal in , since for example   "
 },
@@ -1553,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#prop-normal-subgroups-and-homomorphisms",
   "type": "Proposition",
-  "number": "3.6",
+  "number": "3.22",
   "title": "Normal Preimages.",
   "body": "Normal Preimages   If is a group homomorphism and then the preimage of , , is a normal subgroup of .   "
 },
@@ -1562,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-images-need-not-be-normal",
   "type": "Exercise",
-  "number": "3.7",
+  "number": "3.23",
   "title": "Images not Normal in General.",
   "body": "Images not Normal in General  Show that if is a group homomorphism and then need not be a normal subgroup of .  "
 },
@@ -1571,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#thm-unique-order-subgroup-normal",
   "type": "Theorem",
-  "number": "3.8",
+  "number": "3.24",
   "title": "Unique Order Subgroup is Normal.",
   "body": "Unique Order Subgroup is Normal   Let be the only subgroup of order . Then is normal.   "
 },
@@ -1580,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-normality-and-generated-subgroups",
   "type": "Exercise",
-  "number": "3.9",
+  "number": "3.25",
   "title": "Normality and Generated Subgroups.",
   "body": "Normality and Generated Subgroups  Let be a group and a subset of . Suppose . Prove if and only if for every and .  "
 },
@@ -1589,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-generated-normal-subgroup",
   "type": "Exercise",
-  "number": "3.10",
+  "number": "3.26",
   "title": "Generated Normal Subgroup.",
   "body": "Generated Normal Subgroup  Let be a group and let be a set. The normal subgroup generated by , denoted , is the intersection of all the normal subgroups of that contain .   Show that is a normal subgroup of .    Show that the elements of can be described as  generated normal subgroup      "
 },
@@ -1598,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-subgroup-index-2-normal",
   "type": "Proposition",
-  "number": "3.11",
+  "number": "3.27",
   "title": "Subgroup of Index <span class=\"process-math\">\\(2\\)<\/span> is Normal.",
   "body": "Subgroup of Index is Normal   Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.    Coming soon to an OER near you!   "
 },
@@ -1607,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#subsec-normal-22",
   "type": "Remark",
-  "number": "3.12",
+  "number": "3.28",
   "title": "",
   "body": " This is a specific case of , a much more powerful theorem that we will prove later on, but we can tackle this smaller piece with the tools we have now.  "
 },
@@ -1616,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#exe-lagrange-converse-false",
   "type": "Exercise",
-  "number": "3.13",
+  "number": "3.29",
   "title": "Converse to Lagrange’s Theorem is False.",
   "body": "Converse to Lagrange's Theorem is False converse to Lagrange's theorem  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .    "
 },
@@ -1625,7 +1643,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-subgroups.html#sec-normal-subgroups-3",
   "type": "Summary",
-  "number": "3.1",
+  "number": "3.2",
   "title": "",
   "body": "   A subgroup is a if for all , though there are several .    Abelian subgroups are always normal; in particular, the center of a group is always normal.    If a is the only subgroup of order , then . See: .     The .    "
 },
@@ -1634,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-quotient-groups.html",
   "type": "Section",
-  "number": "3.2",
+  "number": "3.3",
   "title": "Quotient Groups",
   "body": "Quotient Groups  Quotient Groups    Great things are done by a series of small things brought together.   Vincent Van Gogh   We return now to the equivalence relation induced by the set of left (or right) cosets on a group .  Let us ask a question: When does aquire the structure of a group under the operation We need to be worried about whether this operation is independent of choice. That is, if and then must ? In other words, if and , must ?  As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do... Get it?   Quotients and Normal Subgroups   Let . The set of (left cosets) forms a group if and only if .    Quotient Group   For any normal subgroup of a group , the quotient group , , is the set of left cosets of in with multiplication given by . quotient group     Old Friends  Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .    Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.   Modular Integer? Barely Know 'Er!  Argue amongst yourselves what the 'best' notation for the integers should be:  , , , , , or whatever other horrors you can conjure.   Dihedral Quotient   is a normal subgroup of . The quotient has just two elements, and .   Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.   Special Linear Quotients      Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . This means .   Recalling , we have yet another useful corollary:  Order of Quotient Groups   If is finite we have .    Quotient Map   For any group and normal subgroup of the quotient map  is defined by . quotient map (groups)     Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .    Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    First, suppose . Let (which is a group since is normal in ) and define such that . Let , and observe that , and so . Let , meaning that , placing . By this map is a homomorphism.  Next, suppose there exists a group and and a homomorphism such that . Let and consider . Observe given that . Thus for all , making a normal subgroup of .    Qual Watch  Proving was Part (a) of on the qualifying exam.   Cyclic Center Quotients   Let be a group with center . If is cyclic, then is abelian.        Given , the  is the set of left cosets of in with multiplication given by . This is a well defined group if and only if is normal. See: .     A subgroup is normal if and only if it is the kernel of a homomorphism. See: .     If is finite we have , and the is a surjective homomorphism. See: and .     If is cyclic, then is abelian. See: .      "
 },
@@ -1643,7 +1661,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#thm-quotient-iff-normal",
   "type": "Theorem",
-  "number": "3.14",
+  "number": "3.30",
   "title": "Quotients and Normal Subgroups.",
   "body": "Quotients and Normal Subgroups   Let . The set of (left cosets) forms a group if and only if .   "
 },
@@ -1652,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#def-quotient-group",
   "type": "Definition",
-  "number": "3.15",
+  "number": "3.31",
   "title": "Quotient Group.",
   "body": "Quotient Group   For any normal subgroup of a group , the quotient group , , is the set of left cosets of in with multiplication given by . quotient group    "
 },
@@ -1661,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#ex-old-friends",
   "type": "Example",
-  "number": "3.16",
+  "number": "3.32",
   "title": "Old Friends.",
   "body": "Old Friends  Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .  "
 },
@@ -1670,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#subsec-quotients-9",
   "type": "Remark",
-  "number": "3.17",
+  "number": "3.33",
   "title": "",
   "body": " Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.  "
 },
@@ -1688,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#ex-dihedral-quotient",
   "type": "Example",
-  "number": "3.18",
+  "number": "3.34",
   "title": "Dihedral Quotient.",
   "body": "Dihedral Quotient   is a normal subgroup of . The quotient has just two elements, and .  "
 },
@@ -1697,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#exe-commutator-quotient-abelian",
   "type": "Exercise",
-  "number": "3.19",
+  "number": "3.35",
   "title": "Quotient of Commutator Subgroup.",
   "body": "Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.  "
 },
@@ -1706,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#exe-gl-sl-iso",
   "type": "Exercise",
-  "number": "3.20",
+  "number": "3.36",
   "title": "Special Linear Quotients.",
   "body": "Special Linear Quotients      Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . This means .  "
 },
@@ -1715,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#cor-order-of-quotient",
   "type": "Corollary",
-  "number": "3.21",
+  "number": "3.37",
   "title": "Order of Quotient Groups.",
   "body": "Order of Quotient Groups   If is finite we have .   "
 },
@@ -1724,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#def-quotient-map",
   "type": "Definition",
-  "number": "3.22",
+  "number": "3.38",
   "title": "Quotient Map.",
   "body": "Quotient Map   For any group and normal subgroup of the quotient map  is defined by . quotient map (groups)    "
 },
@@ -1733,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#prop-quotient-surj-hom",
   "type": "Proposition",
-  "number": "3.23",
+  "number": "3.39",
   "title": "Quotient Map is Surjective Homomorphism.",
   "body": "Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .   "
 },
@@ -1742,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#thm-norm-iff-ker",
   "type": "Theorem",
-  "number": "3.24",
+  "number": "3.40",
   "title": "Normal Subgroup iff Kernel.",
   "body": "Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    First, suppose . Let (which is a group since is normal in ) and define such that . Let , and observe that , and so . Let , meaning that , placing . By this map is a homomorphism.  Next, suppose there exists a group and and a homomorphism such that . Let and consider . Observe given that . Thus for all , making a normal subgroup of .   "
 },
@@ -1751,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#thm-gz-cyclic",
   "type": "Theorem",
-  "number": "3.25",
+  "number": "3.41",
   "title": "Cyclic Center Quotients.",
   "body": "Cyclic Center Quotients   Let be a group with center . If is cyclic, then is abelian.   "
 },
@@ -1760,7 +1778,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quotient-groups.html#sec-quotient-groups-3",
   "type": "Summary",
-  "number": "3.2",
+  "number": "3.3",
   "title": "",
   "body": "   Given , the  is the set of left cosets of in with multiplication given by . This is a well defined group if and only if is normal. See: .     A subgroup is normal if and only if it is the kernel of a homomorphism. See: .     If is finite we have , and the is a surjective homomorphism. See: and .     If is cyclic, then is abelian. See: .     "
 },
@@ -1769,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-products-iso-thms.html",
   "type": "Section",
-  "number": "3.3",
+  "number": "3.4",
   "title": "Products and the Isomorphism Theorems",
   "body": "Products and the Isomorphism Theorems  The First Isomorphism Theorem    If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.   Mark Twain   We come to the so-called Isomorphism Theorems.  UMP for Quotient Groups  UMP for quotient groups   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then     there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,           If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: if , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .       Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization. abelianization    First Isomorphism Theorem  first isomorphism theorem for groups   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .    Double Divide   If is a homomorphism from a finite group to a group , then divides and .     For any group we have .    Products    Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx   Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .   Group Product ( )   Let and be subgroups of a group and define the set   product (groups)     Product vs. Direct Product  The product and direct product Whatever that is are not always the same. We will explore this later in    Product Order   For two finite subgroups , .    Products and Normality   Let be a group, and . Then    ,     , and     .       When   If either one of or is a normal subgroup of , then .     The identity does not mean that every pair of elements from and must commute.   but not Abelian   In , let and . Then but and do not commute. The fact that can also be justified by observing that .    The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.  Second Isomorphism Theorem  second isomorphism theorem for groups   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .    The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.  Third Isomorphism Theorem  third isomorphism theorem for groups   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .    Lattice Isomorphism Theorem  lattice isomorphism theorem for groups   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:     (normal) subgroups correspond to normal subgroups i.e.,      iff and iff      iff and iff        indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)      and      and           We have previously shown that the quotient map is a surjective group homomorphism. We show:      is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups by ).     is well defined (correct codomain) since for we have (by again) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by      Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.   If and , then holds by part of or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups. See: .     In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the since for with we have The general case is a consequence of an exercise from HW 5.     The proof of (3) is omitted.           The tells us for any homomorphism .    For , we define the to be the set  .     if either or are normal. If , then and . See: .     We also have the , , and .     "
 },
@@ -1778,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-ump-quotient",
   "type": "Theorem",
-  "number": "3.26",
+  "number": "3.42",
   "title": "UMP for Quotient Groups.",
   "body": "UMP for Quotient Groups  UMP for quotient groups   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then     there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,           If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: if , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .      "
 },
@@ -1787,7 +1805,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#ex-abelianization",
   "type": "Example",
-  "number": "3.27",
+  "number": "3.43",
   "title": "Abelianization.",
   "body": "Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization. abelianization   "
 },
@@ -1796,7 +1814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-fit-group",
   "type": "Theorem",
-  "number": "3.28",
+  "number": "3.44",
   "title": "First Isomorphism Theorem.",
   "body": "First Isomorphism Theorem  first isomorphism theorem for groups   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .   "
 },
@@ -1805,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#cor-homom-finite-groups",
   "type": "Corollary",
-  "number": "3.29",
+  "number": "3.45",
   "title": "Double Divide.",
   "body": "Double Divide   If is a homomorphism from a finite group to a group , then divides and .   "
 },
@@ -1814,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#exe-quotients-inner-automorphisms",
   "type": "Exercise",
-  "number": "3.30",
+  "number": "3.46",
   "title": "<span class=\"process-math\">\\(G\/Z(G)\\cong\\Inn(G)\\)<\/span>.",
   "body": " For any group we have .  "
 },
@@ -1823,7 +1841,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#exe-trivially-intersecting-normal-subgroups",
   "type": "Exercise",
-  "number": "3.31",
+  "number": "3.47",
   "title": "Trivially Intersecting Normal Subgroups.",
   "body": "Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .  "
 },
@@ -1832,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#def-HK",
   "type": "Definition",
-  "number": "3.32",
+  "number": "3.48",
   "title": "Group Product (<span class=\"process-math\">\\(HK\\)<\/span>).",
   "body": "Group Product ( )   Let and be subgroups of a group and define the set   product (groups)    "
 },
@@ -1841,7 +1859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#subsec-hk-5",
   "type": "Warning",
-  "number": "3.33",
+  "number": "3.49",
   "title": "Product vs. Direct Product.",
   "body": "Product vs. Direct Product  The product and direct product Whatever that is are not always the same. We will explore this later in   "
 },
@@ -1850,7 +1868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-hk-order",
   "type": "Theorem",
-  "number": "3.34",
+  "number": "3.50",
   "title": "Product Order.",
   "body": "Product Order   For two finite subgroups , .   "
 },
@@ -1859,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-hn-normal",
   "type": "Theorem",
-  "number": "3.35",
+  "number": "3.51",
   "title": "Products and Normality.",
   "body": "Products and Normality   Let be a group, and . Then    ,     , and     .      "
 },
@@ -1868,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#cor-hk-normal",
   "type": "Corollary",
-  "number": "3.36",
+  "number": "3.52",
   "title": "When <span class=\"process-math\">\\(HK=KH\\)<\/span>.",
   "body": "When   If either one of or is a normal subgroup of , then .   "
 },
@@ -1877,7 +1895,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#subsec-hk-9",
   "type": "Warning",
-  "number": "3.37",
+  "number": "3.53",
   "title": "",
   "body": " The identity does not mean that every pair of elements from and must commute.  "
 },
@@ -1886,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#ex-hk-non-commuting-elements",
   "type": "Example",
-  "number": "3.38",
+  "number": "3.54",
   "title": "<span class=\"process-math\">\\(HK=KH\\)<\/span> but not Abelian.",
   "body": "but not Abelian   In , let and . Then but and do not commute. The fact that can also be justified by observing that .   "
 },
@@ -1895,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-sit-group",
   "type": "Theorem",
-  "number": "3.39",
+  "number": "3.55",
   "title": "Second Isomorphism Theorem.",
   "body": "Second Isomorphism Theorem  second isomorphism theorem for groups   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .   "
 },
@@ -1904,7 +1922,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-tit-group",
   "type": "Theorem",
-  "number": "3.40",
+  "number": "3.56",
   "title": "Third Isomorphism Theorem.",
   "body": "Third Isomorphism Theorem  third isomorphism theorem for groups   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .   "
 },
@@ -1913,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#thm-lit-group",
   "type": "Theorem",
-  "number": "3.41",
+  "number": "3.57",
   "title": "Lattice Isomorphism Theorem.",
   "body": "Lattice Isomorphism Theorem  lattice isomorphism theorem for groups   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:     (normal) subgroups correspond to normal subgroups i.e.,      iff and iff      iff and iff        indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)      and      and           We have previously shown that the quotient map is a surjective group homomorphism. We show:      is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups by ).     is well defined (correct codomain) since for we have (by again) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by      Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.   If and , then holds by part of or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups. See: .     In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the since for with we have The general case is a consequence of an exercise from HW 5.     The proof of (3) is omitted.      "
 },
@@ -1922,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-products-iso-thms.html#sec-products-iso-thms-4",
   "type": "Summary",
-  "number": "3.3",
+  "number": "3.4",
   "title": "",
   "body": "   The tells us for any homomorphism .    For , we define the to be the set  .     if either or are normal. If , then and . See: .     We also have the , , and .    "
 },
@@ -2788,7 +2806,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Solvable Groups",
-  "body": "Solvable Groups   "
+  "body": "Solvable Groups    "
 },
 {
   "id": "sec-dps",
@@ -4660,7 +4678,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Module Basics",
-  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
+  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).   A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module   A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    -module    Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
 },
 {
   "id": "def-module",
@@ -4669,7 +4687,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "12.1",
   "title": "Module.",
-  "body": "Module   Let be a ring (with ).  A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .     A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      module  -module Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .   "
+  "body": "Module   Let be a ring (with ).   A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module   A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    -module    Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .   "
 },
 {
   "id": "def-vector-space",
@@ -8359,7 +8377,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "C.2",
   "title": "GAP",
-  "body": "GAP  Sage Calculators  CyclicGroup(3); SymmetricGroup(3); DihedralGroup(4); QuaternionGroup(8); FreeGroup(\"a\", \"b\", \"c\");  Size(G); Elements(G); Subgroups(G); NormalSubgroups(G); GeneratorsOfGroup(G);  DirectProduct(G1, G2); QuotientGroup(G, N); IsCyclic(G); IsAbelian(G); IsSolvable(G); IsSimple(G); IsSubgroup(G,H); IsNormal(G,H); IsCharacteristicSubgroup(G, N);      "
+  "body": "GAP  What is GAP?     Commands in GAP  CyclicGroup(3); SymmetricGroup(3); DihedralGroup(4); QuaternionGroup(8); FreeGroup(\"a\", \"b\", \"c\");  Size(G); Elements(G); Subgroups(G); NormalSubgroups(G); GeneratorsOfGroup(G);  DirectProduct(G1, G2); QuotientGroup(G, N); IsCyclic(G); IsAbelian(G); IsSolvable(G); IsSimple(G); IsSubgroup(G,H); IsNormal(G,H); IsCharacteristicSubgroup(G, N);      "
 },
 {
   "id": "sec-macaulay2",
@@ -8368,7 +8386,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "C.3",
   "title": "Macaulay2",
-  "body": "Macaulay2   "
+  "body": "Macaulay2  What is Macaulay2?  There are several computer algebra systems dedicated to algebraic geometry and commutative algebra computations, such as    Singular (more popular among algebraic geometers),     CoCoA (which is more popular with european commutative algebraists, having originated in Genova, Italy), and     Macaulay2 .   There are many computations you could run on any of these systems (and others), but we will focus on Macaulay2 since it's the most popular computer algebra system among US based commutative algebraists.  Macaulay2, as the name suggests, is a successor of a previous computer algebra system named Macaulay. Macaulay was first developed in 1983 by Dave Bayer and Mike Stillman, and while some still use it today, the system has not been updated since its final release in 2000. In 1993, Daniel Grayson and Mike Stillman released the first version of Macaulay2, and the current stable version of Macaulay2 1.16.  Macaulay2, or M2 for short, is an open-source project, with many contributors writing packages that are then released with the newest Macaulay2 version. Journals like the Journal of Software for Algebra and Geometry publish peer-refereed short articles that describe and explain the functionality of new packages, with the package source code being peer reviewed as well.  The National Science Foundation has funded Macaulay2 since 1992. Besides funding the project through direct grants, the NSF has also funded several Macaulay2 workshops — conferences where Macaulay2 package developers gather to work on new packages, and to share updates to the Macaulay2 core code and recent packages.   Commands in Macaulay2  A Macaulay2 session often starts with defining some ambient ring we will be doing computations over. Common rings such as the rationals and the integers can be defined using the commands QQ and ZZ ; one can easily take quotients or build polynomial rings (in finitely many variables) over these. For example,   and   both store the ring as , with the small difference that in the second example Macaulay2 has named the coefficient field . One quirk that might make a difference later is that if we use the first option and later set to be the field , our ring is not a polynomial ring over . Also, in the second example we ended each line with a ; , which tells Macaulay2 to run the command but not display the result of the computation — which is in this case was simply an assignment, so the result is not relevant.  We can now do all sorts of computations over our ring . For example, we can define an ideal in as follows:   Above we have set to be the ideal in that is generated by . The notation ideal( ) requires the usage of ^ for powers and * for products; alternatively, we can define the exact same ideal with the notation ideal\" \" , as follows:   Now we can use this ideal to either define a quotient ring or the -module , as follows:   It's important to note that while is a ring, is the -module — this is a very important difference for Macaulay2, since these two objects have different types. So defined above is a ring, while is a module. Notice that Macaulay2 stored the module as the cokernel of the map   When you make a new definition in Macaulay2, you might want to pay attention to what ring your new object is defined over. For example, now that we defined this ring , Macaulay2 has automatically taken to be our current ambient ring, and any calculation or definition we run next will be considered over and not . If you want to return to the original ring , you must first run the command use R   If you want to work over a finitely generated algebra over one of the basic rings you can define in Macaulay2, and your ring is not a quotient of a polynomial ring, you want to rewrite this algebra as a quotient of a polynomial ring. For example, suppose you want to work over the second Veronese in variables over our field from before, meaning the algebra . We need algebra generators, which we will call corresponding to and :   Our ring at the end is isomorphic to the 2nd Veronese of , which is the ring we wanted. Note the syntax order in map : first target, then source, then a list with the images of each algebra generator.  As you're learning how to use Macaulay2, you will often find yourself needing some help. Luckily, Macaulay2 can help you directly! For example, suppose you know the name of a command, but do not remember the syntax to use it. You can ask ?command , and Macaulay2 will show you the different usages of the command you want to know about.   If instead you'd rather read the complete Macaulay2 documentation on the command you are interested in, you can use the viewHelp command, which will open an html page with the documentation you asked for. So running   will open an html page dedicate to the method primaryDecomposition, which includes examples and links to related methods.  Many Macaulay2 commands are easy to guess, and named exactly what you would expect them to be named. Often, googling “Macaulay2” followed by a few descriptive words will easily land you on the documentation for whatever you are trying to do.  Here are some basic commands you will likely use:    ideal (f_1, \\dots , f_n) will return the ideal generated by . Here products should be indicated by * , and powers with ^ . If you'd rather not use ^ (this might be nice if you have lots of powers), you can write ideal (f_1, \\dots , f_n) instead.     map S, R, (f_1, \\dots , f_n) gives a ring map if and are rings, and is a quotient of . The resulting ring map will send . There are many variations of map — for example, you can use it to define -module homomorphisms — but you should carefully input the information in the required format. Try viewHelp map in Macaulay2 for more details.     ker returns the kernel of the map .     I + J and I*J return the sum and product of the ideals and , respectively.     A = matrix\\{\\{a_1,1, \\dots , a_1,n}, \\dots , {a_m,1, \\dots , a_m,n\\}\\} returns the matrix      As in most programming languages, Macaulay2 follows the convention that the first position in a list is the th position.  The method primaryDecomposition returns a list of primary ideals whose intersection is the input ideal, and associatedPrimes returns the list of associated primes of the given ideal or module. Operations on lists are often intuitive. For example, let's say we want to find the primary component of an ideal with a particular radical.   i1 : R = QQ[x,y]; i2 : I = ideal\"x2,xy\"; o2 : Ideal of R i3 : prim = primaryDecomposition I 2 o3 = {ideal x, ideal (y, x )} o3 : List i4 : L = select(prim, Q -> radical(Q) == ideal\"x,y\") 2 o4 = {ideal (y, x )} o4 : List  The method select returns a list of all the elements in our list with the required properties. In this case, if we actually want the primary ideal we just selected, as opposed to a list containing it, we need to extract the first component of our list .  i5 : L_0 2 o5 = ideal (y, x ) o5 : Ideal of R    "
 },
 {
   "id": "sec-qual",
