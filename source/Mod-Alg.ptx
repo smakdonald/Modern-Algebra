@@ -11978,7 +11978,7 @@
 
       <chapter xml:id="ch-mod"><title>Intro to Modules</title>
 
-        <section xml:id="sec-defmod"><title>Module Basics</title>
+        <section xml:id="sec-defmod"><title>Modules and Algebras</title>
 
           <subsection xml:id="subsec-modules"><title>Modules</title>
 
@@ -12397,7 +12397,7 @@
             
           </subsection>
 
-          <subsection xml:id="subsec-restriction"><title>Restriction of Scalars</title>
+          <subsection xml:id="subsec-restriction"><title>Restriction of Scalars and Algebras</title>
 
             <blockquote>
               <p>
@@ -12469,6 +12469,44 @@
               This explains the use of the phrase <q>restriction of scalars</q>. 
               That being said, in generality the phrase <q>translation of scalars</q> would be more appropriate. 
             </p>
+  
+            <definition xml:id="def-algebra"><title>Algebra</title>
+              <statement>
+                <p>
+                  Given a ring <m>R</m>, an <m>R</m>-<em>algebra</em> is a ring <m>S</m> equipped with a ring homomorphism <m>\phi: R \to S</m>. 
+                  This defines an <m>R</m>-module structure on <m>S</m> given by restriction of scalars: 
+                  for each <m>r\in R</m> and <m>s\in S</m>, <m>rs := \phi(r)s</m>. 
+                  This <m>R</m>-module structure on <m>S</m> is compatible with the internal multiplication of <m>S</m> i.e., <idx><h>restriction of scalars</h></idx>
+                  <me>r(st)=(rs)t=s(rt) \text{ for all } r\in R, s, t\in S.</me>
+                  We will call <m>\phi</m> the <em>structure homomorphism</em> of the <m>R</m>-algebra <m>S</m>.<idx><h>structure homomorphism of an algebra</h></idx>
+                </p>
+              </statement>
+            </definition>
+            
+            <example xml:id="ex-polynomial-rings-are-algebras"><title>Polynomial Rings are Algebras</title>
+              <statement>
+                <p>
+                  If <m>A</m> is a ring and <m>x_1,\dots,x_n</m> are indeterminates, the inclusion map <m>A \hookrightarrow A[x_1,\dots,x_n]</m> makes the polynomial ring into an <m>A</m>-algebra.
+                </p>
+              </statement>
+            </example>
+  
+            <example xml:id="ex-inclusion-maps-give-algebra-structure"><title>Inclusion Maps Give Algebra Structure</title>
+              <statement>
+                <p>
+                  More generally, any inclusion map <m>R \subseteq S</m> gives <m>S</m> an <m>R</m>-algebra structure. 
+                  In this case the <m>R</m>-module multiplication coincides with the internal (ring) multiplication on <m>S</m>.
+                </p>
+              </statement>
+            </example>
+  
+            <example xml:id="ex-rings-have-unique-structure-as-z-algebra"><title>Rings Have Unique Structure as <m>\Z</m>-algebra</title>
+              <statement>
+                <p>
+                  Any ring comes with a unique structure as a <m>\Z</m>-algebra, since there is a unique ring homomorphism <m>\Z \to R</m>: the one given by <m>n \mapsto n \cdot 1_R</m>.
+                </p>
+              </statement>
+            </example>
 
             <example><title>Restrictions of Scalars</title>
               <statement>

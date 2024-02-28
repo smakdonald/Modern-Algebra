@@ -4677,8 +4677,8 @@ var ptx_lunr_docs = [
   "url": "sec-defmod.html",
   "type": "Section",
   "number": "12.1",
-  "title": "Module Basics",
-  "body": "Module Basics  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).   A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module   A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    -module    Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
+  "title": "Modules and Algebras",
+  "body": "Modules and Algebras  Modules    Complexity that works is built up out of modules that work perfectly, layered one over the other.   Kevin Kelly   Modules are a generalization of the concept of a vector space to any ring of scalars. But while vector spaces make for a great first example of modules, many of the basic facts we are used to from linear algebra are often a little more subtle over a general ring. These differences are features, not bugs. We will introduce modules, study some general linear algebra, and discuss the differences that make the general theory of modules richer and even more fun.  Module   Let be a ring (with ).   A left  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    module   A right  - module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .    -module    Often, the elements of the ring are referred to as scalars , and the four rules given above are referred to as an - action .    Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. Later we will see that vector spaces are much simpler modules than modules over other rings. So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.  Vector Space   Let be a field. An - vector space is a (left) -module. vector space     Modules in Commutative Rings  If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module.    For non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .   Module and Opposite Ring  For a ring , recall the opposite ring, , as defined in . Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .   Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .         First, note , which is an ableian group. Observe As from above, we have by .  Observe As from above, we have by .  Obersve Since is also the additive inverse of , we have by Part (2) of .  Finally,       Examples of Modules    For any ring , the zero module is with for any . zero module   Every ring is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.   For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations  standard free module        Prove that an -module is the zero module if and only if the zero and identity maps on are equal.   Closure Properties of Modules  Given -modules and and an ideal , the following are -modules:               From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of .   Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .        Modules  Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .      Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .    submodule     We could equivalently define submodule to be a subset of that is an -module using the same operations of addition and scaling as in .  Submodules      A subset of a ring is a (left) submodule of if and only if it is a (left) ideal.    Let be a commutative ring with , let be an ideal of and let be an -module. Then for is a submodule of .    Let be an -module and be an ideal in . is an -submodule of .       Submodules and Zorn's Lemma   Let be a submodule of an -module . Using , prove that there is a submodule such that    , and     for every non-zero submodule of .       Qual Watch  Proving was on the qualifying exam.    Restriction of Scalars and Algebras    Restrictions will set you free.   W.A. Mathieu   For an -module the ring is often referred to as the ring of scalars for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.  Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     As a special case of , if is a subring of , then every left -module becomes a left -module via restriction of scalars along the inclusion map of into . This explains the use of the phrase restriction of scalars . That being said, in generality the phrase translation of scalars would be more appropriate.  Algebra   Given a ring , an - algebra is a ring equipped with a ring homomorphism . This defines an -module structure on given by restriction of scalars: for each and , . This -module structure on is compatible with the internal multiplication of i.e., restriction of scalars  We will call the structure homomorphism of the -algebra . structure homomorphism of an algebra     Polynomial Rings are Algebras   If is a ring and are indeterminates, the inclusion map makes the polynomial ring into an -algebra.    Inclusion Maps Give Algebra Structure   More generally, any inclusion map gives an -algebra structure. In this case the -module multiplication coincides with the internal (ring) multiplication on .    Rings Have Unique Structure as -algebra   Any ring comes with a unique structure as a -algebra, since there is a unique ring homomorphism : the one given by .    Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .           A is a generalization of the concept of a vector space to any ring of scalars.    Given a ring and an ideal , each of , , and can be viewed as -modules.     . This comes up quite often.    If a homomorphism exists between two rings, and , we can translate (or restrict) the scalars from one module to the next.     "
 },
 {
   "id": "def-module",
@@ -4816,11 +4816,47 @@ var ptx_lunr_docs = [
   "body": "Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure:   the rule for addition on is the same as in the original structure and    the rule for scaling by elements of is     restriction of scalars     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:    "
 },
 {
-  "id": "subsec-restriction-6",
+  "id": "def-algebra",
   "level": "2",
-  "url": "sec-defmod.html#subsec-restriction-6",
-  "type": "Example",
+  "url": "sec-defmod.html#def-algebra",
+  "type": "Definition",
   "number": "12.15",
+  "title": "Algebra.",
+  "body": "Algebra   Given a ring , an - algebra is a ring equipped with a ring homomorphism . This defines an -module structure on given by restriction of scalars: for each and , . This -module structure on is compatible with the internal multiplication of i.e., restriction of scalars  We will call the structure homomorphism of the -algebra . structure homomorphism of an algebra    "
+},
+{
+  "id": "ex-polynomial-rings-are-algebras",
+  "level": "2",
+  "url": "sec-defmod.html#ex-polynomial-rings-are-algebras",
+  "type": "Example",
+  "number": "12.16",
+  "title": "Polynomial Rings are Algebras.",
+  "body": "Polynomial Rings are Algebras   If is a ring and are indeterminates, the inclusion map makes the polynomial ring into an -algebra.   "
+},
+{
+  "id": "ex-inclusion-maps-give-algebra-structure",
+  "level": "2",
+  "url": "sec-defmod.html#ex-inclusion-maps-give-algebra-structure",
+  "type": "Example",
+  "number": "12.17",
+  "title": "Inclusion Maps Give Algebra Structure.",
+  "body": "Inclusion Maps Give Algebra Structure   More generally, any inclusion map gives an -algebra structure. In this case the -module multiplication coincides with the internal (ring) multiplication on .   "
+},
+{
+  "id": "ex-rings-have-unique-structure-as-z-algebra",
+  "level": "2",
+  "url": "sec-defmod.html#ex-rings-have-unique-structure-as-z-algebra",
+  "type": "Example",
+  "number": "12.18",
+  "title": "Rings Have Unique Structure as <span class=\"process-math\">\\(\\Z\\)<\/span>-algebra.",
+  "body": "Rings Have Unique Structure as -algebra   Any ring comes with a unique structure as a -algebra, since there is a unique ring homomorphism : the one given by .   "
+},
+{
+  "id": "subsec-restriction-10",
+  "level": "2",
+  "url": "sec-defmod.html#subsec-restriction-10",
+  "type": "Example",
+  "number": "12.19",
   "title": "Restrictions of Scalars.",
   "body": "Restrictions of Scalars     Complex Vector Spaces are Real  Since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space, etc.   Polynomial Rings are Modules  The polynomial ring is a left -module for any via the evident injective ring homomorphism .     is a left -module for given by the ring map sending to .   is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module. The rule for scaling is .      "
 },
@@ -4847,7 +4883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-module-homomorphism",
   "type": "Definition",
-  "number": "12.16",
+  "number": "12.20",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-Module Homomorphism.",
   "body": "-Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have  Preserves Addition   , i.e. is an additive group homomorphism, and   Preserves Scaling   .   When is a field, we refer to as a linear transformation . module homomorphism  -module homomorphism  -map  linear transformation    "
 },
@@ -4856,7 +4892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-4",
   "type": "Exercise",
-  "number": "12.17",
+  "number": "12.21",
   "title": "<span class=\"process-math\">\\(\\varphi(0)=0\\)<\/span>.",
   "body": " Let be an -module homomorphism. Then .   By definition, is a homomorphism of abelian groups. Thus by .  "
 },
@@ -4865,7 +4901,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-5",
   "type": "Remark",
-  "number": "12.18",
+  "number": "12.22",
   "title": "",
   "body": " Unlike ring homomorphisms, a -module homomorphism does not need to map to .  "
 },
@@ -4874,7 +4910,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-6",
   "type": "Example",
-  "number": "12.19",
+  "number": "12.23",
   "title": "Multipication Map is <span class=\"process-math\">\\(R\\)<\/span>-Map.",
   "body": "Multipication Map is -Map      Let be a commutative ring and be an -module. For each , the multiplication map given by is a homomorphism of -modules.    Let be a ring with , let be an -module, and let be an -submodule of . Then the inclusion map is an -module homomorphism.          By the definition of -module we have and thus preserves addition. Also, we have and thus preserves scaling as well, making an -module homomorphism.          "
 },
@@ -4883,7 +4919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-module-isomorphism",
   "type": "Definition",
-  "number": "12.20",
+  "number": "12.24",
   "title": "<span class=\"process-math\">\\(R\\)<\/span>-Module Isomorphism.",
   "body": "-Module Isomorphism   An -module homomorphism is an -module isomorphism if there is another -module homomorphism such that and . module isomorphism  -module isomorphism    "
 },
@@ -4892,7 +4928,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#cor-module-isomorphisms-and-bijections",
   "type": "Corollary",
-  "number": "12.21",
+  "number": "12.25",
   "title": "Module Isomorphisms and Bijections.",
   "body": "Module Isomorphisms and Bijections   Given a ring , -modules and , and a -module homomorphism , is an -module isomorphism if and only if is a bijection.    Notice that if is an -module homomorphism then it is a group homomophism as well. Thus yields the result.   "
 },
@@ -4901,7 +4937,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-iso-10",
   "type": "Exercise",
-  "number": "12.22",
+  "number": "12.26",
   "title": "",
   "body": " If is the zero ring, then there is (up to isomorphism) only one -module, the zero module.   If is any module over the ring, then for each we have .  "
 },
@@ -4910,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-kernel-mod",
   "type": "Definition",
-  "number": "12.23",
+  "number": "12.27",
   "title": "Kernel.",
   "body": "Kernel   The kernel of an -module homomorphism is the set  kernel ( -map)    "
 },
@@ -4919,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#prop-kernels-and-images-of-homomorphisms-are-submodule",
   "type": "Proposition",
-  "number": "12.24",
+  "number": "12.28",
   "title": "Kernels and Images are Submodules.",
   "body": "Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
@@ -4928,7 +4964,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-r-mod-hom",
   "type": "Definition",
-  "number": "12.25",
+  "number": "12.29",
   "title": "<span class=\"process-math\">\\(\\Hom\\)<\/span>.",
   "body": "  Let be a ring and let and be -modules. Then denotes the set of all -module homomorphisms from to , and denotes the set .    "
 },
@@ -4937,7 +4973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#prop-hom-module",
   "type": "Proposition",
-  "number": "12.26",
+  "number": "12.30",
   "title": "<span class=\"process-math\">\\(\\Hom_R(M,N)\\)<\/span> is an <span class=\"process-math\">\\(R\\)<\/span>-module.",
   "body": "is an -module   Let and be -modules over a commutative ring . Then is an -module using the following structure:  Rule for Addition  Given , is the map defined by ,   Rule for Scaling  Given and , is the -module homomorphism defined by    The zero element of is the zero map.   "
 },
@@ -4946,7 +4982,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-hom-iso",
   "type": "Theorem",
-  "number": "12.27",
+  "number": "12.31",
   "title": "<span class=\"process-math\">\\(\\Hom_R(R,M) \\cong M\\)<\/span>.",
   "body": "  For any commutative ring with and any -module there is an isomorphism of -modules .    in Eloísa notes   "
 },
@@ -4955,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#subsec-hom-6",
   "type": "Exercise",
-  "number": "12.28",
+  "number": "12.32",
   "title": "",
   "body": " Show that for every nonzero integers and there is a -module isomorphism .  "
 },
@@ -4964,7 +5000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-quotient-module",
   "type": "Definition",
-  "number": "12.29",
+  "number": "12.33",
   "title": "Quotient Module.",
   "body": "Quotient Module   Let be a ring, let be an -module, and let be a submodule of . The quotient module  is the quotient group under (so elements of are additive cosets of the form with ) using the following structure:  Rule for Addition  Addition is defined by    Rule for Scaling  Scaling by defined to by for all and .    quotient module    "
 },
@@ -4973,7 +5009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-quotient-module-well-defined",
   "type": "Theorem",
-  "number": "12.30",
+  "number": "12.34",
   "title": "Quotient Modules are Well Defined.",
   "body": "Quotient Modules are Well Defined   Let be a ring, let be an -module, and let be a submodule of . The rule for scaling introduced above is well-defined and it, along with the rule for , makes into an -module.   "
 },
@@ -4982,7 +5018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-module-quotient-map",
   "type": "Definition",
-  "number": "12.31",
+  "number": "12.35",
   "title": "Module Quotient Map.",
   "body": "Module Quotient Map   Let be a ring, let be an -module, and let be a submodule of . Define the canonical quotient map  by . quotient map (modules)    "
 },
@@ -4991,7 +5027,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#prop-quotient-map-is-r-module-homomorphism",
   "type": "Proposition",
-  "number": "12.32",
+  "number": "12.36",
   "title": "Quotient Map is an <span class=\"process-math\">\\(R\\)<\/span>-map.",
   "body": "Quotient Map is an -map   Let be a ring, let be an -module, and let be a submodule of .   The quotient map is a n -module homomorphism     .       Among the many things to check here, we will only check a couple.  We need to prove the rule for scaling by on is well-defined: If then so by the definition of submodule. This gives that , hence . The module axioms are then pretty straightforward. We already know from 817 that is an abelian group under .  Let us check one of the four axioms involving scaling. We have which gives the third such axiom. The other three are also straightforward.  The fact that is an -module homomorphism is also straightforward. Its kernel is , which is equal to .   "
 },
@@ -5000,7 +5036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#exe-z-modules-and-quotients",
   "type": "Example",
-  "number": "12.33",
+  "number": "12.37",
   "title": "<span class=\"process-math\">\\(\\Z\\)<\/span>-modules and Quotients.",
   "body": "-modules and Quotients  Recall that -modules are the same as abelian groups by . Submodules and quotient -modules are the same things as subgroups and quotients of abelian groups.  "
 },
@@ -5009,7 +5045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#def-cokernel",
   "type": "Definition",
-  "number": "12.34",
+  "number": "12.38",
   "title": "Cokernel.",
   "body": "Cokernel   The cokernel of a map of -modules is the module    "
 },
@@ -5018,7 +5054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modhom.html#thm-module-isomorphism-thms",
   "type": "Theorem",
-  "number": "12.35",
+  "number": "12.39",
   "title": "Module Isomorphism Theorems.",
   "body": "Module Isomorphism Theorems   Let be a ring, and let be a -module.  UMP for Quotient Modules  Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . UMP for quotient modules    First Isomorphism Theorem for Modules  Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . first isomorphism theorem for modules    Second Isomorphism Theorem for Modules  Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . second isomorphism theorem for modules    Third Isomorphism Theorem for Modules  Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . third isomorphism theorem for modules    Lattice Isomorphism Theorem for Modules  Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections. lattice isomorphism theorem for modules        Ignoring the rules for scaling by , we know each of the first four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:    UMP  From the , we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: where the third equation uses that preserves scaling.   First Isomorphism Theorem  From we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).   Second Isomorphism Theorem  First, note from that and are indeed submodules. The yields an isomorphism of abelian groups given by . It remains only to show preserves scaling:    Third Isomorphism Theorem  For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear:    Lattice Isomorphism Theorem  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of subgroups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.      "
 },
