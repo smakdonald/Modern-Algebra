@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h5 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(P\)</span> be a Sylow <span class="process-math">\(p\)</span>-subgroup and let <span class="process-math">\(Q\)</span> be any <span class="process-math">\(p\)</span>-subgroup. Let <span class="process-math">\(\mathcal S_P\)</span> denote the collection of all conjugates of <span class="process-math">\(P\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/E1030.html ./knowl/E1030b.html">
+\begin{equation*}
+\mathcal S_P = \{ gPg^{-1} \mid g \in G\}.
+\end{equation*}
+</div>
+<div class="para">Part (3) tells us the <span class="process-math">\(\mathcal S_P\)</span> consists of all Sylow <span class="process-math">\(p\)</span>-subgroups of <span class="process-math">\(G\text{,}\)</span> but we don’t yet know this. Nonetheless, <span class="process-math">\(G\)</span> acts (transitively) on <span class="process-math">\(\mathcal S_P\)</span> by conjugation, and thus <span class="process-math">\(Q\)</span> also acts on <span class="process-math">\(\mathcal S_P\)</span> (not necessarily transitively). The key to proving parts (2) and (3) of the Sylow Theorem is to analyse the action of <span class="process-math">\(Q\)</span> on <span class="process-math">\(\mathcal S_P\)</span> to establish <a href="" class="xref" data-knowl="./knowl/E1030.html" title="Equation">()</a> and <a href="" class="xref" data-knowl="./knowl/E1030b.html" title="Equation">()</a> below.</div>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(O_1, \dots, O_s\)</span> be the orbits of the action of <span class="process-math">\(Q\)</span> on <span class="process-math">\(\mathcal S_P\text{,}\)</span> and for each <span class="process-math">\(i\)</span> pick a representative <span class="process-math">\(P_i \in O_i\text{.}\)</span> We have <span class="process-math">\(\operatorname{stab}_Q(P_i) = \{q \in Q \mid qP_iq^{-1} = P_i\} = Q \cap N_G(P_i) = Q \cap P_i\text{,}\)</span> where the last equation uses the Lemma. By LOIS, we thus have <span class="process-math">\(|O_i| = [Q: Q \cap P_i]\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{gather*}
+|\mathcal S_P |= \sum_{i=1}^s [Q: Q \cap P_i]
+\end{gather*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">This equation holds for any <span class="process-math">\(p\)</span>-subgroup <span class="process-math">\(Q\)</span> of <span class="process-math">\(G\text{.}\)</span> In particular, we can take <span class="process-math">\(Q = P_1\text{.}\)</span> In this case the first term is <span class="process-math">\(1\)</span> and, since <span class="process-math">\(Q \cap P_i = P_1 \cap P_i &lt; P_1 = Q\)</span> for all <span class="process-math">\(i \ne 1\text{,}\)</span> the remaining terms are divisible by <span class="process-math">\(p\text{.}\)</span> This gives</div>
+<div class="displaymath process-math">
+\begin{gather*}
+|\mathcal S_P| \equiv 1 \pmod{p}.
+\end{gather*}
+</div>
+<div class="para">(This does not yet prove part (3) since we don’t yet know that <span class="process-math">\(\mathcal S_P\)</span> consists of all Sylow <span class="process-math">\(p\)</span>-subgroups.)</div>
+</div>
+<div class="para">We can now prove part (2): By way of contradiction, suppose <span class="process-math">\(Q\)</span> is a <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> such that <span class="process-math">\(Q\)</span> is not contained in any of the subgroups belonging to <span class="process-math">\(\mathcal S_P\text{.}\)</span> Then <span class="process-math">\(Q \cap P_i &lt; Q\)</span> for all <span class="process-math">\(i\)</span> and thus every term on the right-hand side of <a href="" class="xref" data-knowl="./knowl/E1030.html" title="Equation">()</a> is divisble by <span class="process-math">\(p\text{,}\)</span> contrary to <a href="" class="xref" data-knowl="./knowl/E1030b.html" title="Equation">()</a>. The second assertion in (2) follows by taking <span class="process-math">\(Q\)</span> to be a Sylow <span class="process-math">\(p\)</span>-subgroup.</div>
+<div class="para">This proves, in particular, that <span class="process-math">\(\mathcal S_P\)</span> in fact does consist of all Sylow <span class="process-math">\(p\)</span>-subgroups.</div></article><span class="incontext"><a href="sec-p-groups.html#li-314" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Disjoint Commutes.</span>
+</h4>
+<div class="para logical">
+<div class="para">Disjoint cycles commute, that is, if <span class="process-math">\(i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Let’s consider two disjoint cycles, denoted as <span class="process-math">\((a1 a2 ... am)\)</span> and <span class="process-math">\((b1 b2 ... bn)\text{,}\)</span> where <span class="process-math">\(ai\)</span>’s and <span class="process-math">\(bi\)</span>’s are distinct elements. Let’s analyze the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\text{:}\)</span> When we apply the composition to an element <span class="process-math">\(ai\text{,}\)</span> we have:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a1 a2 ... am) ∘ (b1 b2 ... bn)(ai) = (a1 a2 ... am)(b1 b2 ... bn(ai)) = (a1 a2 ... am)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or }a1 (\text{ if }ai = am)
+\end{equation*}
+</div>
+<div class="para">Similarly, when we apply the composition to an element <span class="process-math">\(bj\text{,}\)</span> we have:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(bj) = (b1 b2 ... bn)(a1 a2 ... am(bj)) = (b1 b2 ... bn)(bj) = bj+1 (\text{ if } bj ≠ bn) \text{ or }b1 (\text{ if } bj = bn)
+\end{equation*}
+</div>
+<div class="para">From these calculations, we can observe that the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> maps each element <span class="process-math">\(ai\)</span> to <span class="process-math">\(ai+1\)</span> (if <span class="process-math">\(ai ≠ am\)</span>), and it maps <span class="process-math">\(am\)</span> to <span class="process-math">\(a1\text{.}\)</span> Similarly, the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> maps each element <span class="process-math">\(bj\)</span> to <span class="process-math">\(bj+1\)</span> (if <span class="process-math">\(bj ≠ bn\)</span>), and it maps <span class="process-math">\(bn\)</span> to <span class="process-math">\(b1\text{.}\)</span> Now, let’s consider the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> and evaluate its effect on the elements ai and am:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(ai) = (b1 b2 ... bn)(a1 a2 ... am(ai)) = (b1 b2 ... bn)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or } a1 (\text{ if } ai = am)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(am) = (b1 b2 ... bn)(a1 a2 ... am(am)) = (b1 b2 ... bn)(a1 a2 ... am) = am+1 (\text{ if } am ≠ a1) \text{ or } a2 (\text{ if } am = a1)
+\end{equation*}
+</div>
+<div class="para">Comparing these results with the previous composition, we see that the effects on <span class="process-math">\(ai\)</span> and <span class="process-math">\(am\)</span> are the same in both compositions. This implies that the compositions <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> and <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> are identical. Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-symmetric.html#prop-disjoint-cycles-commute">in-context</a></span>
+</body>
+</html>
