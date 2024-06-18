@@ -13,287 +13,67 @@
 <body class="ignore-math">
 <div class="exercisegroup">
 <h3 class="heading">
-<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">D.1.1–9</span><span class="period">.</span><span class="space"> </span><span class="title">May 2022.</span>
+<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">D.6.1–9</span><span class="period">.</span><span class="space"> </span><span class="title">May 2022.</span>
 </h3>
 <div class="introduction"><div class="para"></div></div>
 <div class="exercisegroup-exercises">
-<details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 1.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span> Prove that <span class="process-math">\(N\cap Z(G)\neq{1}\text{,}\)</span> where <span class="process-math">\(Z(G)\)</span> is the center of <span class="process-math">\(G\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N \neq\{1\}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span> Prove that <span class="process-math">\(N \cap \mathrm{Z}(G) \neq\{1\}\text{,}\)</span> where <span class="process-math">\(\mathrm{Z}(G)\)</span> is the center of <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/xref/thm-class-eq.html" title="Theorem 5.43: Class Equation">Class Equation</a>, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-class-eq.html ./knowl/xref/thm-conjugacy-divides-order.html ./knowl/xref/thm-lagrange.html">
-\begin{equation*}
-|G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
-\end{equation*}
-</div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="" class="xref" data-knowl="./knowl/xref/thm-conjugacy-divides-order.html" title="Theorem 5.42: Size of Conjugacy Class Divides |G|">Theorem 5.42</a>. By <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n}-1 \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-normal-union-of-conjugacy-classes.html" title="Theorem 5.23: Normal Subgroups are Unions of Conjugacy Classes">Theorem 5.23</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-normal-union-of-conjugacy-classes.html ./knowl/xref/thm-lagrange.html">
-\begin{equation*}
-|N| = 1+ \sum_i^r |G : C_G(g_i)|.
-\end{equation*}
-</div>
-<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 3.7: Lagrange’s Theorem">Lagrange’s Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
-</div>
-</div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 2.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical">
 <div class="para">A non-abelian group of order <span class="process-math">\(27\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li><div class="para">Prove there exists a non-abelian group of <span class="process-math">\(27\text{.}\)</span>
-</div></li>
-<li><div class="para">Find, with justification, a presentation of the group you found in part (1).</div></li>
+<li><div class="para">Prove there exists a non-abelian group of <span class="process-math">\(27\text{.}\)</span> (Hint: Use a semi-direct product.)</div></li>
+<li><div class="para">Find, with justification, a presentation of the group you found in part (a).</div></li>
 </ol>
 </div>
-<div class="solutions">
-<details class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para">Use a semi-direct product.</div></div></details><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">Let <span class="process-math">\(C_3 = \langle a \rangle\)</span> be the cyclic group of order <span class="process-math">\(3\text{,}\)</span> and let <span class="process-math">\(C_9 = \langle b \rangle\)</span> be the cyclic group of order <span class="process-math">\(9\text{.}\)</span> Let <span class="process-math">\(\phi \colon C_9 \to \operatorname{Aut}(C_3)\)</span> be the homomorphism defined by <span class="process-math">\(\phi(b^i)(a) = a^i\)</span> for <span class="process-math">\(0 \le i \le 8\text{,}\)</span> where we identify <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> with <span class="process-math">\(C_2\)</span> via the isomorphism <span class="process-math">\(\operatorname{Aut}(C_3) \cong C_2\)</span> given by sending the non-identity automorphism to the generator of <span class="process-math">\(C_2\text{.}\)</span>
-</div>
-<div class="para">Then the semi-direct product <span class="process-math">\(G = C_3 \rtimes_{\phi} C_9\)</span> has order <span class="process-math">\(27\)</span> and is non-abelian. To see that <span class="process-math">\(G\)</span> is non-abelian, note that <span class="process-math">\(bab^{-1} \neq a\)</span> for any <span class="process-math">\(b \in C_9 \setminus {1}\text{,}\)</span> since <span class="process-math">\(a\)</span> has no non-trivial automorphisms.</div>
-</li>
-<li>
-<div class="para">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
-</div>
-<div class="para">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
-</div>
-<div class="para">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
-</div>
-</li>
-</ol></div></div></details>
-</div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 3.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let G be a group of order <span class="process-math">\(2^5\cdot 7^3\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/thm-sylow.html" title="Theorem 6.12: Sylow’s Theorems">Sylow’s Theorems</a> we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho: G \to S_8\)</span> via the <a href="" class="xref" data-knowl="./knowl/xref/thm-permrep.html" title="Theorem 5.5: Permutation Representation">Permutation Representation</a>. This map is non-trivial from part (2) of <a href="" class="xref" data-knowl="./knowl/xref/thm-sylow.html" title="Theorem 6.12: Sylow’s Theorems">Sylow’s Theorems</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-norm-iff-ker.html" title="Theorem 3.40: Normal Subgroup iff Kernel">Theorem 3.40</a>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(2^{5} \cdot 7^{3}\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 4.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
-</div> <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Prove <span class="process-math">\(IJ = I\cap J\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1 \neq 0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I+J=R\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li><div class="para">Prove <span class="process-math">\(I J=I \cap J\text{.}\)</span>
 </div></li>
-<li><div class="para">Prove the following special case of <a href="" class="xref" data-knowl="./knowl/xref/thm-sunzi.html" title="Theorem 7.24: Sunzi’s Remainder Theorem">Sunzi’s Remainder Theorem</a>: There is an isomorphism of rings of the form <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
+<li><div class="para">Prove the following special case of the Chinese Remainder Theorem: There is an isomorphism of rings of the form <span class="process-math">\(R /(I \cap J) \cong R / I \times R / J\text{.}\)</span>
 </div></li>
-</ol></div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
-</div> <div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">Let <span class="process-math">\(x\in IJ\text{.}\)</span> Thus <span class="process-math">\(x=\sum a_ib_j\text{,}\)</span> where each <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{.}\)</span> As <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are both ideals, each term in this sum is contained both in <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{.}\)</span> Thus, by absorption, <span class="process-math">\(x\in I\cap J\text{.}\)</span> Hence <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span>
+</ol>
 </div>
-<div class="para">Let <span class="process-math">\(x\in I\cap J\text{.}\)</span> Thus <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Note that as <span class="process-math">\(I+J=R\text{,}\)</span> there exists some <span class="process-math">\(a\in I\)</span> and <span class="process-math">\(b\in J\)</span> such that <span class="process-math">\(a+b=1\text{.}\)</span> So <span class="process-math">\(x=x1=xa+xb\text{.}\)</span> As <span class="process-math">\(x\in I\cap J\)</span> we see that <span class="process-math">\(x=ax+xb\text{,}\)</span> with <span class="process-math">\(a,x\in I\)</span> and <span class="process-math">\(b,x\in J\text{.}\)</span> Thus <span class="process-math">\(x\in IJ\text{,}\)</span> yielding <span class="process-math">\(IJ=I\cap J\text{.}\)</span>
-</div>
-</li>
-<li>
-<div class="para">Let <span class="process-math">\(f:R\to R/I\times R/J\)</span> be defined by <span class="process-math">\(f(x)=(x+I,x+J)\text{.}\)</span>
-</div>
-<div class="para">Notice that if <span class="process-math">\(x\in I\cap J\text{,}\)</span> we have <span class="process-math">\(f(x)=(I,J)\text{,}\)</span> and so <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Thus <span class="process-math">\(x+I=I\)</span> and <span class="process-math">\(x+J=J\text{,}\)</span> and so <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Hence <span class="process-math">\(x\in I\cap J\text{,}\)</span> and so <span class="process-math">\(\ker(f)=I\cap J\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
-=&amp;((x+I)+(y+I),(x+J)+(y+J))\\
-=&amp;((x+I),(x+J))+(y+I),(y+J)\\
-=&amp;f(x)+f(y),
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(f\)</span> a homomorphism of rings.</div>
-</div>
-<div class="para">Let <span class="process-math">\((a+I,b+J)\in R/I\times R/J\text{.}\)</span> As <span class="process-math">\(R=I+J\text{,}\)</span> we can write <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as <span class="process-math">\(a_i+a_j\)</span> and <span class="process-math">\(b_i+b_j\text{.}\)</span> However, as <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{,}\)</span> we have <span class="process-math">\((a+I,b+J)=(a_j+I, b_i+J)\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-ring-fit.html">
-\begin{equation*}
-f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
-\end{equation*}
-</div>
-<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-ring-fit.html">
-\begin{equation*}
-(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/xref/thm-ring-fit.html" title="Theorem 9.23: First Isomorphism Theorem for Rings">First Isomorphism Theorem for Rings</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
-</div>
-</div>
-</li>
-</ol></div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 5.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical">
-<div class="para">Prove the Rank-Nullity Theorem: If <span class="process-math">\(F\)</span> is a field, <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are a finite dimensional <span class="process-math">\(F\)</span> -vector spaces, and <span class="process-math">\(g : V \to W\)</span> is an <span class="process-math">\(F\)</span>-linear transformation, then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\rank(g) + \operatorname{nullity}(g) = \dim(V). 
-\end{equation*}
-</div>
-<div class="para">(Recall the <em class="emphasis">rank</em> of <span class="process-math">\(g\)</span> is the dimension of its image and the nullity of <span class="process-math">\(g\)</span> is the dimension of its kernel.)</div>
-</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para">See: <a href="" class="xref" data-knowl="./knowl/xref/thm-rank-nullity.html" title="Theorem 13.57: Rank-Nullity Theorem">Rank-Nullity Theorem</a>
-</div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Prove the Rank-Nullity Theorem: If <span class="process-math">\(F\)</span> is a field, <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are a finite dimensional <span class="process-math">\(F\)</span>-vector spaces, and <span class="process-math">\(g: V \rightarrow W\)</span> is an <span class="process-math">\(F\)</span>-linear transformation, then <span class="process-math">\(\operatorname{rank}(g)+\operatorname{nullity}(g)=\operatorname{dim}(V)\text{.}\)</span> (Recall the rank of <span class="process-math">\(g\)</span> is the dimension of its image and the nullity of <span class="process-math">\(g\)</span> is the dimension of its kernel.)</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 6.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(n\)</span> a positive integer. We say an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is <em class="emphasis">unipotent</em> if <span class="process-math">\(A-In\)</span> is nilpotent (i.e., <span class="process-math">\((A-In)^k = 0\)</span> for some <span class="process-math">\(k \geq 1\)</span>). For the field <span class="process-math">\(F = \Q\text{,}\)</span> find (with complete justification) the number of similarity classes of <span class="process-math">\(4\times 4\)</span> unipotent matrices and give an explicit representative for each class.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
-</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
-</div>
-</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
-</ul>
-<div class="para">We identify the companion matrices for each possible invariant factor:</div>
-<ul class="disc">
-<li><div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li><div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li><div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para">and</div>
-</div></li>
-<li><div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
-\end{equation*}
-</div></div></li>
-</ul>
-<div class="para">We define the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(B=C((x-1)^4)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span></div></li>
-</ul>
-<div class="para">As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/xref/thm-rcf.html" title="Theorem 15.13: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
-</div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(n\)</span> a positive integer. We say an <span class="process-math">\(n \times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is unipotent if <span class="process-math">\(A-I_{n}\)</span> is nilpotent (i.e., <span class="process-math">\(\left(A-I_{n}\right)^{k}=0\)</span> for some <span class="process-math">\(k \geq 1\)</span> ). For the field <span class="process-math">\(F=\mathbb{Q}\text{,}\)</span> find (with complete justification) the number of similarity classes of <span class="process-math">\(4 \times 4\)</span> unipotent matrices and give an explicit representative for each class.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 7.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^5 - 11\)</span> over <span class="process-math">\(\Q\text{.}\)</span>
-</div> <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Find, with justification, the degree of <span class="process-math">\(L\)</span> over <span class="process-math">\(\Q\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^{5}-11\)</span> over <span class="process-math">\(\mathbb{Q}\)</span>
+</div>
+<ol class="lower-alpha">
+<li><div class="para">Find, with justification, the degree of <span class="process-math">\(L\)</span> over <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
 </div></li>
-<li><div class="para">Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{,}\)</span> a primitive <span class="process-math">\(5\th\)</span> root of unity. Prove <span class="process-math">\(x^5 - 11\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
+<li><div class="para">Let <span class="process-math">\(F=\mathbb{Q}(\zeta)\)</span> where <span class="process-math">\(\zeta=e^{2 \pi i / 5}\text{,}\)</span> a primitive 5 -th root of unity. Prove <span class="process-math">\(x^{5}-11\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
 </div></li>
-</ol></div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^5 - 11\)</span> over <span class="process-math">\(\Q\text{.}\)</span>
-</div> <div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">First, notice that by <a href="" class="xref" data-knowl="./knowl/xref/thm-eisensteins-criterion.html" title="Theorem 16.9: Eisenstein’s Criterion">Eisenstein’s Criterion</a> (<span class="process-math">\(p=11\)</span>) we have <span class="process-math">\(f\)</span> irreducible in <span class="process-math">\(\Q\text{.}\)</span>
+</ol>
 </div>
-<div class="para logical">
-<div class="para">The roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\displaystyle \a_1=\sqrt[5]{11}\z\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_2=\sqrt[5]{11}\z^2\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_3=\sqrt[5]{11}\z^3\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_4=\sqrt[5]{11}\z^4\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}\)</span></div></li>
-</ul>
-</div>
-<div class="para">As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial of <span class="process-math">\(\a_5\text{.}\)</span> Let <span class="process-math">\(E=\Q(\a_5)\)</span> and notice <span class="process-math">\([E:\Q]=5\text{.}\)</span>
-</div>
-<div class="para">Notice that <span class="process-math">\(\z\text{,}\)</span> a primitive <span class="process-math">\(5\)</span>-th root of unity, is the root of <span class="process-math">\(g(x)=x^4+x^3+x^2+x+1\text{,}\)</span> the fourth cyclotomic polynomial, which is monic and irreducible in <span class="process-math">\(\Q[x]\)</span> by <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop-cylcotomic-irreducible]</code>. Thus <span class="process-math">\(g\)</span> is the minimum polynomial of <span class="process-math">\(\z\)</span> and <span class="process-math">\([F:\Q]=4\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">We know that <span class="process-math">\(L=\Q(\sqrt[5]{11},\z)\text{,}\)</span> as every generator of <span class="process-math">\(L\)</span> can be written using <span class="process-math">\(\z\)</span> and <span class="process-math">\(\sqrt[5]{11}\text{.}\)</span> Let <span class="process-math">\([L:\Q]=n\text{,}\)</span> <span class="process-math">\([L:F]=p\text{,}\)</span> and <span class="process-math">\([L:E]=q\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/xref/thm-degree-formula.html" title="Theorem 16.52: The Degree Formula">The Degree Formula</a>, we have</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\([L:\Q]=[L:F][F:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=4p\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\([L:\Q]=[L:E][E:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=5q\)</span>
-</div></li>
-</ul>
-<div class="para">As <span class="process-math">\(E\neq L\)</span> and <span class="process-math">\(F\neq L\)</span> we know that <span class="process-math">\(p,q&gt;1\text{.}\)</span>
-</div>
-</div>
-<div class="para">Thus we have <span class="process-math">\(n=20\text{.}\)</span>
-</div>
-</li>
-<li><div class="para">Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{.}\)</span> From Part (a) we know <span class="process-math">\([L:F]=5\text{.}\)</span> As <span class="process-math">\(L=F(\a)\text{,}\)</span> we know that <span class="process-math">\(\mp_\a(x)\)</span> has degree <span class="process-math">\(5\text{.}\)</span> As <span class="process-math">\(f\)</span> is a monic polynomial of degree <span class="process-math">\(5\text{,}\)</span> we see that it is the minimum polynomial and thus irreducible.</div></li>
-</ol></div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 8.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^4-2022\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Prove there exists a unique intermediate field <span class="process-math">\(\Q\subseteq K\subseteq L\)</span> such that <span class="process-math">\([K : \Q] = 4\)</span> and <span class="process-math">\(\Q\subseteq K\)</span> is a Galois extension.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4-2022\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(\z\)</span> be a primitive fourth root of unity. Thus <span class="process-math">\(\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Notice that the roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\sqrt[4]{2022} i\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\sqrt[4]{2022}i^2=-\sqrt[4]{2022}\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\sqrt[4]{2022}i^4=\sqrt[4]{2022}\text{.}\)</span></div></li>
-</ul>
-<div class="para">Thus <span class="process-math">\(L=\Q(\sqrt[4]{2022},i)\text{.}\)</span>
-</div>
-</div> <div class="para">Using <a href="" class="xref" data-knowl="./knowl/xref/thm-eisensteins-criterion.html" title="Theorem 16.9: Eisenstein’s Criterion">Eisenstein’s Criterion</a> with <span class="process-math">\(p=2\)</span> we see that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> Let <span class="process-math">\(\a=\sqrt[4]{2022}\text{,}\)</span> and notice that <span class="process-math">\(f\)</span> is the minimum polynomial of <span class="process-math">\(\a\text{.}\)</span> Let <span class="process-math">\(K=\Q(\a)\)</span> and observe <span class="process-math">\([K:\Q]=4\text{.}\)</span>
-</div> <div class="para">As <span class="process-math">\(i\)</span> is the root of the monic irreducible polynomial <span class="process-math">\(x^2+1\)</span> we have <span class="process-math">\([L:F]=2\)</span> and <span class="process-math">\([L:\Q]=[L:F][F:\Q]=2\cdot4=8\text{.}\)</span> Thus <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\text{,}\)</span> making it <span class="process-math">\(D_8\text{.}\)</span>
-</div> <div class="para">Notice that <span class="process-math">\(K\)</span> is an extension of degree <span class="process-math">\(24\text{,}\)</span> and thus by the <a href="" class="xref" data-knowl="./knowl/xref/thm-ftgt.html" title="Theorem 17.24: Fundamental Theorem of Galois Theory">Fundamental Theorem of Galois Theory</a> we have a subgroup <span class="process-math">\(H\leq G\)</span> such that <span class="process-math">\(H=\Gal(L/K)\text{.}\)</span> As <span class="process-math">\([L:\Q]=[L:K][K:\Q]\)</span> we have <span class="process-math">\(8=[L:K]\cdot 4\text{,}\)</span> and thus <span class="process-math">\(|H|=2\text{.}\)</span> This makes <span class="process-math">\(H\)</span> the cyclic subgroup of <span class="process-math">\(D_8\)</span> generated by a reflection, the only element of order <span class="process-math">\(2\)</span> in <span class="process-math">\(D_8\text{,}\)</span> making it unique. This is also a normal subgroup of <span class="process-math">\(D_8\text{,}\)</span> making <span class="process-math">\(K\)</span> Galois over <span class="process-math">\(\Q\text{.}\)</span>
-</div>
-</div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^{4}-2022\)</span> over <span class="process-math">\(\mathbb{Q}\text{.}\)</span> Prove there exists a unique intermediate field <span class="process-math">\(\mathbb{Q} \subseteq K \subseteq L\)</span> such that <span class="process-math">\([K: \mathbb{Q}]=4\)</span> and <span class="process-math">\(\mathbb{Q} \subseteq K\)</span> is a Galois extension.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details><details class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Problem 9.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para">Assume <span class="process-math">\(F\subseteq L\)</span> is an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span> Prove <span class="process-math">\(L\)</span> is an algebraic closure of <span class="process-math">\(F\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para">Assume <span class="process-math">\(F \subseteq L\)</span> is an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span> Prove <span class="process-math">\(L\)</span> is an algebraic closure of <span class="process-math">\(F\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(L(\a)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Consider the chain of field extensions</div>
-<div class="displaymath process-math">
-\begin{equation*}
-F\subseteq L\subseteq L(\a),
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article></details>
 </div>
 </div>
-</div></details></div></article></details>
-</div>
-</div>
-<span class="incontext"><a class="internal" href="sec-qual.html#may-2022">in-context</a></span>
+<span class="incontext"><a class="internal" href="instructions.html#may-2022">in-context</a></span>
 </body>
 </html>

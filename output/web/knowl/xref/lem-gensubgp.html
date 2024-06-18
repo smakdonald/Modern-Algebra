@@ -12,31 +12,39 @@
 </head>
 <body class="ignore-math">
 <article class="lemma theorem-like"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Elements of <span class="process-math">\(\igen A\)</span>.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Elements of <span class="process-math">\(\igen S\)</span>.</span>
 </h4>
 <div class="para logical">
-<div class="para">For a subset <span class="process-math">\(A\)</span> of <span class="process-math">\(G\text{,}\)</span> the elements of <span class="process-math">\(\langle A \rangle\)</span> can be described as:</div>
+<div class="para">For a subset <span class="process-math">\(S\)</span> of <span class="process-math">\(G\text{,}\)</span> the elements of <span class="process-math">\(\langle S \rangle\)</span> can be described as:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\langle A \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in A \right\}.
+\langle S \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}.
 \end{equation*}
 </div>
-</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para">Let <span class="process-math">\(A= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in A \right\}\text{.}\)</span> Since <span class="process-math">\(\langle A \rangle\)</span> is a subgroup that contains <span class="process-math">\(A\text{,}\)</span> it is closed under products and inverses, and thus must contain all elements of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para">For the opposite containment, we just need to show the set <span class="process-math">\(A\)</span> really is a subgroup. We use the one step test:</div> <div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(A \ne \emptyset\)</span> since we allow <span class="process-math">\(m = 0\)</span> and declare the empty product to be <span class="process-math">\(e_G\text{.}\)</span>
-</div></li>
-<li><div class="para logical">
-<div class="para">If <span class="process-math">\(x_1^{j_1} \cdots x_m^{j_m}\)</span> and <span class="process-math">\(y_1^{i_1} \cdots y_n^{i_m}\)</span> are in <span class="process-math">\(A\)</span> then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1}=x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
-\end{equation*}
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">For notational simplicity, we let <span class="process-math">\(X= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}\text{.}\)</span> I claim <span class="process-math">\(X = \igen S\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li>
+<span class="heading"><span class="title"><span class="process-math">\((X\sse \igen S)\)</span>.</span></span><div class="para">Let <span class="process-math">\(z\in X\text{.}\)</span> Thus <span class="process-math">\(z = x_1^{j_1} \cdots x_m^{j_m}\text{,}\)</span> where <span class="process-math">\(m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\)</span> and <span class="process-math">\(x_1, \dots, x_m \in S\text{.}\)</span>
 </div>
-<div class="para">is also in <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Since <span class="process-math">\(\langle S \rangle\)</span> is a subgroup of <span class="process-math">\(G\)</span> containing <span class="process-math">\(S\text{,}\)</span> we see <span class="process-math">\(x_1, \dots, x_m\in \igen S\text{.}\)</span> Additionally, given the group group structure of <span class="process-math">\(\langle S \rangle\)</span> it is closed under products and inverses, and thus contains <span class="process-math">\(x_1^{j_1} \cdots x_m^{j_m}\text{.}\)</span> Hence <span class="process-math">\(z\in \igen S\)</span> and <span class="process-math">\(X\sse\igen S\)</span>
 </div>
-</div></li>
-</ul></div> <div class="para">Therefore <span class="process-math">\(A\leq G\)</span> and <span class="process-math">\(X\subseteq A\)</span> (by taking <span class="process-math">\(m=1\)</span> and <span class="process-math">\(j_1=1\)</span>) and by the minimality of <span class="process-math">\(\langle X \rangle\)</span> we obtain <span class="process-math">\(\langle X \rangle\subseteq A\text{.}\)</span>
-</div></article></details><span class="incontext"><a class="internal" href="sec-gp-generators.html#lem-gensubgp">in-context</a></span>
+</li>
+<li>
+<span class="heading"><span class="title"><span class="process-math">\((\igen S\sse X)\)</span>.</span></span><div class="para">I claim <span class="process-math">\(X\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="para">First, notice <span class="process-math">\(S \ne \emptyset\text{,}\)</span> since we allow <span class="process-math">\(m = 0\)</span> and declare the empty product to be <span class="process-math">\(e_G\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(x = x_1^{j_1} \cdots x_m^{j_m}\)</span> and <span class="process-math">\(y = y_1^{i_1} \cdots y_n^{i_m}\)</span> be arbitrary in <span class="process-math">\(X\text{.}\)</span> Thus <span class="process-math">\(x_j, y_i\in S\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> Observe:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-group-inverses.html ./knowl/xref/thm-one-step.html">
+\begin{align*}
+x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1} &amp;= x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1} &amp;&amp; \knowl{./knowl/xref/thm-group-inverses.html}{\text{Theorem 1.20}} (2)
+\end{align*}
+</div>
+<div class="para">As <span class="process-math">\(x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}\in X\)</span> as well, we see <span class="process-math">\(X\leq G\)</span> by the <a href="sec-subgroups.html#thm-one-step" class="xref" data-knowl="./knowl/xref/thm-one-step.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 1: One Step Subgroup Test">one-step subgroup test</a>.</div>
+</div>
+<div class="para">Since <span class="process-math">\(\igen S\)</span> is defined to be the intersection of all subgroups of <span class="process-math">\(G\)</span> containing <span class="process-math">\(S\text{,}\)</span> we have <span class="process-math">\(\igen S\sse X\text{,}\)</span> completing the proof.</div>
+</li>
+</ol></div></article></details><span class="incontext"><a class="internal" href="sec-gp-generators.html#lem-gensubgp">in-context</a></span>
 </body>
 </html>

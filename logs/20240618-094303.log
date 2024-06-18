@@ -1,0 +1,101 @@
+INFO    : PreTeXt-CLI version: 2.3.9
+
+INFO    : PreTeXt project found in `/Users/smakdonald/Modern-Algebra`.
+WARNING : Using CLI version 2.3.9 but project's `requirements.txt`
+WARNING : is configured to use 1.5.1. Consider either installing
+WARNING : CLI version 1.5.1 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.9.
+INFO    : Preparing to build into /Users/smakdonald/Modern-Algebra/output/web.
+INFO    : discovering source file's directory name: /Users/smakdonald/Modern-Algebra/source
+INFO    : verifying and expanding input directory: /Users/smakdonald/Modern-Algebra/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/smakdonald/Modern-Algebra/generated-assets
+INFO    : verifying and expanding input directory: /Users/smakdonald/Modern-Algebra/source/../assets
+INFO    : input directory expanded to absolute path: /Users/smakdonald/Modern-Algebra/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.2.9
+INFO    : Runestone Services (using newer, via online CDN query): version 7.3.0
+INFO    : converting /Users/smakdonald/Modern-Algebra/source/Mod-Alg.ptx to HTML in /var/folders/kc/1mrsp84n5zx15yydslnftmhw0000gn/T/tmp878sbzox
+INFO    : XSL conversion of /Users/smakdonald/Modern-Algebra/source/Mod-Alg.ptx by /Users/smakdonald/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:ERROR:      The @xml:id "prop-1.7" is invalid.  Use only letters, numbers, hyphens and underscores.
+INFO    :     * PTX:ERROR:      The @xml:id "prop-1.8" is invalid.  Use only letters, numbers, hyphens and underscores.
+INFO    :     * PTX:ERROR:      The @xml:id "prop-1.9" is invalid.  Use only letters, numbers, hyphens and underscores.
+INFO    :     * PTX:ERROR:   The @xml:id "index" is invalid since it will conflict with the construction of an automatic HTML "index.html" page.  Use some alternative for the real index - sorry.
+INFO    :     * PTX:DEPRECATE: (2019-07-10) an element should no longer have an @xml:id equal to "index" as a way to create an HTML index.html page.  See the Publishers Guides chapter on the HTML conversion for instructions. (1 time)
+INFO    :     *              located within: "index" (xml:id)
+INFO    :     * --------------
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "index") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "Don't Forget the Index!" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to use custom text to describe the target, but no custom text was provided as the content of the "xref".
+INFO    :     *              located within: "subsec-groups" (xml:id), "Binary Operations and the Definition of a Group" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a title to identify the target, but the target (which has @xml:id "def-quaternions") has no title, not even a default title.
+INFO    :     *              located within: "sec-symmetric" (xml:id), "Permutations and Symmetric Groups" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a title to identify the target, but the target (which has @xml:id "exe-opposite-group") has no title, not even a default title.
+INFO    :     *              located within: "exe-more-grp-isos" (xml:id), "More Isomorphisms" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored ("Assume")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored ("is algebraic over")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored (".")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-normal-union-of-conjugacy-classes] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 1" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 1" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 2" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 2" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 1" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 2" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 1" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 1" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [cor-orbit-stabilizer] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 3 (*)" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [thm-cayley-hamilton-thm] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 4" (title)
+INFO    :     * PTX:ERROR:   a cross-reference ("xref") uses references [thm-cayley-hamilton-thm] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    :     *              located within: "Problem 4" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "E1030b") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    :     *              located within: "thm-sylow" (xml:id), "Sylow's Theorems" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored ("Assume")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored ("is algebraic over")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    :     * PTX:WARNING: Unstructured content within a list item is being ignored (".")
+INFO    :     *              located within: "thm-properties-of-algebraic-elements" (xml:id), "Properties of Algebraic Elements" (title)
+INFO    : successful application of /Users/smakdonald/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+
