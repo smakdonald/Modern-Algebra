@@ -12,11 +12,11 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.85</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Subgroups.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.95</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Subgroups.</span>
 </h4>
 <div class="para logical"><ol class="decimal">
 <li>
-<span class="heading"><span class="title">Transitivity of Subgroups.</span></span><div class="para">If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(H\text{,}\)</span> then <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<span class="heading"><span class="title">Transitivity of Subgroups.</span></span><div class="para">If <span class="process-math">\(H\leq G\)</span> and <span class="process-math">\(K\leq H\text{,}\)</span> then <span class="process-math">\(K\leq G\text{.}\)</span>
 </div>
 </li>
 <li>
@@ -24,21 +24,23 @@
 </div>
 </li>
 <li>
-<span class="heading"><span class="title">Unions of Subgroups.</span></span><div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(H'\)</span> subgroups. Prove that <span class="process-math">\(H\cup H'\)</span> is a subgroup if and only if <span class="process-math">\(H\subseteq H'\)</span> or <span class="process-math">\(H'\subseteq H\text{.}\)</span>
+<span class="heading"><span class="title">Unions of Subgroups.</span></span><div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(H'\)</span> subgroups. The set <span class="process-math">\(H\cup H'\)</span> is a subgroup of <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(H\subseteq H'\)</span> or <span class="process-math">\(H'\subseteq H\text{.}\)</span>
 </div>
 </li>
-</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical"><ol class="decimal">
 <li><div class="para">Coming soon!</div></li>
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(I\)</span> denote any indexing set and for each <span class="process-math">\(i \in I\text{,}\)</span> let <span class="process-math">\(H_i\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> We need to prove</div>
+<li>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(I\)</span> denote any indexing set and for each <span class="process-math">\(i \in I\text{,}\)</span> let <span class="process-math">\(H_i\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> I claim</div>
 <div class="displaymath process-math">
 \begin{equation*}
 H := \bigcap_{i \in I} H_i
 \end{equation*}
 </div>
-<div class="para">is a subgroup. It’s not empty since <span class="process-math">\(e_G \in H_i\)</span> for all <span class="process-math">\(i\text{.}\)</span> If <span class="process-math">\(x,y \in G\text{,}\)</span> then for each <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(x,y \in H_i\)</span> and hence <span class="process-math">\(xy^{-1} \in H_i\text{.}\)</span> It follows that <span class="process-math">\(xy^{-1} \in H\text{.}\)</span>
+<div class="para">is a subgroup.</div>
 </div>
-</div></li>
+<div class="para">First, notice <span class="process-math">\(H\)</span> is nonempty, as <span class="process-math">\(e_G \in H_i\)</span> for all <span class="process-math">\(i\text{.}\)</span> If <span class="process-math">\(x,y \in G\text{,}\)</span> then for each <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(x,y \in H_i\)</span> and hence <span class="process-math">\(xy^{-1} \in H_i\text{.}\)</span> It follows that <span class="process-math">\(xy^{-1} \in H\text{,}\)</span> making <span class="process-math">\(H\)</span> a subgroup by the <a href="sec-subgroups.html#thm-one-step" class="xref" data-knowl="./knowl/xref/thm-one-step.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 1: One Step Subgroup Test">One Step Subgroup Test</a>.</div>
+</li>
 <li><div class="para">Coming soon!</div></li>
 </ol></div></article></details><span class="incontext"><a class="internal" href="sec-subgroups.html#thm-subgroup-properties">in-context</a></span>
 </body>
