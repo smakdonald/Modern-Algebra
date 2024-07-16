@@ -1407,8 +1407,7 @@
 
         <section xml:id="sec-order-power"><title>Order and Power</title>
 
-          <subsection xml:id="subsec-power"><title>Power</title>
-
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -1417,6 +1416,18 @@
               </p>
               <attribution>Roald Dahl</attribution>
             </blockquote>
+
+            <blockquote>
+              <p>
+                <q>
+                  Good order is the foundation of all things.
+                </q>
+              </p>
+              <attribution>Edmund Burke</attribution>
+            </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-power"><title>Power</title>
 
             <p>
               Though it might seem natural to write the product <m>x\cdot x</m> using the notation <m>x^2</m>, we have no notion of what that means in the world of groups. 
@@ -1551,15 +1562,6 @@
 
           <subsection xml:id="subsec-order"><title>Order</title>
 
-            <blockquote>
-              <p>
-                <q>
-                  Good order is the foundation of all things.
-                </q>
-              </p>
-              <attribution>Edmund Burke</attribution>
-            </blockquote>
-            
             <definition xml:id="def-order"><title>Order</title>
               <statement>
                 <p>
@@ -2246,8 +2248,7 @@
 
         <section xml:id="sec-d2n"><title>Dihedral Groups</title>
 
-          <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
-
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -2256,7 +2257,10 @@
               </p>
               <attribution>Richard Carlson</attribution>
             </blockquote>
-                  
+          </introduction>
+
+          <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
+
             <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
               <statement>
                 <p>
