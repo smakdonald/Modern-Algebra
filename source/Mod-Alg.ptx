@@ -1586,12 +1586,12 @@
               </statement>
             </definition>
 
-            <aside>
+            <convention>
               <p>
                 Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group.
                 We won't name names, but they know who they are.
               </p>
-            </aside>
+            </convention>
       
             <example xml:id="ex-order"><title>Order</title>
               <p>
@@ -1622,15 +1622,9 @@
                   </li>
                 </ol>
               </p>
-            </example>   
+            </example>        
 
-            <p>
-              We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom "Destroyer of Worlds" Marley. 
-              Best of luck.
-              <fn>A more experienced reader may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</fn>
-            </p>        
-
-            <exercise xml:id="exe-order-4-abelian"><title>Marley's Conjecture</title>
+            <exercise xml:id="exe-order-4-abelian"><title>Groups of Order <m>4</m></title>
               <statement>
                 <p>
                   Every group of order <m>4</m> is abelian.
@@ -3913,7 +3907,7 @@
               </statement>
             </definition>
 
-            <aside><title><latex />:<m>\igen</m></title>
+            <aside>
               <p>
                 In <latex />, <m>\langle</m> is written using <c>\langle</c> and <m>\rangle</m> is written using <c>\rangle</c>, though this text recommends the shortcut command <c>\newcommand{\gen}[1]{\langle #1 \rangle}</c>
               </p>
@@ -4725,7 +4719,7 @@
                   <me>
                     gH=\{gh|h\in H\}\;\text{and}\; Hg=\{hg|h\in H\}
                   </me>
-                  be defined as a <em>left coset</em> and <em>right coset</em> of <m>H</m> in <m>G</m>, respectfully.
+                  be defined as a <em>left coset</em> and <em>right coset</em> of <m>H</m> in <m>G</m>, respectively.
                   <idx><h>coset</h></idx>
                   <idx><h>left coset</h></idx>
                   <idx><h>right coset</h></idx>
