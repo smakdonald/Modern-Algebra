@@ -3909,7 +3909,7 @@
 
             <aside>
               <p>
-                In <latex />, <m>\langle</m> is written using <c>\langle</c> and <m>\rangle</m> is written using <c>\rangle</c>, though this text recommends the shortcut command <c>\newcommand{\gen}[1]{\langle #1 \rangle}</c>
+                Hello! In <latex />, <m>\langle</m> is written using <c>\langle</c> and <m>\rangle</m> is written using <c>\rangle</c>, though this text recommends the shortcut command <c>\newcommand{\gen}[1]{\langle #1 \rangle}</c>
               </p>
             </aside>
 
