@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          We proceed via cases: First, let and . We induct on . For the base case, let . Thus we have by definition . Additionally, using the we see and thus . Hence , satisfying the base case.  Now we inductively assume and consider Using we see . Substituting, we have . By the inductive hypothesis, we have and . Using the again, we have . Thus , completing the induction. Hence, when and we have .  Now suppose and . Thus , where . So      Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. A more experienced reader may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .       Let be a group and any element.   Let , and suppose by way of contradiction for some such that . Mutliplying on both sides by yields . As , this contradicts the assumption .    If for integers and with , then . Since , one of and must be strictly positive, contrary to the assumption ath .    If , then part (1) shows that has at least elements; if , then part (2) shows that has infinitely many elements.    Let . We have for some by the We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of finite group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
+  "body": "Order and Power     Having power is not nearly as important as what you choose to do with it.   Roald Dahl     Good order is the foundation of all things.   Edmund Burke    Power  Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows: power     , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. multiple     Laws of Exponents   Let and be an element of a group . Then    and     .          We proceed via cases: First, let and . We induct on . For the base case, let . Thus we have by definition . Additionally, using the we see and thus . Hence , satisfying the base case.  Now we inductively assume and consider Using we see . Substituting, we have . By the inductive hypothesis, we have and . Using the again, we have . Thus , completing the induction. Hence, when and we have .  Now suppose and . Thus , where . So      Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order  Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group          Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      Groups of Order  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .       Let be a group and any element.   Let , and suppose by way of contradiction for some such that . Mutliplying on both sides by yields . As , this contradicts the assumption .    If for integers and with , then . Since , one of and must be strictly positive, contrary to the assumption ath .    If , then part (1) shows that has at least elements; if , then part (2) shows that has infinitely many elements.    Let . We have for some by the We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      The central theorem of group order, (perhaps the central theorem of finite group theory), , requires more machinery than we currently posess. We will get there evantually, but first, it would be useful to examine some more concrete groups and their interactions with what we have constructed thus far.      The hold in groups.    The of an element is the smallest positive integer such that . The order of a group is its cardinality.     "
 },
 {
   "id": "def-power",
@@ -298,11 +298,20 @@ var ptx_lunr_docs = [
   "body": "Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . order of a group element      The order of a group  is the of the set , denoted . order of a group        "
 },
 {
+  "id": "subsec-order-3",
+  "level": "2",
+  "url": "sec-order-power.html#subsec-order-3",
+  "type": "Convention",
+  "number": "1.27",
+  "title": "",
+  "body": " Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.  "
+},
+{
   "id": "ex-order",
   "level": "2",
   "url": "sec-order-power.html#ex-order",
   "type": "Example",
-  "number": "1.27",
+  "number": "1.28",
   "title": "Order.",
   "body": "Order      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .     "
 },
@@ -311,16 +320,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#exe-order-4-abelian",
   "type": "Exercise",
-  "number": "1.28",
-  "title": "Marley’s Conjecture.",
-  "body": "Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
+  "number": "1.29",
+  "title": "Groups of Order <span class=\"process-math\">\\(4\\)<\/span>.",
+  "body": "Groups of Order  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
 },
 {
   "id": "thm-order-properties",
   "level": "2",
   "url": "sec-order-power.html#thm-order-properties",
   "type": "Theorem",
-  "number": "1.29",
+  "number": "1.30",
   "title": "Properties of Order.",
   "body": "Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .      "
 },
@@ -329,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#exe-every-element-order-2",
   "type": "Exercise",
-  "number": "1.30",
+  "number": "1.31",
   "title": "<span class=\"process-math\">\\(b\\)<\/span> there or <span class=\"process-math\">\\(b^2=e\\)<\/span>.",
   "body": "there or  If is a group such every non-identity element has order , then is abelian.  "
 },
@@ -338,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#thm-element-order",
   "type": "Theorem",
-  "number": "1.31",
+  "number": "1.32",
   "title": "Element Order.",
   "body": "Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .       Let be a group and any element.   Let , and suppose by way of contradiction for some such that . Mutliplying on both sides by yields . As , this contradicts the assumption .    If for integers and with , then . Since , one of and must be strictly positive, contrary to the assumption ath .    If , then part (1) shows that has at least elements; if , then part (2) shows that has infinitely many elements.    Let . We have for some by the We have and so, by the definition of order , it must be that       "
 },
@@ -347,14 +356,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#exe-order-and-gcd",
   "type": "Exercise",
-  "number": "1.32",
+  "number": "1.33",
   "title": "Order Hors d’oeuvre.",
   "body": "Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.     "
 },
 {
-  "id": "sec-order-power-4",
+  "id": "sec-order-power-5",
   "level": "2",
-  "url": "sec-order-power.html#sec-order-power-4",
+  "url": "sec-order-power.html#sec-order-power-5",
   "type": "Summary",
   "number": "1.2",
   "title": "",
@@ -374,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#def-permutation",
   "type": "Definition",
-  "number": "1.33",
+  "number": "1.34",
   "title": "Permutations.",
   "body": "Permutations   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted . permutation group      "
 },
@@ -383,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#def-symmetric-group",
   "type": "Definition",
-  "number": "1.34",
+  "number": "1.35",
   "title": "Symmetric Group <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation.    "
 },
@@ -392,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#exe-sn-order",
   "type": "Exercise",
-  "number": "1.35",
+  "number": "1.36",
   "title": "Order of <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Order of  Prove .  "
 },
@@ -401,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#def-cycle",
   "type": "Definition",
-  "number": "1.36",
+  "number": "1.37",
   "title": "Cycles and Transpositions.",
   "body": "Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies for . Such a permutation is called a cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition . cycle  transposition    "
 },
@@ -410,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#ex-cycle",
   "type": "Example",
-  "number": "1.37",
+  "number": "1.38",
   "title": "Cycle.",
   "body": "Cycle  When regarded as an element of , sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometimes ambiguous.)  "
 },
@@ -419,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#subsec-cycles-transpositions-5",
   "type": "Remark",
-  "number": "1.38",
+  "number": "1.39",
   "title": "",
   "body": " Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .  "
 },
@@ -428,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#exe-composing-cycles",
   "type": "Example",
-  "number": "1.39",
+  "number": "1.40",
   "title": "Composing Cycles.",
   "body": "Composing Cycles  Consider This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .  "
 },
@@ -437,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#prop-disjoint-cycles-commute",
   "type": "Proposition",
-  "number": "1.40",
+  "number": "1.41",
   "title": "Disjoint Commutes.",
   "body": "Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .    Let's consider two disjoint cycles, denoted as and , where 's and 's are distinct elements. Let's analyze the composition : When we apply the composition to an element , we have: Similarly, when we apply the composition to an element , we have: From these calculations, we can observe that the composition maps each element to (if ), and it maps to . Similarly, the composition maps each element to (if ), and it maps to .  Now, let's consider the composition and evaluate its effect on the elements and : and Comparing these results with the previous composition, we see that the effects on and are the same in both compositions. This implies that the compositions and are identical.  Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.   "
 },
@@ -446,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#exe-non-disjoint-commutes",
   "type": "Exercise",
-  "number": "1.41",
+  "number": "1.42",
   "title": "Non-Disjoint Commutes.",
   "body": "Non-Disjoint Commutes  Find elements that commute but are not disjoint.  "
 },
@@ -455,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#thm-cycledecomp",
   "type": "Theorem",
-  "number": "1.42",
+  "number": "1.43",
   "title": "Cycle Decompostion.",
   "body": "Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.       "
 },
@@ -464,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#subsec-cycles-transpositions-12",
   "type": "Remark",
-  "number": "1.43",
+  "number": "1.44",
   "title": "",
   "body": " For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).  "
 },
@@ -473,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#prop-permutation-order",
   "type": "Proposition",
-  "number": "1.44",
+  "number": "1.45",
   "title": "Permutation Order.",
   "body": "Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of. In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!   "
 },
@@ -482,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#def-even-odd-permutation",
   "type": "Definition",
-  "number": "1.45",
+  "number": "1.46",
   "title": "Even and Odd Permutaitons.",
   "body": "Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .   "
 },
@@ -491,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#prop-even-odd-properties",
   "type": "Proposition",
-  "number": "1.46",
+  "number": "1.47",
   "title": "Even and Odd Properties.",
   "body": "Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.      "
 },
@@ -500,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#def-alternating-group",
   "type": "Definition",
-  "number": "1.47",
+  "number": "1.48",
   "title": "Alternating Group.",
   "body": "Alternating Group   The alternating group alternating group  is the subset of all even cycles of .    "
 },
@@ -509,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-symmetric.html#exe-an-order",
   "type": "Exercise",
-  "number": "1.48",
+  "number": "1.49",
   "title": "Order of <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": "Order of  Prove .  "
 },
@@ -529,23 +538,23 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Dihedral Groups",
-  "body": "Dihedral Groups  Dihedral Groups    Reflection is one of the most underused yet powerful tools for success.   Richard Carlson   Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.     By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .   There are three natural types of isometry in    rotations about a point,    reflections in a line,    and translations: in the latter the point is moved to for some fixed .   It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.  Composition of Symmetries  The of two symmetries of is again a symmetry of .   Let be the composition of and , where denotes composition. Let's take an arbitrary point on the object. When we apply the symmetry to , it is mapped to a new point, let's call it . Since is a symmetry, is still on the object. Next, when we apply the symmetry to , it is mapped to a new point, let's call it . Again, since is a symmetry, is still on the object. Therefore, the composition maps the point on the object to the point , which is also on the object. Hence, the composition of symmetries is again a symmetry.   Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition.     Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise. rotation     For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis. reflection       Elements of  Elements of . Quiver     We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.   Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     "
+  "body": "Dihedral Groups     Reflection is one of the most underused yet powerful tools for success.   Richard Carlson    Dihedral Groups  Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.     By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .   There are three natural types of isometry in    rotations about a point,    reflections in a line,    and translations: in the latter the point is moved to for some fixed .   It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.  Composition of Symmetries  The of two symmetries of is again a symmetry of .   Let be the composition of and , where denotes composition. Let's take an arbitrary point on the object. When we apply the symmetry to , it is mapped to a new point, let's call it . Since is a symmetry, is still on the object. Next, when we apply the symmetry to , it is mapped to a new point, let's call it . Again, since is a symmetry, is still on the object. Therefore, the composition maps the point on the object to the point , which is also on the object. Hence, the composition of symmetries is again a symmetry.   Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition.     Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise. rotation     For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis. reflection       Elements of  Elements of . Quiver     We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.   Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     "
 },
 {
   "id": "def-iso-and-sym",
   "level": "2",
   "url": "sec-d2n.html#def-iso-and-sym",
   "type": "Definition",
-  "number": "1.49",
+  "number": "1.50",
   "title": "Isometry and Symmetry.",
   "body": "Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.   "
 },
 {
-  "id": "subsec-d2n-4",
+  "id": "subsec-d2n-3",
   "level": "2",
-  "url": "sec-d2n.html#subsec-d2n-4",
+  "url": "sec-d2n.html#subsec-d2n-3",
   "type": "Remark",
-  "number": "1.50",
+  "number": "1.51",
   "title": "",
   "body": " By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .  "
 },
@@ -554,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-d2n.html#exe-symmetry-compostion",
   "type": "Exercise",
-  "number": "1.51",
+  "number": "1.52",
   "title": "Composition of Symmetries.",
   "body": "Composition of Symmetries  The of two symmetries of is again a symmetry of .   Let be the composition of and , where denotes composition. Let's take an arbitrary point on the object. When we apply the symmetry to , it is mapped to a new point, let's call it . Since is a symmetry, is still on the object. Next, when we apply the symmetry to , it is mapped to a new point, let's call it . Again, since is a symmetry, is still on the object. Therefore, the composition maps the point on the object to the point , which is also on the object. Hence, the composition of symmetries is again a symmetry.  "
 },
@@ -563,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-d2n.html#def-d2n",
   "type": "Definition",
-  "number": "1.52",
+  "number": "1.53",
   "title": "Dihedral Group.",
   "body": "Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition.    "
 },
@@ -572,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-d2n.html#ex-d2n-elements",
   "type": "Example",
-  "number": "1.53",
+  "number": "1.54",
   "title": "Rotations and Reflections.",
   "body": "Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise. rotation     For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis. reflection      "
 },
@@ -581,16 +590,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-d2n.html#figure-d4",
   "type": "Figure",
-  "number": "1.54",
+  "number": "1.55",
   "title": "Elements of <span class=\"process-math\">\\(D_4\\)<\/span>",
   "body": "Elements of  Elements of . Quiver   "
 },
 {
-  "id": "subsec-d2n-10",
+  "id": "subsec-d2n-9",
   "level": "2",
-  "url": "sec-d2n.html#subsec-d2n-10",
+  "url": "sec-d2n.html#subsec-d2n-9",
   "type": "Remark",
-  "number": "1.55",
+  "number": "1.56",
   "title": "",
   "body": " We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.  "
 },
@@ -599,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-d2n.html#thm-d2n-order",
   "type": "Proposition",
-  "number": "1.56",
+  "number": "1.57",
   "title": "Order of <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": "Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .   "
 },
@@ -610,14 +619,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Group Homomorphisms",
-  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry   The Greek roots \"homo\" and \"morph\"together mean \"same shape\".  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     latex :  In latex , is written using \\varphi .   Homomorphism Notation: vs.  We use to denote an arbitrary homomorphism instead of to differentiate between homormorphisms and ordinary functions.  Some folk use for homomorphisms as well as functions that are not homomorphisms. This is usually harmless, we avoid doing so here only to remove as much ambiguity as possible.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples      The identity map is a group homomorphism for any group , this is known as the trivial homomorphism . trivial homomorphism     The zero map is a group homomorphism from .    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism. sign homomorphism           Let , and let denote the identity map on . Then Thus is operation preserving, making it a group homomorphism for any group .    Let , and let denote the zero map. As , is indeed a group homomorphism.    First we note that is indeed a group, as , as seen in . Let . We proceed via cases.  First, suppose both and are even permutations. Thus is an even permutation by , and hence   Now suppose is even and is odd. Thus is an odd permutation by , and hence   Next, suppose is odd and is even. Thus is an odd permutation by , and hence   Finally, suppose both and are odd permutations. Thus is an even permutation by , and hence   This shows is a homomorphism in all cases.           The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer , the map determinant map determinant map  is a group homomorphism.      Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       Let be a homomorphism of groups.   Observe:     Let . I claim that is the inverse of in : Thus and are both inverses of in , and so , since inverses are unique .        Let be a homomorphism of groups, and let . Then .   Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Suppose and be group homomorphisms, and let . Thus is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.    Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  (groups)     Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           Suppose is injective. By we know . Thus and .  Let . Thus . As is injective, this means . Hence , making the two sets equal.   Suppose . Suppose further there exist such that .  I claim is the inverse of . Observe Thus is the inverse of , making as  inverses are unique .    This proof is identical to that of ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.        Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    Isomorphism? I Know 'em!    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald   Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic     latex :  In latex , is written using \\cong .   Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).     Suppose an isomorphism. Then there exists a homomorphism such that and . Thus is invertible . By  is bijective.  ( ) Suppose is bijective homomorphism. By  is invertible, meaning there exists some function   Notice we use , not ! We are not able to assume is a homomorphism, we must prove this! such that and .  I claim is actually a homomorphism: For we have Thus Since is bijective it is injective, and thus , making a homomorphism.     Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     .     , where is as defined in .      More Isomorphisms     Let be a group and the of . Then .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Isomorphism Invariants   Let and be groups. If is an isomorphism, then the following hold: isomorphism invariant       .     for all and for all .     is abelian if and only if is abelian.       Let be an isomorphism of groups with inverse .   By  is a bijective function between and . Thus .    Let and , and let denote the orders of , respectively. Thus and Thus and .  I claim and are the smallest positive integers where this holds. Suppose by way of contradiction there exist and such that and . But then and As and , this contradicts and .     Suppose is abelian, and let . Thus every element two elements in commute, making abelian.   Suppose is abelian, and let . Thus every element two elements in commute, making abelian.       Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      There Can Only Be One...  All trivial groups are (canonically) isomorphic. Hence, we usually speak of the trivial group.   Isomorphisms form Equivalence Relation           If , then     If and , then           The identity map from is an isomorphism     Suppose is an isomorphism. Then there exists a homomorphism such that and . Thus is an isomorphism from to , and so .    Let and be isomorphisms. From we see is a homomorphism of groups. As both and are injective, is injective by . Similarly, as both and are surjective, is surjective by . Thus is a bijective homomorphism from to , we see by         The quotation marks in the title of this result are important. Equivalenve relations as we know them are only defined on sets , but there is no set of groups. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.    Automorphism? I'm Am 'em!    Self preservation is the first law of nature.   Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism  automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism.   Automorphism Group   The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .     Let's verify that this group is indeed what it claims to be. The more pedantic reader might object to a group claiming anything, as it is an abstract concept. However, the more sassy author would politely tell them to keep it to themselves.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition.    Let . As function composition is associative, we see .  Recall from that is an automorphism. I claim is the identity element of . Let . We will show . As all functions share the same domain and co-domain, we need only show that the functions map elements equally, Let , and observe: Thus is indeed the identity element in .  Let . As is an isomorphism, there exists a homomorphism such that and . Thus , making it the inverse of .    Complex Conjugation Automorphism  The function given by is an automorphism.         Notice that we have already shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)   Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .     Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  Conjugation Automorphism   Let be a group and . Then for all .    Let be a group and . For any , observe proving that is a homomorhism from to itself.  I claim holds for any . Observe Additionally, notice that for all , and thus .  As , it follows and . This proves has a two-sided inverse and hence is an isomorphism. In fact, it shows that . Thus for all .     In this text is primarily reserved for conjugation automorphisms, where the subscript identifies which element is doing the conjugating.    There is a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.        A is a function between groups that preserves certain algebraic structures, such as the operation, identites, and inverses. For the first, see: . For the second and third, see: The set of elements mapped to the identity by a homomorphism is known as its .    A is a bijective homomorphism, and a is an isomorphism from a group to itself. The structures preserved by an isomorphism are known as .    The set of automorphisms of a group forms a group itself: the of the group. See: Specifically, the will prove very important later.    Compositions of homomorphisms, isomorphisms, and automophisms are again homomorphisms, isomorphisms, and automophisms, respectively.     "
+  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry   The Greek roots \"homo\" and \"morph\" together mean \"same shape\".  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     latex :  In latex , is written using \\varphi .   Homomorphism Notation: vs.  We use to denote an arbitrary homomorphism instead of to differentiate between homormorphisms and ordinary functions.  Some folk use for homomorphisms as well as functions that are not homomorphisms. This is usually harmless, we avoid doing so here only to remove as much ambiguity as possible.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples      The identity map is a group homomorphism for any group , this is known as the trivial homomorphism . trivial homomorphism     The zero map is a group homomorphism from .    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism. sign homomorphism           Let , and let denote the identity map on . Then Thus is operation preserving, making it a group homomorphism for any group .    Let , and let denote the zero map. As , is indeed a group homomorphism.    First we note that is indeed a group, as , as seen in . Let . We proceed via cases.  First, suppose both and are even permutations. Thus is an even permutation by , and hence   Now suppose is even and is odd. Thus is an odd permutation by , and hence   Next, suppose is odd and is even. Thus is an odd permutation by , and hence   Finally, suppose both and are odd permutations. Thus is an even permutation by , and hence   This shows is a homomorphism in all cases.           The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer , the map determinant map determinant map  is a group homomorphism.      Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then the following hold:         .       Let be a homomorphism of groups.   Observe:     Let . I claim that is the inverse of in : Thus and are both inverses of in , and so , since inverses are unique .        Let be a homomorphism of groups, and let . Then .   Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Suppose and be group homomorphisms, and let . Thus is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.    Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  (groups)     Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           Suppose is injective. By we know . Thus and .  Let . Thus . As is injective, this means . Hence , making the two sets equal.   Suppose . Suppose further there exist such that .  I claim is the inverse of . Observe Thus is the inverse of , making as  inverses are unique .    This proof is identical to that of ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.        Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    Isomorphism? I Know 'em!    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald   Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic     latex :  In latex , is written using \\cong .   Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).     Suppose an isomorphism. Then there exists a homomorphism such that and . Thus is invertible . By  is bijective.  ( ) Suppose is bijective homomorphism. By  is invertible, meaning there exists some function   Notice we use , not ! We are not able to assume is a homomorphism, we must prove this! such that and .  I claim is actually a homomorphism: For we have Thus Since is bijective it is injective, and thus , making a homomorphism.     Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     .     , where is as defined in .      More Isomorphisms     Let be a group and the of . Then .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Isomorphism Invariants   Let and be groups. If is an isomorphism, then the following hold: isomorphism invariant       .     for all and for all .     is abelian if and only if is abelian.       Let be an isomorphism of groups with inverse .   By  is a bijective function between and . Thus .    Let and , and let denote the orders of , respectively. Thus and Thus and .  I claim and are the smallest positive integers where this holds. Suppose by way of contradiction there exist and such that and . But then and As and , this contradicts and .     Suppose is abelian, and let . Thus every element two elements in commute, making abelian.   Suppose is abelian, and let . Thus every element two elements in commute, making abelian.       Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      There Can Only Be One...  All trivial groups are (canonically) isomorphic. Hence, we usually speak of the trivial group.   Isomorphisms form Equivalence Relation           If , then     If and , then           The identity map from is an isomorphism     Suppose is an isomorphism. Then there exists a homomorphism such that and . Thus is an isomorphism from to , and so .    Let and be isomorphisms. From we see is a homomorphism of groups. As both and are injective, is injective by . Similarly, as both and are surjective, is surjective by . Thus is a bijective homomorphism from to , we see by         The quotation marks in the title of this result are important. Equivalence relations as we know them are only defined on sets , but there is no set of all groups, much as there is no set of all sets. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.    Automorphism? I'm Am 'em!    Self preservation is the first law of nature.   Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism  automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism.   Automorphism Group   The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .     Let's verify that this group is indeed what it claims to be. The more pedantic reader might object to a group claiming anything, as it is an abstract concept. However, the more sassy author would politely tell them to keep it to themselves.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition.    Let . As function composition is associative, we see .  Recall from that is an automorphism. I claim is the identity element of . Let . We will show . As all functions share the same domain and co-domain, we need only show that the functions map elements equally, Let , and observe: Thus is indeed the identity element in .  Let . As is an isomorphism, there exists a homomorphism such that and . Thus , making it the inverse of .    Complex Conjugation Automorphism  The function given by is an automorphism.         Notice that we have already shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)   Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .     Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  Conjugation Automorphism   Let be a group and . Then for all .    Let be a group and . For any , observe proving that is a homomorhism from to itself.  I claim holds for any . Observe Additionally, notice that for all , and thus .  As , it follows and . This proves has a two-sided inverse and hence is an isomorphism. In fact, it shows that . Thus for all .     In this text is primarily reserved for conjugation automorphisms, where the subscript identifies which element is doing the conjugating.    There is a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.        A is a function between groups that preserves certain algebraic structures, such as the operation, identites, and inverses. For the first, see: . For the second and third, see: The set of elements mapped to the identity by a homomorphism is known as its .    A is a bijective homomorphism, and a is an isomorphism from a group to itself. The structures preserved by an isomorphism are known as .    The set of automorphisms of a group forms a group itself: the of the group. See: Specifically, the will prove very important later.    Compositions of homomorphisms, isomorphisms, and automophisms are again homomorphisms, isomorphisms, and automophisms, respectively.     "
 },
 {
   "id": "def-ghom",
   "level": "2",
   "url": "sec-gphoms.html#def-ghom",
   "type": "Definition",
-  "number": "1.57",
+  "number": "1.58",
   "title": "Group Homomorphism.",
   "body": "Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms    "
 },
@@ -626,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-homom-6",
   "type": "Convention",
-  "number": "1.58",
+  "number": "1.59",
   "title": "Homomorphism Notation: <span class=\"process-math\">\\(\\varphi\\)<\/span> vs. <span class=\"process-math\">\\(f\\)<\/span>.",
   "body": "Homomorphism Notation: vs.  We use to denote an arbitrary homomorphism instead of to differentiate between homormorphisms and ordinary functions.  Some folk use for homomorphisms as well as functions that are not homomorphisms. This is usually harmless, we avoid doing so here only to remove as much ambiguity as possible.  "
 },
@@ -635,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#ex-group-homom-examples",
   "type": "Example",
-  "number": "1.59",
+  "number": "1.60",
   "title": "Homormophism Examples.",
   "body": "Homormophism Examples      The identity map is a group homomorphism for any group , this is known as the trivial homomorphism . trivial homomorphism     The zero map is a group homomorphism from .    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism. sign homomorphism           Let , and let denote the identity map on . Then Thus is operation preserving, making it a group homomorphism for any group .    Let , and let denote the zero map. As , is indeed a group homomorphism.    First we note that is indeed a group, as , as seen in . Let . We proceed via cases.  First, suppose both and are even permutations. Thus is an even permutation by , and hence   Now suppose is even and is odd. Thus is an odd permutation by , and hence   Next, suppose is odd and is even. Thus is an odd permutation by , and hence   Finally, suppose both and are odd permutations. Thus is an even permutation by , and hence   This shows is a homomorphism in all cases.      "
 },
@@ -644,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-more-group-homs",
   "type": "Exercise",
-  "number": "1.60",
+  "number": "1.61",
   "title": "",
   "body": "    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer , the map determinant map determinant map  is a group homomorphism.     "
 },
@@ -653,16 +662,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-grphomom-preservations",
   "type": "Theorem",
-  "number": "1.61",
+  "number": "1.62",
   "title": "Homomorphism Preservations.",
-  "body": "Homomorphism Preservations   If is a homomorphism of groups, then    and     .       Let be a homomorphism of groups.   Observe:     Let . I claim that is the inverse of in : Thus and are both inverses of in , and so , since inverses are unique .      "
+  "body": "Homomorphism Preservations   If is a homomorphism of groups, then the following hold:         .       Let be a homomorphism of groups.   Observe:     Let . I claim that is the inverse of in : Thus and are both inverses of in , and so , since inverses are unique .      "
 },
 {
   "id": "exe-grp-hom-order-split",
   "level": "2",
   "url": "sec-gphoms.html#exe-grp-hom-order-split",
   "type": "Exercise",
-  "number": "1.62",
+  "number": "1.63",
   "title": "",
   "body": " Let be a homomorphism of groups, and let . Then .  "
 },
@@ -671,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-ghom-composition",
   "type": "Theorem",
-  "number": "1.63",
+  "number": "1.64",
   "title": "Compositions of Homomorphisms.",
   "body": "Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Suppose and be group homomorphisms, and let . Thus is a group homomorphism.   "
 },
@@ -680,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-group-hom",
   "type": "Exercise",
-  "number": "1.64",
+  "number": "1.65",
   "title": "<span class=\"process-math\">\\(\\Hom\\)<\/span> Sweet <span class=\"process-math\">\\(\\Hom\\)<\/span>.",
   "body": "Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.   "
 },
@@ -689,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#def-group-kernel",
   "type": "Definition",
-  "number": "1.65",
+  "number": "1.66",
   "title": "Kernel.",
   "body": "Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  (groups)    "
 },
@@ -698,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-inj-surj-ghom",
   "type": "Theorem",
-  "number": "1.66",
+  "number": "1.67",
   "title": "Injective and Surjective Homomorphisms.",
   "body": "Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           Suppose is injective. By we know . Thus and .  Let . Thus . As is injective, this means . Hence , making the two sets equal.   Suppose . Suppose further there exist such that .  I claim is the inverse of . Observe Thus is the inverse of , making as  inverses are unique .    This proof is identical to that of ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.       "
 },
@@ -707,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-order-preservation",
   "type": "Exercise",
-  "number": "1.67",
+  "number": "1.68",
   "title": "Homomorphisms and Order.",
   "body": "Homomorphisms and Order  If is a homomorphism of groups and is finte, then .  "
 },
@@ -716,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#def-gpiso",
   "type": "Definition",
-  "number": "1.68",
+  "number": "1.69",
   "title": "Group Ismorphism.",
   "body": "Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic    "
 },
@@ -725,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-iso-def",
   "type": "Theorem",
-  "number": "1.69",
+  "number": "1.70",
   "title": "Equivalent Isomorphism Characterization.",
   "body": "Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).     Suppose an isomorphism. Then there exists a homomorphism such that and . Thus is invertible . By  is bijective.  ( ) Suppose is bijective homomorphism. By  is invertible, meaning there exists some function   Notice we use , not ! We are not able to assume is a homomorphism, we must prove this! such that and .  I claim is actually a homomorphism: For we have Thus Since is bijective it is injective, and thus , making a homomorphism.   "
 },
@@ -734,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-isomorphisms-7",
   "type": "Remark",
-  "number": "1.70",
+  "number": "1.71",
   "title": "",
   "body": " Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.  "
 },
@@ -743,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#ex-group-iso-examples",
   "type": "Example",
-  "number": "1.71",
+  "number": "1.72",
   "title": "Isomorphism Examples.",
   "body": "Isomorphism Examples     The identity map is a group isomomorphism for any group .     .     , where is as defined in .     "
 },
@@ -752,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-more-grp-isos",
   "type": "Exercise",
-  "number": "1.72",
+  "number": "1.73",
   "title": "More Isomorphisms.",
   "body": "More Isomorphisms     Let be a group and the of . Then .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.     "
 },
@@ -761,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-iso-inv",
   "type": "Theorem",
-  "number": "1.73",
+  "number": "1.74",
   "title": "Isomorphism Invariants.",
   "body": "Isomorphism Invariants   Let and be groups. If is an isomorphism, then the following hold: isomorphism invariant       .     for all and for all .     is abelian if and only if is abelian.       Let be an isomorphism of groups with inverse .   By  is a bijective function between and . Thus .    Let and , and let denote the orders of , respectively. Thus and Thus and .  I claim and are the smallest positive integers where this holds. Suppose by way of contradiction there exist and such that and . But then and As and , this contradicts and .     Suppose is abelian, and let . Thus every element two elements in commute, making abelian.   Suppose is abelian, and let . Thus every element two elements in commute, making abelian.      "
 },
@@ -770,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-not-isomorphic",
   "type": "Exercise",
-  "number": "1.74",
+  "number": "1.75",
   "title": "Something’s Missing.",
   "body": "Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and     "
 },
@@ -779,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-isomorphisms-12",
   "type": "Exercise",
-  "number": "1.75",
+  "number": "1.76",
   "title": "There Can Only Be One....",
   "body": "There Can Only Be One...  All trivial groups are (canonically) isomorphic. Hence, we usually speak of the trivial group.  "
 },
@@ -788,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-iso-equivalence-relation",
   "type": "Theorem",
-  "number": "1.76",
+  "number": "1.77",
   "title": "Isomorphisms form “Equivalence” Relation.",
   "body": "Isomorphisms form Equivalence Relation           If , then     If and , then           The identity map from is an isomorphism     Suppose is an isomorphism. Then there exists a homomorphism such that and . Thus is an isomorphism from to , and so .    Let and be isomorphisms. From we see is a homomorphism of groups. As both and are injective, is injective by . Similarly, as both and are surjective, is surjective by . Thus is a bijective homomorphism from to , we see by       "
 },
@@ -797,16 +806,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-isomorphisms-14",
   "type": "Remark",
-  "number": "1.77",
+  "number": "1.78",
   "title": "",
-  "body": " The quotation marks in the title of this result are important. Equivalenve relations as we know them are only defined on sets , but there is no set of groups. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.  "
+  "body": " The quotation marks in the title of this result are important. Equivalence relations as we know them are only defined on sets , but there is no set of all groups, much as there is no set of all sets. This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.  "
 },
 {
   "id": "def-gp-automorphism",
   "level": "2",
   "url": "sec-gphoms.html#def-gp-automorphism",
   "type": "Definition",
-  "number": "1.78",
+  "number": "1.79",
   "title": "Group Automorphism.",
   "body": "Group Automorphism   Let be a group. An isomorphism is called an automorphism  automorphism of .   "
 },
@@ -815,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#ex-identity-automorphism",
   "type": "Example",
-  "number": "1.79",
+  "number": "1.80",
   "title": "",
   "body": " In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism.  "
 },
@@ -824,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#def-gp-aut",
   "type": "Definition",
-  "number": "1.80",
+  "number": "1.81",
   "title": "Automorphism Group.",
   "body": "Automorphism Group   The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .    "
 },
@@ -833,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#prop-aut-is-group",
   "type": "Proposition",
-  "number": "1.81",
+  "number": "1.82",
   "title": "The Automorphism Group.",
   "body": "The Automorphism Group   The set of automorphisms of , denoted , is a group under composition.    Let . As function composition is associative, we see .  Recall from that is an automorphism. I claim is the identity element of . Let . We will show . As all functions share the same domain and co-domain, we need only show that the functions map elements equally, Let , and observe: Thus is indeed the identity element in .  Let . As is an isomorphism, there exists a homomorphism such that and . Thus , making it the inverse of .   "
 },
@@ -842,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-complex-conjugation-automorphism",
   "type": "Exercise",
-  "number": "1.82",
+  "number": "1.83",
   "title": "Complex Conjugation Automorphism.",
   "body": "Complex Conjugation Automorphism  The function given by is an automorphism.  "
 },
@@ -851,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#ex-z-aut",
   "type": "Exercise",
-  "number": "1.83",
+  "number": "1.84",
   "title": "<span class=\"process-math\">\\(\\Aut(\\Z)\\)<\/span>.",
   "body": "    "
 },
@@ -860,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-automorphisms-10",
   "type": "Remark",
-  "number": "1.84",
+  "number": "1.85",
   "title": "",
   "body": " Notice that we have already shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)  "
 },
@@ -869,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#def-inner-automorphisms",
   "type": "Definition",
-  "number": "1.85",
+  "number": "1.86",
   "title": "Inner Automorphism.",
   "body": "Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .    "
 },
@@ -878,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#prop-conjugation-automorphism",
   "type": "Proposition",
-  "number": "1.86",
+  "number": "1.87",
   "title": "Conjugation Automorphism.",
   "body": "Conjugation Automorphism   Let be a group and . Then for all .    Let be a group and . For any , observe proving that is a homomorhism from to itself.  I claim holds for any . Observe Additionally, notice that for all , and thus .  As , it follows and . This proves has a two-sided inverse and hence is an isomorphism. In fact, it shows that . Thus for all .   "
 },
@@ -887,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-automorphisms-14",
   "type": "Convention",
-  "number": "1.87",
+  "number": "1.88",
   "title": "",
   "body": " In this text is primarily reserved for conjugation automorphisms, where the subscript identifies which element is doing the conjugating.  "
 },
@@ -896,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#subsec-automorphisms-15",
   "type": "Remark",
-  "number": "1.88",
+  "number": "1.89",
   "title": "",
   "body": " There is a notion of outer automorphisms as well, though we currently lack the tools to define them rigorously.  "
 },
@@ -923,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-subgroup",
   "type": "Definition",
-  "number": "1.89",
+  "number": "1.90",
   "title": "Subgroup.",
   "body": "Subgroup   A nonempty subset of a group is called a subgroup , denoted , if and only if is a group under the multiplication law of . (groups)  subgroup   A subgroup of a group is a called proper subgroup, denoted , if and only if . proper subgroup  (groups)    "
 },
@@ -932,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-test",
   "type": "Theorem",
-  "number": "1.90",
+  "number": "1.91",
   "title": "Subgroup Tests.",
   "body": "Subgroup Tests  subgroup test     One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.          Assume is non-empty and for all , .  Since is non-empty, there is an . Thus , and as . As , we see for any , making the identity element for .  For any , , and so every element of has an inverse inside .  For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .    Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .      "
 },
@@ -941,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-common-subgroups",
   "type": "Example",
-  "number": "1.91",
+  "number": "1.92",
   "title": "Common Subgroups.",
   "body": "Common Subgroups      and are subroups of , which we call the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .      "
 },
@@ -950,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroups-of-z",
   "type": "Exercise",
-  "number": "1.92",
+  "number": "1.93",
   "title": "Subgroups of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Subgroups of  The only subgroups of are the sets .  "
 },
@@ -959,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-special-linear-group",
   "type": "Definition",
-  "number": "1.93",
+  "number": "1.94",
   "title": "Special Linear Group.",
   "body": "Special Linear Group   The special linear group with complex entries is defined  special linear group     "
 },
@@ -968,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
-  "number": "1.94",
+  "number": "1.95",
   "title": "<span class=\"process-math\">\\(\\SL_n(\\C)\\leq\\GL_n(\\C)\\)<\/span>.",
   "body": "  The special linear group is a subgroup of the general linear group .   "
 },
@@ -986,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-properties",
   "type": "Theorem",
-  "number": "1.95",
+  "number": "1.96",
   "title": "Properties of Subgroups.",
   "body": "Properties of Subgroups      Transitivity of Subgroups  If and , then .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. The set is a subgroup of if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . I claim is a subgroup.  First, notice is nonempty, as for all . If , then for each , and hence . It follows that , making a subgroup by the .    Coming soon!      "
 },
@@ -995,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-no-proper-unions",
   "type": "Exercise",
-  "number": "1.96",
+  "number": "1.97",
   "title": "No Proper Unions.",
   "body": "No Proper Unions  No finite group can be expressed as the union of two proper subgroups.   Part (3) of may prove useful!  "
 },
@@ -1004,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-not-symmetric",
   "type": "Exercise",
-  "number": "1.97",
+  "number": "1.98",
   "title": "Subgroups not Symmetric.",
   "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.  "
 },
@@ -1013,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-properties-of-group-homoms",
   "type": "Theorem",
-  "number": "1.98",
+  "number": "1.99",
   "title": "Group Homomorphisms and Subgroups.",
   "body": "Group Homomorphisms and Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  If is a group homomorphism and then the preimage of is a subgroup of .       Let be a homomorphism of groups.   First, note that since by , so we know .  Let . Thus and for some . Hence As , we see by the one-step subgroup test .    First, note that since by , so we know .  Let . Then , and we have Thus, if then , making by the one-step subgroup test .    First notice that for all , and thus , as and identity elements are unique. As by , we see .  Let . Thus and there exist such that and . Observe: As , we know by the one-step subgroup test . Thus , and so . Hence by the one-step subgroup test .      "
 },
@@ -1022,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-group-inclusion-hom",
   "type": "Exercise",
-  "number": "1.99",
+  "number": "1.100",
   "title": "Inclusions are Homomorphisms.",
   "body": "Inclusions are Homomorphisms  If is a subgroup of a group , then the inclusion is a group homomorphism.  "
 },
@@ -1031,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-cayley",
   "type": "Theorem",
-  "number": "1.100",
+  "number": "1.101",
   "title": "Cayley’s Theorem.",
   "body": "Cayley's Theorem  cayley's theorem   Every group is isomorphic to a subgroup of .   "
 },
@@ -1040,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#subsec-subgroup-lattice-8",
   "type": "Remark",
-  "number": "1.101",
+  "number": "1.102",
   "title": "",
   "body": " This is a nearly useless theorem.  "
 },
@@ -1049,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-group-center",
   "type": "Definition",
-  "number": "1.102",
+  "number": "1.103",
   "title": "Center of a Group.",
   "body": "Center of a Group   The center of a group , often written , is the set of elements of that commute with every element of . That is,   center of a group    "
 },
@@ -1058,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-center-is-subgroup",
   "type": "Proposition",
-  "number": "1.103",
+  "number": "1.104",
   "title": "Center is a Subgroup.",
   "body": "Center is a Subgroup            is abelian    If , then        Let be a group. First, notice that since for all , we have , and thus .  Let . I claim .  Let , and observe: Thus by the one-step subgroup test .   "
 },
@@ -1067,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-center-props",
   "type": "Exercise",
-  "number": "1.104",
+  "number": "1.105",
   "title": "Properties of <span class=\"process-math\">\\(Z(G)\\)<\/span>.",
   "body": "Properties of  Let be a group.    is abelian.    If , then      "
 },
@@ -1076,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-only-element-of-order-2",
   "type": "Exercise",
-  "number": "1.105",
+  "number": "1.106",
   "title": "Only Element of Order <span class=\"process-math\">\\(2\\)<\/span>.",
   "body": "Only Element of Order  Let be a group and . If is the only element of order in , then .  "
 },
@@ -1085,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-even-groups-order-2",
   "type": "Exercise",
-  "number": "1.106",
+  "number": "1.107",
   "title": "Even Order Groups.",
   "body": "Even Order Groups  Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.   "
 },
@@ -1105,7 +1114,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Generated Subgroups",
-  "body": "Generated Subgroups  Generational Wealth    How often misused words generate misleading thoughts.   Herbert Spencer   Generated Subgroup   Given a group and a subset of , the subgroup of generated by , written , is the smallest subgroup of containing . In symbols, The elements of are known as generators , and is called a generating set .  generated subgroup  generator  generating set     latex :  In latex , is written using \\langle and is written using \\rangle , though this text recommends the shortcut command \\newcommand{\\gen}[1]{\\langle #1 \\rangle}    Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group     We can describe the elements of explicitly.  Elements of   For a subset of , the elements of can be described as:     For notational simplicity, we let . I claim .     Let . Thus , where and .  Since is a subgroup of containing , we see . Additionally, given the group group structure of it is closed under products and inverses, and thus contains . Hence and     I claim is a subgroup of .  First, notice , since we allow and declare the empty product to be .  Let and be arbitrary in . Thus for all . Observe: As as well, we see by the one-step subgroup test .  Since is defined to be the intersection of all subgroups of containing , we have , completing the proof.       Lets look at some examples for context.  Generated Groups      If is a group, then is a generating set of .    The trivial group is generated by the empty set.    If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . generated cyclic subgroup       for every .          is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,        Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   We look now at generating ; the following lemma will be helpful.    For and distinct intgers we have (Note that the right-hand cycle is a cycle since is one-to-one.)    To prove this, evaluate both sides at for any and observe that one gets (with the supscript taken modulo ) both times. This proves they agree on the set . If is not in this set, then fixes so the left-hand side fixes . So does the right, since . Thus the two functions coincide on elements.    Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.    Note that in we showed is generated by transpositions.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.      For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .     "
+  "body": "Generated Subgroups     How often misused words generate misleading thoughts.   Herbert Spencer    Generational Wealth  Generated Subgroup   Given a group and a subset of , the subgroup of generated by , written , is the smallest subgroup of containing . In symbols, The elements of are known as generators , and is called a generating set .  generated subgroup  generator  generating set      In latex , is written using \\langle and is written using \\rangle , though this text recommends the shortcut command \\newcommand{\\gen}[1]{\\langle #1 \\rangle}    Finitely Generated   A group is finitely generated provided that , where is a finite set. finitely generated group     We can describe the elements of explicitly.  Elements of   For a subset of , the elements of can be described as:     For notational simplicity, we let . I claim .     Let . Thus , where and .  Since is a subgroup of containing , we see . Additionally, given the group group structure of it is closed under products and inverses, and thus contains . Hence and     I claim is a subgroup of .  First, notice , since we allow and declare the empty product to be .  Let and be arbitrary in . Thus for all . Observe: As as well, we see by the one-step subgroup test .  Since is defined to be the intersection of all subgroups of containing , we have , completing the proof.       Lets look at some examples for context.  Generated Groups      If is a group, then is a generating set of .    The trivial group is generated by the empty set.    If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . generated cyclic subgroup       for every .          is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,        Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   We look now at generating ; the following lemma will be helpful.    For and distinct intgers we have (Note that the right-hand cycle is a cycle since is one-to-one.)    To prove this, evaluate both sides at for any and observe that one gets (with the supscript taken modulo ) both times. This proves they agree on the set . If is not in this set, then fixes so the left-hand side fixes . So does the right, since . Thus the two functions coincide on elements.    Generating   For prove that is generated by and the -cycle .     This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.    Note that in we showed is generated by transpositions.   Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .     Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in .   A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.      For a subset of a group, the of is the smallest subgroup containing .     . See: .     Two prominent examples are and .     "
 },
 {
   "id": "def-gensubgroup",
@@ -1180,18 +1189,18 @@ var ptx_lunr_docs = [
   "body": "Generating   For prove that is generated by and the -cycle .   "
 },
 {
-  "id": "subsec-gp-gensub-15",
+  "id": "subsec-gp-gensub-14",
   "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-15",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-14",
   "type": "Remark",
   "number": "2.9",
   "title": "",
   "body": " This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.  "
 },
 {
-  "id": "subsec-gp-gensub-16",
+  "id": "subsec-gp-gensub-15",
   "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-16",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-15",
   "type": "Remark",
   "number": "2.10",
   "title": "",
@@ -1207,9 +1216,9 @@ var ptx_lunr_docs = [
   "body": "Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup  commutator subgroup of .   "
 },
 {
-  "id": "subsec-gp-gensub-19",
+  "id": "subsec-gp-gensub-18",
   "level": "2",
-  "url": "sec-gp-generators.html#subsec-gp-gensub-19",
+  "url": "sec-gp-generators.html#subsec-gp-gensub-18",
   "type": "Remark",
   "number": "2.12",
   "title": "",
@@ -1225,9 +1234,9 @@ var ptx_lunr_docs = [
   "body": "Generators of Subgroups   If is a subgroup of that contains , then .   "
 },
 {
-  "id": "sec-gp-generators-3",
+  "id": "sec-gp-generators-4",
   "level": "2",
-  "url": "sec-gp-generators.html#sec-gp-generators-3",
+  "url": "sec-gp-generators.html#sec-gp-generators-4",
   "type": "Summary",
   "number": "2.1",
   "title": "",
@@ -1411,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Cosets and Lagrange’s Theorem",
-  "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem    If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).       For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.     "
+  "body": "Cosets and Lagrange's Theorem  Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange   Cosets   For any and any let be defined as a left coset and right coset of in , respectively. coset  left coset  right coset     Abelian Cosets  If is an abelian then for all .    Though mostly a matter of preference, we will focus primarily on left cosets.   Basic Coset Properties   Let and          if and only if             Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.      For any and any , the set of (left) cosets induces an equivalence relation on , where two elements are related if they belong to the same left coset of in .    Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . We see is onto and if then and hence , so that is also one-to-one.    Lagrange's Theorem  Lagrange's theorem   If is a finite group and , then In particular, divides .    Equal Number of Left and Right Cosets   The number of left cosets of in is equal to the number of right cosets of in .    Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in .  index     Cosets in  For and , the left cosets of in are and the right cosets are Note that these lists are not the same, but they do have the same length. We have , and .   Now that we have proved , a host of other results now become available to us.  Corollaries to Lagrange's Theorem   Let be a finite group.   If , then divides .         If then for all        The notion of index is most useful when it is finite, but note that this does not require that to be finite.  Finite Index in Infinite Group  Let and . Then since the cosets are . (Since is abelian, left and right cosets are automatically the same by )   Number of Left and Right Cosets (Ininite Version)  Show that even if is not finite the number of left and right cosets of a subgroup is still the same.   Consider the map and show it's a bijection. Why is the inverse needed?   This seems like it might be important.  The Index Tower  index tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Then .    Here are some more corollaries to .   Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem  Prove Fermat's Little Theorem: for every integer and every prime , . Fermat's little theorem    If you can believe it, there's actually another important corollary to , but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right? To spoil all the fun at once, see: , part (1).       For any and any , a left and right of in is defined to be     The set of cosets partitions the group and induces an equivlance relation where two elements are related if they belong to the same coset. See: and .     All cosets have the same cardinality, and there are an equal number of left and right cosets. See: and . The number of cosets is called the .     states that the order of any subgroup divides the order of the group, and thus that the order of an element must also divide the order of the group. This is one of the seminal results in group theory.     "
 },
 {
   "id": "def-coset",
@@ -1420,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.1",
   "title": "Cosets.",
-  "body": "Cosets   For any and any let be defined as a left coset and right coset of in , respectfully. coset  left coset  right coset    "
+  "body": "Cosets   For any and any let be defined as a left coset and right coset of in , respectively. coset  left coset  right coset    "
 },
 {
   "id": "exe-abelian-cosets",
@@ -8416,27 +8425,27 @@ var ptx_lunr_docs = [
   "body": "Ring Theory Extras  The Nilradical and Jacobson Radical    The set of all nilpotent elements in a ring is an ideal, and has no nilpotent element .    If , clearly for all . Let : say . By the binomial theorem (which is valid in any commutative ring), is a sum of integer multiples of products , where ; we cannot have both and , hence each of these products vanishes and therefore . Hence and therefore is an ideal.    Let be represented by . Then is represented by , so that for some .  The ideal is called the nilradical of . The following proposition gives an alternative definition of :    The nilradical of is the intersection of all the prime ideals of .    Proof. Let denote the intersection of all the prime ideals of . If is nilpotent and if is a prime ideal, then for some , hence (because is prime). Hence .  Conversely, suppose that is not nilpotent. Let be the set of ideals a with the property   Then is not empty because . As in (1.3) Zorn’s lemma can be applied to the set , ordered by inclusion, and therefore has a maximal element. Let be a maximal element of . We shall show that is a prime ideal. Let . Then the ideals strictly contain and therefore do not belong to ; hence for some . It follows that , hence the ideal is not in and therefore . Hence we have a prime ideal such that , so that .    The Jacobson radical of is defined to be the intersection of all the maximal ideals of . It can be characterized as follows:     is a unit in for all .     : Suppose is not a unit. By (1.5) it belongs to some maximal ideal ; but , hence and therefore , which is absurd.   : Suppose for some maximal ideal . Then and generate the unit ideal (1), so that we have for some and some . Hence and is therefore not a unit.     "
 },
 {
-  "id": "prop-1.7",
+  "id": "prop-1-7",
   "level": "2",
-  "url": "sec-ring-extras.html#prop-1.7",
+  "url": "sec-ring-extras.html#prop-1-7",
   "type": "Proposition",
   "number": "B.5",
   "title": "",
   "body": "  The set of all nilpotent elements in a ring is an ideal, and has no nilpotent element .    If , clearly for all . Let : say . By the binomial theorem (which is valid in any commutative ring), is a sum of integer multiples of products , where ; we cannot have both and , hence each of these products vanishes and therefore . Hence and therefore is an ideal.   "
 },
 {
-  "id": "prop-1.8",
+  "id": "prop-1-8",
   "level": "2",
-  "url": "sec-ring-extras.html#prop-1.8",
+  "url": "sec-ring-extras.html#prop-1-8",
   "type": "Proposition",
   "number": "B.6",
   "title": "",
   "body": "  The nilradical of is the intersection of all the prime ideals of .    Proof. Let denote the intersection of all the prime ideals of . If is nilpotent and if is a prime ideal, then for some , hence (because is prime). Hence .  Conversely, suppose that is not nilpotent. Let be the set of ideals a with the property   Then is not empty because . As in (1.3) Zorn’s lemma can be applied to the set , ordered by inclusion, and therefore has a maximal element. Let be a maximal element of . We shall show that is a prime ideal. Let . Then the ideals strictly contain and therefore do not belong to ; hence for some . It follows that , hence the ideal is not in and therefore . Hence we have a prime ideal such that , so that .   "
 },
 {
-  "id": "prop-1.9",
+  "id": "prop-1-9",
   "level": "2",
-  "url": "sec-ring-extras.html#prop-1.9",
+  "url": "sec-ring-extras.html#prop-1-9",
   "type": "Proposition",
   "number": "B.7",
   "title": "",

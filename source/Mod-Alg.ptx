@@ -2432,7 +2432,7 @@
             </blockquote>
 
             <p>
-              The Greek roots "homo" and "morph"together mean "same shape".
+              The Greek roots "homo" and "morph" together mean "same shape".
             </p>
             
             <definition xml:id="def-ghom"><title>Group Homomorphism</title>
@@ -2579,11 +2579,11 @@
             <theorem xml:id="thm-grphomom-preservations"><title>Homomorphism Preservations</title>
               <statement>
                 <p>
-                  If <m>\varphi: G \to H</m> is a homomorphism of groups, then
+                  If <m>\varphi: G \to H</m> is a homomorphism of groups, then the following hold:
                   <ol>
                     <li xml:id="gp-ident-pres">
                       <p>
-                        <m>\varphi(e_G) = e_H</m> and
+                        <m>\varphi(e_G) = e_H</m>
                       </p>
                     </li>
       
@@ -2651,7 +2651,7 @@
                   <md>
                     <mrow>\phi\circ\varphi(xy) &amp;= \phi\circ\left(\varphi(x)\varphi(y)\right) &amp;&amp; <xref ref="def-ghom"/> \text{ applied to } \varphi </mrow>
                     <mrow> &amp;= \phi\left(\varphi(x)\varphi(y)\right) &amp;&amp; <xref ref="def-composition"/> </mrow>
-                    <mrow> &amp;= \phi\left(\varphi(x)\right)\phi\left(\varphi(y)\r∫ight)&amp;&amp; <xref ref="def-ghom"/> \text{ applied to } \phi</mrow>
+                    <mrow> &amp;= \phi\left(\varphi(x)\right)\phi\left(\varphi(y)\right) &amp;&amp; <xref ref="def-ghom"/> \text{ applied to } \phi</mrow>
                     <mrow> &amp;= \left(\phi\circ\varphi(x)\right)\left(\phi\circ\varphi(y)\right) &amp;&amp; <xref ref="def-composition"/></mrow>
                   </md>
                   Thus <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.
@@ -3091,7 +3091,7 @@
             <remark>
               <p>
                 The quotation marks in the title of this result are important. 
-                Equivalenve relations as we know them are only defined on <em>sets</em>, but there is no set of groups.
+                Equivalence relations as we know them are only defined on <em>sets</em>, but there is no set of all groups, much as there is no set of all sets.
                 This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.
               </p>
             </remark>
@@ -3885,8 +3885,7 @@
 
         <section xml:id="sec-gp-generators"><title>Generated Subgroups</title>
 
-          <subsection xml:id="subsec-gp-gensub"><title>Generational Wealth</title>
-            
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -3895,7 +3894,10 @@
               </p>
               <attribution>Herbert Spencer</attribution>
             </blockquote>
-          
+          </introduction>
+
+          <subsection xml:id="subsec-gp-gensub"><title>Generational Wealth</title>
+            
             <definition xml:id="def-gensubgroup"><title>Generated Subgroup</title>
               <statement>
                 <p>
@@ -3913,7 +3915,7 @@
 
             <aside>
               <p>
-                Hello! In <latex />, <m>\langle</m> is written using <c>\langle</c> and <m>\rangle</m> is written using <c>\rangle</c>, though this text recommends the shortcut command <c>\newcommand{\gen}[1]{\langle #1 \rangle}</c>
+                In <latex />, <m>\langle</m> is written using <c>\langle</c> and <m>\rangle</m> is written using <c>\rangle</c>, though this text recommends the shortcut command <c>\newcommand{\gen}[1]{\langle #1 \rangle}</c>
               </p>
             </aside>
 
@@ -22247,7 +22249,7 @@
 
           <subsection xml:id="subsec-nilradical"><title>The Nilradical and Jacobson Radical</title>
 
-            <proposition xml:id="prop-1.7"><!-- -->
+            <proposition xml:id="prop-1-7"><!-- -->
               <statement>
                 <p>
                   The set <m>\mathfrak{N}</m> of all nilpotent elements in a ring <m>A</m> is an ideal, and <m>A / \mathfrak{R}</m> has no nilpotent element <m>\neq 0</m>.
@@ -22275,7 +22277,7 @@
               The following proposition gives an alternative definition of <m>\mathfrak{R}</m> :
             </p>
 
-            <proposition xml:id="prop-1.8"><!-- -->
+            <proposition xml:id="prop-1-8"><!-- -->
               <statement>
                 <p>
                   The nilradical of <m>A</m> is the intersection of all the prime ideals of <m>A</m>.
@@ -22316,7 +22318,7 @@
               It can be characterized as follows:
             </p>
 
-            <proposition xml:id="prop-1.9"><!-- -->
+            <proposition xml:id="prop-1-9"><!-- -->
               <statement>
                 <p>
                   <m>x \in \Re \Leftrightarrow 1-x y</m> is a unit in <m>A</m> for all <m>y \in A</m>.
