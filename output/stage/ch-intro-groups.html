@@ -105,6 +105,1757 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_bluegreen_grey.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#ch-intro-groups-2-3-1-1 { counter-set: ch-intro-groups-2-3-1-1 0; }
+#ch-intro-groups-2-3-1-1 > li::marker { content: ""counter(ch-intro-groups-2-3-1-1,decimal)"."; }
+#ch-intro-groups-2-3-1-1 > li { counter-increment: ch-intro-groups-2-3-1-1; }
+#ch-intro-groups-2-5-2-1-1 { counter-set: ch-intro-groups-2-5-2-1-1 0; }
+#ch-intro-groups-2-5-2-1-1 > li::marker { content: ""counter(ch-intro-groups-2-5-2-1-1,decimal)"."; }
+#ch-intro-groups-2-5-2-1-1 > li { counter-increment: ch-intro-groups-2-5-2-1-1; }
+#def-binary-properties-2-1-3 { counter-set: def-binary-properties-2-1-3 0; }
+#def-binary-properties-2-1-3 > li::marker { content: ""counter(def-binary-properties-2-1-3,decimal)"."; }
+#def-binary-properties-2-1-3 > li { counter-increment: def-binary-properties-2-1-3; }
+#thm-properties-of-groups-2-1-2 { counter-set: thm-properties-of-groups-2-1-2 0; }
+#thm-properties-of-groups-2-1-2 > li::marker { content: ""counter(thm-properties-of-groups-2-1-2,decimal)"."; }
+#thm-properties-of-groups-2-1-2 > li { counter-increment: thm-properties-of-groups-2-1-2; }
+#thm-properties-of-groups-3-1-1 { counter-set: thm-properties-of-groups-3-1-1 0; }
+#thm-properties-of-groups-3-1-1 > li::marker { content: ""counter(thm-properties-of-groups-3-1-1,decimal)"."; }
+#thm-properties-of-groups-3-1-1 > li { counter-increment: thm-properties-of-groups-3-1-1; }
+#ex-group-examples-2-1-1 { counter-set: ex-group-examples-2-1-1 0; }
+#ex-group-examples-2-1-1 > li::marker { content: ""counter(ex-group-examples-2-1-1,decimal)"."; }
+#ex-group-examples-2-1-1 > li { counter-increment: ex-group-examples-2-1-1; }
+#subsec-group-ex-5-2-1-1 { counter-set: subsec-group-ex-5-2-1-1 0; }
+#subsec-group-ex-5-2-1-1 > li::marker { content: ""counter(subsec-group-ex-5-2-1-1,decimal)"."; }
+#subsec-group-ex-5-2-1-1 > li { counter-increment: subsec-group-ex-5-2-1-1; }
+#ex-group-of-units-4-1-1 { counter-set: ex-group-of-units-4-1-1 0; }
+#ex-group-of-units-4-1-1 > li::marker { content: ""counter(ex-group-of-units-4-1-1,decimal)"."; }
+#ex-group-of-units-4-1-1 > li { counter-increment: ex-group-of-units-4-1-1; }
+#exe-extra-groups-2-1-1 { counter-set: exe-extra-groups-2-1-1 0; }
+#exe-extra-groups-2-1-1 > li::marker { content: ""counter(exe-extra-groups-2-1-1,decimal)"."; }
+#exe-extra-groups-2-1-1 > li { counter-increment: exe-extra-groups-2-1-1; }
+#exe-extra-groups-3-1-1 { counter-set: exe-extra-groups-3-1-1 0; }
+#exe-extra-groups-3-1-1 > li::marker { content: ""counter(exe-extra-groups-3-1-1,decimal)"."; }
+#exe-extra-groups-3-1-1 > li { counter-increment: exe-extra-groups-3-1-1; }
+#thm-group-inverses-2-1-3 { counter-set: thm-group-inverses-2-1-3 0; }
+#thm-group-inverses-2-1-3 > li::marker { content: ""counter(thm-group-inverses-2-1-3,decimal)"."; }
+#thm-group-inverses-2-1-3 > li { counter-increment: thm-group-inverses-2-1-3; }
+#thm-group-inverses-3-1-1 { counter-set: thm-group-inverses-3-1-1 0; }
+#thm-group-inverses-3-1-1 > li::marker { content: ""counter(thm-group-inverses-3-1-1,decimal)"."; }
+#thm-group-inverses-3-1-1 > li { counter-increment: thm-group-inverses-3-1-1; }
+#thm-exponent-laws-2-1-4 { counter-set: thm-exponent-laws-2-1-4 0; }
+#thm-exponent-laws-2-1-4 > li::marker { content: ""counter(thm-exponent-laws-2-1-4,decimal)"."; }
+#thm-exponent-laws-2-1-4 > li { counter-increment: thm-exponent-laws-2-1-4; }
+#thm-exponent-laws-3-1-1 { counter-set: thm-exponent-laws-3-1-1 0; }
+#thm-exponent-laws-3-1-1 > li::marker { content: ""counter(thm-exponent-laws-3-1-1,decimal)"."; }
+#thm-exponent-laws-3-1-1 > li { counter-increment: thm-exponent-laws-3-1-1; }
+#def-order-2-1-1 { counter-set: def-order-2-1-1 0; }
+#def-order-2-1-1 > li::marker { content: ""counter(def-order-2-1-1,decimal)"."; }
+#def-order-2-1-1 > li { counter-increment: def-order-2-1-1; }
+#ex-order-2-1 { counter-set: ex-order-2-1 0; }
+#ex-order-2-1 > li::marker { content: ""counter(ex-order-2-1,decimal)"."; }
+#ex-order-2-1 > li { counter-increment: ex-order-2-1; }
+#thm-order-properties-2-1-1 { counter-set: thm-order-properties-2-1-1 0; }
+#thm-order-properties-2-1-1 > li::marker { content: ""counter(thm-order-properties-2-1-1,decimal)"."; }
+#thm-order-properties-2-1-1 > li { counter-increment: thm-order-properties-2-1-1; }
+#thm-order-properties-3-1-1 { counter-set: thm-order-properties-3-1-1 0; }
+#thm-order-properties-3-1-1 > li::marker { content: ""counter(thm-order-properties-3-1-1,decimal)"."; }
+#thm-order-properties-3-1-1 > li { counter-increment: thm-order-properties-3-1-1; }
+#thm-element-order-2-1-3 { counter-set: thm-element-order-2-1-3 0; }
+#thm-element-order-2-1-3 > li::marker { content: ""counter(thm-element-order-2-1-3,decimal)"."; }
+#thm-element-order-2-1-3 > li { counter-increment: thm-element-order-2-1-3; }
+#thm-element-order-3-1-3 { counter-set: thm-element-order-3-1-3 0; }
+#thm-element-order-3-1-3 > li::marker { content: ""counter(thm-element-order-3-1-3,decimal)"."; }
+#thm-element-order-3-1-3 > li { counter-increment: thm-element-order-3-1-3; }
+#exe-order-and-gcd-2-1-2 { counter-set: exe-order-and-gcd-2-1-2 0; }
+#exe-order-and-gcd-2-1-2 > li::marker { content: ""counter(exe-order-and-gcd-2-1-2,decimal)"."; }
+#exe-order-and-gcd-2-1-2 > li { counter-increment: exe-order-and-gcd-2-1-2; }
+#thm-cycledecomp-2-1-1 { counter-set: thm-cycledecomp-2-1-1 0; }
+#thm-cycledecomp-2-1-1 > li::marker { content: ""counter(thm-cycledecomp-2-1-1,decimal)"."; }
+#thm-cycledecomp-2-1-1 > li { counter-increment: thm-cycledecomp-2-1-1; }
+#prop-even-odd-properties-2-1-1 { counter-set: prop-even-odd-properties-2-1-1 0; }
+#prop-even-odd-properties-2-1-1 > li::marker { content: ""counter(prop-even-odd-properties-2-1-1,decimal)"."; }
+#prop-even-odd-properties-2-1-1 > li { counter-increment: prop-even-odd-properties-2-1-1; }
+#subsec-d2n-4-2 { counter-set: subsec-d2n-4-2 0; }
+#subsec-d2n-4-2 > li::marker { content: ""counter(subsec-d2n-4-2,decimal)"."; }
+#subsec-d2n-4-2 > li { counter-increment: subsec-d2n-4-2; }
+#ex-d2n-elements-2-4 { counter-set: ex-d2n-elements-2-4 0; }
+#ex-d2n-elements-2-4 > li::marker { content: ""counter(ex-d2n-elements-2-4,decimal)"."; }
+#ex-d2n-elements-2-4 > li { counter-increment: ex-d2n-elements-2-4; }
+#thm-d2n-order-2-1-1 { counter-set: thm-d2n-order-2-1-1 0; }
+#thm-d2n-order-2-1-1 > li::marker { content: ""counter(thm-d2n-order-2-1-1,decimal)"."; }
+#thm-d2n-order-2-1-1 > li { counter-increment: thm-d2n-order-2-1-1; }
+#ex-group-homom-examples-2-1-1 { counter-set: ex-group-homom-examples-2-1-1 0; }
+#ex-group-homom-examples-2-1-1 > li::marker { content: ""counter(ex-group-homom-examples-2-1-1,decimal)"."; }
+#ex-group-homom-examples-2-1-1 > li { counter-increment: ex-group-homom-examples-2-1-1; }
+#ex-group-homom-examples-3-1-1 { counter-set: ex-group-homom-examples-3-1-1 0; }
+#ex-group-homom-examples-3-1-1 > li::marker { content: ""counter(ex-group-homom-examples-3-1-1,decimal)"."; }
+#ex-group-homom-examples-3-1-1 > li { counter-increment: ex-group-homom-examples-3-1-1; }
+#exe-more-group-homs-1-1-1 { counter-set: exe-more-group-homs-1-1-1 0; }
+#exe-more-group-homs-1-1-1 > li::marker { content: ""counter(exe-more-group-homs-1-1-1,decimal)"."; }
+#exe-more-group-homs-1-1-1 > li { counter-increment: exe-more-group-homs-1-1-1; }
+#thm-grphomom-preservations-2-1-2 { counter-set: thm-grphomom-preservations-2-1-2 0; }
+#thm-grphomom-preservations-2-1-2 > li::marker { content: ""counter(thm-grphomom-preservations-2-1-2,decimal)"."; }
+#thm-grphomom-preservations-2-1-2 > li { counter-increment: thm-grphomom-preservations-2-1-2; }
+#thm-grphomom-preservations-3-1-2 { counter-set: thm-grphomom-preservations-3-1-2 0; }
+#thm-grphomom-preservations-3-1-2 > li::marker { content: ""counter(thm-grphomom-preservations-3-1-2,decimal)"."; }
+#thm-grphomom-preservations-3-1-2 > li { counter-increment: thm-grphomom-preservations-3-1-2; }
+#thm-inj-surj-ghom-2-1-1 { counter-set: thm-inj-surj-ghom-2-1-1 0; }
+#thm-inj-surj-ghom-2-1-1 > li::marker { content: ""counter(thm-inj-surj-ghom-2-1-1,decimal)"."; }
+#thm-inj-surj-ghom-2-1-1 > li { counter-increment: thm-inj-surj-ghom-2-1-1; }
+#thm-inj-surj-ghom-3-1-1 { counter-set: thm-inj-surj-ghom-3-1-1 0; }
+#thm-inj-surj-ghom-3-1-1 > li::marker { content: ""counter(thm-inj-surj-ghom-3-1-1,decimal)"."; }
+#thm-inj-surj-ghom-3-1-1 > li { counter-increment: thm-inj-surj-ghom-3-1-1; }
+#ex-group-iso-examples-2-1 { counter-set: ex-group-iso-examples-2-1 0; }
+#ex-group-iso-examples-2-1 > li::marker { content: ""counter(ex-group-iso-examples-2-1,decimal)"."; }
+#ex-group-iso-examples-2-1 > li { counter-increment: ex-group-iso-examples-2-1; }
+#exe-more-grp-isos-2-1-1 { counter-set: exe-more-grp-isos-2-1-1 0; }
+#exe-more-grp-isos-2-1-1 > li::marker { content: ""counter(exe-more-grp-isos-2-1-1,decimal)"."; }
+#exe-more-grp-isos-2-1-1 > li { counter-increment: exe-more-grp-isos-2-1-1; }
+#thm-iso-inv-2-2-1 { counter-set: thm-iso-inv-2-2-1 0; }
+#thm-iso-inv-2-2-1 > li::marker { content: ""counter(thm-iso-inv-2-2-1,decimal)"."; }
+#thm-iso-inv-2-2-1 > li { counter-increment: thm-iso-inv-2-2-1; }
+#thm-iso-inv-3-1-3 { counter-set: thm-iso-inv-3-1-3 0; }
+#thm-iso-inv-3-1-3 > li::marker { content: ""counter(thm-iso-inv-3-1-3,decimal)"."; }
+#thm-iso-inv-3-1-3 > li { counter-increment: thm-iso-inv-3-1-3; }
+#exe-not-isomorphic-2-1-2 { counter-set: exe-not-isomorphic-2-1-2 0; }
+#exe-not-isomorphic-2-1-2 > li::marker { content: ""counter(exe-not-isomorphic-2-1-2,decimal)"."; }
+#exe-not-isomorphic-2-1-2 > li { counter-increment: exe-not-isomorphic-2-1-2; }
+#thm-iso-equivalence-relation-2-1-1 { counter-set: thm-iso-equivalence-relation-2-1-1 0; }
+#thm-iso-equivalence-relation-2-1-1 > li::marker { content: ""counter(thm-iso-equivalence-relation-2-1-1,decimal)"."; }
+#thm-iso-equivalence-relation-2-1-1 > li { counter-increment: thm-iso-equivalence-relation-2-1-1; }
+#thm-iso-equivalence-relation-3-1-1 { counter-set: thm-iso-equivalence-relation-3-1-1 0; }
+#thm-iso-equivalence-relation-3-1-1 > li::marker { content: ""counter(thm-iso-equivalence-relation-3-1-1,decimal)"."; }
+#thm-iso-equivalence-relation-3-1-1 > li { counter-increment: thm-iso-equivalence-relation-3-1-1; }
+#thm-subgroup-test-3-1-1 { counter-set: thm-subgroup-test-3-1-1 0; }
+#thm-subgroup-test-3-1-1 > li::marker { content: ""counter(thm-subgroup-test-3-1-1,decimal)"."; }
+#thm-subgroup-test-3-1-1 > li { counter-increment: thm-subgroup-test-3-1-1; }
+#thm-subgroup-test-4-1-1 { counter-set: thm-subgroup-test-4-1-1 0; }
+#thm-subgroup-test-4-1-1 > li::marker { content: ""counter(thm-subgroup-test-4-1-1,decimal)"."; }
+#thm-subgroup-test-4-1-1 > li { counter-increment: thm-subgroup-test-4-1-1; }
+#ex-common-subgroups-2-1 { counter-set: ex-common-subgroups-2-1 0; }
+#ex-common-subgroups-2-1 > li::marker { content: ""counter(ex-common-subgroups-2-1,decimal)"."; }
+#ex-common-subgroups-2-1 > li { counter-increment: ex-common-subgroups-2-1; }
+#exe-torsion-subgroup-2-1-1 { counter-set: exe-torsion-subgroup-2-1-1 0; }
+#exe-torsion-subgroup-2-1-1 > li::marker { content: ""counter(exe-torsion-subgroup-2-1-1,decimal)"."; }
+#exe-torsion-subgroup-2-1-1 > li { counter-increment: exe-torsion-subgroup-2-1-1; }
+#thm-subgroup-properties-2-1-1 { counter-set: thm-subgroup-properties-2-1-1 0; }
+#thm-subgroup-properties-2-1-1 > li::marker { content: ""counter(thm-subgroup-properties-2-1-1,decimal)"."; }
+#thm-subgroup-properties-2-1-1 > li { counter-increment: thm-subgroup-properties-2-1-1; }
+#thm-subgroup-properties-3-1-1 { counter-set: thm-subgroup-properties-3-1-1 0; }
+#thm-subgroup-properties-3-1-1 > li::marker { content: ""counter(thm-subgroup-properties-3-1-1,decimal)"."; }
+#thm-subgroup-properties-3-1-1 > li { counter-increment: thm-subgroup-properties-3-1-1; }
+#thm-properties-of-group-homoms-2-1-1 { counter-set: thm-properties-of-group-homoms-2-1-1 0; }
+#thm-properties-of-group-homoms-2-1-1 > li::marker { content: ""counter(thm-properties-of-group-homoms-2-1-1,decimal)"."; }
+#thm-properties-of-group-homoms-2-1-1 > li { counter-increment: thm-properties-of-group-homoms-2-1-1; }
+#thm-properties-of-group-homoms-3-1-2 { counter-set: thm-properties-of-group-homoms-3-1-2 0; }
+#thm-properties-of-group-homoms-3-1-2 > li::marker { content: ""counter(thm-properties-of-group-homoms-3-1-2,decimal)"."; }
+#thm-properties-of-group-homoms-3-1-2 > li { counter-increment: thm-properties-of-group-homoms-3-1-2; }
+#prop-center-is-subgroup-2-1-1 { counter-set: prop-center-is-subgroup-2-1-1 0; }
+#prop-center-is-subgroup-2-1-1 > li::marker { content: ""counter(prop-center-is-subgroup-2-1-1,decimal)"."; }
+#prop-center-is-subgroup-2-1-1 > li { counter-increment: prop-center-is-subgroup-2-1-1; }
+#exe-center-props-2-1-2 { counter-set: exe-center-props-2-1-2 0; }
+#exe-center-props-2-1-2 > li::marker { content: ""counter(exe-center-props-2-1-2,decimal)"."; }
+#exe-center-props-2-1-2 > li { counter-increment: exe-center-props-2-1-2; }
+#lem-gensubgp-3-2-1 { counter-set: lem-gensubgp-3-2-1 0; }
+#lem-gensubgp-3-2-1 > li::marker { content: ""counter(lem-gensubgp-3-2-1,decimal)"."; }
+#lem-gensubgp-3-2-1 > li { counter-increment: lem-gensubgp-3-2-1; }
+#ex-group-gen-2-1-1 { counter-set: ex-group-gen-2-1-1 0; }
+#ex-group-gen-2-1-1 > li::marker { content: ""counter(ex-group-gen-2-1-1,decimal)"."; }
+#ex-group-gen-2-1-1 > li { counter-increment: ex-group-gen-2-1-1; }
+#ex-cyclic-examples-2-1-1 { counter-set: ex-cyclic-examples-2-1-1 0; }
+#ex-cyclic-examples-2-1-1 > li::marker { content: ""counter(ex-cyclic-examples-2-1-1,decimal)"."; }
+#ex-cyclic-examples-2-1-1 > li { counter-increment: ex-cyclic-examples-2-1-1; }
+#ex-cyclic-examples-3-1-1 { counter-set: ex-cyclic-examples-3-1-1 0; }
+#ex-cyclic-examples-3-1-1 > li::marker { content: ""counter(ex-cyclic-examples-3-1-1,decimal)"."; }
+#ex-cyclic-examples-3-1-1 > li { counter-increment: ex-cyclic-examples-3-1-1; }
+#exe-not-cyclic-2-1-1 { counter-set: exe-not-cyclic-2-1-1 0; }
+#exe-not-cyclic-2-1-1 > li::marker { content: ""counter(exe-not-cyclic-2-1-1,decimal)"."; }
+#exe-not-cyclic-2-1-1 > li { counter-increment: exe-not-cyclic-2-1-1; }
+#thm-cyclic-divisors-and-subgroups-3-1-1 { counter-set: thm-cyclic-divisors-and-subgroups-3-1-1 0; }
+#thm-cyclic-divisors-and-subgroups-3-1-1 > li::marker { content: ""counter(thm-cyclic-divisors-and-subgroups-3-1-1,decimal)"."; }
+#thm-cyclic-divisors-and-subgroups-3-1-1 > li { counter-increment: thm-cyclic-divisors-and-subgroups-3-1-1; }
+#exe-small-cyclic-2-1-1 { counter-set: exe-small-cyclic-2-1-1 0; }
+#exe-small-cyclic-2-1-1 > li::marker { content: ""counter(exe-small-cyclic-2-1-1,decimal)"."; }
+#exe-small-cyclic-2-1-1 > li { counter-increment: exe-small-cyclic-2-1-1; }
+#ch-normal-quotient-2-5-1 { counter-set: ch-normal-quotient-2-5-1 0; }
+#ch-normal-quotient-2-5-1 > li::marker { content: ""counter(ch-normal-quotient-2-5-1,decimal)"."; }
+#ch-normal-quotient-2-5-1 > li { counter-increment: ch-normal-quotient-2-5-1; }
+#ch-normal-quotient-2-6-1 { counter-set: ch-normal-quotient-2-6-1 0; }
+#ch-normal-quotient-2-6-1 > li::marker { content: ""counter(ch-normal-quotient-2-6-1,decimal)"."; }
+#ch-normal-quotient-2-6-1 > li { counter-increment: ch-normal-quotient-2-6-1; }
+#ch-normal-quotient-2-7-1 { counter-set: ch-normal-quotient-2-7-1 0; }
+#ch-normal-quotient-2-7-1 > li::marker { content: ""counter(ch-normal-quotient-2-7-1,decimal)"."; }
+#ch-normal-quotient-2-7-1 > li { counter-increment: ch-normal-quotient-2-7-1; }
+#prop-coset-properties-2-1-3 { counter-set: prop-coset-properties-2-1-3 0; }
+#prop-coset-properties-2-1-3 > li::marker { content: ""counter(prop-coset-properties-2-1-3,decimal)"."; }
+#prop-coset-properties-2-1-3 > li { counter-increment: prop-coset-properties-2-1-3; }
+#lem-cosetfacts-2-1-3 { counter-set: lem-cosetfacts-2-1-3 0; }
+#lem-cosetfacts-2-1-3 > li::marker { content: ""counter(lem-cosetfacts-2-1-3,decimal)"."; }
+#lem-cosetfacts-2-1-3 > li { counter-increment: lem-cosetfacts-2-1-3; }
+#cor-lagrange-2-1-2 { counter-set: cor-lagrange-2-1-2 0; }
+#cor-lagrange-2-1-2 > li::marker { content: ""counter(cor-lagrange-2-1-2,decimal)"."; }
+#cor-lagrange-2-1-2 > li { counter-increment: cor-lagrange-2-1-2; }
+#exe-anything-but-normal-3-1-1 { counter-set: exe-anything-but-normal-3-1-1 0; }
+#exe-anything-but-normal-3-1-1 > li::marker { content: ""counter(exe-anything-but-normal-3-1-1,decimal)"."; }
+#exe-anything-but-normal-3-1-1 > li { counter-increment: exe-anything-but-normal-3-1-1; }
+#thm-equivdef-normal-2-1-3 { counter-set: thm-equivdef-normal-2-1-3 0; }
+#thm-equivdef-normal-2-1-3 > li::marker { content: ""counter(thm-equivdef-normal-2-1-3,decimal)"."; }
+#thm-equivdef-normal-2-1-3 > li { counter-increment: thm-equivdef-normal-2-1-3; }
+#ex-normal-examples-2-1 { counter-set: ex-normal-examples-2-1 0; }
+#ex-normal-examples-2-1 > li::marker { content: ""counter(ex-normal-examples-2-1,decimal)"."; }
+#ex-normal-examples-2-1 > li { counter-increment: ex-normal-examples-2-1; }
+#exe-generated-normal-subgroup-2-1-7 { counter-set: exe-generated-normal-subgroup-2-1-7 0; }
+#exe-generated-normal-subgroup-2-1-7 > li::marker { content: ""counter(exe-generated-normal-subgroup-2-1-7,decimal)"."; }
+#exe-generated-normal-subgroup-2-1-7 > li { counter-increment: exe-generated-normal-subgroup-2-1-7; }
+#thm-ump-quotient-3-2-1 { counter-set: thm-ump-quotient-3-2-1 0; }
+#thm-ump-quotient-3-2-1 > li::marker { content: ""counter(thm-ump-quotient-3-2-1,decimal)"."; }
+#thm-ump-quotient-3-2-1 > li { counter-increment: thm-ump-quotient-3-2-1; }
+#thm-ump-quotient-4-1-1 { counter-set: thm-ump-quotient-4-1-1 0; }
+#thm-ump-quotient-4-1-1 > li::marker { content: ""counter(thm-ump-quotient-4-1-1,decimal)"."; }
+#thm-ump-quotient-4-1-1 > li { counter-increment: thm-ump-quotient-4-1-1; }
+#thm-hn-normal-2-1-4 { counter-set: thm-hn-normal-2-1-4 0; }
+#thm-hn-normal-2-1-4 > li::marker { content: ""counter(thm-hn-normal-2-1-4,decimal)"."; }
+#thm-hn-normal-2-1-4 > li { counter-increment: thm-hn-normal-2-1-4; }
+#thm-lit-group-3-3-1 { counter-set: thm-lit-group-3-3-1 0; }
+#thm-lit-group-3-3-1 > li::marker { content: ""counter(thm-lit-group-3-3-1,decimal)"."; }
+#thm-lit-group-3-3-1 > li { counter-increment: thm-lit-group-3-3-1; }
+#thm-lit-group-4-5-1 { counter-set: thm-lit-group-4-5-1 0; }
+#thm-lit-group-4-5-1 > li::marker { content: ""counter(thm-lit-group-4-5-1,decimal)"."; }
+#thm-lit-group-4-5-1 > li { counter-increment: thm-lit-group-4-5-1; }
+#def-graction-2-1-8 { counter-set: def-graction-2-1-8 0; }
+#def-graction-2-1-8 > li::marker { content: ""counter(def-graction-2-1-8,decimal)"."; }
+#def-graction-2-1-8 > li { counter-increment: def-graction-2-1-8; }
+#ex-group-actions-2-1-1 { counter-set: ex-group-actions-2-1-1 0; }
+#ex-group-actions-2-1-1 > li::marker { content: ""counter(ex-group-actions-2-1-1,decimal)"."; }
+#ex-group-actions-2-1-1 > li { counter-increment: ex-group-actions-2-1-1; }
+#ex-group-actions-3-1-3 { counter-set: ex-group-actions-3-1-3 0; }
+#ex-group-actions-3-1-3 > li::marker { content: ""counter(ex-group-actions-3-1-3,decimal)"."; }
+#ex-group-actions-3-1-3 > li { counter-increment: ex-group-actions-3-1-3; }
+#thm-permrep-3-2-1 { counter-set: thm-permrep-3-2-1 0; }
+#thm-permrep-3-2-1 > li::marker { content: ""counter(thm-permrep-3-2-1,decimal)"."; }
+#thm-permrep-3-2-1 > li { counter-increment: thm-permrep-3-2-1; }
+#ex-permrep-examples-2-1 { counter-set: ex-permrep-examples-2-1 0; }
+#ex-permrep-examples-2-1 > li::marker { content: ""counter(ex-permrep-examples-2-1,decimal)"."; }
+#ex-permrep-examples-2-1 > li { counter-increment: ex-permrep-examples-2-1; }
+#thm-faithful-self-actions-2-1-1 { counter-set: thm-faithful-self-actions-2-1-1 0; }
+#thm-faithful-self-actions-2-1-1 > li::marker { content: ""counter(thm-faithful-self-actions-2-1-1,decimal)"."; }
+#thm-faithful-self-actions-2-1-1 > li { counter-increment: thm-faithful-self-actions-2-1-1; }
+#lem-largest-normal-subgroup-2-1-7 { counter-set: lem-largest-normal-subgroup-2-1-7 0; }
+#lem-largest-normal-subgroup-2-1-7 > li::marker { content: ""counter(lem-largest-normal-subgroup-2-1-7,decimal)"."; }
+#lem-largest-normal-subgroup-2-1-7 > li { counter-increment: lem-largest-normal-subgroup-2-1-7; }
+#subsec-conjugacy-7-1-1-2 { counter-set: subsec-conjugacy-7-1-1-2 0; }
+#subsec-conjugacy-7-1-1-2 > li::marker { content: ""counter(subsec-conjugacy-7-1-1-2,decimal)"."; }
+#subsec-conjugacy-7-1-1-2 > li { counter-increment: subsec-conjugacy-7-1-1-2; }
+#ex-familiar-orbits-2-1-2 { counter-set: ex-familiar-orbits-2-1-2 0; }
+#ex-familiar-orbits-2-1-2 > li::marker { content: ""counter(ex-familiar-orbits-2-1-2,decimal)"."; }
+#ex-familiar-orbits-2-1-2 > li { counter-increment: ex-familiar-orbits-2-1-2; }
+#thm-orbits-partition-2-1-3 { counter-set: thm-orbits-partition-2-1-3 0; }
+#thm-orbits-partition-2-1-3 > li::marker { content: ""counter(thm-orbits-partition-2-1-3,decimal)"."; }
+#thm-orbits-partition-2-1-3 > li { counter-increment: thm-orbits-partition-2-1-3; }
+#lem-conjugation-and-lois-2-2-1 { counter-set: lem-conjugation-and-lois-2-2-1 0; }
+#lem-conjugation-and-lois-2-2-1 > li::marker { content: ""counter(lem-conjugation-and-lois-2-2-1,decimal)"."; }
+#lem-conjugation-and-lois-2-2-1 > li { counter-increment: lem-conjugation-and-lois-2-2-1; }
+#thm-order-p-cyclic-2-1-2 { counter-set: thm-order-p-cyclic-2-1-2 0; }
+#thm-order-p-cyclic-2-1-2 > li::marker { content: ""counter(thm-order-p-cyclic-2-1-2,decimal)"."; }
+#thm-order-p-cyclic-2-1-2 > li { counter-increment: thm-order-p-cyclic-2-1-2; }
+#thm-sylow-3-1-6 { counter-set: thm-sylow-3-1-6 0; }
+#thm-sylow-3-1-6 > li::marker { content: ""counter(thm-sylow-3-1-6,decimal)"."; }
+#thm-sylow-3-1-6 > li { counter-increment: thm-sylow-3-1-6; }
+#thm-sylow-4-1-1 { counter-set: thm-sylow-4-1-1 0; }
+#thm-sylow-4-1-1 > li::marker { content: ""counter(thm-sylow-4-1-1,decimal)"."; }
+#thm-sylow-4-1-1 > li { counter-increment: thm-sylow-4-1-1; }
+#subsec-simple-qual-3-1-2-1 { counter-set: subsec-simple-qual-3-1-2-1 0; }
+#subsec-simple-qual-3-1-2-1 > li::marker { content: ""counter(subsec-simple-qual-3-1-2-1,decimal)"."; }
+#subsec-simple-qual-3-1-2-1 > li { counter-increment: subsec-simple-qual-3-1-2-1; }
+#subsec-simple-qual-3-2-2-1 { counter-set: subsec-simple-qual-3-2-2-1 0; }
+#subsec-simple-qual-3-2-2-1 > li::marker { content: ""counter(subsec-simple-qual-3-2-2-1,decimal)"."; }
+#subsec-simple-qual-3-2-2-1 > li { counter-increment: subsec-simple-qual-3-2-2-1; }
+#subsec-simple-qual-5-1-1-1 { counter-set: subsec-simple-qual-5-1-1-1 0; }
+#subsec-simple-qual-5-1-1-1 > li::marker { content: ""counter(subsec-simple-qual-5-1-1-1,decimal)"."; }
+#subsec-simple-qual-5-1-1-1 > li { counter-increment: subsec-simple-qual-5-1-1-1; }
+#subsec-simple-qual-5-2-1-1 { counter-set: subsec-simple-qual-5-2-1-1 0; }
+#subsec-simple-qual-5-2-1-1 > li::marker { content: ""counter(subsec-simple-qual-5-2-1-1,decimal)"."; }
+#subsec-simple-qual-5-2-1-1 > li { counter-increment: subsec-simple-qual-5-2-1-1; }
+#thm-dp-properties-2-1-1 { counter-set: thm-dp-properties-2-1-1 0; }
+#thm-dp-properties-2-1-1 > li::marker { content: ""counter(thm-dp-properties-2-1-1,decimal)"."; }
+#thm-dp-properties-2-1-1 > li { counter-increment: thm-dp-properties-2-1-1; }
+#thm-dps-and-homs-2-1-1 { counter-set: thm-dps-and-homs-2-1-1 0; }
+#thm-dps-and-homs-2-1-1 > li::marker { content: ""counter(thm-dps-and-homs-2-1-1,decimal)"."; }
+#thm-dps-and-homs-2-1-1 > li { counter-increment: thm-dps-and-homs-2-1-1; }
+#thm-dp-recognition-3-1-5 { counter-set: thm-dp-recognition-3-1-5 0; }
+#thm-dp-recognition-3-1-5 > li::marker { content: ""counter(thm-dp-recognition-3-1-5,decimal)"."; }
+#thm-dp-recognition-3-1-5 > li { counter-increment: thm-dp-recognition-3-1-5; }
+#thm-sdp-2-2-1 { counter-set: thm-sdp-2-2-1 0; }
+#thm-sdp-2-2-1 > li::marker { content: ""counter(thm-sdp-2-2-1,decimal)"."; }
+#thm-sdp-2-2-1 > li { counter-increment: thm-sdp-2-2-1; }
+#thm-sdp-3-1-1 { counter-set: thm-sdp-3-1-1 0; }
+#thm-sdp-3-1-1 > li::marker { content: ""counter(thm-sdp-3-1-1,decimal)"."; }
+#thm-sdp-3-1-1 > li { counter-increment: thm-sdp-3-1-1; }
+#thm-order-pq-3-2-1 { counter-set: thm-order-pq-3-2-1 0; }
+#thm-order-pq-3-2-1 > li::marker { content: ""counter(thm-order-pq-3-2-1,decimal)"."; }
+#thm-order-pq-3-2-1 > li { counter-increment: thm-order-pq-3-2-1; }
+#thm-ftfgag-4-2-1 { counter-set: thm-ftfgag-4-2-1 0; }
+#thm-ftfgag-4-2-1 > li::marker { content: ""counter(thm-ftfgag-4-2-1,decimal)"."; }
+#thm-ftfgag-4-2-1 > li { counter-increment: thm-ftfgag-4-2-1; }
+#def-ring-2-4-1 { counter-set: def-ring-2-4-1 0; }
+#def-ring-2-4-1 > li::marker { content: ""counter(def-ring-2-4-1,decimal)"."; }
+#def-ring-2-4-1 > li { counter-increment: def-ring-2-4-1; }
+#def-ring-2-6-1 { counter-set: def-ring-2-6-1 0; }
+#def-ring-2-6-1 > li::marker { content: ""counter(def-ring-2-6-1,decimal)"."; }
+#def-ring-2-6-1 > li { counter-increment: def-ring-2-6-1; }
+#def-ring-2-8-1 { counter-set: def-ring-2-8-1 0; }
+#def-ring-2-8-1 > li::marker { content: ""counter(def-ring-2-8-1,decimal)"."; }
+#def-ring-2-8-1 > li { counter-increment: def-ring-2-8-1; }
+#prop-ring-arithmetic-3-2-1 { counter-set: prop-ring-arithmetic-3-2-1 0; }
+#prop-ring-arithmetic-3-2-1 > li::marker { content: ""counter(prop-ring-arithmetic-3-2-1,decimal)"."; }
+#prop-ring-arithmetic-3-2-1 > li { counter-increment: prop-ring-arithmetic-3-2-1; }
+#prop-ring-arithmetic-3-4-1 { counter-set: prop-ring-arithmetic-3-4-1 0; }
+#prop-ring-arithmetic-3-4-1 > li::marker { content: ""counter(prop-ring-arithmetic-3-4-1,decimal)"."; }
+#prop-ring-arithmetic-3-4-1 > li { counter-increment: prop-ring-arithmetic-3-4-1; }
+#prop-ring-arithmetic-4-1-2 { counter-set: prop-ring-arithmetic-4-1-2 0; }
+#prop-ring-arithmetic-4-1-2 > li::marker { content: ""counter(prop-ring-arithmetic-4-1-2,decimal)"."; }
+#prop-ring-arithmetic-4-1-2 > li { counter-increment: prop-ring-arithmetic-4-1-2; }
+#ex-ring-examples-2-1 { counter-set: ex-ring-examples-2-1 0; }
+#ex-ring-examples-2-1 > li::marker { content: ""counter(ex-ring-examples-2-1,decimal)"."; }
+#ex-ring-examples-2-1 > li { counter-increment: ex-ring-examples-2-1; }
+#subsec-rings-12-2-1 { counter-set: subsec-rings-12-2-1 0; }
+#subsec-rings-12-2-1 > li::marker { content: ""counter(subsec-rings-12-2-1,decimal)"."; }
+#subsec-rings-12-2-1 > li { counter-increment: subsec-rings-12-2-1; }
+#lem-subring-test-3-1-3 { counter-set: lem-subring-test-3-1-3 0; }
+#lem-subring-test-3-1-3 > li::marker { content: ""counter(lem-subring-test-3-1-3,decimal)"."; }
+#lem-subring-test-3-1-3 > li { counter-increment: lem-subring-test-3-1-3; }
+#exe-finding-subring-counterexamples-2-4 { counter-set: exe-finding-subring-counterexamples-2-4 0; }
+#exe-finding-subring-counterexamples-2-4 > li::marker { content: ""counter(exe-finding-subring-counterexamples-2-4,decimal)"."; }
+#exe-finding-subring-counterexamples-2-4 > li { counter-increment: exe-finding-subring-counterexamples-2-4; }
+#exe-gaussian-units-2-1-3 { counter-set: exe-gaussian-units-2-1-3 0; }
+#exe-gaussian-units-2-1-3 > li::marker { content: ""counter(exe-gaussian-units-2-1-3,decimal)"."; }
+#exe-gaussian-units-2-1-3 > li { counter-increment: exe-gaussian-units-2-1-3; }
+#exe-gaussian-units-3-1-1 { counter-set: exe-gaussian-units-3-1-1 0; }
+#exe-gaussian-units-3-1-1 > li::marker { content: ""counter(exe-gaussian-units-3-1-1,decimal)"."; }
+#exe-gaussian-units-3-1-1 > li { counter-increment: exe-gaussian-units-3-1-1; }
+#integral-domains-and-fields-2-1-1 { counter-set: integral-domains-and-fields-2-1-1 0; }
+#integral-domains-and-fields-2-1-1 > li::marker { content: ""counter(integral-domains-and-fields-2-1-1,decimal)"."; }
+#integral-domains-and-fields-2-1-1 > li { counter-increment: integral-domains-and-fields-2-1-1; }
+#integral-domains-and-fields-3-1-1 { counter-set: integral-domains-and-fields-3-1-1 0; }
+#integral-domains-and-fields-3-1-1 > li::marker { content: ""counter(integral-domains-and-fields-3-1-1,decimal)"."; }
+#integral-domains-and-fields-3-1-1 > li { counter-increment: integral-domains-and-fields-3-1-1; }
+#exe-neither-zerodivisor-nor-unit-2-1 { counter-set: exe-neither-zerodivisor-nor-unit-2-1 0; }
+#exe-neither-zerodivisor-nor-unit-2-1 > li::marker { content: ""counter(exe-neither-zerodivisor-nor-unit-2-1,decimal)"."; }
+#exe-neither-zerodivisor-nor-unit-2-1 > li { counter-increment: exe-neither-zerodivisor-nor-unit-2-1; }
+#subsec-zerodivisors-21-2-2 { counter-set: subsec-zerodivisors-21-2-2 0; }
+#subsec-zerodivisors-21-2-2 > li::marker { content: ""counter(subsec-zerodivisors-21-2-2,decimal)"."; }
+#subsec-zerodivisors-21-2-2 > li { counter-increment: subsec-zerodivisors-21-2-2; }
+#def-ring-homomorphism-2-1-7 { counter-set: def-ring-homomorphism-2-1-7 0; }
+#def-ring-homomorphism-2-1-7 > li::marker { content: ""counter(def-ring-homomorphism-2-1-7,decimal)"."; }
+#def-ring-homomorphism-2-1-7 > li { counter-increment: def-ring-homomorphism-2-1-7; }
+#prop-ring-isomorphism-invariants-2-1-1 { counter-set: prop-ring-isomorphism-invariants-2-1-1 0; }
+#prop-ring-isomorphism-invariants-2-1-1 > li::marker { content: ""counter(prop-ring-isomorphism-invariants-2-1-1,decimal)"."; }
+#prop-ring-isomorphism-invariants-2-1-1 > li { counter-increment: prop-ring-isomorphism-invariants-2-1-1; }
+#exe-ring-homomorphisms-examples-2-1 { counter-set: exe-ring-homomorphisms-examples-2-1 0; }
+#exe-ring-homomorphisms-examples-2-1 > li::marker { content: ""counter(exe-ring-homomorphisms-examples-2-1,decimal)"."; }
+#exe-ring-homomorphisms-examples-2-1 > li { counter-increment: exe-ring-homomorphisms-examples-2-1; }
+#lem-ring-homomorphism-properties-2-1-2 { counter-set: lem-ring-homomorphism-properties-2-1-2 0; }
+#lem-ring-homomorphism-properties-2-1-2 > li::marker { content: ""counter(lem-ring-homomorphism-properties-2-1-2,decimal)"."; }
+#lem-ring-homomorphism-properties-2-1-2 > li { counter-increment: lem-ring-homomorphism-properties-2-1-2; }
+#lem-ring-homomorphism-properties-3-1-1 { counter-set: lem-ring-homomorphism-properties-3-1-1 0; }
+#lem-ring-homomorphism-properties-3-1-1 > li::marker { content: ""counter(lem-ring-homomorphism-properties-3-1-1,decimal)"."; }
+#lem-ring-homomorphism-properties-3-1-1 > li { counter-increment: lem-ring-homomorphism-properties-3-1-1; }
+#sec-ring-hom-11-2-4 { counter-set: sec-ring-hom-11-2-4 0; }
+#sec-ring-hom-11-2-4 > li::marker { content: ""counter(sec-ring-hom-11-2-4,decimal)"."; }
+#sec-ring-hom-11-2-4 > li { counter-increment: sec-ring-hom-11-2-4; }
+#prop-polynomials-domains-degrees-units-2-1-2 { counter-set: prop-polynomials-domains-degrees-units-2-1-2 0; }
+#prop-polynomials-domains-degrees-units-2-1-2 > li::marker { content: ""counter(prop-polynomials-domains-degrees-units-2-1-2,decimal)"."; }
+#prop-polynomials-domains-degrees-units-2-1-2 > li { counter-increment: prop-polynomials-domains-degrees-units-2-1-2; }
+#def-ideal-2-1-6 { counter-set: def-ideal-2-1-6 0; }
+#def-ideal-2-1-6 > li::marker { content: ""counter(def-ideal-2-1-6,decimal)"."; }
+#def-ideal-2-1-6 > li { counter-increment: def-ideal-2-1-6; }
+#thm-properties-of-ideals-2-1-4 { counter-set: thm-properties-of-ideals-2-1-4 0; }
+#thm-properties-of-ideals-2-1-4 > li::marker { content: ""counter(thm-properties-of-ideals-2-1-4,decimal)"."; }
+#thm-properties-of-ideals-2-1-4 > li { counter-increment: thm-properties-of-ideals-2-1-4; }
+#thm-homomorphisms-and-ideals-2-1-2 { counter-set: thm-homomorphisms-and-ideals-2-1-2 0; }
+#thm-homomorphisms-and-ideals-2-1-2 > li::marker { content: ""counter(thm-homomorphisms-and-ideals-2-1-2,decimal)"."; }
+#thm-homomorphisms-and-ideals-2-1-2 > li { counter-increment: thm-homomorphisms-and-ideals-2-1-2; }
+#thm-homomorphisms-and-ideals-3-1-1 { counter-set: thm-homomorphisms-and-ideals-3-1-1 0; }
+#thm-homomorphisms-and-ideals-3-1-1 > li::marker { content: ""counter(thm-homomorphisms-and-ideals-3-1-1,decimal)"."; }
+#thm-homomorphisms-and-ideals-3-1-1 > li { counter-increment: thm-homomorphisms-and-ideals-3-1-1; }
+#subsec-generated-ideals-9-2-2 { counter-set: subsec-generated-ideals-9-2-2 0; }
+#subsec-generated-ideals-9-2-2 > li::marker { content: ""counter(subsec-generated-ideals-9-2-2,decimal)"."; }
+#subsec-generated-ideals-9-2-2 > li { counter-increment: subsec-generated-ideals-9-2-2; }
+#thm-primes-and-maps-2-1-1 { counter-set: thm-primes-and-maps-2-1-1 0; }
+#thm-primes-and-maps-2-1-1 > li::marker { content: ""counter(thm-primes-and-maps-2-1-1,decimal)"."; }
+#thm-primes-and-maps-2-1-1 > li { counter-increment: thm-primes-and-maps-2-1-1; }
+#def-ed-gcd-2-1-9 { counter-set: def-ed-gcd-2-1-9 0; }
+#def-ed-gcd-2-1-9 > li::marker { content: ""counter(def-ed-gcd-2-1-9,decimal)"."; }
+#def-ed-gcd-2-1-9 > li { counter-increment: def-ed-gcd-2-1-9; }
+#prop-gcds-and-units-in-pids-2-1-3 { counter-set: prop-gcds-and-units-in-pids-2-1-3 0; }
+#prop-gcds-and-units-in-pids-2-1-3 > li::marker { content: ""counter(prop-gcds-and-units-in-pids-2-1-3,decimal)"."; }
+#prop-gcds-and-units-in-pids-2-1-3 > li { counter-increment: prop-gcds-and-units-in-pids-2-1-3; }
+#ex-prime-and-irreducible-elements-2-1 { counter-set: ex-prime-and-irreducible-elements-2-1 0; }
+#ex-prime-and-irreducible-elements-2-1 > li::marker { content: ""counter(ex-prime-and-irreducible-elements-2-1,decimal)"."; }
+#ex-prime-and-irreducible-elements-2-1 > li { counter-increment: ex-prime-and-irreducible-elements-2-1; }
+#thm-irreducible-is-prime-in-pid-2-1-3 { counter-set: thm-irreducible-is-prime-in-pid-2-1-3 0; }
+#thm-irreducible-is-prime-in-pid-2-1-3 > li::marker { content: ""counter(thm-irreducible-is-prime-in-pid-2-1-3,decimal)"."; }
+#thm-irreducible-is-prime-in-pid-2-1-3 > li { counter-increment: thm-irreducible-is-prime-in-pid-2-1-3; }
+#ex-ufd-exs-2-1 { counter-set: ex-ufd-exs-2-1 0; }
+#ex-ufd-exs-2-1 > li::marker { content: ""counter(ex-ufd-exs-2-1,decimal)"."; }
+#ex-ufd-exs-2-1 > li { counter-increment: ex-ufd-exs-2-1; }
+#def-multiplicatively-closed-2-1-3 { counter-set: def-multiplicatively-closed-2-1-3 0; }
+#def-multiplicatively-closed-2-1-3 > li::marker { content: ""counter(def-multiplicatively-closed-2-1-3,decimal)"."; }
+#def-multiplicatively-closed-2-1-3 > li { counter-increment: def-multiplicatively-closed-2-1-3; }
+#sec-field-of-fractions-7-2-1 { counter-set: sec-field-of-fractions-7-2-1 0; }
+#sec-field-of-fractions-7-2-1 > li::marker { content: ""counter(sec-field-of-fractions-7-2-1,decimal)"."; }
+#sec-field-of-fractions-7-2-1 > li { counter-increment: sec-field-of-fractions-7-2-1; }
+#def-module-2-2-1-9 { counter-set: def-module-2-2-1-9 0; }
+#def-module-2-2-1-9 > li::marker { content: ""counter(def-module-2-2-1-9,decimal)"."; }
+#def-module-2-2-1-9 > li { counter-increment: def-module-2-2-1-9; }
+#def-module-2-2-2-9 { counter-set: def-module-2-2-2-9 0; }
+#def-module-2-2-2-9 > li::marker { content: ""counter(def-module-2-2-2-9,decimal)"."; }
+#def-module-2-2-2-9 > li { counter-increment: def-module-2-2-2-9; }
+#lem-module-arithmetic-2-1-6 { counter-set: lem-module-arithmetic-2-1-6 0; }
+#lem-module-arithmetic-2-1-6 > li::marker { content: ""counter(lem-module-arithmetic-2-1-6,decimal)"."; }
+#lem-module-arithmetic-2-1-6 > li { counter-increment: lem-module-arithmetic-2-1-6; }
+#lem-module-arithmetic-3-1-1 { counter-set: lem-module-arithmetic-3-1-1 0; }
+#lem-module-arithmetic-3-1-1 > li::marker { content: ""counter(lem-module-arithmetic-3-1-1,decimal)"."; }
+#lem-module-arithmetic-3-1-1 > li { counter-increment: lem-module-arithmetic-3-1-1; }
+#ex-modules-2-1 { counter-set: ex-modules-2-1 0; }
+#ex-modules-2-1 > li::marker { content: ""counter(ex-modules-2-1,decimal)"."; }
+#ex-modules-2-1 > li { counter-increment: ex-modules-2-1; }
+#thm-mod-closure-2-1-6 { counter-set: thm-mod-closure-2-1-6 0; }
+#thm-mod-closure-2-1-6 > li::marker { content: ""counter(thm-mod-closure-2-1-6,decimal)"."; }
+#thm-mod-closure-2-1-6 > li { counter-increment: thm-mod-closure-2-1-6; }
+#exe-zn-modules-2-1-5 { counter-set: exe-zn-modules-2-1-5 0; }
+#exe-zn-modules-2-1-5 > li::marker { content: ""counter(exe-zn-modules-2-1-5,decimal)"."; }
+#exe-zn-modules-2-1-5 > li { counter-increment: exe-zn-modules-2-1-5; }
+#def-submodule-2-1-7 { counter-set: def-submodule-2-1-7 0; }
+#def-submodule-2-1-7 > li::marker { content: ""counter(def-submodule-2-1-7,decimal)"."; }
+#def-submodule-2-1-7 > li { counter-increment: def-submodule-2-1-7; }
+#subsec-modules-18-2-1-1 { counter-set: subsec-modules-18-2-1-1 0; }
+#subsec-modules-18-2-1-1 > li::marker { content: ""counter(subsec-modules-18-2-1-1,decimal)"."; }
+#subsec-modules-18-2-1-1 > li { counter-increment: subsec-modules-18-2-1-1; }
+#exe-submod-zorn-2-1-6 { counter-set: exe-submod-zorn-2-1-6 0; }
+#exe-submod-zorn-2-1-6 > li::marker { content: ""counter(exe-submod-zorn-2-1-6,decimal)"."; }
+#exe-submod-zorn-2-1-6 > li { counter-increment: exe-submod-zorn-2-1-6; }
+#subsec-restriction-10-2-1-1 { counter-set: subsec-restriction-10-2-1-1 0; }
+#subsec-restriction-10-2-1-1 > li::marker { content: ""counter(subsec-restriction-10-2-1-1,decimal)"."; }
+#subsec-restriction-10-2-1-1 > li { counter-increment: subsec-restriction-10-2-1-1; }
+#def-module-homomorphism-2-1-14 { counter-set: def-module-homomorphism-2-1-14 0; }
+#def-module-homomorphism-2-1-14 > li::marker { content: ""counter(def-module-homomorphism-2-1-14,decimal)"."; }
+#def-module-homomorphism-2-1-14 > li { counter-increment: def-module-homomorphism-2-1-14; }
+#subsec-hom-iso-6-2-1-1 { counter-set: subsec-hom-iso-6-2-1-1 0; }
+#subsec-hom-iso-6-2-1-1 > li::marker { content: ""counter(subsec-hom-iso-6-2-1-1,decimal)"."; }
+#subsec-hom-iso-6-2-1-1 > li { counter-increment: subsec-hom-iso-6-2-1-1; }
+#subsec-hom-iso-6-3-1-1 { counter-set: subsec-hom-iso-6-3-1-1 0; }
+#subsec-hom-iso-6-3-1-1 > li::marker { content: ""counter(subsec-hom-iso-6-3-1-1,decimal)"."; }
+#subsec-hom-iso-6-3-1-1 > li { counter-increment: subsec-hom-iso-6-3-1-1; }
+#prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4 { counter-set: prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4 0; }
+#prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4 > li::marker { content: ""counter(prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4,decimal)"."; }
+#prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4 > li { counter-increment: prop-kernels-and-images-of-homomorphisms-are-submodule-2-1-4; }
+#prop-hom-module-2-1-7 { counter-set: prop-hom-module-2-1-7 0; }
+#prop-hom-module-2-1-7 > li::marker { content: ""counter(prop-hom-module-2-1-7,decimal)"."; }
+#prop-hom-module-2-1-7 > li { counter-increment: prop-hom-module-2-1-7; }
+#def-quotient-module-2-1-13 { counter-set: def-quotient-module-2-1-13 0; }
+#def-quotient-module-2-1-13 > li::marker { content: ""counter(def-quotient-module-2-1-13,decimal)"."; }
+#def-quotient-module-2-1-13 > li { counter-increment: def-quotient-module-2-1-13; }
+#prop-quotient-map-is-r-module-homomorphism-2-1-6 { counter-set: prop-quotient-map-is-r-module-homomorphism-2-1-6 0; }
+#prop-quotient-map-is-r-module-homomorphism-2-1-6 > li::marker { content: ""counter(prop-quotient-map-is-r-module-homomorphism-2-1-6,decimal)"."; }
+#prop-quotient-map-is-r-module-homomorphism-2-1-6 > li { counter-increment: prop-quotient-map-is-r-module-homomorphism-2-1-6; }
+#thm-module-isomorphism-thms-2-1-4 { counter-set: thm-module-isomorphism-thms-2-1-4 0; }
+#thm-module-isomorphism-thms-2-1-4 > li::marker { content: ""counter(thm-module-isomorphism-thms-2-1-4,decimal)"."; }
+#thm-module-isomorphism-thms-2-1-4 > li { counter-increment: thm-module-isomorphism-thms-2-1-4; }
+#thm-module-isomorphism-thms-3-2-1 { counter-set: thm-module-isomorphism-thms-3-2-1 0; }
+#thm-module-isomorphism-thms-3-2-1 > li::marker { content: ""counter(thm-module-isomorphism-thms-3-2-1,decimal)"."; }
+#thm-module-isomorphism-thms-3-2-1 > li { counter-increment: thm-module-isomorphism-thms-3-2-1; }
+#ex-cyclic-modules-2-1-1 { counter-set: ex-cyclic-modules-2-1-1 0; }
+#ex-cyclic-modules-2-1-1 > li::marker { content: ""counter(ex-cyclic-modules-2-1-1,decimal)"."; }
+#ex-cyclic-modules-2-1-1 > li { counter-increment: ex-cyclic-modules-2-1-1; }
+#lem-fg-quotient-mod-2-1-8 { counter-set: lem-fg-quotient-mod-2-1-8 0; }
+#lem-fg-quotient-mod-2-1-8 > li::marker { content: ""counter(lem-fg-quotient-mod-2-1-8,decimal)"."; }
+#lem-fg-quotient-mod-2-1-8 > li { counter-increment: lem-fg-quotient-mod-2-1-8; }
+#lem-fg-quotient-mod-3-1-1 { counter-set: lem-fg-quotient-mod-3-1-1 0; }
+#lem-fg-quotient-mod-3-1-1 > li::marker { content: ""counter(lem-fg-quotient-mod-3-1-1,decimal)"."; }
+#lem-fg-quotient-mod-3-1-1 > li { counter-increment: lem-fg-quotient-mod-3-1-1; }
+#exe-maximal-linearly-independent-2-2-1 { counter-set: exe-maximal-linearly-independent-2-2-1 0; }
+#exe-maximal-linearly-independent-2-2-1 > li::marker { content: ""counter(exe-maximal-linearly-independent-2-2-1,decimal)"."; }
+#exe-maximal-linearly-independent-2-2-1 > li { counter-increment: exe-maximal-linearly-independent-2-2-1; }
+#exe-maximal-linearly-independent-3-1-1 { counter-set: exe-maximal-linearly-independent-3-1-1 0; }
+#exe-maximal-linearly-independent-3-1-1 > li::marker { content: ""counter(exe-maximal-linearly-independent-3-1-1,decimal)"."; }
+#exe-maximal-linearly-independent-3-1-1 > li { counter-increment: exe-maximal-linearly-independent-3-1-1; }
+#ex-free-modules-2-1 { counter-set: ex-free-modules-2-1 0; }
+#ex-free-modules-2-1 > li::marker { content: ""counter(ex-free-modules-2-1,decimal)"."; }
+#ex-free-modules-2-1 > li { counter-increment: ex-free-modules-2-1; }
+#ex-bases-are-not-unique-2-1 { counter-set: ex-bases-are-not-unique-2-1 0; }
+#ex-bases-are-not-unique-2-1 > li::marker { content: ""counter(ex-bases-are-not-unique-2-1,decimal)"."; }
+#ex-bases-are-not-unique-2-1 > li { counter-increment: ex-bases-are-not-unique-2-1; }
+#prop-bases-of-ideals-in-commutative-rings-2-1-1 { counter-set: prop-bases-of-ideals-in-commutative-rings-2-1-1 0; }
+#prop-bases-of-ideals-in-commutative-rings-2-1-1 > li::marker { content: ""counter(prop-bases-of-ideals-in-commutative-rings-2-1-1,decimal)"."; }
+#prop-bases-of-ideals-in-commutative-rings-2-1-1 > li { counter-increment: prop-bases-of-ideals-in-commutative-rings-2-1-1; }
+#cor-every-vector-space-has-a-basis-2-1-1 { counter-set: cor-every-vector-space-has-a-basis-2-1-1 0; }
+#cor-every-vector-space-has-a-basis-2-1-1 > li::marker { content: ""counter(cor-every-vector-space-has-a-basis-2-1-1,decimal)"."; }
+#cor-every-vector-space-has-a-basis-2-1-1 > li { counter-increment: cor-every-vector-space-has-a-basis-2-1-1; }
+#cor-every-vector-space-has-a-basis-3-1-1 { counter-set: cor-every-vector-space-has-a-basis-3-1-1 0; }
+#cor-every-vector-space-has-a-basis-3-1-1 > li::marker { content: ""counter(cor-every-vector-space-has-a-basis-3-1-1,decimal)"."; }
+#cor-every-vector-space-has-a-basis-3-1-1 > li { counter-increment: cor-every-vector-space-has-a-basis-3-1-1; }
+#thm-fg-vs-classification-3-1-2 { counter-set: thm-fg-vs-classification-3-1-2 0; }
+#thm-fg-vs-classification-3-1-2 > li::marker { content: ""counter(thm-fg-vs-classification-3-1-2,decimal)"."; }
+#thm-fg-vs-classification-3-1-2 > li { counter-increment: thm-fg-vs-classification-3-1-2; }
+#thm-fg-vs-classification-4-1-1 { counter-set: thm-fg-vs-classification-4-1-1 0; }
+#thm-fg-vs-classification-4-1-1 > li::marker { content: ""counter(thm-fg-vs-classification-4-1-1,decimal)"."; }
+#thm-fg-vs-classification-4-1-1 > li { counter-increment: thm-fg-vs-classification-4-1-1; }
+#def-elementary-basis-change-operations-2-1-10 { counter-set: def-elementary-basis-change-operations-2-1-10 0; }
+#def-elementary-basis-change-operations-2-1-10 > li::marker { content: ""counter(def-elementary-basis-change-operations-2-1-10,decimal)"."; }
+#def-elementary-basis-change-operations-2-1-10 > li { counter-increment: def-elementary-basis-change-operations-2-1-10; }
+#def-elementary-row-operations-2-1-7 { counter-set: def-elementary-row-operations-2-1-7 0; }
+#def-elementary-row-operations-2-1-7 > li::marker { content: ""counter(def-elementary-row-operations-2-1-7,decimal)"."; }
+#def-elementary-row-operations-2-1-7 > li { counter-increment: def-elementary-row-operations-2-1-7; }
+#def-elementary-matrix-2-1-8 { counter-set: def-elementary-matrix-2-1-8 0; }
+#def-elementary-matrix-2-1-8 > li::marker { content: ""counter(def-elementary-matrix-2-1-8,decimal)"."; }
+#def-elementary-matrix-2-1-8 > li { counter-increment: def-elementary-matrix-2-1-8; }
+#thm-matrices-modules-and-isomorphisms-2-1-10 { counter-set: thm-matrices-modules-and-isomorphisms-2-1-10 0; }
+#thm-matrices-modules-and-isomorphisms-2-1-10 > li::marker { content: ""counter(thm-matrices-modules-and-isomorphisms-2-1-10,decimal)"."; }
+#thm-matrices-modules-and-isomorphisms-2-1-10 > li { counter-increment: thm-matrices-modules-and-isomorphisms-2-1-10; }
+#thm-matrices-modules-and-isomorphisms-3-1-5 { counter-set: thm-matrices-modules-and-isomorphisms-3-1-5 0; }
+#thm-matrices-modules-and-isomorphisms-3-1-5 > li::marker { content: ""counter(thm-matrices-modules-and-isomorphisms-3-1-5,decimal)"."; }
+#thm-matrices-modules-and-isomorphisms-3-1-5 > li { counter-increment: thm-matrices-modules-and-isomorphisms-3-1-5; }
+#lem-noetherian-rings-2-1-2 { counter-set: lem-noetherian-rings-2-1-2 0; }
+#lem-noetherian-rings-2-1-2 > li::marker { content: ""counter(lem-noetherian-rings-2-1-2,decimal)"."; }
+#lem-noetherian-rings-2-1-2 > li { counter-increment: lem-noetherian-rings-2-1-2; }
+#exe-kx-modules-of-dimension-4-3-10 { counter-set: exe-kx-modules-of-dimension-4-3-10 0; }
+#exe-kx-modules-of-dimension-4-3-10 > li::marker { content: ""counter(exe-kx-modules-of-dimension-4-3-10,decimal)"."; }
+#exe-kx-modules-of-dimension-4-3-10 > li { counter-increment: exe-kx-modules-of-dimension-4-3-10; }
+#exe-finding-ifs-and-eds-2-3 { counter-set: exe-finding-ifs-and-eds-2-3 0; }
+#exe-finding-ifs-and-eds-2-3 > li::marker { content: ""counter(exe-finding-ifs-and-eds-2-3,decimal)"."; }
+#exe-finding-ifs-and-eds-2-3 > li { counter-increment: exe-finding-ifs-and-eds-2-3; }
+#thm-cayley-hamilton-2-1-8 { counter-set: thm-cayley-hamilton-2-1-8 0; }
+#thm-cayley-hamilton-2-1-8 > li::marker { content: ""counter(thm-cayley-hamilton-2-1-8,decimal)"."; }
+#thm-cayley-hamilton-2-1-8 > li { counter-increment: thm-cayley-hamilton-2-1-8; }
+#thm-diagonalizable-thm-2-1-4 { counter-set: thm-diagonalizable-thm-2-1-4 0; }
+#thm-diagonalizable-thm-2-1-4 > li::marker { content: ""counter(thm-diagonalizable-thm-2-1-4,decimal)"."; }
+#thm-diagonalizable-thm-2-1-4 > li { counter-increment: thm-diagonalizable-thm-2-1-4; }
+#thm-degree-and-irreducibility-1-1-3 { counter-set: thm-degree-and-irreducibility-1-1-3 0; }
+#thm-degree-and-irreducibility-1-1-3 > li::marker { content: ""counter(thm-degree-and-irreducibility-1-1-3,decimal)"."; }
+#thm-degree-and-irreducibility-1-1-3 > li { counter-increment: thm-degree-and-irreducibility-1-1-3; }
+#thm-properties-of-extension-degrees-2-1-7 { counter-set: thm-properties-of-extension-degrees-2-1-7 0; }
+#thm-properties-of-extension-degrees-2-1-7 > li::marker { content: ""counter(thm-properties-of-extension-degrees-2-1-7,decimal)"."; }
+#thm-properties-of-extension-degrees-2-1-7 > li { counter-increment: thm-properties-of-extension-degrees-2-1-7; }
+#thm-properties-of-algebraic-elements-2-1-5 { counter-set: thm-properties-of-algebraic-elements-2-1-5 0; }
+#thm-properties-of-algebraic-elements-2-1-5 > li::marker { content: ""counter(thm-properties-of-algebraic-elements-2-1-5,decimal)"."; }
+#thm-properties-of-algebraic-elements-2-1-5 > li { counter-increment: thm-properties-of-algebraic-elements-2-1-5; }
+#thm-properties-of-algebraic-elements-3-4-1 { counter-set: thm-properties-of-algebraic-elements-3-4-1 0; }
+#thm-properties-of-algebraic-elements-3-4-1 > li::marker { content: ""counter(thm-properties-of-algebraic-elements-3-4-1,decimal)"."; }
+#thm-properties-of-algebraic-elements-3-4-1 > li { counter-increment: thm-properties-of-algebraic-elements-3-4-1; }
+#thm-degree-formula-4-1-10 { counter-set: thm-degree-formula-4-1-10 0; }
+#thm-degree-formula-4-1-10 > li::marker { content: ""counter(thm-degree-formula-4-1-10,decimal)"."; }
+#thm-degree-formula-4-1-10 > li { counter-increment: thm-degree-formula-4-1-10; }
+#thm-algebraic-extensions-are-transitive-2-2-1 { counter-set: thm-algebraic-extensions-are-transitive-2-2-1 0; }
+#thm-algebraic-extensions-are-transitive-2-2-1 > li::marker { content: ""counter(thm-algebraic-extensions-are-transitive-2-2-1,decimal)"."; }
+#thm-algebraic-extensions-are-transitive-2-2-1 > li { counter-increment: thm-algebraic-extensions-are-transitive-2-2-1; }
+#prop-equivalencies-of-algebraically-closed-2-1-2 { counter-set: prop-equivalencies-of-algebraically-closed-2-1-2 0; }
+#prop-equivalencies-of-algebraically-closed-2-1-2 > li::marker { content: ""counter(prop-equivalencies-of-algebraically-closed-2-1-2,decimal)"."; }
+#prop-equivalencies-of-algebraically-closed-2-1-2 > li { counter-increment: prop-equivalencies-of-algebraically-closed-2-1-2; }
+#prop-equivalencies-of-algebraically-closed-3-1-1 { counter-set: prop-equivalencies-of-algebraically-closed-3-1-1 0; }
+#prop-equivalencies-of-algebraically-closed-3-1-1 > li::marker { content: ""counter(prop-equivalencies-of-algebraically-closed-3-1-1,decimal)"."; }
+#prop-equivalencies-of-algebraically-closed-3-1-1 > li { counter-increment: prop-equivalencies-of-algebraically-closed-3-1-1; }
+#def-splitting-field-2-1-7 { counter-set: def-splitting-field-2-1-7 0; }
+#def-splitting-field-2-1-7 > li::marker { content: ""counter(def-splitting-field-2-1-7,decimal)"."; }
+#def-splitting-field-2-1-7 > li { counter-increment: def-splitting-field-2-1-7; }
+#thm-properties-of-splitting-fields-2-1-3 { counter-set: thm-properties-of-splitting-fields-2-1-3 0; }
+#thm-properties-of-splitting-fields-2-1-3 > li::marker { content: ""counter(thm-properties-of-splitting-fields-2-1-3,decimal)"."; }
+#thm-properties-of-splitting-fields-2-1-3 > li { counter-increment: thm-properties-of-splitting-fields-2-1-3; }
+#prop-characteristic-and-prime-fields-2-1-2 { counter-set: prop-characteristic-and-prime-fields-2-1-2 0; }
+#prop-characteristic-and-prime-fields-2-1-2 > li::marker { content: ""counter(prop-characteristic-and-prime-fields-2-1-2,decimal)"."; }
+#prop-characteristic-and-prime-fields-2-1-2 > li { counter-increment: prop-characteristic-and-prime-fields-2-1-2; }
+#lem-gcd-and-field-extensions-2-1-8 { counter-set: lem-gcd-and-field-extensions-2-1-8 0; }
+#lem-gcd-and-field-extensions-2-1-8 > li::marker { content: ""counter(lem-gcd-and-field-extensions-2-1-8,decimal)"."; }
+#lem-gcd-and-field-extensions-2-1-8 > li { counter-increment: lem-gcd-and-field-extensions-2-1-8; }
+#lem-gcd-and-field-extensions-3-2-1 { counter-set: lem-gcd-and-field-extensions-3-2-1 0; }
+#lem-gcd-and-field-extensions-3-2-1 > li::marker { content: ""counter(lem-gcd-and-field-extensions-3-2-1,decimal)"."; }
+#lem-gcd-and-field-extensions-3-2-1 > li { counter-increment: lem-gcd-and-field-extensions-3-2-1; }
+#prop-criteria-for-separability-2-1-4 { counter-set: prop-criteria-for-separability-2-1-4 0; }
+#prop-criteria-for-separability-2-1-4 > li::marker { content: ""counter(prop-criteria-for-separability-2-1-4,decimal)"."; }
+#prop-criteria-for-separability-2-1-4 > li { counter-increment: prop-criteria-for-separability-2-1-4; }
+#lem-root-perm-2-1-4 { counter-set: lem-root-perm-2-1-4 0; }
+#lem-root-perm-2-1-4 > li::marker { content: ""counter(lem-root-perm-2-1-4,decimal)"."; }
+#lem-root-perm-2-1-4 > li { counter-increment: lem-root-perm-2-1-4; }
+#lem-root-perm-3-1-10 { counter-set: lem-root-perm-3-1-10 0; }
+#lem-root-perm-3-1-10 > li::marker { content: ""counter(lem-root-perm-3-1-10,decimal)"."; }
+#lem-root-perm-3-1-10 > li { counter-increment: lem-root-perm-3-1-10; }
+#thm-field-aut-action-2-1-7 { counter-set: thm-field-aut-action-2-1-7 0; }
+#thm-field-aut-action-2-1-7 > li::marker { content: ""counter(thm-field-aut-action-2-1-7,decimal)"."; }
+#thm-field-aut-action-2-1-7 > li { counter-increment: thm-field-aut-action-2-1-7; }
+#thm-field-aut-action-3-1-1 { counter-set: thm-field-aut-action-3-1-1 0; }
+#thm-field-aut-action-3-1-1 > li::marker { content: ""counter(thm-field-aut-action-3-1-1,decimal)"."; }
+#thm-field-aut-action-3-1-1 > li { counter-increment: thm-field-aut-action-3-1-1; }
+#thm-ftgt-5-1-6 { counter-set: thm-ftgt-5-1-6 0; }
+#thm-ftgt-5-1-6 > li::marker { content: ""counter(thm-ftgt-5-1-6,decimal)"."; }
+#thm-ftgt-5-1-6 > li { counter-increment: thm-ftgt-5-1-6; }
+#thm-ftgt-6-3-3 { counter-set: thm-ftgt-6-3-3 0; }
+#thm-ftgt-6-3-3 > li::marker { content: ""counter(thm-ftgt-6-3-3,decimal)"."; }
+#thm-ftgt-6-3-3 > li { counter-increment: thm-ftgt-6-3-3; }
+#exe-finding-unique-intermediate-field-2-2-10 { counter-set: exe-finding-unique-intermediate-field-2-2-10 0; }
+#exe-finding-unique-intermediate-field-2-2-10 > li::marker { content: ""counter(exe-finding-unique-intermediate-field-2-2-10,decimal)"."; }
+#exe-finding-unique-intermediate-field-2-2-10 > li { counter-increment: exe-finding-unique-intermediate-field-2-2-10; }
+#def-subset-2-1-3 { counter-set: def-subset-2-1-3 0; }
+#def-subset-2-1-3 > li::marker { content: ""counter(def-subset-2-1-3,decimal)"."; }
+#def-subset-2-1-3 > li { counter-increment: def-subset-2-1-3; }
+#def-jectivity-2-1-2 { counter-set: def-jectivity-2-1-2 0; }
+#def-jectivity-2-1-2 > li::marker { content: ""counter(def-jectivity-2-1-2,decimal)"."; }
+#def-jectivity-2-1-2 > li { counter-increment: def-jectivity-2-1-2; }
+#thm-compositions-and-jectivity-2-1-4 { counter-set: thm-compositions-and-jectivity-2-1-4 0; }
+#thm-compositions-and-jectivity-2-1-4 > li::marker { content: ""counter(thm-compositions-and-jectivity-2-1-4,decimal)"."; }
+#thm-compositions-and-jectivity-2-1-4 > li { counter-increment: thm-compositions-and-jectivity-2-1-4; }
+#def-image-preimage-2-1-2 { counter-set: def-image-preimage-2-1-2 0; }
+#def-image-preimage-2-1-2 > li::marker { content: ""counter(def-image-preimage-2-1-2,decimal)"."; }
+#def-image-preimage-2-1-2 > li { counter-increment: def-image-preimage-2-1-2; }
+#thm-pan-3-1-4 { counter-set: thm-pan-3-1-4 0; }
+#thm-pan-3-1-4 > li::marker { content: ""counter(thm-pan-3-1-4,decimal)"."; }
+#thm-pan-3-1-4 > li { counter-increment: thm-pan-3-1-4; }
+#thm-iasn-3-1-4 { counter-set: thm-iasn-3-1-4 0; }
+#thm-iasn-3-1-4 > li::marker { content: ""counter(thm-iasn-3-1-4,decimal)"."; }
+#thm-iasn-3-1-4 > li { counter-increment: thm-iasn-3-1-4; }
+#subsec-functions-13-2-1-2 { counter-set: subsec-functions-13-2-1-2 0; }
+#subsec-functions-13-2-1-2 > li::marker { content: ""counter(subsec-functions-13-2-1-2,decimal)"."; }
+#subsec-functions-13-2-1-2 > li { counter-increment: subsec-functions-13-2-1-2; }
+#thm-proj-sur-incl-inj-2-1-1 { counter-set: thm-proj-sur-incl-inj-2-1-1 0; }
+#thm-proj-sur-incl-inj-2-1-1 > li::marker { content: ""counter(thm-proj-sur-incl-inj-2-1-1,decimal)"."; }
+#thm-proj-sur-incl-inj-2-1-1 > li { counter-increment: thm-proj-sur-incl-inj-2-1-1; }
+#def-equivalence-relation-3-1-9 { counter-set: def-equivalence-relation-3-1-9 0; }
+#def-equivalence-relation-3-1-9 > li::marker { content: ""counter(def-equivalence-relation-3-1-9,decimal)"."; }
+#def-equivalence-relation-3-1-9 > li { counter-increment: def-equivalence-relation-3-1-9; }
+#thm-equiv-partition-2-1-2 { counter-set: thm-equiv-partition-2-1-2 0; }
+#thm-equiv-partition-2-1-2 > li::marker { content: ""counter(thm-equiv-partition-2-1-2,decimal)"."; }
+#thm-equiv-partition-2-1-2 > li { counter-increment: thm-equiv-partition-2-1-2; }
+#thm-cardinality-equivalencies-1-1-2 { counter-set: thm-cardinality-equivalencies-1-1-2 0; }
+#thm-cardinality-equivalencies-1-1-2 > li::marker { content: ""counter(thm-cardinality-equivalencies-1-1-2,decimal)"."; }
+#thm-cardinality-equivalencies-1-1-2 > li { counter-increment: thm-cardinality-equivalencies-1-1-2; }
+#thm-cardinality-equivalencies-1-1-2-1-1-1 { counter-set: thm-cardinality-equivalencies-1-1-2-1-1-1 0; }
+#thm-cardinality-equivalencies-1-1-2-1-1-1 > li::marker { content: "("counter(thm-cardinality-equivalencies-1-1-2-1-1-1,lower-alpha)")"; }
+#thm-cardinality-equivalencies-1-1-2-1-1-1 > li { counter-increment: thm-cardinality-equivalencies-1-1-2-1-1-1; }
+#thm-cardinality-equivalencies-1-1-2-2-1-1 { counter-set: thm-cardinality-equivalencies-1-1-2-2-1-1 0; }
+#thm-cardinality-equivalencies-1-1-2-2-1-1 > li::marker { content: "("counter(thm-cardinality-equivalencies-1-1-2-2-1-1,lower-alpha)")"; }
+#thm-cardinality-equivalencies-1-1-2-2-1-1 > li { counter-increment: thm-cardinality-equivalencies-1-1-2-2-1-1; }
+#thm-cardinality-equivalencies-1-1-2-3-1-1 { counter-set: thm-cardinality-equivalencies-1-1-2-3-1-1 0; }
+#thm-cardinality-equivalencies-1-1-2-3-1-1 > li::marker { content: "("counter(thm-cardinality-equivalencies-1-1-2-3-1-1,lower-alpha)")"; }
+#thm-cardinality-equivalencies-1-1-2-3-1-1 > li { counter-increment: thm-cardinality-equivalencies-1-1-2-3-1-1; }
+#thm-cardinality-closures-1-1-1 { counter-set: thm-cardinality-closures-1-1-1 0; }
+#thm-cardinality-closures-1-1-1 > li::marker { content: ""counter(thm-cardinality-closures-1-1-1,decimal)"."; }
+#thm-cardinality-closures-1-1-1 > li { counter-increment: thm-cardinality-closures-1-1-1; }
+#subsec-sn-conj-4-1-2 { counter-set: subsec-sn-conj-4-1-2 0; }
+#subsec-sn-conj-4-1-2 > li::marker { content: ""counter(subsec-sn-conj-4-1-2,decimal)"."; }
+#subsec-sn-conj-4-1-2 > li { counter-increment: subsec-sn-conj-4-1-2; }
+#sec-gtp-2-3-2-2-1 { counter-set: sec-gtp-2-3-2-2-1 0; }
+#sec-gtp-2-3-2-2-1 > li::marker { content: ""counter(sec-gtp-2-3-2-2-1,decimal)"."; }
+#sec-gtp-2-3-2-2-1 > li { counter-increment: sec-gtp-2-3-2-2-1; }
+#sec-gtp-2-3-3-2-1 { counter-set: sec-gtp-2-3-3-2-1 0; }
+#sec-gtp-2-3-3-2-1 > li::marker { content: ""counter(sec-gtp-2-3-3-2-1,decimal)"."; }
+#sec-gtp-2-3-3-2-1 > li { counter-increment: sec-gtp-2-3-3-2-1; }
+#sec-gtp-2-4-2-1-7 { counter-set: sec-gtp-2-4-2-1-7 0; }
+#sec-gtp-2-4-2-1-7 > li::marker { content: ""counter(sec-gtp-2-4-2-1-7,decimal)"."; }
+#sec-gtp-2-4-2-1-7 > li { counter-increment: sec-gtp-2-4-2-1-7; }
+#sec-gtp-2-4-3-2-1 { counter-set: sec-gtp-2-4-3-2-1 0; }
+#sec-gtp-2-4-3-2-1 > li::marker { content: ""counter(sec-gtp-2-4-3-2-1,decimal)"."; }
+#sec-gtp-2-4-3-2-1 > li { counter-increment: sec-gtp-2-4-3-2-1; }
+#sec-gtp-2-6-2-1-1 { counter-set: sec-gtp-2-6-2-1-1 0; }
+#sec-gtp-2-6-2-1-1 > li::marker { content: ""counter(sec-gtp-2-6-2-1-1,decimal)"."; }
+#sec-gtp-2-6-2-1-1 > li { counter-increment: sec-gtp-2-6-2-1-1; }
+#sec-gtp-2-6-3-1-1 { counter-set: sec-gtp-2-6-3-1-1 0; }
+#sec-gtp-2-6-3-1-1 > li::marker { content: ""counter(sec-gtp-2-6-3-1-1,decimal)"."; }
+#sec-gtp-2-6-3-1-1 > li { counter-increment: sec-gtp-2-6-3-1-1; }
+#sec-gtp-2-10-2-1-6 { counter-set: sec-gtp-2-10-2-1-6 0; }
+#sec-gtp-2-10-2-1-6 > li::marker { content: ""counter(sec-gtp-2-10-2-1-6,decimal)"."; }
+#sec-gtp-2-10-2-1-6 > li { counter-increment: sec-gtp-2-10-2-1-6; }
+#sec-gtp-2-10-4-1-6 { counter-set: sec-gtp-2-10-4-1-6 0; }
+#sec-gtp-2-10-4-1-6 > li::marker { content: ""counter(sec-gtp-2-10-4-1-6,decimal)"."; }
+#sec-gtp-2-10-4-1-6 > li { counter-increment: sec-gtp-2-10-4-1-6; }
+#sec-gtp-2-12-2-1-3 { counter-set: sec-gtp-2-12-2-1-3 0; }
+#sec-gtp-2-12-2-1-3 > li::marker { content: ""counter(sec-gtp-2-12-2-1-3,decimal)"."; }
+#sec-gtp-2-12-2-1-3 > li { counter-increment: sec-gtp-2-12-2-1-3; }
+#sec-gtp-2-12-3-1-1 { counter-set: sec-gtp-2-12-3-1-1 0; }
+#sec-gtp-2-12-3-1-1 > li::marker { content: ""counter(sec-gtp-2-12-3-1-1,decimal)"."; }
+#sec-gtp-2-12-3-1-1 > li { counter-increment: sec-gtp-2-12-3-1-1; }
+#sec-gtp-3-3-2-1-2 { counter-set: sec-gtp-3-3-2-1-2 0; }
+#sec-gtp-3-3-2-1-2 > li::marker { content: ""counter(sec-gtp-3-3-2-1-2,decimal)"."; }
+#sec-gtp-3-3-2-1-2 > li { counter-increment: sec-gtp-3-3-2-1-2; }
+#sec-gtp-3-3-3-1-1 { counter-set: sec-gtp-3-3-3-1-1 0; }
+#sec-gtp-3-3-3-1-1 > li::marker { content: ""counter(sec-gtp-3-3-3-1-1,decimal)"."; }
+#sec-gtp-3-3-3-1-1 > li { counter-increment: sec-gtp-3-3-3-1-1; }
+#sec-gtp-3-6-2-1-5 { counter-set: sec-gtp-3-6-2-1-5 0; }
+#sec-gtp-3-6-2-1-5 > li::marker { content: ""counter(sec-gtp-3-6-2-1-5,decimal)"."; }
+#sec-gtp-3-6-2-1-5 > li { counter-increment: sec-gtp-3-6-2-1-5; }
+#sec-gtp-3-6-3-1-1 { counter-set: sec-gtp-3-6-3-1-1 0; }
+#sec-gtp-3-6-3-1-1 > li::marker { content: ""counter(sec-gtp-3-6-3-1-1,decimal)"."; }
+#sec-gtp-3-6-3-1-1 > li { counter-increment: sec-gtp-3-6-3-1-1; }
+#sec-gtp-4-3-2-1-2 { counter-set: sec-gtp-4-3-2-1-2 0; }
+#sec-gtp-4-3-2-1-2 > li::marker { content: ""counter(sec-gtp-4-3-2-1-2,decimal)"."; }
+#sec-gtp-4-3-2-1-2 > li { counter-increment: sec-gtp-4-3-2-1-2; }
+#sec-gtp-4-3-4-1-1 { counter-set: sec-gtp-4-3-4-1-1 0; }
+#sec-gtp-4-3-4-1-1 > li::marker { content: ""counter(sec-gtp-4-3-4-1-1,decimal)"."; }
+#sec-gtp-4-3-4-1-1 > li { counter-increment: sec-gtp-4-3-4-1-1; }
+#sec-gtp-4-4-2-1-4 { counter-set: sec-gtp-4-4-2-1-4 0; }
+#sec-gtp-4-4-2-1-4 > li::marker { content: ""counter(sec-gtp-4-4-2-1-4,decimal)"."; }
+#sec-gtp-4-4-2-1-4 > li { counter-increment: sec-gtp-4-4-2-1-4; }
+#sec-gtp-4-4-3-1-1 { counter-set: sec-gtp-4-4-3-1-1 0; }
+#sec-gtp-4-4-3-1-1 > li::marker { content: ""counter(sec-gtp-4-4-3-1-1,decimal)"."; }
+#sec-gtp-4-4-3-1-1 > li { counter-increment: sec-gtp-4-4-3-1-1; }
+#sec-gtp-4-5-2-1-1 { counter-set: sec-gtp-4-5-2-1-1 0; }
+#sec-gtp-4-5-2-1-1 > li::marker { content: ""counter(sec-gtp-4-5-2-1-1,decimal)"."; }
+#sec-gtp-4-5-2-1-1 > li { counter-increment: sec-gtp-4-5-2-1-1; }
+#sec-gtp-4-5-3-1-1 { counter-set: sec-gtp-4-5-3-1-1 0; }
+#sec-gtp-4-5-3-1-1 > li::marker { content: ""counter(sec-gtp-4-5-3-1-1,decimal)"."; }
+#sec-gtp-4-5-3-1-1 > li { counter-increment: sec-gtp-4-5-3-1-1; }
+#sec-gtp-4-6-2-1-6 { counter-set: sec-gtp-4-6-2-1-6 0; }
+#sec-gtp-4-6-2-1-6 > li::marker { content: ""counter(sec-gtp-4-6-2-1-6,decimal)"."; }
+#sec-gtp-4-6-2-1-6 > li { counter-increment: sec-gtp-4-6-2-1-6; }
+#sec-gtp-4-6-3-2-1 { counter-set: sec-gtp-4-6-3-2-1 0; }
+#sec-gtp-4-6-3-2-1 > li::marker { content: ""counter(sec-gtp-4-6-3-2-1,decimal)"."; }
+#sec-gtp-4-6-3-2-1 > li { counter-increment: sec-gtp-4-6-3-2-1; }
+#sec-gtp-4-9-2-2-1 { counter-set: sec-gtp-4-9-2-2-1 0; }
+#sec-gtp-4-9-2-2-1 > li::marker { content: ""counter(sec-gtp-4-9-2-2-1,decimal)"."; }
+#sec-gtp-4-9-2-2-1 > li { counter-increment: sec-gtp-4-9-2-2-1; }
+#sec-gtp-4-9-3-2-1 { counter-set: sec-gtp-4-9-3-2-1 0; }
+#sec-gtp-4-9-3-2-1 > li::marker { content: ""counter(sec-gtp-4-9-3-2-1,decimal)"."; }
+#sec-gtp-4-9-3-2-1 > li { counter-increment: sec-gtp-4-9-3-2-1; }
+#sec-gtp-4-10-2-2-1 { counter-set: sec-gtp-4-10-2-2-1 0; }
+#sec-gtp-4-10-2-2-1 > li::marker { content: ""counter(sec-gtp-4-10-2-2-1,decimal)"."; }
+#sec-gtp-4-10-2-2-1 > li { counter-increment: sec-gtp-4-10-2-2-1; }
+#sec-gtp-4-11-2-1-6 { counter-set: sec-gtp-4-11-2-1-6 0; }
+#sec-gtp-4-11-2-1-6 > li::marker { content: ""counter(sec-gtp-4-11-2-1-6,decimal)"."; }
+#sec-gtp-4-11-2-1-6 > li { counter-increment: sec-gtp-4-11-2-1-6; }
+#sec-gtp-4-11-3-1-6 { counter-set: sec-gtp-4-11-3-1-6 0; }
+#sec-gtp-4-11-3-1-6 > li::marker { content: ""counter(sec-gtp-4-11-3-1-6,decimal)"."; }
+#sec-gtp-4-11-3-1-6 > li { counter-increment: sec-gtp-4-11-3-1-6; }
+#sec-gtp-4-12-2-1-2 { counter-set: sec-gtp-4-12-2-1-2 0; }
+#sec-gtp-4-12-2-1-2 > li::marker { content: ""counter(sec-gtp-4-12-2-1-2,decimal)"."; }
+#sec-gtp-4-12-2-1-2 > li { counter-increment: sec-gtp-4-12-2-1-2; }
+#sec-gtp-4-12-3-2-1 { counter-set: sec-gtp-4-12-3-2-1 0; }
+#sec-gtp-4-12-3-2-1 > li::marker { content: ""counter(sec-gtp-4-12-3-2-1,decimal)"."; }
+#sec-gtp-4-12-3-2-1 > li { counter-increment: sec-gtp-4-12-3-2-1; }
+#sec-gtp-4-13-2-2-1 { counter-set: sec-gtp-4-13-2-2-1 0; }
+#sec-gtp-4-13-2-2-1 > li::marker { content: ""counter(sec-gtp-4-13-2-2-1,decimal)"."; }
+#sec-gtp-4-13-2-2-1 > li { counter-increment: sec-gtp-4-13-2-2-1; }
+#sec-gtp-4-13-3-2-1 { counter-set: sec-gtp-4-13-3-2-1 0; }
+#sec-gtp-4-13-3-2-1 > li::marker { content: ""counter(sec-gtp-4-13-3-2-1,decimal)"."; }
+#sec-gtp-4-13-3-2-1 > li { counter-increment: sec-gtp-4-13-3-2-1; }
+#sec-gtp-4-18-2-1-3 { counter-set: sec-gtp-4-18-2-1-3 0; }
+#sec-gtp-4-18-2-1-3 > li::marker { content: ""counter(sec-gtp-4-18-2-1-3,decimal)"."; }
+#sec-gtp-4-18-2-1-3 > li { counter-increment: sec-gtp-4-18-2-1-3; }
+#sec-gtp-4-18-3-2-1 { counter-set: sec-gtp-4-18-3-2-1 0; }
+#sec-gtp-4-18-3-2-1 > li::marker { content: ""counter(sec-gtp-4-18-3-2-1,decimal)"."; }
+#sec-gtp-4-18-3-2-1 > li { counter-increment: sec-gtp-4-18-3-2-1; }
+#sec-gtp-4-21-2-1-5 { counter-set: sec-gtp-4-21-2-1-5 0; }
+#sec-gtp-4-21-2-1-5 > li::marker { content: ""counter(sec-gtp-4-21-2-1-5,decimal)"."; }
+#sec-gtp-4-21-2-1-5 > li { counter-increment: sec-gtp-4-21-2-1-5; }
+#sec-gtp-4-22-2-2-1 { counter-set: sec-gtp-4-22-2-2-1 0; }
+#sec-gtp-4-22-2-2-1 > li::marker { content: ""counter(sec-gtp-4-22-2-2-1,decimal)"."; }
+#sec-gtp-4-22-2-2-1 > li { counter-increment: sec-gtp-4-22-2-2-1; }
+#sec-gtp-4-24-2-1-4 { counter-set: sec-gtp-4-24-2-1-4 0; }
+#sec-gtp-4-24-2-1-4 > li::marker { content: ""counter(sec-gtp-4-24-2-1-4,decimal)"."; }
+#sec-gtp-4-24-2-1-4 > li { counter-increment: sec-gtp-4-24-2-1-4; }
+#sec-gtp-4-25-2-1-8 { counter-set: sec-gtp-4-25-2-1-8 0; }
+#sec-gtp-4-25-2-1-8 > li::marker { content: ""counter(sec-gtp-4-25-2-1-8,decimal)"."; }
+#sec-gtp-4-25-2-1-8 > li { counter-increment: sec-gtp-4-25-2-1-8; }
+#sec-gtp-4-29-2-2-1 { counter-set: sec-gtp-4-29-2-2-1 0; }
+#sec-gtp-4-29-2-2-1 > li::marker { content: ""counter(sec-gtp-4-29-2-2-1,decimal)"."; }
+#sec-gtp-4-29-2-2-1 > li { counter-increment: sec-gtp-4-29-2-2-1; }
+#sec-gtp-4-29-3-1-1 { counter-set: sec-gtp-4-29-3-1-1 0; }
+#sec-gtp-4-29-3-1-1 > li::marker { content: ""counter(sec-gtp-4-29-3-1-1,decimal)"."; }
+#sec-gtp-4-29-3-1-1 > li { counter-increment: sec-gtp-4-29-3-1-1; }
+#sec-gtp-4-30-2-1-9 { counter-set: sec-gtp-4-30-2-1-9 0; }
+#sec-gtp-4-30-2-1-9 > li::marker { content: ""counter(sec-gtp-4-30-2-1-9,decimal)"."; }
+#sec-gtp-4-30-2-1-9 > li { counter-increment: sec-gtp-4-30-2-1-9; }
+#sec-gtp-4-30-3-2-1 { counter-set: sec-gtp-4-30-3-2-1 0; }
+#sec-gtp-4-30-3-2-1 > li::marker { content: ""counter(sec-gtp-4-30-3-2-1,decimal)"."; }
+#sec-gtp-4-30-3-2-1 > li { counter-increment: sec-gtp-4-30-3-2-1; }
+#sec-gtp-4-34-2-1-2 { counter-set: sec-gtp-4-34-2-1-2 0; }
+#sec-gtp-4-34-2-1-2 > li::marker { content: ""counter(sec-gtp-4-34-2-1-2,decimal)"."; }
+#sec-gtp-4-34-2-1-2 > li { counter-increment: sec-gtp-4-34-2-1-2; }
+#sec-gtp-4-34-3-1-1 { counter-set: sec-gtp-4-34-3-1-1 0; }
+#sec-gtp-4-34-3-1-1 > li::marker { content: ""counter(sec-gtp-4-34-3-1-1,decimal)"."; }
+#sec-gtp-4-34-3-1-1 > li { counter-increment: sec-gtp-4-34-3-1-1; }
+#sec-gtp-4-36-2-1-5 { counter-set: sec-gtp-4-36-2-1-5 0; }
+#sec-gtp-4-36-2-1-5 > li::marker { content: ""counter(sec-gtp-4-36-2-1-5,decimal)"."; }
+#sec-gtp-4-36-2-1-5 > li { counter-increment: sec-gtp-4-36-2-1-5; }
+#sec-gtp-4-36-3-1-1 { counter-set: sec-gtp-4-36-3-1-1 0; }
+#sec-gtp-4-36-3-1-1 > li::marker { content: ""counter(sec-gtp-4-36-3-1-1,decimal)"."; }
+#sec-gtp-4-36-3-1-1 > li { counter-increment: sec-gtp-4-36-3-1-1; }
+#sec-gtp-4-38-2-1-1 { counter-set: sec-gtp-4-38-2-1-1 0; }
+#sec-gtp-4-38-2-1-1 > li::marker { content: ""counter(sec-gtp-4-38-2-1-1,decimal)"."; }
+#sec-gtp-4-38-2-1-1 > li { counter-increment: sec-gtp-4-38-2-1-1; }
+#sec-gtp-4-38-3-1-1 { counter-set: sec-gtp-4-38-3-1-1 0; }
+#sec-gtp-4-38-3-1-1 > li::marker { content: ""counter(sec-gtp-4-38-3-1-1,decimal)"."; }
+#sec-gtp-4-38-3-1-1 > li { counter-increment: sec-gtp-4-38-3-1-1; }
+#sec-rtp-2-2-2-1 { counter-set: sec-rtp-2-2-2-1 0; }
+#sec-rtp-2-2-2-1 > li::marker { content: ""counter(sec-rtp-2-2-2-1,decimal)"."; }
+#sec-rtp-2-2-2-1 > li { counter-increment: sec-rtp-2-2-2-1; }
+#sec-rtp-2-3-2-1 { counter-set: sec-rtp-2-3-2-1 0; }
+#sec-rtp-2-3-2-1 > li::marker { content: ""counter(sec-rtp-2-3-2-1,decimal)"."; }
+#sec-rtp-2-3-2-1 > li { counter-increment: sec-rtp-2-3-2-1; }
+#sec-rtp-3-2-1-1 { counter-set: sec-rtp-3-2-1-1 0; }
+#sec-rtp-3-2-1-1 > li::marker { content: ""counter(sec-rtp-3-2-1-1,decimal)"."; }
+#sec-rtp-3-2-1-1 > li { counter-increment: sec-rtp-3-2-1-1; }
+#sec-rtp-4-2-2-1 { counter-set: sec-rtp-4-2-2-1 0; }
+#sec-rtp-4-2-2-1 > li::marker { content: ""counter(sec-rtp-4-2-2-1,decimal)"."; }
+#sec-rtp-4-2-2-1 > li { counter-increment: sec-rtp-4-2-2-1; }
+#sec-rtp-4-3-1-1 { counter-set: sec-rtp-4-3-1-1 0; }
+#sec-rtp-4-3-1-1 > li::marker { content: ""counter(sec-rtp-4-3-1-1,decimal)"."; }
+#sec-rtp-4-3-1-1 > li { counter-increment: sec-rtp-4-3-1-1; }
+#sec-rtp-6-2-2-1 { counter-set: sec-rtp-6-2-2-1 0; }
+#sec-rtp-6-2-2-1 > li::marker { content: ""counter(sec-rtp-6-2-2-1,decimal)"."; }
+#sec-rtp-6-2-2-1 > li { counter-increment: sec-rtp-6-2-2-1; }
+#sec-rtp-6-3-2-1 { counter-set: sec-rtp-6-3-2-1 0; }
+#sec-rtp-6-3-2-1 > li::marker { content: ""counter(sec-rtp-6-3-2-1,decimal)"."; }
+#sec-rtp-6-3-2-1 > li { counter-increment: sec-rtp-6-3-2-1; }
+#sec-rtp-8-2-1-2 { counter-set: sec-rtp-8-2-1-2 0; }
+#sec-rtp-8-2-1-2 > li::marker { content: ""counter(sec-rtp-8-2-1-2,decimal)"."; }
+#sec-rtp-8-2-1-2 > li { counter-increment: sec-rtp-8-2-1-2; }
+#sec-rtp-8-3-2-1 { counter-set: sec-rtp-8-3-2-1 0; }
+#sec-rtp-8-3-2-1 > li::marker { content: ""counter(sec-rtp-8-3-2-1,decimal)"."; }
+#sec-rtp-8-3-2-1 > li { counter-increment: sec-rtp-8-3-2-1; }
+#sec-rtp-13-2-1-1 { counter-set: sec-rtp-13-2-1-1 0; }
+#sec-rtp-13-2-1-1 > li::marker { content: ""counter(sec-rtp-13-2-1-1,decimal)"."; }
+#sec-rtp-13-2-1-1 > li { counter-increment: sec-rtp-13-2-1-1; }
+#sec-rtp-16-2-2-1 { counter-set: sec-rtp-16-2-2-1 0; }
+#sec-rtp-16-2-2-1 > li::marker { content: ""counter(sec-rtp-16-2-2-1,decimal)"."; }
+#sec-rtp-16-2-2-1 > li { counter-increment: sec-rtp-16-2-2-1; }
+#sec-rtp-27-2-1-8 { counter-set: sec-rtp-27-2-1-8 0; }
+#sec-rtp-27-2-1-8 > li::marker { content: ""counter(sec-rtp-27-2-1-8,decimal)"."; }
+#sec-rtp-27-2-1-8 > li { counter-increment: sec-rtp-27-2-1-8; }
+#sec-rtp-27-3-2-1 { counter-set: sec-rtp-27-3-2-1 0; }
+#sec-rtp-27-3-2-1 > li::marker { content: ""counter(sec-rtp-27-3-2-1,decimal)"."; }
+#sec-rtp-27-3-2-1 > li { counter-increment: sec-rtp-27-3-2-1; }
+#sec-rtp-28-2-1-6 { counter-set: sec-rtp-28-2-1-6 0; }
+#sec-rtp-28-2-1-6 > li::marker { content: ""counter(sec-rtp-28-2-1-6,decimal)"."; }
+#sec-rtp-28-2-1-6 > li { counter-increment: sec-rtp-28-2-1-6; }
+#sec-rtp-28-3-1-1 { counter-set: sec-rtp-28-3-1-1 0; }
+#sec-rtp-28-3-1-1 > li::marker { content: ""counter(sec-rtp-28-3-1-1,decimal)"."; }
+#sec-rtp-28-3-1-1 > li { counter-increment: sec-rtp-28-3-1-1; }
+#sec-mtp-4-2-2-1 { counter-set: sec-mtp-4-2-2-1 0; }
+#sec-mtp-4-2-2-1 > li::marker { content: ""counter(sec-mtp-4-2-2-1,decimal)"."; }
+#sec-mtp-4-2-2-1 > li { counter-increment: sec-mtp-4-2-2-1; }
+#sec-mtp-4-3-2-1 { counter-set: sec-mtp-4-3-2-1 0; }
+#sec-mtp-4-3-2-1 > li::marker { content: ""counter(sec-mtp-4-3-2-1,decimal)"."; }
+#sec-mtp-4-3-2-1 > li { counter-increment: sec-mtp-4-3-2-1; }
+#sec-mtp-5-2-2-1 { counter-set: sec-mtp-5-2-2-1 0; }
+#sec-mtp-5-2-2-1 > li::marker { content: ""counter(sec-mtp-5-2-2-1,decimal)"."; }
+#sec-mtp-5-2-2-1 > li { counter-increment: sec-mtp-5-2-2-1; }
+#sec-mtp-5-3-2-1 { counter-set: sec-mtp-5-3-2-1 0; }
+#sec-mtp-5-3-2-1 > li::marker { content: ""counter(sec-mtp-5-3-2-1,decimal)"."; }
+#sec-mtp-5-3-2-1 > li { counter-increment: sec-mtp-5-3-2-1; }
+#sec-mtp-6-2-1-1 { counter-set: sec-mtp-6-2-1-1 0; }
+#sec-mtp-6-2-1-1 > li::marker { content: ""counter(sec-mtp-6-2-1-1,decimal)"."; }
+#sec-mtp-6-2-1-1 > li { counter-increment: sec-mtp-6-2-1-1; }
+#sec-mtp-6-3-1-1 { counter-set: sec-mtp-6-3-1-1 0; }
+#sec-mtp-6-3-1-1 > li::marker { content: ""counter(sec-mtp-6-3-1-1,decimal)"."; }
+#sec-mtp-6-3-1-1 > li { counter-increment: sec-mtp-6-3-1-1; }
+#sec-mtp-7-2-2-1 { counter-set: sec-mtp-7-2-2-1 0; }
+#sec-mtp-7-2-2-1 > li::marker { content: ""counter(sec-mtp-7-2-2-1,decimal)"."; }
+#sec-mtp-7-2-2-1 > li { counter-increment: sec-mtp-7-2-2-1; }
+#sec-mtp-7-3-1-1 { counter-set: sec-mtp-7-3-1-1 0; }
+#sec-mtp-7-3-1-1 > li::marker { content: ""counter(sec-mtp-7-3-1-1,decimal)"."; }
+#sec-mtp-7-3-1-1 > li { counter-increment: sec-mtp-7-3-1-1; }
+#sec-mtp-8-2-1-9 { counter-set: sec-mtp-8-2-1-9 0; }
+#sec-mtp-8-2-1-9 > li::marker { content: ""counter(sec-mtp-8-2-1-9,decimal)"."; }
+#sec-mtp-8-2-1-9 > li { counter-increment: sec-mtp-8-2-1-9; }
+#sec-mtp-8-3-1-1 { counter-set: sec-mtp-8-3-1-1 0; }
+#sec-mtp-8-3-1-1 > li::marker { content: ""counter(sec-mtp-8-3-1-1,decimal)"."; }
+#sec-mtp-8-3-1-1 > li { counter-increment: sec-mtp-8-3-1-1; }
+#sec-mtp-9-2-2-1 { counter-set: sec-mtp-9-2-2-1 0; }
+#sec-mtp-9-2-2-1 > li::marker { content: ""counter(sec-mtp-9-2-2-1,decimal)"."; }
+#sec-mtp-9-2-2-1 > li { counter-increment: sec-mtp-9-2-2-1; }
+#sec-mtp-10-2-1-1 { counter-set: sec-mtp-10-2-1-1 0; }
+#sec-mtp-10-2-1-1 > li::marker { content: ""counter(sec-mtp-10-2-1-1,decimal)"."; }
+#sec-mtp-10-2-1-1 > li { counter-increment: sec-mtp-10-2-1-1; }
+#sec-mtp-11-2-2-1 { counter-set: sec-mtp-11-2-2-1 0; }
+#sec-mtp-11-2-2-1 > li::marker { content: ""counter(sec-mtp-11-2-2-1,decimal)"."; }
+#sec-mtp-11-2-2-1 > li { counter-increment: sec-mtp-11-2-2-1; }
+#sec-mtp-11-3-2-1 { counter-set: sec-mtp-11-3-2-1 0; }
+#sec-mtp-11-3-2-1 > li::marker { content: ""counter(sec-mtp-11-3-2-1,decimal)"."; }
+#sec-mtp-11-3-2-1 > li { counter-increment: sec-mtp-11-3-2-1; }
+#sec-mtp-12-2-2-1 { counter-set: sec-mtp-12-2-2-1 0; }
+#sec-mtp-12-2-2-1 > li::marker { content: ""counter(sec-mtp-12-2-2-1,decimal)"."; }
+#sec-mtp-12-2-2-1 > li { counter-increment: sec-mtp-12-2-2-1; }
+#sec-mtp-12-3-1-1 { counter-set: sec-mtp-12-3-1-1 0; }
+#sec-mtp-12-3-1-1 > li::marker { content: ""counter(sec-mtp-12-3-1-1,decimal)"."; }
+#sec-mtp-12-3-1-1 > li { counter-increment: sec-mtp-12-3-1-1; }
+#sec-mtp-13-2-2-1 { counter-set: sec-mtp-13-2-2-1 0; }
+#sec-mtp-13-2-2-1 > li::marker { content: ""counter(sec-mtp-13-2-2-1,decimal)"."; }
+#sec-mtp-13-2-2-1 > li { counter-increment: sec-mtp-13-2-2-1; }
+#sec-mtp-13-3-2-1 { counter-set: sec-mtp-13-3-2-1 0; }
+#sec-mtp-13-3-2-1 > li::marker { content: ""counter(sec-mtp-13-3-2-1,decimal)"."; }
+#sec-mtp-13-3-2-1 > li { counter-increment: sec-mtp-13-3-2-1; }
+#sec-mtp-14-2-2-1 { counter-set: sec-mtp-14-2-2-1 0; }
+#sec-mtp-14-2-2-1 > li::marker { content: ""counter(sec-mtp-14-2-2-1,decimal)"."; }
+#sec-mtp-14-2-2-1 > li { counter-increment: sec-mtp-14-2-2-1; }
+#sec-mtp-14-4-2-1 { counter-set: sec-mtp-14-4-2-1 0; }
+#sec-mtp-14-4-2-1 > li::marker { content: ""counter(sec-mtp-14-4-2-1,decimal)"."; }
+#sec-mtp-14-4-2-1 > li { counter-increment: sec-mtp-14-4-2-1; }
+#sec-mtp-16-2-2-1 { counter-set: sec-mtp-16-2-2-1 0; }
+#sec-mtp-16-2-2-1 > li::marker { content: ""counter(sec-mtp-16-2-2-1,decimal)"."; }
+#sec-mtp-16-2-2-1 > li { counter-increment: sec-mtp-16-2-2-1; }
+#sec-mtp-16-3-2-1 { counter-set: sec-mtp-16-3-2-1 0; }
+#sec-mtp-16-3-2-1 > li::marker { content: ""counter(sec-mtp-16-3-2-1,decimal)"."; }
+#sec-mtp-16-3-2-1 > li { counter-increment: sec-mtp-16-3-2-1; }
+#sec-mtp-20-2-1-3 { counter-set: sec-mtp-20-2-1-3 0; }
+#sec-mtp-20-2-1-3 > li::marker { content: ""counter(sec-mtp-20-2-1-3,decimal)"."; }
+#sec-mtp-20-2-1-3 > li { counter-increment: sec-mtp-20-2-1-3; }
+#sec-mtp-20-3-1-1 { counter-set: sec-mtp-20-3-1-1 0; }
+#sec-mtp-20-3-1-1 > li::marker { content: ""counter(sec-mtp-20-3-1-1,decimal)"."; }
+#sec-mtp-20-3-1-1 > li { counter-increment: sec-mtp-20-3-1-1; }
+#sec-mtp-24-2-2-1 { counter-set: sec-mtp-24-2-2-1 0; }
+#sec-mtp-24-2-2-1 > li::marker { content: ""counter(sec-mtp-24-2-2-1,decimal)"."; }
+#sec-mtp-24-2-2-1 > li { counter-increment: sec-mtp-24-2-2-1; }
+#sec-mtp-27-2-2-1 { counter-set: sec-mtp-27-2-2-1 0; }
+#sec-mtp-27-2-2-1 > li::marker { content: ""counter(sec-mtp-27-2-2-1,decimal)"."; }
+#sec-mtp-27-2-2-1 > li { counter-increment: sec-mtp-27-2-2-1; }
+#sec-mtp-32-2-2-1 { counter-set: sec-mtp-32-2-2-1 0; }
+#sec-mtp-32-2-2-1 > li::marker { content: ""counter(sec-mtp-32-2-2-1,decimal)"."; }
+#sec-mtp-32-2-2-1 > li { counter-increment: sec-mtp-32-2-2-1; }
+#sec-mtp-34-2-2-1 { counter-set: sec-mtp-34-2-2-1 0; }
+#sec-mtp-34-2-2-1 > li::marker { content: ""counter(sec-mtp-34-2-2-1,decimal)"."; }
+#sec-mtp-34-2-2-1 > li { counter-increment: sec-mtp-34-2-2-1; }
+#sec-mtp-35-2-2-1 { counter-set: sec-mtp-35-2-2-1 0; }
+#sec-mtp-35-2-2-1 > li::marker { content: ""counter(sec-mtp-35-2-2-1,decimal)"."; }
+#sec-mtp-35-2-2-1 > li { counter-increment: sec-mtp-35-2-2-1; }
+#sec-mtp-35-3-1-1 { counter-set: sec-mtp-35-3-1-1 0; }
+#sec-mtp-35-3-1-1 > li::marker { content: ""counter(sec-mtp-35-3-1-1,decimal)"."; }
+#sec-mtp-35-3-1-1 > li { counter-increment: sec-mtp-35-3-1-1; }
+#sec-mtp-38-2-1-2 { counter-set: sec-mtp-38-2-1-2 0; }
+#sec-mtp-38-2-1-2 > li::marker { content: ""counter(sec-mtp-38-2-1-2,decimal)"."; }
+#sec-mtp-38-2-1-2 > li { counter-increment: sec-mtp-38-2-1-2; }
+#sec-mtp-39-2-2-1 { counter-set: sec-mtp-39-2-2-1 0; }
+#sec-mtp-39-2-2-1 > li::marker { content: ""counter(sec-mtp-39-2-2-1,decimal)"."; }
+#sec-mtp-39-2-2-1 > li { counter-increment: sec-mtp-39-2-2-1; }
+#sec-mtp-40-2-1-3 { counter-set: sec-mtp-40-2-1-3 0; }
+#sec-mtp-40-2-1-3 > li::marker { content: ""counter(sec-mtp-40-2-1-3,decimal)"."; }
+#sec-mtp-40-2-1-3 > li { counter-increment: sec-mtp-40-2-1-3; }
+#sec-mtp-40-3-1-1 { counter-set: sec-mtp-40-3-1-1 0; }
+#sec-mtp-40-3-1-1 > li::marker { content: ""counter(sec-mtp-40-3-1-1,decimal)"."; }
+#sec-mtp-40-3-1-1 > li { counter-increment: sec-mtp-40-3-1-1; }
+#sec-mtp-41-2-2-1 { counter-set: sec-mtp-41-2-2-1 0; }
+#sec-mtp-41-2-2-1 > li::marker { content: ""counter(sec-mtp-41-2-2-1,decimal)"."; }
+#sec-mtp-41-2-2-1 > li { counter-increment: sec-mtp-41-2-2-1; }
+#sec-mtp-41-3-1-1 { counter-set: sec-mtp-41-3-1-1 0; }
+#sec-mtp-41-3-1-1 > li::marker { content: ""counter(sec-mtp-41-3-1-1,decimal)"."; }
+#sec-mtp-41-3-1-1 > li { counter-increment: sec-mtp-41-3-1-1; }
+#sec-mtp-43-2-1-4 { counter-set: sec-mtp-43-2-1-4 0; }
+#sec-mtp-43-2-1-4 > li::marker { content: ""counter(sec-mtp-43-2-1-4,decimal)"."; }
+#sec-mtp-43-2-1-4 > li { counter-increment: sec-mtp-43-2-1-4; }
+#sec-mtp-44-2-1-7 { counter-set: sec-mtp-44-2-1-7 0; }
+#sec-mtp-44-2-1-7 > li::marker { content: ""counter(sec-mtp-44-2-1-7,decimal)"."; }
+#sec-mtp-44-2-1-7 > li { counter-increment: sec-mtp-44-2-1-7; }
+#sec-mtp-44-3-1-1 { counter-set: sec-mtp-44-3-1-1 0; }
+#sec-mtp-44-3-1-1 > li::marker { content: ""counter(sec-mtp-44-3-1-1,decimal)"."; }
+#sec-mtp-44-3-1-1 > li { counter-increment: sec-mtp-44-3-1-1; }
+#sec-mtp-44-3-1-1-2-1-7 { counter-set: sec-mtp-44-3-1-1-2-1-7 0; }
+#sec-mtp-44-3-1-1-2-1-7 > li::marker { content: "("counter(sec-mtp-44-3-1-1-2-1-7,lower-alpha)")"; }
+#sec-mtp-44-3-1-1-2-1-7 > li { counter-increment: sec-mtp-44-3-1-1-2-1-7; }
+#sec-ftp-2-2-2-1 { counter-set: sec-ftp-2-2-2-1 0; }
+#sec-ftp-2-2-2-1 > li::marker { content: ""counter(sec-ftp-2-2-2-1,decimal)"."; }
+#sec-ftp-2-2-2-1 > li { counter-increment: sec-ftp-2-2-2-1; }
+#sec-ftp-2-3-2-1 { counter-set: sec-ftp-2-3-2-1 0; }
+#sec-ftp-2-3-2-1 > li::marker { content: ""counter(sec-ftp-2-3-2-1,decimal)"."; }
+#sec-ftp-2-3-2-1 > li { counter-increment: sec-ftp-2-3-2-1; }
+#sec-ftp-5-2-1-4 { counter-set: sec-ftp-5-2-1-4 0; }
+#sec-ftp-5-2-1-4 > li::marker { content: ""counter(sec-ftp-5-2-1-4,decimal)"."; }
+#sec-ftp-5-2-1-4 > li { counter-increment: sec-ftp-5-2-1-4; }
+#sec-ftp-5-3-2-1 { counter-set: sec-ftp-5-3-2-1 0; }
+#sec-ftp-5-3-2-1 > li::marker { content: ""counter(sec-ftp-5-3-2-1,decimal)"."; }
+#sec-ftp-5-3-2-1 > li { counter-increment: sec-ftp-5-3-2-1; }
+#sec-ftp-7-2-1-1 { counter-set: sec-ftp-7-2-1-1 0; }
+#sec-ftp-7-2-1-1 > li::marker { content: ""counter(sec-ftp-7-2-1-1,decimal)"."; }
+#sec-ftp-7-2-1-1 > li { counter-increment: sec-ftp-7-2-1-1; }
+#sec-ftp-7-3-1-1 { counter-set: sec-ftp-7-3-1-1 0; }
+#sec-ftp-7-3-1-1 > li::marker { content: ""counter(sec-ftp-7-3-1-1,decimal)"."; }
+#sec-ftp-7-3-1-1 > li { counter-increment: sec-ftp-7-3-1-1; }
+#sec-ftp-8-2-2-1 { counter-set: sec-ftp-8-2-2-1 0; }
+#sec-ftp-8-2-2-1 > li::marker { content: ""counter(sec-ftp-8-2-2-1,decimal)"."; }
+#sec-ftp-8-2-2-1 > li { counter-increment: sec-ftp-8-2-2-1; }
+#sec-ftp-8-3-2-1 { counter-set: sec-ftp-8-3-2-1 0; }
+#sec-ftp-8-3-2-1 > li::marker { content: ""counter(sec-ftp-8-3-2-1,decimal)"."; }
+#sec-ftp-8-3-2-1 > li { counter-increment: sec-ftp-8-3-2-1; }
+#sec-ftp-12-2-1-4 { counter-set: sec-ftp-12-2-1-4 0; }
+#sec-ftp-12-2-1-4 > li::marker { content: ""counter(sec-ftp-12-2-1-4,decimal)"."; }
+#sec-ftp-12-2-1-4 > li { counter-increment: sec-ftp-12-2-1-4; }
+#sec-ftp-12-3-2-1 { counter-set: sec-ftp-12-3-2-1 0; }
+#sec-ftp-12-3-2-1 > li::marker { content: ""counter(sec-ftp-12-3-2-1,decimal)"."; }
+#sec-ftp-12-3-2-1 > li { counter-increment: sec-ftp-12-3-2-1; }
+#sec-ftp-13-2-2-1 { counter-set: sec-ftp-13-2-2-1 0; }
+#sec-ftp-13-2-2-1 > li::marker { content: ""counter(sec-ftp-13-2-2-1,decimal)"."; }
+#sec-ftp-13-2-2-1 > li { counter-increment: sec-ftp-13-2-2-1; }
+#sec-ftp-13-3-1-1 { counter-set: sec-ftp-13-3-1-1 0; }
+#sec-ftp-13-3-1-1 > li::marker { content: ""counter(sec-ftp-13-3-1-1,decimal)"."; }
+#sec-ftp-13-3-1-1 > li { counter-increment: sec-ftp-13-3-1-1; }
+#sec-ftp-15-2-2-1 { counter-set: sec-ftp-15-2-2-1 0; }
+#sec-ftp-15-2-2-1 > li::marker { content: ""counter(sec-ftp-15-2-2-1,decimal)"."; }
+#sec-ftp-15-2-2-1 > li { counter-increment: sec-ftp-15-2-2-1; }
+#sec-ftp-15-3-2-1 { counter-set: sec-ftp-15-3-2-1 0; }
+#sec-ftp-15-3-2-1 > li::marker { content: ""counter(sec-ftp-15-3-2-1,decimal)"."; }
+#sec-ftp-15-3-2-1 > li { counter-increment: sec-ftp-15-3-2-1; }
+#sec-ftp-16-2-2-1 { counter-set: sec-ftp-16-2-2-1 0; }
+#sec-ftp-16-2-2-1 > li::marker { content: ""counter(sec-ftp-16-2-2-1,decimal)"."; }
+#sec-ftp-16-2-2-1 > li { counter-increment: sec-ftp-16-2-2-1; }
+#sec-ftp-16-3-2-1 { counter-set: sec-ftp-16-3-2-1 0; }
+#sec-ftp-16-3-2-1 > li::marker { content: ""counter(sec-ftp-16-3-2-1,decimal)"."; }
+#sec-ftp-16-3-2-1 > li { counter-increment: sec-ftp-16-3-2-1; }
+#sec-ftp-17-2-2-1 { counter-set: sec-ftp-17-2-2-1 0; }
+#sec-ftp-17-2-2-1 > li::marker { content: ""counter(sec-ftp-17-2-2-1,decimal)"."; }
+#sec-ftp-17-2-2-1 > li { counter-increment: sec-ftp-17-2-2-1; }
+#sec-ftp-17-3-2-1 { counter-set: sec-ftp-17-3-2-1 0; }
+#sec-ftp-17-3-2-1 > li::marker { content: ""counter(sec-ftp-17-3-2-1,decimal)"."; }
+#sec-ftp-17-3-2-1 > li { counter-increment: sec-ftp-17-3-2-1; }
+#sec-ftp-19-2-2-1 { counter-set: sec-ftp-19-2-2-1 0; }
+#sec-ftp-19-2-2-1 > li::marker { content: ""counter(sec-ftp-19-2-2-1,decimal)"."; }
+#sec-ftp-19-2-2-1 > li { counter-increment: sec-ftp-19-2-2-1; }
+#sec-ftp-19-3-1-1 { counter-set: sec-ftp-19-3-1-1 0; }
+#sec-ftp-19-3-1-1 > li::marker { content: ""counter(sec-ftp-19-3-1-1,decimal)"."; }
+#sec-ftp-19-3-1-1 > li { counter-increment: sec-ftp-19-3-1-1; }
+#sec-ftp-20-2-2-1 { counter-set: sec-ftp-20-2-2-1 0; }
+#sec-ftp-20-2-2-1 > li::marker { content: ""counter(sec-ftp-20-2-2-1,decimal)"."; }
+#sec-ftp-20-2-2-1 > li { counter-increment: sec-ftp-20-2-2-1; }
+#sec-ftp-20-3-2-1 { counter-set: sec-ftp-20-3-2-1 0; }
+#sec-ftp-20-3-2-1 > li::marker { content: ""counter(sec-ftp-20-3-2-1,decimal)"."; }
+#sec-ftp-20-3-2-1 > li { counter-increment: sec-ftp-20-3-2-1; }
+#sec-ftp-21-2-1-1 { counter-set: sec-ftp-21-2-1-1 0; }
+#sec-ftp-21-2-1-1 > li::marker { content: ""counter(sec-ftp-21-2-1-1,decimal)"."; }
+#sec-ftp-21-2-1-1 > li { counter-increment: sec-ftp-21-2-1-1; }
+#sec-ftp-21-3-1-1 { counter-set: sec-ftp-21-3-1-1 0; }
+#sec-ftp-21-3-1-1 > li::marker { content: ""counter(sec-ftp-21-3-1-1,decimal)"."; }
+#sec-ftp-21-3-1-1 > li { counter-increment: sec-ftp-21-3-1-1; }
+#sec-ftp-22-2-1-4 { counter-set: sec-ftp-22-2-1-4 0; }
+#sec-ftp-22-2-1-4 > li::marker { content: ""counter(sec-ftp-22-2-1-4,decimal)"."; }
+#sec-ftp-22-2-1-4 > li { counter-increment: sec-ftp-22-2-1-4; }
+#sec-ftp-22-3-2-1 { counter-set: sec-ftp-22-3-2-1 0; }
+#sec-ftp-22-3-2-1 > li::marker { content: ""counter(sec-ftp-22-3-2-1,decimal)"."; }
+#sec-ftp-22-3-2-1 > li { counter-increment: sec-ftp-22-3-2-1; }
+#sec-ftp-25-2-1-4 { counter-set: sec-ftp-25-2-1-4 0; }
+#sec-ftp-25-2-1-4 > li::marker { content: ""counter(sec-ftp-25-2-1-4,decimal)"."; }
+#sec-ftp-25-2-1-4 > li { counter-increment: sec-ftp-25-2-1-4; }
+#sec-ftp-25-3-1-1 { counter-set: sec-ftp-25-3-1-1 0; }
+#sec-ftp-25-3-1-1 > li::marker { content: ""counter(sec-ftp-25-3-1-1,decimal)"."; }
+#sec-ftp-25-3-1-1 > li { counter-increment: sec-ftp-25-3-1-1; }
+#sec-ftp-34-2-1-3 { counter-set: sec-ftp-34-2-1-3 0; }
+#sec-ftp-34-2-1-3 > li::marker { content: ""counter(sec-ftp-34-2-1-3,decimal)"."; }
+#sec-ftp-34-2-1-3 > li { counter-increment: sec-ftp-34-2-1-3; }
+#sec-ftp-34-3-1-3 { counter-set: sec-ftp-34-3-1-3 0; }
+#sec-ftp-34-3-1-3 > li::marker { content: ""counter(sec-ftp-34-3-1-3,decimal)"."; }
+#sec-ftp-34-3-1-3 > li { counter-increment: sec-ftp-34-3-1-3; }
+#sec-ftp-36-2-2-1 { counter-set: sec-ftp-36-2-2-1 0; }
+#sec-ftp-36-2-2-1 > li::marker { content: ""counter(sec-ftp-36-2-2-1,decimal)"."; }
+#sec-ftp-36-2-2-1 > li { counter-increment: sec-ftp-36-2-2-1; }
+#sec-ftp-38-2-2-1 { counter-set: sec-ftp-38-2-2-1 0; }
+#sec-ftp-38-2-2-1 > li::marker { content: ""counter(sec-ftp-38-2-2-1,decimal)"."; }
+#sec-ftp-38-2-2-1 > li { counter-increment: sec-ftp-38-2-2-1; }
+#sec-ftp-40-2-2-1 { counter-set: sec-ftp-40-2-2-1 0; }
+#sec-ftp-40-2-2-1 > li::marker { content: ""counter(sec-ftp-40-2-2-1,decimal)"."; }
+#sec-ftp-40-2-2-1 > li { counter-increment: sec-ftp-40-2-2-1; }
+#sec-ftp-44-2-2-1 { counter-set: sec-ftp-44-2-2-1 0; }
+#sec-ftp-44-2-2-1 > li::marker { content: ""counter(sec-ftp-44-2-2-1,decimal)"."; }
+#sec-ftp-44-2-2-1 > li { counter-increment: sec-ftp-44-2-2-1; }
+#sec-ftp-44-4-2-1 { counter-set: sec-ftp-44-4-2-1 0; }
+#sec-ftp-44-4-2-1 > li::marker { content: ""counter(sec-ftp-44-4-2-1,decimal)"."; }
+#sec-ftp-44-4-2-1 > li { counter-increment: sec-ftp-44-4-2-1; }
+#sec-ftp-45-2-1-2 { counter-set: sec-ftp-45-2-1-2 0; }
+#sec-ftp-45-2-1-2 > li::marker { content: ""counter(sec-ftp-45-2-1-2,decimal)"."; }
+#sec-ftp-45-2-1-2 > li { counter-increment: sec-ftp-45-2-1-2; }
+#sec-ftp-45-3-2-1 { counter-set: sec-ftp-45-3-2-1 0; }
+#sec-ftp-45-3-2-1 > li::marker { content: ""counter(sec-ftp-45-3-2-1,decimal)"."; }
+#sec-ftp-45-3-2-1 > li { counter-increment: sec-ftp-45-3-2-1; }
+#sec-ftp-46-2-2-1 { counter-set: sec-ftp-46-2-2-1 0; }
+#sec-ftp-46-2-2-1 > li::marker { content: ""counter(sec-ftp-46-2-2-1,decimal)"."; }
+#sec-ftp-46-2-2-1 > li { counter-increment: sec-ftp-46-2-2-1; }
+#sec-ftp-46-3-1-1 { counter-set: sec-ftp-46-3-1-1 0; }
+#sec-ftp-46-3-1-1 > li::marker { content: ""counter(sec-ftp-46-3-1-1,decimal)"."; }
+#sec-ftp-46-3-1-1 > li { counter-increment: sec-ftp-46-3-1-1; }
+#sec-ftp-49-2-1-2 { counter-set: sec-ftp-49-2-1-2 0; }
+#sec-ftp-49-2-1-2 > li::marker { content: ""counter(sec-ftp-49-2-1-2,decimal)"."; }
+#sec-ftp-49-2-1-2 > li { counter-increment: sec-ftp-49-2-1-2; }
+#sec-ftp-49-4-1-2 { counter-set: sec-ftp-49-4-1-2 0; }
+#sec-ftp-49-4-1-2 > li::marker { content: ""counter(sec-ftp-49-4-1-2,decimal)"."; }
+#sec-ftp-49-4-1-2 > li { counter-increment: sec-ftp-49-4-1-2; }
+#june-2010-1-2-1-4 { counter-set: june-2010-1-2-1-4 0; }
+#june-2010-1-2-1-4 > li::marker { content: "("counter(june-2010-1-2-1-4,lower-alpha)")"; }
+#june-2010-1-2-1-4 > li { counter-increment: june-2010-1-2-1-4; }
+#june-2010-2-2-1-1 { counter-set: june-2010-2-2-1-1 0; }
+#june-2010-2-2-1-1 > li::marker { content: "("counter(june-2010-2-2-1-1,lower-alpha)")"; }
+#june-2010-2-2-1-1 > li { counter-increment: june-2010-2-2-1-1; }
+#june-2010-3-2-1-3 { counter-set: june-2010-3-2-1-3 0; }
+#june-2010-3-2-1-3 > li::marker { content: "("counter(june-2010-3-2-1-3,lower-alpha)")"; }
+#june-2010-3-2-1-3 > li { counter-increment: june-2010-3-2-1-3; }
+#june-2010-4-2-1-3 { counter-set: june-2010-4-2-1-3 0; }
+#june-2010-4-2-1-3 > li::marker { content: "("counter(june-2010-4-2-1-3,lower-alpha)")"; }
+#june-2010-4-2-1-3 > li { counter-increment: june-2010-4-2-1-3; }
+#june-2010-5-2-1-7 { counter-set: june-2010-5-2-1-7 0; }
+#june-2010-5-2-1-7 > li::marker { content: "("counter(june-2010-5-2-1-7,lower-alpha)")"; }
+#june-2010-5-2-1-7 > li { counter-increment: june-2010-5-2-1-7; }
+#june-2010-7-2-1-6 { counter-set: june-2010-7-2-1-6 0; }
+#june-2010-7-2-1-6 > li::marker { content: "("counter(june-2010-7-2-1-6,lower-alpha)")"; }
+#june-2010-7-2-1-6 > li { counter-increment: june-2010-7-2-1-6; }
+#june-2010-9-2-1-2 { counter-set: june-2010-9-2-1-2 0; }
+#june-2010-9-2-1-2 > li::marker { content: "("counter(june-2010-9-2-1-2,lower-alpha)")"; }
+#june-2010-9-2-1-2 > li { counter-increment: june-2010-9-2-1-2; }
+#june-2011-2-2-1-2 { counter-set: june-2011-2-2-1-2 0; }
+#june-2011-2-2-1-2 > li::marker { content: "("counter(june-2011-2-2-1-2,lower-alpha)")"; }
+#june-2011-2-2-1-2 > li { counter-increment: june-2011-2-2-1-2; }
+#june-2011-4-2-2-1 { counter-set: june-2011-4-2-2-1 0; }
+#june-2011-4-2-2-1 > li::marker { content: "("counter(june-2011-4-2-2-1,lower-alpha)")"; }
+#june-2011-4-2-2-1 > li { counter-increment: june-2011-4-2-2-1; }
+#june-2011-5-2-1-9 { counter-set: june-2011-5-2-1-9 0; }
+#june-2011-5-2-1-9 > li::marker { content: "("counter(june-2011-5-2-1-9,lower-alpha)")"; }
+#june-2011-5-2-1-9 > li { counter-increment: june-2011-5-2-1-9; }
+#june-2011-8-2-1-7 { counter-set: june-2011-8-2-1-7 0; }
+#june-2011-8-2-1-7 > li::marker { content: "("counter(june-2011-8-2-1-7,lower-alpha)")"; }
+#june-2011-8-2-1-7 > li { counter-increment: june-2011-8-2-1-7; }
+#june-2011-9-2-1-3 { counter-set: june-2011-9-2-1-3 0; }
+#june-2011-9-2-1-3 > li::marker { content: "("counter(june-2011-9-2-1-3,lower-alpha)")"; }
+#june-2011-9-2-1-3 > li { counter-increment: june-2011-9-2-1-3; }
+#june-2011-10-2-2-4 { counter-set: june-2011-10-2-2-4 0; }
+#june-2011-10-2-2-4 > li::marker { content: "("counter(june-2011-10-2-2-4,lower-alpha)")"; }
+#june-2011-10-2-2-4 > li { counter-increment: june-2011-10-2-2-4; }
+#jan-2012-3-2-1-5 { counter-set: jan-2012-3-2-1-5 0; }
+#jan-2012-3-2-1-5 > li::marker { content: "("counter(jan-2012-3-2-1-5,lower-alpha)")"; }
+#jan-2012-3-2-1-5 > li { counter-increment: jan-2012-3-2-1-5; }
+#jan-2012-4-2-1-4 { counter-set: jan-2012-4-2-1-4 0; }
+#jan-2012-4-2-1-4 > li::marker { content: "("counter(jan-2012-4-2-1-4,lower-alpha)")"; }
+#jan-2012-4-2-1-4 > li { counter-increment: jan-2012-4-2-1-4; }
+#jan-2012-5-2-1-2 { counter-set: jan-2012-5-2-1-2 0; }
+#jan-2012-5-2-1-2 > li::marker { content: "("counter(jan-2012-5-2-1-2,lower-alpha)")"; }
+#jan-2012-5-2-1-2 > li { counter-increment: jan-2012-5-2-1-2; }
+#jan-2012-7-2-1-2 { counter-set: jan-2012-7-2-1-2 0; }
+#jan-2012-7-2-1-2 > li::marker { content: "("counter(jan-2012-7-2-1-2,lower-alpha)")"; }
+#jan-2012-7-2-1-2 > li { counter-increment: jan-2012-7-2-1-2; }
+#jan-2012-9-2-1-3 { counter-set: jan-2012-9-2-1-3 0; }
+#jan-2012-9-2-1-3 > li::marker { content: "("counter(jan-2012-9-2-1-3,lower-alpha)")"; }
+#jan-2012-9-2-1-3 > li { counter-increment: jan-2012-9-2-1-3; }
+#june-2012-1-2-1-3 { counter-set: june-2012-1-2-1-3 0; }
+#june-2012-1-2-1-3 > li::marker { content: "("counter(june-2012-1-2-1-3,lower-alpha)")"; }
+#june-2012-1-2-1-3 > li { counter-increment: june-2012-1-2-1-3; }
+#june-2012-2-2-1-4 { counter-set: june-2012-2-2-1-4 0; }
+#june-2012-2-2-1-4 > li::marker { content: "("counter(june-2012-2-2-1-4,lower-alpha)")"; }
+#june-2012-2-2-1-4 > li { counter-increment: june-2012-2-2-1-4; }
+#june-2012-4-2-2-1 { counter-set: june-2012-4-2-2-1 0; }
+#june-2012-4-2-2-1 > li::marker { content: "("counter(june-2012-4-2-2-1,lower-alpha)")"; }
+#june-2012-4-2-2-1 > li { counter-increment: june-2012-4-2-2-1; }
+#june-2012-5-2-1-10 { counter-set: june-2012-5-2-1-10 0; }
+#june-2012-5-2-1-10 > li::marker { content: "("counter(june-2012-5-2-1-10,lower-alpha)")"; }
+#june-2012-5-2-1-10 > li { counter-increment: june-2012-5-2-1-10; }
+#june-2012-6-2-1-7 { counter-set: june-2012-6-2-1-7 0; }
+#june-2012-6-2-1-7 > li::marker { content: "("counter(june-2012-6-2-1-7,lower-alpha)")"; }
+#june-2012-6-2-1-7 > li { counter-increment: june-2012-6-2-1-7; }
+#june-2012-8-2-1-3 { counter-set: june-2012-8-2-1-3 0; }
+#june-2012-8-2-1-3 > li::marker { content: "("counter(june-2012-8-2-1-3,lower-alpha)")"; }
+#june-2012-8-2-1-3 > li { counter-increment: june-2012-8-2-1-3; }
+#june-2012-9-2-1-10 { counter-set: june-2012-9-2-1-10 0; }
+#june-2012-9-2-1-10 > li::marker { content: "("counter(june-2012-9-2-1-10,lower-alpha)")"; }
+#june-2012-9-2-1-10 > li { counter-increment: june-2012-9-2-1-10; }
+#jan-2014-2-2-1-5 { counter-set: jan-2014-2-2-1-5 0; }
+#jan-2014-2-2-1-5 > li::marker { content: "("counter(jan-2014-2-2-1-5,lower-alpha)")"; }
+#jan-2014-2-2-1-5 > li { counter-increment: jan-2014-2-2-1-5; }
+#jan-2014-3-2-1-9 { counter-set: jan-2014-3-2-1-9 0; }
+#jan-2014-3-2-1-9 > li::marker { content: "("counter(jan-2014-3-2-1-9,lower-alpha)")"; }
+#jan-2014-3-2-1-9 > li { counter-increment: jan-2014-3-2-1-9; }
+#jan-2014-4-2-1-3 { counter-set: jan-2014-4-2-1-3 0; }
+#jan-2014-4-2-1-3 > li::marker { content: "("counter(jan-2014-4-2-1-3,lower-alpha)")"; }
+#jan-2014-4-2-1-3 > li { counter-increment: jan-2014-4-2-1-3; }
+#jan-2014-6-2-1-2 { counter-set: jan-2014-6-2-1-2 0; }
+#jan-2014-6-2-1-2 > li::marker { content: "("counter(jan-2014-6-2-1-2,lower-alpha)")"; }
+#jan-2014-6-2-1-2 > li { counter-increment: jan-2014-6-2-1-2; }
+#jan-2014-8-2-1-7 { counter-set: jan-2014-8-2-1-7 0; }
+#jan-2014-8-2-1-7 > li::marker { content: "("counter(jan-2014-8-2-1-7,lower-alpha)")"; }
+#jan-2014-8-2-1-7 > li { counter-increment: jan-2014-8-2-1-7; }
+#june-2014-1-2-1-7 { counter-set: june-2014-1-2-1-7 0; }
+#june-2014-1-2-1-7 > li::marker { content: "("counter(june-2014-1-2-1-7,lower-alpha)")"; }
+#june-2014-1-2-1-7 > li { counter-increment: june-2014-1-2-1-7; }
+#june-2014-2-2-1-5 { counter-set: june-2014-2-2-1-5 0; }
+#june-2014-2-2-1-5 > li::marker { content: "("counter(june-2014-2-2-1-5,lower-alpha)")"; }
+#june-2014-2-2-1-5 > li { counter-increment: june-2014-2-2-1-5; }
+#june-2014-3-2-1-8 { counter-set: june-2014-3-2-1-8 0; }
+#june-2014-3-2-1-8 > li::marker { content: "("counter(june-2014-3-2-1-8,lower-alpha)")"; }
+#june-2014-3-2-1-8 > li { counter-increment: june-2014-3-2-1-8; }
+#june-2014-4-2-1-2 { counter-set: june-2014-4-2-1-2 0; }
+#june-2014-4-2-1-2 > li::marker { content: "("counter(june-2014-4-2-1-2,lower-alpha)")"; }
+#june-2014-4-2-1-2 > li { counter-increment: june-2014-4-2-1-2; }
+#june-2014-5-2-1-3 { counter-set: june-2014-5-2-1-3 0; }
+#june-2014-5-2-1-3 > li::marker { content: "("counter(june-2014-5-2-1-3,lower-alpha)")"; }
+#june-2014-5-2-1-3 > li { counter-increment: june-2014-5-2-1-3; }
+#june-2014-6-2-1-9 { counter-set: june-2014-6-2-1-9 0; }
+#june-2014-6-2-1-9 > li::marker { content: "("counter(june-2014-6-2-1-9,lower-alpha)")"; }
+#june-2014-6-2-1-9 > li { counter-increment: june-2014-6-2-1-9; }
+#june-2014-7-2-1-5 { counter-set: june-2014-7-2-1-5 0; }
+#june-2014-7-2-1-5 > li::marker { content: "("counter(june-2014-7-2-1-5,lower-alpha)")"; }
+#june-2014-7-2-1-5 > li { counter-increment: june-2014-7-2-1-5; }
+#june-2014-8-2-1-3 { counter-set: june-2014-8-2-1-3 0; }
+#june-2014-8-2-1-3 > li::marker { content: "("counter(june-2014-8-2-1-3,lower-alpha)")"; }
+#june-2014-8-2-1-3 > li { counter-increment: june-2014-8-2-1-3; }
+#june-2014-9-2-1-4 { counter-set: june-2014-9-2-1-4 0; }
+#june-2014-9-2-1-4 > li::marker { content: "("counter(june-2014-9-2-1-4,lower-alpha)")"; }
+#june-2014-9-2-1-4 > li { counter-increment: june-2014-9-2-1-4; }
+#jan-2015-4-2-1-2 { counter-set: jan-2015-4-2-1-2 0; }
+#jan-2015-4-2-1-2 > li::marker { content: "("counter(jan-2015-4-2-1-2,lower-alpha)")"; }
+#jan-2015-4-2-1-2 > li { counter-increment: jan-2015-4-2-1-2; }
+#jan-2015-8-2-1-2 { counter-set: jan-2015-8-2-1-2 0; }
+#jan-2015-8-2-1-2 > li::marker { content: "("counter(jan-2015-8-2-1-2,lower-alpha)")"; }
+#jan-2015-8-2-1-2 > li { counter-increment: jan-2015-8-2-1-2; }
+#jan-2016-1-2-1-1 { counter-set: jan-2016-1-2-1-1 0; }
+#jan-2016-1-2-1-1 > li::marker { content: "("counter(jan-2016-1-2-1-1,lower-alpha)")"; }
+#jan-2016-1-2-1-1 > li { counter-increment: jan-2016-1-2-1-1; }
+#jan-2016-2-2-1-1 { counter-set: jan-2016-2-2-1-1 0; }
+#jan-2016-2-2-1-1 > li::marker { content: "("counter(jan-2016-2-2-1-1,lower-alpha)")"; }
+#jan-2016-2-2-1-1 > li { counter-increment: jan-2016-2-2-1-1; }
+#jan-2016-3-2-1-1 { counter-set: jan-2016-3-2-1-1 0; }
+#jan-2016-3-2-1-1 > li::marker { content: "("counter(jan-2016-3-2-1-1,lower-alpha)")"; }
+#jan-2016-3-2-1-1 > li { counter-increment: jan-2016-3-2-1-1; }
+#jan-2016-4-2-1-1 { counter-set: jan-2016-4-2-1-1 0; }
+#jan-2016-4-2-1-1 > li::marker { content: "("counter(jan-2016-4-2-1-1,lower-alpha)")"; }
+#jan-2016-4-2-1-1 > li { counter-increment: jan-2016-4-2-1-1; }
+#june-2016-1-2-1-1 { counter-set: june-2016-1-2-1-1 0; }
+#june-2016-1-2-1-1 > li::marker { content: "("counter(june-2016-1-2-1-1,lower-alpha)")"; }
+#june-2016-1-2-1-1 > li { counter-increment: june-2016-1-2-1-1; }
+#june-2016-3-2-1-1 { counter-set: june-2016-3-2-1-1 0; }
+#june-2016-3-2-1-1 > li::marker { content: "("counter(june-2016-3-2-1-1,lower-alpha)")"; }
+#june-2016-3-2-1-1 > li { counter-increment: june-2016-3-2-1-1; }
+#june-2016-4-2-1-1 { counter-set: june-2016-4-2-1-1 0; }
+#june-2016-4-2-1-1 > li::marker { content: "("counter(june-2016-4-2-1-1,lower-alpha)")"; }
+#june-2016-4-2-1-1 > li { counter-increment: june-2016-4-2-1-1; }
+#june-2016-5-2-1-1 { counter-set: june-2016-5-2-1-1 0; }
+#june-2016-5-2-1-1 > li::marker { content: "("counter(june-2016-5-2-1-1,lower-alpha)")"; }
+#june-2016-5-2-1-1 > li { counter-increment: june-2016-5-2-1-1; }
+#june-2016-6-2-1-1 { counter-set: june-2016-6-2-1-1 0; }
+#june-2016-6-2-1-1 > li::marker { content: "("counter(june-2016-6-2-1-1,lower-alpha)")"; }
+#june-2016-6-2-1-1 > li { counter-increment: june-2016-6-2-1-1; }
+#june-2016-7-2-1-1 { counter-set: june-2016-7-2-1-1 0; }
+#june-2016-7-2-1-1 > li::marker { content: "("counter(june-2016-7-2-1-1,lower-alpha)")"; }
+#june-2016-7-2-1-1 > li { counter-increment: june-2016-7-2-1-1; }
+#jan-2017-3-2-1-1 { counter-set: jan-2017-3-2-1-1 0; }
+#jan-2017-3-2-1-1 > li::marker { content: "("counter(jan-2017-3-2-1-1,lower-alpha)")"; }
+#jan-2017-3-2-1-1 > li { counter-increment: jan-2017-3-2-1-1; }
+#may-2017-1-2-1-1 { counter-set: may-2017-1-2-1-1 0; }
+#may-2017-1-2-1-1 > li::marker { content: "("counter(may-2017-1-2-1-1,lower-alpha)")"; }
+#may-2017-1-2-1-1 > li { counter-increment: may-2017-1-2-1-1; }
+#may-2017-4-2-1-1 { counter-set: may-2017-4-2-1-1 0; }
+#may-2017-4-2-1-1 > li::marker { content: "("counter(may-2017-4-2-1-1,lower-alpha)")"; }
+#may-2017-4-2-1-1 > li { counter-increment: may-2017-4-2-1-1; }
+#may-2017-6-2-1-1 { counter-set: may-2017-6-2-1-1 0; }
+#may-2017-6-2-1-1 > li::marker { content: "("counter(may-2017-6-2-1-1,lower-alpha)")"; }
+#may-2017-6-2-1-1 > li { counter-increment: may-2017-6-2-1-1; }
+#may-2017-8-2-1-1 { counter-set: may-2017-8-2-1-1 0; }
+#may-2017-8-2-1-1 > li::marker { content: "("counter(may-2017-8-2-1-1,lower-alpha)")"; }
+#may-2017-8-2-1-1 > li { counter-increment: may-2017-8-2-1-1; }
+#may-2017-9-2-1-1 { counter-set: may-2017-9-2-1-1 0; }
+#may-2017-9-2-1-1 > li::marker { content: "("counter(may-2017-9-2-1-1,lower-alpha)")"; }
+#may-2017-9-2-1-1 > li { counter-increment: may-2017-9-2-1-1; }
+#jan-2022-1-2-1-4 { counter-set: jan-2022-1-2-1-4 0; }
+#jan-2022-1-2-1-4 > li::marker { content: "("counter(jan-2022-1-2-1-4,lower-alpha)")"; }
+#jan-2022-1-2-1-4 > li { counter-increment: jan-2022-1-2-1-4; }
+#jan-2022-2-2-1-3 { counter-set: jan-2022-2-2-1-3 0; }
+#jan-2022-2-2-1-3 > li::marker { content: "("counter(jan-2022-2-2-1-3,lower-alpha)")"; }
+#jan-2022-2-2-1-3 > li { counter-increment: jan-2022-2-2-1-3; }
+#jan-2022-3-2-1-1 { counter-set: jan-2022-3-2-1-1 0; }
+#jan-2022-3-2-1-1 > li::marker { content: "("counter(jan-2022-3-2-1-1,lower-alpha)")"; }
+#jan-2022-3-2-1-1 > li { counter-increment: jan-2022-3-2-1-1; }
+#jan-2022-4-2-1-1 { counter-set: jan-2022-4-2-1-1 0; }
+#jan-2022-4-2-1-1 > li::marker { content: "("counter(jan-2022-4-2-1-1,lower-alpha)")"; }
+#jan-2022-4-2-1-1 > li { counter-increment: jan-2022-4-2-1-1; }
+#jan-2022-5-2-1-7 { counter-set: jan-2022-5-2-1-7 0; }
+#jan-2022-5-2-1-7 > li::marker { content: "("counter(jan-2022-5-2-1-7,lower-alpha)")"; }
+#jan-2022-5-2-1-7 > li { counter-increment: jan-2022-5-2-1-7; }
+#jan-2022-6-2-1-2 { counter-set: jan-2022-6-2-1-2 0; }
+#jan-2022-6-2-1-2 > li::marker { content: "("counter(jan-2022-6-2-1-2,lower-alpha)")"; }
+#jan-2022-6-2-1-2 > li { counter-increment: jan-2022-6-2-1-2; }
+#jan-2022-7-2-1-4 { counter-set: jan-2022-7-2-1-4 0; }
+#jan-2022-7-2-1-4 > li::marker { content: "("counter(jan-2022-7-2-1-4,lower-alpha)")"; }
+#jan-2022-7-2-1-4 > li { counter-increment: jan-2022-7-2-1-4; }
+#jan-2022-9-2-1-1 { counter-set: jan-2022-9-2-1-1 0; }
+#jan-2022-9-2-1-1 > li::marker { content: "("counter(jan-2022-9-2-1-1,lower-alpha)")"; }
+#jan-2022-9-2-1-1 > li { counter-increment: jan-2022-9-2-1-1; }
+#may-2022-2-2-1-2 { counter-set: may-2022-2-2-1-2 0; }
+#may-2022-2-2-1-2 > li::marker { content: "("counter(may-2022-2-2-1-2,lower-alpha)")"; }
+#may-2022-2-2-1-2 > li { counter-increment: may-2022-2-2-1-2; }
+#may-2022-4-2-1-6 { counter-set: may-2022-4-2-1-6 0; }
+#may-2022-4-2-1-6 > li::marker { content: "("counter(may-2022-4-2-1-6,lower-alpha)")"; }
+#may-2022-4-2-1-6 > li { counter-increment: may-2022-4-2-1-6; }
+#may-2022-7-2-1-4 { counter-set: may-2022-7-2-1-4 0; }
+#may-2022-7-2-1-4 > li::marker { content: "("counter(may-2022-7-2-1-4,lower-alpha)")"; }
+#may-2022-7-2-1-4 > li { counter-increment: may-2022-7-2-1-4; }
+#jan-2023-2-2-1-1 { counter-set: jan-2023-2-2-1-1 0; }
+#jan-2023-2-2-1-1 > li::marker { content: "("counter(jan-2023-2-2-1-1,lower-alpha)")"; }
+#jan-2023-2-2-1-1 > li { counter-increment: jan-2023-2-2-1-1; }
+#jan-2023-3-2-1-8 { counter-set: jan-2023-3-2-1-8 0; }
+#jan-2023-3-2-1-8 > li::marker { content: "("counter(jan-2023-3-2-1-8,lower-alpha)")"; }
+#jan-2023-3-2-1-8 > li { counter-increment: jan-2023-3-2-1-8; }
+#jan-2023-8-2-1-4 { counter-set: jan-2023-8-2-1-4 0; }
+#jan-2023-8-2-1-4 > li::marker { content: "("counter(jan-2023-8-2-1-4,lower-alpha)")"; }
+#jan-2023-8-2-1-4 > li { counter-increment: jan-2023-8-2-1-4; }
+#appendix-quals-2-2-2-2-1-6 { counter-set: appendix-quals-2-2-2-2-1-6 0; }
+#appendix-quals-2-2-2-2-1-6 > li::marker { content: ""counter(appendix-quals-2-2-2-2-1-6,decimal)"."; }
+#appendix-quals-2-2-2-2-1-6 > li { counter-increment: appendix-quals-2-2-2-2-1-6; }
+#appendix-quals-2-2-2-3-1-1 { counter-set: appendix-quals-2-2-2-3-1-1 0; }
+#appendix-quals-2-2-2-3-1-1 > li::marker { content: ""counter(appendix-quals-2-2-2-3-1-1,decimal)"."; }
+#appendix-quals-2-2-2-3-1-1 > li { counter-increment: appendix-quals-2-2-2-3-1-1; }
+#appendix-quals-2-2-3-2-1-1 { counter-set: appendix-quals-2-2-3-2-1-1 0; }
+#appendix-quals-2-2-3-2-1-1 > li::marker { content: ""counter(appendix-quals-2-2-3-2-1-1,decimal)"."; }
+#appendix-quals-2-2-3-2-1-1 > li { counter-increment: appendix-quals-2-2-3-2-1-1; }
+#appendix-quals-2-2-3-3-1-1 { counter-set: appendix-quals-2-2-3-3-1-1 0; }
+#appendix-quals-2-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-2-2-3-3-1-1,decimal)"."; }
+#appendix-quals-2-2-3-3-1-1 > li { counter-increment: appendix-quals-2-2-3-3-1-1; }
+#appendix-quals-2-4-2-2-1-1 { counter-set: appendix-quals-2-4-2-2-1-1 0; }
+#appendix-quals-2-4-2-2-1-1 > li::marker { content: ""counter(appendix-quals-2-4-2-2-1-1,decimal)"."; }
+#appendix-quals-2-4-2-2-1-1 > li { counter-increment: appendix-quals-2-4-2-2-1-1; }
+#appendix-quals-2-4-2-3-1-1 { counter-set: appendix-quals-2-4-2-3-1-1 0; }
+#appendix-quals-2-4-2-3-1-1 > li::marker { content: ""counter(appendix-quals-2-4-2-3-1-1,decimal)"."; }
+#appendix-quals-2-4-2-3-1-1 > li { counter-increment: appendix-quals-2-4-2-3-1-1; }
+#appendix-quals-2-4-4-2-2-1 { counter-set: appendix-quals-2-4-4-2-2-1 0; }
+#appendix-quals-2-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-2-4-4-2-2-1,decimal)"."; }
+#appendix-quals-2-4-4-2-2-1 > li { counter-increment: appendix-quals-2-4-4-2-2-1; }
+#appendix-quals-3-2-3-2-1-1 { counter-set: appendix-quals-3-2-3-2-1-1 0; }
+#appendix-quals-3-2-3-2-1-1 > li::marker { content: ""counter(appendix-quals-3-2-3-2-1-1,decimal)"."; }
+#appendix-quals-3-2-3-2-1-1 > li { counter-increment: appendix-quals-3-2-3-2-1-1; }
+#appendix-quals-3-2-3-3-1-1 { counter-set: appendix-quals-3-2-3-3-1-1 0; }
+#appendix-quals-3-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-3-2-3-3-1-1,decimal)"."; }
+#appendix-quals-3-2-3-3-1-1 > li { counter-increment: appendix-quals-3-2-3-3-1-1; }
+#appendix-quals-3-2-4-2-1-8 { counter-set: appendix-quals-3-2-4-2-1-8 0; }
+#appendix-quals-3-2-4-2-1-8 > li::marker { content: ""counter(appendix-quals-3-2-4-2-1-8,decimal)"."; }
+#appendix-quals-3-2-4-2-1-8 > li { counter-increment: appendix-quals-3-2-4-2-1-8; }
+#appendix-quals-3-2-4-3-1-1 { counter-set: appendix-quals-3-2-4-3-1-1 0; }
+#appendix-quals-3-2-4-3-1-1 > li::marker { content: ""counter(appendix-quals-3-2-4-3-1-1,decimal)"."; }
+#appendix-quals-3-2-4-3-1-1 > li { counter-increment: appendix-quals-3-2-4-3-1-1; }
+#appendix-quals-3-4-3-2-1-4 { counter-set: appendix-quals-3-4-3-2-1-4 0; }
+#appendix-quals-3-4-3-2-1-4 > li::marker { content: ""counter(appendix-quals-3-4-3-2-1-4,decimal)"."; }
+#appendix-quals-3-4-3-2-1-4 > li { counter-increment: appendix-quals-3-4-3-2-1-4; }
+#appendix-quals-4-2-3-2-1-2 { counter-set: appendix-quals-4-2-3-2-1-2 0; }
+#appendix-quals-4-2-3-2-1-2 > li::marker { content: ""counter(appendix-quals-4-2-3-2-1-2,decimal)"."; }
+#appendix-quals-4-2-3-2-1-2 > li { counter-increment: appendix-quals-4-2-3-2-1-2; }
+#appendix-quals-4-2-3-4-1-1 { counter-set: appendix-quals-4-2-3-4-1-1 0; }
+#appendix-quals-4-2-3-4-1-1 > li::marker { content: ""counter(appendix-quals-4-2-3-4-1-1,decimal)"."; }
+#appendix-quals-4-2-3-4-1-1 > li { counter-increment: appendix-quals-4-2-3-4-1-1; }
+#appendix-quals-4-3-2-2-1-6 { counter-set: appendix-quals-4-3-2-2-1-6 0; }
+#appendix-quals-4-3-2-2-1-6 > li::marker { content: ""counter(appendix-quals-4-3-2-2-1-6,decimal)"."; }
+#appendix-quals-4-3-2-2-1-6 > li { counter-increment: appendix-quals-4-3-2-2-1-6; }
+#appendix-quals-4-3-2-3-1-6 { counter-set: appendix-quals-4-3-2-3-1-6 0; }
+#appendix-quals-4-3-2-3-1-6 > li::marker { content: ""counter(appendix-quals-4-3-2-3-1-6,decimal)"."; }
+#appendix-quals-4-3-2-3-1-6 > li { counter-increment: appendix-quals-4-3-2-3-1-6; }
+#appendix-quals-4-4-2-2-2-1 { counter-set: appendix-quals-4-4-2-2-2-1 0; }
+#appendix-quals-4-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-4-4-2-2-2-1,decimal)"."; }
+#appendix-quals-4-4-2-2-2-1 > li { counter-increment: appendix-quals-4-4-2-2-2-1; }
+#appendix-quals-4-4-2-3-2-1 { counter-set: appendix-quals-4-4-2-3-2-1 0; }
+#appendix-quals-4-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-4-4-2-3-2-1,decimal)"."; }
+#appendix-quals-4-4-2-3-2-1 > li { counter-increment: appendix-quals-4-4-2-3-2-1; }
+#appendix-quals-5-2-2-2-1-4 { counter-set: appendix-quals-5-2-2-2-1-4 0; }
+#appendix-quals-5-2-2-2-1-4 > li::marker { content: ""counter(appendix-quals-5-2-2-2-1-4,decimal)"."; }
+#appendix-quals-5-2-2-2-1-4 > li { counter-increment: appendix-quals-5-2-2-2-1-4; }
+#appendix-quals-5-2-2-3-1-1 { counter-set: appendix-quals-5-2-2-3-1-1 0; }
+#appendix-quals-5-2-2-3-1-1 > li::marker { content: ""counter(appendix-quals-5-2-2-3-1-1,decimal)"."; }
+#appendix-quals-5-2-2-3-1-1 > li { counter-increment: appendix-quals-5-2-2-3-1-1; }
+#appendix-quals-5-2-3-2-2-1 { counter-set: appendix-quals-5-2-3-2-2-1 0; }
+#appendix-quals-5-2-3-2-2-1 > li::marker { content: ""counter(appendix-quals-5-2-3-2-2-1,decimal)"."; }
+#appendix-quals-5-2-3-2-2-1 > li { counter-increment: appendix-quals-5-2-3-2-2-1; }
+#appendix-quals-5-2-3-3-2-1 { counter-set: appendix-quals-5-2-3-3-2-1 0; }
+#appendix-quals-5-2-3-3-2-1 > li::marker { content: ""counter(appendix-quals-5-2-3-3-2-1,decimal)"."; }
+#appendix-quals-5-2-3-3-2-1 > li { counter-increment: appendix-quals-5-2-3-3-2-1; }
+#appendix-quals-5-2-4-2-1-1 { counter-set: appendix-quals-5-2-4-2-1-1 0; }
+#appendix-quals-5-2-4-2-1-1 > li::marker { content: ""counter(appendix-quals-5-2-4-2-1-1,decimal)"."; }
+#appendix-quals-5-2-4-2-1-1 > li { counter-increment: appendix-quals-5-2-4-2-1-1; }
+#appendix-quals-5-2-4-3-1-1 { counter-set: appendix-quals-5-2-4-3-1-1 0; }
+#appendix-quals-5-2-4-3-1-1 > li::marker { content: ""counter(appendix-quals-5-2-4-3-1-1,decimal)"."; }
+#appendix-quals-5-2-4-3-1-1 > li { counter-increment: appendix-quals-5-2-4-3-1-1; }
+#appendix-quals-5-3-2-2-1-1 { counter-set: appendix-quals-5-3-2-2-1-1 0; }
+#appendix-quals-5-3-2-2-1-1 > li::marker { content: ""counter(appendix-quals-5-3-2-2-1-1,decimal)"."; }
+#appendix-quals-5-3-2-2-1-1 > li { counter-increment: appendix-quals-5-3-2-2-1-1; }
+#appendix-quals-5-3-2-3-1-1 { counter-set: appendix-quals-5-3-2-3-1-1 0; }
+#appendix-quals-5-3-2-3-1-1 > li::marker { content: ""counter(appendix-quals-5-3-2-3-1-1,decimal)"."; }
+#appendix-quals-5-3-2-3-1-1 > li { counter-increment: appendix-quals-5-3-2-3-1-1; }
+#appendix-quals-5-3-3-2-1-7 { counter-set: appendix-quals-5-3-3-2-1-7 0; }
+#appendix-quals-5-3-3-2-1-7 > li::marker { content: ""counter(appendix-quals-5-3-3-2-1-7,decimal)"."; }
+#appendix-quals-5-3-3-2-1-7 > li { counter-increment: appendix-quals-5-3-3-2-1-7; }
+#appendix-quals-5-3-3-3-1-6 { counter-set: appendix-quals-5-3-3-3-1-6 0; }
+#appendix-quals-5-3-3-3-1-6 > li::marker { content: ""counter(appendix-quals-5-3-3-3-1-6,decimal)"."; }
+#appendix-quals-5-3-3-3-1-6 > li { counter-increment: appendix-quals-5-3-3-3-1-6; }
+#appendix-quals-5-3-4-2-1-2 { counter-set: appendix-quals-5-3-4-2-1-2 0; }
+#appendix-quals-5-3-4-2-1-2 > li::marker { content: ""counter(appendix-quals-5-3-4-2-1-2,decimal)"."; }
+#appendix-quals-5-3-4-2-1-2 > li { counter-increment: appendix-quals-5-3-4-2-1-2; }
+#appendix-quals-5-3-4-3-1-2 { counter-set: appendix-quals-5-3-4-3-1-2 0; }
+#appendix-quals-5-3-4-3-1-2 > li::marker { content: ""counter(appendix-quals-5-3-4-3-1-2,decimal)"."; }
+#appendix-quals-5-3-4-3-1-2 > li { counter-increment: appendix-quals-5-3-4-3-1-2; }
+#appendix-quals-5-4-2-2-1-4 { counter-set: appendix-quals-5-4-2-2-1-4 0; }
+#appendix-quals-5-4-2-2-1-4 > li::marker { content: ""counter(appendix-quals-5-4-2-2-1-4,decimal)"."; }
+#appendix-quals-5-4-2-2-1-4 > li { counter-increment: appendix-quals-5-4-2-2-1-4; }
+#appendix-quals-5-4-2-3-2-1 { counter-set: appendix-quals-5-4-2-3-2-1 0; }
+#appendix-quals-5-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-5-4-2-3-2-1,decimal)"."; }
+#appendix-quals-5-4-2-3-2-1 > li { counter-increment: appendix-quals-5-4-2-3-2-1; }
+#appendix-quals-5-4-4-2-1-1 { counter-set: appendix-quals-5-4-4-2-1-1 0; }
+#appendix-quals-5-4-4-2-1-1 > li::marker { content: ""counter(appendix-quals-5-4-4-2-1-1,decimal)"."; }
+#appendix-quals-5-4-4-2-1-1 > li { counter-increment: appendix-quals-5-4-4-2-1-1; }
+#appendix-quals-5-4-4-3-1-1 { counter-set: appendix-quals-5-4-4-3-1-1 0; }
+#appendix-quals-5-4-4-3-1-1 > li::marker { content: ""counter(appendix-quals-5-4-4-3-1-1,decimal)"."; }
+#appendix-quals-5-4-4-3-1-1 > li { counter-increment: appendix-quals-5-4-4-3-1-1; }
+#appendix-quals-6-2-2-2-1-6 { counter-set: appendix-quals-6-2-2-2-1-6 0; }
+#appendix-quals-6-2-2-2-1-6 > li::marker { content: ""counter(appendix-quals-6-2-2-2-1-6,decimal)"."; }
+#appendix-quals-6-2-2-2-1-6 > li { counter-increment: appendix-quals-6-2-2-2-1-6; }
+#appendix-quals-6-2-2-3-2-1 { counter-set: appendix-quals-6-2-2-3-2-1 0; }
+#appendix-quals-6-2-2-3-2-1 > li::marker { content: ""counter(appendix-quals-6-2-2-3-2-1,decimal)"."; }
+#appendix-quals-6-2-2-3-2-1 > li { counter-increment: appendix-quals-6-2-2-3-2-1; }
+#appendix-quals-6-2-4-2-1-7 { counter-set: appendix-quals-6-2-4-2-1-7 0; }
+#appendix-quals-6-2-4-2-1-7 > li::marker { content: ""counter(appendix-quals-6-2-4-2-1-7,decimal)"."; }
+#appendix-quals-6-2-4-2-1-7 > li { counter-increment: appendix-quals-6-2-4-2-1-7; }
+#appendix-quals-6-2-4-3-2-1 { counter-set: appendix-quals-6-2-4-3-2-1 0; }
+#appendix-quals-6-2-4-3-2-1 > li::marker { content: ""counter(appendix-quals-6-2-4-3-2-1,decimal)"."; }
+#appendix-quals-6-2-4-3-2-1 > li { counter-increment: appendix-quals-6-2-4-3-2-1; }
+#appendix-quals-6-3-2-2-1-1 { counter-set: appendix-quals-6-3-2-2-1-1 0; }
+#appendix-quals-6-3-2-2-1-1 > li::marker { content: ""counter(appendix-quals-6-3-2-2-1-1,decimal)"."; }
+#appendix-quals-6-3-2-2-1-1 > li { counter-increment: appendix-quals-6-3-2-2-1-1; }
+#appendix-quals-6-3-2-3-1-1 { counter-set: appendix-quals-6-3-2-3-1-1 0; }
+#appendix-quals-6-3-2-3-1-1 > li::marker { content: ""counter(appendix-quals-6-3-2-3-1-1,decimal)"."; }
+#appendix-quals-6-3-2-3-1-1 > li { counter-increment: appendix-quals-6-3-2-3-1-1; }
+#appendix-quals-6-3-3-2-2-1 { counter-set: appendix-quals-6-3-3-2-2-1 0; }
+#appendix-quals-6-3-3-2-2-1 > li::marker { content: ""counter(appendix-quals-6-3-3-2-2-1,decimal)"."; }
+#appendix-quals-6-3-3-2-2-1 > li { counter-increment: appendix-quals-6-3-3-2-2-1; }
+#appendix-quals-6-3-3-3-1-1 { counter-set: appendix-quals-6-3-3-3-1-1 0; }
+#appendix-quals-6-3-3-3-1-1 > li::marker { content: ""counter(appendix-quals-6-3-3-3-1-1,decimal)"."; }
+#appendix-quals-6-3-3-3-1-1 > li { counter-increment: appendix-quals-6-3-3-3-1-1; }
+#appendix-quals-6-3-4-2-1-9 { counter-set: appendix-quals-6-3-4-2-1-9 0; }
+#appendix-quals-6-3-4-2-1-9 > li::marker { content: ""counter(appendix-quals-6-3-4-2-1-9,decimal)"."; }
+#appendix-quals-6-3-4-2-1-9 > li { counter-increment: appendix-quals-6-3-4-2-1-9; }
+#appendix-quals-6-3-4-3-1-1 { counter-set: appendix-quals-6-3-4-3-1-1 0; }
+#appendix-quals-6-3-4-3-1-1 > li::marker { content: ""counter(appendix-quals-6-3-4-3-1-1,decimal)"."; }
+#appendix-quals-6-3-4-3-1-1 > li { counter-increment: appendix-quals-6-3-4-3-1-1; }
+#appendix-quals-6-4-2-2-2-1 { counter-set: appendix-quals-6-4-2-2-2-1 0; }
+#appendix-quals-6-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-6-4-2-2-2-1,decimal)"."; }
+#appendix-quals-6-4-2-2-2-1 > li { counter-increment: appendix-quals-6-4-2-2-2-1; }
+#appendix-quals-6-4-2-3-2-1 { counter-set: appendix-quals-6-4-2-3-2-1 0; }
+#appendix-quals-6-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-6-4-2-3-2-1,decimal)"."; }
+#appendix-quals-6-4-2-3-2-1 > li { counter-increment: appendix-quals-6-4-2-3-2-1; }
+#appendix-quals-7-2-3-2-2-1 { counter-set: appendix-quals-7-2-3-2-2-1 0; }
+#appendix-quals-7-2-3-2-2-1 > li::marker { content: ""counter(appendix-quals-7-2-3-2-2-1,decimal)"."; }
+#appendix-quals-7-2-3-2-2-1 > li { counter-increment: appendix-quals-7-2-3-2-2-1; }
+#appendix-quals-7-2-3-3-2-1 { counter-set: appendix-quals-7-2-3-3-2-1 0; }
+#appendix-quals-7-2-3-3-2-1 > li::marker { content: ""counter(appendix-quals-7-2-3-3-2-1,decimal)"."; }
+#appendix-quals-7-2-3-3-2-1 > li { counter-increment: appendix-quals-7-2-3-3-2-1; }
+#appendix-quals-7-3-2-2-2-1 { counter-set: appendix-quals-7-3-2-2-2-1 0; }
+#appendix-quals-7-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-7-3-2-2-2-1,decimal)"."; }
+#appendix-quals-7-3-2-2-2-1 > li { counter-increment: appendix-quals-7-3-2-2-2-1; }
+#appendix-quals-7-3-2-3-1-1 { counter-set: appendix-quals-7-3-2-3-1-1 0; }
+#appendix-quals-7-3-2-3-1-1 > li::marker { content: ""counter(appendix-quals-7-3-2-3-1-1,decimal)"."; }
+#appendix-quals-7-3-2-3-1-1 > li { counter-increment: appendix-quals-7-3-2-3-1-1; }
+#appendix-quals-7-3-3-2-2-1 { counter-set: appendix-quals-7-3-3-2-2-1 0; }
+#appendix-quals-7-3-3-2-2-1 > li::marker { content: ""counter(appendix-quals-7-3-3-2-2-1,decimal)"."; }
+#appendix-quals-7-3-3-2-2-1 > li { counter-increment: appendix-quals-7-3-3-2-2-1; }
+#appendix-quals-7-3-3-3-1-1 { counter-set: appendix-quals-7-3-3-3-1-1 0; }
+#appendix-quals-7-3-3-3-1-1 > li::marker { content: ""counter(appendix-quals-7-3-3-3-1-1,decimal)"."; }
+#appendix-quals-7-3-3-3-1-1 > li { counter-increment: appendix-quals-7-3-3-3-1-1; }
+#appendix-quals-7-4-2-2-1-1 { counter-set: appendix-quals-7-4-2-2-1-1 0; }
+#appendix-quals-7-4-2-2-1-1 > li::marker { content: ""counter(appendix-quals-7-4-2-2-1-1,decimal)"."; }
+#appendix-quals-7-4-2-2-1-1 > li { counter-increment: appendix-quals-7-4-2-2-1-1; }
+#appendix-quals-7-4-4-2-2-1 { counter-set: appendix-quals-7-4-4-2-2-1 0; }
+#appendix-quals-7-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-7-4-4-2-2-1,decimal)"."; }
+#appendix-quals-7-4-4-2-2-1 > li { counter-increment: appendix-quals-7-4-4-2-2-1; }
+#appendix-quals-7-4-4-3-2-1 { counter-set: appendix-quals-7-4-4-3-2-1 0; }
+#appendix-quals-7-4-4-3-2-1 > li::marker { content: ""counter(appendix-quals-7-4-4-3-2-1,decimal)"."; }
+#appendix-quals-7-4-4-3-2-1 > li { counter-increment: appendix-quals-7-4-4-3-2-1; }
+#appendix-quals-8-2-2-2-1-2 { counter-set: appendix-quals-8-2-2-2-1-2 0; }
+#appendix-quals-8-2-2-2-1-2 > li::marker { content: ""counter(appendix-quals-8-2-2-2-1-2,decimal)"."; }
+#appendix-quals-8-2-2-2-1-2 > li { counter-increment: appendix-quals-8-2-2-2-1-2; }
+#appendix-quals-8-2-2-3-1-1 { counter-set: appendix-quals-8-2-2-3-1-1 0; }
+#appendix-quals-8-2-2-3-1-1 > li::marker { content: ""counter(appendix-quals-8-2-2-3-1-1,decimal)"."; }
+#appendix-quals-8-2-2-3-1-1 > li { counter-increment: appendix-quals-8-2-2-3-1-1; }
+#appendix-quals-8-2-3-2-2-1 { counter-set: appendix-quals-8-2-3-2-2-1 0; }
+#appendix-quals-8-2-3-2-2-1 > li::marker { content: ""counter(appendix-quals-8-2-3-2-2-1,decimal)"."; }
+#appendix-quals-8-2-3-2-2-1 > li { counter-increment: appendix-quals-8-2-3-2-2-1; }
+#appendix-quals-8-2-3-3-1-1 { counter-set: appendix-quals-8-2-3-3-1-1 0; }
+#appendix-quals-8-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-8-2-3-3-1-1,decimal)"."; }
+#appendix-quals-8-2-3-3-1-1 > li { counter-increment: appendix-quals-8-2-3-3-1-1; }
+#appendix-quals-8-2-4-2-1-5 { counter-set: appendix-quals-8-2-4-2-1-5 0; }
+#appendix-quals-8-2-4-2-1-5 > li::marker { content: ""counter(appendix-quals-8-2-4-2-1-5,decimal)"."; }
+#appendix-quals-8-2-4-2-1-5 > li { counter-increment: appendix-quals-8-2-4-2-1-5; }
+#appendix-quals-8-2-4-3-1-6 { counter-set: appendix-quals-8-2-4-3-1-6 0; }
+#appendix-quals-8-2-4-3-1-6 > li::marker { content: ""counter(appendix-quals-8-2-4-3-1-6,decimal)"."; }
+#appendix-quals-8-2-4-3-1-6 > li { counter-increment: appendix-quals-8-2-4-3-1-6; }
+#appendix-quals-8-3-2-2-2-1 { counter-set: appendix-quals-8-3-2-2-2-1 0; }
+#appendix-quals-8-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-8-3-2-2-2-1,decimal)"."; }
+#appendix-quals-8-3-2-2-2-1 > li { counter-increment: appendix-quals-8-3-2-2-2-1; }
+#appendix-quals-8-3-2-3-2-1 { counter-set: appendix-quals-8-3-2-3-2-1 0; }
+#appendix-quals-8-3-2-3-2-1 > li::marker { content: ""counter(appendix-quals-8-3-2-3-2-1,decimal)"."; }
+#appendix-quals-8-3-2-3-2-1 > li { counter-increment: appendix-quals-8-3-2-3-2-1; }
+#appendix-quals-8-3-3-2-2-1 { counter-set: appendix-quals-8-3-3-2-2-1 0; }
+#appendix-quals-8-3-3-2-2-1 > li::marker { content: ""counter(appendix-quals-8-3-3-2-2-1,decimal)"."; }
+#appendix-quals-8-3-3-2-2-1 > li { counter-increment: appendix-quals-8-3-3-2-2-1; }
+#appendix-quals-8-3-3-3-1-1 { counter-set: appendix-quals-8-3-3-3-1-1 0; }
+#appendix-quals-8-3-3-3-1-1 > li::marker { content: ""counter(appendix-quals-8-3-3-3-1-1,decimal)"."; }
+#appendix-quals-8-3-3-3-1-1 > li { counter-increment: appendix-quals-8-3-3-3-1-1; }
+#appendix-quals-8-4-2-2-2-1 { counter-set: appendix-quals-8-4-2-2-2-1 0; }
+#appendix-quals-8-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-8-4-2-2-2-1,decimal)"."; }
+#appendix-quals-8-4-2-2-2-1 > li { counter-increment: appendix-quals-8-4-2-2-2-1; }
+#appendix-quals-8-4-2-3-2-1 { counter-set: appendix-quals-8-4-2-3-2-1 0; }
+#appendix-quals-8-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-8-4-2-3-2-1,decimal)"."; }
+#appendix-quals-8-4-2-3-2-1 > li { counter-increment: appendix-quals-8-4-2-3-2-1; }
+#appendix-quals-8-4-3-2-1-4 { counter-set: appendix-quals-8-4-3-2-1-4 0; }
+#appendix-quals-8-4-3-2-1-4 > li::marker { content: ""counter(appendix-quals-8-4-3-2-1-4,decimal)"."; }
+#appendix-quals-8-4-3-2-1-4 > li { counter-increment: appendix-quals-8-4-3-2-1-4; }
+#appendix-quals-8-4-3-3-2-1 { counter-set: appendix-quals-8-4-3-3-2-1 0; }
+#appendix-quals-8-4-3-3-2-1 > li::marker { content: ""counter(appendix-quals-8-4-3-3-2-1,decimal)"."; }
+#appendix-quals-8-4-3-3-2-1 > li { counter-increment: appendix-quals-8-4-3-3-2-1; }
+#appendix-quals-8-4-4-2-2-1 { counter-set: appendix-quals-8-4-4-2-2-1 0; }
+#appendix-quals-8-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-8-4-4-2-2-1,decimal)"."; }
+#appendix-quals-8-4-4-2-2-1 > li { counter-increment: appendix-quals-8-4-4-2-2-1; }
+#appendix-quals-8-4-4-3-1-1 { counter-set: appendix-quals-8-4-4-3-1-1 0; }
+#appendix-quals-8-4-4-3-1-1 > li::marker { content: ""counter(appendix-quals-8-4-4-3-1-1,decimal)"."; }
+#appendix-quals-8-4-4-3-1-1 > li { counter-increment: appendix-quals-8-4-4-3-1-1; }
+#appendix-quals-9-2-2-2-1-2 { counter-set: appendix-quals-9-2-2-2-1-2 0; }
+#appendix-quals-9-2-2-2-1-2 > li::marker { content: ""counter(appendix-quals-9-2-2-2-1-2,decimal)"."; }
+#appendix-quals-9-2-2-2-1-2 > li { counter-increment: appendix-quals-9-2-2-2-1-2; }
+#appendix-quals-9-2-2-3-2-1 { counter-set: appendix-quals-9-2-2-3-2-1 0; }
+#appendix-quals-9-2-2-3-2-1 > li::marker { content: ""counter(appendix-quals-9-2-2-3-2-1,decimal)"."; }
+#appendix-quals-9-2-2-3-2-1 > li { counter-increment: appendix-quals-9-2-2-3-2-1; }
+#appendix-quals-9-2-3-2-2-1 { counter-set: appendix-quals-9-2-3-2-2-1 0; }
+#appendix-quals-9-2-3-2-2-1 > li::marker { content: ""counter(appendix-quals-9-2-3-2-2-1,decimal)"."; }
+#appendix-quals-9-2-3-2-2-1 > li { counter-increment: appendix-quals-9-2-3-2-2-1; }
+#appendix-quals-9-2-3-3-2-1 { counter-set: appendix-quals-9-2-3-3-2-1 0; }
+#appendix-quals-9-2-3-3-2-1 > li::marker { content: ""counter(appendix-quals-9-2-3-3-2-1,decimal)"."; }
+#appendix-quals-9-2-3-3-2-1 > li { counter-increment: appendix-quals-9-2-3-3-2-1; }
+#appendix-quals-9-3-2-2-1-2 { counter-set: appendix-quals-9-3-2-2-1-2 0; }
+#appendix-quals-9-3-2-2-1-2 > li::marker { content: ""counter(appendix-quals-9-3-2-2-1-2,decimal)"."; }
+#appendix-quals-9-3-2-2-1-2 > li { counter-increment: appendix-quals-9-3-2-2-1-2; }
+#appendix-quals-9-3-2-3-2-1 { counter-set: appendix-quals-9-3-2-3-2-1 0; }
+#appendix-quals-9-3-2-3-2-1 > li::marker { content: ""counter(appendix-quals-9-3-2-3-2-1,decimal)"."; }
+#appendix-quals-9-3-2-3-2-1 > li { counter-increment: appendix-quals-9-3-2-3-2-1; }
+#appendix-quals-9-3-4-2-2-1 { counter-set: appendix-quals-9-3-4-2-2-1 0; }
+#appendix-quals-9-3-4-2-2-1 > li::marker { content: ""counter(appendix-quals-9-3-4-2-2-1,decimal)"."; }
+#appendix-quals-9-3-4-2-2-1 > li { counter-increment: appendix-quals-9-3-4-2-2-1; }
+#appendix-quals-9-3-4-4-2-1 { counter-set: appendix-quals-9-3-4-4-2-1 0; }
+#appendix-quals-9-3-4-4-2-1 > li::marker { content: ""counter(appendix-quals-9-3-4-4-2-1,decimal)"."; }
+#appendix-quals-9-3-4-4-2-1 > li { counter-increment: appendix-quals-9-3-4-4-2-1; }
+#appendix-quals-9-4-3-2-2-1 { counter-set: appendix-quals-9-4-3-2-2-1 0; }
+#appendix-quals-9-4-3-2-2-1 > li::marker { content: ""counter(appendix-quals-9-4-3-2-2-1,decimal)"."; }
+#appendix-quals-9-4-3-2-2-1 > li { counter-increment: appendix-quals-9-4-3-2-2-1; }
+#appendix-quals-9-4-3-3-2-1 { counter-set: appendix-quals-9-4-3-3-2-1 0; }
+#appendix-quals-9-4-3-3-2-1 > li::marker { content: ""counter(appendix-quals-9-4-3-3-2-1,decimal)"."; }
+#appendix-quals-9-4-3-3-2-1 > li { counter-increment: appendix-quals-9-4-3-3-2-1; }
+#appendix-quals-9-4-4-2-2-1 { counter-set: appendix-quals-9-4-4-2-2-1 0; }
+#appendix-quals-9-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-9-4-4-2-2-1,decimal)"."; }
+#appendix-quals-9-4-4-2-2-1 > li { counter-increment: appendix-quals-9-4-4-2-2-1; }
+#appendix-quals-9-4-4-3-2-1 { counter-set: appendix-quals-9-4-4-3-2-1 0; }
+#appendix-quals-9-4-4-3-2-1 > li::marker { content: ""counter(appendix-quals-9-4-4-3-2-1,decimal)"."; }
+#appendix-quals-9-4-4-3-2-1 > li { counter-increment: appendix-quals-9-4-4-3-2-1; }
+#appendix-quals-10-2-4-2-1-5 { counter-set: appendix-quals-10-2-4-2-1-5 0; }
+#appendix-quals-10-2-4-2-1-5 > li::marker { content: ""counter(appendix-quals-10-2-4-2-1-5,decimal)"."; }
+#appendix-quals-10-2-4-2-1-5 > li { counter-increment: appendix-quals-10-2-4-2-1-5; }
+#appendix-quals-10-2-4-3-1-1 { counter-set: appendix-quals-10-2-4-3-1-1 0; }
+#appendix-quals-10-2-4-3-1-1 > li::marker { content: ""counter(appendix-quals-10-2-4-3-1-1,decimal)"."; }
+#appendix-quals-10-2-4-3-1-1 > li { counter-increment: appendix-quals-10-2-4-3-1-1; }
+#appendix-quals-10-3-4-2-2-1 { counter-set: appendix-quals-10-3-4-2-2-1 0; }
+#appendix-quals-10-3-4-2-2-1 > li::marker { content: ""counter(appendix-quals-10-3-4-2-2-1,decimal)"."; }
+#appendix-quals-10-3-4-2-2-1 > li { counter-increment: appendix-quals-10-3-4-2-2-1; }
+#appendix-quals-10-3-4-3-2-1 { counter-set: appendix-quals-10-3-4-3-2-1 0; }
+#appendix-quals-10-3-4-3-2-1 > li::marker { content: ""counter(appendix-quals-10-3-4-3-2-1,decimal)"."; }
+#appendix-quals-10-3-4-3-2-1 > li { counter-increment: appendix-quals-10-3-4-3-2-1; }
+#appendix-quals-10-4-2-2-2-1 { counter-set: appendix-quals-10-4-2-2-2-1 0; }
+#appendix-quals-10-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-10-4-2-2-2-1,decimal)"."; }
+#appendix-quals-10-4-2-2-2-1 > li { counter-increment: appendix-quals-10-4-2-2-2-1; }
+#appendix-quals-10-4-2-3-2-1 { counter-set: appendix-quals-10-4-2-3-2-1 0; }
+#appendix-quals-10-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-10-4-2-3-2-1,decimal)"."; }
+#appendix-quals-10-4-2-3-2-1 > li { counter-increment: appendix-quals-10-4-2-3-2-1; }
+#appendix-quals-10-4-4-2-2-1 { counter-set: appendix-quals-10-4-4-2-2-1 0; }
+#appendix-quals-10-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-10-4-4-2-2-1,decimal)"."; }
+#appendix-quals-10-4-4-2-2-1 > li { counter-increment: appendix-quals-10-4-4-2-2-1; }
+#appendix-quals-10-4-4-3-1-1 { counter-set: appendix-quals-10-4-4-3-1-1 0; }
+#appendix-quals-10-4-4-3-1-1 > li::marker { content: ""counter(appendix-quals-10-4-4-3-1-1,decimal)"."; }
+#appendix-quals-10-4-4-3-1-1 > li { counter-increment: appendix-quals-10-4-4-3-1-1; }
+#appendix-quals-11-2-4-2-1-1 { counter-set: appendix-quals-11-2-4-2-1-1 0; }
+#appendix-quals-11-2-4-2-1-1 > li::marker { content: ""counter(appendix-quals-11-2-4-2-1-1,decimal)"."; }
+#appendix-quals-11-2-4-2-1-1 > li { counter-increment: appendix-quals-11-2-4-2-1-1; }
+#appendix-quals-11-2-4-3-1-1 { counter-set: appendix-quals-11-2-4-3-1-1 0; }
+#appendix-quals-11-2-4-3-1-1 > li::marker { content: ""counter(appendix-quals-11-2-4-3-1-1,decimal)"."; }
+#appendix-quals-11-2-4-3-1-1 > li { counter-increment: appendix-quals-11-2-4-3-1-1; }
+#appendix-quals-11-4-2-2-2-1 { counter-set: appendix-quals-11-4-2-2-2-1 0; }
+#appendix-quals-11-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-11-4-2-2-2-1,decimal)"."; }
+#appendix-quals-11-4-2-2-2-1 > li { counter-increment: appendix-quals-11-4-2-2-2-1; }
+#appendix-quals-11-4-2-3-2-1 { counter-set: appendix-quals-11-4-2-3-2-1 0; }
+#appendix-quals-11-4-2-3-2-1 > li::marker { content: ""counter(appendix-quals-11-4-2-3-2-1,decimal)"."; }
+#appendix-quals-11-4-2-3-2-1 > li { counter-increment: appendix-quals-11-4-2-3-2-1; }
+#appendix-quals-11-4-3-2-1-1 { counter-set: appendix-quals-11-4-3-2-1-1 0; }
+#appendix-quals-11-4-3-2-1-1 > li::marker { content: ""counter(appendix-quals-11-4-3-2-1-1,decimal)"."; }
+#appendix-quals-11-4-3-2-1-1 > li { counter-increment: appendix-quals-11-4-3-2-1-1; }
+#appendix-quals-11-4-3-3-1-1 { counter-set: appendix-quals-11-4-3-3-1-1 0; }
+#appendix-quals-11-4-3-3-1-1 > li::marker { content: ""counter(appendix-quals-11-4-3-3-1-1,decimal)"."; }
+#appendix-quals-11-4-3-3-1-1 > li { counter-increment: appendix-quals-11-4-3-3-1-1; }
+#appendix-quals-11-4-4-2-1-4 { counter-set: appendix-quals-11-4-4-2-1-4 0; }
+#appendix-quals-11-4-4-2-1-4 > li::marker { content: ""counter(appendix-quals-11-4-4-2-1-4,decimal)"."; }
+#appendix-quals-11-4-4-2-1-4 > li { counter-increment: appendix-quals-11-4-4-2-1-4; }
+#appendix-quals-11-4-4-3-2-1 { counter-set: appendix-quals-11-4-4-3-2-1 0; }
+#appendix-quals-11-4-4-3-2-1 > li::marker { content: ""counter(appendix-quals-11-4-4-3-2-1,decimal)"."; }
+#appendix-quals-11-4-4-3-2-1 > li { counter-increment: appendix-quals-11-4-4-3-2-1; }
+#appendix-quals-12-2-2-2-1-3 { counter-set: appendix-quals-12-2-2-2-1-3 0; }
+#appendix-quals-12-2-2-2-1-3 > li::marker { content: ""counter(appendix-quals-12-2-2-2-1-3,decimal)"."; }
+#appendix-quals-12-2-2-2-1-3 > li { counter-increment: appendix-quals-12-2-2-2-1-3; }
+#appendix-quals-12-2-2-3-2-1 { counter-set: appendix-quals-12-2-2-3-2-1 0; }
+#appendix-quals-12-2-2-3-2-1 > li::marker { content: ""counter(appendix-quals-12-2-2-3-2-1,decimal)"."; }
+#appendix-quals-12-2-2-3-2-1 > li { counter-increment: appendix-quals-12-2-2-3-2-1; }
+#appendix-quals-12-3-4-2-1-3 { counter-set: appendix-quals-12-3-4-2-1-3 0; }
+#appendix-quals-12-3-4-2-1-3 > li::marker { content: ""counter(appendix-quals-12-3-4-2-1-3,decimal)"."; }
+#appendix-quals-12-3-4-2-1-3 > li { counter-increment: appendix-quals-12-3-4-2-1-3; }
+#appendix-quals-12-3-4-3-1-1 { counter-set: appendix-quals-12-3-4-3-1-1 0; }
+#appendix-quals-12-3-4-3-1-1 > li::marker { content: ""counter(appendix-quals-12-3-4-3-1-1,decimal)"."; }
+#appendix-quals-12-3-4-3-1-1 > li { counter-increment: appendix-quals-12-3-4-3-1-1; }
+#appendix-quals-12-4-4-2-1-4 { counter-set: appendix-quals-12-4-4-2-1-4 0; }
+#appendix-quals-12-4-4-2-1-4 > li::marker { content: ""counter(appendix-quals-12-4-4-2-1-4,decimal)"."; }
+#appendix-quals-12-4-4-2-1-4 > li { counter-increment: appendix-quals-12-4-4-2-1-4; }
+#appendix-quals-12-4-4-3-1-1 { counter-set: appendix-quals-12-4-4-3-1-1 0; }
+#appendix-quals-12-4-4-3-1-1 > li::marker { content: ""counter(appendix-quals-12-4-4-3-1-1,decimal)"."; }
+#appendix-quals-12-4-4-3-1-1 > li { counter-increment: appendix-quals-12-4-4-3-1-1; }
+#appendix-quals-13-3-2-2-1-1 { counter-set: appendix-quals-13-3-2-2-1-1 0; }
+#appendix-quals-13-3-2-2-1-1 > li::marker { content: ""counter(appendix-quals-13-3-2-2-1-1,decimal)"."; }
+#appendix-quals-13-3-2-2-1-1 > li { counter-increment: appendix-quals-13-3-2-2-1-1; }
+#appendix-quals-14-2-3-2-1-5 { counter-set: appendix-quals-14-2-3-2-1-5 0; }
+#appendix-quals-14-2-3-2-1-5 > li::marker { content: ""counter(appendix-quals-14-2-3-2-1-5,decimal)"."; }
+#appendix-quals-14-2-3-2-1-5 > li { counter-increment: appendix-quals-14-2-3-2-1-5; }
+#appendix-quals-15-2-2-2-2-1 { counter-set: appendix-quals-15-2-2-2-2-1 0; }
+#appendix-quals-15-2-2-2-2-1 > li::marker { content: ""counter(appendix-quals-15-2-2-2-2-1,decimal)"."; }
+#appendix-quals-15-2-2-2-2-1 > li { counter-increment: appendix-quals-15-2-2-2-2-1; }
+#appendix-quals-15-3-3-2-2-1 { counter-set: appendix-quals-15-3-3-2-2-1 0; }
+#appendix-quals-15-3-3-2-2-1 > li::marker { content: ""counter(appendix-quals-15-3-3-2-2-1,decimal)"."; }
+#appendix-quals-15-3-3-2-2-1 > li { counter-increment: appendix-quals-15-3-3-2-2-1; }
+#appendix-quals-15-4-2-2-2-1 { counter-set: appendix-quals-15-4-2-2-2-1 0; }
+#appendix-quals-15-4-2-2-2-1 > li::marker { content: ""counter(appendix-quals-15-4-2-2-2-1,decimal)"."; }
+#appendix-quals-15-4-2-2-2-1 > li { counter-increment: appendix-quals-15-4-2-2-2-1; }
+#appendix-quals-16-2-2-2-1-4 { counter-set: appendix-quals-16-2-2-2-1-4 0; }
+#appendix-quals-16-2-2-2-1-4 > li::marker { content: ""counter(appendix-quals-16-2-2-2-1-4,decimal)"."; }
+#appendix-quals-16-2-2-2-1-4 > li { counter-increment: appendix-quals-16-2-2-2-1-4; }
+#appendix-quals-16-2-3-2-1-8 { counter-set: appendix-quals-16-2-3-2-1-8 0; }
+#appendix-quals-16-2-3-2-1-8 > li::marker { content: ""counter(appendix-quals-16-2-3-2-1-8,decimal)"."; }
+#appendix-quals-16-2-3-2-1-8 > li { counter-increment: appendix-quals-16-2-3-2-1-8; }
+#appendix-quals-16-3-2-2-1-3 { counter-set: appendix-quals-16-3-2-2-1-3 0; }
+#appendix-quals-16-3-2-2-1-3 > li::marker { content: ""counter(appendix-quals-16-3-2-2-1-3,decimal)"."; }
+#appendix-quals-16-3-2-2-1-3 > li { counter-increment: appendix-quals-16-3-2-2-1-3; }
+#appendix-quals-16-3-2-3-1-3 { counter-set: appendix-quals-16-3-2-3-1-3 0; }
+#appendix-quals-16-3-2-3-1-3 > li::marker { content: ""counter(appendix-quals-16-3-2-3-1-3,decimal)"."; }
+#appendix-quals-16-3-2-3-1-3 > li { counter-increment: appendix-quals-16-3-2-3-1-3; }
+#appendix-quals-16-4-4-2-2-1 { counter-set: appendix-quals-16-4-4-2-2-1 0; }
+#appendix-quals-16-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-16-4-4-2-2-1,decimal)"."; }
+#appendix-quals-16-4-4-2-2-1 > li { counter-increment: appendix-quals-16-4-4-2-2-1; }
+#appendix-quals-17-3-2-2-2-1 { counter-set: appendix-quals-17-3-2-2-2-1 0; }
+#appendix-quals-17-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-17-3-2-2-2-1,decimal)"."; }
+#appendix-quals-17-3-2-2-2-1 > li { counter-increment: appendix-quals-17-3-2-2-2-1; }
+#appendix-quals-18-3-2-2-2-1 { counter-set: appendix-quals-18-3-2-2-2-1 0; }
+#appendix-quals-18-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-18-3-2-2-2-1,decimal)"."; }
+#appendix-quals-18-3-2-2-2-1 > li { counter-increment: appendix-quals-18-3-2-2-2-1; }
+#appendix-quals-18-4-4-2-2-1 { counter-set: appendix-quals-18-4-4-2-2-1 0; }
+#appendix-quals-18-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-18-4-4-2-2-1,decimal)"."; }
+#appendix-quals-18-4-4-2-2-1 > li { counter-increment: appendix-quals-18-4-4-2-2-1; }
+#appendix-quals-19-2-3-2-2-1 { counter-set: appendix-quals-19-2-3-2-2-1 0; }
+#appendix-quals-19-2-3-2-2-1 > li::marker { content: ""counter(appendix-quals-19-2-3-2-2-1,decimal)"."; }
+#appendix-quals-19-2-3-2-2-1 > li { counter-increment: appendix-quals-19-2-3-2-2-1; }
+#appendix-quals-19-2-3-3-1-1 { counter-set: appendix-quals-19-2-3-3-1-1 0; }
+#appendix-quals-19-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-19-2-3-3-1-1,decimal)"."; }
+#appendix-quals-19-2-3-3-1-1 > li { counter-increment: appendix-quals-19-2-3-3-1-1; }
+#appendix-quals-19-2-4-2-1-9 { counter-set: appendix-quals-19-2-4-2-1-9 0; }
+#appendix-quals-19-2-4-2-1-9 > li::marker { content: ""counter(appendix-quals-19-2-4-2-1-9,decimal)"."; }
+#appendix-quals-19-2-4-2-1-9 > li { counter-increment: appendix-quals-19-2-4-2-1-9; }
+#appendix-quals-19-2-4-3-2-1 { counter-set: appendix-quals-19-2-4-3-2-1 0; }
+#appendix-quals-19-2-4-3-2-1 > li::marker { content: ""counter(appendix-quals-19-2-4-3-2-1,decimal)"."; }
+#appendix-quals-19-2-4-3-2-1 > li { counter-increment: appendix-quals-19-2-4-3-2-1; }
+#appendix-quals-19-3-2-2-2-1 { counter-set: appendix-quals-19-3-2-2-2-1 0; }
+#appendix-quals-19-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-19-3-2-2-2-1,decimal)"."; }
+#appendix-quals-19-3-2-2-2-1 > li { counter-increment: appendix-quals-19-3-2-2-2-1; }
+#appendix-quals-20-3-2-2-2-1 { counter-set: appendix-quals-20-3-2-2-2-1 0; }
+#appendix-quals-20-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-20-3-2-2-2-1,decimal)"."; }
+#appendix-quals-20-3-2-2-2-1 > li { counter-increment: appendix-quals-20-3-2-2-2-1; }
+#appendix-quals-20-3-3-2-2-1 { counter-set: appendix-quals-20-3-3-2-2-1 0; }
+#appendix-quals-20-3-3-2-2-1 > li::marker { content: ""counter(appendix-quals-20-3-3-2-2-1,decimal)"."; }
+#appendix-quals-20-3-3-2-2-1 > li { counter-increment: appendix-quals-20-3-3-2-2-1; }
+#appendix-quals-21-2-4-2-1-6 { counter-set: appendix-quals-21-2-4-2-1-6 0; }
+#appendix-quals-21-2-4-2-1-6 > li::marker { content: ""counter(appendix-quals-21-2-4-2-1-6,decimal)"."; }
+#appendix-quals-21-2-4-2-1-6 > li { counter-increment: appendix-quals-21-2-4-2-1-6; }
+#appendix-quals-21-2-4-4-1-6 { counter-set: appendix-quals-21-2-4-4-1-6 0; }
+#appendix-quals-21-2-4-4-1-6 > li::marker { content: ""counter(appendix-quals-21-2-4-4-1-6,decimal)"."; }
+#appendix-quals-21-2-4-4-1-6 > li { counter-increment: appendix-quals-21-2-4-4-1-6; }
+#appendix-quals-21-3-2-2-2-1 { counter-set: appendix-quals-21-3-2-2-2-1 0; }
+#appendix-quals-21-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-21-3-2-2-2-1,decimal)"."; }
+#appendix-quals-21-3-2-2-2-1 > li { counter-increment: appendix-quals-21-3-2-2-2-1; }
+#appendix-quals-21-3-2-4-2-1 { counter-set: appendix-quals-21-3-2-4-2-1 0; }
+#appendix-quals-21-3-2-4-2-1 > li::marker { content: ""counter(appendix-quals-21-3-2-4-2-1,decimal)"."; }
+#appendix-quals-21-3-2-4-2-1 > li { counter-increment: appendix-quals-21-3-2-4-2-1; }
+#appendix-quals-21-3-3-2-1-2 { counter-set: appendix-quals-21-3-3-2-1-2 0; }
+#appendix-quals-21-3-3-2-1-2 > li::marker { content: ""counter(appendix-quals-21-3-3-2-1-2,decimal)"."; }
+#appendix-quals-21-3-3-2-1-2 > li { counter-increment: appendix-quals-21-3-3-2-1-2; }
+#appendix-quals-21-3-3-3-2-1 { counter-set: appendix-quals-21-3-3-3-2-1 0; }
+#appendix-quals-21-3-3-3-2-1 > li::marker { content: ""counter(appendix-quals-21-3-3-3-2-1,decimal)"."; }
+#appendix-quals-21-3-3-3-2-1 > li { counter-increment: appendix-quals-21-3-3-3-2-1; }
+#appendix-quals-21-4-3-2-1-2 { counter-set: appendix-quals-21-4-3-2-1-2 0; }
+#appendix-quals-21-4-3-2-1-2 > li::marker { content: ""counter(appendix-quals-21-4-3-2-1-2,decimal)"."; }
+#appendix-quals-21-4-3-2-1-2 > li { counter-increment: appendix-quals-21-4-3-2-1-2; }
+#appendix-quals-21-4-4-2-2-1 { counter-set: appendix-quals-21-4-4-2-2-1 0; }
+#appendix-quals-21-4-4-2-2-1 > li::marker { content: ""counter(appendix-quals-21-4-4-2-2-1,decimal)"."; }
+#appendix-quals-21-4-4-2-2-1 > li { counter-increment: appendix-quals-21-4-4-2-2-1; }
+#appendix-quals-22-2-3-2-1-2 { counter-set: appendix-quals-22-2-3-2-1-2 0; }
+#appendix-quals-22-2-3-2-1-2 > li::marker { content: ""counter(appendix-quals-22-2-3-2-1-2,decimal)"."; }
+#appendix-quals-22-2-3-2-1-2 > li { counter-increment: appendix-quals-22-2-3-2-1-2; }
+#appendix-quals-22-2-3-3-1-1 { counter-set: appendix-quals-22-2-3-3-1-1 0; }
+#appendix-quals-22-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-22-2-3-3-1-1,decimal)"."; }
+#appendix-quals-22-2-3-3-1-1 > li { counter-increment: appendix-quals-22-2-3-3-1-1; }
+#appendix-quals-22-2-5-2-1-5 { counter-set: appendix-quals-22-2-5-2-1-5 0; }
+#appendix-quals-22-2-5-2-1-5 > li::marker { content: ""counter(appendix-quals-22-2-5-2-1-5,decimal)"."; }
+#appendix-quals-22-2-5-2-1-5 > li { counter-increment: appendix-quals-22-2-5-2-1-5; }
+#appendix-quals-22-2-5-3-1-1 { counter-set: appendix-quals-22-2-5-3-1-1 0; }
+#appendix-quals-22-2-5-3-1-1 > li::marker { content: ""counter(appendix-quals-22-2-5-3-1-1,decimal)"."; }
+#appendix-quals-22-2-5-3-1-1 > li { counter-increment: appendix-quals-22-2-5-3-1-1; }
+#appendix-quals-22-3-2-2-2-1 { counter-set: appendix-quals-22-3-2-2-2-1 0; }
+#appendix-quals-22-3-2-2-2-1 > li::marker { content: ""counter(appendix-quals-22-3-2-2-2-1,decimal)"."; }
+#appendix-quals-22-3-2-2-2-1 > li { counter-increment: appendix-quals-22-3-2-2-2-1; }
+#appendix-quals-22-3-2-3-1-1 { counter-set: appendix-quals-22-3-2-3-1-1 0; }
+#appendix-quals-22-3-2-3-1-1 > li::marker { content: ""counter(appendix-quals-22-3-2-3-1-1,decimal)"."; }
+#appendix-quals-22-3-2-3-1-1 > li { counter-increment: appendix-quals-22-3-2-3-1-1; }
+#appendix-quals-22-3-5-2-1-8 { counter-set: appendix-quals-22-3-5-2-1-8 0; }
+#appendix-quals-22-3-5-2-1-8 > li::marker { content: ""counter(appendix-quals-22-3-5-2-1-8,decimal)"."; }
+#appendix-quals-22-3-5-2-1-8 > li { counter-increment: appendix-quals-22-3-5-2-1-8; }
+#appendix-quals-22-3-5-3-2-1 { counter-set: appendix-quals-22-3-5-3-2-1 0; }
+#appendix-quals-22-3-5-3-2-1 > li::marker { content: ""counter(appendix-quals-22-3-5-3-2-1,decimal)"."; }
+#appendix-quals-22-3-5-3-2-1 > li { counter-increment: appendix-quals-22-3-5-3-2-1; }
+#appendix-quals-22-4-2-2-1-3 { counter-set: appendix-quals-22-4-2-2-1-3 0; }
+#appendix-quals-22-4-2-2-1-3 > li::marker { content: ""counter(appendix-quals-22-4-2-2-1-3,decimal)"."; }
+#appendix-quals-22-4-2-2-1-3 > li { counter-increment: appendix-quals-22-4-2-2-1-3; }
+#appendix-quals-22-4-2-3-1-1 { counter-set: appendix-quals-22-4-2-3-1-1 0; }
+#appendix-quals-22-4-2-3-1-1 > li::marker { content: ""counter(appendix-quals-22-4-2-3-1-1,decimal)"."; }
+#appendix-quals-22-4-2-3-1-1 > li { counter-increment: appendix-quals-22-4-2-3-1-1; }
+#appendix-quals-22-4-3-2-2-1 { counter-set: appendix-quals-22-4-3-2-2-1 0; }
+#appendix-quals-22-4-3-2-2-1 > li::marker { content: ""counter(appendix-quals-22-4-3-2-2-1,decimal)"."; }
+#appendix-quals-22-4-3-2-2-1 > li { counter-increment: appendix-quals-22-4-3-2-2-1; }
+#appendix-quals-22-4-3-3-1-1 { counter-set: appendix-quals-22-4-3-3-1-1 0; }
+#appendix-quals-22-4-3-3-1-1 > li::marker { content: ""counter(appendix-quals-22-4-3-3-1-1,decimal)"."; }
+#appendix-quals-22-4-3-3-1-1 > li { counter-increment: appendix-quals-22-4-3-3-1-1; }
+#appendix-quals-23-2-3-2-1-1 { counter-set: appendix-quals-23-2-3-2-1-1 0; }
+#appendix-quals-23-2-3-2-1-1 > li::marker { content: ""counter(appendix-quals-23-2-3-2-1-1,decimal)"."; }
+#appendix-quals-23-2-3-2-1-1 > li { counter-increment: appendix-quals-23-2-3-2-1-1; }
+#appendix-quals-23-2-3-3-1-1 { counter-set: appendix-quals-23-2-3-3-1-1 0; }
+#appendix-quals-23-2-3-3-1-1 > li::marker { content: ""counter(appendix-quals-23-2-3-3-1-1,decimal)"."; }
+#appendix-quals-23-2-3-3-1-1 > li { counter-increment: appendix-quals-23-2-3-3-1-1; }
+#appendix-quals-23-2-4-2-1-3 { counter-set: appendix-quals-23-2-4-2-1-3 0; }
+#appendix-quals-23-2-4-2-1-3 > li::marker { content: ""counter(appendix-quals-23-2-4-2-1-3,decimal)"."; }
+#appendix-quals-23-2-4-2-1-3 > li { counter-increment: appendix-quals-23-2-4-2-1-3; }
+#appendix-quals-23-2-4-3-1-1 { counter-set: appendix-quals-23-2-4-3-1-1 0; }
+#appendix-quals-23-2-4-3-1-1 > li::marker { content: ""counter(appendix-quals-23-2-4-3-1-1,decimal)"."; }
+#appendix-quals-23-2-4-3-1-1 > li { counter-increment: appendix-quals-23-2-4-3-1-1; }
+#appendix-quals-23-3-2-2-1-4 { counter-set: appendix-quals-23-3-2-2-1-4 0; }
+#appendix-quals-23-3-2-2-1-4 > li::marker { content: ""counter(appendix-quals-23-3-2-2-1-4,decimal)"."; }
+#appendix-quals-23-3-2-2-1-4 > li { counter-increment: appendix-quals-23-3-2-2-1-4; }
+#appendix-quals-23-3-3-2-1-7 { counter-set: appendix-quals-23-3-3-2-1-7 0; }
+#appendix-quals-23-3-3-2-1-7 > li::marker { content: ""counter(appendix-quals-23-3-3-2-1-7,decimal)"."; }
+#appendix-quals-23-3-3-2-1-7 > li { counter-increment: appendix-quals-23-3-3-2-1-7; }
+#appendix-quals-23-3-3-3-1-1 { counter-set: appendix-quals-23-3-3-3-1-1 0; }
+#appendix-quals-23-3-3-3-1-1 > li::marker { content: ""counter(appendix-quals-23-3-3-3-1-1,decimal)"."; }
+#appendix-quals-23-3-3-3-1-1 > li { counter-increment: appendix-quals-23-3-3-3-1-1; }
+#appendix-quals-23-3-3-3-1-1-2-1-7 { counter-set: appendix-quals-23-3-3-3-1-1-2-1-7 0; }
+#appendix-quals-23-3-3-3-1-1-2-1-7 > li::marker { content: "("counter(appendix-quals-23-3-3-3-1-1-2-1-7,lower-alpha)")"; }
+#appendix-quals-23-3-3-3-1-1-2-1-7 > li { counter-increment: appendix-quals-23-3-3-3-1-1-2-1-7; }
+#appendix-quals-23-4-2-2-1-6 { counter-set: appendix-quals-23-4-2-2-1-6 0; }
+#appendix-quals-23-4-2-2-1-6 > li::marker { content: ""counter(appendix-quals-23-4-2-2-1-6,decimal)"."; }
+#appendix-quals-23-4-2-2-1-6 > li { counter-increment: appendix-quals-23-4-2-2-1-6; }
+#appendix-quals-23-4-2-3-1-1 { counter-set: appendix-quals-23-4-2-3-1-1 0; }
+#appendix-quals-23-4-2-3-1-1 > li::marker { content: ""counter(appendix-quals-23-4-2-3-1-1,decimal)"."; }
+#appendix-quals-23-4-2-3-1-1 > li { counter-increment: appendix-quals-23-4-2-3-1-1; }
+#appendix-quals-23-4-4-2-1-2 { counter-set: appendix-quals-23-4-4-2-1-2 0; }
+#appendix-quals-23-4-4-2-1-2 > li::marker { content: ""counter(appendix-quals-23-4-4-2-1-2,decimal)"."; }
+#appendix-quals-23-4-4-2-1-2 > li { counter-increment: appendix-quals-23-4-4-2-1-2; }
+#appendix-quals-23-4-4-4-1-2 { counter-set: appendix-quals-23-4-4-4-1-2 0; }
+#appendix-quals-23-4-4-4-1-2 > li::marker { content: ""counter(appendix-quals-23-4-4-4-1-2,decimal)"."; }
+#appendix-quals-23-4-4-4-1-2 > li { counter-increment: appendix-quals-23-4-4-4-1-2; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -112,7 +1863,7 @@ window.MathJax = {
 <h1 class="heading"><a href="modern-algebra.html"><span class="title">Modern Algebra:</span> <span class="subtitle">Groups, Rings, Modules, Fields</span></a></h1>
 <p class="byline">Sam Macdonald</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-7.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -953,23 +2704,23 @@ window.MathJax = {
 <div class="toc-title-box"><a href="appendix-quals.html" class="internal"><span class="codenumber">E</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-2.html" class="internal"><span class="codenumber">E.1</span> <span class="title">May 2022</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-2.html" class="internal"><span class="codenumber">E.1</span> <span class="title">June 2023</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-2.html#appendix-quals-2-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-2.html#appendix-quals-2-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-2.html#appendix-quals-2-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-2.html#appendix-quals-2-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-2.html#appendix-quals-2-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-3.html" class="internal"><span class="codenumber">E.2</span> <span class="title">January 2022</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-3.html" class="internal"><span class="codenumber">E.2</span> <span class="title">January 2023</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-3.html#appendix-quals-3-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-3.html#appendix-quals-3-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-3.html#appendix-quals-3-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-3.html#appendix-quals-3-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-3.html#appendix-quals-3-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-4.html" class="internal"><span class="codenumber">E.3</span> <span class="title">May 2021</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-4.html" class="internal"><span class="codenumber">E.3</span> <span class="title">May 2022</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-4.html#appendix-quals-4-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-4.html#appendix-quals-4-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -977,7 +2728,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-5.html" class="internal"><span class="codenumber">E.4</span> <span class="title">January 2021</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-5.html" class="internal"><span class="codenumber">E.4</span> <span class="title">January 2022</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-5.html#appendix-quals-5-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-5.html#appendix-quals-5-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -985,7 +2736,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-6.html" class="internal"><span class="codenumber">E.5</span> <span class="title">June 2020</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-6.html" class="internal"><span class="codenumber">E.5</span> <span class="title">May 2021</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-6.html#appendix-quals-6-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-6.html#appendix-quals-6-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -993,7 +2744,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-7.html" class="internal"><span class="codenumber">E.6</span> <span class="title">January 2020</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-7.html" class="internal"><span class="codenumber">E.6</span> <span class="title">January 2021</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-7.html#appendix-quals-7-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-7.html#appendix-quals-7-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1001,7 +2752,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-8.html" class="internal"><span class="codenumber">E.7</span> <span class="title">May 2019</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-8.html" class="internal"><span class="codenumber">E.7</span> <span class="title">June 2020</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-8.html#appendix-quals-8-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-8.html#appendix-quals-8-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1009,7 +2760,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-9.html" class="internal"><span class="codenumber">E.8</span> <span class="title">January 2019</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-9.html" class="internal"><span class="codenumber">E.8</span> <span class="title">January 2020</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-9.html#appendix-quals-9-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-9.html#appendix-quals-9-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1017,7 +2768,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-10.html" class="internal"><span class="codenumber">E.9</span> <span class="title">May 2018</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-10.html" class="internal"><span class="codenumber">E.9</span> <span class="title">May 2019</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-10.html#appendix-quals-10-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-10.html#appendix-quals-10-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1025,7 +2776,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-11.html" class="internal"><span class="codenumber">E.10</span> <span class="title">May 2017</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-11.html" class="internal"><span class="codenumber">E.10</span> <span class="title">January 2019</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1033,7 +2784,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-12.html" class="internal"><span class="codenumber">E.11</span> <span class="title">January 2017</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-12.html" class="internal"><span class="codenumber">E.11</span> <span class="title">May 2018</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1041,7 +2792,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-13.html" class="internal"><span class="codenumber">E.12</span> <span class="title">May 2016</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-13.html" class="internal"><span class="codenumber">E.12</span> <span class="title">May 2017</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1049,7 +2800,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-14.html" class="internal"><span class="codenumber">E.13</span> <span class="title">January 2016</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-14.html" class="internal"><span class="codenumber">E.13</span> <span class="title">January 2017</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1057,7 +2808,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-15.html" class="internal"><span class="codenumber">E.14</span> <span class="title">January 2015</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-15.html" class="internal"><span class="codenumber">E.14</span> <span class="title">May 2016</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-15.html#appendix-quals-15-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-15.html#appendix-quals-15-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1065,7 +2816,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-16.html" class="internal"><span class="codenumber">E.15</span> <span class="title">June 2014</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-16.html" class="internal"><span class="codenumber">E.15</span> <span class="title">January 2016</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-16.html#appendix-quals-16-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-16.html#appendix-quals-16-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1073,15 +2824,15 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-17.html" class="internal"><span class="codenumber">E.16</span> <span class="title">January 2014</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-17.html" class="internal"><span class="codenumber">E.16</span> <span class="title">January 2015</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-17.html#appendix-quals-17-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-17.html#appendix-quals-17-3" class="internal"><span class="title">Section II</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-17.html#appendix-quals-17-4" class="internal"><span class="title">Section III</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-17.html#appendix-quals-17-3" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-17.html#appendix-quals-17-4" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-18.html" class="internal"><span class="codenumber">E.17</span> <span class="title">June 2012</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-18.html" class="internal"><span class="codenumber">E.17</span> <span class="title">June 2014</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-18.html#appendix-quals-18-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-18.html#appendix-quals-18-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1089,15 +2840,15 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-19.html" class="internal"><span class="codenumber">E.18</span> <span class="title">January 2012</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-19.html" class="internal"><span class="codenumber">E.18</span> <span class="title">January 2014</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-19.html#appendix-quals-19-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-19.html#appendix-quals-19-3" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-19.html#appendix-quals-19-3" class="internal"><span class="title">Section II</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-19.html#appendix-quals-19-4" class="internal"><span class="title">Section III</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-20.html" class="internal"><span class="codenumber">E.19</span> <span class="title">June 2011</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-20.html" class="internal"><span class="codenumber">E.19</span> <span class="title">June 2012</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-20.html#appendix-quals-20-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-20.html#appendix-quals-20-3" class="internal"><span class="title">Section</span></a></div></li>
@@ -1105,16 +2856,32 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="appendix-quals-21.html" class="internal"><span class="codenumber">E.20</span> <span class="title">June 2010</span></a></div>
+<div class="toc-title-box"><a href="appendix-quals-21.html" class="internal"><span class="codenumber">E.20</span> <span class="title">January 2012</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-21.html#appendix-quals-21-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-21.html#appendix-quals-21-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-21.html#appendix-quals-21-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-21.html#appendix-quals-21-4" class="internal"><span class="title">Section III</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appendix-quals-22.html" class="internal"><span class="codenumber">E.21</span> <span class="title">June 2011</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-22.html#appendix-quals-22-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-22.html#appendix-quals-22-3" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-22.html#appendix-quals-22-4" class="internal"><span class="title">Section</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appendix-quals-23.html" class="internal"><span class="codenumber">E.22</span> <span class="title">June 2010</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-23.html#appendix-quals-23-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-23.html#appendix-quals-23-3" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-23.html#appendix-quals-23-4" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="index.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
@@ -1128,7 +2895,7 @@ window.MathJax = {
 </h3>
 <div class="para logical" id="ch-intro-groups-2-3-1">
 <div class="para">There are several ways of thinking about groups, all relying or various levels of rigor and assumptions of prior experience. Here are several:</div>
-<ol class="decimal">
+<ol class="decimal" id="ch-intro-groups-2-3-1-1">
 <li id="ch-intro-groups-2-3-1-1-1">
 <span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="ch-intro-groups-2-3-1-1-1-2">A group can be thought of as a collection of symmetries or transformations that can be combined in a consistent way. Common examples of symmetries include moves on a Rubik’s Cube, addition and subtraction of integers, and rotations and flips of polygons.</div>
 </li>
@@ -1145,7 +2912,7 @@ window.MathJax = {
 <div class="para" id="ch-intro-groups-2-5-1-1">Why are groups important? Where are they found?</div>
 <div class="solutions"><details id="ch-intro-groups-2-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ch-intro-groups-2-5-2-1">
 <div class="para">The short answer is almost everywhere. In many fields of mathematics, groups provide the abstract framework upon which large portions of the discipline are built. Listed below is a thourogh but nowhere near comprehensive list of fields of mathematics (and beyond) where groups make an appearence.</div>
-<ol class="decimal">
+<ol class="decimal" id="ch-intro-groups-2-5-2-1-1">
 <li id="ch-intro-groups-2-5-2-1-1-1">
 <span class="heading"><span class="title">Number Theory and Cryptography.</span></span><div class="para" id="ch-intro-groups-2-5-2-1-1-1-2">As it turns out, much of elementary group theory is actually group theory in disguise: specifically, the study of <a href="sec-group-basics.html#modular-integer-group" class="xref" data-knowl="./knowl/xref/modular-integer-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 4">modular arithmetic groups</a> and <a href="sec-group-basics.html#subsec-groups-units" class="internal" title="Subsection: Groups of Units">multiplicative groups of units</a>. Thus many cryptographic protocols, such as RSA and elliptic curve cryptography, rely on the structure of groups for their security.</div>
 </li>
@@ -1183,7 +2950,7 @@ window.MathJax = {
 </ol>
 </div></div></details></div></article> <section class="paragraphs" id="ch-intro-groups-2-6"><h3 class="heading"><span class="title">Supplemental Group Theory Resources.</span></h3> <div class="para logical" id="ch-intro-groups-2-6-2">
 <div class="para">If you find yourself looking for additional material for learning group theory, I strongly recommend the following excellent resources:</div>
-<ul class="disc">
+<ul class="disc" id="ch-intro-groups-2-6-2-1">
 <li id="ch-intro-groups-2-6-2-1-1"><div class="para" id="ch-intro-groups-2-6-2-1-1-1">Alexandra Seceleanu’s <a class="external" href="https://github.com/aseceleanu/aseceleanu2.github.io/blob/main/teaching/817-818Notes.pdf" target="_blank">course notes</a>.</div></li>
 <li id="ch-intro-groups-2-6-2-1-2"><div class="para" id="ch-intro-groups-2-6-2-1-2-1">
 <a class="external" href="https://web.osu.cz/~Zusmanovich/teach/books/visual-group-theory.pdf" target="_blank"><span class="booktitle">Visual Group Theory</span></a> by Nathan Carter.</div></li>

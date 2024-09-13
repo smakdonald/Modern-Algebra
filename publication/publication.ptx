@@ -99,6 +99,7 @@
       exercise-readingquestion="no"
       aside="no"
       answer="no"
+      activity="no"
     />
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
