@@ -24924,7 +24924,9 @@
               </statement>
   
               <solution>
-                <p>Coming Soon!</p>
+                <p>
+                  Coming Soon!
+                </p>
               </solution>
             
             </activity>
@@ -25690,7 +25692,7 @@
             
             </activity>
           
-            <activity><title>Problem 2</title>
+            <activity><title>Problem 2 (*)</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. 
@@ -25988,7 +25990,7 @@
             
             </activity>
   
-            <activity><title>Problem 2</title>
+            <activity><title>Problem 2 (*)</title>
               <statement>
                 <p>
                   <ol>
@@ -26669,7 +26671,7 @@
           
           </activity>
 
-          <activity><title>Problem 9</title>
+          <activity><title>Problem 9 (*)</title>
             <statement>
               <p>
             Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use Zorn's lemma.)
@@ -26682,7 +26684,7 @@
           
           </activity>
 
-          <activity><title>Problem 6</title>
+          <activity><title>Problem 6 (*)</title>
             <statement>
               <p>
             Let <m>F</m> be any field, and let <m>x, y</m>, and <m>t</m> be indeterminates. Prove in detail that <m>F[x,y]/(y^2-x^3)</m> and <m>F[t^2,t^3]</m> are isomorphic rings.
@@ -33522,7 +33524,7 @@
 
           <subsection><title>Section </title>
 
-            <activity><title>Problem 7</title>
+            <activity><title>Problem 7 (*)</title>
               <statement>
                 <p>
                   On canonical forms 
@@ -35842,7 +35844,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 6</title>
+          <activity><title>Problem 6 (*)</title>
             <statement>
               <p>
             Make <m>\R^3</m> into a <m>\R[x]</m>-module by letting <m>f (x)v= f (A)v</m> for any vector <m>v</m> in <m>\R^3</m>, where <m>A</m> is the matrix
@@ -36701,7 +36703,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 6</title>
+          <activity><title>Problem 6 (*)</title>
             <statement>
               <p>
             Let <m>L</m> be a finite Galois field extension of <m>\Q</m>. Let <m>E</m> and <m>F</m> be subfields of <m>L</m> such that <m>EF = L, E/\Q</m> is normal, and <m>E\cap F = \Q</m>. Prove that <m>[L : Q] = [E : Q][F : Q].</m>
@@ -37000,7 +37002,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 9</title>
+          <activity><title>Problem 9 (*)</title>
             <statement>
               <p>
             Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use Zorn's lemma.)
@@ -37096,7 +37098,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 4</title>
+          <activity><title>Problem 4 (*)</title>
             <statement>
               <p>
             Let <m>F</m> be a field of characteristic <m>p &gt; 0</m>, <m>a \in F</m> , and consider the polynomial <m>f(x)=x^p -x-a \in F[x]</m>.
@@ -37164,7 +37166,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 6</title>
+          <activity><title>Problem 6 (*)</title>
             <statement>
               <p>
             Let <m>F</m> be any field, and let <m>x, y</m>, and <m>t</m> be indeterminates. Prove in detail that <m>F[x,y]/(y^2-x^3)</m> and <m>F[t^2,t^3]</m> are isomorphic rings.
@@ -37181,7 +37183,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 7</title>
+          <activity><title>Problem 7 (*)</title>
             <statement>
               <p>
             Consider the following matrix over the complex numbers: (a) (b)
@@ -37194,7 +37196,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 8</title>
+          <activity><title>Problem 8 (*)</title>
             <statement>
               <p>
             Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
@@ -37222,7 +37224,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 9</title>
+          <activity><title>Problem 9 (*)</title>
             <statement>
               <p>
             Let <m>A</m> be a square matrix over the field <m>\C</m> of complex numbers.
@@ -37430,7 +37432,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 5</title>
+          <activity><title>Problem 5 (*)</title>
             <statement>
               <p>
             Let <m>E</m> be a subfield of <m>\C</m> and suppose every element of <m>E</m> is a root of a polynomial of degree <m>10</m> in <m>\Q[x]</m>. Prove that <m>[E:\Q]\leq 10</m>. (Note: <m>E</m> is not assumed to be a finite extension of <m>\Q</m>.)
@@ -37502,7 +37504,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 8</title>
+          <activity><title>Problem 8 (*)</title>
             <statement>
               <p>Coming Soon!</p>
             </statement>
@@ -37565,7 +37567,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 2</title>
+          <activity><title>Problem 2 (*)</title>
             <statement>
               <p>
             Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. (a) Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> (b) Prove that if <m>G</m> is finitely generated, there are most finitely many subgroups with index <m>n</m>. (Hint: you might want to consider maps <m>G\to S_n</m>.)
@@ -37624,7 +37626,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 4</title>
+          <activity><title>Problem 4 (*)</title>
             <statement>
               <p>
             Let <m>V</m> be a subspace of a finite-dimensional vector space, <m>W</m>. Recall that a subspace <m>U</m> of <m>W</m> is called a <em>complement</em> of <m>V</m> if <m>U\oplus V = W</m>. Prove the following statements.
@@ -37686,7 +37688,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 6</title>
+          <activity><title>Problem 6 (*)</title>
             <statement>
               <p>Let <m>V</m> be the set of all <m>r \times s</m> matrices over <m>\R</m>, let <m>G</m> denote the group <m>\GL_r (\R) \times\GL_s(\R)</m>, and set <me>(A, B)\cdot M = AM B\inv \text{ for all }M \in V\text{ and }(A, B) \in G.</me></p>
                 <p>Part (a) Prove that the formula above defines a group action.
@@ -37711,7 +37713,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 7</title>
+          <activity><title>Problem 7 (*)</title>
             <statement>
               <p>
             Let <m>R</m> be a commutative integral domain and <m>K</m> its field of fractions. Let <m>a</m> and <m>b</m> be nonzero elements of <m>R</m>, such that <m>(a) \cap(b) = (ab)</m>. Let <m>f : R[x] \to K</m> be the unique ring homomorphism with <m>f (r) = \frac{r}{1}</m> for <m>r \in R</m> and <m>f (x) = \frac{b}{a}</m>. Prove that a polynomial <m>p(x) \in R[x]</m> satisfies <m>f(p(x))=0</m> if and only if <m>p(x) = (ax - b)q(x)</m> for some polynomial <m>q(x) \in R[x]</m>. (Hint: one way is to use induction on deg(p(x)).)
@@ -37724,7 +37726,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 8</title>
+          <activity><title>Problem 8 (*)</title>
             <statement>
               <p>
             Let a be an integer that is not a square, and set <me>\Z[\sqrt{a}] = \{m + n\sqrt{a} \in \C | m, n \in \Z\} .</me> (a) Prove that <m>\Z[\sqrt{a}]</m> is a subring of <m>\C</m>. When b is an integer that is not a square, prove the following assertions: (b) There is an isomorphism of abelian groups (under addition) <m>\Z[\sqrt{a}]\cong \Z[\sqrt{b}]</m>. (c) There is an isomorphism of rings <m>\Z[\sqrt{a}]\cong \Z[\sqrt{b}]</m> if and only if <m>a = b</m>.
@@ -37737,7 +37739,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 9</title>
+          <activity><title>Problem 9 (*)</title>
             <statement>
               <p>
             Suppose <m>A</m> and <m>B</m> are subfields of a field extension <m>K/F</m> with <m>[A : F ]</m> and <m>[B : F ]</m> both finite. Let <m>E</m> be the subfield of K generated by <m>A</m> and <m>B</m>. (a) Show that <m>[E : F ] \leq [A : F ][B : F ]</m> (b) Prove that equality holds when <m>[A : F ]</m> and <m>[B : F ]</m> are relatively prime. (c) Prove there are two subfields of <m>\R/\Q</m>, <m>A</m> and <m>B</m>, neither contained in the other, so that the inequality in part (a) is strict.
@@ -38255,7 +38257,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 5</title>
+          <activity><title>Problem 5 (*)</title>
             <statement>
               <p>
             Let <m>F</m> be a field, and let <m>f (x) ∈ F [x]</m>. Recall that <m>f (x)</m> is separable provided, for every extension field <m>K/F , f (x)</m> has no multiple roots in <m>K</m>. (A multiple root is an element <m>α ∈ K</m> such that <m>(x − α)^2 | f (x)</m> in <m>K[x].)</m>
@@ -38317,7 +38319,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           
           </activity>
 
-          <activity><title>Problem 7</title>
+          <activity><title>Problem 7 (*)</title>
             <statement>
               <p>
             Let p be a prime number, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>n</m> be a positive integer. Prove that <m>x^{p^n}- x =\prod_{d|n} g_d(x)</m>, where, for a positive divisor <m>d</m> of <m>n</m>, <m>g_d(x)</m> denotes the product of all monic irreducible polynomials of degree <m>d</m> in <m>\F_p[x]</m>. (You may assume basic results on the structure of finite fields and their subfields.)
@@ -38407,7 +38409,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
           <subsection><title>Section </title>
             
-          <activity><title>Problem 9</title>
+          <activity><title>Problem 9 (*)</title>
             <statement>
               <p>
               Consider the following matrix over <m>\Q</m>: <me>\begin{bmatrix}-1&amp;0&amp;0&amp;0\\0&amp;-1&amp;0&amp;0\\-2&amp;-2&amp;0&amp;1\\-2&amp;0&amp;-1&amp;-2\end{bmatrix}</me> 
@@ -38553,7 +38555,7 @@ Coming soon!
           
           </activity>
 
-          <activity><title>Problem 2</title>
+          <activity><title>Problem 2 (*)</title>
             <statement>
               <p><ol>
             <li>
@@ -38893,7 +38895,7 @@ Coming soon!
 
         <subsection><title>Section </title>
 
-          <activity><title>Problem 7</title>
+          <activity><title>Problem 7 (*)</title>
             <statement>
               <p>
                 Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let <me>S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.</me>
@@ -38934,7 +38936,7 @@ Coming soon!
           
           </activity>
 
-          <activity><title>Problem 8</title>
+          <activity><title>Problem 8 (*)</title>
             <statement>
               <p>
                  Prove <m>Z[2i] = \{a + 2bi | a \text{ and } b \text{ are integers}\}</m> is not a PID. 
