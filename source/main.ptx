@@ -409,6 +409,7 @@
             </li>
           </ul>
           I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me.
+          Additionally, a big thanks to Julia Courtney, Nick White, and Cleve Young, for the qual problem solutions that they supplied.
         </p>
 
         <p>
@@ -30863,43 +30864,38 @@
                   <ol>
                     <li>
                       <p>
-                        We will show that <m>C_G(H)</m> is the kernel of a group homomorphism. 
-                        First define <m>f_a:H\rightarrow G</m>, for each <m>a\in N_G(H)</m>, by <m>f_a(h)=aha^{-1}</m>. 
-                        We claim that <m>f_a</m> is in <m>\Aut(H)</m>. 
-                        To show this first notice that for all <m>a\in N_G(H)</m> we have <m>aHa^{-1}=H</m> so <m>f_a</m> sends elements in <m>H</m> to <m>H</m>. 
-                        Now to show that it is a homomorphism take <m>h,k\in H</m>, 
-                        <me>
-                          f_a(h)f_a(k)=(aka^{-1})(aka^{-1})=ahka^{-1}=f_a(hk)
+                        Let <m>\varphi: N_G(H)\to\Aut(H)</m> be defined such that <m>\varphi(g)=\psi_g</m>, where <m>\psi_g</m> denotes the inner automorphism (also known as the conjugation automorphism) of <m>H</m> induced by <m>g</m>.
+                        Normally this is only well defined when <m>g\in H</m>, but as <m>g\in x\in N_G(H)</m>, we see <m>\psi_x(h)=xhx\inv\in H</m> for all <m>h\in H</m>.
+                      </p>
+
+                      <p>
+                        Let <m>x,y\in N_G(H)</m>, <m>h\in H</m> and observe
+                         <me>
+                          \varphi(xy)(h) = \psi_{xy}(h) = xyh(xy)\inv = xyhy\inv x\inv = \psi_{x}(yhy\inv) = \psi_x\psi_y(h).
                         </me> 
-                        The inverse map is <m>f_{a^{-1}}</m>. <m>a^{-1}\in N_G(H)</m> since it is a subgroup. 
-                        <me>
-                          f_a\circ f_{a^{-1}}(h)=f_a(a^{-1}ha)=aa^{-1}aa^{-1}=h
-                        </me> 
-                        and the same thing in the other direction will show that it is indeed the two-sided inverse. 
-                        So it is an invertible homomorphism so it is an isomorphism and therefore an automorphism.
+                        Thus <m>\varphi</m> is operation preserving and a group homomorphism.
                       </p>
 
                       <p>  
-                        Now define <m>f:N_G(H)\rightarrow \Aut(H)</m> given by <m>f(a)=f_a</m>. 
-                        We will show that this is a homomorphism. 
-                        Let <m>a,b\in N_G(H)</m> and let <m>h\in H</m>. 
-                        <me>
-                          f_a\circ f_b(h)=f_a(bhb^{-1})=a(bhb^{-1})a^{-1}=(ab)h(ab)^{-1}=f_{ab}(h)
-                        </me> 
-                        so it is indeed a homomorphism.
+                        Let <m>g\in\ker(\varphi)</m>.
+                        Thus <m>\varphi(g)=\psi_g</m> is the identity map on <m>h</m>, meaning <m>ghg\inv=h</m> for all <m>h\in H</m>. 
+                        Mulitplying on the right by <m>g</m> yields <m>gh=hg</m>, placing <m>g</m> in <m>C_G(H)</m>.
                       </p>
-                        
+
                       <p>
-                        Now to find the kernel, we need to know for which <m>a\in N_G(H)</m> does <m>f(a)=id_H</m>. 
-                        This is straightforward to see since it implies that <m>f(a)(h)=f_a(h)=aha^{-1}=h</m> for all <m>h\in H</m>. 
-                        This is exactly <m>C_G(H)</m>. 
-                        Kernels of homomorphisms are <xref ref="thm-norm-iff-ker" text="custom"> always normal</xref> so <m>C_G(H)</m> is normal in <m>N_G(H)</m>.
+                        Now, let <m>g\in C_G(H)</m>. 
+                        Thus <m>\psi_g(h) = ghg\inv = gg\inv h = h</m> for every <m>h\in H</m>, meaning <m>\psi_g=\id_H</m> and <m>g\in\ker(\varphi)</m>.
+                      </p>
+
+                      <p>
+                        Putting this all together, we see that <m>C_G(H)</m> is precisely the kernel of <m>\varphi</m>, making <m>C_G(H)</m> normal in <m>N_G(H)</m> by <xref ref="thm-norm-iff-ker"> </xref>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        Continuing the work from part a, we know that <m>\im(f)\leq \Aut(H)</m> and by the <xref ref="thm-fit-group" text="title"/> <m>N_G(H)/C_G(H)\cong \im(f)</m>.
+                        From the previous part we know that <m>\varphi</m> is a homomorphism mapping from <m>N_G(H)</m> to <m>\Aut(H)</m> with kernel <m>C_G(H)</m>. 
+                        Thus <m>N_G(H)/C_G(H)\cong \im(\varphi)</m> by the <xref ref="thm-fit-group" text="title"/>, making <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of <m>Aut(H)</m>, the group of automorphisms of <m>H</m>.
                       </p>
                     </li>
                   </ol>
