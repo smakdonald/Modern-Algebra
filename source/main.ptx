@@ -403,13 +403,13 @@
 
             <li>
               <p>
-                <url href="https://executivevc.unl.edu/faculty/faculty-affairs-team" visual="">Mark Walker</url>
-                <fn>Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.</fn>
+                Mark Walker
+                <fn>Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website.</fn>
               </p>
             </li>
           </ul>
           I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me.
-          Additionally, a big thanks to Julia Courtney, Nick White, and Cleve Young, for the qual problem solutions that they supplied.
+          Additionally, a big thanks to Julia Courtney, Nick White, and Cleve Young for the qual problem solutions that they supplied.
         </p>
 
         <p>
@@ -576,12 +576,14 @@
               <li>
                 <p>
                   Solvable Groups:
+                  Justification pending
                 </p>
               </li>
 
               <li>
                 <p>
                   Group Rings:
+                  Justification pending
                 </p>
               </li>
 
@@ -596,12 +598,14 @@
               <li>
                 <p>
                   Localization: 
+                  Justification pending
                 </p>
               </li>
 
               <li>
                 <p>
                   Algebras:
+                  Justification pending
                 </p>
               </li>
 
@@ -655,7 +659,7 @@
           <p>
             Common first questions in most math settings are the staples <term>"Why are these useful?"</term> and <term>"Where are these found?"</term>.
             Despite what some mathematicians might insist, these are reasonable and often essential questions to ask when encountering a new mathematical concept.
-            Questions should always be encouraged, anyone who tells you differently is either unprepared or underpaid.
+            Questions should always be encouraged; anyone who tells you differently is either unprepared or underpaid.
           </p>
 
           <question>
@@ -740,36 +744,41 @@
             </answer>
           </question>
 
-          <paragraphs><title>Supplemental Group Theory Resources</title>
-            <p>
-              If you find yourself looking for additional material for learning group theory, I strongly recommend the following excellent resources:
-              <ul>
-                <li>
-                  <p>
-                    Alexandra Seceleanu's <url href="https://github.com/aseceleanu/aseceleanu2.github.io/blob/main/teaching/817-818Notes.pdf" visual="">course notes</url>.
-                  </p>
-                </li>
+          <list><title>Supplemental Group Theory Resources</title>
 
-                <li>
-                  <p>
-                    <url href="https://web.osu.cz/~Zusmanovich/teach/books/visual-group-theory.pdf" visual=""><pubtitle>Visual Group Theory</pubtitle></url> by Nathan Carter.
-                  </p>
-                </li>
+            <introduction>
+              <p>
+                If you find yourself looking for additional material for learning group theory, I strongly recommend the following excellent resources:
+              </p>
+            </introduction>
 
-                <li>
-                  <p>
-                    <pubtitle>Abstract Algebra, 3rd Edition</pubtitle> by David S. Dummit and Richard M. Foote.
-                  </p>
-                </li>
+            <ul>
+              <li>
+                <p>
+                  Alexandra Seceleanu's <url href="https://github.com/aseceleanu/aseceleanu2.github.io/blob/main/teaching/817-818Notes.pdf" visual="">course notes</url>.
+                </p>
+              </li>
 
-                <li>
-                  <p>
-                    <pubtitle>Algebra: Chapter 0</pubtitle> by Paolo Aluffi.
-                  </p>
-                </li>
-              </ul>
-            </p>
-          </paragraphs>
+              <li>
+                <p>
+                  <url href="https://web.osu.cz/~Zusmanovich/teach/books/visual-group-theory.pdf" visual=""><pubtitle>Visual Group Theory</pubtitle></url> by Nathan Carter.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <pubtitle>Abstract Algebra, 3rd Edition</pubtitle> by David S. Dummit and Richard M. Foote.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <pubtitle>Algebra: Chapter 0</pubtitle> by Paolo Aluffi.
+                </p>
+              </li>
+            </ul>
+
+          </list>
           
         </introduction>
 
@@ -3727,7 +3736,7 @@
             </exercise>
 
             <theorem xml:id="thm-cayley"><title>Cayley's Theorem</title>
-              <idx><h>cayley's theorem</h></idx>
+              <idx><h>Cayley's theorem</h></idx>
               <statement>
                 <p>
                   Every group is isomorphic to a subgroup of <m>S_n</m>.
@@ -3761,7 +3770,7 @@
                     Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }y \in G\}.
                   </me>
                   <idx><h><m>Z(G)</m></h></idx>
-                  <idx><h>center of a group</h></idx>        
+                  <idx><h>center (of a group)</h></idx>        
                 </p>
               </statement>
             </definition>
@@ -4583,7 +4592,6 @@
                 <p>
                   Every infinite cyclic group is isomorphic to <m>\Z</m>. 
                   Every cyclic group of order <m>n</m> is isomorphic to <m>\Z/n</m>.
-                  <idx><h>classification of cyclic groups</h></idx>
                 </p>
               </statement>
 
@@ -5416,7 +5424,7 @@
             </remark>
 
             <exercise xml:id="exe-lagrange-converse-false"><title>Converse to Lagrange's Theorem is False</title>
-              <idx><h>converse to Lagrange's theorem</h></idx>
+              <idx><h>Lagrange's theorem (converse is false)</h></idx>
               <statement>
                 <p>
                   Prove the converse to <xref text="title" ref="thm-lagrange"/> is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>.
@@ -8490,8 +8498,8 @@
                     \bigoplus_{\alpha\in J} G_\alpha= \{(g_\alpha)_{\alpha\in J} \mid  g_\alpha= e_{G_\alpha} \text{ for all but finitely many } \alpha\},
                   </me> 
                   with the same multiplication as the direct product.
-                  <idx><h>direct product of groups</h></idx>
-                  <idx><h>direct sum of groups</h></idx>
+                  <idx><h>direct product (of groups)</h></idx>
+                  <idx><h>direct sum (of groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -8580,7 +8588,7 @@
             </theorem>    
 
             <example xml:id="ex-dp-cyclic"><title>Direct Product of Cyclic Groups</title>
-              <idx><h>direct product of cyclic groups</h></idx>
+              <idx><h>direct product (of cyclic groups)</h></idx>
               <p>
                 If <m>\operatorname{gcd}(m,n)=1</m> then <m>\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn</m>. 
                 Indeed consider the elements <m>x=(1,0)</m> and <m>y=(0,1)</m> in <m>\mathbb{Z}/m\times \mathbb{Z}/n</m>. 
@@ -8618,7 +8626,7 @@
             </blockquote>
 
             <theorem xml:id="thm-dp-recognition"><title>Recognition Theorem for Direct Products</title> 
-              <idx><h>recognition theorem (direct products)</h></idx>              
+              <idx><h>recognition theorem (for direct products)</h></idx>              
               <statement>
                 <p>
                   Suppose <m>G</m> is a group with normal subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> such that <m>H\cap K=\{e\}</m>. 
@@ -8675,7 +8683,7 @@
             <definition xml:id="def-int-ext-dp"><title>Internal and External Direct Products</title>
               <statement>
                 <p>
-                  If <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> are such that <m>H\cap K=\{e\}</m> then we call <m>HK</m> is called the <em>internal direct product</em> of <m>H</m> and <m>K</m> and <m>H\times K</m> the <em>external direct product</em> of <m>H</m> and <m>K</m>.
+                  If <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> are such that <m>H\cap K=\{e\}</m> then we call <m>HK</m> the <em>internal direct product</em> of <m>H</m> and <m>K</m> and <m>H\times K</m> the <em>external direct product</em> of <m>H</m> and <m>K</m>.
                   <idx><h>internal direct product</h></idx>
                   <idx><h>external direct product</h></idx>
                 </p>
@@ -8750,8 +8758,8 @@
                   </me> 
                   This group is denoted by <m>H \rtimes_\rho K</m>.
                   <idx><h><m>\rtimes</m></h></idx>
-                  <idx><h>semidirect product</h></idx>
-                  <idx><h>external semidirect product</h></idx>
+                  <idx><h>semidirect product (of groups)</h></idx>
+                  <idx><h>external semidirect product (of groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -8882,7 +8890,8 @@
                   <ol>
                     <li>
                       <p>
-                        The proof is straightforward but a bit messy. For associativity, note that 
+                        The proof is straightforward but a bit messy. 
+                        For associativity, note that 
                         <me>
                           \begin{aligned}
                           (y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right) &amp;=(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)\\
@@ -9018,7 +9027,7 @@
             </p>
   
             <theorem xml:id="thm-sdp-recognition"><title>Recognition Theorem for Internal Semidirect Products</title>  
-              <idx><h>recognition theorem (internal semidirect products)</h></idx>  
+              <idx><h>recognition theorem (for internal semidirect products)</h></idx>  
               <statement>
                 <p>
                   For a group <m>G</m>, suppose we are given <m>H</m> and <m>K</m> so that
@@ -9085,7 +9094,7 @@
               <statement>
                 <p>
                   In this situation of the <xref ref="thm-sdp-recognition" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.
-                  <idx><h>internal semidirect product</h></idx>
+                  <idx><h>internal semidirect product (of groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9337,7 +9346,7 @@
                   \phi([j]_m) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}})
                 </me> 
                 where <m>[j]_b</m> denote the class of an integer <m>j</m> in <m>\mathbb{Z}/b</m>.
-                <idx><h>Sunzi's remainder theorem for groups</h></idx>
+                <idx><h>Sunzi's remainder theorem (for groups)</h></idx>
               </p>
             </statement>
 
@@ -9358,7 +9367,7 @@
 
           <remark>
             <p>
-              This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. 
+              Sunzi's Remainder Theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. 
               In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.
               <idx><h>Chinese Remainder Theorem</h></idx>
             </p>
@@ -9371,16 +9380,12 @@
           </p>
 
           <theorem xml:id="thm-ftfgag"><title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>
-            <idx><h>fundamental theorem of finitely generated abelian groups</h></idx>
-            <idx><h>FTFGAG</h></idx>
+            <idx><h>fundamental theorem of finitely generated abelian groups (FTFGAG)</h></idx>
             <statement>
               <p>
                 Let <m>G</m> be a finitely generated abelian group. 
                 Then <m>G</m> is a direct product of cyclic groups. 
                 More precisely
-              </p>
-
-              <p>
                 <ol>
                   <li>
                     <p>
@@ -9454,15 +9459,16 @@
             <statement>
               <p>
                 In <xref ref="thm-ftfgag" />, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the <m>p_i^{a_{i,k}}</m> are the <em>elementary divisors</em> of <m>G</m>, and the decomposition of <m>G</m> in parts (1-2) is called the <em>elementary divisor decomposition</em> of <m>G</m>. 
-                <idx><h>elementary divisors (groups)</h></idx>
-                <idx><h>elementary divisor form (groups)</h></idx>
+                <idx><h>elementary divisors (of a group)</h></idx>
+                <idx><h>elementary divisor form (of a group)</h></idx>
                 The decomposition in part (1) is also called a <em>primary decomposition</em>.
+                <idx><h>primary decomposition (of a group)</h></idx>
               </p>
 
               <p>
                 In <xref ref="thm-ftfgag" />, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
-                <idx><h>invariant factors (groups)</h></idx>
-                <idx><h>invariant factor form (groups)</h></idx>
+                <idx><h>invariant factors (of a group)</h></idx>
+                <idx><h>invariant factor form (of a group)</h></idx>
               </p>
             </statement>
           </definition>
@@ -9817,8 +9823,9 @@
 
                   <li>
                     <p>
-                      The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
+                      The Cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
                       <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
+                      <idx><h>Cartesian product (of rings)</h></idx>
                     </p>
                   </li>
                 </ol>
@@ -9874,7 +9881,7 @@
                     <p>
                       If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
                       <idx><h>endomorphism ring</h></idx>
-                      <idx><h><m>\End(A)</m></h></idx>
+                      <idx><h><m>\End(_{Ab}A)</m></h></idx>
                     </p>
 
                     <p>
@@ -9891,7 +9898,7 @@
             </p>
 
             <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
-              <idx><h>binomial theorem (commutative rings)</h></idx>
+              <idx><h>binomial theorem (for commutative rings)</h></idx>
               <statement>
                 <p>
                   For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
@@ -10159,7 +10166,8 @@
               <fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> 
               Months in the making. 
               But enough vindication: we move forward. 
-              It's all we've ever known.</p>
+              It's all we've ever known.
+            </p>
 
             <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
               <p>
@@ -10334,7 +10342,7 @@
                     Let <m>R</m> be a commutative ring with identity. 
                     Then <m>R</m> is an integral domain if and only if for all <m>x,y,z\in R</m> such that <m>xy=xz</m>, we have <m>y=z</m>. 
                     This property is called <alert>cancellation</alert>.
-                    <idx><h>cancellation (integral domains)</h></idx>
+                    <idx><h>cancellation (in integral domains)</h></idx>
                   </p>
                 </statement>
               </lemma>
@@ -10441,22 +10449,25 @@
                 <statement>
                   <p>
                     An element <m>a</m> of a ring <m>R</m> is called <em>nilpotent</em> if <m>a^n = 0</m> for some integer <m>n \geq 1</m>.
-                    <idx><h>nilpotent</h></idx>
+                    <idx><h>nilpotent (ring element)</h></idx>
                   </p>
                 </statement>
               </definition>
   
               <lemma xml:id="lem-nilpotents-and-units"><title>Nilpotents and Units</title>
-                <statement><p>
+                <statement>
+                  <p>
                     If <m>a</m> is a nilpotent element in a unital ring <m>R</m>, then <m>1-a</m> is a unit.
-                </p></statement>
+                  </p>
+                </statement>
               </lemma>
   
               <definition xml:id="def-idempotent"><title>Idempotent</title>
                 <statement>
                   <p>
-                    Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
-                    <idx><h>idempotent</h></idx>
+                    Let <m>R</m> be a ring with identity. 
+                    An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
+                    <idx><h>idempotent (ring element)</h></idx>
                   </p>
                 </statement>
               </definition>
@@ -10527,7 +10538,9 @@
                 <p>
                   Let <m>G = (G, \cdot)</m> be a group and let <m>R</m> be a commutative ring with <m>1\neq 0</m> (often <m>R</m> is taken to be a field). 
                   Let <m>R[G]</m> be the collection of formal expressions of the form indicated below, where the <m>+</m> operation is assumed to be commutative: 
-                  <me>R[G]=\left\{r_1 g_1 + r_2 g_2 + \dots + r_n g_n, n \geq 0, r_i \in R, g_i \in G\right\}.</me> 
+                  <me>
+                    R[G]=\left\{r_1 g_1 + r_2 g_2 + \dots + r_n g_n, n \geq 0, r_i \in R, g_i \in G\right\}.
+                  </me> 
                   Equivalently, a typical element of <m>R[G]</m> can be written as <m>\sum_{g \in G} r_g g</m>, where <m>r_g \in R</m> for all <m>g</m> and <m>r_g = 0</m> for all but a finite number of <m>g</m>'s.
                 </p>
         
@@ -10542,6 +10555,8 @@
                   With these definitions, <m>R[G]</m> is a ring, called the <em>group ring of <m>G</m></em> with coefficients in <m>R</m>. 
                   It is a unital ring with identity <m>1_Re_G</m>. 
                   If <m>R=F</m> is a field then <m>F[G]</m> is an <m>F</m>-vector space.
+                  <idx><h>group ring</h></idx>
+                  <idx><h><m>R[G]</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -10658,7 +10673,10 @@
                 <p>
                   Let <m>G</m> be a free abelian groups with generators <m>x_1, \dots, x_n</m>. 
                   For any commutative ring <m>R</m>, the <em>polynomial ring in <m>x_1, \dots, x_n</m></em>, written <m>R[x_1, \dots, x_n]</m>, is the subring of <m>R[G]</m> consisting of (finite) sums of the form 
-                  <me>\sum_{e_1, \dots, e_n \in \mathbb{Z}_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}.</me>
+                  <me>
+                    \sum_{e_1, \dots, e_n \in \mathbb{Z}_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}.
+                  </me>
+                  <idx><h>polynomial ring</h></idx>
                 </p>
               </statement>
             </definition>
@@ -10708,22 +10726,24 @@
             <definition xml:id="def-ring-homomorphism"><title>Ring Homomorphism</title>
               <statement>
                 <p>
-                  If <m>R</m> and <m>S</m> are rings, a <em>ring homomorphism</em> from <m>R</m> to <m>S</m> is a function <m>f: R \to S</m> that satisfies: 
+                  If <m>R</m> and <m>S</m> are rings, a <em>ring homomorphism</em> from <m>R</m> to <m>S</m> is a function <m>\varphi: R \to S</m> that satisfies: 
                   <ol>
                     <li>
                       <p>
-                        <m>f(x + y) = f(x) + f(y)</m> for all <m>x,y \in R</m>, 
+                        <m>\varphi(x + y) = \varphi(x) + \varphi(y)</m> for all <m>x,y \in R</m>, 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        <m>f(x \cdot y) = f(x) \cdot f(y)</m> for all <m>x,y \in R</m>.
+                        <m>\varphi(x \cdot y) = \varphi(x) \cdot f(y)</m> for all <m>x,y \in R</m>.
                       </p>
                     </li>
                   </ol>
                   Ring homomorphisms are often referred to as <em>ring maps</em>.
                   <idx><h>ring homomorphism</h></idx>
+                  <idx><h>homomorphism (of rings)</h></idx>
+                  <idx><h>ring map</h></idx>
                 </p>
               </statement>
             </definition>
@@ -10739,6 +10759,7 @@
                   Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.
                   <fn>Ring isomorphisms are not usually referred to as <em>super ring maps</em>, but it would be cool if they were.</fn>
                   <idx><h>ring isomorphism</h></idx>
+                  <idx><h>isomorphism (of rings)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -10794,7 +10815,8 @@
                   </li>
           
                   <li>
-                      Let <m>S</m> be a subring of a ring <m>R</m>. The inclusion mapping of <m>S</m> into <m>R</m> is a ring homomorphism.
+                      Let <m>S</m> be a subring of a ring <m>R</m>. 
+                      The inclusion mapping of <m>S</m> into <m>R</m> is a ring homomorphism.
                   </li>
       
                   <li>
@@ -10807,29 +10829,29 @@
             <lemma xml:id="lem-ring-homomorphism-properties"><title>Properties of Ring Maps</title>
               <statement>
                 <p>
-                  If <m>f: R \to S</m> is a ring homomorphism, then
+                  If <m>\varphi: R \to S</m> is a ring homomorphism, then
                   <ol>
                     <li>
                       <p>
-                        <m>f(0_R) = 0_S</m> and <m>f(-x)=-f(x)</m>. 
+                        <m>\varphi(0_R) = 0_S</m> and <m>\varphi(-x)=-f(x)</m>. 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        if <m>R</m>, <m>S</m> are unital then <m>f(1_R)</m> can be either <m>0_S, 1_S</m> or a zerodivisor. 
+                        if <m>R</m>, <m>S</m> are unital then <m>\varphi(1_R)</m> can be either <m>0_S, 1_S</m> or a zerodivisor. 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        If <m>f(1_R)=1_S</m> and <m>u\in R^\times</m> then <m>f(u^{-1})=f(u)^{-1}</m>. 
+                        If <m>\varphi(1_R)=1_S</m> and <m>u\in R^\times</m> then <m>\varphi(u^{-1})=\varphi(u)^{-1}</m>. 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        If <m>f: R \to S</m> and <m>g:S\to T</m> are ring homomorphisms (or isomorphisms, respectively), then <m>g\circ f:R\to T</m> is a ring homomorphism (or isomorphism).
+                        If <m>\varphi: R \to S</m> and <m>\phi:S\to T</m> are ring homomorphisms (or isomorphisms, respectively), then <m>\phi\circ \varphi:R\to T</m> is a ring homomorphism (or isomorphism).
                       </p>
                     </li>
                   </ol>
@@ -10840,7 +10862,9 @@
                 <p>
                   <ol>
                     <li>
-                      Since <m>1_R1_R=1_R</m> we have <m>f(1_R)f(1_R)=f(1_R)</m>, thus <me>f(1_R)(f(1_R)-1_S)=0_S.</me> Now either <m>f(1_R)=0_S</m> or <m>f(1_R)-1_S=0_S</m> (which yields <m>f(1_R)=1_S</m>) or both of these are nonzero and then they are complementary zerodivisors (in particular, <m>f(1_R)</m> is a zerodivisor).
+                      Since <m>1_R1_R=1_R</m> we have <m>\varphi(1_R)\varphi(1_R)=\varphi(1_R)</m>, thus 
+                      <me>\varphi(1_R)(\varphi(1_R)-1_S)=0_S.</me> 
+                      Now either <m>\varphi(1_R)=0_S</m> or <m>\varphi(1_R)-1_S=0_S</m> (which yields <m>\varphi(1_R)=1_S</m>) or both of these are nonzero and then they are complementary zerodivisors (in particular, <m>\varphi(1_R)</m> is a zerodivisor).
                     </li>
                   </ol>
                 </p>
@@ -10867,7 +10891,6 @@
             <exercise><title>More Isomorphisms</title>
               <p>
                 Let <m>a, b</m> be squarefree integers and set <m>R=\Z[\sqrt{a}]</m> and <m>S=\Z[\sqrt{b}]</m>.
-      
                 <ol>
                   <li>
                     <p>
@@ -10936,7 +10959,7 @@
                 <p>
                   Let <m>f(x)\in R[x]</m>, <m>f(x)\neq0</m>. Say <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m>, where <m>a_n\neq0</m>. 
                   Then <m>n</m> is the <em>degree</em>of <m>f</m>.
-                  <idx><h>degree (polynomial)</h></idx>
+                  <idx><h>degree (of a polynomial)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -10954,11 +10977,11 @@
             <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
               <statement>
                 <p>
-                  If <m>R</m> is a domain, then 
+                  If <m>R</m> is an integral domain, then 
                   <ol>
                     <li>
                       <p>
-                        <m>R[x]</m> is a domain 
+                        <m>R[x]</m> is an integral domain 
                       </p>
                     </li>
       
@@ -10985,6 +11008,7 @@
   
             <theorem xml:id="thm-ump-polynomial-rings"><title>UMP for Polynomial Rings</title>
               <idx><h>UMP for polynomial rings</h></idx>
+              <idx><h>universal mapping property of group rings</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
@@ -11027,7 +11051,7 @@
       
             <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
               <p>
-                If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
+                If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the <em>evaluation</em> at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
                 <idx><h>evaluation homomorphism</h></idx>
               </p>
             </exercise>
@@ -11036,7 +11060,9 @@
               <p>
                 Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
                 <me>\tilde{\phi}: R[x] \to S[x]</me>
-                that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
+                that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. 
+                That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial.
+                 This can be generalized to more than one variable in the obvious way.       
               </p>
             </example>
       
@@ -11047,7 +11073,8 @@
                 <me>
                   \tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]
                 </me> 
-                takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
+                takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. 
+                We will usually denote the image of <m>f(x)</m> through this <em>reduction homomorphism</em> by <m>\ov{f}(x)</m>.
                 <idx><h>reduction homomorphism</h></idx>
               </p>
             </exercise>
@@ -11057,7 +11084,7 @@
             </p>
   
             <theorem xml:id="thm-polynomial-division-algorithm"><title>Polynomial Division Algorithm</title>
-              <idx><h>division algorithm (polynomial rings)</h></idx>
+              <idx><h>division algorithm (for polynomial rings)</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. 
@@ -11130,7 +11157,8 @@
     
                     <li>
                       <p>
-                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m>. This is often called <em>absorption</em>
+                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m>. 
+                        This is often called <em>absorption</em>
                         <fn>Personally I think it would be splendid if we could rename ideals <em>sponges</em> to match this imagery.</fn>.
                         <idx><h>absorption</h></idx>
                       </p>
@@ -11139,6 +11167,7 @@
                   For a ring <m>R</m>, a <em>proper ideal</em> is an ideal <m>I</m> such that <m>I\neq R</m>.
                   <idx><h>ideal</h></idx>
                   <idx><h>proper ideal</h></idx>
+                  <idx><h>two-sided ideal</h></idx>
                 </p>
               </statement>
             </definition>
@@ -11258,6 +11287,7 @@
                 <me>
                   I\cap(J+K)=I\cap J+I\cap K.
                 </me>
+                <idx><h>modular law (of ideals)</h></idx>
               </p>
             </exercise>
 
@@ -11281,25 +11311,25 @@
                   <ol>
                     <li>
                       <p>
-                        the image of <m>\varphi</m> is a subring of <m>S</m> and 
+                        the image of <m>\varphi</m> is a subring of <m>S</m>, 
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        the kernel of <m>\varphi</m> is an ideal of <m>R</m>. 
+                        the kernel of <m>\varphi</m> is an ideal of <m>R</m>,
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        <m>\varphi</m> is injective if and only if <m>\ker(\varphi)=\{0\}</m>. 
+                        <m>\varphi</m> is injective if and only if <m>\ker(\varphi)=\{0\}</m>,
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        if <m>I</m> is an ideal of <m>R</m> then <m>\varphi(I)</m> is an ideal of <m>\varphi(R)</m>. 
+                        if <m>I</m> is an ideal of <m>R</m> then <m>\varphi(I)</m> is an ideal of <m>\varphi(R)</m>, and 
                       </p>
                     </li>
     
@@ -11349,6 +11379,7 @@
                   An ideal <m>I</m> is <em>finitely generated</em> if <m>I = \igen A</m> for some finite subset <m>A</m> of <m>R</m>.
                   <idx><h>generated ideal</h></idx>
                   <idx><h>finitely generated (ideal)</h></idx>
+                  <idx><h>ideal generated by <m>A</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -11461,7 +11492,8 @@
             <definition xml:id="def-quotient-ring"><title>Quotient Ring</title>
               <statement>
                 <p>
-                  For a two-sided ideal <m>I</m> of <m>R</m> The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I</m>.
+                  For a two-sided ideal <m>I</m> of <m>R</m> 
+                  The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I</m>.
                   <idx><h>quotient ring</h></idx>
                 </p>
               </statement>
@@ -11501,7 +11533,7 @@
 
             <p>
               Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.
-              <fn>Once again, I would like to suggest that <q>ideal subgroup</q> is a far better name for a normal subgroup.</fn>
+              <fn>Once again, I would like to suggest that <q>ideal subgroup</q> is a better name for a normal subgroup.</fn>
             </p>
     
             <theorem xml:id="thm-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
@@ -11532,6 +11564,7 @@
 
             <theorem xml:id="thm-ump-for-quotient-rings"><title>UMP for Quotient Rings</title>
               <idx><h>UMP for quotient rings</h></idx>
+              <idx><h>universal mapping property for quotient rings</h></idx>
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>, there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. 
@@ -11553,7 +11586,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>   
-              <idx><h>first isomorphism theorem for rings</h></idx>        
+              <idx><h>first isomorphism theorem (for rings)</h></idx>        
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism, then <m>R/\ker(f)\cong \im(f)</m> via the map <m>\overline{f}</m> given by <m>\ov{f}(r + \ker(f)) = f(r)</m>.
@@ -11569,7 +11602,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-sit"><title>Second Isomorphism Theorem for Rings</title>
-              <idx><h>second isomorphism theorem for rings</h></idx>
+              <idx><h>second isomorphism theorem (for rings)</h></idx>
               <statement>
                 <p>
                   Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. 
@@ -11582,7 +11615,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-tit"><title>Third Isomorphism Theorem for Rings</title>
-              <idx><h>third isomorphism theorem for rings</h></idx>
+              <idx><h>third isomorphism theorem (for rings)</h></idx>
               <statement>
                 <p>
                   If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m> is an ideal of <m>R/I</m> and 
@@ -11594,7 +11627,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Rings</title>
-              <idx><h>lattice isomorphism theorem for rings</h></idx>
+              <idx><h>lattice isomorphism theorem (for rings)</h></idx>
               <statement>
                 <p>
                   Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. 
@@ -11818,8 +11851,6 @@
               </proof>
             </corollary>
 
-
-
             <paragraphs><title>Qual Watch</title>
               <p>
                 Proving <xref ref="cor-maximal-prime"/> was <xref text="title"  ref="jan-2021-4"/> on the <xref text="title" ref="jan-2021"/> qualifying exam.
@@ -11830,7 +11861,8 @@
               Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.
             </p>
 
-            <lemma xml:id="lem-zorn"><title>Zorn's Lemma</title>          
+            <lemma xml:id="lem-zorn"><title>Zorn's Lemma</title> 
+              <idx><h>Zorn's lemma</h></idx>         
               <statement>
                 <p>
                   Let <m>P</m> be a non-empty family of sets. 
@@ -11911,7 +11943,7 @@
                 <me>
                   a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
                 </me>
-                <idx><h>Euclidean domain</h></idx>
+                <idx><h>Euclidean domain (ED)</h></idx>
                 <idx><h>norm function</h></idx>
               </p>
             </statement>
@@ -11976,6 +12008,7 @@
           </example> 
     
           <definition xml:id="def-ed-gcd"><title>GCD</title>
+            <idx><h>greatest common divisor (gcd) (in a ED)</h></idx>
             <statement>
               <p>
                 Given elements <m>a, b</m>, not both <m>0</m>, of a Euclidean domain <m>R</m> with Euclidean norm <m>N</m>, a <m>\gcd</m> of <m>a</m> and <m>b</m> is an element <m>g \in\R</m> such that: 
@@ -11992,7 +12025,6 @@
                     </p>
                   </li>
                 </ol>
-                <idx><h>gcd (Euclidean domain)</h></idx>
               </p>
             </statement>
           </definition>
@@ -12007,16 +12039,20 @@
     
         <section xml:id="sec-pids"><title>Principal Ideal Domains (PIDs)</title>
 
-          <blockquote>
-            <p>
-              <q>
-                One chance is all you need.
-              </q>
-            </p>
-            <attribution>Jesse Owens</attribution>
-          </blockquote>
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  One chance is all you need.
+                </q>
+              </p>
+              <attribution>Jesse Owens</attribution>
+            </blockquote>
+          </introduction>
 
-          <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
+          <subsection xml:id="subsec-principal-ideals"><title>Principal Ideals</title>
+
+            <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
               <statement>
                 <p>
                   Let <m>I</m> be an ideal of a ring <m>R</m>. 
@@ -12024,352 +12060,358 @@
                   <idx><h>principal ideal</h></idx>
                 </p>
               </statement>
-          </definition>
+            </definition>
 
-          <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
-            <p>
-              Let <m>\igen m,\igen n</m> be ideals in <m>\Z</m>. 
-              Then
-              <ul>
-                <li>
-                  <m>\igen m+\igen n=\igen{\gcd(m,n)}</m>
-                </li>
-  
-                <li>
-                  <m>\igen m\cap\igen n=\igen{\lcm(m,n)}</m>
-                </li>
-  
-                <li>
-                  <m>\igen m\igen n=\igen {mn}</m> 
-                  Conclude that <m>\igen m\igen n=\igen m\cap\igen n</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
-                </li>
-              </ul>
-            </p>
-          </exercise>
-
-          <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
-            <p>
-              <ul>
-                <li>
-                  Every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m>
-                  <fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
-                </li>
-  
-                <li>
-                  For any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
-                </li>
-  
-                <li>
-                  For any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. 
-                  This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
-                </li>
-              </ul>
-            </p>
-          </example>
-    
-          <definition xml:id="def-pid"><title>PID</title>
-            <statement>
+            <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
               <p>
-                A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = \igen a</m> for some <m>a \in R</m>.
-                <idx><h>PID</h></idx>
-                <idx><h>principal ideal domain</h></idx>
-              </p>
-            </statement>
-          </definition>
-    
-          <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings PID iff Field</title>
-            <p>
-              A polynomial ring <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
-            </p>
-          </exercise>
-
-          <paragraphs><title>Qual Watch</title>
-            <p>
-              Proving <xref ref="exe-fx-is-a-pid"/> was <xref text="title"  ref="june-2016-8"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
-            </p>
-          </paragraphs>
-    
-          <theorem xml:id="thm-ed-is-a-pid"><title>Euclidean Domains are PIDs</title>
-            <statement>
-              <p>
-                If <m>R</m> is a Euclidean domain, then <m>R</m> is a PID.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. 
-                Pick an ideal <m>I</m>. 
-                If <m>I</m> is the zero ideal, <m>I = \igen0</m>. 
-                Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. 
-                (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) 
-                I claim <m>I = \igen b</m>. 
-                It is clear that <m>\igen b \subseteq I</m>. 
-                Pick <m>a \in I</m>. 
-                Then 
-                <me>
-                  a = bq + r
-                </me> 
-                and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. 
-                But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. 
-                So it must be that <m>r = 0</m>, and hence <m>a\in \igen b</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <p>
-            The converse is not true in general.
-          </p>
-    
-          <example xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
-            <p>
-              The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. 
-              It is the simplest example of such a ring, but the proofs of these claims are not easy. 
-              I will not cover a proof of this fact.
-            </p>
-          </example>
-    
-          <proposition xml:id="prop-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
-            <statement>
-              <p>
-                If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
-              </p>
-            </statement>
-          </proposition>
-
-          <paragraphs><title>Qual Watch</title>
-            <p>
-              Proving <xref ref="prop-nonzero-primes-maximal-in-pid"/> was <xref text="title"  ref="jan-2023-4"/> on the <xref text="title" ref="jan-2023"/> qualifying exam.
-            </p>
-          </paragraphs>
-    
-          <definition xml:id="def-associate"><title>Associate</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a domain. 
-                Two elements <m>r,s \in R</m> are <em>associates</em> if there is a unit <m>u</m> of <m>R</m> such that <m>s = ur</m>.
-                <idx><h>associate</h></idx>
-              </p>
-            </statement>
-          </definition>
-    
-          <lemma xml:id="lem-associates-and-principal-ideals"><title>Associates and Principal Ideals</title>
-            <statement>
-              <p>
-                Two elements <m>x,y</m> of a domain <m>R</m> are associates if and only if <m>\igen x = \igen y</m>.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                If <m>\igen x = \igen y</m> then <m>x \in \igen y</m> and so <m>x = yu</m> for some <m>u</m>. 
-                Similarly <m>y = xs</m> and hence <m>y = yus</m>. 
-                Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. 
-                If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
-              </p>
-    
-              <p>
-                If <m>x = uy</m> for a unit <m>u</m>, then <m>y = u^{-1}x</m> and so <m>x \in \igen y</m> and <m>y \in \igen x</m>, from which is follows that <m>\igen x \subseteq \igen y</m> and <m>\igen y \subseteq \igen x</m>.
-              </p>
-            </proof>
-          </lemma>
-    
-          <proposition xml:id="prop-gcds-and-units-in-pids"><title>GCDs and Units in PIDs</title>
-            <statement>
-              <p>
-                If <m>R</m> is a PID and <m>a,b\in R</m>, then 
-                <ol>
+                Let <m>\igen m,\igen n</m> be ideals in <m>\Z</m>. 
+                Then
+                <ul>
                   <li>
-                    <p>
-                      <m>\igen{a,b}=\igen g</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m>.
-                    </p>
+                    <m>\igen m+\igen n=\igen{\gcd(m,n)}</m>
                   </li>
     
                   <li>
-                    <p>
-                      the gcd of <m>a</m> and <m>b</m> is unique up to multiplication by a unit.
-                    </p>
+                    <m>\igen m\cap\igen n=\igen{\lcm(m,n)}</m>
+                  </li>
+    
+                  <li>
+                    <m>\igen m\igen n=\igen {mn}</m> 
+                    Conclude that <m>\igen m\igen n=\igen m\cap\igen n</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
+                  </li>
+                </ul>
+              </p>
+            </exercise>
+
+            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
+              <p>
+                <ul>
+                  <li>
+                    Every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m>
+                    <fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
+                  </li>
+    
+                  <li>
+                    For any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
+                  </li>
+    
+                  <li>
+                    For any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. 
+                    This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+                  </li>
+                </ul>
+              </p>
+            </example>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-pids"><title>Principal Ideal Domains</title>
+
+            <definition xml:id="def-pid"><title>PID</title>
+              <statement>
+                <p>
+                  A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = \igen a</m> for some <m>a \in R</m>.
+                  <idx><h>principal ideal domain (PID)</h></idx>
+                </p>
+              </statement>
+            </definition>
+      
+            <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings PID iff Field</title>
+              <p>
+                A polynomial ring <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
+              </p>
+            </exercise>
+  
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="exe-fx-is-a-pid"/> was <xref text="title"  ref="june-2016-8"/> on the <xref text="title" ref="june-2016"/> qualifying exam.
+              </p>
+            </paragraphs>
+      
+            <theorem xml:id="thm-ed-is-a-pid"><title>Euclidean Domains are PIDs</title>
+              <statement>
+                <p>
+                  If <m>R</m> is a Euclidean domain, then <m>R</m> is a PID.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. 
+                  Pick an ideal <m>I</m>. 
+                  If <m>I</m> is the zero ideal, <m>I = \igen0</m>. 
+                  Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. 
+                  (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) 
+                  I claim <m>I = \igen b</m>. 
+                  It is clear that <m>\igen b \subseteq I</m>. 
+                  Pick <m>a \in I</m>. 
+                  Then 
+                  <me>
+                    a = bq + r
+                  </me> 
+                  and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. 
+                  But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. 
+                  So it must be that <m>r = 0</m>, and hence <m>a\in \igen b</m>.
+                </p>
+              </proof>
+            </theorem>
+  
+            <p>
+              The converse is not true in general.
+            </p>
+      
+            <example xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
+              <p>
+                The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. 
+                It is the simplest example of such a ring, but the proofs of these claims are not easy. 
+                I will not cover a proof of this fact.
+              </p>
+            </example>
+      
+            <proposition xml:id="prop-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
+              <statement>
+                <p>
+                  If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
+                </p>
+              </statement>
+            </proposition>
+  
+            <paragraphs><title>Qual Watch</title>
+              <p>
+                Proving <xref ref="prop-nonzero-primes-maximal-in-pid"/> was <xref text="title"  ref="jan-2023-4"/> on the <xref text="title" ref="jan-2023"/> qualifying exam.
+              </p>
+            </paragraphs>
+      
+            <definition xml:id="def-associate"><title>Associate</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a domain. 
+                  Two elements <m>r,s \in R</m> are <em>associates</em> if there is a unit <m>u</m> of <m>R</m> such that <m>s = ur</m>.
+                  <idx><h>associate</h></idx>
+                </p>
+              </statement>
+            </definition>
+      
+            <lemma xml:id="lem-associates-and-principal-ideals"><title>Associates and Principal Ideals</title>
+              <statement>
+                <p>
+                  Two elements <m>x,y</m> of a domain <m>R</m> are associates if and only if <m>\igen x = \igen y</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  If <m>\igen x = \igen y</m> then <m>x \in \igen y</m> and so <m>x = yu</m> for some <m>u</m>. 
+                  Similarly <m>y = xs</m> and hence <m>y = yus</m>. 
+                  Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. 
+                  If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
+                </p>
+      
+                <p>
+                  If <m>x = uy</m> for a unit <m>u</m>, then <m>y = u^{-1}x</m> and so <m>x \in \igen y</m> and <m>y \in \igen x</m>, from which is follows that <m>\igen x \subseteq \igen y</m> and <m>\igen y \subseteq \igen x</m>.
+                </p>
+              </proof>
+            </lemma>
+      
+            <proposition xml:id="prop-gcds-and-units-in-pids"><title>GCDs and Units in PIDs</title>
+              <statement>
+                <p>
+                  If <m>R</m> is a PID and <m>a,b\in R</m>, then 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\igen{a,b}=\igen g</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        the gcd of <m>a</m> and <m>b</m> is unique up to multiplication by a unit.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  The existence of <m>g</m> is granted by definition in a PID. 
+                  Now <m>a,b\in \igen g</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. 
+                  If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in \igen{g'}</m>, so <m>\igen g=\igen{a,b}\subseteq \igen{g'}</m> by minimality. 
+                  This gives <m>g\in\igen{g'}</m>, hence <m>g'\mid g</m>.
+                </p>
+              </proof>
+            </proposition>
+      
+            <remark>
+              <p>
+                If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.
+              </p>
+            </remark>
+      
+            <definition xml:id="def-prime-element"><title>Prime</title>
+              <statement>
+                <p>
+                  Suppose <m>R</m> is an integral domain. 
+                  An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
+                  <idx><h>prime element (in integral domains)</h></idx>
+                </p>
+              </statement>
+            </definition>
+      
+            <definition xml:id="def-irreducible"><title>Irreducible</title>
+              <statement>
+                <p>
+                  Suppose <m>R</m> is an integral domain. 
+                  An element <m>r \in R</m> is <em>irreducible</em> if <m>r\neq 0</m>, <m>r</m> is not a unit, and whenever <m>r = xy</m> with <m>x,y \in R</m> then either <m>x</m> or <m>y</m> is a unit.
+                  <idx><h>irreducible element (in integral domains)</h></idx>
+                </p>
+              </statement>
+            </definition>
+      
+            <example xml:id="ex-prime-and-irreducible-elements"><title>Examples of Primes and Irreducibles</title>
+              <p>
+                <ol>
+                  <li>
+                    The prime elements of <m>\Z</m> are the prime integers and their negatives; they are also irreducible
+                  </li>
+      
+                  <li>
+                    Any element <m>\a\in Z[i]</m> with <m>N(\a)</m> a prime integer is irreducible e.g. <m>\a=1+2i</m> is irreducible
+                  </li>
+      
+                  <li>
+                    The element <m>13=(2+3i)(2-3i)</m> is not irreducible in <m>\Z[i]</m>
+                  </li>
+      
+                  <li>
+                    The polynomial <m>x^2+x+[1]\in (\Z/2)[x]</m> is irreducible; 
+                    indeed if it factors nontrivially, it must factor as a product of two linear polynomials: <m>x^2+x+[1]=(x+[a])(x+[b])</m>. 
+                    Then <m>-[b]</m> is a root for <m>x^2+x+[1]</m>. 
+                    But neither <m>[0]</m> nor <m>[1]</m> are roots for this polynomial, a contradiction.
                   </li>
                 </ol>
               </p>
-            </statement>
-    
-            <proof>
-              <p>
-                The existence of <m>g</m> is granted by definition in a PID. 
-                Now <m>a,b\in \igen g</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. 
-                If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in \igen{g'}</m>, so <m>\igen g=\igen{a,b}\subseteq \igen{g'}</m> by minimality. 
-                This gives <m>g\in\igen{g'}</m>, hence <m>g'\mid g</m>.
-              </p>
-            </proof>
-          </proposition>
-    
-          <remark>
-            <p>
-              If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.
-            </p>
-          </remark>
-    
-          <definition xml:id="def-prime-element"><title>Prime</title>
-            <statement>
-              <p>
-                Suppose <m>R</m> is a domain. 
-                An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
-                <idx><h>prime element</h></idx>
-              </p>
-            </statement>
-          </definition>
-    
-          <definition xml:id="def-irreducible"><title>Irreducible</title>
-            <statement>
-              <p>
-                Suppose <m>R</m> is a domain. 
-                An element <m>r \in R</m> is <em>irreducible</em> if <m>r\neq 0</m>, <m>r</m> is not a unit, and whenever <m>r = xy</m> with <m>x,y \in R</m> then either <m>x</m> or <m>y</m> is a unit.
-                <idx><h>irreducible element</h></idx>
-              </p>
-            </statement>
-          </definition>
-    
-          <example xml:id="ex-prime-and-irreducible-elements"><title>Examples of Primes and Irreducibles</title>
-            <p>
-              <ol>
-                <li>
-                  the prime elements of <m>\Z</m> are the prime integers and their negatives; they are also irreducible
-                </li>
-    
-                <li>
-                  any element <m>\a\in Z[i]</m> with <m>N(\a)</m> a prime integer is irreducible e.g. <m>\a=1+2i</m> is irreducible
-                </li>
-    
-                <li>
-                  the element <m>13=(2+3i)(2-3i)</m> is not irreducible in <m>\Z[i]</m>
-                </li>
-    
-                <li>
-                  the polynomial <m>x^2+x+[1]\in (\Z/2)[x]</m> is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: <m>x^2+x+[1]=(x+[a])(x+[b])</m>. 
-                  Then <m>-[b]</m> is a root for <m>x^2+x+[1]</m>. 
-                  But neither <m>[0]</m> nor <m>[1]</m> are roots for this polynomial, a contradiction.
-                </li>
-              </ol>
-            </p>
-          </example>
-    
-          <exercise xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime"><title>In <m>\Z[\sqrt{-5}]</m>, <m>2</m> Prime but not Irreducible</title>
-            <statement>
-              <p>
-                In the domain <m>\Z[\sqrt{-5}]</m> the element <m>2</m> is irreducible but not prime.
-              </p>
-            </statement>
-    
-            <solution>
-              <p>
-                Note that <m>2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m> and thus <m>(1+\sqrt{-5})(1-\sqrt{-5})\in (2)</m>. 
-                However we claim that neither <m>1+\sqrt{-5}</m> nor <m>1-\sqrt{-5}</m> are in <m>(2)</m>. 
-                If <m>\a=1\pm\sqrt{-5}\in (2)</m> then <m>\a=2\beta</m> for some <m>\beta\in\Z[\sqrt{-5}]</m> and so <m>6=N(\a)=N(2)N(\beta)=4N(\beta)</m>, a contradiction. 
-                Thus <m>2</m> is not prime.
-              </p>
-            </solution>
-          </exercise>
-    
-          <exercise xml:id="ex-cxyx2-y3-y-irreducible-but-not-prime">
-            <statement>
-              <p>
-                In the ring <m>\C[x,y]/\igen{x^2-y^3}</m> the element <m>y</m> is irreducible but not prime. 
-              </p>
-            </statement>
-    
-            <solution>
-              <p>
-                Since <m>\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. 
-                The element <m>y</m> is irreducible for degree reasons. 
-                The ideal <m>\igen{y}</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
-              </p>
-            </solution>
-          </exercise>
-    
-          <theorem xml:id="thm-irreducible-is-prime-in-pid"><title>Irreducible is Prime in PID</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a domain and let <m>r\in R</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      If <m>r</m> is a prime element, then <m>r</m> is irreducible. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>R</m> is a PID and <m>r</m> is irreducible, then <m>r</m> is a prime element.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. 
-                Then <m>r \ne 0</m> and <m>r</m> is not a unit. 
-                Suppose <m>r = yz</m>. 
-                Then <m>yz \in \igen r</m> and hence by definition either <m>y \in \igen r</m> or <m>z \in \igen r</m>. 
-                If <m>y \in \igen r</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. 
-                Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
-              </p>
-    
-              <p>
-                Assume <m>R</m> is a PID and that <m>r</m> is irreducible. 
-                Since <m>r</m> is not a unit, <m>\igen r</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by <xref provisional="cite"/> 
-                We show <m>\igen r= M</m> and hence <m>\igen r</m> is prime. 
-                Since <m>R</m> is a PID, <m>M = \igen y</m> for some <m>y</m>. 
-                So <m>x = yt</m> for some <m>t</m>. 
-                But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>\igen x = \igen y = M</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <theorem xml:id="thm-factorizations-permutations-and-associates"><title>Factorizations and Permutations</title>
-            <statement>
-              <p>
-                Assume <m>R</m> is a PID <m>r\in R</m> is non zero and not a unit and <m>r = p_1 \cdots p_n = q_1 \cdots q_m</m> are two different irreducible factorization of <m>r</m>. 
-                Then <m>n=m</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Without loss of generality, assume <m>n \leq m</m>. 
-                We induct on <m>m</m>.
-              </p>
-    
-              <p>
-                If <m>m =1</m> then <m>n=1</m> as well since <m>n\leq m</m> and <m>n=0</m> would yield <m>r = p_1 \cdots p_n =1</m>, a contradiction. 
-                If <m>n=m=1</m> we have <m>p_1=q_1</m> and there is nothing more to prove.
-              </p>
-    
-              <p>
-                Assume <m>m &gt; 1</m> and that irreducible factorizations with <m>\leq m</m> factors are unique up to reordering factors and taking associates.
-              </p>
-    
-              <p>
-                Since <m>R</m> is a PID, irreducible elements are prime by <xref provisional="cite"/>.
-                Since <m>p_1 \cdots p_n\in (p_n)</m> we have that <m>q_1 \cdots q_m\in (p_n)</m> and since <m>(p_n)</m> is a prime ideal it follows that <m>q_i \in (p_n)</m> for some <m>i</m>. Upon reordering, we may as well assume <m>q_m\in (p_n)</m>. Thus <m>q_m = p_n u</m> for some <m>u \in R</m>. Since <m>q_m</m> is irreducible and <m>p_n</m> is not a unit, <m>u</m> must be a unit. We get 
-                <me>
-                    p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
-                </me> 
-                and hence, since <m>R</m> is an integral domain, we may divide by <m>p_n</m> to obtain 
-                <me>
-                    p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
-                </me> 
-                Notice that <m>(q_{m-1}u)=(q_{m-1})</m> is a prime ideal so <m>q_{m-1}u</m> is irreducible by <xref provisional="cite"/> .
-              </p>
-    
-              <p>
-                By the inductive hypothesis we deduce that <m>n-1=m-1</m> hence <m>n=m</m> and also that <m>p_1, \ldots, p_{n-1}</m> are associates to <m>q_1, \ldots, q_{m-2}, q_{m-1}u</m> in some order. 
-                This together with <m>p_n</m> associate to <m>q_m</m> establishes the claim.
-              </p>
-            </proof>
-          </theorem>
+            </example>
+      
+            <exercise xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime"><title>In <m>\Z[\sqrt{-5}]</m>, <m>2</m> Prime but not Irreducible</title>
+              <statement>
+                <p>
+                  In the domain <m>\Z[\sqrt{-5}]</m> the element <m>2</m> is irreducible but not prime.
+                </p>
+              </statement>
+      
+              <solution>
+                <p>
+                  Note that <m>2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m> and thus <m>(1+\sqrt{-5})(1-\sqrt{-5})\in (2)</m>. 
+                  However we claim that neither <m>1+\sqrt{-5}</m> nor <m>1-\sqrt{-5}</m> are in <m>(2)</m>. 
+                  If <m>\a=1\pm\sqrt{-5}\in (2)</m> then <m>\a=2\beta</m> for some <m>\beta\in\Z[\sqrt{-5}]</m> and so <m>6=N(\a)=N(2)N(\beta)=4N(\beta)</m>, a contradiction. 
+                  Thus <m>2</m> is not prime.
+                </p>
+              </solution>
+            </exercise>
+      
+            <exercise xml:id="ex-cxyx2-y3-y-irreducible-but-not-prime">
+              <statement>
+                <p>
+                  In the ring <m>\C[x,y]/\igen{x^2-y^3}</m> the element <m>y</m> is irreducible but not prime. 
+                </p>
+              </statement>
+      
+              <solution>
+                <p>
+                  Since <m>\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. 
+                  The element <m>y</m> is irreducible for degree reasons. 
+                  The ideal <m>\igen{y}</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
+                </p>
+              </solution>
+            </exercise>
+      
+            <theorem xml:id="thm-irreducible-is-prime-in-pid"><title>Irreducible is Prime in PID</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a domain and let <m>r\in R</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>r</m> is a prime element, then <m>r</m> is irreducible. 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        If <m>R</m> is a PID and <m>r</m> is irreducible, then <m>r</m> is a prime element.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. 
+                  Then <m>r \ne 0</m> and <m>r</m> is not a unit. 
+                  Suppose <m>r = yz</m>. 
+                  Then <m>yz \in \igen r</m> and hence by definition either <m>y \in \igen r</m> or <m>z \in \igen r</m>. 
+                  If <m>y \in \igen r</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. 
+                  Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
+                </p>
+      
+                <p>
+                  Assume <m>R</m> is a PID and that <m>r</m> is irreducible. 
+                  Since <m>r</m> is not a unit, <m>\igen r</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by <xref provisional="cite"/> 
+                  We show <m>\igen r= M</m> and hence <m>\igen r</m> is prime. 
+                  Since <m>R</m> is a PID, <m>M = \igen y</m> for some <m>y</m>. 
+                  So <m>x = yt</m> for some <m>t</m>. 
+                  But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>\igen x = \igen y = M</m>.
+                </p>
+              </proof>
+            </theorem>
+  
+            <theorem xml:id="thm-factorizations-permutations-and-associates"><title>Factorizations, Permutations, Associates</title>
+              <statement>
+                <p>
+                  Assume <m>R</m> is a PID <m>r\in R</m> is non zero and not a unit and <m>r = p_1 \cdots p_n = q_1 \cdots q_m</m> are two different irreducible factorization of <m>r</m>. 
+                  Then <m>n=m</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Without loss of generality, assume <m>n \leq m</m>. 
+                  We induct on <m>m</m>.
+                </p>
+      
+                <p>
+                  If <m>m =1</m> then <m>n=1</m> as well since <m>n\leq m</m> and <m>n=0</m> would yield <m>r = p_1 \cdots p_n =1</m>, a contradiction. 
+                  If <m>n=m=1</m> we have <m>p_1=q_1</m> and there is nothing more to prove.
+                </p>
+      
+                <p>
+                  Assume <m>m &gt; 1</m> and that irreducible factorizations with <m>\leq m</m> factors are unique up to reordering factors and taking associates.
+                </p>
+      
+                <p>
+                  Since <m>R</m> is a PID, irreducible elements are prime by <xref provisional="cite"/>.
+                  Since <m>p_1 \cdots p_n\in (p_n)</m> we have that <m>q_1 \cdots q_m\in (p_n)</m> and since <m>(p_n)</m> is a prime ideal it follows that <m>q_i \in (p_n)</m> for some <m>i</m>. Upon reordering, we may as well assume <m>q_m\in (p_n)</m>. Thus <m>q_m = p_n u</m> for some <m>u \in R</m>. Since <m>q_m</m> is irreducible and <m>p_n</m> is not a unit, <m>u</m> must be a unit. We get 
+                  <me>
+                      p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
+                  </me> 
+                  and hence, since <m>R</m> is an integral domain, we may divide by <m>p_n</m> to obtain 
+                  <me>
+                      p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
+                  </me> 
+                  Notice that <m>(q_{m-1}u)=(q_{m-1})</m> is a prime ideal so <m>q_{m-1}u</m> is irreducible by <xref provisional="cite"/> .
+                </p>
+      
+                <p>
+                  By the inductive hypothesis we deduce that <m>n-1=m-1</m> hence <m>n=m</m> and also that <m>p_1, \ldots, p_{n-1}</m> are associates to <m>q_1, \ldots, q_{m-2}, q_{m-1}u</m> in some order. 
+                  This together with <m>p_n</m> associate to <m>q_m</m> establishes the claim.
+                </p>
+              </proof>
+            </theorem>
+            
+          </subsection>
           
         </section>
     
@@ -12389,8 +12431,7 @@
               <p>
                 A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. 
                 That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
-                <idx><h>unique factorization domain</h></idx>
-                <idx><h>UFD</h></idx>
+                <idx><h>unique factorization domain (UFD)</h></idx>
               </p>
             </statement>
           </definition>
@@ -12469,8 +12510,7 @@
                 <me>
                   I_N = I_{N+1} = \cdots.
                 </me>
-                <idx><h>ascending chain condition</h></idx>
-                <idx><h>ACC</h></idx>
+                <idx><h>ascending chain condition (ACC)</h></idx>
               </p>
             </statement>
           </definition>
@@ -12666,6 +12706,7 @@
                 </me>
                 <idx><h>field of fractions</h></idx>
                 <idx><h>fraction field</h></idx>
+                <idx><h><m>S\inv R</m></h></idx>
               </p>
             </statement>
           </definition>
@@ -12829,7 +12870,6 @@
                         </p>
                       </li>
                     </ol>
-                    <idx><h>module</h></idx>
                   </p>
 
                   <p>
@@ -12865,6 +12905,11 @@
                  
                 <p>
                   Often, the elements of the ring <m>R</m> are referred to as <em>scalars</em>, and the four rules given above are referred to as an <m>R</m>-<em>action</em>.
+                  <idx><h>module</h></idx>
+                  <idx><h>left module</h></idx>
+                  <idx><h>right module</h></idx>
+                  <idx><h>scalars (of a module)</h></idx>
+                  <idx><h>action (of a module)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13070,7 +13115,10 @@
                   Let <m>M</m> be an abelian group under <m>+</m>. 
                   Then <m>M</m> becomes a <m>\Z</m>-module upon defining the rule for scaling to be <m>nm :=</m> 
                   <me>
-                    0 \textrm{ if } n=0,</me> <me>\overbrace{m + \cdots + m}^{\text{n times}},  \text{ if } n &gt; 0, \text{ and }
+                    0 \textrm{ if } n=0,
+                  </me>
+                  <me>
+                    \overbrace{m + \cdots + m}^{\text{n times}},  \text{ if } n &gt; 0, \text{ and }
                   </me> 
                   <me>
                     (\overbrace{m + \cdots + m}^{\text{|n| times}}), \text{ if }n &lt; 0,
@@ -13081,7 +13129,7 @@
 
               <proof>
                 <p>
-                  
+                  Coming soon!
                 </p>
               </proof>
             </theorem>
@@ -13208,6 +13256,7 @@
             <p>
               For an <m>R</m>-module <m>M</m> the ring <m>R</m> is often referred to as the <q>ring of scalars</q> for the module (by analogy to the vector space case). 
               Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.
+              <idx><h>ring of scalars</h></idx>
             </p>
 
             <theorem xml:id="thm-restriction-of-scalars"><title>Restriction of Scalars</title>
@@ -13273,9 +13322,14 @@
                   Given a ring <m>R</m>, an <m>R</m>-<em>algebra</em> is a ring <m>S</m> equipped with a ring homomorphism <m>\phi: R \to S</m>. 
                   This defines an <m>R</m>-module structure on <m>S</m> given by restriction of scalars: 
                   for each <m>r\in R</m> and <m>s\in S</m>, <m>rs := \phi(r)s</m>. 
-                  This <m>R</m>-module structure on <m>S</m> is compatible with the internal multiplication of <m>S</m> i.e., <idx><h>restriction of scalars</h></idx>
-                  <me>r(st)=(rs)t=s(rt) \text{ for all } r\in R, s, t\in S.</me>
-                  We will call <m>\phi</m> the <em>structure homomorphism</em> of the <m>R</m>-algebra <m>S</m>.<idx><h>structure homomorphism of an algebra</h></idx>
+                  This <m>R</m>-module structure on <m>S</m> is compatible with the internal multiplication of <m>S</m> i.e.,
+                  <me>
+                    r(st)=(rs)t=s(rt) \text{ for all } r\in R, s, t\in S.
+                  </me>
+                  We will call <m>\phi</m> the <em>structure homomorphism</em> of the <m>R</m>-algebra <m>S</m>.
+                  <idx><h>algebra</h></idx>
+                  <idx><h><m>R</m>-algebra</h></idx>
+                  <idx><h>structure homomorphism</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13415,7 +13469,8 @@
             <exercise><title><m>\varphi(0)=0</m></title>
               <statement>
                 <p>
-                  Let <m>\varphi</m> be an <m>R</m>-module homomorphism. Then <m>\varphi(0)=0</m>.
+                  Let <m>\varphi</m> be an <m>R</m>-module homomorphism. 
+                  Then <m>\varphi(0)=0</m>.
                 </p>
               </statement>
 
@@ -13458,12 +13513,15 @@
                   <ol>
                     <li>
                       <p>
-                        
                         By the definition of <m>R</m>-module we have
-                        <me>\varphi_r(m + n) = r(m + n) = rm + rn = \varphi_r(m) + \varphi_r(n),</me>
+                        <me>
+                          \varphi_r(m + n) = r(m + n) = rm + rn = \varphi_r(m) + \varphi_r(n),
+                        </me>
                         and thus <m>\varphi_r</m> preserves addition.
                         Also, we have
-                        <me>\varphi_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = s\varphi_r(m),</me>
+                        <me>
+                          \varphi_r(sm) = r(sm) = (rs)m = (sr)m = s(rm) = s\varphi_r(m),
+                        </me>
                         and thus <m>\varphi_r</m> preserves scaling as well, making <m>\varphi_r</m> an <m>R</m>-module homomorphism.
                       </p>
                     </li>
@@ -13525,7 +13583,7 @@
               <statement>
                 <p>
                   The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(\varphi) := \{m \in M \mid \varphi(m) = 0_N\}</m>
-                  <idx><h>kernel (<m>R</m>-map)</h></idx>
+                  <idx><h>kernel (of an <m>R</m>-module homomorphism)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13571,6 +13629,7 @@
                   Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. 
                   Then <m>\Hom_R(M, N )</m> denotes the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m>, and <m>\End_R(M)</m> denotes the set <m>\Hom_R(M, M)</m>. 
                   <idx><h><m>\Hom_R</m></h></idx>
+                  <idx><h><m>\End_R(M)</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -13657,6 +13716,13 @@
               </statement>
             </definition>
 
+            <remark>
+              <p>
+                When working with groups, it was necessary that we modded out by a normal subgroup in order to ensure that our quotient group was well defined.
+                However, since all modules underlying groups are abelian, this condition is satisfied automatically.
+              </p>
+            </remark>
+
             <theorem xml:id="thm-quotient-module-well-defined"><title>Quotient Modules are Well Defined</title>
               <statement>
                 <p>
@@ -13706,7 +13772,7 @@
                   If <m>m+N=m'+N</m> then <m>m-m'\in N</m> so <m>r(m-m')\in N</m> by the definition of submodule.
                   This gives that <m>rm-rm'\in N</m>, hence <m>rm+N=rm'+N</m>. 
                   The module axioms are then pretty straightforward. 
-                  We already know from 817 that <m>M/N</m> is an abelian group under <m>+</m>.
+                  We already know from 817 CITEX that <m>M/N</m> is an abelian group under <m>+</m>.
                 </p>
     
                 <p>
@@ -13740,6 +13806,7 @@
                   <me>
                     \text { coker } \varphi:=B / \operatorname{im}(\varphi).
                   </me>
+                  <idx><h>cokernel (of <m>R</m>-module homomorphism</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13755,6 +13822,7 @@
                         If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. 
                         In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \pi = f</m> where <m>\pi</m> denotes the canonical surjection <m>M \onto M/N</m>. 
                         <idx><h>UMP for quotient modules</h></idx>
+                        <idx><h>Universal mapping property for quotient modules</h></idx>
                       </p>
                     </li>
 
@@ -13762,7 +13830,7 @@
                       <p>
                         Let <m>T</m> be an <m>R</m>-module and let <m>\varphi: M \to T</m> be an <m>R</m>-module homomorphism. 
                         Then <m>\ker(\varphi)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(\varphi) \cong \im(\varphi)</m> given by <m>m + \ker(\varphi) \mapsto \varphi(m)</m>. 
-                        <idx><h>first isomorphism theorem for modules</h></idx>
+                        <idx><h>first isomorphism theorem (for modules)</h></idx>
                       </p>
                     </li>
 
@@ -13770,7 +13838,7 @@
                       <p>
                         Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. 
                         Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
-                        <idx><h>second isomorphism theorem for modules</h></idx>
+                        <idx><h>second isomorphism theorem (for modules)</h></idx>
                       </p>
                     </li>
 
@@ -13778,7 +13846,7 @@
                       <p>
                         Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. 
                         Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
-                        <idx><h>third isomorphism theorem for modules</h></idx>
+                        <idx><h>third isomorphism theorem (for modules)</h></idx>
                       </p>
                     </li>
 
@@ -13791,7 +13859,7 @@
                         </me>
                         defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. 
                         Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
-                        <idx><h>lattice isomorphism theorem for modules</h></idx>
+                        <idx><h>lattice isomorphism theorem (for modules)</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -13803,9 +13871,6 @@
                   Ignoring the rules for scaling by <m>R</m>, we know each of the first four results holds for abelian groups (and the maps are the same). 
                   So, we merely need to prove that the rules for scaling are respected in each case. 
                   In more detail:
-                </p>
-    
-                <p>
                   <ol>
                     <li><title>UMP</title>
                       <p>
@@ -13962,7 +14027,7 @@
               <attribution>Mike Tyson</attribution>
             </blockquote>
 
-            <paragraphs><title>Where We Came From and Where We're Going</title>
+            <paragraphs><title>Where We Came From, Where We're Going</title>
               
               <p>
                 In <xref ref="ch-presentations"/>, we learned about free groups and presentations, ways of representing groups in more digestible ways.
@@ -14017,6 +14082,7 @@
                 <p>
                   We say <m>M</m> is <term>generated</term> by <m>A</m> if <m>M = RA</m>.
                   <idx><h>generated module</h></idx>
+                  <idx><h>submodule generated by <m>A</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -14089,7 +14155,9 @@
                   Define <m>f: R \to M</m> to be the unique <m>R</m>-map with <m>f(1) = m</m>. 
                   Here I am applying the UMP for bases, using that <m>\{1\}</m> is a basis of <m>R</m> as a left <m>R</m>-modules. 
                   More explicitly, 
-                  <me>f(r) = f(r\cdot 1) = r f(1) = rm</me> 
+                  <me>
+                    f(r) = f(r\cdot 1) = r f(1) = rm
+                  </me> 
                   for all <m>r \in R</m>. 
                   Then <m>f</m> is onto, since <m>m</m> generates <m>M</m>. 
                   Its kernel is a left ideal <m>I</m> of <m>R</m>, since submodules of <m>R</m> are the same thing as left ideals. 
@@ -14117,7 +14185,7 @@
             <example xml:id="ex-standard-free-module-finitely-generated"><title>Standard Free Module Finitely Generated</title>
               <p>
                 Let <m>R</m> be a ring. 
-                The standard free <m>R</m>-module of rank <m>n</m>, <m>R^n</m>, is finitely generated, since it is generated by <m>e_1, \dots, e_n</m> where <m>e_i := \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}</m>, with a <m>1</m> in the <m>i</m>-th position. 
+                The standard free <m>R</m>-module CITEX of rank <m>n</m>, <m>R^n</m>, is finitely generated, since it is generated by <m>e_1, \dots, e_n</m> where <m>e_i := \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}</m>, with a <m>1</m> in the <m>i</m>-th position. 
                 This holds since given any element <m>v = \begin{bmatrix} r_1 \\ \vdots \\ r_n\end{bmatrix}</m> of <m>R^n</m> we have <m>v = \sum_i r_i e_i</m>.
               </p>
     
@@ -14158,7 +14226,7 @@
 
                     <li>
                       <p>
-                        
+                        Coming soon!
                       </p>
                     </li>
                   </ol>
@@ -14232,6 +14300,7 @@
                       (Recall that an <m>R</m>-module <m>P</m> is called <em>torsion</em> if for each <m>p \in P</m>, there is a <m>r \in R</m> such that <m>r \ne 0</m> and <m>rp = 0</m>.)
                     </li>
                   </ol>
+                  <idx><h>maximal linearly independent</h></idx>
                 </p>
               </statement>
 
@@ -14336,6 +14405,7 @@
                   An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
                   <idx><h>basis</h></idx>
                   <idx><h>free module</h></idx>
+                  <idx><h>free <m>R</m>-module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -14468,11 +14538,13 @@
             </lemma>
 
             <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
-              <idx><h>UMP for free <m>R</m>-modules</h></idx>
+              
               <statement>
                 <p>
                   Let <m>R</m> be a ring, let <m>M</m> be a free <m>R</m>-module with basis <m>B</m>, let <m>N</m> be an <m>R</m>-module, and let <m>j: B \to N</m> be any function. 
                   Then there is a unique <m>R</m>-module homomorphism <m>\varphi: M \to N</m> such that <m>\varphi(b) = \varphi(b)</m> for all <m>b \in B</m>.
+                  <idx><h>UMP for free <m>R</m>-modules</h></idx>
+                  <idx><h>Universal mapping property for free <m>R</m>-modules</h></idx>
                 </p>
               </statement>
 
@@ -14481,7 +14553,9 @@
                   Given a function <m>j: B \to N</m>, define <m>\varphi: M\to N</m> as follows: 
                   Given <m>m \in M</m>, by <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> <m>m</m> can be written uniquely as a finite sum <m>m = \sum_{b \in B} r_b b</m>. 
                   We set 
-                  <me>\varphi(m) = \sum_{b \in B} r_b j(b).</me> 
+                  <me>
+                    \varphi(m) = \sum_{b \in B} r_b j(b).
+                  </me> 
                   Note that <m>\varphi</m> is a well-defined function by the uniqueness of the equation <m>m = \sum_{b \in B} r_b b</m>.
                 </p>
     
@@ -14490,7 +14564,9 @@
                   I'll just show it preserves scaling — the proof for addition is similar. 
                   Given <m>x \in R</m> and <m>m \in M</m>, we have <m>m = \sum_{b \in B} r_b b</m> for some <m>r_b \in R</m>, and hence <m>xm = \sum_b (xr_b) b</m>. 
                   By definition of <m>f</m>, 
-                  <me>\varphi(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x \varphi(m).</me>
+                  <me>
+                    \varphi(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x \varphi(m).
+                  </me>
                 </p>
     
                 <p>
@@ -14502,7 +14578,9 @@
                 <p>
                   Let <m>\phi:M\to N</m> be another <m>R</m>-module homomorphism such that <m>\phi(b)=\phi(b)</m> for each <m>b \in B</m>. 
                   Given <m>m \in M</m> we have <m>m = \sum_{b \in B} r_b b</m> and hence 
-                  <me>\phi(m) = \sum_b \phi(r_b (b))= \sum_b r_b \phi(b) =\sum_b r_b j(b) = \varphi(m).</me> 
+                  <me>
+                    \phi(m) = \sum_b \phi(r_b (b))= \sum_b r_b \phi(b) =\sum_b r_b j(b) = \varphi(m).
+                  </me> 
                   and hence <m>\phi = \varphi</m>.
                 </p>
               </proof>
@@ -14517,9 +14595,12 @@
             <remark>
               <p>
                 Another way of stating <xref ref="thm-ump-for-free-modules"/> is that there is a bijection of sets 
-                <me>\Hom_R(M,N) \leftrightarrow\Fun(B, N)</me> 
+                <me>
+                  \Hom_R(M,N) \leftrightarrow\Fun(B, N)
+                </me> 
                 given by sending a homomorphisms <m>f: M \to N</m> to its restriction <m>f|_B:B \to N</m> to <m>B</m>. 
                 (Here, <m>\Hom_R(M,N)</m> is the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m> and <m>\Fun(B, N)</m> is the set of all functions from <m>B</m> to <m>N</m>.)
+                <idx><h><m>\Fun(X,Y)</m></h></idx>
               </p>
             </remark>
 
@@ -14571,7 +14652,7 @@
                 <p>
                   Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
                   The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
-                  <idx><h>rank (modules)</h></idx>
+                  <idx><h>rank (of an <m>R</m>-module)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -14669,6 +14750,7 @@
                 <p>
                   Let <m>R</m> be a commutative ring such that <m>1 \ne 0</m> and let <m>M</m> be a free <m>R</m>-module with bases <m>A</m> and <m>B</m>. 
                   Then <m>A</m> and <m>B</m> have the same rank, i.e. there exists a (non unique) bijection of sets joining them.
+                  <idx><h>uniqueness of (module) rank over commutative rings</h></idx>
                 </p>
               </statement>
 
@@ -14697,11 +14779,15 @@
     
                 <p>
                   Next, I claim that there is an isomorphism 
-                  <me>R^n/IR^n \cong (R/I)^n</me> 
+                  <me>
+                    R^n/IR^n \cong (R/I)^n
+                  </me> 
                   of <m>R/I</m>-modules. 
                   Define <m>R^n \to (R/I)^n</m> in the evident way (modding out by <m>I</m> entry-wise). 
                   It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the <xref text = "title" ref="fit-module"/>, it induces an isomorphism
-                  <me>g: R^n/I R^n \xra{\cong} (R/I)^n</me> 
+                  <me>
+                    g: R^n/I R^n \xra{\cong} (R/I)^n
+                  </me> 
                   given by <m>g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau</m> (where <m>\tau</m> denotes taking the transpose). 
                   Now, what we have said so far only shows that <m>g</m> is isomorphism of <m>R</m>-modules, but it is easy to see that <m>g</m> is in fact <m>R/I</m>-linear (I'll leave that to you) and thus it is an isomorphism of <m>R/I</m>-modules.
                 </p>
@@ -14833,6 +14919,8 @@
 
             <p>
               As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+              <idx><h>sub-vector space</h></idx>
+              <idx><h>subspace</h></idx>
             </p>
 
             <lemma xml:id="lem-linear-independence-and-span"><title>Linear Independence and Span</title>
@@ -15080,8 +15168,8 @@
                 <p>
                   The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m>, is the cardinality of any of its bases.
                   A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
-                  <idx><h>dimension (vector space)</h></idx>
-                  <idx><h>finite dimensional (vector space)</h></idx>
+                  <idx><h>dimension (of a vector space)</h></idx>
+                  <idx><h>finite dimensional (as a vector space)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -15123,11 +15211,9 @@
             </theorem>
 
             <example xml:id="ex-dimension-of-fn-in-f"><title>Dimension of <m>F^n</m> in <m>F</m></title>
-
               <p>
                 <m>\dim_F(F^n)=|\{e_1,e_2,\dots,e_n\}|=n.</m>
               </p>
-
             </example>
 
             <example xml:id="exe-rn"><title><m>\R^\N</m></title>
@@ -15487,7 +15573,8 @@
                 Let <m>P_{3}</m> denote the the <m>F</m>-vector space of polynomials of degree at most <m>3</m> (including the zero polynomial) and consider the linear transformation <m>d: P_{3} \rightarrow P_{3}</m> given by taking the derivative <m>d(f)=f^{\prime}</m>. 
                 Let <m>B=\left\{1, x, x^{2}, x^{3}\right\}</m>. 
                 Then
-                <me>[f]_{B}^{B}=\left[\begin{array}{llll}
+                <me>
+                  [f]_{B}^{B}=\left[\begin{array}{llll}
                   0 &amp; 1 &amp; 0 &amp; 0 \\
                   0 &amp; 0 &amp; 2 &amp; 0 \\
                   0 &amp; 0 &amp; 0 &amp; 3 \\
@@ -15503,44 +15590,66 @@
                   Let <m>F</m> be a field and consider a linear transformation <m>f: V \rightarrow W</m>, where <m>V=F^{n}</m> and <m>W=F^{m}</m>. 
                   Consider also the standard ordered bases <m>B</m> and <m>C</m>, i.e. <m>b_{i}=e_{i} \in V</m> and <m>c_{i}=e_{i} \in W</m>. 
                   Then for any
-                  <me>v=\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=\sum_{i} l_{i} b_{i}</me>
+                  <me>
+                    v=\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=\sum_{i} l_{i} b_{i}
+                  </me>
                   in <m>V</m> we have
-                  <me>f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)</me>
+                  <me>
+                    f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)
+                  </me>
                 </p>
 
                 <p>
                   Each <m>f\left(b_{i}\right)</m> can be written uniquely as a linear combination of the <m>c_{j}</m>'s as in (2.2.1):
-                  <me>f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j}</me>
+                  <me>
+                    f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j}
+                  </me>
                   Then we get
-                  <me>f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j} .</me>
+                  <me>
+                    f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j}.
+                  </me>
                 </p>
 
                 <p>
                   In other words, we have
-                  <me>f(v)=\left[\begin{array}{c} \sum_{i} a_{1, i} l_{i} \\ \vdots \\ \sum_{i} a_{m, i} l_{i} \end{array}\right]
+                  <me>
+                    f(v)=\left[\begin{array}{c} \sum_{i} a_{1, i} l_{i} \\ \vdots \\ \sum_{i} a_{m, i} l_{i} \end{array}\right]
                     =\left[\begin{array}{cccc} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n} \end{array}\right] 
-                    \cdot\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=[f]_{B}^{C} \cdot v</me>
+                    \cdot\left[\begin{array}{c} l_{1} \\ \vdots \\ l_{n} \end{array}\right]=[f]_{B}^{C} \cdot v
+                  </me>
                 </p>
 
                 <p>
                   Then for any
-                  <me>v=\sum_{i} l_{i} b_{i}</me>
+                  <me>
+                    v=\sum_{i} l_{i} b_{i}
+                  </me>
                   in <m>V</m> we have
-                  <me>f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)</me>
+                  <me>
+                    f\left(\sum l_{i} b_{i}\right)=\sum_{i} l_{i} f\left(b_{i}\right)
+                  </me>
                 </p>
 
                 <p>
                   Each <m>f\left(b_{i}\right)</m> is uniquely expressible as a linear combination of the <m>c_{j}</m> 's, say
-                  <me>f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j} .</me>
+                  <me>
+                    f\left(b_{i}\right)=\sum_{j} a_{j, i} c_{j}.
+                  </me>
                   Then we get
-                  <me>f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j} .</me>
+                  <me>
+                    f(v)=\sum_{i} l_{i}\left(\sum_{j} a_{j, i} c_{j}\right)=\sum_{j}\left(\sum_{i} a_{j, i} l_{i}\right) c_{j}.
+                  </me>
                 </p>
 
                 <p>
                   In other words, we have
-                  <me>f(v)=[f]_{B}^{C} \cdot v</me>
+                  <me>
+                    f(v)=[f]_{B}^{C} \cdot v
+                  </me>
                   where
-                  <me>[f]_{B}^{C}= \left[\begin{array}{cccc} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n} \end{array}\right]</me>
+                  <me>
+                    [f]_{B}^{C}= \left[\begin{array}{cccc} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n} \end{array}\right]
+                  </me>
                   and <m>[f]_{B}^{C} \cdot v</m> denote the usual rule for matrix multiplication.
                 </p>
 
@@ -15579,9 +15688,6 @@
                 </p>
               </proof>
             </theorem>
-            
-
-            
 
           </subsection>
 
@@ -15680,7 +15786,8 @@
             </definition>
 
             <p>
-              The notion of similar matrices aligns with the idea of moving between bases. Translate your data into the language using your new basis (using <m>P</m>), perform the desired transformations (using <m>A</m>), and then translate this new data back into the original basis (using <m>P\inv</m>)
+              The notion of similar matrices aligns with the idea of moving between bases. 
+              Translate your data into the language using your new basis (using <m>P</m>), perform the desired transformations (using <m>A</m>), and then translate this new data back into the original basis (using <m>P\inv</m>)
             </p>
 
             <remark>
@@ -15793,7 +15900,9 @@
             <definition xml:id="def-elementary-matrix"><title>Elementary Matrix</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary matrix</em> over <m>R</m> is an <m>n \times n</m> matrix obtained from <m>I_n</m> by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: 
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
+                  An <em>elementary matrix</em> over <m>R</m> is an <m>n \times n</m> matrix obtained from <m>I_n</m> by applying a single elementary column operation (or, equivalently, a single elementary column operation). 
+                  In more detail: 
                   <idx><h>elementary matrix</h></idx>
                   <ol>
                     <li><title>Type I</title>
@@ -15911,8 +16020,12 @@
       
                 <p>
                   Equivalently, the module presented by <m>A</m> is 
-                  <me>\frac{R^m}{R v_1 + \cdots + R v_n}</me> 
+                  <me>
+                    \frac{R^m}{R v_1 + \cdots + R v_n}
+                  </me> 
                   where <m>v_1, \dots, v_n</m> are the columns of <m>A</m>.
+                  <idx><h>presentation (of an <m>R</m>-module)</h></idx>
+                  <idx><h><m>R</m>-module presented by <m>A</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -16249,7 +16362,7 @@
                 </p>
     
                 <p>
-                  By the First Isomorphism Theorem, 
+                  By the <xref ref="thm-fit-module" text="title"/>, 
                   <me> 
                     \coker(T_A) = R/\im(T_A) = R/\ker(g) \cong R/R \cdot d_1 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.
                   </me>
@@ -16273,24 +16386,35 @@
 
             <remark>
               <p>
-                We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of <m>e_1, \dots, e_m</m> generate <m>R^m/\im(T_A)</m> for any <m>m \times n</m> matrix <m>A</m>). If <m>M</m> is finitely generated, say by <m>m</m> elements, then we can find a surjective <m>R</m>-module homomorphism <me>
-                \pi: R^m \onto M.
-                </me> Provided the kernel of <m>\pi</m> is also finitely generated, say by <m>n</m> elements, then we may find a surjection <me>
-                g: R^n \onto \ker(\pi).
-                </me> The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is a map between free <m>R</m>-modules and is thus equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. Clearly <m>\im(T_A) = \ker(\pi)</m> and hence by the first isomorphism theorem <me>
-                R^m/\im(A) = R^m/\ker(\pi) \cong M,
-                </me> so that <m>M</m> is finitely presented.
+                We now address the question of which modules have finite presentations. 
+                Any such module must be finitely generated (since the cosets of <m>e_1, \dots, e_m</m> generate <m>R^m/\im(T_A)</m> for any <m>m \times n</m> matrix <m>A</m>). 
+                If <m>M</m> is finitely generated, say by <m>m</m> elements, then we can find a surjective <m>R</m>-module homomorphism
+                <me>
+                  \pi: R^m \onto M.
+                </me> 
+                Provided the kernel of <m>\pi</m> is also finitely generated, say by <m>n</m> elements, then we may find a surjection 
+                <me>
+                  g: R^n \onto \ker(\pi).
+                </me> 
+                The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is a map between free <m>R</m>-modules and is thus equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. 
+                Then <m>\im(T_A) = \ker(\pi)</m> and hence by the <xref ref="thm-fit-module" text="title"/>
+                <me>
+                  R^m/\im(A) = R^m/\ker(\pi) \cong M,
+                </me> 
+                so that <m>M</m> is finitely presented.
               </p>
       
               <p>
-                So the real question is: For a given ring <m>R</m>, is it the case that for all <m>m</m>, every submodule of <m>R^m</m> is finitely generated? The answer is “no'' in general, but it does hold for many rings of interest:
+                So the real question is: For a given ring <m>R</m>, is it the case that for all <m>m</m>, every submodule of <m>R^m</m> is finitely generated? 
+                The answer is "no" in general, but it does hold for many rings of interest:
               </p>
             </remark>
 
             <lemma xml:id="lem-noetherian-rings"><title>Noetherian Rings</title>
               <statement>
                 <p>
-                  Suppose <m>R</m> is a commutative ring. The following conditions are equivalent: 
+                  Suppose <m>R</m> is a commutative ring. 
+                  The following conditions are equivalent: 
                   <ol>
                     <li>
                       <p>
@@ -16300,7 +16424,8 @@
 
                     <li>
                       <p>
-                        Every ideal of <m>R</m> is finitely generated — i.e., for every ideal <m>I</m>, there exists a finite set of elements <m>x_1, \dots, x_n</m> in <m>I</m> such that <m>I = R \cdot x_1 + \cdots + R \cdot x_n</m>. In this case we say <m>R</m> is <em>Noetherian</em>.
+                        Every ideal of <m>R</m> is finitely generated — i.e., for every ideal <m>I</m>, there exists a finite set of elements <m>x_1, \dots, x_n</m> in <m>I</m> such that <m>I = R \cdot x_1 + \cdots + R \cdot x_n</m>. 
+                        In this case we say <m>R</m> is <em>noetherian</em>.
                       </p>
                     </li>
                   </ol>
@@ -16309,19 +16434,32 @@
 
               <proof>
                 <p>
-                  Assume every ideal is finitely generated and that such a chain is given. Let <m>J = \cup_n I_n</m>. Then it is easy to see that <m>J</m> is an ideal. (In detail, for <m>a \in J, r \in R</m> we have <m>a \in I_n</m> for some <m>n</m> and hence <m>ra \in I_n \subseteq J</m>.
+                  Assume every ideal is finitely generated and that such a chain is given. 
+                  Let <m>J = \cup_n I_n</m>. 
+                  For <m>a \in J, r \in R</m> we have <m>a \in I_n</m> for some <m>n</m> and hence <m>ra \in I_n \subseteq J</m>.
                 </p>
     
                 <p>
-                  If <m>a,b \in J</m>, then <m>a \in I_n</m> and <m>b \in I_m</m> for some <m>n,m</m> and hence there is a <m>N</m> such that <m>a,b \in I_N</m>. It follows that <m>a \pm b \in I_N \subseteq J</m>. Finally <m>0 \in J</m>.) Thus by assumption <m>J</m> is finitely generated, say <m>J = Rx_1 + \cdots + Rx_m</m> for some <m>x_1, \dots, x_m \in J</m>.
+                  If <m>a,b \in J</m>, then <m>a \in I_n</m> and <m>b \in I_m</m> for some <m>n,m</m> and hence there is a <m>N</m> such that <m>a,b \in I_N</m>. 
+                  It follows that <m>a \pm b \in I_N \subseteq J</m>. 
+                  Finally <m>0 \in J</m>. 
+                  Thus <m>J</m> is an ideal.
+                  Thus by assumption <m>J</m> is finitely generated, say <m>J = Rx_1 + \cdots + Rx_m</m> for some <m>x_1, \dots, x_m \in J</m>.
                 </p>
     
                 <p>
-                  Each <m>x_i</m> belongs to one of the <m>I_n</m>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <m>N</m> such that <m>x_1, \dots, x_m \in I_N</m>. It follows that <m>I_N = J</m> and hence <m>I_N = I_{N+1} = I_{N+2} = \cdots</m>.
+                  Each <m>x_i</m> belongs to one of the <m>I_n</m>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <m>N</m> such that <m>x_1, \dots, x_m \in I_N</m>. 
+                  It follows that <m>I_N = J</m> and hence <m>I_N = I_{N+1} = I_{N+2} = \cdots</m>.
                 </p>
     
                 <p>
-                  Assume <m>R</m> has the acc for ideals and let <m>J</m> be any ideal. Pick any element <m>a_1\in I</m> and set <m>I_1 = Ra_1</m>. If <m>J = I_1</m> we are done. If not, pick <m>a_2 \in I \setminus I_1</m> and set <m>I_2 = Ra_1 + Ra_2</m>. If <m>J = I_2</m> we are done and if not pick <m>a_3 \in I\setminus I_2</m> and let <m>I_3 = Ra_1 + Ra_2 + Ra_3</m>. In this way we form a strictly ascending chain <m>I_1 \subset I_2 \subset I_3 \subset</m>, and this process cannot be continued forever since <m>R</m> has the acc. When it terminates, we have <m>J = Ra_1 + Ra_2 + \cdots + Ra_N</m> for some <m>a_1, \dots, a_N</m> and thus <m>J</m> is finitely generated.
+                  Assume <m>R</m> has the acc for ideals and let <m>J</m> be any ideal. 
+                  Pick any element <m>a_1\in I</m> and set <m>I_1 = Ra_1</m>. 
+                  If <m>J = I_1</m> we are done. 
+                  If not, pick <m>a_2 \in I \setminus I_1</m> and set <m>I_2 = Ra_1 + Ra_2</m>. 
+                  If <m>J = I_2</m> we are done and if not pick <m>a_3 \in I\setminus I_2</m> and let <m>I_3 = Ra_1 + Ra_2 + Ra_3</m>. 
+                  In this way we form a strictly ascending chain <m>I_1 \subset I_2 \subset I_3 \subset</m>, and this process cannot be continued forever since <m>R</m> has the acc. 
+                  When it terminates, we have <m>J = Ra_1 + Ra_2 + \cdots + Ra_N</m> for some <m>a_1, \dots, a_N</m> and thus <m>J</m> is finitely generated.
                 </p>
               </proof>
             </lemma>
@@ -16447,12 +16585,14 @@
             </p>
   
             <theorem xml:id="thm-snf"><title>Smith Normal Form</title>
-  
+              <idx><h>Smith Normal Form (SNF)</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a Euclidean domain and let <m>A \in \Mat_{m \times n}(R)</m>. 
                   Then there is a sequence of elementary column and column operations that transform <m>A</m> into a matrix <m>S = [s_{i,j}]</m> such that all non-diagonal entries of <m>S</m> are <m>0</m> and the diagonal entries of <m>S</m> satisfy 
-                  <me>s_{1,1} \mid s_{2,2} \mid s_{3,3} \mid \cdots.</me> 
+                  <me>
+                    s_{1,1} \mid s_{2,2} \mid s_{3,3} \mid \cdots.
+                  </me> 
                 </p>
               </statement>
   
@@ -16463,28 +16603,38 @@
           
                 <p>
                   To prove existence of such a matrix <m>M</m>, we claim we can multiply <m>A</m> on the right and the left by invertible matrices to transform it into a matrix of the form
-                  <me> \left[\begin{array}{ll} g &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                  <me> 
+                    \left[\begin{array}{ll} g &amp; 0 \\ 0 &amp; B \end{array}\right] 
+                  </me>
                   for some <m>(n-1) \times(m-1)</m> matrix <m>B</m>, where <m>g=\operatorname{gcd}(A)</m>. 
                   If our claim holds, then we are done: notice that <m>g</m> divides every entry of <m>B</m>, since <m>\operatorname{gcd}(A)=\operatorname{gcd}(g, B)</m> by <xref ref="lem-gcd-of-a-matrix-in-pid"/>, and so by applying this fact to <m>B</m>, and then over and over again, we arrive at a matrix of the desired form <m>M</m>. 
                   Notice moreover that if <m>C</m> is an invertible matrix, then so is
-                  <me> \left[\begin{array}{ll} 1 &amp; 0 \\ 0 &amp; C \end{array}\right] </me>
+                  <me> 
+                    \left[\begin{array}{ll} 1 &amp; 0 \\ 0 &amp; C \end{array}\right] 
+                  </me>
                 </p>
           
                 <p>
                   To construct a matrix in the form above, let <m>a</m> be the upper left <m>(1,1)</m> entry of <m>A</m>. 
                   First, we are going to show that we can turn <m>A</m> into a matrix of the form
-                  <me> \left[\begin{array}{ll} * &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                  <me> 
+                    \left[\begin{array}{ll} * &amp; 0 \\ 0 &amp; B \end{array}\right] 
+                  </me>
                   with the same gcd as <m>A</m>. 
                   If a happens to divide all the entries on the first row and column, then we can simply apply elementary row and column operations to get to the desired form. 
                   Suppose there exists <m>b</m> on the first column such that <m>a \nmid b</m>. 
                   Then we may apply an elementary row operation switching rows so that <m>b=a_{2,1}</m> is on the first column, second row. 
                   By <xref ref="lem-gcd-two-by-two"/>, we can now find an invertible matrix <m>C \in \mathrm{M}_{2}(R)</m> such that
-                  <me> C\left[\begin{array}{l} a \\ b \end{array}\right] =\left[\begin{array}{c} \operatorname{gcd}(a, b) \\ 0 \end{array}\right] . </me>
+                  <me> 
+                    C\left[\begin{array}{l} a \\ b \end{array}\right] =\left[\begin{array}{c} \operatorname{gcd}(a, b) \\ 0 \end{array}\right] . 
+                  </me>
                 </p>
           
                 <p>
                   Consider the <m>m \times m</m> matrix
-                  <me> P:=\left[\begin{array}{cc} C &amp; 0 \\ 0 &amp; I_{m-2} \end{array}\right] . </me>
+                  <me> 
+                    P:=\left[\begin{array}{cc} C &amp; 0 \\ 0 &amp; I_{m-2} \end{array}\right] . 
+                  </me>
                   Note that <m>P A</m> has <m>(P A)_{1,1}=\operatorname{gcd}(a, b)</m> and <m>(P A)_{2,1}=0</m>, so this step replaces <m>a</m> by <m>\operatorname{gcd}(a, b)</m> and <m>b</m> by 0 . 
                   By <xref ref="lem-gcd-of-a-matrix-in-pid"/>, <m>\operatorname{gcd}(P A)=\operatorname{gcd}(A)</m>. 
                   We can keep repeating this until the top left corner entry divides every entry on the first column, and this process must stop after at most <m>m-1</m> steps, since there are only <m>m</m> elements on the first column.
@@ -16493,7 +16643,9 @@
                 <p>
                   Similarly, if there exists <m>b</m> on the first row that <m>a</m> does not divide, we can repeat this process by instead multiplying <m>A</m> on the left by an invertible matrix, until we zero out all the remaining entries on the first row and column. 
                   Finally, we arrive at a matrix of the form
-                  <me> \left[\begin{array}{ll} a &amp; 0 \\ 0 &amp; B \end{array}\right] </me>
+                  <me> 
+                    \left[\begin{array}{ll} a &amp; 0 \\ 0 &amp; B \end{array}\right] 
+                  </me>
                 </p>
           
                 <p>
@@ -16507,7 +16659,9 @@
                   At each step, we replace <m>a</m> by some <m>c</m> with is both a divisor of <m>a</m> and a multiple of <m>\operatorname{gcd}(A)</m>. 
                   Our ring <m>R</m> is a UFD, so there are finitely many factors of <m>a / \operatorname{gcd}(A)</m>, and this process must stop. 
                   This shows that we can eventually replace <m>A</m> by
-                  <me> \left[\begin{array}{cc} \operatorname{gcd}(A) &amp; 0 \\ 0 &amp; B \end{array}\right] . </me>
+                  <me> 
+                    \left[\begin{array}{cc} \operatorname{gcd}(A) &amp; 0 \\ 0 &amp; B \end{array}\right]. 
+                  </me>
                 </p>
           
                 <p>
@@ -16591,6 +16745,10 @@
                   The <em>greatest common divisor</em> or <em>gcd</em> of <m>a_{1}, \ldots, a_{n}</m>, denoted <m>\operatorname{gcd}\left(a_{1}, \ldots, a_{n}\right)</m>, is a generator for the principal ideal <m>\left(a_{1}, \ldots, a_{n}\right)</m>. 
                   Given a matrix <m>A \in \mathrm{M}_{m, n}(R), \operatorname{gcd}(A)</m> is the gcd of the entries of <m>A</m>. 
                   We adopt the convention that <m>\operatorname{gcd}(0,0)=0</m> and thus if <m>A</m> is the matrix of all zeroes, then <m>\operatorname{gcd}(A)=0</m>.
+                  <idx><h><m>\gcd</m> (in a PID)</h></idx>
+                  <idx><h>greatest common divisor (in a PID)</h></idx>
+                  <idx><h><m>\gcd</m> (of a matarix)</h></idx>
+                  <idx><h>greatest common divisor (of a matrix)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -16618,7 +16776,7 @@
                     A=\left[\begin{array}{c} a_{1} \\ \vdots \\ a_{m} \end{array}\right] 
                     \text { and let } 
                     P A=\left[\begin{array}{c} b_{1} \\ \vdots \\ b_{m} \end{array}\right]
-                    </me>
+                  </me>
                   We need to show that <m>\left(a_{1}, \ldots, a_{m}\right)=\left(b_{1}, \ldots, b_{m}\right)</m>. 
                   On the one hand, each <m>b_{i}</m> is a linear combination of the <m>a_{j}</m>, so <m>\left(b_{1}, \ldots, b_{m}\right) \subseteq\left(a_{1}, \ldots, a_{m}\right)</m>. 
                   On the other hand,
@@ -16717,7 +16875,10 @@
             <definition xml:id="def-minor"><title>Minor</title>
               <statement>
                 <p>
-                  A <m>k \times k</m> <em>minor</em> of <m>A</m> is the determinant of a <m>k \times k</m> submatrix of <m>A</m>; more formally, if <m>A</m> is an <m>m \times n</m> matrix, a <m>k\times k</m> minor of <m>A</m> is any element of <m>R</m> given as follows: Choose <m>1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m</m> and <m>1 \leq j_1 &lt; \cdots &lt; j_k \leq n</m>, let <m>B = (b_{p,q})</m> be the <m>k \times k</m> matrix with <m>b_{p,q} = a_{i_p, j_q}</m>. Then <m>\det(B)</m> is a minor of <m>A</m>.
+                  A <m>k \times k</m> <em>minor</em> of <m>A</m> is the determinant of a <m>k \times k</m> submatrix of <m>A</m>; more formally, if <m>A</m> is an <m>m \times n</m> matrix, a <m>k\times k</m> minor of <m>A</m> is any element of <m>R</m> given as follows: 
+                  Choose <m>1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m</m> and <m>1 \leq j_1 &lt; \cdots &lt; j_k \leq n</m>, let <m>B = (b_{p,q})</m> be the <m>k \times k</m> matrix with <m>b_{p,q} = a_{i_p, j_q}</m>. 
+                  Then <m>\det(B)</m> is a minor of <m>A</m>.
+                  <idx><h>minor (of a matrix)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -16803,18 +16964,21 @@
             <lemma xml:id="lem-snf-pres"><title>Module Presented in Smith Normal Form</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>m \geqslant n</m>, let <m>A=\left[a_{i j}\right] \in \mathrm{M}_{m, n}(R)</m> be a matrix such that all nondiagonal entries of <m>A</m> are 0 , and let <m>M</m> be the <m>R</m>-module presented by <m>A</m>. 
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>m \geqslant n</m>, let <m>A=\left[a_{i j}\right] \in \mathrm{M}_{m, n}(R)</m> be a matrix such that all nondiagonal entries of <m>A</m> are 0, and let <m>M</m> be the <m>R</m>-module presented by <m>A</m>. 
                   Then <m>M \cong R^{m-n} \oplus R /\left(a_{11}\right) \oplus \cdots \oplus R /\left(a_{n n}\right)</m>.
                 </p>
               </statement>
             </lemma>
 
             <theorem xml:id="thm-ftfgmopidiff"><title>Classification of Finitely Generated Modules over a PID using Invariant Factors</title>
+              <idx><h>classification of finitely generated modules over a PID (invariant factor form)</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. 
                   Then there exist <m>r \geqslant 0</m>, <m>k \geqslant 0</m>, and nonzero nonunit elements <m>d_{1}, \ldots, d_{k}</m> of <m>R</m> satisfying <m>d_{1}\left|d_{2}\right| \cdots \mid d_{k}</m> such that
-                  <me>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right) .</me>
+                  <me>
+                    M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right).
+                  </me>
                   Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the <m>d_{i}</m> are unique up to associates.
                 </p>              
               </statement>
@@ -16845,7 +17009,9 @@
                   Let <m>R</m> be a PID, let <m>r \geqslant 0, k \geqslant 0</m>, and let <m>d_{1}, \ldots, d_{k}</m> be nonzero nonunit elements of <m>R</m> satisfying <m>d_{1}\left|d_{2}\right| \cdots \mid d_{k}</m>. 
                   Let <m>M</m> be any <m>R</m>-module such that
                   <me>M \cong R^{r} \oplus R /\left(d_{1}\right) \oplus \cdots \oplus R /\left(d_{k}\right) .</me>
-                  We say <m>M</m> has <em>free rank</em> <m>r</m> and <em>invariant factors</em> <m>d_{1}, \ldots, d_{k}</m>.              
+                  We say <m>M</m> has <em>free rank</em> <m>r</m> and <em>invariant factors</em> <m>d_{1}, \ldots, d_{k}</m>. 
+                  <idx><h>invariant factors (of a module)</h></idx>
+                  <idx><h>free rank (of a module)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -16922,6 +17088,7 @@
             </p>
             
             <theorem xml:id="thm-ftfgmopriff"><title>Classification of Finitely Generated Modules over a PID using Elementary Divisors</title>
+              <idx><h>classification of finitely generated modules over a PID (elementary divisor form)</h></idx>
               <statement>
                 <p>
                   Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. 
@@ -16948,6 +17115,7 @@
             </theorem>
 
             <theorem xml:id="thm-sunzis-remainder-theorem-rings"><title>Sunzi's Remainder Theorem (Rings)</title>
+              <idx><h>Sunzi's remainder theorem (for commutative rings)</h></idx>
               <statement>
                 <p>
                   Suppose <m>I</m> and <m>J</m> are ideals in a commutative ring <m>R</m> such that <m>I + J = R</m>. 
@@ -16985,20 +17153,19 @@
             <definition xml:id="def-elementary-divisor-module"><title>Elementary Divisor (Module)</title>
               <statement>
                 <p>
-                  With the notation in the Theorem above, the elements <m>p_1^{e_1},\ldots, p_s^{e_s}</m> of <m>R</m> are the elementary divisors of <m>M</m>.
+                  With the notation in <xref ref="thm-ftfgmopriff"/> above, the elements <m>p_1^{e_1},\ldots, p_s^{e_s}</m> of <m>R</m> are the <em>elementary divisors</em> of <m>M</m>.
+                  <idx><h>elementary divisors (of a module)</h></idx>
                 </p>
               </statement>
             </definition>
 
             <example xml:id="exe-z90"><title><m>\Z/90</m></title>
-              
               <p>
                 Since <m>\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5</m>, so the elementary divisors of <m>\Z/90</m> are <m>9</m>, <m>2</m> and <m>3</m>. The only invariant factor of <m>\Z/90</m> is <m>90</m>.
               </p>
             </example>
 
             <example><title>Direct Sums and <m>\Z</m></title>
-
               <p>
                 Consider the group <m>G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4</m>. This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have <me>G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3 \oplus \Z/4,</me> and this gives the EDF. The elementary divisors of <m>G</m> are <m>9,2,5,9,2,3,3,4</m> (ordering does not matter).
               </p>
@@ -17006,11 +17173,9 @@
               <p>
                 To find the IFF we start by finding the largest prime power order for each prime in the list of orders of the summands. These are <m>9, 5, 4</m>. The CRT gives <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/2 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3.</me> Then we find the highest prime power orders for each prime among the left-over summands: <m>9, 2.</m> By the CRT we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/2 \oplus \Z/3 \oplus \Z/3.</me> The highest orders of the prime power order not yet used are <m>2</m> and <m>3</m>, and we have <me>G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/(2 \cdot 3)  \oplus \Z/3.</me> which can be rearranged to give <me>G \cong \Z/3 \oplus \Z/6 \oplus \Z/18 \oplus \Z/180.</me> This is the IFF, and the invariant factors of <m>G</m> are <m>3,6,18,180</m>.
               </p>
-              
             </example>
 
             <example xml:id="exe-finding-ifs-and-eds"><title>Finding IFs and EDs</title>
-              
               <p>
                 Find the invariant factor form and the elementary divisor form of the <m>k[x]</m>-module <me>M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x + 1)</me> first when 
                 <ol>
@@ -17087,10 +17252,9 @@
           <subsection xml:id="subsec-fx"><title>Making Transformations into Modules </title>
           
             <p>
-              Given a vector space over a field, we can finagle it into an F[x] module instead.
-              As F is a field, F[x] is a PID, and thus we can use the Fundamental Theorem to decompose it into a quotient by a direct sum of polynomials.
+              Given a vector space over a field, we can finagle it into an <m>F[x]</m> module instead.
+              As <m>F</m> is a field, <m>F[x]</m> is a PID, and thus we can use the Fundamental Theorem CITEX to decompose it into a quotient by a direct sum of polynomials.
               These polynomials are the invariant factors of the module.
-              We define a companion matrix for each polynomial, and 
             </p>
 
             <definition xml:id="def-endomorphism"><title>Endomorphisms and Linear Operators</title>
@@ -17100,6 +17264,7 @@
                   An <m>R</m>-module homomorphism <m>\varphi</m> from <m>M</m> to itself is known as an <em>endomorphism</em>. 
                   In the case where <m>R</m> is a field and <m>M</m> a vector space, <m>\varphi</m> is known as a <em>linear operator</em>.
                   The set of all endomorphisms of <m>M</m> is denoted <m>\End_R(M)</m>.
+                  <idx><h>endomorphism (of modules)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -17115,7 +17280,9 @@
                 <p>
                   Let <m>F</m> be a field. 
                   There is a bijection
-                  <me>\{V \text { an } F[x] \text {-module }\} \longleftrightarrow\left\{V \text { an } F \text {-vector space and } T \in \operatorname{End}_{F}(V)\right\} \text {. }</me>
+                  <me>
+                    \{V \text { an } F[x] \text {-module }\} \longleftrightarrow\left\{V \text { an } F \text {-vector space and } T \in \operatorname{End}_{F}(V)\right\}.
+                  </me>
                 </p>
               </statement>
 
@@ -17147,7 +17314,9 @@
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m> and <m>V</m> be a finitely generated free <m>R</m>-module with basis <m>B</m>. 
                   Then
-                  <me>\operatorname{End}_{R}(V) \cong \mathrm{M}_{n}(R) \quad f \mapsto[f]_{B}^{B}</me>
+                  <me>
+                    \operatorname{End}_{R}(V) \cong \mathrm{M}_{n}(R) \quad f \mapsto[f]_{B}^{B}
+                  </me>
                 </p>
               </statement>
 
@@ -17178,6 +17347,8 @@
                     (c_nx^n + \dots+ c_0)v = c_ng^{\circ n}(v) + \dots + c_1 g(v) + c_0v
                   </me>
                   for any polynomial <m>c_nx^n + \dots + c_0 \in F[x]</m> and vector <m>v \in V</m>.
+                  <idx><h><m>F[x]</m>-module <m>V_g</m></h></idx>
+                  <idx><h><m>V_g</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -17213,7 +17384,9 @@
                   Let <m>A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)</m> and let <m>M</m> be the <m>\Q[x]</m>-module <m>\Q^2_A</m>. 
                   So <m>M = \Q^2</m> as a <m>\Q</m>-vector space, and <m>x</m> acts on <m>M</m> by sending <m>\vectwo{a}{b} \in M</m> to <m>\vectwo{a+b}{b} \in M</m>. 
                   I claim there is an isomorphism 
-                  <me>M \cong \Q[x]/(x-1)^2</me> of <m>\Q[x]</m>-modules.
+                  <me>
+                    M \cong \Q[x]/(x-1)^2
+                  </me> of <m>\Q[x]</m>-modules.
                 </p>
               </statement>
 
@@ -17229,13 +17402,17 @@
                   It is onto since <m>v</m> generates <m>M</m> as a <m>\Q[x]</m>-module. 
                   The kernel will be a (necessarily principle) ideal of <m>\Q[x]</m>; we just need to find it. 
                   Note that <m>x^2 v = \vectwo21</m>, <m>xv</m> and <m>v</m> are linearly dependent and in fact we have 
-                  <me>x^2 v = 2x v- v</me>
+                  <me>
+                    x^2 v = 2x v- v
+                  </me>
                   and hence <m>(x^2 -2x + 1)v =0</m>.
                   This gives that <m>x^2 -2x + 1</m> is in the kernel of <m>\pi</m> and hence, by the <m>0</m>-th Isomorphism Theorem we have an induced homomorphism of <m>\Q[x]</m>-modules 
-                  <me>\ov{\pi}: \Q[x]/(x^2 - 2x + 1) \onto M</me>
+                  <me>
+                    \ov{\pi}: \Q[x]/(x^2 - 2x + 1) \onto M
+                  </me>
                   induced by <m>\pi</m>. 
                   The map <m>\ov{\pi}</m> is onto since <m>\pi</m> is onto. 
-                  Since the source and target both have dimension two as <m>\Q</m>-vector spaces, <m>\ov{\pi}</m> is <m>\Q</m>-linear, and <m>\ov{\pi}</m> is onto, it must in fact be an isomorphism of <m>\Q[x]</m>-modules (by the Rank-Nullity Theorem).
+                  Since the source and target both have dimension two as <m>\Q</m>-vector spaces, <m>\ov{\pi}</m> is <m>\Q</m>-linear, and <m>\ov{\pi}</m> is onto, it must in fact be an isomorphism of <m>\Q[x]</m>-modules (by the Rank-Nullity Theorem CITEX).
                 </p>
               </solution>
               
@@ -17244,14 +17421,16 @@
             <proposition xml:id="prop-equality-of-fx-modules"><title>Equality of <m>F[x]</m>-Modules</title>
               <statement>
                 <p>
-                  The two assignments <m>M \mapsto (M|_F, \l_x)</m> and <m>(V, g) \mapsto V_g</m> defined above are mutually inverse: Given a <m>F[x]</m>-module <m>M</m>, there is an <em>equality</em> of <m>F[x]</m>-modules <m>M = (M|_F)_{\l_x}</m> and given a pair <m>(V, g)</m> with <m>V</m> an <m>F</m>-vector space and <m>g</m> an <m>F</m>-linear operator on <m>V</m> we have an equality of pairs <m>((V_g)|_F, \l_x) = (V,g)</m>.
+                  The two assignments <m>M \mapsto (M|_F, \l_x)</m> and <m>(V, g) \mapsto V_g</m> defined above are mutually inverse: 
+                  Given a <m>F[x]</m>-module <m>M</m>, there is an <em>equality</em> of <m>F[x]</m>-modules <m>M = (M|_F)_{\l_x}</m> and given a pair <m>(V, g)</m> with <m>V</m> an <m>F</m>-vector space and <m>g</m> an <m>F</m>-linear operator on <m>V</m> we have an equality of pairs <m>((V_g)|_F, \l_x) = (V,g)</m>.
+                  <idx><h>equality of <m>F[x]</m>-modules</h></idx>
                 </p>
               </statement>
             </proposition>
 
             <remark>
               <p>
-                In fact, these rules determine an “isomorphism of categories''.
+                In fact, these rules determine an “isomorphism of categories'', whatever that means.
               </p>
             </remark>
 
@@ -17263,13 +17442,17 @@
               <statement>
                 <p>
                   Given square matrices <m>A_1 \in \Mat_{n_1 \times n_1}(F), \dots, A_m \in \Mat_{n_m \times n_m}(F)</m>, we define <m>A_1 \oplus \cdots \oplus A_m</m> to be the <em>block diagonal</em> matrix 
-                  <me> \begin{bmatrix} A_1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; A_2 &amp;  \cdots &amp; 0 \\ \vdots &amp; &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 &amp; A_m \\ \end{bmatrix} </me> 
+                  <me> 
+                    \begin{bmatrix} A_1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; A_2 &amp;  \cdots &amp; 0 \\ \vdots &amp; &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 &amp; A_m \\ \end{bmatrix} 
+                  </me> 
                   which belongs to <m>\Mat_{n \times n}(F)</m> for <m>n = \sum_i n_i</m>.
+                  <idx><h>block diagonal matrix</h></idx>
                 </p>
               </statement>
             </definition>
 
             <theorem xml:id="thm-rcf"><title>Rational Canonical Form</title>
+              <idx><h>rational canonical form (RCF)</h></idx>
               <statement>
                 <p>
                   Given a finite dimensional <m>F</m>-vector space <m>V</m> and an <m>F</m>-linear operator <m>g: V \to V</m>, there is a basis <m>B</m> of <m>V</m> such that the matrix representing <m>g</m> relative to <m>B</m> is 
@@ -17312,7 +17495,7 @@
             <definition xml:id="def-invariant-factor-2"><title>Invariant Factor</title>
               <statement>
                 <p>
-                  In Theorem <xref provisional="cite"/>, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
+                  Recall that in Theorem <xref provisional="cite"/>, CITEX the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
                 </p>
               </statement>
             </definition>
@@ -17397,7 +17580,7 @@
 
             <remark>
               <p>
-                The proof of Theorem <xref provisional="cite"/> makes clear the following fact:
+                The proof of Theorem <xref provisional="cite"/> CITEX makes clear the following fact:
 
                 For a field <m>F</m>, finite dimensional vector space <m>V</m>, and <m>F</m>-linear operator <m>g: V \to V</m>,the invariant factors of the operator <m>g</m> are identical to the invariant factors of the <m>F[x]</m>-module <m>V_g</m>.
               </p>
@@ -17410,15 +17593,19 @@
             <theorem xml:id="thm-rcf-and-cokernels"><title>RCF and Cokernels</title>
               <statement>
                 <p>
-                  Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. The matrix <m>xI_n - A \in \Mat_{n \times n}(F[x])</m> presents the <m>F[x]</m>-module <m>F^n_A</m>; that is, there is an isomorphism of <m>F[x]</m>-modules <me>
-                  F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
+                  Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. 
+                  The matrix <m>xI_n - A \in \Mat_{n \times n}(F[x])</m> presents the <m>F[x]</m>-module <m>F^n_A</m>; 
+                  that is, there is an isomorphism of <m>F[x]</m>-modules 
+                  <me>
+                    F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
                   </me>
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  For this proof it is useful to identity <m>F[x]^n</m> with <m>F^n[x]</m> where the latter refers to all expressions of the form <m>\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m</m> with <m>v_i \in F^n</m>. For instance, (when <m>n = 2</m>) we identify <m>\vectwo{x^2 -3x + 1}{x^7 +x + 5}</m> with <m>\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7</m>. Using this identification we define <me>\phi:  F[x]^n = F^n[x] \to F^n_A</me>by <m>\phi(\sum_i v_i x^i) = \sum_i A^i v_i</m>. Then <m>\phi</m> is a <m>F[x]</m>-module homomorphism — I leave it to you to verify this. <m>\phi</m> is onto since, e.g., for any <m>v \in F^n</m> we have <m>\phi(vx^0) = v</m>.
+                  For this proof it is useful to identity <m>F[x]^n</m> with <m>F^n[x]</m> where the latter refers to all expressions of the form <m>\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m</m> with <m>v_i \in F^n</m>. 
+                  For instance, (when <m>n = 2</m>) we identify <m>\vectwo{x^2 -3x + 1}{x^7 +x + 5}</m> with <m>\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7</m>. Using this identification we define <me>\phi:  F[x]^n = F^n[x] \to F^n_A</me>by <m>\phi(\sum_i v_i x^i) = \sum_i A^i v_i</m>. Then <m>\phi</m> is a <m>F[x]</m>-module homomorphism — I leave it to you to verify this. <m>\phi</m> is onto since, e.g., for any <m>v \in F^n</m> we have <m>\phi(vx^0) = v</m>.
                 </p>
     
                 <p>
@@ -17499,7 +17686,8 @@
               <statement>
                 <p>
                   Let 
-                  <me> A =  \begin{bmatrix}  1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix}.
+                  <me> 
+                    A =  \begin{bmatrix}  1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix}.
                   </me> 
                   Let us find the invariant factors and Rational Canonical Form of <m>A</m> by finding the Smith Normal Form of <m>xI_3 - A</m>.
                 </p>
@@ -17603,6 +17791,7 @@
                 Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. 
                 The <em>minimum polynomial</em> of <m>A</m>, denoted <m>\mp_A(x)</m>, is the unique monic generator of the ideal <m>\{g(x) \in F[x] \, \mid \, g(A) = 0\}</m>. 
                 Equivalently, <m>\mp_A(x)</m> is the monic polynomial of least degree such that <m>\mp_A(A) = 0</m>.
+                <idx><h>minimum polynomial (of a matrix)</h></idx>
               </p>
             </statement>
           </definition>
@@ -17615,14 +17804,18 @@
     
               <p>
                 In particular, <m>\mp_A(x)</m> is the unique monic generator of the annihilator ideal 
-                <me>n_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.</me> 
+                <me>
+                  n_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.
+                </me> 
               </p>
             </statement>
 
             <proof>
               <p>
                 If <m>g(A) = 0</m>, then for each <m>v \in F^n</m>, by definition of the action of <m>F[x]</m> on <m>F^n_A</m> we have 
-                <me>g(x) \cdot v = g(A) v = 0</me> 
+                <me>
+                  g(x) \cdot v = g(A) v = 0
+                </me> 
                 and so <m>g(x)</m> annihilates <m>F^n_A</m>. 
                 Conversely, if <m>g(x)</m> annihilates <m>F^n_A</m>, then <m>g(A) \cdot v = 0</m> for all <m>v \in F^n</m>. 
                 Taking <m>v = e_i</m> for each <m>i</m>, this says that each column of <m>g(A)</m> is <m>0</m> and hence <m>g(A)</m> is the zero matrix.
@@ -17635,11 +17828,13 @@
               <p>
                 More generally, let <m>V</m> be an <m>F</m>-vector space of dimension <m>n</m>, and let <m>g: V \to V</m> be a linear transformation. 
                 The <em>minimum polynomial</em> of <m>g</m>, denoted <m>\mp_g(x)</m>, is the unique monic polynomial generating the ideal <m>\{f(x) \in F[x] \mid f(g) = 0\}</m> or, equivalently, the annihilator ideal <m>{\ann}_{F[x]}(V_g)</m>.
+                <idx><h>minimum polynomial (of a linear transformation)</h></idx>
               </p>
             </statement>
           </definition>
 
-          <theorem xml:id="thm-cayley-hamilton"><title>Theorem - Cayley-Hamilton <m>\thm</m></title>
+          <theorem xml:id="thm-cayley-hamilton"><title>Cayley-Hamilton Theorem</title>
+            <idx><h>Cayley-Hamilton theorem</h></idx>
             <statement>
               <p>
                 Let <m>F</m> be a field, <m>V</m> a finite dimensional <m>F</m>-vector space, and <m>g: V \to V</m> an <m>F</m>-linear operator. 
@@ -17673,12 +17868,15 @@
 
             <proof>
               <p>
-                The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of <m>xI_n - A</m> is equal to the determinant of <m>xI_n - A</m>. (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)
+                The first assertion is a consequence of Corollary CITEX, since the product of the diagonal elements of the Smith Normal Form of <m>xI_n - A</m> is equal to the determinant of <m>xI_n - A</m>. 
+                (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)
               </p>
     
               <p>
                 For the second, we use the isomorphism of <m>F[x]</m>-modules 
-                <me>V_g \cong F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x)). </me> 
+                <me>
+                  V_g \cong F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x)). 
+                </me> 
                 Note that a polynomial <m>p(x)</m> annihilates <m>F[x]/(f_i(x))</m> if and only if <m>f_i(x)</m> divides <m>p(x)</m>. 
                 Since <m>f_1 \mid \cdots \mid f_s</m>, the annihilator of the <m>F[x]</m>-module <m>F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x))</m> is generated by <m>f_s(x)</m>. 
                 Thus the annihilator of <m>V_t</m> is also generated by <m>f_s(x)</m>, and by the Proposition  <m>f_s(x)</m> is the minimum polynomial of <m>t</m>.
@@ -17694,7 +17892,9 @@
             <statement>
               <p>
                 Let's find the minimum polynomial of 
-                <me>\begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; 0 \\ 0 &amp;  0 &amp; 1 &amp; 1 \\ 0 &amp;  0 &amp; 0 &amp; 1 \\ \end{bmatrix} </me>
+                <me>
+                  \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; 0 \\ 0 &amp;  0 &amp; 1 &amp; 1 \\ 0 &amp;  0 &amp; 0 &amp; 1 \\ \end{bmatrix} 
+                </me>
               </p>
             </statement>
 
@@ -17809,6 +18009,7 @@
           </remark>
 
           <definition xml:id="def-jordan-block"><title>Jordan Block</title>
+            <idx><h>Jordan block</h></idx>
             <statement>
               <p>
                 Given a field <m>F</m>, and integer <m>n \geq 1</m>, and an element <m>r\in F</m>, the <em>Jordan block</em> <m>J_n(r)</m> is the <m>n \times n</m> with entries in <m>F</m> such that its diagonal entries are all <m>r</m>, each entry just below the diagonal is a <m>1</m>, and all other entries are <m>0</m>: 
@@ -17827,7 +18028,7 @@
           </remark>
 
           <theorem xml:id="thm-jcf"><title>Jordan Canonical Form</title>
-
+            <idx><h>Jordan canonical form (JCF)</h></idx>
             <statement>
               <p>
                 Let <m>F</m> be a field, let <m>V</m> be a finite dimensional <m>F</m>-vector space, and let <m>g: V \to V</m> be a linear transformation satisfying the property that the characteristic polynomial <m>\cp_g(x)</m> of <m>g</m> factors completely in <m>F[x]</m> into linear factors. 
@@ -17843,27 +18044,27 @@
 
             <proof>
               <p>
-            The proof is similar to the proof the RCF theorem, using the idea of Example  above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:
-          </p>
+                The proof is similar to the proof the RCF theorem, using the idea of Example CITEX above, but starting with the FTFGMPIDEDF CITEX(instead of the FTFGMPIDIFF). 
+                Here are the details:
+              </p>
 
-          <p>
-            We consider the <m>F[x]</m>-module <m>V_g</m>. Since we assume <m>\cp_g(x)</m> factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of <m>V_g</m> are products of polynomials of the form <m>(x-r)^e</m> for various <m>r \in F</m> and integers <m>e \geq 1</m>. It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of <m>F[x]</m>-modules <me> V_g\cong \frac{F[x]}{(x - r_1)^{e_1}} \oplus \frac{F[x]}{(x -r_2)^{e_2}} \oplus \cdots \oplus\frac{F[x]}{(x - r_s)^{e_s}}. </me>Now pick ordered bases <m>B_i=\{\ov{1}, \ov{x-r_i}, \ldots, \ov{(x-r_i)^{e_i-1}}\}</m> for each of the summands and set <m>B</m> to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example  applied to each summand individually, the matrix representing multiplication by <m>x</m> on each summand is <m>J_{e_i}(r_i)</m>. This gives the existence of the JCF.
-          </p>
+              <p>
+                We consider the <m>F[x]</m>-module <m>V_g</m>. 
+                Since we assume <m>\cp_g(x)</m> factors completely, the only irreducible polynomials in its factorization are linear. 
+                Thus the invariant factors of <m>V_g</m> are products of polynomials of the form <m>(x-r)^e</m> for various <m>r \in F</m> and integers <m>e \geq 1</m>. 
+                It follows that the elementary divisors have this form too. 
+                The FTFGMPIDEDF CITEX therefore gives an isomorphism of <m>F[x]</m>-modules 
+                <me> V_g\cong \frac{F[x]}{(x - r_1)^{e_1}} \oplus \frac{F[x]}{(x -r_2)^{e_2}} \oplus \cdots \oplus\frac{F[x]}{(x - r_s)^{e_s}}. </me>
+                Now pick ordered bases <m>B_i=\{\ov{1}, \ov{x-r_i}, \ldots, \ov{(x-r_i)^{e_i-1}}\}</m> for each of the summands and set <m>B</m> to be their “ordered union'' just as we did for the proof of the Theorem on RCF. CITEX
+                By the same argument as in Example CITEX applied to each summand individually, the matrix representing multiplication by <m>x</m> on each summand is <m>J_{e_i}(r_i)</m>. 
+                This gives the existence of the JCF.
+              </p>
 
-          <p>
-            The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.
-          </p>
+              <p>
+                The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF CITEX.
+              </p>
             </proof>
           </theorem>
-
-          <definition xml:id="def-jcf"><title>Jordan Canonical Form</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field, <m>V</m> be a finite dimensional vector space, and let <m>t: V \rightarrow V</m> be a linear transformation satisfying the property that the characteristic polynomial <m>c_{t}</m> of <m>t</m> factors completely into linear factors and has elementary divisors <m>\left(x-r_{1}\right)^{e_{1}}, \ldots,\left(x-r_{s}\right)^{e_{s}}</m>. 
-                The matrix <m>J_{e_{1}}\left(r_{1}\right) \oplus \cdots \oplus J_{e_{s}}\left(r_{s}\right)</m> is a Jordan canonical form (JCF) of <m>t</m>.
-              </p>
-            </statement>
-          </definition>
 
           <warning>
             <p>
@@ -17891,9 +18092,7 @@
             <p>
               Let us find the Jordan Canonical Form of 
               <me>
-                  A = 
-                  \begin{bmatrix} 1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix}
-                  \in \Mat_{3 \times 3}(\Q).
+                  A = \begin{bmatrix} 1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix} \in \Mat_{3 \times 3}(\Q).
               </me>
             </p>
     
@@ -17920,6 +18119,7 @@
               <p>
                 Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>g: V \to V</m> be an <m>F</m>-linear operator. 
                 We say <m>g</m> is <em>diagonalizable</em> if there is a basis <m>B</m> for <m>V</m> such that the matrix <m>[g]_B^B</m> is a diagonal matrix.
+                <idx><h>diagonalizable (linear operator)</h></idx>
               </p>
             </statement>
           </definition>
@@ -18033,7 +18233,7 @@
                 <p>
                   For an integral domain <m>R</m>, a polynomial <m>p(x) \in R[x]</m> is called <em>irreducible</em> if <m>p(x)</m> is not a unit and whenever <m>p(x) = f(x) g(x)</m>, either <m>f(x)</m> or <m>g(x)</m> is a unit. 
                   (It follows that such a <m>p(x)</m> also cannot be <m>0</m>.)
-                  <idx><h>irreducible polynomial</h></idx>
+                  <idx><h>irreducible (polynomial)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -18068,6 +18268,7 @@
                     </li>
 
                     <li xml:id="thm-rational-root-test"><title>Rational Root Test</title>
+                      <idx><h>rational root test</h></idx>
                       <p>
                         If <m>p(x) \in \Q[x]</m> and all the coefficients of <m>p = a_n x^n + \cdots + a_0</m> are integers and <m>\frac{i}{j}</m> is a root of <m>p</m> with <m>i,j \in \Z</m>, then <m>j</m> divides <m>a_n</m> and <m>i</m> divides <m>a_0</m>. 
                         More generally, the same holds with <m>\Z</m> replaced by any PID and <m>\Q</m> replaced by its field of fractions.
@@ -18307,28 +18508,35 @@
                 Consider for instance <m>f(x) = (3x+1)(x+1) = 3 x^2 + 4x + 1 \in \Z[x]</m>. 
                 Modding out by <m>3</m> yields a linear polynomial in <m>(\Z/3)[x]</m> which is thus irreducible. 
                 But <m>f</m> isn't irreducible in <m>\Z[x]</m>. 
-                (The Proposition can be generalized to non-monic polynomials by adding the assumption that <m>p</m> does not divided the leading coefficient of <m>f</m>.)
+                (The Proposition CITEX can be generalized to non-monic polynomials by adding the assumption that <m>p</m> does not divided the leading coefficient of <m>f</m>.)
               </p>
             </example>
 
             <proposition xml:id="prop-fields-and-group-of-units">
               <statement>
                 <p>
-                  Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
+                  Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. 
+                  Then <m>G</m> is cyclic.
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
+                  Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. 
+                  Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
                 </p>
 
                 <p>
-                  However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+                  However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. 
+                  By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. 
+                  Thus <m>k=n</m>.
                 </p>
 
                 <p>
-                  Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
+                  Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. 
+                  Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. 
+                  This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; 
+                  hence <m>G</m> is itself cyclic.
                 </p>
               </proof>
             </proposition>
@@ -18368,6 +18576,7 @@
                   A <em>field extension</em> is an inclusion of one field <m>F</m> into a larger field <m>L</m>, making <m>F</m> into a subfield of <m>L</m>. 
                   We will write either <m>F \subseteq L</m> or <m>L/F</m> to signify that <m>L</m> is a field extension of <m>F</m>.
                   <idx><h>field extension</h></idx>
+                  <idx><h>extension (of fields)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -18387,7 +18596,7 @@
               </p>
     
               <p>
-                Recall <xref provisional="empty"/> that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. 
+                Recall <xref provisional="empty"/> CITEX that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. 
                 So <m>\Q \subseteq \Q[\sqrt{2}]</m> is another example of a field extension.
               </p>
             </example>
@@ -18523,7 +18732,7 @@
                   <me>
                     [L:F] = \dim_F(L).
                   </me>
-                  <idx><h>degree of a field extension</h></idx>
+                  <idx><h>degree (of a field extension)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -18568,10 +18777,10 @@
     
               <proof>
                 <p>
-                  Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/>. 
-                  Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/>. 
+                  Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/> CITEX. 
+                  Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/> CITEX. 
                   The map <m>F \to L</m> given by <m>a \mapsto \ov{a}</m> is a ring map since it is the composition of the two ring maps <m>F \xra{can} F[x] \xra{can} F[x]/(p(x))</m> <xref provisional="empty"/>. 
-                  Since it is a ring map between two fields, it is injective <xref provisional="empty"/>.
+                  Since it is a ring map between two fields, it is injective <xref provisional="empty"/>CITEX.
                 </p>
     
                 <p>
@@ -18653,6 +18862,7 @@
                   If <m>F \subseteq L</m> is a field extension and <m>A</m> is any subset of <m>L</m>, the <em>subfield generated</em> by <m>A</m> over <m>F</m>, denoted <m>F(A)</m>, is the smallest subfield of <m>L</m> that contains all of <m>F</m>. 
                   If <m>A=\left\{a_{1}, \ldots, a_{n}\right\}</m> is a finite set, we write <m>F\left(a_{1}, \ldots, a_{n}\right)</m> for <m>F(A)</m>.
                   <idx><h>generated subfield</h></idx>
+                  <idx><h>subfield generated by <m>A</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -18790,7 +19000,7 @@
                 <p>
                   Another example illustrating <xref ref="cor-unique-ext"/> is that <m>\mathbb{Q}(\sqrt{2})</m> and <m>\mathbb{Q}(-\sqrt{2})</m> are isomorphic fields. 
                   In fact, the are equal: <m>\mathbb{Q}(\sqrt{2})=\mathbb{Q}(-\sqrt{2})</m>. 
-                  But again Corollary 5.25 gives that there is an interesting isomorphism <m>\phi: \mathbb{Q}(\sqrt{2}) \stackrel{\cong}{\longrightarrow} \mathbb{Q}(-\sqrt{2})=\mathbb{Q}(\sqrt{2})</m> that sends <m>\sqrt{2}</m> to <m>-\sqrt{2}</m>. 
+                  But again Corollary 5.25 CITEX gives that there is an interesting isomorphism <m>\phi: \mathbb{Q}(\sqrt{2}) \stackrel{\cong}{\longrightarrow} \mathbb{Q}(-\sqrt{2})=\mathbb{Q}(\sqrt{2})</m> that sends <m>\sqrt{2}</m> to <m>-\sqrt{2}</m>. 
                   In general, we have <m>\phi(a+b \sqrt{2})=a-\sqrt{2}</m> for <m>a, b \in \mathbb{Q}</m>.
                 </p>
               </statement>
@@ -18988,7 +19198,7 @@
                   </me>
                   from <xref ref="thm-properties-of-algebraic-elements"/>. 
                   The unique monic generator <m>m_{\alpha, F}(x)</m> for <m>I</m> is called the <em>minimal polynomial</em> of <m>\alpha</m> over <m>F</m>.
-                  <idx><h>minimum polynomial over a field extension</h></idx>
+                  <idx><h>minimum polynomial (of a field extension)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -19218,9 +19428,9 @@
                   <me>
                     F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
                   </me> 
-                  Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. 
+                  Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem CITEX each step in this chain has finite degree. 
                   By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. 
-                  By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
+                  By the Theorem CITEX again, <m>\a</m> is algebraic over <m>F</m>.
                 </p>
     
                 <p>
@@ -19342,7 +19552,7 @@
               <statement>
                 <p>
                   Given a field <m>F</m>, a field <m>\ov{F}</m> is called an <em>algebraic closure</em> of <m>F</m> if <m>\ov{F}</m> is an algebraic field extension of <m>F</m> and <m>\ov{F}</m> is algebraically closed.
-                  <idx><h>algebraic closute</h></idx>
+                  <idx><h>algebraic closure (of a field)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -19743,7 +19953,7 @@
                   Let <m>R</m> be a commutative ring. 
                   The <em>characteristic</em> of <m>R</m>, written <m>\char(R)</m>, is the unique non-negative generator of the kernel of the unique ring homomorphism <m>\varphi: \Z \to R</m>. 
                   (Recall <m>\varphi(n) = n \cdot 1_R</m>.)
-                  <idx><h>characteristic</h></idx>
+                  <idx><h>characteristic (of a ring)</h></idx>
                 </p>
 
                 <p>
@@ -19759,11 +19969,9 @@
             </remark>
 
             <example xml:id="exe-charz"><title><m>\char(\Z)</m></title>
-
               <p>
                 <m>\char(\Z)=0</m> and <m>\char(\Z/n)=n</m> for any <m>n \geq 0</m>.
               </p>
-
             </example>
 
             <definition xml:id="def-prime-field"><title>Prime Field</title>
@@ -19841,6 +20049,7 @@
                   The <em>multiplicity</em> of <m>\a</m> in <m>f</m> is the number of times <m>(x - \a)</m> appears in the factorization <m>f(x) = c \prod_i (x - \a_i)</m> of <m>f</m> in <m>\ov{F}[x]</m>. 
                   (This number is independent of choice of algebraic closure by uniqueness of such closures up to isomorphism.)
                   <idx><h>mutliplicity of a root</h></idx>
+                  <idx><h>root multiplicity</h></idx>
                 </p>
               </statement>
             </definition>
@@ -19863,7 +20072,7 @@
                   <me>
                     f'(x) = n a_n x^{n-1} + (n-1) a_{n-1} x^{n-2} + \cdots + 2 a_2 x + a_1.
                   </me>
-                  <idx><h>derivative of a polynomial</h></idx>
+                  <idx><h>derivative (of a polynomial)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -19918,6 +20127,7 @@
             </lemma>
 
             <theorem xml:id="prop-criteria-for-separability"><title>Criteria for Separability</title>
+              <idx><h>criteria for separability</h></idx>
               <statement>
                 <p>
                   Let <m>F</m> be field and <m>\ov{F}</m> an algebraic closure of <m>F</m>. 
@@ -20100,13 +20310,13 @@
                 <p>
                   Let <m>K</m> be a field. 
                   The <em>automorphism group</em> of <m>K</m>, written <m>\Aut(K)</m>, is the collection of field automorphisms of <m>K</m>, with the binary operation of composition.
-                  <idx><h>automorphism group (fields)</h></idx>
+                  <idx><h>automorphism group (of a field)</h></idx>
                   <idx><h><m>\Aut(K)</m></h></idx>
                 </p>
 
                 <p>
                   The <em>automorphism group</em> of a field extension <m>F \subseteq K</m>, written <m>\Aut(K/F)</m>, is the subgroup of <m>\Aut(K)</m> consisting of those field automorphisms of <m>K</m> that restrict to the identity on <m>F</m>.
-                  <idx><h>automorphism group (field extensions)</h></idx>
+                  <idx><h>automorphism group (of a field extension)</h></idx>
                   <idx><h><m>\Aut(K/F)</m></h></idx>
                 </p>
               </statement>
@@ -20213,7 +20423,8 @@
             <theorem xml:id="thm-field-aut-action"><title><m>\Aut</m> Acts on Roots</title>
               <statement>
                 <p>
-                  Let <m>L</m> be the splitting field of a polynomial <m>f \in F[x]</m>. Let <m>S</m> be the set of distinct roots of <m>f</m> in <m>K</m>, and let <m>n:=|S|</m>.
+                  Let <m>L</m> be the splitting field of a polynomial <m>f \in F[x]</m>. 
+                  Let <m>S</m> be the set of distinct roots of <m>f</m> in <m>K</m>, and let <m>n:=|S|</m>.
                   <ol>
                     <li>
                       <p>
@@ -20558,7 +20769,10 @@
             <definition xml:id="def-galois-extension"><title>Galois Extension</title>
               <statement>
                 <p>
-                  A finite field extension <m>F \subseteq L</m> is Galois if <m>|\operatorname{Aut}(L / F)|=[L: F]</m>. In this case we write <m>\operatorname{Gal}(L / F)</m> for <m>\operatorname{Aut}(L / F)</m>, and say <m>\operatorname{Gal}(L / F)</m> is the Galois group of <m>L</m> over <m>F</m>.
+                  A finite field extension <m>F \subseteq L</m> is <em>Galois</em> if <m>|\operatorname{Aut}(L / F)|=[L: F]</m>. 
+                  In this case we write <m>\operatorname{Gal}(L / F)</m> for <m>\operatorname{Aut}(L / F)</m>, and say <m>\operatorname{Gal}(L / F)</m> is the <em>Galois group</em> of <m>L</m> over <m>F</m>.
+                  <idx><h>Galois field extension</h></idx>
+                  <idx><h>Galois group</h></idx>
                 </p>
               </statement>
             </definition>
@@ -20568,7 +20782,7 @@
                 I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. 
                 Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. 
                 Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. 
-                Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. 
+                Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition CITEX and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. 
                 Thus it isn't Galois. 
                 Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
               </p>
@@ -20611,6 +20825,9 @@
                   <me>
                     L^{G}:=\{\alpha \in L \mid s(\alpha)=\alpha, \text { for all } s \in G\}.
                   </me>
+                  <idx><h>fixed subfield</h></idx>
+                  <idx><h>subfield fixed by <m>G</m></h></idx>
+                  <idx><h><m>L^G</m></h></idx>
                 </p>
               </statement>
             </definition>
@@ -20685,8 +20902,7 @@
             </example>
 
             <theorem xml:id="thm-ftgt"><title>Fundamental Theorem of Galois Theory</title>
-              <idx><h>FTGT</h></idx>
-              <idx><h>fundamental theorem of Galois theory</h></idx>
+              <idx><h>fundamental theorem of Galois theory (FTGT)</h></idx>
               <idx><h>Galois correspondance</h></idx>
               <statement>
                 <p>
@@ -21083,6 +21299,7 @@
             </p>
 
             <theorem xml:id="thm-artin"><title>Artin's Theorem</title>
+              <idx><h>Artin's theorem</h></idx>
               <statement>
                 <p>
                   Let <m>L</m> be any field. 
@@ -21092,8 +21309,7 @@
             </theorem>
             
             <p>
-              Note that we really do mean equality here: 
-              both <m>G</m> and <m>\operatorname{Gal}\left(L / L^{G}\right)</m> are subgroups of <m>\operatorname{Aut}(L)</m>, and the theorem states that they coincide. 
+              Note that we really do mean equality here: both <m>G</m> and <m>\operatorname{Gal}\left(L / L^{G}\right)</m> are subgroups of <m>\operatorname{Aut}(L)</m>, and the theorem states that they coincide. 
               The containment <m>G \subseteq \operatorname{Gal}\left(L / L^{G}\right)</m> is clear: if <m>\sigma \in G</m>, then by construction <m>\sigma</m> fixes every element of <m>L^{G}</m> and hence <m>\sigma \in \operatorname{Gal}\left(L / L^{G}\right)</m>. 
               The point of the theorem is that the extension <m>L^{G} \subseteq L</m> is always Galois and that if <m>\sigma \in \operatorname{Aut}(L)</m> fixes every element of <m>L^{G}</m> then <m>\sigma</m> must belong to <m>G</m>.
             </p>
@@ -21108,7 +21324,10 @@
             <example>
               <statement>
                 <p>
-                  The group <m>G=\left\{\mathrm{id}_{\mathbb{C}}, \sigma\right\}</m>, where <m>\sigma</m> is complex conjugation, is a finite subgroup of <m>\Aut(\mathbb{C})</m>. Artin's Theorem tells us that <m>\mathbb{C}^{G} \subseteq \mathbb{C}</m> is finite and Galois with Galois group <m>G</m>. It follows that <m>\left[\mathbb{C}: \mathbb{C}^{G}\right]=|G|=2</m>. We already knew all this, since <m>\mathbb{C}^{G}=\mathbb{R}</m>.
+                  The group <m>G=\left\{\mathrm{id}_{\mathbb{C}}, \sigma\right\}</m>, where <m>\sigma</m> is complex conjugation, is a finite subgroup of <m>\Aut(\mathbb{C})</m>. 
+                  <xref text="title" ref="thm-artin"/> tells us that <m>\mathbb{C}^{G} \subseteq \mathbb{C}</m> is finite and Galois with Galois group <m>G</m>. 
+                  It follows that <m>\left[\mathbb{C}: \mathbb{C}^{G}\right]=|G|=2</m>. 
+                  We already knew all this, since <m>\mathbb{C}^{G}=\mathbb{R}</m>.
                 </p>
               </statement>
             </example>
@@ -21163,11 +21382,11 @@
               </statement>
             </example>
 
-            <corollary xml:id="cor-">
+            <corollary xml:id="cor-artin-2">
               <statement>
                 <p>
                   Let <m>F \subseteq L</m> be a Galois extension. 
-                  For every <m>\alpha \in L, m_{\alpha, F}</m> is separable and all of its roots belong to L. 
+                  For every <m>\alpha \in L, m_{\alpha, F}</m> is separable and all of its roots belong to <m>L</m>. 
                   Moreover, <m>\operatorname{Gal}(L / F)</m> acts transitively on the set of roots of <m>m_{\alpha, F}</m>.
                 </p>
               </statement>
@@ -21886,7 +22105,7 @@
             </definition>
 
             <theorem xml:id="thm-division-algorithm"><title>Division Algorithm</title>
-              <idx><h>division algorithm</h></idx>
+              <idx><h>division algorithm (integers)</h></idx>
               <statement>
                 <p>
                   Let <m>a</m> and <m>b</m> be integers with <m>b&gt;0</m>. 
@@ -22448,6 +22667,14 @@
 
       <appendix xml:id="appendix-quals"><title>Qualifying Exams</title>
 
+        <section xml:id="sec-qual"><title>Syllabus and Problems</title>
+    
+          <p>
+            <url href="https://math.unl.edu/graduate/exams/quals" visual="">UNL Algebra Qualifying Exams and Syllabus</url>
+          </p>
+
+        </section>
+
         <section><title>June 2023</title>
         
           <subsection><title>Section I: Group Theory</title>
@@ -22802,9 +23029,6 @@
               <statement>
                 <p>
                   Let <m>F\subseteq L</m> be a Galois extension of order <m>p^2</m>, where <m>p</m> is a prime integer.
-                </p>
-
-                <p>
                   <ol>
                     <li>
                       <p>
@@ -22814,7 +23038,7 @@
 
                     <li>
                       <p>
-                        Show that there must be either 1 or <m>p+1</m> intermediate fields <m>F\subset E\subset L</m>.
+                        Show that there must be either <m>1</m> or <m>p+1</m> intermediate fields <m>F\subset E\subset L</m>.
                       </p>
                     </li>
                   </ol>
@@ -25338,7 +25562,7 @@
             
             </activity>
 
-            <activity><title>Problem 2 (*)</title>
+            <activity><title>Problem 2</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. 
@@ -29859,12 +30083,38 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Linear Algebra and Modules</title>
 
             <activity><title>Problem 7 (*)</title>
               <statement>
                 <p>
-                  Consider the following matrix over the complex numbers: (a) (b)
+                  Consider the following matrix over the complex numbers: 
+                  <me>A=\left[\begin{array}{cccc}
+                    -1 &amp; -9 &amp; 0 &amp; 0 \\
+                    1 &amp; 5 &amp; 0 &amp; 0 \\
+                    2 &amp; 7 &amp; 2 &amp; 0 \\
+                    4 &amp; 13 &amp; 0 &amp; 2
+                    \end{array}\right]
+                  </me>
+                  <ol>
+                    <li>
+                      <p>
+                        Show that the characteristic polynomial of <m>A</m> is <m>(t-2)^{4}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find the Jordan canonical form <m>J</m> of <m>A</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find an invertible matrix <m>P</m> such that <m>P^{-1} A P=J</m>
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
 
@@ -30089,7 +30339,7 @@
 
           </subsection>
 
-          <subsection><title>Section II</title>
+          <subsection><title>Section II: Field Theory</title>
 
             <activity><title>Problem 4 (*)</title>
               <statement>
@@ -30210,7 +30460,7 @@
 
           </subsection>
 
-          <subsection><title>Section III</title>
+          <subsection><title>Section III: Rings, Modules, and Linear Algebra</title>
 
             <activity><title>Problem 7</title>
               <statement>
@@ -30274,7 +30524,21 @@
             <activity><title>Problem 8 (*)</title>
               <statement>
                 <p>
-                  Coming Soon!
+                  Let <m>R</m> be a commutative ring with identity and <m>M</m> an <m>R</m>-module. 
+                  Let <m>f</m> : <m>M \rightarrow M</m> be a surjective <m>R</m>-module homomorphism.
+                  <ol>
+                    <li>
+                      <p>
+                        Give an cxample of such an <m>R, M</m>, and <m>f</m> such that <m>f</m> is not an isomorphism.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Prove that if <m>M</m> is Noctherian then <m>f</m> is an isomorphism.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
 
@@ -30685,7 +30949,7 @@
 
         <section><title>January 2012</title>
           
-          <subsection><title>Section I: Group Theory</title>
+          <subsection><title>Section I: Groups</title>
 
             <activity><title>Problem 1</title>
               <statement>
@@ -30844,7 +31108,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings and Fields</title>
               
             <activity><title>Problem 4</title>
               <statement>
@@ -31008,12 +31272,38 @@
 
           </subsection>
 
-          <subsection><title>Section III</title>
+          <subsection><title>Section III: Linear Algebra and Modules</title>
 
             <activity><title>Problem 7 (*)</title>
               <statement>
                 <p>
                   Consider the following matrix over the complex numbers:
+                  <me>A=\left[\begin{array}{cccc}
+                    -1 &amp; -9 &amp; 0 &amp; 0 \\
+                    1 &amp; 5 &amp; 0 &amp; 0 \\
+                    2 &amp; 7 &amp; 2 &amp; 0 \\
+                    4 &amp; 13 &amp; 0 &amp; 2
+                    \end{array}\right]
+                  </me>
+                  <ol>
+                    <li>
+                      <p>
+                        Show that the characteristic polynomial of <m>A</m> is <m>(t-2)^{4}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find the Jordan canonical form <m>J</m> of <m>A</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Find an invertible matrix <m>P</m> such that <m>P^{-1} A P=J</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
 
@@ -31028,7 +31318,7 @@
             <activity><title>Problem 8 (*)</title>
               <statement>
                 <p>
-                  Let N be a submodule of an <m>R</m>-module <m>M</m>. 
+                  Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. 
                   Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
                   <ol>
                     <li>
@@ -31091,7 +31381,7 @@
 
         <section><title>June 2011</title>
         
-          <subsection><title>Section I: Group Theory</title>
+          <subsection><title>Section I: Groups</title>
 
             <activity><title>Problem 1</title>
               <statement>
@@ -31302,7 +31592,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings and Fields </title>
 
             <activity><title>Problem 5 (*)</title>
               <statement>
@@ -31474,7 +31764,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Linear Algebra and Modules</title>
             
             <activity><title>Problem 9 (*)</title>
               <statement>
@@ -31617,7 +31907,7 @@
  
         <section><title>June 2010</title>
         
-          <subsection><title>Section I: Group Theory</title>
+          <subsection><title>Section I: Groups</title>
 
             <activity><title>Problem 1</title>
               <statement>
@@ -31738,7 +32028,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings and Fields</title>
 
             <activity><title>Problem 4</title>
               <statement>
@@ -32023,7 +32313,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Linear Algebra and Modules</title>
 
             <activity><title>Problem 7 (*)</title>
               <statement>

@@ -12,16 +12,16 @@
 </head>
 <body class="ignore-math">
 <article class="proposition theorem-like"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.87</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Automorphism.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.88</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Automorphism.</span>
 </h4>
 <div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x\in G\text{.}\)</span> Then <span class="process-math">\(\psi_g\in \operatorname{Aut}(G)\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
 </div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(g\in G\text{.}\)</span> For any <span class="process-math">\(x,y\in G\text{,}\)</span> observe</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-inner-automorphisms.html ./knowl/xref/def-inner-automorphisms.html">
 \begin{align*}
-\psi_g(xy) &amp;= g(xy)g^{-1} &amp;&amp; \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.86}}\\
+\psi_g(xy) &amp;= g(xy)g^{-1} &amp;&amp; \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.87}}\\
 &amp;= gx(g^{-1} g)yg^{-1} \\
-&amp;=  \psi_g(x) \psi_g(y) &amp;&amp; \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.86}}
+&amp;=  \psi_g(x) \psi_g(y) &amp;&amp; \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.87}}
 \end{align*}
 </div>
 <div class="para">proving that <span class="process-math">\(\psi_g\)</span> is a homomorhism from <span class="process-math">\(G\)</span> to itself.</div>
@@ -29,10 +29,10 @@
 <div class="para">I claim <span class="process-math">\(\psi_g \circ \psi_h = \psi_{gh}\)</span> holds for any <span class="process-math">\(g, h \in G\text{.}\)</span> Observe</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-inner-automorphisms.html ./knowl/xref/def-inner-automorphisms.html ./knowl/xref/thm-group-inverses.html ./knowl/xref/def-inner-automorphisms.html">
 \begin{align*}
-\psi_g(\psi_h(x)) &amp;= \psi_g(hxh^{-1}) &amp;&amp; \text{apply }\knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.86}} \text{ for } \psi_h \\
-&amp;= ghxh^{-1} g^{-1} &amp;&amp; \text{apply } \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.86}} \text{ for } \psi_g \\
-&amp;= ghx(gh)^{-1} &amp;&amp; \knowl{./knowl/xref/thm-group-inverses.html}{\text{Theorem 1.20}}\\
-&amp;= \psi_{gh}(x) &amp;&amp; \text{apply }\knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.86}} \text{ for } \psi_{gh}
+\psi_g(\psi_h(x)) &amp;= \psi_g(hxh^{-1}) &amp;&amp; \text{apply }\knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.87}} \text{ for } \psi_h \\
+&amp;= ghxh^{-1} g^{-1} &amp;&amp; \text{apply } \knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.87}} \text{ for } \psi_g \\
+&amp;= ghx(gh)^{-1} &amp;&amp; \knowl{./knowl/xref/thm-group-inverses.html}{\text{Theorem 1.21}}\\
+&amp;= \psi_{gh}(x) &amp;&amp; \text{apply }\knowl{./knowl/xref/def-inner-automorphisms.html}{\text{Definition 1.87}} \text{ for } \psi_{gh}
 \end{align*}
 </div>
 <div class="para">Additionally, notice that <span class="process-math">\(\psi_e(x) = exe = x\)</span> for all <span class="process-math">\(x\in G\text{,}\)</span> and thus <span class="process-math">\(\psi_e = \operatorname{id}_G\text{.}\)</span>
