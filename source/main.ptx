@@ -583,7 +583,7 @@
               <li>
                 <p>
                   Group Rings:
-                  Justification pending
+                  Used to rigorously define polynomial rings, used in many advanced forms of mathematics, such as representation theory, (co)homology, etc
                 </p>
               </li>
 
@@ -898,14 +898,14 @@
                   <ol>
                     <li xml:id="list-unique-group-identity"><title>Unique Identity</title>
                       <p>
-                        The element <m>e\in G</m> satisfying <xref ref="identity-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
-                        <idx><h>identity element</h></idx>
+                        The element <m>e\in G</m> satisfying the <xref ref="identity-property" text="custom"> identity property</xref> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                        <idx><h>identity element (of a group)</h></idx>
                       </p>
                     </li>
 
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
-                        For each <m>x\in G</m>, the element satisfying <xref ref="inverse-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
+                        For each <m>x\in G</m>, the element satisfying <xref ref="inverse-property" text="custom"> inverse property</xref> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
                         <idx><h>inverse element</h></idx>
                       </p>
                     </li>
@@ -917,7 +917,7 @@
                       </p>
                       <p>
                         Similarly, if <m>yx = zx</m> then <m>y = z</m>
-                        <idx><h>cancellation (groups)</h></idx>
+                        <idx><h>cancellation (in groups)</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -1421,15 +1421,6 @@
             <blockquote>
               <p>
                 <q>
-                  Having power is not nearly as important as what you choose to do with it.
-                </q>
-              </p>
-              <attribution>Roald Dahl</attribution>
-            </blockquote>
-
-            <blockquote>
-              <p>
-                <q>
                   Good order is the foundation of all things.
                 </q>
               </p>
@@ -1581,16 +1572,16 @@
                         In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. 
                         If no such <m>n</m> exists, we say <m>x</m> has infinite order. 
                         We write <m>|x|</m> for the order of <m>x</m>.
-                        <idx><h>order of a group element</h></idx>
-                        <idx><h><m>|x|</m></h></idx>
+                        <idx><h>order (of a group element)</h></idx>
+                        <idx><h><m>|x|</m> (group element)</h></idx>
                       </p>
                     </li>
       
                     <li>
                       <p>
                         The <em>order of a group</em> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
-                        <idx><h>order of a group</h></idx>
-                        <idx><h><m>|G|</m></h></idx>
+                        <idx><h>order (of a group)</h></idx>
+                        <idx><h><m>|G|</m> (group)</h></idx>
                       </p>
                     </li>
                   </ol>
@@ -1865,12 +1856,29 @@
               </statement>
             </definition>
 
+            <sage>
+              <input>
+                G = SymmetricGroup(6)  # Define the symmetric group S6
+                a = G("(1,2,3)")
+                b = G("(1,3,4)")
+                a * b
+              </input>
+            </sage>
+
             <exercise xml:id="exe-sn-order"><title>Order of <m>S_n</m></title>
               <statement> 
                 <p>
                   Prove <m>|S_n|=n!</m>.
                 </p>
               </statement>
+              <solution>
+                  <sage>
+                    <input>
+                      G = SymmetricGroup(n)  # Define the symmetric group, replace n with number you'd like to check
+                      G.order()
+                    </input>
+                  </sage>
+              </solution>
 
               <!--
 
@@ -2448,12 +2456,14 @@
             <definition xml:id="def-ghom"><title>Group Homomorphism</title>
               <statement>
                 <p>
-                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em><idx><h>group homomorphism</h></idx> from <m>G</m> is <m>H</m> is a function <m>\varphi: G \to H</m> such that 
+                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>\varphi: G \to H</m> such that 
                   <me>
                     \varphi(x *_G y) = \varphi(x) *_H \varphi(y)
                   </me>, 
                   where <m>*_G</m> and <m>*_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
-                  <notation><usage><m>\varphi,\phi</m></usage><description>the common symbols we use to denote homomorphisms <m>\cdot</m></description></notation>          
+                  <notation><usage><m>\varphi,\phi</m></usage><description>the common symbols we use to denote homomorphisms <m>\cdot</m></description></notation>      
+                  <idx><h>group homomorphism</h></idx>
+                  <idx><h>homomorphism of groups</h></idx>    
                 </p>
               </statement>
             </definition>
@@ -2685,9 +2695,10 @@
               <statement>
                 <p>
                   Let <m>\varphi: G \to H</m> be a homomorphism of groups. 
-                  The <em>kernel</em><idx><h>kernel of a group homomorphism</h></idx> of <m>\varphi</m> is the set 
+                  The <em>kernel</em> of <m>\varphi</m> is the set 
                   <me>\ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.</me>
                   <idx><h><m>\ker(\varphi)</m> (groups)</h></idx> 
+                  <idx><h>kernel (of a group homomorphism)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -2781,12 +2792,14 @@
             <definition xml:id="def-gpiso"><title>Group Ismorphism</title>
               <statement>
                 <p>
-                  A homomorphism <m>\varphi: G \to H</m> is called an <em>isomorphism</em><idx><h>isomorphism</h></idx> if there exists a homomorphism <m>\phi: H \to G</m> such that <m>\varphi \circ \phi = \operatorname{id}_H</m> and <m>\phi \circ \varphi = \operatorname{id}_G</m>.
+                  A homomorphism <m>\varphi: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>\phi: H \to G</m> such that <m>\varphi \circ \phi = \operatorname{id}_H</m> and <m>\phi \circ \varphi = \operatorname{id}_G</m>.
                 </p>
       
                 <p>
-                  If <m>\varphi:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em><idx><h>isomorphic</h></idx>, written <m>G\cong H</m>.
+                  If <m>\varphi:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
                   <notation><usage><m>\cong</m></usage><description>Isomorphic</description></notation> 
+                  <idx><h>isomorphism (of groups)</h></idx>
+                  <idx><h>isomorphic (as groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -3127,7 +3140,7 @@
                 <p>
                   Let <m>G</m> be a group. 
                   An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em>
-                  <idx><h>automorphism</h></idx> of <m>G</m>. 
+                  <idx><h>automorphism (of a group)</h></idx> of <m>G</m>. 
                 </p>
               </statement>
             </definition>
@@ -3141,7 +3154,8 @@
             <definition xml:id="def-gp-aut"><title>Automorphism Group</title>
               <statement>
                 <p>
-                  The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term><idx><h>automorphism group</h></idx> of <m>G</m> and denoted <m>\Aut(G)</m>.
+                  The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term> of <m>G</m> and denoted <m>\Aut(G)</m>.
+                  <idx><h>automorphism group (of a group)</h></idx>
                   <idx><h><m>\Aut(G)</m></h></idx>
                 </p>
               </statement>
@@ -3895,7 +3909,7 @@
       
       </chapter> 
 
-      <chapter xml:id="ch-cyclic"><title>Generators and Cyclic Groups</title>
+      <chapter xml:id="ch-cyclic"><title>Generators, Cyclic Groups</title>
 
         <section xml:id="sec-gp-generators"><title>Generated Subgroups</title>
 
@@ -3933,11 +3947,11 @@
               </p>
             </aside>
 
-            <definition xml:id="def-fg-group"><title>Finitely Generated</title>
+            <definition xml:id="def-fg-group"><title>Finitely Generated Group</title>
               <statement>
                 <p>
                   A group <m>G</m> is <em>finitely generated</em> provided that <m>G=\langle S \rangle</m>, where <m>S</m> is a finite set.
-                  <idx><h>finitely generated group</h></idx>
+                  <idx><h>finitely generated (as a group)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -4130,7 +4144,7 @@
       
             <remark>
               <p>
-                Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em><idx><h>abelianization</h></idx>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. 
+                Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. 
                 This is seen rigorously in <xref ref="ex-abelianization"/>.
               </p>
             </remark>
@@ -4663,7 +4677,7 @@
 
       </chapter>
                                                                               
-      <chapter xml:id="ch-normal-quotient"><title>Quotient Groups</title>
+      <chapter xml:id="ch-normal-quotient"><title>Normal Subgroups, Quotient Groups</title>
 
         <introduction><title>Motivation: Normal Subgroups and Quotient Groups</title>
 
@@ -5845,8 +5859,8 @@
               </p>
             </example>
       
-            <theorem xml:id="thm-fit-group"><title>First Isomorphism Theorem</title>
-              <idx><h>first isomorphism theorem for groups</h></idx>
+            <theorem xml:id="thm-fit-group"><title>First Isomorphism Theorem for Groups</title>
+              <idx><h>first isomorphism theorem (for group)</h></idx>
               <statement>
                 <p>
                   If <m>\varphi: G \to H</m> is a homomorphism of groups, then <m>\operatorname{ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by <xref ref="thm-ump-quotient"/> induces an isomorphism 
@@ -5989,8 +6003,8 @@
               The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
             </p>
       
-            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem</title>
-              <idx><h>second isomorphism theorem for groups</h></idx>    
+            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem for Groups</title>
+              <idx><h>second isomorphism theorem (for groups)</h></idx>    
               <statement>
                 <p>
                   Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. 
@@ -6025,8 +6039,8 @@
               The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.
             </p>
             
-            <theorem xml:id="thm-tit-group"><title>Third Isomorphism Theorem</title>     
-              <idx><h>third isomorphism theorem for groups</h></idx>
+            <theorem xml:id="thm-tit-group"><title>Third Isomorphism Theorem for Groups</title>     
+              <idx><h>third isomorphism theorem (for groups)</h></idx>
               <statement>
                 <p>
                   Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. 
@@ -6057,8 +6071,8 @@
               </proof>
             </theorem>
 
-            <theorem xml:id="thm-lit-group"><title>Lattice Isomorphism Theorem</title>
-              <idx><h>lattice isomorphism theorem for groups</h></idx>
+            <theorem xml:id="thm-lit-group"><title>Lattice Isomorphism Theorem for Groups</title>
+              <idx><h>lattice isomorphism theorem (for groups)</h></idx>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. 
@@ -6254,9 +6268,82 @@
         
       </chapter>
 
-      <chapter xml:id="ch-presentations"><title>Presentations and Free Groups</title>
+      <chapter xml:id="ch-presentations"><title>Presentations, Free Groups (*)</title>
+
+        <introduction>
+          <p>
+            Coming soon!
+          </p>
+
+          <question><title>The What, Where, and Why of Group Presentations</title>
+            <statement>
+              <p>
+                Why are group presentations important? Where are they found? What are they used for?
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                <ul>
+                  <li><title>Understanding Module Presentations</title>
+                    <p>
+                      The study of group presentations helps understand the more general concept of presentations in algebraic structures, including modules.
+                      Presentations of modules are essential in the classification of finitely generated modules over an PID, which we will see CITEX. 
+                      Specifically, we can use Smith Normal Form, a process that simplifies the presentation of a module by transforming the relation matrix into a diagonal form, revealing the structure of the module in terms of its free and torsion parts.
+                    </p>
+                  </li>
+
+                  <li><title>Combinatorial Group Theory</title>
+                    <p>
+                      Group presentations are the cornerstone of combinatorial group theory, where groups are studied through their generators and relations.
+                      For example, the word problem asks whether two words (representing elements of the group) are equivalent under the relations given by the group presentation. 
+                      The difficulty of solving this problem depends on the complexity of the presentation.               
+                    </p>
+                  </li>
+
+                  <li><title>Geometric Group Theory</title>
+                    <p>
+                      The Cayley graph of a group is a graph that visually represents the group's structure in terms of its generators. 
+                      The group's presentation defines the edges of the graph, with each generator corresponding to an edge between vertices (group elements). 
+                      This graph-theoretic representation is central to many areas of geometric group theory, such as the study of word-hyperbolic groups.           
+                    </p>
+                  </li>
+
+                  <li><title>Algebraic Topology</title>
+                    <p>
+                      In algebraic topology, group presentations are used to describe the fundamental group <m>π_1(X)</m> of a topological space <m>X</m>, which encodes information about the loops in the space up to homotopy.
+                      For example, Given a CW complex (a type of topological space built from cells), the fundamental group of the space can be described using a group presentation. 
+                      The generators correspond to the <m>1</m>-cells (edges), and the relations come from the <m>2</m>-cells (faces), which describe how the edges are glued together.
+                    </p>
+                  </li>
+
+                  <li><title>Knot Theory</title>
+                    <p>
+                      The knot group of a knot <m>K</m> in <m>3</m>-dimensional space is the fundamental group of the knot complement (the space obtained by removing the knot from <m>\R^3</m>). 
+                      This group is often described using a group presentation.
+                    </p>
+                  </li>
+
+                  <li><title>Algebraic Geometry and Algebraic Groups</title>
+                    <p>
+                      The fundamental group of an algebraic variety can often be computed using a group presentation, especially for varieties with a well-understood topological structure (e.g., plane curves or higher-dimensional varieties).
+                    </p>
+                  </li>
+
+                  <li><title>Theoretical Computer Science</title>
+                    <p>
+                      Group presentations are connected to automata theory through the study of automatic groups, where the word problem can be solved efficiently. 
+                      Groups with certain types of presentations can be recognized by finite automata, and this has applications in both algebra and computer science.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </answer>
+          </question>
+        </introduction>
 
         <section xml:id="subsec-free-groups"><title>Free Groups</title>
+          
 
           <definition xml:id="def-free-group"><title>Free Group</title>
             <statement>
@@ -6332,6 +6419,10 @@
               </p>
               <attribution>Megamind (2010)</attribution>
             </blockquote>
+
+            <p>
+              A group presentation provides a concise way to describe a group in terms of generators and relations.
+            </p>
 
             <definition xml:id="def-gen-normal-subgroup"><title>Generated Normal Subgroup</title>
               <statement>
@@ -6469,6 +6560,7 @@
                   </ol>
                   <idx><h>group action</h></idx>
                   <idx><h><m>G</m>-action</h></idx>
+                  <idx><h>action (of a group)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -7560,9 +7652,18 @@
 
       <chapter xml:id="ch-sylow"><title>Simple, Solvable, Sylow</title>
     
-        <section xml:id="sec-p-groups"><title>Sylow's Theorem</title>
+        <section xml:id="sec-sylow"><title>Sylow's Theorems</title>
 
           <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  What makes me unique is that I'm normal.
+                </q>
+              </p>
+              <attribution>Scotty McCreery</attribution>
+            </blockquote>
+
             <p>
               We come to a very powerful technique for analyzing finite groups of relatively small order. 
               One aspect of Sylow theory is that it allows us to deduce, in certain special cases, the existence of a unique subgroup of a given order, and thus it allows one to construct a normal subgroup.
@@ -7570,15 +7671,6 @@
           </introduction>
 
           <subsection xml:id="subsec-p-groups"><title>Groups of Prime Order</title>
-          
-            <blockquote>
-              <p>
-                <q>
-                  The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.
-                </q>
-              </p>
-              <attribution>Optimus Prime</attribution>
-            </blockquote>
           
             <definition xml:id="def-p-group"><title><m>p</m>-group</title>
               <statement>
@@ -7676,7 +7768,6 @@
       
                 <p>
                   We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
-                  <idx><h>Sylow subgroup</h></idx>
                   <idx><h>Sylow <m>p</m>-subgroup</h></idx>
                   <idx><h><m>\Syl_p(G)</m></h></idx>
                   <idx><h><m>n_p</m></h></idx>
@@ -7718,15 +7809,6 @@
           </subsection>
 
           <subsection xml:id="subsec-sylows-theorem"><title>Sylows-Theorem</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  What makes me unique is that I'm normal.
-                </q>
-              </p>
-              <attribution>Scotty McCreery</attribution>
-            </blockquote>
 
             <proposition xml:id="prop-syl-act">
               <statement>
@@ -8016,8 +8098,7 @@
     
         <section xml:id="sec-simple-groups"><title>Simple Groups</title>
 
-          <subsection xml:id="subsec-simple"><title>Keeping it Simple</title>
-          
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -8026,7 +8107,10 @@
               </p>
               <attribution>Albert Einstein</attribution>
             </blockquote>
-      
+          </introduction>
+
+          <subsection xml:id="subsec-simple"><title>Keeping it Simple</title>
+          
             <definition xml:id="def-simple-group"><title>Simple Group</title>
               <statement>
                 <p>
@@ -8456,10 +8540,198 @@
 
         </section>
 
-        <section xml:id="sec-solvable"><title>Solvable Groups</title>
-          <p>
+        <section xml:id="sec-solvable"><title>Solvable Groups (*)</title>
 
-          </p>
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  Everything should be made as simple as possible, but not simpler.
+                </q>
+              </p>
+              <attribution>Albert Einstein</attribution>
+            </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-composition-series"><title>Composition Series</title>
+
+            <definition xml:id="def-composition-series">
+              <statement>
+                <p>
+                  A normal series is called a <em>composition series</em> if each subqoutient <m>N_i/N_{i-1}</m> is a simple group.
+                </p>
+              </statement>
+            </definition>
+
+            <example>
+              <p>
+                Suppose <m>G = \langle x \rangle</m> is cyclic of order <m>n &gt; 1</m> and say <m>n = p_1 \cdots p_k</m> is a prime factorization of <m>n</m>. 
+                Then the factors of 
+                <me>\{e\} = \langle x^0 \rangle \unlhd \langle x^{n/p_1} \rangle \unlhd \langle x^{n/p_1p_2} \rangle \unlhd\cdots \unlhd\langle x^{n/p_1p_2 \cdots p_k}\rangle = G</me> 
+                are of order <m>p_1, p_2, \dots, p_k</m>, respectively, and hence are all simple groups. 
+                Thus the composition factors of <m>G</m> are <me>\mathbb{Z}/p_1, \mathbb{Z}/p_2, \cdots, \mathbb{Z}/p_k.</me>
+              </p>
+            </example>
+
+            <example>
+              <p>
+                <m>\{e\} \unlhd\langle r \rangle\unlhd D_{2n}</m> is a normal series. 
+                Since <m>\langle r \rangle</m> is cyclic of order <m>n</m>, it has a composition series as in the previous example. 
+                By inserting this into the length two normal series given here, we obtain a composition series of <m>D_{2n}</m> with composition factors 
+                <me>\mathbb{Z}/2, \mathbb{Z}/p_1, \mathbb{Z}/p_2, \cdots, \mathbb{Z}/p_k.</me>
+              </p>
+            </example>
+
+            <proposition xml:id="prop-solv-1">
+              <statement>
+                <p>
+                  Assume <m>G</m> is a group and <m>N \unlhd G</m>. 
+                  If <m>N</m> and <m>G/N</m> both have composition series, then so does <m>G</m>. 
+                  Moreover, in this case, the list of composition factors of <m>G</m> is the concatenation of the lists of composition factors of <m>N</m> and <m>G/N</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  This is a consequence of the Isomorphism Theorems. In detail, a composition series for <m>G/N</m> has the form <me>e \unlhd M_1/N \unlhd M_2/N \unlhd\cdots \unlhd M_k/N = G/N</me> where <m>N \unlhd M_1 \unlhd\cdots \unlhd M_k = G</m>. If <m>e \unlhd N_1 \unlhd\cdots \unlhd N_j = N</m> is a composition seires for <m>N</m>, then <me>e \unlhd N_1 \unlhd\cdots \unlhd N_j \unlhd M_1 \unlhd\cdots \unlhd M_k = G</me> is a composition series for <m>G</m> since <m>M_i/M_{i-1} \cong (M_i/N)/(M_{i-1}/N)</m> for all <m>i = 1, \dots, k</m>. (For the case <m>i = 1</m>, interpret <m>M_0</m> as <m>N</m>.)
+                </p>
+              </proof>
+            </proposition>
+
+            <example>
+              <p>
+                As you showed in the homework, <m>S_4</m> has a normal subgroup <m>V</m> of order <m>4</m>. 
+                <m>V</m> has a composition series of the form 
+                <me>\{e\} \unlhd\langle (1 2)(3 4) \rangle \unlhd V,</me> 
+                and so the composition factors of <m>V</m> are <m>\mathbb{Z}/2, \mathbb{Z}/2</m>.
+              </p>
+        
+              <p>
+                The group <m>S_4/V</m> has order <m>6</m> and it has an element of order <m>3</m>, namely <m>(1 2 3)</m>. 
+                If <m>G</m> is any group of oder <m>6</m> with an element <m>x</m> or order <m>3</m>, then the composition factors of <m>G</m> are <m>\mathbb{Z}/2, \mathbb{Z}/3</m>. 
+                (In fact, every group of order <m>6</m> has an element of order <m>3</m>.) 
+                To see this, note that <m>\langle x \rangle</m> is normal in <m>G</m> since it has index two.
+              </p>
+        
+              <p>
+                Using the Proposition, the compition factors of <m>S_4</m> are 
+                <me>\mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/3.</me>
+              </p>
+        
+              <p>
+                We can make this more explicit too. 
+                The subgroup of <m>G/N</m> generated by <m>(1 \, 2 \, 3) N</m> corresponds to the subgroup <m>M</m> of <m>G</m> that is generated by the elements of <m>V</m> along with <m>(1 \, 2 \, 3)</m>. 
+                We have 
+                <me>\{e\} \unlhd\langle (1 2)(3 4) \rangle \unlhd V \unlhd M \unlhd G</me> 
+                with factors <m>\mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/3, \mathbb{Z}/2</m>.
+              </p>
+            </example>
+
+            <example>
+              <p>
+                The composition factors of <m>S_5</m> are <m>\mathbb{Z}/2</m> and <m>A_5</m>. 
+                This holds since <m>A_5 \unlhd S_5</m>, <m>[S_5:A_5] = 2</m>, and <m>A_5</m> is simple, facts that we will prove later.
+              </p>
+            </example>
+      
+            <p>
+              We close this subsection with some big-picture type comments. 
+              A normal subgroup of a group is analogous to a factor of an integer, and a composition series of a finite group is analogous to a prime factorizations of integers. 
+              In this analogy, the role of a prime number is played by a simple group. 
+              One major difference is that, unlike for prime factorizations, the list of composition factors of a group do <em>not</em> uniquely determine the group since, for example, <m>D_{2n}</m> and <m>\mathbb{Z}/(2n)</m> (and, for that matter, any solvable group of order <m>2n</m>) have the same composition factors but are certainly not isomorphic.
+            </p>
+      
+            <p>
+              Nonetheless, a major motivating idea in finite group theory is the following: 
+              In order to know everything about finite group theory, one merely needs to know:
+              <ul>
+                <li>
+                  <p>
+                    a complete list of all simple groups and
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    a method of reconstructing all possible finite groups having a given list of composition factors.
+                  </p>
+                </li>
+              </ul>
+            </p>
+      
+            <p>
+              The former task was essentially accomplished by the 1980's, when all finite simple groups were classified into a handful of families along with <m>26</m> <q>sporadic</q> simple groups. 
+              The latter task is probably not really possible as stated here. 
+              But, there is a large collection of properties <m>\mathcal P</m> of finite groups such that if <m>\mathcal P</m> holds for all members of a compostion series of a given group then <m>\mathcal P</m> also holds for the group itself. 
+              For such a property <m>\mathcal P</m>, it suffices to check that <m>\mathcal P</m> holds true for every finite simple group. 
+              This technique has been used with success.
+            </p>
+            
+          </subsection>
+
+
+          <subsection xml:id="subsec-solvable"><title>Solvable Groups</title>
+            <p>
+
+            </p>
+
+            <question><title>The What, Where, and Why of Group Presentations</title>
+              <statement>
+                <p>
+                  Why are solvable groups important? Where are they found? What are they used for?
+                </p>
+              </statement>
+  
+              <answer>
+                <p>
+                  <ul>
+                    <li><title>Galois Theory</title>
+                      <p>
+                        A key result of Galois theory is that a polynomial equation is solvable by radicals (i.e., its roots can be expressed using basic arithmetic operations and roots) if and only if its associated Galois group is solvable. 
+                        This result connects group theory directly to classical problems in algebra.
+                      </p>
+                    </li>
+  
+                    <li><title>Lie Groups and Algebraic Groups</title>
+                      <p>
+                        In the study of Lie groups, solvable groups often serve as a starting point for understanding more complex groups. 
+                        A classic example is the Borel subgroups in the theory of algebraic groups, which are connected solvable groups and play a central role in the classification of algebraic groups.        
+                      </p>
+                    </li>
+  
+                    <li><title>Representation Theory</title>
+                      <p>
+                        The representations of solvable groups are particularly well-understood due to the fact that these groups have abelian quotients at each level of their derived series. 
+                        This allows techniques from the representation theory of abelian groups to be extended to solvable groups.
+                      </p>
+                    </li>
+  
+                    <li><title>Topology</title>
+                      <p>
+                        In the classification of <m>3</m>-manifolds, the fundamental group of certain types of 3-manifolds (such as Seifert-fibered spaces) is solvable. 
+                        Understanding these groups is crucial for classifying the topology of the manifold.
+                      </p>
+                    </li>
+  
+                    <li><title>Algebraic Geometry</title>
+                      <p>
+                        The knot group of a knot <m>K</m> in <m>3</m>-dimensional space is the fundamental group of the knot complement (the space obtained by removing the knot from <m>\R^3</m>). 
+                        This group is often described using a group presentation.
+                      </p>
+                    </li>
+  
+                    <li><title>Cryptography</title>
+                      <p>
+                        Cryptographic protocols, such as those based on the discrete logarithm problem or the conjugacy search problem, sometimes use solvable or nearly solvable groups due to their structured nature.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </answer>
+            </question>
+          </subsection>
+
+          
         </section>
     
       </chapter>
@@ -8684,8 +8956,8 @@
               <statement>
                 <p>
                   If <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> are such that <m>H\cap K=\{e\}</m> then we call <m>HK</m> the <em>internal direct product</em> of <m>H</m> and <m>K</m> and <m>H\times K</m> the <em>external direct product</em> of <m>H</m> and <m>K</m>.
-                  <idx><h>internal direct product</h></idx>
-                  <idx><h>external direct product</h></idx>
+                  <idx><h>internal direct product (of groups)</h></idx>
+                  <idx><h>external direct product (of groups)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -9579,7 +9851,7 @@
     
       <chapter xml:id="ch-rings"><title>Intro to Rings</title>
 
-        <section xml:id="sec-defn-ex"><title>Rings and Subrings</title>
+        <section xml:id="sec-defn-ex"><title>Rings, Subrings</title>
     
           <subsection xml:id="subsec-rings"><title>From Rings to Fields</title>
               
@@ -10118,10 +10390,9 @@
 
         </section>
 
-        <section xml:id="sec-units"><title>Units, Zerodivisors, Domains</title>
+        <section xml:id="sec-units"><title>Units, Zerodivisors, Integral Domains</title>
 
-          <subsection xml:id="subsec-units"><title>Absolute Units</title>
-
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -10130,6 +10401,9 @@
               </p>
               <attribution>Emmanuel Cleaver</attribution>
             </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-units"><title>Absolute Units</title>
 
             <definition xml:id="def-unit"><title>Unit</title>
               <statement>
@@ -10280,14 +10554,6 @@
           </subsection>
   
           <subsection xml:id="subsec-zerodivisors"><title>A Zero Divided Cannot Stand</title>
-
-              <blockquote>
-                <p>
-                  <q>
-                    The only way on Earth to multiply happiness is to divide it.
-                  </q>
-                </p><attribution>Paul Scherrer</attribution>
-              </blockquote>
 
               <p>
                 We might not be able to divide by zero, but sometimes we can get the next best thing.
@@ -10526,11 +10792,23 @@
           
         </section>
 
-        <section xml:id="sec-poly"><title>Group Rings and Polynomial Rings</title>
+        <section xml:id="sec-poly"><title>Group Rings, Polynomial Rings</title>
+
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  I had a polynomial once. My doctor removed it.
+                </q>
+              </p>
+              <attribution>Michael Grant</attribution>
+            </blockquote>
+          </introduction>
 
           <subsection xml:id="subsec-group-ring"><title>What is a Group Ring?</title>
             <p>
-              Here is another general example of a ring.
+              A group ring is an algebraic structure that combines concepts from group theory and ring theory. 
+              It is constructed by "attaching" a ring to a group, allowing you to study the group's structure using ring-like operations.
             </p>
 
             <definition xml:id="def-group-ring">
@@ -10632,9 +10910,6 @@
               We identify <m>G</m> as a subset of <m>R[G]</m> in the obvious way (by identifying <m>1_R g</m> with <m>g</m>).
             </p>
     
-    
-            
-    
             <p>
               This gives that for any <m>g\in G</m> we have <me>(1_R g)(1_R g^{-1}) =(1_R g^{-1})(1_R g) =1_R e_G=1_{R[G]},</me> thus <m>i(g)</m> is a unit in <m>R[G]</m> with inverse <m>i(g^{-1})</m>. 
               This shows that <m>\operatorname{Im}(i)\subseteq R[G]^\times</m>.
@@ -10643,8 +10918,56 @@
             <p>
               The formula <m>(1_R g)(1_R h) = 1_R (gh)</m> also gives that the map <m>g\mapsto 1_Rg</m> is group homomorphism. ◻
             </p>
-    
-    
+
+            <question><title>Motivation: The What, Where, and Why of Groups</title>
+              <statement>
+                <p>
+                  Why are group rings important? Where are they found? What are they used for?
+                </p>
+              </statement>
+
+              <answer>
+                <p>
+                  <ul>
+                    <li><title>(Co)homology</title>
+                      <p>
+                        To compute group cohomology, we often work with projective resolutions of <m>G</m>-modules, which are constructed from the group ring <m>Z[G]</m>.
+                      </p>
+                    </li>
+
+                    <li><title>Representation Theory</title>
+                      <p>
+                        The group ring <m>R[G]</m> acts on vector spaces, allowing one to study how groups can be represented by linear transformations. 
+                        This is fundamental for studying symmetries and representations of finite and infinite groups.
+                        A representation of <m>G</m> on a vector space <m>V</m> can be viewed as a module over the group ring <m>R[G]</m>, which means that <m>V</m> becomes a left <m>R[G]</m>-module, and the action of <m>g∈G</m> on a vector in <m>V</m> corresponds to multiplication by <m>g</m> as an element of <m>R[G]</m>.
+                      </p>
+                    </li>
+
+                    <li><title>Module Theory</title>
+                      <p>
+                        Studying modules over group rings helps in understanding structures such as projective modules, simple modules, and injective modules.
+                      </p>
+                    </li>
+
+                    <li><title>Algebraic Number Theory</title>
+                      <p>
+                        Group rings are used in the study of class field theory and Galois groups. 
+                        They are also employed in the study of cyclotomic fields and class numbers, where group rings like <m>Z[G]</m> arise naturally.
+                      </p>
+                    </li>
+
+                    <li><title>K-Theory</title>
+                      <p>
+                        In algebraic <m>K</m>-theory, the classification of projective modules over a ring <m>R</m> is central. 
+                        For a group ring <m>R[G]</m>, projective modules over <m>R[G]</m> correspond to certain representations of <m>G</m>. 
+                        The <m>K</m>-theory groups <m>K_n(R[G])</m> (for <m>n≥0n</m>) provide information about the structure of these modules. 
+                        In particular, <m>K_0(R[G])</m> classifies finitely generated projective modules up to isomorphism, which has connections to representations of <m>G</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </answer>
+            </question>
             
           </subsection>
 
@@ -10708,10 +11031,10 @@
             </p>
             
           </subsection>
-          
+
         </section>
-        
-        <section xml:id="sec-sub-poly"><title>Homomorphisms and Polynomial Rings</title>
+
+        <section xml:id="sec-sub-poly"><title>Homomorphisms, Polynomial Rings</title>
 
           <subsection xml:id="sec-ring-hom"><title>Homomorphisms</title>
 
@@ -10908,7 +11231,7 @@
             </exercise>
             
           </subsection>
-  
+
           <subsection xml:id="subsec-polyrings"><title>Polynomial Rings</title>
   
             <blockquote>
@@ -11131,18 +11454,19 @@
       <chapter xml:id="ch-idealquot"><title>Ideals and Quotient Rings</title>
         
         <section xml:id="sec-ideals"><title>Ideals</title>
-    
-          <subsection xml:id="subsec-ideal-def"><title>Ideal or No Deal</title>
 
+          <introduction>
             <blockquote>
               <p>
                 <q>
-                  It is a useless life that is not consecrated to a great ideal. 
-                  It is like a stone wasted on the field without becoming a part of any edifice.
+                  If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.
                 </q>
               </p>
-              <attribution>Jose Rizal</attribution>
+              <attribution>Liam Neeson, Batman Begins</attribution>
             </blockquote>
+          </introduction>
+    
+          <subsection xml:id="subsec-ideal-def"><title>Ideal or No Deal</title>
             
             <definition xml:id="def-ideal"><title>Ideal</title>
               <statement>
@@ -11358,16 +11682,7 @@
     
           </subsection>
     
-          <subsection xml:id="subsec-generated-ideals"><title>Generated Ideals</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.
-                </q>
-              </p>
-              <attribution>Liam Neeson, Batman Begins</attribution>
-            </blockquote>
+          <subsection xml:id="subsec-generated-ideals"><title>Generated Ideals</title> 
     
             <definition xml:id="def-generated-ideal"><title>Generated Ideals</title>
               <statement>
@@ -11378,7 +11693,7 @@
                   </me>
                   An ideal <m>I</m> is <em>finitely generated</em> if <m>I = \igen A</m> for some finite subset <m>A</m> of <m>R</m>.
                   <idx><h>generated ideal</h></idx>
-                  <idx><h>finitely generated (ideal)</h></idx>
+                  <idx><h>finitely generated (as an ideal)</h></idx>
                   <idx><h>ideal generated by <m>A</m></h></idx>
                 </p>
               </statement>
@@ -11467,10 +11782,9 @@
           
         </section>
     
-        <section xml:id="sec-ring-quotients"><title>Quotient Rings and the Isomorphism Theorems</title>
-          
-          <subsection xml:id="subsec-quotient-rings"><title>Quotient Rings</title>
+        <section xml:id="sec-ring-quotients"><title>Quotient Rings, the Ring Isomorphism Theorems</title>
 
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -11479,6 +11793,9 @@
               </p>
               <attribution>Alan Perlis</attribution>
             </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-quotient-rings"><title>Quotient Rings</title> 
 
             <lemma xml:id="lem-cosets-abelian"><title>Additive Cosets form Abelian Group</title>
               <statement>
@@ -11548,14 +11865,6 @@
           </subsection>
     
           <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  I'm not a very structured person, so when I get some structure, it's cool; it's good for me.
-                </q>
-              </p><attribution>J. Cole</attribution>
-            </blockquote>
 
             <p>
               We arrive at the isomorphism theorems for rings. 
@@ -11653,9 +11962,8 @@
         </section>
 
         <section xml:id="sec-primemax-ideals"><title>Prime and Maximal Ideals</title>
-    
-          <subsection xml:id="subsec-prime-ideals"><title>Prime Ideals</title>
 
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -11664,6 +11972,9 @@
               </p>
               <attribution>Boris Johnson, former Prime Minister</attribution>
             </blockquote>
+          </introduction>
+    
+          <subsection xml:id="subsec-prime-ideals"><title>Prime Ideals</title>
 
             <definition xml:id="def-prime-ideal"><title>Prime Ideal</title>
               <statement>
@@ -11777,15 +12088,6 @@
     
           <subsection xml:id="subsec-maximal-ideals"><title>Maximal Ideals</title>
 
-            <blockquote>
-              <p>
-                <q>
-                  It's just like, we know how to push ourselves to the max.
-                </q>
-              </p>
-              <attribution>Young Dolph</attribution>
-            </blockquote>
-    
             <definition xml:id="def-maximal-ideal"><title>Maximal Ideal</title>
               <statement>
                 <p>
@@ -12008,7 +12310,7 @@
           </example> 
     
           <definition xml:id="def-ed-gcd"><title>GCD</title>
-            <idx><h>greatest common divisor (gcd) (in a ED)</h></idx>
+            <idx><h>greatest common divisor (in a ED)</h></idx>
             <statement>
               <p>
                 Given elements <m>a, b</m>, not both <m>0</m>, of a Euclidean domain <m>R</m> with Euclidean norm <m>N</m>, a <m>\gcd</m> of <m>a</m> and <m>b</m> is an element <m>g \in\R</m> such that: 
@@ -12620,15 +12922,15 @@
         
       </chapter>
 
-      <chapter xml:id="ch-fof-poly-ufd"><title>Fields of Fractions and Localization</title>
+      <chapter xml:id="ch-fof-poly-ufd"><title>Fields of Fractions, Localization</title>
 
         <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
 
           <blockquote>
             <p>
-              <q>Food is a common denominator for all people.</q>
+              <q>We live but a fraction of our lives.</q>
             </p>
-            <attribution>Guy Fieri</attribution>
+            <attribution>Hnery David Thoreau</attribution>
           </blockquote>
           
           <definition xml:id="def-multiplicatively-closed"><title>Multiplicately Closed Set</title>
@@ -12906,10 +13208,10 @@
                 <p>
                   Often, the elements of the ring <m>R</m> are referred to as <em>scalars</em>, and the four rules given above are referred to as an <m>R</m>-<em>action</em>.
                   <idx><h>module</h></idx>
-                  <idx><h>left module</h></idx>
-                  <idx><h>right module</h></idx>
-                  <idx><h>scalars (of a module)</h></idx>
-                  <idx><h>action (of a module)</h></idx>
+                  <idx><h>left <m>R</m>-module</h></idx>
+                  <idx><h>right <m>R</m>-module</h></idx>
+                  <idx><h>scalars (of am <m>R</m>-module)</h></idx>
+                  <idx><h>action (of an <m>R</m>-module)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13458,6 +13760,7 @@
                     </li>
                   </ol>
                   When <m>R</m> is a field, we refer to <m>\varphi</m> as a <em>linear transformation</em>.
+                  <idx><h>homomorphism of modules</h></idx>
                   <idx><h>module homomorphism</h></idx>
                   <idx><h><m>R</m>-module homomorphism</h></idx>
                   <idx><h><m>R</m>-map</h></idx>
@@ -13542,6 +13845,7 @@
                   An <m>R</m>-module homomorphism <m>\varphi: M \to N</m> is an <m>R</m>-module <em>isomorphism</em> if there is another <m>R</m>-module homomorphism <m>\phi: N \to M</m> such that <m>\varphi \circ \phi = \id_M</m> and <m>\phi \circ \varphi = \id_N</m>.
                   <idx><h>module isomorphism</h></idx>
                   <idx><h><m>R</m>-module isomorphism</h></idx>
+                  <idx><h>isomomorphism of modules</h></idx>
                 </p>
               </statement>
             </definition>
@@ -13802,11 +14106,11 @@
             <definition xml:id="def-cokernel"><title>Cokernel</title>
               <statement>
                 <p>
-                  The cokernel of a map of <m>R</m>-modules <m>M \stackrel{\varphi}{\rightarrow} N</m> is the module
+                  The <em>cokernel</em> of a map of <m>R</m>-modules <m>M \stackrel{\varphi}{\rightarrow} N</m> is the module
                   <me>
                     \text { coker } \varphi:=B / \operatorname{im}(\varphi).
                   </me>
-                  <idx><h>cokernel (of <m>R</m>-module homomorphism</h></idx>
+                  <idx><h>cokernel (of an <m>R</m>-module homomorphism)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -14170,7 +14474,7 @@
               <statement>
                 <p>
                   A module <m>M</m> is <em>finitely generated</em> if there exists some finite subset <m>A</m> of <m>M</m> such that <m>M = R \cdot A</m>.
-                  <idx><h>finitely generated module</h></idx>
+                  <idx><h>finitely generated (as a module)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -14405,7 +14709,6 @@
                   An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
                   <idx><h>basis</h></idx>
                   <idx><h>free module</h></idx>
-                  <idx><h>free <m>R</m>-module</h></idx>
                 </p>
               </statement>
             </definition>
@@ -14600,7 +14903,6 @@
                 </me> 
                 given by sending a homomorphisms <m>f: M \to N</m> to its restriction <m>f|_B:B \to N</m> to <m>B</m>. 
                 (Here, <m>\Hom_R(M,N)</m> is the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m> and <m>\Fun(B, N)</m> is the set of all functions from <m>B</m> to <m>N</m>.)
-                <idx><h><m>\Fun(X,Y)</m></h></idx>
               </p>
             </remark>
 
@@ -15546,8 +15848,8 @@
                   </me>
                   is said to <em>represent</em> the homomorphism <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
                   In the case that <m>V</m> and <m>W</m> are <m>F</m>-vector spaces, the matrix <m>[f]_{B}^{C}</m> is called the <em>matrix of the linear transformation</em> <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
-                  <idx><h>matrix of a linear transformation</h></idx>
-                  <idx><h>matrix of a free module homomorphism</h></idx>
+                  <idx><h>matrix (of a linear transformation)</h></idx>
+                  <idx><h>matrix (of a free module homomorphism)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -18217,8 +18519,7 @@
 
         <section xml:id="sec-irrpoly"><title>Irredicuble Polynomials</title>
 
-          <subsection xml:id="subsec-irrpoly"><title>Basic Irreducibility Tests</title>
-
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -18227,6 +18528,9 @@
               </p>
               <attribution>Sir Arthur Conan Doyle</attribution>
             </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-irrpoly"><title>Basic Irreducibility Tests</title>
 
             <definition xml:id="def-irreducible-polynomial">
               <statement>
@@ -20294,8 +20598,7 @@
 
         <section xml:id="sec-galext"><title>Galois Extensions</title>
 
-          <subsection xml:id="subsec-actions-aut"><title>Group Actions and Automorphism Groups</title>
-
+          <introduction>
             <blockquote>
               <p>
                 <q>
@@ -20304,6 +20607,9 @@
               </p>
               <attribution>René Descartes</attribution>
             </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsec-actions-aut"><title>Group Actions and Automorphism Groups</title>
             
             <definition xml:id="def-aut-k"><title>Field Automorphism Group</title>
               <statement>
@@ -20645,15 +20951,6 @@
 
           <subsection xml:id="subsec-galois-group"><title>Finite Extensions and Galois Groups</title>
 
-            <blockquote>
-              <p>
-                <q>
-                  Give me extension and motion and I will construct the universe.
-                </q>
-              </p>
-              <attribution>René Descartes</attribution>
-            </blockquote>
-
             <p>
               We will now focus on finite field extensions and their automorphism groups. We start by giving a much better upper bound on the order of the automorphism group of a finite field extension.
             </p>
@@ -20861,6 +21158,17 @@
         </section>
 
         <section xml:id="sec-ftgt"><title>The Fundamental Theorem of Galois Theory</title>
+
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  Get the fundamentals down and the level of everything you do will rise.
+                </q>
+              </p>
+              <attribution>Michael Jordan</attribution>
+            </blockquote>
+          </introduction>
 
           <subsection xml:id="subsec-ftgt"><title>The Fundamental Theorem: Statement and Uses</title>
 
@@ -21288,114 +21596,110 @@
 
           </subsection>
 
-        </section>
-
-        <section xml:id="sec-proving-galois"><title>Proving the Fundamental Theorem</title>
-
-          <subsection xml:id="subsec-artin"><title>Artin's Theorem</title>
-            
-            <p>
-              The following is an important theorem with many corollaries. In fact, the Fundamental Theorem of Galois Theory, which we will state shortly, will follow from this result.
-            </p>
-
-            <theorem xml:id="thm-artin"><title>Artin's Theorem</title>
-              <idx><h>Artin's theorem</h></idx>
-              <statement>
-                <p>
-                  Let <m>L</m> be any field. 
-                  If <m>G</m> is a finite subgroup of <m>\operatorname{Aut}(L)</m>, then <m>L^{G}</m> is a subfield of <m>L</m>, the extension <m>L / L^{G}</m> is finite and Galois, and <m>\operatorname{Gal}\left(L / L^{G}\right)=G</m>.
-                </p>
-              </statement>
-            </theorem>
-            
-            <p>
-              Note that we really do mean equality here: both <m>G</m> and <m>\operatorname{Gal}\left(L / L^{G}\right)</m> are subgroups of <m>\operatorname{Aut}(L)</m>, and the theorem states that they coincide. 
-              The containment <m>G \subseteq \operatorname{Gal}\left(L / L^{G}\right)</m> is clear: if <m>\sigma \in G</m>, then by construction <m>\sigma</m> fixes every element of <m>L^{G}</m> and hence <m>\sigma \in \operatorname{Gal}\left(L / L^{G}\right)</m>. 
-              The point of the theorem is that the extension <m>L^{G} \subseteq L</m> is always Galois and that if <m>\sigma \in \operatorname{Aut}(L)</m> fixes every element of <m>L^{G}</m> then <m>\sigma</m> must belong to <m>G</m>.
-            </p>
-
-            <p>
-              We will not prove <xref text="title" ref="thm-artin"/> right away. 
-              Instead, we will first deduce some of its consequences, including the <xref text="title" ref="thm-ftgt"/>. 
-              We will then illustrate the Fundamental Theorem with many examples and give some consequences of it too. 
-              Only then will we circle back to prove <xref text="title" ref="thm-artin"/>.
-            </p>
-
-            <example>
-              <statement>
-                <p>
-                  The group <m>G=\left\{\mathrm{id}_{\mathbb{C}}, \sigma\right\}</m>, where <m>\sigma</m> is complex conjugation, is a finite subgroup of <m>\Aut(\mathbb{C})</m>. 
-                  <xref text="title" ref="thm-artin"/> tells us that <m>\mathbb{C}^{G} \subseteq \mathbb{C}</m> is finite and Galois with Galois group <m>G</m>. 
-                  It follows that <m>\left[\mathbb{C}: \mathbb{C}^{G}\right]=|G|=2</m>. 
-                  We already knew all this, since <m>\mathbb{C}^{G}=\mathbb{R}</m>.
-                </p>
-              </statement>
-            </example>
-
-            <p>
-              As we head towards the <xref text="title" ref="thm-ftgt"/>, we start by stating a few helpful corollaries of <xref text="title" ref="thm-artin"/>. 
-              These will also allow us to show that finite Galois extensions are precisely the splitting fields of separable polynomials.
-            </p>
-
-            <corollary xml:id="cor-artin">
-              <statement>
-                <p>
-                  Let <m>L / F</m> be any Galois extension. 
-                  Then <m>F=L^{\mathrm{Gal}(L / F)}</m>.
-                </p>
-              </statement>
-
-              <proof>
-                <p>
-                  Note that <m>F \subseteq L^{\mathrm{Gal}(L / F)}</m> holds by definition, and so
-                  <me>
-                    [L: F]=\left[L: L^{\operatorname{Gal}(L / F)}\right]\left[L^{\operatorname{Gal}(L / F)}: F\right]
-                  </me>
-                  by the Degree Formula. 
-                  But Artin's Theorem gives
-                  <me>
-                    \left[L: L^{\operatorname{Gal}(L / F)}\right]=|\operatorname{Gal}(L / F)|
-                  </me>
-                  and we also know that <m>[L: F]=|\operatorname{Gal}(L / F)|</m>. 
-                  Therefore, <m>\left[L^{\mathrm{Gal}(L / F)}: F\right]=1</m> and thus <m>F=L^{\operatorname{Gal}(L / F)}</m>.
-                </p>
-              </proof>
-            </corollary>
-
-            <example>
-              <statement>
-                <p>
-                  We know from Example 6.14 that <m>L=\mathbb{Q}(\sqrt[4]{2}, i)</m> is Galois over <m>\mathbb{Q}</m> with Galois group <m>D_{8}</m>. 
-                  More precisely, this identification is given by writting
-                  <me>
-                    \alpha_{1}=\sqrt[4]{[2]}, \quad \alpha_{2}=i \sqrt[4]{2}, \quad \alpha_{3}=-\sqrt[4]{2}, \quad \alpha_{4}=-i \sqrt[4]{2}
-                  </me>
-                  and labelling the four corners of a square with <m>\alpha_{1}, \ldots, \alpha_{4}</m>, counter-clockwise. 
-                  Consider
-                  <me>
-                    \beta:=\alpha_{1}+\cdots \alpha_{4}
-                  </me>
-                  and <m>\gamma=\alpha_{1} \cdots \alpha_{4}</m>. 
-                  Then each of <m>\beta</m> and <m>\gamma</m> are fixed by every Galois automorphism and hence by Corollary <m>6.24 \beta</m> and <m>\gamma</m> must be rational. 
-                  In fact, one can easily see that <m>\beta=0</m> and <m>\gamma=2</m>, but notice that the exact same reasoning would apply in general to the sum of roots and the product of roots in the splitting field of any separable polynomial. 
-                </p>
-              </statement>
-            </example>
-
-            <corollary xml:id="cor-artin-2">
-              <statement>
-                <p>
-                  Let <m>F \subseteq L</m> be a Galois extension. 
-                  For every <m>\alpha \in L, m_{\alpha, F}</m> is separable and all of its roots belong to <m>L</m>. 
-                  Moreover, <m>\operatorname{Gal}(L / F)</m> acts transitively on the set of roots of <m>m_{\alpha, F}</m>.
-                </p>
-              </statement>
-            </corollary>
-
+          <subsection xml:id="subsec-proving-galois"><title>The Fundamental Theorem: Proof and Artin's Theorem</title>
+                        
+              <p>
+                The following is an important theorem with many corollaries. In fact, the Fundamental Theorem of Galois Theory, which we will state shortly, will follow from this result.
+              </p>
+  
+              <theorem xml:id="thm-artin"><title>Artin's Theorem</title>
+                <idx><h>Artin's theorem</h></idx>
+                <statement>
+                  <p>
+                    Let <m>L</m> be any field. 
+                    If <m>G</m> is a finite subgroup of <m>\operatorname{Aut}(L)</m>, then <m>L^{G}</m> is a subfield of <m>L</m>, the extension <m>L / L^{G}</m> is finite and Galois, and <m>\operatorname{Gal}\left(L / L^{G}\right)=G</m>.
+                  </p>
+                </statement>
+              </theorem>
+              
+              <p>
+                Note that we really do mean equality here: both <m>G</m> and <m>\operatorname{Gal}\left(L / L^{G}\right)</m> are subgroups of <m>\operatorname{Aut}(L)</m>, and the theorem states that they coincide. 
+                The containment <m>G \subseteq \operatorname{Gal}\left(L / L^{G}\right)</m> is clear: if <m>\sigma \in G</m>, then by construction <m>\sigma</m> fixes every element of <m>L^{G}</m> and hence <m>\sigma \in \operatorname{Gal}\left(L / L^{G}\right)</m>. 
+                The point of the theorem is that the extension <m>L^{G} \subseteq L</m> is always Galois and that if <m>\sigma \in \operatorname{Aut}(L)</m> fixes every element of <m>L^{G}</m> then <m>\sigma</m> must belong to <m>G</m>.
+              </p>
+  
+              <p>
+                We will not prove <xref text="title" ref="thm-artin"/> right away. 
+                Instead, we will first deduce some of its consequences, including the <xref text="title" ref="thm-ftgt"/>. 
+                We will then illustrate the Fundamental Theorem with many examples and give some consequences of it too. 
+                Only then will we circle back to prove <xref text="title" ref="thm-artin"/>.
+              </p>
+  
+              <example>
+                <statement>
+                  <p>
+                    The group <m>G=\left\{\mathrm{id}_{\mathbb{C}}, \sigma\right\}</m>, where <m>\sigma</m> is complex conjugation, is a finite subgroup of <m>\Aut(\mathbb{C})</m>. 
+                    <xref text="title" ref="thm-artin"/> tells us that <m>\mathbb{C}^{G} \subseteq \mathbb{C}</m> is finite and Galois with Galois group <m>G</m>. 
+                    It follows that <m>\left[\mathbb{C}: \mathbb{C}^{G}\right]=|G|=2</m>. 
+                    We already knew all this, since <m>\mathbb{C}^{G}=\mathbb{R}</m>.
+                  </p>
+                </statement>
+              </example>
+  
+              <p>
+                As we head towards the <xref text="title" ref="thm-ftgt"/>, we start by stating a few helpful corollaries of <xref text="title" ref="thm-artin"/>. 
+                These will also allow us to show that finite Galois extensions are precisely the splitting fields of separable polynomials.
+              </p>
+  
+              <corollary xml:id="cor-artin">
+                <statement>
+                  <p>
+                    Let <m>L / F</m> be any Galois extension. 
+                    Then <m>F=L^{\mathrm{Gal}(L / F)}</m>.
+                  </p>
+                </statement>
+  
+                <proof>
+                  <p>
+                    Note that <m>F \subseteq L^{\mathrm{Gal}(L / F)}</m> holds by definition, and so
+                    <me>
+                      [L: F]=\left[L: L^{\operatorname{Gal}(L / F)}\right]\left[L^{\operatorname{Gal}(L / F)}: F\right]
+                    </me>
+                    by the Degree Formula. 
+                    But Artin's Theorem gives
+                    <me>
+                      \left[L: L^{\operatorname{Gal}(L / F)}\right]=|\operatorname{Gal}(L / F)|
+                    </me>
+                    and we also know that <m>[L: F]=|\operatorname{Gal}(L / F)|</m>. 
+                    Therefore, <m>\left[L^{\mathrm{Gal}(L / F)}: F\right]=1</m> and thus <m>F=L^{\operatorname{Gal}(L / F)}</m>.
+                  </p>
+                </proof>
+              </corollary>
+  
+              <example>
+                <statement>
+                  <p>
+                    We know from Example 6.14 that <m>L=\mathbb{Q}(\sqrt[4]{2}, i)</m> is Galois over <m>\mathbb{Q}</m> with Galois group <m>D_{8}</m>. 
+                    More precisely, this identification is given by writting
+                    <me>
+                      \alpha_{1}=\sqrt[4]{[2]}, \quad \alpha_{2}=i \sqrt[4]{2}, \quad \alpha_{3}=-\sqrt[4]{2}, \quad \alpha_{4}=-i \sqrt[4]{2}
+                    </me>
+                    and labelling the four corners of a square with <m>\alpha_{1}, \ldots, \alpha_{4}</m>, counter-clockwise. 
+                    Consider
+                    <me>
+                      \beta:=\alpha_{1}+\cdots \alpha_{4}
+                    </me>
+                    and <m>\gamma=\alpha_{1} \cdots \alpha_{4}</m>. 
+                    Then each of <m>\beta</m> and <m>\gamma</m> are fixed by every Galois automorphism and hence by Corollary <m>6.24 \beta</m> and <m>\gamma</m> must be rational. 
+                    In fact, one can easily see that <m>\beta=0</m> and <m>\gamma=2</m>, but notice that the exact same reasoning would apply in general to the sum of roots and the product of roots in the splitting field of any separable polynomial. 
+                  </p>
+                </statement>
+              </example>
+  
+              <corollary xml:id="cor-artin-2">
+                <statement>
+                  <p>
+                    Let <m>F \subseteq L</m> be a Galois extension. 
+                    For every <m>\alpha \in L, m_{\alpha, F}</m> is separable and all of its roots belong to <m>L</m>. 
+                    Moreover, <m>\operatorname{Gal}(L / F)</m> acts transitively on the set of roots of <m>m_{\alpha, F}</m>.
+                  </p>
+                </statement>
+              </corollary>
+  
           </subsection>
-          
+
         </section>
-        
+
       </chapter>
 
     </part>
@@ -21405,6 +21709,17 @@
       <appendix xml:id="app-foundations"><title>Foundational Knowledge</title>
 
         <section xml:id="sec-sets-functions"><title>Sets, Functions, Constructions</title>
+
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  If you set a good example you need not worry about setting rules.
+                </q>
+              </p>
+              <attribution>Lee Iococca</attribution>
+            </blockquote>
+          </introduction>
 
           <subsection xml:id="subsec-sets"><title>Sets</title>
 
@@ -21531,8 +21846,8 @@
                   <me>
                     A \cap B = \{x | x\in  A \text{ and }x\in B\}
                   </me>. 
-                  <idx><h>union</h></idx>
-                  <idx><h>intersection</h></idx>
+                  <idx><h>union (of sets)</h></idx>
+                  <idx><h>intersection (of sets)</h></idx>
                   <idx><h><m>\cup</m></h></idx>
                   <idx><h><m>\cap</m></h></idx>
               </p>
@@ -21559,7 +21874,9 @@
                   <me>
                     \bigcup_{i\in I}A_i = \{x | x\in  A_i \text{ for some }i\in  I\} \text{ and } \bigcap_{i\in I}A_i = \{x | x\in  A_i \text{ for all } i\in  I\}
                   </me> 
-                  to denote the <em>union</em> and <em>intersection</em> of the sets in <m>\cA</m>, respectively. 
+                  to denote the <em>union</em> and <em>intersection</em> of the sets in <m>\cA</m>, respectively.
+                  <idx><h>union (of a family of sets)</h></idx>
+                  <idx><h>intersection (of a familiy of sets)</h></idx>
                 </p>
               </statement>
             </definition>
@@ -21583,10 +21900,10 @@
             </theorem>
 
             <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
-              <idx><h>Cartesian product</h></idx>
+              <idx><h>Cartesian product (of sets)</h></idx>
               <statement>
                 <p>
-                  Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. 
+                  Let <m>A, B,</m> and <m>A_\alpha</m>  for all <m> \alpha  \in  J</m> be sets. 
                   The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
                 </p>
               </statement>
@@ -21607,8 +21924,8 @@
             <definition xml:id="def-function"><title>Function</title>
               <idx><h>function</h></idx>
               <idx><h>map</h></idx>
-              <idx><h>domain of a function</h></idx>
-              <idx><h>range of a function</h></idx>
+              <idx><h>domain (of a function)</h></idx>
+              <idx><h>range (of a function)</h></idx>
               <statement>
                 <p>
                 Let <m>A</m> and <m>B</m> be sets. 
@@ -21661,14 +21978,14 @@
                 <li><title>Restriction</title>
                   <p>
                     If <m>f : A \to B</m> is a function, the <term>restriction</term> of <m>f</m> to <m>S</m>, denoted <m>f|_S</m>, is the function <m>f|_S : S \to B</m> defined by <m>f|_S(x) = f (x)</m> for all <m>x\in  S</m>.
-                    <idx><h>restriction of a function</h></idx>
+                    <idx><h>restriction (of a function)</h></idx>
                   </p>
                 </li>
 
                 <li><title>Extension Map</title>
                   <p>
                     If <m>g : S \to B</m> is a function, an <term>extension</term> of <m>g</m> to <m>A</m> is any function <m>G : A \to B</m> such that <m>G|S = g</m>.
-                    <idx><h>extension of a function</h></idx>
+                    <idx><h>extension (of a function)</h></idx>
                   </p>
                 </li>
 
@@ -21707,7 +22024,7 @@
                   <ol>
                     <li>
                       <p>
-                        The function <m>f</m> is <em>one-to-one</em> (also called an <em>injection</em> and denoted <m>f: X \hookrightarrow  Y</m>) if whenever <m>x,x' \in  X</m> and <m>f(x) = f(x')</m> then <m>x = x'</m>.  
+                        The function <m>f</m> is <em>injective</em> (also called an <em>one-to-one</em> and denoted <m>f: X \hookrightarrow  Y</m>) if whenever <m>x,x' \in  X</m> and <m>f(x) = f(x')</m> then <m>x = x'</m>.  
                         <idx><h>injective</h></idx>
                         <idx><h>one-to-one</h></idx>
                       </p>
@@ -21715,7 +22032,7 @@
 
                     <li>
                       <p>
-                        The function <m>f</m> is <em>onto</em> (also called a <em>surjection</em> and denoted <m>f: X ↠ Y</m>) if for every <m>y</m> in <m>Y</m>, there is an <m>x</m> in <m>X</m> with <m>f(x) = y</m>.
+                        The function <m>f</m> is <em>surjective</em> (also called a <em>onto</em> and denoted <m>f: X \onto Y</m>) if for every <m>y</m> in <m>Y</m>, there is an <m>x</m> in <m>X</m> with <m>f(x) = y</m>.
                         <idx><h>surjective</h></idx>
                         <idx><h>onto</h></idx>
                       </p>
@@ -21738,12 +22055,6 @@
                 </p>
               </statement>
             </definition>
-
-            <exercise xml:id="surjective-iff-image"><title>Surjective iff Image is Codomain</title>
-              <p>
-                A function <m>f:A\to B</m> is surjective if and only if <m>f(A)=B</m>.
-              </p>
-            </exercise>
 
             <definition xml:id="def-composition"><title>Composition</title>
               <idx><h>composition of functions</h></idx>
@@ -21828,8 +22139,14 @@
               </statement>
             </definition>
 
-            <theorem xml:id="thm-pan"><title>PAN</title>
-              <idx><h>PAN</h></idx>
+            <exercise xml:id="surjective-iff-image"><title>Surjective iff Image is Codomain</title>
+              <p>
+                A function <m>f:A\to B</m> is surjective if and only if <m>f(A)=B</m>.
+              </p>
+            </exercise>
+
+            <theorem xml:id="thm-pan"><title>Preimages are Nice (PAN)</title>
+              <idx><h>preimages are nice theorem (PAN)</h></idx>
               <statement>
                 <p>
                   If <m>f: X \to  Y, E \subseteq  E' \subseteq  Y</m>, and <m>E_\alpha  \subseteq  Y</m> for all <m>\alpha</m>, then 
@@ -21862,8 +22179,8 @@
               </statement>
             </theorem>
 
-            <theorem xml:id="thm-iasn"><title>IASN</title>
-              <idx><h>IASN</h></idx>
+            <theorem xml:id="thm-iasn"><title>Images are Sometimes Nice (IASN)</title>
+              <idx><h>images are sometimes nice theorem (IASN)</h></idx>
               <statement>
                 <p>
                   If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C_\alpha \subseteq  X</m> for all <m>\alpha</m>, then 
@@ -21930,43 +22247,34 @@
               </statement>
             </proposition>
 
-             <definition xml:id="def-projection-map"><title>Projection Map</title>
-                <statement>
-                  <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. 
-                    The <em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
-                  </p>
-                </statement>
-              </definition>
+            <definition xml:id="def-product-inclusion"><title>Product Inclusion Map</title>
+              <idx><h>product inclusion map</h></idx>
+              <statement>
+                <p>
+                  Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em> map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
+                </p>
+              </statement>
+            </definition>
 
-              <definition xml:id="def-product-inclusion"><title>Product Inclusion Map</title>
-                <idx><h>product inclusion map</h></idx>
-                <statement>
-                  <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em> map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
-                  </p>
-                </statement>
-              </definition>
+            <theorem xml:id="thm-proj-sur-incl-inj"><title>Properties of Projections and Product Inclusions</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Projection maps are surjections. 
+                      </p>
+                    </li>
 
-              <theorem xml:id="thm-proj-sur-incl-inj"><title>Properties of Projections and Product Inclusions</title>
-                <statement>
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          Projection maps are surjections. 
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          Product inclusion maps are injections.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-              </theorem>
+                    <li>
+                      <p>
+                        Product inclusion maps are injections.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
           
           </subsection>
 
@@ -21983,21 +22291,21 @@
                       <li><title>Reflexivity</title>
                         <p>
                           <m>a \sim  a</m>, 
-                          <idx><h>reflexive relation</h></idx>
+                          <idx><h>reflexive (as a relation)</h></idx>
                         </p>
                       </li>
 
                       <li><title>Symmetry</title>
                         <p>
                           <m>a \sim  b</m> implies <m>b \sim  a</m>, and 
-                          <idx><h>symmetric relation</h></idx>
+                          <idx><h>symmetric (as a relation)</h></idx>
                         </p>
                       </li>
 
                       <li><title>Transitivity</title>
                         <p>
                           <m>a \sim  b</m> and <m>b \sim  c</m> implies <m>a \sim  c</m>.  
-                          <idx><h>transitive relation</h></idx>
+                          <idx><h>transitive (as a relation)</h></idx>
                         </p>
                       </li>
                     </ol>
@@ -22014,7 +22322,7 @@
 
                   <p>
                     The function <m>q:X \to  X/\sim</m> defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the <em>quotient map</em>.
-                    <idx><h>quotient map</h></idx>
+                    <idx><h>quotient map (of equivalence relation)</h></idx>
                   </p>
                   
                 </statement>
@@ -22072,6 +22380,17 @@
 
         <section xml:id="sec-numbers-and-cardinality"><title>Numbers, Counting, Cardinality</title>
 
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  There is strength in numbers.
+                </q>
+              </p>
+              <attribution>Iman Abdulmajid</attribution>
+            </blockquote>
+          </introduction>
+
           <subsection xml:id="subsec-number-systems"><title>Number Theory</title>
 
             <definition xml:id="def-divides"><title>Divisibility</title>
@@ -22105,7 +22424,7 @@
             </definition>
 
             <theorem xml:id="thm-division-algorithm"><title>Division Algorithm</title>
-              <idx><h>division algorithm (integers)</h></idx>
+              <idx><h>division algorithm (for integers)</h></idx>
               <statement>
                 <p>
                   Let <m>a</m> and <m>b</m> be integers with <m>b&gt;0</m>. 
@@ -22278,23 +22597,150 @@
 
         <section xml:id="sec-poset-lattice"><title>Posets, Lattices, Chains (*)</title>
 
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  A chain is no stronger than its weakest link.
+                </q>
+              </p>
+              <attribution>William James</attribution>
+            </blockquote>
+          </introduction>
+
           <subsection xml:id="subsec-ordered-sets"><title>Orderings and Ordered Sets</title>
-            <p>Coming soon!</p>
+            <p>
+              Coming soon!
+            </p>
           </subsection>
           
         </section>
 
       </appendix>
    
-      <appendix xml:id="app-computation"><title>Computational Tools</title>
+      <appendix xml:id="app-computation"><title>Computational Tools: Sage</title>
+        
+        <introduction>
+          <p>
+            Introduction to Sage
+          </p>
 
-        <section xml:id="sec-sage"><title>Sage</title>
+          <sage>
+            <input>
+              
+            </input>
+          </sage>
+        </introduction>
 
-          <p></p>
+        <section xml:id="sec-sage-group"><title>Sage and Groups</title>
 
-        </section>
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  A sage is the instructor of a hundred ages.
+                </q>
+              </p>
+              <attribution>Ralph Waldo Emerson</attribution>
+            </blockquote>
+          </introduction>
+
+          <subsection xml:id="subsubsec-sage-group"><title>Sage and Groups</title>
+
+              <p>
+                A brief and non-exhaustive list of groups:
+                <ul>
+                  <li>
+                    <title>Abelian Groups</title>
+                    <p>
+                      The command
+                    </p>
+                    <pre>AbelianGroup([n])</pre>
+                    <p>
+                      generates an abelian group of order <m>n</m> (using <m>n=0</m> yields <m>\Z</m>)
+                    </p>
+                    <pre>
+                      G = AbelianGroup([n])
+                    </pre>
+                  </li>
+                  <li>
+                    <pre>
+                      G = SymmetricGroup(n)
+                    </pre>
+                    <p>
+                      and
+                    </p>
+                    <pre>
+                      G = AlternatingGroup(n)
+                    </pre>
+                  </li>
+
+                  <li>
+                    <pre>
+                      G = DihedralGroup(n)
+                    </pre>
+                  </li>
+
+                  <li>
+                    <pre>
+                      G = CyclicPermutationGroup(n)
+                    </pre>
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                Here we have a list
+                <ul>
+                  <li>
+                    <p>
+                      .is_abelian(), .is_finite(), .is_multiplicative(), .is_trivial(), .order()
+                    </p>
+                  </li>
+                </ul>
+              </p>
+
+              <sage>
+                <input>
+                  G = SymmetricGroup(8)  # Define the symmetric group S8
+                  a = G("(1,2,3)")
+                  b = G("(1,4,7)")
+                  G.order()
+                </input>
+              </sage>
+              
+          </subsection>
+
+          <subsection xml:id="subsec-sage-presentation"><title>Sage and Finitely Presented Groups</title>
+
+            <p>
+              Recall that all groups can be constructed as quotients of free groups.
+            </p>
+
+            <sage>
+              <input>
+                
+              </input>
+            </sage>
+            
+          </subsection>
+
+        
+          </section>
+
 
         <section xml:id="sec-gap"><title>GAP</title>
+
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  The greatest gap in life is the one between knowing and doing.
+                </q>
+              </p>
+              <attribution>Richard Boggs</attribution>
+            </blockquote>
+          </introduction>
 
           <subsection xml:id="subsec-what-gap"><title>What is GAP?</title>
 
@@ -22355,6 +22801,17 @@
         </section>
 
         <section xml:id="sec-macaulay2"><title>Macaulay2</title>
+
+          <introduction>
+            <blockquote>
+              <p>
+                <q>
+                  I don't even get an allowance.
+                </q>
+              </p>
+              <attribution>Macaulay Culkin</attribution>
+            </blockquote>
+          </introduction>
 
           <subsection xml:id="subsec-what-mac2"><title>What is Macaulay2?</title>
 
@@ -23364,17 +23821,17 @@
               </solution>          
             </activity>
 
-            <activity><title>Problem 9 (*)</title>
+            <activity><title>Problem 9</title>
               <statement>
                 <p>
                   Let <m>F</m> be a field of characteristic <m>p&gt;0</m> and let <m>F\subseteq L</m> be an extension of fields, and assume there is an element <m>a\in L</m> such that <m>a^p\in F</m> but <m>a\not \in F</m>. 
-                  Prove <m>\#Aut(F(a)/F)&lt;[F(a):F]</m>.
+                  Prove <m>|\Aut(F(a)/F)|&lt;[F(a):F]</m>.
                 </p>
               </statement>
 
               <solution>
                 <p>
-                  Coming soon!
+                  See solution for Jan 2017 (6)
                 </p>
               </solution>
             </activity>
@@ -26725,7 +27182,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings, Modules, and Linear Algebra</title>
 
             <activity><title>Problem 4</title>
               <statement>
@@ -26926,7 +27383,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Fields and Galois Theory</title>
 
             <activity><title>Problem 7</title>
               <statement>
@@ -27175,7 +27632,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings, Modules, and Linear Algebra</title>
 
             <activity><title>Problem 4</title>
               <statement>
@@ -27342,7 +27799,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Fields and Galois Theory</title>
 
             <activity><title>Problem 7</title>
               <statement>
@@ -27627,7 +28084,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings, Modules, and Linear Algebra</title>
 
             <activity><title>Problem 4</title>
               <statement>
@@ -27757,7 +28214,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Fields and Galois Theory</title>
 
             <activity><title>Problem 7</title>
               <statement>
@@ -28034,7 +28491,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section II: Rings, Modules, and Linear Algebra</title>
 
             <activity><title>Problem 4</title>
               <statement>
@@ -28158,7 +28615,7 @@
 
           </subsection>
 
-          <subsection><title>Section </title>
+          <subsection><title>Section III: Fields and Galois Theory</title>
 
             <activity><title>Problem 7</title>
               <statement>
@@ -32483,7 +32940,9 @@
       </index>
 
       <colophon>
-        <p>This book was authored in <pretext />.</p>
+        <p>
+          This book was authored in <pretext />.
+        </p>
       </colophon>
 
     </backmatter>
