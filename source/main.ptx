@@ -2536,7 +2536,7 @@
                     </li>
                     <li>
                       <p>
-                        First we note that <m>\{-1,1\}</m> is indeed a group, as <m>\{-1,1\}=\Z^\times</m>, as seen in <xref ref="ex-group-of-units"/>.
+                        We begin by noting that <m>\{-1,1\}</m> is indeed a group, as <m>\{-1,1\}=\Z^\times</m>, as seen in <xref ref="ex-group-of-units"/>.
                         Let <m>\sigma,\tau\in S_n</m>. 
                         We proceed via cases. 
                       </p>
@@ -2710,14 +2710,14 @@
                     <li>
                       <p>
                         A group homomorphism <m>\varphi: G \to H</m> is injective if and only if <m>\operatorname{ker}(\varphi) = \{e_G\}</m>.
-                        <fn>Such a homomotphism is called a <em>monomorphism</em></fn>
+                        <fn>Such homomorphisms are called <em>monomorphisms</em></fn>
                       </p>
                     </li>
       
                     <li>
                       <p>
                         A group homomorphism <m>\varphi: G \to H</m> is surjective if and only if <m>\operatorname{im}(\varphi) = H</m>.
-                        <fn>Such a homomotphism is called a <em>epimorphism</em></fn>
+                        <fn>Such homomorphisms are called <em>epimorphisms</em></fn>
                       </p>
                     </li>
                   </ol>
@@ -2742,7 +2742,7 @@
                       </p>
                       <p>
                         <m>(\Leftarrow)</m>
-                        Suppose <m>\operatorname{im}(\varphi) = H</m>.
+                        Suppose <m>\operatorname{ker}(\varphi) = \{e_G\}</m>.
                         Suppose further there exist <m>x,y\in G</m> such that <m>\varphi(x) = \varphi(y)</m>.
                       </p>
                       <p>
@@ -2754,7 +2754,9 @@
                           <mrow>                 &amp;= \varphi(x)^{-1}\varphi(x) &amp;&amp; \varphi(x) = \varphi(y)</mrow>
                           <mrow>                 &amp;= e_H</mrow>
                         </md>
-                        Thus <m>x\inv</m> is the inverse of <m>y</m>, making <m>x=y</m> as <xref ref="list-unique-group-inverse" text="custom"> <m>e</m> inverses are unique</xref>.
+                        Thus <m>x^{-1}y\in\ker(\varphi)=\{e_G}</m>, meaning <m>x^{-1}y=e_G</m>.
+                        Therefore, <m>x\inv</m> is the inverse of <m>y</m>, making <m>x=y</m> as <xref ref="list-unique-group-inverse" text="custom"> <m>e</m> inverses are unique</xref>.
+                        Hence, <m>\varphi</m> is injective.
                       </p>
                     </li>
                     <li>
@@ -3089,7 +3091,7 @@
                   <ol>
                     <li>
                       <p>
-                        The identity map from <m>G\to G</m> is an <xref ref="grp-identity-iso" text="custom"> isomorphism</xref>
+                        The identity map from <m>G\to G</m> is an <xref ref="grp-identity-iso" text="custom"> isomorphism</xref>, making <m>G</m> isomorphic to <m>G</m>.
                       </p>
                     </li>
 
@@ -3175,15 +3177,16 @@
 
               <proof>
                 <p>
+                  First, I show that operation is associative.
                   Let <m>\varphi, \phi, \psi\in\Aut(G)</m>. 
-                  As function composition is associative, we see <m>(\varphi\circ\phi)\circ\psi = \varphi\circ(\phi\circ\psi)</m>.
+                  As <xref ref="thm-composition-associative" text="custom"> function composition is associative</xref>, we see <m>(\varphi\circ\phi)\circ\psi = \varphi\circ(\phi\circ\psi)</m>.
                 </p>
 
                 <p>
-                  Recall from <xref ref="ex-identity-automorphism"/> that <m>\id:G\to G</m> is an automorphism.
                   I claim <m>\id</m> is the identity element of <m>\Aut(G)</m>.
+                  Recall from <xref ref="ex-identity-automorphism"/> that <m>\id:G\to G</m> is indeed an automorphism.
                   Let <m>\varphi\in\Aut(G)</m>. 
-                  We will show <m>\varphi\circ \id=\varphi=\id\circ \varphi</m>. 
+                  <idx><h></h></idx> will show <m>\varphi\circ \id=\varphi=\id\circ \varphi</m>. 
                   As all functions share the same domain and co-domain, we need only show that the functions map elements equally, 
                   Let <m>x \in G</m>, and observe:
                   <md>
@@ -3196,9 +3199,10 @@
                 </p>
 
                 <p>
+                  Finally, I show that every automorphism has an inverse, 
                   Let <m>\varphi\in\Aut(G)</m>.
                   As <m>\varphi</m> is an isomorphism, there exists a homomorphism <m>\phi: G \to G</m> such that <m>\varphi \circ \phi = \operatorname{id}</m> and <m>\phi \circ \varphi = \operatorname{id}</m>.
-                  Thus <m>\phi\in\Aut(G)</m>, making it the inverse of <m>\varphi</m>.
+                  Thus <m>\phi</m> is, itself, an automorphism of <m>G</m>, and so <m>\phi\in\Aut(G)</m>, making <m>\phi</m> the inverse of <m>\varphi</m>.
                 </p>
               </proof>
             </proposition>
@@ -3429,17 +3433,41 @@
                       <p>
                         Assume <m>H</m> is non-empty and for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>. 
                       </p>
+
                       <p>
-                        Since <m>H</m> is non-empty, there is an <m>h \in H</m>. 
-                        Thus <m>hh\inv\in H</m>, and as <m>e_G\in H</m>.
-                        As <m>H\sse G</m>, we see <m>e_Gx=x=xe_G</m> for any <m>x\in H</m>, making <m>e_G</m> the identity element for <m>H</m>. 
+                        First, we show associativity. 
+                        Let <m>x,y,z\in H</m> (not necessarily distinct, as <m>H</m> might not have three distinct elements).
+                        As <m>H\leq G</m> we have <m>x,y,z\in G</m>.
+                        As <m>G</m> is a group is satisfies the associative property, and thus <m>(xy)z=x(yz)</m>.
+                        Hence <m>H</m> satisfies the associative property as well.
                       </p>
+
                       <p>
-                        For any <m>h \in H</m>, <m>h^{-1} = eh^{-1} \in H</m>, and so every element of <m>H</m> has an inverse inside <m>H</m>.
+                        I claim that <m>e_G\in H</m>, and further that <m>e_G</m> is the identity element of <m>H</m>.
+                        Since <m>H</m> is non-empty, there exists some <m>h \in H</m>. 
+                        As <m>xy^{-1} \in H</m> for all <m>x,y \in H</m>, setting both <m>x</m> and <m>y=h</m> we see <m>hh\inv\in H</m>
+                        Thus <m>e_G\in H</m>.
+                        As <m>H\sse G</m>, we see 
+                        <me>
+                          e_Gx=x=xe_G
+                        </me> 
+                        for any <m>x\in H</m>, making <m>e_G</m> the identity element of <m>H</m>. 
+                      </p>
+
+                      <p>
+                        Now I show each element of <m>H</m> has an inverse in <m>H</m>.
+                        Let <m>h\in H</m>. 
+                        By setting <m>x=e_G</m> and <m>y=h</m>, we see <m>e_Gh\inv\in H</m>.
+                        As <m>e_G</m> is the identity element of <m>H</m>, we see <m>e_Gh\inv = h\inv</m>, and thus <m>h\inv\in H</m>.
+                        Hence every element of <m>H</m> has an inverse contained in <m>H</m>.
                       </p> 
+
                       <p>
-                        For <m>x,y  \in H</m> we have <m>y^{-1} \in H</m> and thus <m>xy = x(y^{-1})^{-1} \in H</m> and hence <m>H</m> is closed under <m>\cdot</m>. 
-                        This means that the restriction of the group operation of <m>G</m> to <m>H</m> is a well-defined group operation. 
+                        Finally, we must show that the restriction of the group operation of <m>G</m> to <m>H</m> is a well-defined group operation. 
+                        In other words, given <m>x,y\in H</m>, it must be the case that <m>xy\in H</m>.
+                        Given <m>x,y \in H</m>, from the previous paragraph we know <m>y^{-1} \in H</m>. 
+                        Thus <m>xy = x(y^{-1})^{-1} \in H</m>, which is what we wanted.
+                        This means 
                         This operation is associative by the axioms for the group <m>G</m>. 
                         The axioms of a group have now been established for <m>(H, \cdot)</m>.
                       </p>
@@ -3456,6 +3484,13 @@
                 </p>
               </proof>
             </theorem>
+
+            <remark>
+              <p>
+                Note that in our proof of <xref ref="thm-subgroup-test"/> we actually proved something stronger along the way. 
+                As we showed <m>e_G</m> is the (unique) identity element of any subgroup <m>H</m>, it is impossible to have a subgroup with a different identity element than its parent group.
+              </p>
+            </remark>
       
             <example xml:id="ex-common-subgroups"><title>Common Subgroups</title>
               <p>
@@ -3522,29 +3557,8 @@
 
             <p>
               Whilst perusing <xref ref="ex-common-subgroups"/>, you may have noticed the following:
-              <fn>If you didn't, don't worry. I won't tell anyeone ;)</fn>
+              <fn>If you didn't, don't worry. I won't tell anyeone.</fn>
             </p>
-
-            <definition xml:id="def-special-linear-group"><title>Special Linear Group</title>
-              <statement>
-                <p>
-                  The <em>special linear group</em> with complex entries is defined
-                  <me>
-                    \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}.
-                  </me>
-                  <idx><h>special linear group</h></idx>
-                  <idx><h><m>\SL</m></h></idx>    
-                </p>
-              </statement>
-            </definition>
-      
-            <proposition xml:id="prop-slg-subgroup"><title><m>\SL_n(\C)\leq\GL_n(\C)</m></title>
-              <statement>
-                <p>
-                  The special linear group <m>\SL_n(\C)</m> is a subgroup of the general linear group <m>\GL_n(\C)</m>.
-                </p>
-              </statement>
-            </proposition>
 
             <investigation xml:id="exe-torsion-subgroup"><title>Torsion Subgroups</title>    
               <statement>
@@ -3567,95 +3581,6 @@
                 </p>
               </statement>  
             </investigation>
-
-          </subsection>
-
-          <subsection xml:id="subsec-subgroup-lattice"><title>The Subgroup Lattice</title>
-      
-            <theorem xml:id="thm-subgroup-properties"><title>Properties of Subgroups</title>
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <title>Transitivity of Subgroups</title>
-                      <p>
-                        If <m>H\leq G</m> and <m>K\leq H</m>, then <m>K\leq G</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <title>Intersections of Subgroups</title>
-                      <p>
-                        If <m>H_\alpha</m> is a subgroup of <m>G</m> for all <m>\alpha</m> in an index set <m>J</m>, then <m>H=\bigcap_{\alpha\in J} H_\alpha</m> is a subgroup of <m>G</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <title>Unions of Subgroups</title>
-                      <p>
-                        Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups.
-                        The set <m>H\cup H'</m> is a subgroup of <m>G</m> if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-
-              <proof>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Coming soon!
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Let <m>I</m> denote any indexing set and for each <m>i \in I</m>, let <m>H_i</m> be a subgroup of <m>G</m>. 
-                        I claim 
-                        <me>H := \bigcap_{i \in I} H_i</me>
-                        is a subgroup. 
-                      </p>
-                      <p>
-                        First, notice <m>H</m> is nonempty, as <m>e_G \in H_i</m> for all <m>i</m>. 
-                        If <m>x,y \in G</m>, then for each <m>i</m>, <m>x,y \in H_i</m> and hence <m>xy^{-1} \in H_i</m>. 
-                        It follows that <m>xy^{-1} \in H</m>, making <m>H</m> a subgroup by the <xref ref="thm-one-step" text="title"/>.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Coming soon!
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </proof>
-            </theorem>
-
-            <exercise xml:id="exe-no-proper-unions"><title>No Proper Unions</title>
-              <statement>
-                <p>
-                  No finite group can be expressed as the union of two proper subgroups.
-                </p>
-              </statement>
-  
-              <hint>
-                <p>
-                  Part (3) of <xref ref="thm-subgroup-properties"/> may prove useful!
-                </p>
-              </hint>
-            </exercise>
-
-            <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>   
-              <statement>
-                <p>
-                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. 
-                  Prove that the relation is reflexive (it can be one sentence) but <em>not</em> symmetric, and thus not an equivalence relation.
-                </p>
-              </statement>
-            </exercise>
 
             <theorem xml:id="thm-properties-of-group-homoms"><title>Group Homomorphisms and Subgroups</title>    
               <statement>
@@ -3745,6 +3670,122 @@
               <statement>
                 <p>
                   If <m>H</m> is a subgroup of a group <m>G</m>, then the inclusion <m>H\into G</m> is a group homomorphism.
+                </p>
+              </statement>
+            </exercise>
+
+            <definition xml:id="def-special-linear-group"><title>Special Linear Group</title>
+              <statement>
+                <p>
+                  The <em>special linear group</em> with complex entries is defined
+                  <me>
+                    \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}.
+                  </me>
+                  <idx><h>special linear group</h></idx>
+                  <idx><h><m>\SL</m></h></idx>    
+                </p>
+              </statement>
+            </definition>
+      
+            <proposition xml:id="prop-slg-subgroup"><title><m>\SL_n(\C)\leq\GL_n(\C)</m></title>
+              <statement>
+                <p>
+                  The special linear group <m>\SL_n(\C)</m> is a subgroup of the general linear group <m>\GL_n(\C)</m>.
+                </p>
+              </statement>
+            </proposition>
+
+          </subsection>
+
+          <subsection xml:id="subsec-subgroup-lattice"><title>The Subgroup Lattice</title>
+      
+            <theorem xml:id="thm-subgroup-properties"><title>Properties of Subgroups</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li><title>Transitivity of Subgroups</title>
+                      <p>
+                        If <m>H\leq G</m> and <m>K\leq H</m>, then <m>K\leq G</m>.
+                      </p>
+                    </li>
+      
+                    <li><title>Intersections of Subgroups</title>
+                      <p>
+                        If <m>H_\alpha</m> is a subgroup of <m>G</m> for all <m>\alpha</m> in an index set <m>J</m>, then <m>H=\bigcap_{\alpha\in J} H_\alpha</m> is a subgroup of <m>G</m>.
+                      </p>
+                    </li>
+      
+                    <li><title>Unions of Subgroups</title>
+                      <p>
+                        Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups.
+                        The set <m>H\cup H'</m> is a subgroup of <m>G</m> if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Suppose <m>H\leq G</m> and <m>K\leq H</m> for groups <m>G,H</m>, and <m>K</m>.
+                        As <m>K\leq H</m> we know it is non-empty. 
+                        For any <m>x,y\in K</m> we know that <m>xy\inv\in K</m>, as <m>K\leq H</m>.
+                        As <m>K\sse G</m> as sets, <m>K\leq G</m> by the <xref ref="thm-one-step" text="title"/>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>J</m> denote any indexing set.
+                        For each <m>\a \in J</m>, let <m>H_\a</m> be a subgroup of <m>G</m>. 
+                        I claim 
+                        <me>
+                          H := \bigcap_{\a \in J} H_\a
+                        </me>
+                        is a subgroup of <m>G</m>. 
+                      </p>
+
+                      <p>
+                        First, notice <m>H</m> is nonempty, as <m>e_G \in H_j</m> for all <m>i</m>. 
+                        Let <m>x,y\in H</m>.
+                        Then for each <m>\a</m> we have <m>x,y \in H_\a</m>. 
+                        As <m>H_\a\leq G</m> for each <m>\a\in J</m>, we have <m>xy^{-1} \in H</m>. 
+                        Thus <m>H</m> a subgroup by the <xref ref="thm-one-step" text="title"/>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Coming soon!
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <exercise xml:id="exe-no-proper-unions"><title>No Proper Unions</title>
+              <statement>
+                <p>
+                  No finite group can be expressed as the union of two proper subgroups.
+                </p>
+              </statement>
+  
+              <hint>
+                <p>
+                  Part (3) of <xref ref="thm-subgroup-properties"/> may prove useful!
+                </p>
+              </hint>
+            </exercise>
+
+            <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>   
+              <statement>
+                <p>
+                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. 
+                  Prove that the relation is reflexive (it can be one sentence) but <em>not</em> symmetric, and thus not an equivalence relation.
                 </p>
               </statement>
             </exercise>
@@ -3964,13 +4005,18 @@
               <statement>
                 <p>
                   For a subset <m>S</m> of <m>G</m>, the elements of <m>\langle S \rangle</m> can be described as: 
-                  <me>\langle S \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}.</me>
+                  <me>
+                    \langle S \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}.
+                  </me>
                 </p>
               </statement>
       
               <proof>
                 <p>
-                  For notational simplicity, we let <m>X= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}</m>. 
+                  For notational simplicity, let 
+                  <me>
+                    X= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}
+                  </me>. 
                   I claim <m>X = \igen S</m>.
                 </p>
 
@@ -3981,28 +4027,33 @@
                         Let <m>z\in X</m>.
                         Thus <m>z = x_1^{j_1} \cdots x_m^{j_m}</m>, where <m>m \geq 0, j_1, \dots, j_m \in \mathbb{Z}</m> and <m>x_1, \dots, x_m \in S</m>.
                       </p>
+
                       <p>
                         Since <m>\langle S \rangle</m> is a subgroup of <m>G</m> containing <m>S</m>, we see <m>x_1, \dots, x_m\in \igen S</m>.
                         Additionally, given the group group structure of <m>\langle S \rangle</m> it is closed under products and inverses, and thus contains <m>x_1^{j_1} \cdots x_m^{j_m}</m>.
                         Hence <m>z\in \igen S</m> and <m>X\sse\igen S</m>
                       </p>
                     </li>
+
                     <li><title><m>(\igen S\sse X)</m></title>
                       <p>
                         I claim <m>X</m> is a subgroup of <m>G</m>.
                       </p>
+
                       <p>
                         First, notice <m>S \ne \emptyset</m>, since we allow <m>m = 0</m> and declare the empty product to be <m>e_G</m>.
                       </p>
+
                       <p>
                         Let <m>x = x_1^{j_1} \cdots x_m^{j_m}</m> and <m>y = y_1^{i_1} \cdots y_n^{i_m}</m> be arbitrary in <m>X</m>.
                         Thus <m>x_j, y_i\in S</m> for all <m>i,j</m>.
-                        Observe: 
+                        By <xref ref="thm-group-inverses"/> (2), we have: 
                         <md>
-                          <mrow> x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1} &amp;= x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1} &amp;&amp; <xref ref="thm-group-inverses"/> (2)</mrow>
+                          <mrow> x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1} &amp;= x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}</mrow>
                         </md>
                         As <m>x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}\in X</m> as well, we see <m>X\leq G</m> by the <xref ref="thm-one-step" text="custom"> one-step subgroup test</xref>.
                       </p>
+
                       <p>
                         Since <m>\igen S</m> is defined to be the intersection of all subgroups of <m>G</m> containing <m>S</m>, we have <m>\igen S\sse X</m>, completing the proof.
                       </p>
@@ -4195,7 +4246,7 @@
 
         <section xml:id="sec-cyclic"><title>Cyclic Groups</title>
 
-          <subsection xml:id="subsec-cyclic-groups"><title>Cyclic Groups</title>
+          <subsection xml:id="subsec-cyclic-groups"><title>Definition and First Properties</title>
 
             <blockquote>
               <p>
@@ -4232,24 +4283,20 @@
 
               <proof>
                 <p>
-                  By <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. 
-                  We show that
-                  <ul>
-                    <li>
-                      <p>
-                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. 
-                        Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
-                      </p>
-                    </li>
+                  By <xref ref="lem-gensubgp"/>, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. 
+                </p>
 
-                    <li>
-                      <p>
-                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). 
-                        Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. 
-                        Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
-                      </p>
-                    </li>
-                  </ul>
+                <p>
+                  First, we show <m>|G|\geq n</m>. 
+                  I claim each of the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct.
+                  Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                </p>
+
+                <p>
+                  Next, we show <m>|G|\leq n</m>.
+                  I claim <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). 
+                  Indeed, for any <m>m\in \mathbb{Z}</m> <xref ref="thm-division-algorithm" text="custom"> division</xref> by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. 
+                  Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
                 </p>
               </proof>
             </corollary>
@@ -4279,7 +4326,7 @@
 
                     <li>
                       <p>
-                        <m>(\Z/n,+)</m> is a cyclic group.
+                        <m>(\Z/n,\times)</m> is a cyclic group.
                       </p>
                     </li>
                   </ol>
@@ -4297,7 +4344,7 @@
 
                     <li>
                       <p>
-                        <m>(\Z/n,+)\igen{1}</m>, for example.
+                        <m>(\Z/n,\times)=\igen{k}</m>, such that <m>\gcd(n,k)=1</m>
                       </p>
                     </li>
                   </ol>
@@ -4326,7 +4373,7 @@
             </exercise>
 
             <p>
-              Generators are not unique.
+              Generators of cyclic groups are not necessarily unique.
             </p>
 
             <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators are not Unique</title> 
@@ -4361,6 +4408,20 @@
                   Every cyclic group is abelian.
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  Suppose <m>G</m> is a cylic group, and let <m>g,h\in G</m>. 
+                  As <m>G</m> is cyclic, <m>G=\igen{x}</m> for some <m>x\in G</m>.
+                  By <xref ref="cor-cyclic-subgroup"/>, <m>G=\{x^j|j\in\Z}</m>.
+                  Thus <m>g=x^m</m> and <m>h=x^n</m> for some <m>m,n\in\Z</m>.
+                  Observe:
+                  <me>
+                    gh = x^mx^n = x^{m+n} = x^nx^m = hg.
+                  </me>
+                  Hence <m>G</m> is abelian. 
+                </p>
+              </proof>
             </theorem>
 
             <example xml:id="ex-group-of-unity"><title>Roots of Unity</title>
@@ -4383,12 +4444,68 @@
               As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.
             </p>
 
+            <p>
+              Finally, we end with two results that will prove invaluable later in the course. 
+              Though we won't see them for some time, proving them now will be good practice and save us time later on.
+            </p>
+
+            <proposition xml:id="prop-aut-cn"><title><m>\Aut(C_n)</m></title>
+              <statement>
+                <p>
+                  The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\Z/n</m> via the map 
+                  <me>
+                    \varphi: (\mathbb{Z}/n^\times, \cdot) \to \operatorname{Aut}(C_n), \quad \varphi([j]_n)=[ y\mapsto y^j].
+                  </me> 
+                  where <m>\mathbb{Z}/n^\times=\{[j]_n\mid \operatorname{gcd}(j,n)=1\}</m>.
+                </p>
+              </statement>
+            </proposition>
+
+            <p>
+              In particular:
+            </p>
+  
+            <corollary xml:id="cor-aut-cp"><title><m>\Aut(C_p)</m></title>
+              <statement>
+                <p>
+                  If <m>p</m> is prime the automorphism group of <m>C_p</m> is cyclic, namely <m>\operatorname{Aut}(C_p)\cong C_{p-1}</m>.
+                </p>
+              </statement>
+            </corollary>
+
+          </subsection>
+
+          <subsection xml:id="subsec-cyclic-subgroups"><title>Subgroups of Cyclic Groups</title>
+
+            <lemma xml:id="lem-cyclic-sub-gen"><title>Generating Subgroups of Cyclic Groups</title>
+              <statement>
+                <p>
+                  Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. 
+                  For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, x^i\in H\}</m> gives that <m>H=\langle x^k \rangle</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Since <m>H\subseteq G=\langle x\rangle</m> any element of <m>H</m> is of the form <m>x^m</m> for some <m>m\in \mathbb{Z}</m>. 
+                  By the <xref text="title" ref="thm-division-algorithm"/> <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. 
+                  Since <m>x^m</m> and <m>x^k</m> are elements of <m>H</m>, <m>x^r=x^m(x^{k})^{-q}\in H</m>. 
+                  Since <m>r&lt;k</m> and <m>x^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. 
+                  Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle x^k \rangle</m>. 
+                  The opposite containment follows because <m>x^k\in H</m> and <m>\langle x^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>x^k</m>. 
+                  Thus <m>H=\langle x^k \rangle</m>.
+                </p>
+              </proof>
+            </lemma>
+
             <theorem xml:id="thm-cyclic-divisors-and-subgroups"><title>Subgroups of Cyclic Groups</title>
               <statement>
                 <p>
                   Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. 
                   Then there is a bijection 
-                  <me>\Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle</me> 
+                  <me>
+                    \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}\rangle
+                  </me> 
                   for each divisor <m>d</m> of <m>|G|</m>. 
                   Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. 
                   In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
@@ -4397,53 +4514,30 @@
 
               <proof>
                 <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
-                      </p>
+                  Let <m>\Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}\rangle</m> and  <m>\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}</m> be given by <m>\Phi(H)=|H|</m>.
+                  I claim that for any divisor <m>d</m> of <m>|G|</m>, we have <m>(\Psi\circ\Phi)(d)=d</m>.
+                </p>
               
-                      <p>
-                        Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. 
-                        By the <xref text="title" ref="thm-division-algorithm"/> <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. 
-                        Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. 
-                        Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. 
-                        Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. 
-                        The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. 
-                        Thus <m>H=\langle g^k \rangle</m>.
-                      </p>
-              
-                      <p>
-                        Let <m>\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}</m> be given by <m>\Phi(H)=|H|</m>.
-                      </p>
-              
-                      <p>
-                        <em>Claim 2:</em> For any divisor <m>d</m> of <m>|G|</m>, we have <m>(\Psi\circ\Phi)(d)=d</m>.
-                      </p>
-              
-                      <p>
-                        We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d</m>.
-                      </p>
-              
-                      <p>
-                        <em>Claim 3:</em> For any subgroup <m>H</m> of <m>G</m>, we have <m>(\Phi\circ\Psi)(H)=H</m>.
-                      </p>
-              
-                      <p>
-                        By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. 
-                        In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m>.
-                        It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. 
-                        By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. 
-                        Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. 
-                        On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. 
-                        Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
-                      </p>
-              
-                      <p>
-                        Claims 2 and 3 establish that <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, thus <m>\Phi</m> is a bijection.
-                      </p>
-                    </li>
-                  </ol>
+                <p>
+                  We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d</m>.
+                </p>
+
+                <p>
+                  For any subgroup <m>H</m> of <m>G</m>, we have <m>(\Phi\circ\Psi)(H)=H</m>.
+                </p>
+        
+                <p>
+                  By <xref ref="lem-cyclic-sub-gen"/> any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. 
+                  In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m>.
+                  It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. 
+                  By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. 
+                  Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. 
+                  On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. 
+                  Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
+                </p>
+        
+                <p>
+                  Thus <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, making <m>\Phi</m> a bijection.
                 </p>
               </proof>
             </theorem>
@@ -4474,36 +4568,7 @@
                 </p>
               </statement>
             </exercise>
-
-            <p>
-              Finally, we end with two results that will prove invaluable later in the course. 
-              Though we won't see them for some time, proving them now will be good practice and save us time later on.
-            </p>
-
-            <theorem xml:id="thm-aut-cn"><title><m>\Aut(C_n)</m></title>
-              <statement>
-                <p>
-                  The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\Z/n</m> via the map 
-                  <me>
-                    \varphi: (\mathbb{Z}/n^\times, \cdot) \to \operatorname{Aut}(C_n), \quad \varphi([j]_n)=[ y\mapsto y^j].
-                  </me> 
-                  where <m>\mathbb{Z}/n^\times=\{[j]_n\mid \operatorname{gcd}(j,n)=1\}</m>.
-                </p>
-              </statement>
-            </theorem>
-
-            <p>
-              In particular:
-            </p>
-  
-            <corollary xml:id="cor-aut-cp"><title><m>\Aut(C_p)</m></title>
-              <statement>
-                <p>
-                  If <m>p</m> is prime the automorphism group of <m>C_p</m> is cyclic, namely <m>\operatorname{Aut}(C_p)\cong C_{p-1}</m>.
-                </p>
-              </statement>
-            </corollary>
-
+            
           </subsection>
 
           <subsection xml:id="subsec-cyclic-uniqueness"><title>Uniqueness of Cyclic Groups</title>
@@ -4517,7 +4582,7 @@
               <attribution>Jetsunma Ahkon Lhamo</attribution>
             </blockquote>
       
-            <proposition xml:id="prop-ump-cyclic"><title>UMP for Cyclic Groups</title>  
+            <proposition xml:id="prop-ump-cyclic"><title>Universal Mapping Property for Cyclic Groups</title>  
               <statement>
                 <p>
                   Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. 
@@ -4589,7 +4654,7 @@
                 </p>
         
                 <p>
-                  The homomorphism property is immediate: <m>\varphi^(x^ix^j)=\varphi(x^{i+j})=y^{i+j}=y^iy^j=\varphi(x^i)\varphi(x^j)</m>.
+                  The homomorphism property is immediate: <m>\varphi(x^ix^j)=\varphi(x^{i+j})=y^{i+j}=y^iy^j=\varphi(x^i)\varphi(x^j)</m>.
                 </p>
               </proof>
             </proposition>
@@ -4613,7 +4678,7 @@
                 <p>
                   Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. 
                   Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. 
-                  So <m>g \circ f</m> is an endomorphism of <m>G</m> mapping <m>x</m> to <m>x</m>. 
+                  So <m>g \circ f</m> is an endomorphism (e.g. a homomorphism from a group to itself) of <m>G</m> mapping <m>x</m> to <m>x</m>. 
                   But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. 
                   Similarly, <m>f \circ g = \text{id}_H</m>.
                 </p>
@@ -4667,7 +4732,7 @@
               <li>
                 <p>
                   <m>\Aut(C_n)\cong\Z/n^\times</m>; in particular, <m>\Aut(C_p)\cong C_{p-1}</m>.
-                  <fn>See: <xref ref="thm-aut-cn"/> and <xref ref="cor-aut-cp"/>.</fn>
+                  <fn>See: <xref ref="prop-aut-cn"/> and <xref ref="cor-aut-cp"/>.</fn>
                 </p>
               </li>
             </ul>
@@ -4946,13 +5011,9 @@
               </statement>
             </theorem>
 
-            <corollary xml:id="cor-index-cor"><title>Equal Number of Left and Right Cosets</title>
-              <statement>
-                <p>
-                  The number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
-                </p>
-              </statement>
-            </corollary>
+          </subsection> 
+
+          <subsection xml:id="subsec-indices"><title>The Index of a Subgroup</title>
 
             <definition xml:id="def-index"><title>Index</title>
               <statement>
@@ -5080,8 +5141,8 @@
               Wouldn't want to spoil all the fun at once, right?
               <fn>To spoil all the fun at once, see: <xref ref="thm-order-p-cyclic"/>, part (1).</fn>
             </p>
-
-          </subsection> 
+            
+          </subsection>
 
           <outcomes>
             <ul>
@@ -5105,7 +5166,7 @@
               <li>
                 <p>
                   All cosets have the same cardinality, and there are an equal number of left and right cosets.
-                  <fn>See: <xref ref="cor-cosetpartition"/> and <xref ref="cor-index-cor"/>.</fn>
+                  <fn>See: <xref ref="cor-cosetpartition"/> and <xref ref="thm-lagrange"/>.</fn>
                   The number of cosets is called the <xref text="title" ref="def-index"/>.
                 </p>
               </li>
@@ -9472,7 +9533,7 @@
         
                 <p>
                   We now analyze the possibilities for <m>\rho</m>. 
-                  By <xref ref="thm-aut-cn" />, <m>\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)</m>. 
+                  By <xref ref="prop-aut-cn" />, <m>\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)</m>. 
                   There are two possibilities for the image of <m>\rho</m>: either <m>\operatorname{Im}(\rho)=\{\text{id}_H\}</m> or <m>\operatorname{Im}(\rho)=\operatorname{Aut}(H)</m>.
                 </p>
         
@@ -22070,6 +22131,17 @@
               </statement>
             </definition>
 
+            <theorem xml:id="thm-composition-associative">
+              <statement>
+                <p>
+                  Function composition is associative. That is, given functions <m>f:A\to B</m>, <m>g:B\to C</m>, and <m>h:C\to D</m>, the following holds:
+                  <me>
+                    h\circ (g\circ f) = (h\circ g)\circ f.
+                  </me>
+                </p>
+              </statement>
+            </theorem>
+
             <theorem xml:id="thm-compositions-and-jectivity"><title>Compositions and 'Jectivity</title>
               <statement>
                 <p>
@@ -23172,9 +23244,13 @@
 
                       <p>
                         Let <m>x,y\in N_G(H)</m>, <m>h\in H</m> and observe
-                         <me>
-                          \varphi(xy)(h) = \psi_{xy}(h) = xyh(xy)\inv = xyhy\inv x\inv = \psi_{x}(yhy\inv) = \psi_x\psi_y(h).
-                        </me> 
+                        <md>
+                          <mrow>\varphi(xy)(h) &amp;= \psi_{xy}(h)</mrow>
+                          <mrow>               &amp;= xyh(xy)\inv</mrow>
+                          <mrow>               &amp;= xyhy\inv x\inv</mrow>
+                          <mrow>               &amp;= \psi_{x}(yhy\inv)</mrow>
+                          <mrow>               &amp;= \psi_x\psi_y(h)</mrow>
+                        </md>
                         Thus <m>\varphi</m> is operation preserving and a group homomorphism.
                       </p>
 
@@ -23238,9 +23314,15 @@
                         Note: this means <m>y\not\in Z(G)</m> as well. 
                         As <m>G/Z(G)</m> is cyclic there exists some <m>g\in G</m> such that <m>xN=g^nN</m> and <m>yN=g^mN</m> for <m>n,m\in\N</m>. 
                         But then 
-                        <me>
-                          xNyN=g^nNg^mN=g^ng^mN=g^{n+m}N=g^{m+n}=g^mg^nN=g^mNg^nN=yNxN.
-                        </me>
+                        <md>
+                          <mrow>xNyN &amp;= g^nNg^mN</mrow>
+                          <mrow>     &amp;= g^ng^mN</mrow>
+                          <mrow>     &amp;= g^{n+m}N</mrow>
+                          <mrow>     &amp;= g^{m+n}</mrow>
+                          <mrow>     &amp;= g^mg^nN</mrow>
+                          <mrow>     &amp;= g^mNg^nN</mrow>
+                          <mrow>     &amp;= yNxN</mrow>
+                        </md>
                         As coset multiplication is defined as <m>xNyN=(xy)N</m>, this means that <m>xy=yx</m>, a contradiction. 
                         Thus <m>G</m> is abelian.
                       </p>
@@ -23327,14 +23409,32 @@
                   Define <m>f:\mathbb{Z}[x]\rightarrow \mathbb{Z}_2</m> as <m>f(p(x))=f(a_0+\cdots +a_nx^n)=[a_0]_2</m>. 
                   We will show this is an onto homomorphism with kernel equal to <m>(2,x)</m> and thus the two groups are isomorphic. 
                   And since <m>\mathbb{Z}_2</m> is a field, <m>\mathbb{Z}[x]/I</m> is as well. 
-                  <m>f(p(x)+q(x))=f(a_0+\cdots +a_nx^n+b_0+\cdots b_mx^m)=f((a_0+b_0)+\cdots +\cdots )=[a_0+b_0]_2=[a_0]_2+[b_0]_2=f(p(x))+f(q(x))</m>. 
+                  <md>
+                    <mrow>f(p(x)+q(x)) &amp;= f(a_0+\cdots +a_nx^n+b_0+\cdots b_mx^m)</mrow>
+                    <mrow>     &amp;= f((a_0+b_0)+\cdots +\cdots )</mrow>
+                    <mrow>     &amp;= [a_0+b_0]_2</mrow>
+                    <mrow>     &amp;= [a_0]_2+[b_0]_2</mrow>
+                    <mrow>     &amp;= f(p(x))+f(q(x))</mrow>
+                  </md>
                   So <m>f</m> preserves addition. 
-                  <m>f(p(x)q(x))=f((a_0+\cdots +a_nx^n)(b_0+\cdots +b_mx^m))=f(a_0b_0+\cdots )=[a_0b_0]_2=[a_0]_2[b_0]_2=f(p(x))f(q(x))</m> so <m>f</m> preserves multiplication. 
+                  <md>
+                    <mrow>f(p(x)q(x)) &amp;= f((a_0+\cdots +a_nx^n)(b_0+\cdots +b_mx^m))</mrow>
+                    <mrow>     &amp;= f(a_0b_0+\cdots )</mrow>
+                    <mrow>     &amp;= [a_0b_0]_2</mrow>
+                    <mrow>     &amp;= [a_0]_2[b_0]_2</mrow>
+                    <mrow>     &amp;= f(p(x))f(q(x))</mrow>
+                  </md>
+                  so <m>f</m> preserves multiplication. 
                   Then of course <m>f(0)=[0]_2</m>. 
                   So it maps identity to identity. 
                   Thus <m>f</m> is a homomorphism. 
                   This is clearly onto since <m>0\rightarrow [0]_2</m> and <m>1\rightarrow [1]_2</m>. 
-                  <m>ker(f)=\{p(x)|f(p(x))\equiv 0(mod2)\}=\{p(x)|\text{ constant term }\equiv 0(mod2)\}=\{p(x)|\text{ constant term is even}\}</m> which by the beginning note is exactly <m>(2,x)</m>. 
+                  <md>
+                    <mrow>\ker(f) &amp;= \{p(x)|f(p(x))\equiv 0(mod2)\}</mrow>
+                    <mrow>        &amp;= \{p(x)|\text{ constant term }\equiv 0(mod2)\}</mrow>
+                    <mrow>        &amp;= \{p(x)|\text{ constant term is even}\}</mrow>
+                  </md>
+                  which by the beginning note is exactly <m>(2,x)</m>. 
                   So the quotient is a field since <m>\mathbb{Z}_2</m> is a field, and thus <m>M</m> is maximal.
                 </p>
               </solution>
@@ -23353,6 +23453,9 @@
                 <p>
                   Let <m>I_1\subseteq I_2\subseteq \cdots \subseteq I_n\subseteq I_{n+1}\subseteq \cdots</m> be a chain of ideals in <m>R</m>. 
                   Let <m>I=\cup_{j\in \mathbb{N}}(I_j)</m>. 
+                </p>
+
+                <p>
                   We will show this is an ideal in <m>R</m>. 
                   Let <m>x,y\in I</m>. 
                   Then there exist <m>j,k\in \mathbb{N}</m> such that <m>x\in (I_j)</m> and <m>y\in (I_k)</m>. 
@@ -23534,12 +23637,12 @@
               <solution>
                 <p>
                   Let <m>G</m> act on left cosets of <m>G/H</m> by left multiplication. 
-                  This induces a homomorphism <m>f:G\rightarrow Perm(G/H)</m>. 
+                  This induces a homomorphism <m>f:G\rightarrow \Perm(G/H)</m>. 
                   Let <m>K</m> be <m>ker(f)</m>. 
                   Since <m>kH=H</m> for all <m>k\in K</m> we know that <m>K\subseteq H</m>. 
                   Let <m>[H:K]=n</m>. 
-                  By the <xref ref="thm-fit-group" text="title"/>, <m>G/K\cong P\leq Perm(G/H)</m> so <m>[G:K]|p!</m>. 
-                  We have <m>[G:K]=[G:H][H:K]=pn</m>, so <m>pn\divides p!\implies n\divides (p-1)!</m>. 
+                  By the <xref ref="thm-fit-group" text="title"/>, <m>G/K\cong P\leq \Perm(G/H)</m> so <m>[G:K]|p!</m>. 
+                  We have <m>[G:K]=[G:H][H:K]=pn</m>, so <m>pn| p!\implies n| (p-1)!</m>. 
                   All of <m>n</m>'s prime factors must be greater than or equal to <m>p</m> since <m>p</m> is the smallest prime that divides <m>|G|</m>. 
                   However since the only factors of <m>(p-1)!</m> are less than <m>p</m> it must be that <m>n=1</m>, so <m>[H:K]=1</m> and <m>K\subseteq H</m> together imply <m>H=K</m>. 
                   So <m>H</m> is the kernel of a homomorphism and thus <xref ref="thm-norm-iff-ker" text="custom"> is normal </xref> in <m>G</m>.

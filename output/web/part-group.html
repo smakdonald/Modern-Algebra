@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -495,7 +507,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators, Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gp-generators.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Generated Subgroups</span></a></div>
@@ -511,7 +523,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal Subgroups, Quotient Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
@@ -535,7 +547,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-presentations.html" class="internal"><span class="codenumber">4</span> <span class="title">Presentations and Free Groups</span></a></div>
+<div class="toc-title-box"><a href="ch-presentations.html" class="internal"><span class="codenumber">4</span> <span class="title">Presentations, Free Groups (*)</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-free-groups.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Free Groups</span></a></div></li>
 <li class="toc-item toc-section">
@@ -578,11 +590,11 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ch-sylow.html" class="internal"><span class="codenumber">6</span> <span class="title">Simple, Solvable, Sylow</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-p-groups.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sylow’s Theorem</span></a></div>
+<div class="toc-title-box"><a href="sec-sylow.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sylow’s Theorems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-p-groups.html#subsec-p-groups" class="internal"><span class="title">Groups of Prime Order</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-p-groups.html#subsec-sylow" class="internal"><span class="title">Sylow Subgroups</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-p-groups.html#subsec-sylows-theorem" class="internal"><span class="title">Sylows-Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sylow.html#subsec-p-groups" class="internal"><span class="title">Groups of Prime Order</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sylow.html#subsec-sylow" class="internal"><span class="title">Sylow Subgroups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sylow.html#subsec-sylows-theorem" class="internal"><span class="title">Sylows-Theorem</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -592,7 +604,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple-groups.html#subsec-simple-qual" class="internal"><span class="title">A Wealth of Problems on Simple Groups</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-solvable.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Solvable Groups</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-solvable.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Solvable Groups (*)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-solvable.html#subsec-composition-series" class="internal"><span class="title">Composition Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-solvable.html#subsec-solvable" class="internal"><span class="title">Solvable Groups</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -625,28 +643,28 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ch-rings.html" class="internal"><span class="codenumber">8</span> <span class="title">Intro to Rings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Rings and Subrings</span></a></div>
+<div class="toc-title-box"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Rings, Subrings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defn-ex.html#subsec-subrings" class="internal"><span class="title">Subrings</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-units.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Units, Zerodivisors, Domains</span></a></div>
+<div class="toc-title-box"><a href="sec-units.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Units, Zerodivisors, Integral Domains</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-units.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-units.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-poly.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Group Rings and Polynomial Rings</span></a></div>
+<div class="toc-title-box"><a href="sec-poly.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Group Rings, Polynomial Rings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-poly.html#subsec-group-ring" class="internal"><span class="title">What is a Group Ring?</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-poly.html#subsec-polynomial-rings" class="internal"><span class="title">What is a Polynomial Ring?</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Homomorphisms and Polynomial Rings</span></a></div>
+<div class="toc-title-box"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Homomorphisms, Polynomial Rings</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#sec-ring-hom" class="internal"><span class="title">Homomorphisms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sub-poly.html#subsec-polyrings" class="internal"><span class="title">Polynomial Rings</span></a></div></li>
@@ -665,7 +683,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Quotient Rings and the Isomorphism Theorems</span></a></div>
+<div class="toc-title-box"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Quotient Rings, the Ring Isomorphism Theorems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
@@ -696,7 +714,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-fof-poly-ufd.html" class="internal"><span class="codenumber">11</span> <span class="title">Fields of Fractions and Localization</span></a></div>
+<div class="toc-title-box"><a href="ch-fof-poly-ufd.html" class="internal"><span class="codenumber">11</span> <span class="title">Fields of Fractions, Localization</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Fields of Fractions</span></a></div></li></ul>
 </li>
 </ul>
@@ -860,11 +878,10 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-ftgt.html" class="internal"><span class="codenumber">17.2</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ftgt.html#subsec-ftgt" class="internal"><span class="title">The Fundamental Theorem: Statement and Uses</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-proving-galois.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Proving the Fundamental Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proving-galois.html#subsec-artin" class="internal"><span class="title">Artin’s Theorem</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ftgt.html#subsec-ftgt" class="internal"><span class="title">The Fundamental Theorem: Statement and Uses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ftgt.html#subsec-proving-galois" class="internal"><span class="title">The Fundamental Theorem: Proof and Artin’s Theorem</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -902,9 +919,15 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-computation.html" class="internal"><span class="codenumber">B</span> <span class="title">Computational Tools</span></a></div>
+<div class="toc-title-box"><a href="app-computation.html" class="internal"><span class="codenumber">B</span> <span class="title">Computational Tools: Sage</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sage.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sage-group.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Sage and Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sage-group.html#subsubsec-sage-group" class="internal"><span class="title">Sage and Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sage-group.html#subsec-sage-presentation" class="internal"><span class="title">Sage and Finitely Presented Groups</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gap.html" class="internal"><span class="codenumber">B.2</span> <span class="title">GAP</span></a></div>
 <ul class="structural toc-item-list">
@@ -993,32 +1016,32 @@ window.MathJax = {
 <div class="toc-title-box"><a href="appendix-quals-11.html" class="internal"><span class="codenumber">C.10</span> <span class="title">May 2019</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-11.html#appendix-quals-11-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="appendix-quals-12.html" class="internal"><span class="codenumber">C.11</span> <span class="title">January 2019</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-12.html#appendix-quals-12-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="appendix-quals-13.html" class="internal"><span class="codenumber">C.12</span> <span class="title">May 2018</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-13.html#appendix-quals-13-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="appendix-quals-14.html" class="internal"><span class="codenumber">C.13</span> <span class="title">May 2017</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-2" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-3" class="internal"><span class="title">Section</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-4" class="internal"><span class="title">Section</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-3" class="internal"><span class="title">Section II: Rings, Modules, and Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appendix-quals-14.html#appendix-quals-14-4" class="internal"><span class="title">Section III: Fields and Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -1113,9 +1136,9 @@ window.MathJax = {
 </h2>
 <nav class="summary-links"><ul>
 <li><a href="ch-intro-groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Intro to Groups</span></a></li>
-<li><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators and Cyclic Groups</span></a></li>
-<li><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></li>
-<li><a href="ch-presentations.html" class="internal"><span class="codenumber">4</span> <span class="title">Presentations and Free Groups</span></a></li>
+<li><a href="ch-cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Generators, Cyclic Groups</span></a></li>
+<li><a href="ch-normal-quotient.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal Subgroups, Quotient Groups</span></a></li>
+<li><a href="ch-presentations.html" class="internal"><span class="codenumber">4</span> <span class="title">Presentations, Free Groups (*)</span></a></li>
 <li><a href="ch-group-actions.html" class="internal"><span class="codenumber">5</span> <span class="title">Group Actions</span></a></li>
 <li><a href="ch-sylow.html" class="internal"><span class="codenumber">6</span> <span class="title">Simple, Solvable, Sylow</span></a></li>
 <li><a href="ch-group-products.html" class="internal"><span class="codenumber">7</span> <span class="title">Group Products</span></a></li>
