@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Colophon</title>
+<title>Sage and Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -123,7 +135,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="backmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\ann}{ann}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="app-computation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="app-computation.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-gap.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\ann}{ann}
 \DeclareMathOperator{\Ass}{Ass}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\can}{can}
@@ -906,10 +918,10 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-appendix">
+<li class="toc-item toc-appendix contains-active">
 <div class="toc-title-box"><a href="app-computation.html" class="internal"><span class="codenumber">B</span> <span class="title">Computational Tools: Sage</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec-sage-group.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Sage and Groups</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-sage-group.html#subsubsec-sage-group" class="internal"><span class="title">Sage and Groups</span></a></div></li>
@@ -1115,16 +1127,58 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon active"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="backmatter-6"><h2 class="heading hide-type">
-<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-sage-group"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">B.1</span><span class="space"> </span><span class="title">Sage and Groups</span>
 </h2>
-<div class="para" id="backmatter-6-1">This book was authored in PreTeXt.</div></section></div>
+<section class="introduction" id="sec-sage-group-2"><blockquote class="blockquote" id="sec-sage-group-2-1">
+<div class="para" id="sec-sage-group-2-1-1">“A sage is the instructor of a hundred ages.”</div> <cite class="attribution">―Ralph Waldo Emerson</cite>
+</blockquote></section><section class="subsection" id="subsubsec-sage-group"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Sage and Groups</span>
+</h3>
+<div class="para logical" id="subsubsec-sage-group-2">
+<div class="para">A brief and non-exhaustive list of groups:</div>
+<ul class="disc">
+<li id="subsubsec-sage-group-2-1-1">
+<span class="heading"><span class="title">Abelian Groups.</span></span><div class="para" id="subsubsec-sage-group-2-1-1-2">The command</div>
+<pre class="code-block tex2jax_ignore">AbelianGroup([n])
+</pre>
+<div class="para" id="subsubsec-sage-group-2-1-1-4">generates an abelian group of order <span class="process-math">\(n\)</span> (using <span class="process-math">\(n=0\)</span> yields <span class="process-math">\(\Z\)</span>)</div>
+<pre class="code-block tex2jax_ignore">G = AbelianGroup([n])
+</pre>
+</li>
+<li id="subsubsec-sage-group-2-1-2">
+<pre class="code-block tex2jax_ignore">G = SymmetricGroup(n)
+</pre>
+<div class="para" id="subsubsec-sage-group-2-1-2-2">and</div>
+<pre class="code-block tex2jax_ignore">G = AlternatingGroup(n)
+</pre>
+</li>
+<li id="subsubsec-sage-group-2-1-3"><pre class="code-block tex2jax_ignore">G = DihedralGroup(n)
+</pre></li>
+<li id="subsubsec-sage-group-2-1-4"><pre class="code-block tex2jax_ignore">G = CyclicPermutationGroup(n)
+</pre></li>
+</ul>
+</div>
+<div class="para logical" id="subsubsec-sage-group-3">
+<div class="para">Here we have a list</div>
+<ul class="disc"><li id="subsubsec-sage-group-3-1-1"><div class="para" id="subsubsec-sage-group-3-1-1-1">.is_abelian(), .is_finite(), .is_multiplicative(), .is_trivial(), .order()</div></li></ul>
+</div>
+<pre id="subsubsec-sage-group-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G = SymmetricGroup(8)  # Define the symmetric group S8
+a = G("(1,2,3)")
+b = G("(1,4,7)")
+G.order()
+</script></pre></section><section class="subsection" id="subsec-sage-presentation"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Sage and Finitely Presented Groups</span>
+</h3>
+<div class="para" id="subsec-sage-presentation-2">Recall that all groups can be constructed as quotients of free groups.</div>
+<pre id="subsec-sage-presentation-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></pre></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="backmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="app-computation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-gap.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
