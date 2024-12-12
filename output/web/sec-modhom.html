@@ -504,7 +504,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
@@ -515,7 +516,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-indices" class="internal"><span class="title">The Index of a Subgroup</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
@@ -1326,7 +1330,7 @@ r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) 
 <ol class="decimal">
 <li id="thm-module-isomorphism-thms-3-1-2-1">
 <span class="heading"><span class="title">UMP.</span></span><div class="para logical" id="thm-module-isomorphism-thms-3-1-2-1-2">
-<div class="para">From the <a href="sec-products-iso-thms.html#thm-ump-quotient" class="xref" data-knowl="./knowl/xref/thm-ump-quotient.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.42: UMP for Quotient Groups">UMP for Quotient Groups</a>, we already know that <span class="process-math">\(\ov{f}\)</span> is a well-defined homomorphism of groups under <span class="process-math">\(+\)</span> and that it is the unique one such that <span class="process-math">\(\ov{f} \circ \pi = f\text{.}\)</span> It remains only to show <span class="process-math">\(\ov{f}\)</span> preserves scaling:</div>
+<div class="para">From the <a href="sec-products-iso-thms.html#thm-ump-quotient" class="xref" data-knowl="./knowl/xref/thm-ump-quotient.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.41: UMP for Quotient Groups">UMP for Quotient Groups</a>, we already know that <span class="process-math">\(\ov{f}\)</span> is a well-defined homomorphism of groups under <span class="process-math">\(+\)</span> and that it is the unique one such that <span class="process-math">\(\ov{f} \circ \pi = f\text{.}\)</span> It remains only to show <span class="process-math">\(\ov{f}\)</span> preserves scaling:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-ump-quotient.html">
 \begin{equation*}
 \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
@@ -1337,7 +1341,7 @@ r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) 
 </li>
 <li id="thm-module-isomorphism-thms-3-1-2-2">
 <span class="heading"><span class="title">First Isomorphism Theorem.</span></span><div class="para logical" id="thm-module-isomorphism-thms-3-1-2-2-2">
-<div class="para">From <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> we already know that there is an isomorphism of abelian groups under <span class="process-math">\(+\text{,}\)</span>
+<div class="para">From <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.43: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> we already know that there is an isomorphism of abelian groups under <span class="process-math">\(+\text{,}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-fit-group.html">
 \begin{equation*}
@@ -1349,7 +1353,7 @@ r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) 
 </li>
 <li id="thm-module-isomorphism-thms-3-1-2-3">
 <span class="heading"><span class="title">Second Isomorphism Theorem.</span></span><div class="para logical" id="thm-module-isomorphism-thms-3-1-2-3-2">
-<div class="para">First, note from <a href="sec-defmod.html#thm-mod-closure" class="xref" data-knowl="./knowl/xref/thm-mod-closure.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 12.9: Closure Properties of Modules">Exercise 12.9</a> that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are indeed submodules. The <a href="sec-products-iso-thms.html#thm-sit-group" class="xref" data-knowl="./knowl/xref/thm-sit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.55: Second Isomorphism Theorem for Groups">Second Isomorphism Theorem for Groups</a> yields an isomorphism of abelian groups <span class="process-math">\(\varphi: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(\varphi(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(\varphi\)</span> preserves scaling:</div>
+<div class="para">First, note from <a href="sec-defmod.html#thm-mod-closure" class="xref" data-knowl="./knowl/xref/thm-mod-closure.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 12.9: Closure Properties of Modules">Exercise 12.9</a> that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are indeed submodules. The <a href="sec-products-iso-thms.html#thm-sit-group" class="xref" data-knowl="./knowl/xref/thm-sit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.54: Second Isomorphism Theorem for Groups">Second Isomorphism Theorem for Groups</a> yields an isomorphism of abelian groups <span class="process-math">\(\varphi: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(\varphi(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(\varphi\)</span> preserves scaling:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-mod-closure.html ./knowl/xref/thm-sit-group.html">
 \begin{equation*}
 \begin{aligned}\varphi(r(a+(A \cap B))) 

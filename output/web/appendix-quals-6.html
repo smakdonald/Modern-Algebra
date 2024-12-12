@@ -504,7 +504,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
@@ -515,7 +516,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-indices" class="internal"><span class="title">The Index of a Subgroup</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
@@ -1175,7 +1179,7 @@ window.MathJax = {
 </ol></div>
 <div class="solutions"><details id="appendix-quals-6-2-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="appendix-quals-6-2-4-3-1"><ol class="decimal">
 <li id="appendix-quals-6-2-4-3-1-1-1">
-<div class="para" id="appendix-quals-6-2-4-3-1-1-1-1">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> As <a href="sec-quotient-groups.html#prop-quotient-surj-hom" class="xref" data-knowl="./knowl/xref/prop-quotient-surj-hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.39: Quotient Map is Surjective Homomorphism">quotient maps are homomorphisms</a>, this direction is complete.</div>
+<div class="para" id="appendix-quals-6-2-4-3-1-1-1-1">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> As <a href="sec-quotient-groups.html#prop-quotient-surj-hom" class="xref" data-knowl="./knowl/xref/prop-quotient-surj-hom.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.38: Quotient Map is Surjective Homomorphism">quotient maps are homomorphisms</a>, this direction is complete.</div>
 <div class="para logical" id="appendix-quals-6-2-4-3-1-1-1-2">
 <div class="para">Next, suppose there exists a group <span class="process-math">\(H\)</span> and and a homomorphism <span class="process-math">\(\varphi : G\to H\)</span> such that <span class="process-math">\(K = \ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gKg\inv\text{.}\)</span> Observe</div>
 <div class="displaymath process-math">
