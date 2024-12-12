@@ -397,7 +397,7 @@
 
             <li>
               <p>
-                <url href="https://www.math.unl.edu/~aseceleanu2/" visual="">Alexandra Seceleanu</url>
+                <url href="https://aseceleanu.github.io/" visual="">Alexandra Seceleanu</url>
               </p>
             </li>
 
@@ -421,7 +421,7 @@
             <ul>
                 <li>
                   <p>
-                    <url href="https://aseceleanu.github.io/teaching/817-818Notes.pdf" visual="">Alexandra Seceleanu's Algebra Lecture Notes</url>
+                    <url href="https://github.com/aseceleanu/aseceleanu2.github.io/blob/main/teaching/817-818Notes.pdf" visual="">Alexandra Seceleanu's Algebra Lecture Notes</url>
                   </p>
                 </li>
 
@@ -5774,6 +5774,20 @@
                   If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  Let <m>G</m> be a group with center <m>Z(G)</m>, and suppose <m>G/Z(G)</m> is cyclic.
+                  Let <m>x,y\in G</m>.
+                  If either <m>x</m> or <m>y</m> are in the center of <m>G</m>, then <m>xy=yx</m>, as desired.
+                  Suppose then neither <m>x</m> nor <m>y</m> are in the center of <m>G</m>.
+                  Thus <m>xZ(G)</m> and <m>yZ(G)</m> are non-identity cosets in <m>G/Z(G)</m>.
+                  As <m>G/Z(G)</m> is cyclic, there exists some <m>z\in G</m> such that <m>G/Z(G)=\{zZ(G)^j|j\in\Z\}</m>.
+                  Thus there exist <m>m,n\in\Z</m> such that <m>xZ(G) = zZ(G)^m</m> and <m>yZ(G) = zZ(G)^n</m>, respectively.
+
+                  [More coming soon!]
+                </p>
+              </proof>
             </theorem>
 
           </subsection>
@@ -32487,6 +32501,9 @@
                   Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. 
                   Let <m>h\in H</m>. 
                   As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus <m>g\inv h=h'g\inv</m> and <m>hg=gh'</m>. 
+                </p>
+
+                <p>
                   Consider <m>gxg\inv h</m>. 
                   Since <m>g\inv h=h'g\inv</m>, we see <m>gxg\inv h=gxh'g\inv</m>. 
                   As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and since <m>hg=gh'</m> we have <m>hgxg\inv</m>. 
