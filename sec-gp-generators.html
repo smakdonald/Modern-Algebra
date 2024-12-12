@@ -504,7 +504,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
@@ -515,7 +516,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-indices" class="internal"><span class="title">The Index of a Subgroup</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
@@ -1151,7 +1155,15 @@ window.MathJax = {
 \langle S \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}.
 \end{equation*}
 </div>
-</div></article><details id="lem-gensubgp-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-gensubgp-3-1">For notational simplicity, we let <span class="process-math">\(X= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}\text{.}\)</span> I claim <span class="process-math">\(X = \igen S\text{.}\)</span>
+</div></article><details id="lem-gensubgp-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem-gensubgp-3-1">
+<div class="para">For notational simplicity, let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in S \right\}\text{.}
+\end{equation*}
+</div>
+<div class="para">I claim <span class="process-math">\(X = \igen S\text{.}\)</span>
+</div>
 </div> <div class="para logical" id="lem-gensubgp-3-2"><ol class="decimal">
 <li id="lem-gensubgp-3-2-1-1">
 <span class="heading"><span class="title"><span class="process-math">\((X\sse \igen S)\)</span>.</span></span><div class="para" id="lem-gensubgp-3-2-1-1-2">Let <span class="process-math">\(z\in X\text{.}\)</span> Thus <span class="process-math">\(z = x_1^{j_1} \cdots x_m^{j_m}\text{,}\)</span> where <span class="process-math">\(m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\)</span> and <span class="process-math">\(x_1, \dots, x_m \in S\text{.}\)</span>
@@ -1165,10 +1177,10 @@ window.MathJax = {
 <div class="para" id="lem-gensubgp-3-2-1-2-3">First, notice <span class="process-math">\(S \ne \emptyset\text{,}\)</span> since we allow <span class="process-math">\(m = 0\)</span> and declare the empty product to be <span class="process-math">\(e_G\text{.}\)</span>
 </div>
 <div class="para logical" id="lem-gensubgp-3-2-1-2-4">
-<div class="para">Let <span class="process-math">\(x = x_1^{j_1} \cdots x_m^{j_m}\)</span> and <span class="process-math">\(y = y_1^{i_1} \cdots y_n^{i_m}\)</span> be arbitrary in <span class="process-math">\(X\text{.}\)</span> Thus <span class="process-math">\(x_j, y_i\in S\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> Observe:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-group-inverses.html ./knowl/xref/thm-one-step.html" id="lem-gensubgp-3-2-1-2-4-6">
+<div class="para">Let <span class="process-math">\(x = x_1^{j_1} \cdots x_m^{j_m}\)</span> and <span class="process-math">\(y = y_1^{i_1} \cdots y_n^{i_m}\)</span> be arbitrary in <span class="process-math">\(X\text{.}\)</span> Thus <span class="process-math">\(x_j, y_i\in S\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> By <a href="sec-group-basics.html#thm-group-inverses" class="xref" data-knowl="./knowl/xref/thm-group-inverses.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.21: Properties of Inverses">Theorem 1.21</a> (2), we have:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-group-inverses.html ./knowl/xref/thm-one-step.html" id="lem-gensubgp-3-2-1-2-4-7">
 \begin{align*}
-x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1} &amp;= x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1} &amp;&amp; \knowl{./knowl/xref/thm-group-inverses.html}{\text{Theorem 1.21}} (2)
+x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1} &amp;= x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
 \end{align*}
 </div>
 <div class="para">As <span class="process-math">\(x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}\in X\)</span> as well, we see <span class="process-math">\(X\leq G\)</span> by the <a href="sec-subgroups.html#thm-one-step" class="xref" data-knowl="./knowl/xref/thm-one-step.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 1: One Step Subgroup Test">one-step subgroup test</a>.</div>
@@ -1232,7 +1244,7 @@ A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
 </h4> <div class="para" id="ex-commutator-subgroup-2">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(S=\{aba\inv b\inv|a,b\in G\}\text{,}\)</span> and <span class="process-math">\(G'=\igen S\text{.}\)</span> This is known as the <dfn class="terminology">commutator subgroup</dfn>  of <span class="process-math">\(G\text{.}\)</span> </div></article><article class="remark remark-like" id="subsec-gp-gensub-18"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-gp-gensub-18-1">Commutator subgroups prove invaluable when it comes to something called <em class="emphasis">abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <span class="process-math">\(G\)</span> to obtain a new group that is abelian. This is seen rigorously in <a href="sec-products-iso-thms.html#ex-abelianization" class="xref" data-knowl="./knowl/xref/ex-abelianization.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.43: Abelianization">Example 3.43</a>.</div></article><div class="para" id="subsec-gp-gensub-19">A nice property of a <a href="sec-gp-generators.html#def-gensubgroup" class="xref" data-knowl="./knowl/xref/def-gensubgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1: Generated Subgroup">Generated Subgroup</a> is that once you’ve located the generators, you’ve found the whole group:</div>
+<div class="para" id="subsec-gp-gensub-18-1">Commutator subgroups prove invaluable when it comes to something called <em class="emphasis">abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <span class="process-math">\(G\)</span> to obtain a new group that is abelian. This is seen rigorously in <a href="sec-products-iso-thms.html#ex-abelianization" class="xref" data-knowl="./knowl/xref/ex-abelianization.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.42: Abelianization">Example 3.42</a>.</div></article><div class="para" id="subsec-gp-gensub-19">A nice property of a <a href="sec-gp-generators.html#def-gensubgroup" class="xref" data-knowl="./knowl/xref/def-gensubgroup.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1: Generated Subgroup">Generated Subgroup</a> is that once you’ve located the generators, you’ve found the whole group:</div>
 <article class="proposition theorem-like" id="prop-generators-of-subgroup"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Generators of Subgroups.</span>
 </h4>

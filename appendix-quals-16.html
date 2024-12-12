@@ -504,7 +504,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
@@ -515,7 +516,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-indices" class="internal"><span class="title">The Index of a Subgroup</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
@@ -1147,7 +1151,7 @@ N=\bigcap_{g\in G}gKg\inv
 <div class="para" id="appendix-quals-16-2-2-3-1-1-1-1">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\)</span> by left multiplication, yielding the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> Let <span class="process-math">\(N\)</span> conspicuously denote the kernel of this function.</div>
 <div class="para" id="appendix-quals-16-2-2-3-1-1-1-2">Let <span class="process-math">\(x\in N\text{.}\)</span> Then <span class="process-math">\(\rho(n)\text{,}\)</span> the automorphism <span class="process-math">\(\s:G/K\to G/K\)</span> defined by <span class="process-math">\(\s(gK)=xgK\)</span> is precisely the identity permutation. Thus <span class="process-math">\(xgK=gK\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(g\inv xgK=K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> so <span class="process-math">\(x\in\text{.}\)</span> This means the elements of <span class="process-math">\(N\)</span> are precisely those that are in the conjugacy class of <span class="process-math">\(gKg\inv\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> There cannot exist a larger normal subgroup of <span class="process-math">\(G\)</span> contained in <span class="process-math">\(K\text{,}\)</span> as it would contain an element that was not in some conjugacy class for <span class="process-math">\(G\text{,}\)</span> negating the definition of a normal subgroup.</div>
 </li>
-<li id="appendix-quals-16-2-2-3-1-1-2"><div class="para" id="appendix-quals-16-2-2-3-1-1-2-1">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
+<li id="appendix-quals-16-2-2-3-1-1-2"><div class="para" id="appendix-quals-16-2-2-3-1-1-2-1">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.43: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
 </div></li>
 </ol></div></div></details></div></article></details><details id="appendix-quals-16-2-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">C.120</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 2.</span>

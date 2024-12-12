@@ -504,7 +504,8 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cyclic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Cyclic Groups</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-groups" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cyclic.html#subsec-cyclic-uniqueness" class="internal"><span class="title">Uniqueness of Cyclic Groups</span></a></div></li>
 </ul>
 </li>
@@ -515,7 +516,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-cosets" class="internal"><span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-cosets.html#subsec-indices" class="internal"><span class="title">The Index of a Subgroup</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
@@ -1141,7 +1145,7 @@ window.MathJax = {
 <li id="appendix-quals-21-2-2-3-1-1-2">
 <div class="para" id="appendix-quals-21-2-2-3-1-1-2-1">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(P\)</span> by conjugation. This gives rise to the <a href="graction.html#thm-permrep" class="xref" data-knowl="./knowl/xref/thm-permrep.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.4: Permutation Representation">Permutation Representation</a> homomorphism <span class="process-math">\(\rho: G\to S_{11}\text{.}\)</span> However, <span class="process-math">\(P\)</span> has prime order, making it a cyclic group isomorphic to <span class="process-math">\(\Z_{11}\text{.}\)</span>
 </div>
-<div class="para" id="appendix-quals-21-2-2-3-1-1-2-2">By the <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.44: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> we know that <span class="process-math">\(G/\ker(\rho)\cong\im(\rho)=\Aut(P)\text{.}\)</span> However, <span class="process-math">\(\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x\text{,}\)</span> which has order <span class="process-math">\(10\text{.}\)</span> As this is a homomorphism, we see the order of <span class="process-math">\(G/\ker(\rho)\)</span> must divide both <span class="process-math">\(10\)</span> and <span class="process-math">\(231\text{,}\)</span> two numbers that are relatively prime. Thus <span class="process-math">\(\ker(\rho)=1\text{,}\)</span> meaning that conjugation is equivalent to the identity map, or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(P\in Z(G)\text{.}\)</span>
+<div class="para" id="appendix-quals-21-2-2-3-1-1-2-2">By the <a href="sec-products-iso-thms.html#thm-fit-group" class="xref" data-knowl="./knowl/xref/thm-fit-group.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.43: First Isomorphism Theorem for Groups">First Isomorphism Theorem for Groups</a> we know that <span class="process-math">\(G/\ker(\rho)\cong\im(\rho)=\Aut(P)\text{.}\)</span> However, <span class="process-math">\(\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x\text{,}\)</span> which has order <span class="process-math">\(10\text{.}\)</span> As this is a homomorphism, we see the order of <span class="process-math">\(G/\ker(\rho)\)</span> must divide both <span class="process-math">\(10\)</span> and <span class="process-math">\(231\text{,}\)</span> two numbers that are relatively prime. Thus <span class="process-math">\(\ker(\rho)=1\text{,}\)</span> meaning that conjugation is equivalent to the identity map, or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(P\in Z(G)\text{.}\)</span>
 </div>
 </li>
 </ol></div></div></details></div></article></details><details id="appendix-quals-21-2-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
