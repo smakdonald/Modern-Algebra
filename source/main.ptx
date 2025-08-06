@@ -376,7 +376,7 @@
         </website>
 
         <copyright>
-          <year>2020<ndash />2023</year>
+          <year>2020<ndash />2025</year>
           <holder>Sam Macdonald</holder>
           <shortlicense> 
             This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
@@ -467,6 +467,7 @@
           </ul>
         </p>
 
+      <!--
         <paragraphs><title>Blocks</title>
           <p>
             Here are the types of environments you are likely to encounter throughout the text and what they are used for.
@@ -557,6 +558,7 @@
           </p>
           
         </paragraphs>
+       -->
 
         <paragraphs><title>Don't Forget the Index!</title>
           <p>
@@ -567,6 +569,8 @@
         </paragraphs>
 
       </preface>
+
+      <!--
 
       <preface><title>The Structure of this Text</title>
         
@@ -614,6 +618,8 @@
         </paragraphs>
 
       </preface>
+
+      -->
 
     </frontmatter>
 
@@ -673,7 +679,7 @@
               <p>
                 The short answer is almost everywhere.
                 In many fields of mathematics, groups provide the abstract framework upon which large portions of the discipline are built. 
-                Listed below is a thourogh but nowhere near comprehensive list of fields of mathematics (and beyond) where groups make an appearence. 
+                Listed below is a thorough but nowhere near comprehensive list of fields of mathematics (and beyond) where groups make an appearence. 
                 <ol>
                   <li><title>Number Theory and Cryptography</title>
                     <p>
@@ -830,14 +836,14 @@
               One of the nice things about binary operations is that they have <em>properties.</em>
             </p>
 
-            <definition xml:id="def-binary-properties"><title>Binary Properties</title> 
+            <definition xml:id="def-binary-properties"><title>Properties of Binary Operations</title> 
               <statement>
                 <p>
                   Let <m>-*-</m> be a binary operation on a set <m>S</m>.
                   <ol>
                     <li xml:id="associative-property">
                       <p>
-                        An operation satisfies the <em>associative property</em> if for all <m>x,y,z\in S</m> we have <m>(x*y)*z=x*(y*z)</m>.
+                        An operation satisfies the <em>associative property</em> if, for all <m>x,y,z\in S</m>, we have <m>(x*y)*z=x*(y*z)</m>.
                         <idx><h>associative property</h></idx>
                       </p>
                     </li>
@@ -853,8 +859,8 @@
 
                     <li xml:id="inverse-property">
                       <p>
-                        An operation satisfies the <em>inverse property</em> if for each <m>x\in S</m>, there is an element <m>y\in S</m> such that <m>x * y=e=y * x</m>, where <m>e</m> is an identity element of <m>S</m>.
-                        Such an element <m>y</m> is called an <em>inverse</em> of the element <m>x</m>.
+                        An operation satisfies the <em>inverse property</em> if, for each <m>x\in S</m>, there exists an element <m>y\in S</m> such that <m>x * y=e=y * x</m>, where <m>e</m> is an identity element of <m>S</m>.
+                        The element <m>y</m> is called an <em>inverse</em> of the element <m>x</m>.
                         <idx><h>inverse property</h></idx>
                       </p>
                     </li>
@@ -866,7 +872,7 @@
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
-                  A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the <xref ref="associative-property" text="custom"> associative</xref>, <xref ref="identity-property" text="custom"> identity</xref>, and <xref ref="inverse-property" text="custom"> inverse</xref> properties.
+                  A <em>group</em> is a pair <m>(G, *)</m>, where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the <xref ref="associative-property" text="custom"> associative</xref>, <xref ref="identity-property" text="custom"> identity</xref>, and <xref ref="inverse-property" text="custom"> inverse</xref> properties.
                   <idx><h>group</h></idx>
                   <idx><h><m>(G,*)</m></h></idx>
                 </p>
@@ -881,7 +887,7 @@
 
             <observation>
                 <p>
-                  We say that <q><m>S</m> is closed under the operation <m>*</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>x*y</m>, is an element of <m>S</m>. 
+                  We say that <q><m>S</m> is closed under the operation <m>*</m></q> when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>x*y</m>, is an element of <m>S</m>. 
                   However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
                   <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
                 </p>
@@ -913,10 +919,10 @@
                     <li xml:id="list-cancellation"><title>Cancellation</title>
                       <p>
                         Suppose <m>x,y,z\in G</m>.
-                        If <m>xy = xz</m> then <m>y=z</m>. 
+                        If <m>xy = xz</m>, then <m>y=z</m>. 
                       </p>
                       <p>
-                        Similarly, if <m>yx = zx</m> then <m>y = z</m>
+                        Similarly, if <m>yx = zx</m>, then <m>y = z</m>
                         <idx><h>cancellation (in groups)</h></idx>
                       </p>
                     </li>
@@ -929,8 +935,8 @@
                   <ol>
                     <li>
                       <p>
-                        Suppose there exist two elements <m>e</m> and <m>e'</m> such that <m>ex = x = xe</m> and <m>e'x = x = xe'</m> for all <m>x</m>. 
-                        As <m>e</m> is an identity element, we have <m>e'e=e'</m>. 
+                        Suppose there exist two elements, <m>e</m> and <m>e'</m>, such that, for all <m>x\in G</m>, we have <m>ex = x = xe</m> and <m>e'x = x = xe'</m>. 
+                        As <m>e</m> is an identity element, by definition we have <m>e'e=e'</m>. 
                         Similarly, as <m>e'</m> is an identity element, we have <m>e'e=e</m>. 
                         Combining these two equations, we see
                         <me>e = ee' = e'.</me>
@@ -996,6 +1002,13 @@
               </statement>
             </definition>
 
+            <p>
+              It is perhaps natural at this stage to wonder about groups whose binary operation satisfies the commutative property.
+              Some sort of <em>commutative group</em>, if you will. 
+              Surely such groups will be named accordingly. 
+              Right?
+            </p>
+
             <definition xml:id="def-abelian"><title>Abelian Group</title>
               <statement>
                 <p>
@@ -1010,13 +1023,19 @@
                 When working with arbitrary groups, multiplicative notation is often used as the operation. 
                 Thus, groups are commonly written as <m>(G,\cdot)</m> and referred to as <em>multiplicative groups</em>.
                 However, when working with abelian groups, it is customary to use additive notation, writing the group as <m>(G,+)</m>.
-                Often the letter <m>A</m> is used in place of <m>G</m> when referring to abelian groups.
+                Often, the letter <m>A</m> is used in place of <m>G</m> when referring to abelian groups.
               </p>
             </convention>
 
           </subsection>
 
           <subsection xml:id="subsec-group-ex"><title>First Examples of Groups</title>
+
+            <p>
+              All right. 
+              We've spent enough time wading around in the vagaries of abstraction. 
+              It's time to get our hands on some of these groups and see what all the fuss is about.
+            </p>
 
             <example xml:id="ex-group-examples"><title>Group Examples</title>
               <statement>
@@ -1089,7 +1108,7 @@
                   <ol>
                     <li>
                       <p>
-                        The natural numbers <m>\N</m> do <em>not</em> form a group with respect to addition.
+                        The natural numbers <m>\N</m> do <em>not</em> form a group with respect to addition (as its underlying operation).
                       </p>
                     </li>
 
@@ -1156,7 +1175,7 @@
             <remark>
               <p>
                 <m>\Z/n^\times</m> will be integral to our constructions of semidirect products in <xref ref="sec-spds"/> and our classifications of certain groups up to isomorphism (whatever that means).
-                Though not strictly required for this text, knowing the structure of <m>\Z/n^\times</m> for various <m>n</m> can prove helpful in many qualifying exam problems.
+                Though not strictly required for this text, knowing the structure of <m>\Z/n^\times</m> for various <m>n</m> can prove helpful in some niche situations (read: certain qualifying exam problems).
               </p>
             </remark>
 
@@ -1202,57 +1221,60 @@
                 <p>
                   <ol>
                     <li>
-                      <ul>
-                        <li><title>Associativity of <m>G^{op}</m></title>
-                          <p>
-                            Let <m>x, y, z</m> be any elements <m>G^{op}</m>.
-                            Observe
-                            <md>
-                              <mrow> (x*^{op}y)*^{op}z &amp;= (y*x)*^{op}z &amp; &amp; \text{substituting }x*^{op}y=y*x</mrow>
-                              <mrow> &amp;= z*(y*x) &amp; &amp; \text{substituting again} </mrow>
-                              <mrow> &amp;= (z*y)*x &amp; &amp; <xref ref="associative-property" text="custom"> Associative Property of <m>G</m> </xref></mrow>
-                              <mrow> &amp;= (y*^{op}z)*x &amp; &amp; \text{substituting }z*y = y*^{op}z</mrow>
-                              <mrow> &amp;= x*^{op}(y*^{op}z) &amp; &amp; \text{substituting again}</mrow>
-                            </md>
-                            Thus, associativity is satisfied in <m>G^{op}</m>.
-                          </p>
-                        </li>
+                      <p>
+                        Let <m>G</m> be a group.
+                        <ul>
+                          <li><title>Associativity of <m>G^{op}</m></title>
+                            <p>
+                              Let <m>x, y, z</m> be any elements <m>G^{op}</m>.
+                              Observe
+                              <md>
+                                <mrow> (x*^{op}y)*^{op}z &amp;= (y*x)*^{op}z &amp; &amp; \text{substituting }x*^{op}y=y*x</mrow>
+                                <mrow> &amp;= z*(y*x) &amp; &amp; \text{substituting again} </mrow>
+                                <mrow> &amp;= (z*y)*x &amp; &amp; <xref ref="associative-property" text="custom"> Associative Property of <m>G</m> </xref></mrow>
+                                <mrow> &amp;= (y*^{op}z)*x &amp; &amp; \text{substituting }z*y = y*^{op}z</mrow>
+                                <mrow> &amp;= x*^{op}(y*^{op}z) &amp; &amp; \text{substituting again}</mrow>
+                              </md>
+                              Thus, associativity is satisfied in <m>G^{op}</m>.
+                            </p>
+                          </li>
 
-                        <li xml:id="g-op-identity"><title>Identity Element of <m>G^{op}</m></title>
-                          <p>
-                            As <m>G</m> is a group, it contains an identity element, <m>e</m>. 
-                            I claim that <m>e</m> is also the identity element of <m>G^{op}</m>.
-                            Let <m>x\in G^{op}</m>.
-                            <md>
-                              <mrow> e*^{op}x &amp;= x*e &amp; &amp; \text{substituting }e*^{op}x=x*e</mrow>
-                              <mrow> &amp;= x &amp; &amp; <xref ref="identity-property" text="custom"> <m>e</m> is the identity element of <m>G</m> </xref> </mrow>
-                              <mrow> &amp;= e*x &amp; &amp; <xref ref="identity-property" text="custom"> <m>e</m> is the identity element of <m>G</m> </xref></mrow>
-                              <mrow> &amp;= x*^{op}e&amp; &amp; \text{substituting }x*^{op}e=e*x</mrow>
-                            </md>
-                            Thus <m>e*^{op}x = x*^{op}e = x</m> for all <m>x\in G^{op}</m>
-                            Therefore, <m>e</m> is the identity element of <m>G^{op}</m>.
-                          </p>
-                        </li>
+                          <li xml:id="g-op-identity"><title>Identity Element of <m>G^{op}</m></title>
+                            <p>
+                              As <m>G</m> is a group, it contains an identity element, <m>e</m>. 
+                              I claim that <m>e</m> is also the identity element of <m>G^{op}</m>.
+                              Let <m>x\in G^{op}</m>.
+                              <md>
+                                <mrow> e*^{op}x &amp;= x*e &amp; &amp; \text{substituting }e*^{op}x=x*e</mrow>
+                                <mrow> &amp;= x &amp; &amp; <xref ref="identity-property" text="custom"> <m>e</m> is the identity element of <m>G</m> </xref> </mrow>
+                                <mrow> &amp;= e*x &amp; &amp; <xref ref="identity-property" text="custom"> <m>e</m> is the identity element of <m>G</m> </xref></mrow>
+                                <mrow> &amp;= x*^{op}e&amp; &amp; \text{substituting }x*^{op}e=e*x</mrow>
+                              </md>
+                              Thus <m>e*^{op}x = x*^{op}e = x</m> for all <m>x\in G^{op}</m>
+                              Therefore, <m>e</m> is the identity element of <m>G^{op}</m>.
+                            </p>
+                          </li>
 
-                        <li><title>Inverses in <m>G^{op}</m></title>
-                          <p>
-                            Let <m>x</m> be an element in <m>G^{op}</m>. 
-                            Since <m>x</m> is also an element of the group <m>G</m>, by the <xref ref="inverse-property" text="custom"> inverse property </xref> there exists an inverse element <m>x\inv</m> in <m>G</m> such that <m>x*x\inv = x\inv*x = e</m>, where <m>e</m> is the identity element of <m>G</m>.
-                            Consider <m>x\inv*^{op}x</m>
-                            <md>
-                              <mrow> x\inv*^{op}x &amp;= x*x\inv &amp; &amp; \text{substituting }x\inv*^{op}x=x*x\inv</mrow>
-                              <mrow> &amp;= e &amp; &amp; \text{substituting }x\inv*x=e </mrow>
-                            </md>
-                            and <m>x*^{op}x\inv</m>
-                            <md>
-                              <mrow> x*^{op}x\inv &amp;= x\inv*x &amp; &amp; \text{substituting }x*^{op}x\inv=x\inv*x</mrow>
-                              <mrow> &amp;= e &amp; &amp; \text{substituting }x*x\inv=e </mrow>
-                            </md>
-                            From the <xref ref="g-op-identity" text="custom"> previous part </xref> we see that <m>e</m> is the identity element of <m>G^{op}</m>, making <m>x\inv</m> the inverse of <m>x</m> in <m>G^{op}</m>.
-                            Thus every element in <m>G^{op}</m> has an inverse in <m>G^{op}</m>, satisfying the inverse element property.
-                          </p>
-                        </li>
-                      </ul>
+                          <li><title>Inverses in <m>G^{op}</m></title>
+                            <p>
+                              Let <m>x</m> be an element in <m>G^{op}</m>. 
+                              Since <m>x</m> is also an element of the group <m>G</m>, by the <xref ref="inverse-property" text="custom"> inverse property </xref> there exists an inverse element <m>x\inv</m> in <m>G</m> such that <m>x*x\inv = x\inv*x = e</m>, where <m>e</m> is the identity element of <m>G</m>.
+                              Consider <m>x\inv*^{op}x</m>
+                              <md>
+                                <mrow> x\inv*^{op}x &amp;= x*x\inv &amp; &amp; \text{substituting }x\inv*^{op}x=x*x\inv</mrow>
+                                <mrow> &amp;= e &amp; &amp; \text{substituting }x\inv*x=e </mrow>
+                              </md>
+                              and <m>x*^{op}x\inv</m>
+                              <md>
+                                <mrow> x*^{op}x\inv &amp;= x\inv*x &amp; &amp; \text{substituting }x*^{op}x\inv=x\inv*x</mrow>
+                                <mrow> &amp;= e &amp; &amp; \text{substituting }x*x\inv=e </mrow>
+                              </md>
+                              From the <xref ref="g-op-identity" text="custom"> previous part </xref> we see that <m>e</m> is the identity element of <m>G^{op}</m>, making <m>x\inv</m> the inverse of <m>x</m> in <m>G^{op}</m>.
+                              Thus every element in <m>G^{op}</m> has an inverse in <m>G^{op}</m>, satisfying the inverse element property.
+                            </p>
+                          </li>
+                        </ul>
+                      </p>
                     </li>
 
                     <li>
@@ -1383,7 +1405,7 @@
 
             <p>
               As a result of <xref ref="exe-general-associativity"/> any expression formed from the elements <m>x_1\dots,x_n</m> in that order can be written without parenthesis, which will save us oodles of time down the line.
-              <fn>This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
+              <fn>This is usually a result that is simply taken for granted and left unstated; we include it here for the sake of completenes - and ~rigor~. Yes, oodles is the best word to go here and no, I will not be changing it.</fn>
             </p>
 
           </subsection>
@@ -1467,7 +1489,7 @@
                 </p>
 
                 <p>
-                  If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
+                  Note: If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
                   This would be called a <term>multiple</term> of <m>x</m> instead of a power.
                   <idx><h>multiple</h></idx>
                 </p>
@@ -3186,7 +3208,7 @@
                   I claim <m>\id</m> is the identity element of <m>\Aut(G)</m>.
                   Recall from <xref ref="ex-identity-automorphism"/> that <m>\id:G\to G</m> is indeed an automorphism.
                   Let <m>\varphi\in\Aut(G)</m>. 
-                  <idx><h></h></idx> will show <m>\varphi\circ \id=\varphi=\id\circ \varphi</m>. 
+                  We will show <m>\varphi\circ \id=\varphi=\id\circ \varphi</m>. 
                   As all functions share the same domain and co-domain, we need only show that the functions map elements equally, 
                   Let <m>x \in G</m>, and observe:
                   <md>
@@ -6343,7 +6365,7 @@
         
       </chapter>
 
-      <chapter xml:id="ch-presentations"><title>Presentations, Free Groups (*)</title>
+      <chapter xml:id="ch-presentations"><title>Free Groups, Presentations (*)</title>
 
         <introduction>
           <p>
@@ -13193,6 +13215,13 @@
 
       <chapter xml:id="ch-mod"><title>Intro to Modules</title>
 
+        <introduction><title>Motivation: The What, Where, and Why of Modules</title>
+          <p>
+            For those of us who remember at least a little linear algebra, modules are generalizations of a vector spaces, but instead of using scalars from a field (like real or complex numbers), we allow scalars to come from a ring (which can be more complicated, like integers or polynomials).
+            In short, modules are like "vector spaces with more structure" that allow us to work with rings instead of just fields, unlocking deeper connections in algebra, number theory, and beyond.
+          </p>
+        </introduction>
+
         <section xml:id="sec-defmod"><title>Modules and Algebras</title>
 
           <subsection xml:id="subsec-modules"><title>Modules</title>
@@ -13293,7 +13322,7 @@
 
             <p>
               Typically, one first encounters modules in an undergraduate linear algebra course: the vector spaces from linear algebra are modules over fields. 
-              Later we will see that vector spaces are much simpler modules than modules over other rings. 
+              Later, we will see that vector spaces are much simpler modules than modules over other rings. 
               So while one might take linear algebra and vector spaces as an inspiration for what to expect from a module, be warned that this perspective can often be deceiving.
             </p>
 
@@ -14787,6 +14816,10 @@
                 </p>
               </statement>
             </definition>
+
+            <p>
+              As we will see in this section, the basis of an <m>R</m>-module is like a set of building blocks that can be used to construct every possible vector in that space in a unique way.
+            </p>
 
             <example xml:id="ex-free-modules"><title>Free Modules</title>
               <p>
@@ -33054,7 +33087,7 @@
 
       </appendix>
 
-      <index>
+      <index xml:id="index">
         <index-list>
         </index-list>
       </index>
